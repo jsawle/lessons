@@ -1,9 +1,15 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "id": "climate-regions-uncovered",
   "title": "Climate Regions Uncovered",
   "portalUrl": "https://www.arcgis.com",
   "webmapId": "ba213b54efd74fdb9cf13086fa570ccf",
+  "mapmaker": {
+    "appId": "0cd1cdee853c413a84bfe4b9a6931f0d",
+    "portalUrl": "https://www.arcgis.com",
+    "label": "National Geographic MapMaker",
+    "passLocation": false
+  },
   "rounds": 5,
   "layers": {
     "climate": {

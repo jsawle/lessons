@@ -27,6 +27,12 @@ button,input,select,textarea{font:inherit}
 .kicker{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);font-weight:700}
 .topbar h1{margin:0;font-size:20px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .topbar h1 span{font-weight:500;color:#ddd}
+.mmlink{margin-left:auto;color:#fff;font-weight:700;font-size:14px;text-decoration:underline;text-underline-offset:3px;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center;padding:0 4px}
+.mmlink:hover{color:var(--accent)}
+.mmlink:not([hidden]) + .badge{margin-left:0}
+a.btn{text-decoration:none}
+.handoff{border:2px solid #000;border-radius:6px;padding:10px 12px;margin:12px 0;background:var(--paper-2)}
+.handoff p{margin:0 0 8px}
 .badge{margin-left:auto;background:var(--accent);color:#000;font-weight:800;font-size:13px;padding:3px 8px;border-radius:4px;white-space:nowrap}
 
 /* Layout */
@@ -113,7 +119,8 @@ summary{cursor:pointer;font-weight:700;min-height:36px;display:flex;align-items:
     <span class="kicker">MapMaker Lesson Player · Lab</span>
     <h1>Mystery Place <span id="lessonTitle"></span></h1>
   </div>
-  <span class="badge" id="verBadge" title="App version">v1.0.1</span>
+  <a class="mmlink" id="mmHeader" href="#" target="_blank" rel="noopener" hidden>Open in MapMaker<span class="sr-only"> (opens in a new tab)</span></a>
+  <span class="badge" id="verBadge" title="App version">v1.1.0</span>
 </header>
 
 <main class="layout">
@@ -174,8 +181,9 @@ summary{cursor:pointer;font-weight:700;min-height:36px;display:flex;align-items:
 var LP = (function(){
   "use strict";
   var VERSIONS = {
-    app: "1.0.1",
+    app: "1.1.0",
     models: [
+      { key:"handoff",  name:"MapMaker handoff", v:"1.0", note:"Builds the “Investigate in MapMaker” links: the lesson’s MapMaker app opened on the same web map (app set per lesson or per distributor)" },
       { key:"access",   name:"Layer access check", v:"1.0", note:"Tests each web map layer from this website before loading; layers that refuse access are skipped so no sign-in box appears" },
       { key:"reader",   name:"Data reader",      v:"1.1", note:"Reads climate class, precipitation, temperature band and elevation at a point; elevation stays readable when its map layer is skipped" },
       { key:"rounds",   name:"Round generator",  v:"1.0", note:"Picks mystery places; world set favours different climate regions, ≥1,500 km apart" },
@@ -308,6 +316,19 @@ var LP = (function(){
     return base + "?f=json";
   }
 
+  // ---- MapMaker handoff v1.0 ----
+  // cfg: { portalUrl, appId, passLocation }. Returns null when no app is configured.
+  function mapmakerUrl(cfg, webmapId, loc){
+    if (!cfg || !cfg.appId || !/^[0-9a-f]{32}$/i.test(cfg.appId)) return null;
+    var base = String(cfg.portalUrl || "https://www.arcgis.com").replace(/\/+$/, "");
+    if (!/^https:\/\//i.test(base)) return null;
+    var q = "appid=" + encodeURIComponent(cfg.appId);
+    if (webmapId && /^[0-9a-f]{32}$/i.test(webmapId)) q += "&webmap=" + encodeURIComponent(webmapId);
+    if (cfg.passLocation && loc && isFinite(loc.lat) && isFinite(loc.lon))
+      q += "&center=" + (+loc.lon).toFixed(4) + "," + (+loc.lat).toFixed(4) + "&level=" + (loc.level || 6);
+    return base + "/apps/instant/atlas/index.html?" + q;
+  }
+
   // ---- CSV ----
   function csvCell(v){
     if (v == null) return "";
@@ -342,7 +363,7 @@ var LP = (function(){
     tempMatch:tempMatch, precipMatch:precipMatch, elevMatch:elevMatch, climateMatch:climateMatch, matchAll:matchAll,
     scoreRound:scoreRound, fmtInt:fmtInt, fmtTemp:fmtTemp, fmtTempShort:fmtTempShort, fmtPrecip:fmtPrecip, fmtElev:fmtElev,
     fmtClimate:fmtClimate, fmtDistance:fmtDistance, buildFeedback:buildFeedback, guideCheck:guideCheck, toCSV:toCSV, esc:esc,
-    mergeSpec:mergeSpec, classifyProbe:classifyProbe, probeUrl:probeUrl };
+    mergeSpec:mergeSpec, classifyProbe:classifyProbe, probeUrl:probeUrl, mapmakerUrl:mapmakerUrl };
 })();
 if (typeof module !== "undefined") module.exports = LP;
 </script>
@@ -354,6 +375,9 @@ var DEFAULT_LESSON = {
   title: "Climate Regions Uncovered",
   portalUrl: "https://www.arcgis.com",
   webmapId: "ba213b54efd74fdb9cf13086fa570ccf",
+  // Where students continue the lesson. Distributors swap appId for their own MapMaker app
+  // (or add ?mapmakerApp=<appid> to the player URL). passLocation needs testing in Atlas first.
+  mapmaker: { appId: "0cd1cdee853c413a84bfe4b9a6931f0d", portalUrl: "https://www.arcgis.com", label: "National Geographic MapMaker", passLocation: false },
   rounds: 5,
   // Layers are matched by title so the same spec works on copies of the web map
   layers: {
@@ -407,7 +431,7 @@ require([
     phase: "loading", spec: DEFAULT_LESSON, rng: Math.random, seed: params.get("seed"),
     teacher: params.get("teacher") === "1",
     targets: [], round: 0, results: [], cluesShown: 2, probe: null, guess: null,
-    cities: [], homeViewpoint: null, skipped: []
+    cities: [], homeViewpoint: null, skipped: [], mm: {}, embedded: false
   };
   var L = {};               // resolved layers: climate, precip, temp, cities, elevService, elevGate
   var classTable = null;    // pixel value -> class name
@@ -457,6 +481,13 @@ require([
     if (state.seed) state.rng = LP.mulberry32(LP.hashString(state.seed));
     $("lessonTitle").textContent = "· " + state.spec.title;
     $("specVer").textContent = state.spec.version || state.spec.id;
+    // MapMaker handoff: per-lesson app, overridable per distributor with ?mapmakerApp=<appid>
+    state.mm = Object.assign({}, state.spec.mapmaker || {});
+    var appOverride = params.get("mapmakerApp");
+    if (appOverride && /^[0-9a-f]{32}$/i.test(appOverride)) state.mm.appId = appOverride;
+    var mmHome = LP.mapmakerUrl(state.mm, state.spec.webmapId);
+    if (mmHome){ $("mmHeader").href = mmHome; $("mmHeader").hidden = false; }
+    state.embedded = (function(){ try { return window.self !== window.top; } catch(e){ return true; } })();
     if (state.spec.portalUrl) esriConfig.portalUrl = state.spec.portalUrl;
 
     var map = new WebMap({ portalItem: { id: state.spec.webmapId } });
@@ -471,6 +502,7 @@ require([
     await map.loadAll().catch(function(e){ console.warn("Some layers failed to load", e); });
     resolveLayers(map);
     renderSkipped();
+    renderHandoffTest();
     buildLayerList(map);
 
     view.on("click", function(e){ if (state.phase === "playing" || state.phase === "result") probeAt(e.mapPoint); });
@@ -530,6 +562,19 @@ require([
           '</tbody></table>' + (L.elevService ? '<p class="muted">Elevation values still work: they come from Esri’s public World Elevation 3D service.</p>' : '')
         : '<p class="muted">Every web map layer can be used from this website.</p>');
     host.insertBefore(box, host.querySelector("details"));
+  }
+
+  function renderHandoffTest(){
+    var plain = LP.mapmakerUrl(state.mm, state.spec.webmapId);
+    var withLoc = LP.mapmakerUrl(Object.assign({}, state.mm, { passLocation: true }), state.spec.webmapId, { lat: 24.089, lon: 32.899, level: 8 });
+    var box = document.createElement("details");
+    box.innerHTML = '<summary>MapMaker handoff (' + (plain ? "on" : "off") + ') <span class="ver">&nbsp;' + esc(mv("handoff")) + '</span></summary>' +
+      (plain
+        ? '<p class="muted">Students are sent to: <span style="word-break:break-all">' + esc(plain) + '</span>' + (state.embedded ? ' · running inside another page (e.g. a Portfolio tab)' : '') + '</p>' +
+          '<p class="muted">Location pass-through is <strong>' + (state.mm.passLocation ? "on" : "off") + '</strong>. Test whether MapMaker accepts a location: this link should open zoomed in on Aswan, Egypt.</p>' +
+          '<p><a href="' + esc(withLoc) + '" target="_blank" rel="noopener">Test location link<span class="sr-only"> (opens in a new tab)</span></a></p>'
+        : '<p class="muted">No MapMaker app is set for this lesson.</p>');
+    $("teacherSec").appendChild(box);
   }
 
   function findLayer(map, includes){
@@ -882,6 +927,14 @@ require([
     announce("The mystery place was " + t.name + ", " + t.country + ". You were " + LP.fmtDistance(d) + " away and scored " + LP.fmtInt(score.total) + " points.");
   }
 
+  // ---------- MapMaker handoff v1.0 ----------
+  function handoffBlock(text, loc, linkText){
+    var url = LP.mapmakerUrl(state.mm, state.spec.webmapId, loc);
+    if (!url) return "";
+    return '<div class="handoff"><p>' + esc(text) + '</p><a class="btn primary block" href="' + esc(url) + '" target="_blank" rel="noopener">' +
+      esc(linkText) + '<span class="sr-only"> (opens ' + esc(state.mm.label || "MapMaker") + ' in a new tab)</span></a></div>';
+  }
+
   function mark(ok){ return ok ? '<td class="ok">✓ Match</td>' : '<td class="no">✗ Different</td>'; }
   function renderResult(){
     var r = state.results[state.results.length - 1], t = r.target, g = r.guess, s = r.score;
@@ -902,6 +955,7 @@ require([
       '<tr><td>Extra clues (' + r.extraClues + ')</td><td>−' + LP.fmtInt(s.cluePenalty) + '</td></tr>' +
       '<tr><th>Round total</th><th>' + LP.fmtInt(s.total) + '</th></tr></tbody></table></details>' +
       '<div class="feedback"><p class="ver">' + esc(mv("feedback")) + '</p>' + r.feedback.map(function(x){ return '<p>' + esc(x) + '</p>'; }).join("") + '</div>' +
+      handoffBlock("Want to look closer? The same map, with every layer and tool, is in MapMaker.", { lat: t.lat, lon: t.lon }, "Investigate " + t.name + " in MapMaker") +
       '<label for="reflect"><strong>Which clue or layer helped you most? Why?</strong> <span class="muted">(optional)</span></label>' +
       '<textarea id="reflect"></textarea>' +
       '<div class="row"><button class="btn primary block" id="btnNext" type="button">' + (last ? 'See my results' : 'Next round') + '</button></div>';
@@ -932,9 +986,21 @@ require([
       '<table><caption class="sr-only">Your results by round</caption><thead><tr><th scope="col">#</th><th scope="col">Mystery place</th><th scope="col">Distance</th><th scope="col">Matches</th><th scope="col">Points</th></tr></thead><tbody>' +
       rows.map(function(x){ return '<tr><td>' + x.round + '</td><td>' + esc(x.mystery) + '</td><td>' + LP.fmtInt(x.distance) + ' km</td><td>' + x.matches + '/4</td><td>' + LP.fmtInt(x.points) + '</td></tr>'; }).join("") +
       '</tbody></table>' +
-      '<p class="muted">Your results stay on this device. Download them if your teacher asks you to hand them in.</p>' +
-      '<div class="row"><button class="btn" id="btnCsv" type="button">Download my results (CSV)</button><button class="btn primary" id="btnAgain" type="button">Play again</button></div>';
+      '<p class="muted">Your results stay on this device. Download or copy them if your teacher asks you to hand them in.</p>' +
+      '<div class="row"><button class="btn" id="btnCsv" type="button">Download my results (CSV)</button><button class="btn" id="btnCopy" type="button">Copy my results</button><button class="btn primary" id="btnAgain" type="button">Play again</button></div>' +
+      '<div id="copyFallback" hidden><label for="copyText"><strong>Select all and copy:</strong></label><textarea id="copyText" readonly rows="6"></textarea></div>' +
+      handoffBlock("Keep exploring: MapMaker has this map plus many more layers and tools.", null, "Keep exploring in MapMaker");
     setScreen(h, "#endH");
+    $("btnCopy").addEventListener("click", function(){
+      var text = LP.toCSV(rows, CSV_COLS);
+      function fallback(){
+        $("copyFallback").hidden = false; var ta = $("copyText"); ta.value = text; ta.focus(); ta.select();
+        announce("Copying is blocked here. Your results are selected in the box: press Control C, or Command C on a Mac.");
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText)
+        navigator.clipboard.writeText(text).then(function(){ announce("Results copied."); $("btnCopy").textContent = "Copied ✓"; }, fallback);
+      else fallback();
+    });
     $("btnCsv").addEventListener("click", function(){
       var csv = LP.toCSV(rows, CSV_COLS);
       var blob = new Blob(["\ufeff" + csv], { type: "text/csv;charset=utf-8" });
