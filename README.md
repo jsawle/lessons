@@ -44,4 +44,4 @@ Before the map loads, the player tests each web map layer from this website. Any
 ## Privacy
 There are no accounts or logins, and no student data is collected or stored by Esri. Results stay on the student's device and can be downloaded or copied to hand in through the school's own systems.
 
-Created by Jason Sawle · © Esri 2026
+Created by Jason Sawle
