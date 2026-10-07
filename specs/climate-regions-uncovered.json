@@ -1,0 +1,130 @@
+{
+  "version": "1.0",
+  "id": "climate-regions-uncovered",
+  "title": "Climate Regions Uncovered",
+  "portalUrl": "https://www.arcgis.com",
+  "webmapId": "ba213b54efd74fdb9cf13086fa570ccf",
+  "rounds": 5,
+  "layers": {
+    "climate": {
+      "titleIncludes": "Climate Regions",
+      "classField": "BioClimCls",
+      "label": "Climate region"
+    },
+    "precip": {
+      "titleIncludes": "Precipitation",
+      "label": "Average annual precipitation",
+      "unit": "mm"
+    },
+    "temp": {
+      "titleIncludes": "Surface Air Temperature",
+      "minField": "TminC",
+      "maxField": "TmaxC",
+      "label": "Average annual temperature"
+    },
+    "elev": {
+      "titleIncludes": "Elevation",
+      "serviceUrl": "https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/TopoBathy3D/ImageServer",
+      "label": "Elevation"
+    },
+    "cities": {
+      "titleIncludes": "Cities",
+      "nameField": "Urban_Agglomeration",
+      "countryField": "Country_or_area",
+      "popField": "Pop_2025",
+      "latField": "Latitude",
+      "lonField": "Longitude"
+    }
+  },
+  "clues": {
+    "start": [
+      "temp",
+      "precip"
+    ],
+    "extra": [
+      "elev",
+      "climate"
+    ]
+  },
+  "scoring": {
+    "maxDistancePts": 3000,
+    "distanceScaleKm": 1000,
+    "matchPts": 500,
+    "extraClueCost": 250
+  },
+  "sets": {
+    "lesson": {
+      "label": "Tropic of Cancer cities",
+      "description": "The five cities from the lesson's elevation inquiry. All lie near the same latitude — so what makes their climates different?",
+      "places": [
+        {
+          "name": "Masqat (Muscat)",
+          "country": "Oman",
+          "lat": 23.588,
+          "lon": 58.383,
+          "guide": {
+            "precip": 94,
+            "temp": 27.5,
+            "elev": 79,
+            "climate": "Tropical Dry"
+          }
+        },
+        {
+          "name": "Dhaka",
+          "country": "Bangladesh",
+          "lat": 23.81,
+          "lon": 90.413,
+          "guide": {
+            "precip": 2161,
+            "temp": 27.5,
+            "elev": 6,
+            "climate": "Tropical Moist"
+          }
+        },
+        {
+          "name": "Durango",
+          "country": "Mexico",
+          "lat": 24.023,
+          "lon": -104.667,
+          "guide": {
+            "precip": 464,
+            "temp": 17.5,
+            "elev": 1894,
+            "climate": "Warm Temperate Dry"
+          }
+        },
+        {
+          "name": "Havana",
+          "country": "Cuba",
+          "lat": 23.113,
+          "lon": -82.366,
+          "guide": {
+            "precip": 1409,
+            "temp": 27.5,
+            "elev": 16,
+            "climate": "Tropical Moist"
+          }
+        },
+        {
+          "name": "Aswan",
+          "country": "Egypt",
+          "lat": 24.089,
+          "lon": 32.899,
+          "guide": {
+            "precip": 2,
+            "temp": 27.5,
+            "elev": 143,
+            "climate": "Tropical Desert"
+          }
+        }
+      ]
+    },
+    "world": {
+      "label": "World cities challenge",
+      "description": "Five large cities picked at random from different climate regions. A new game every time.",
+      "minPopulation": 1000000,
+      "minSeparationKm": 1500,
+      "distinctClimates": true
+    }
+  }
+}

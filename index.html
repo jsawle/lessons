@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mystery Place – MapMaker Lesson Player (Lab)</title>
+<link rel="stylesheet" href="https://js.arcgis.com/4.31/esri/themes/light/main.css">
+<style>
+:root{
+  --ink:#111; --ink-2:#444; --paper:#fff; --paper-2:#f4f4f2; --line:#d6d6d0;
+  --brand:#000; --accent:#FFCC00; --focus:#0b5fff;
+  --ok-bg:#e6f4ea; --ok-ink:#11602a; --no-bg:#fde8e8; --no-ink:#8a1c1c;
+  --panel-w:400px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--paper);color:var(--ink);
+  font-family:"Avenir Next","Avenir","Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.45}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:8px;top:-60px;background:var(--accent);color:#000;padding:8px 12px;z-index:100;font-weight:700}
+.skip:focus{top:8px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+button,input,select,textarea{font:inherit}
+
+/* Header */
+.topbar{display:flex;align-items:center;gap:12px;background:var(--brand);color:#fff;padding:8px 16px;border-bottom:3px solid var(--accent);min-height:56px}
+.brand{display:flex;flex-direction:column;min-width:0}
+.kicker{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.topbar h1{margin:0;font-size:20px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar h1 span{font-weight:500;color:#ddd}
+.badge{margin-left:auto;background:var(--accent);color:#000;font-weight:800;font-size:13px;padding:3px 8px;border-radius:4px;white-space:nowrap}
+
+/* Layout */
+.layout{display:flex;height:calc(100% - 59px)}
+.mapwrap{position:relative;flex:1;min-width:0}
+#viewDiv{position:absolute;inset:0}
+.crosshair{position:absolute;left:50%;top:50%;width:28px;height:28px;margin:-14px 0 0 -14px;pointer-events:none;z-index:5}
+.crosshair::before,.crosshair::after{content:"";position:absolute;background:#000;box-shadow:0 0 0 1px #fff}
+.crosshair::before{left:13px;top:0;width:2px;height:28px}
+.crosshair::after{top:13px;left:0;height:2px;width:28px}
+.maphint{position:absolute;left:8px;bottom:8px;z-index:5;margin:0;background:rgba(255,255,255,.94);border:1px solid var(--line);padding:4px 8px;font-size:13px;max-width:calc(100% - 200px);border-radius:4px}
+.panel{width:var(--panel-w);max-width:100%;overflow-y:auto;border-left:1px solid var(--line);background:var(--paper);padding:14px 16px 90px}
+.panel h2{font-size:18px;margin:16px 0 8px}
+.panel h3{font-size:16px;margin:12px 0 6px}
+.panel p{margin:6px 0}
+.muted{color:var(--ink-2);font-size:14px}
+.ver{font-size:11px;color:var(--ink-2);font-weight:600;letter-spacing:.02em;white-space:nowrap}
+.sec{border-top:1px solid var(--line);margin-top:14px;padding-top:4px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:8px 14px;border:2px solid #000;background:#fff;color:#000;border-radius:6px;font-weight:700;cursor:pointer}
+.btn:hover{background:var(--paper-2)}
+.btn.primary{background:var(--accent);border-color:#000}
+.btn.primary:hover{background:#ffd633}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.btn.block{width:100%}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.row .btn{flex:1 1 auto}
+
+/* Cards */
+.statusbar{display:flex;justify-content:space-between;align-items:baseline;background:#000;color:#fff;padding:8px 12px;border-radius:6px;font-weight:700}
+.statusbar .score{color:var(--accent)}
+.clues{list-style:none;padding:0;margin:8px 0}
+.clue{border:2px solid #000;border-left-width:8px;border-left-color:var(--accent);border-radius:6px;padding:8px 10px;margin:8px 0;background:#fff}
+.clue .k{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-2)}
+.clue .v{display:block;font-size:18px;font-weight:800}
+.clue .use{display:block;font-size:13px;color:var(--ink-2)}
+.probe{background:var(--paper-2);border:1px solid var(--line);border-radius:6px;padding:8px 10px;min-height:44px}
+.probe dl{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;margin:4px 0}
+.probe dt{font-weight:700;font-size:14px}
+.probe dd{margin:0;font-size:14px}
+.choice{display:flex;gap:10px;align-items:flex-start;border:2px solid var(--line);border-radius:6px;padding:10px;margin:8px 0;cursor:pointer}
+.choice:has(input:checked){border-color:#000;background:#fffbe6}
+.choice input{width:20px;height:20px;margin-top:3px;flex:none}
+.layers{list-style:none;padding:0;margin:0}
+.layers li{margin:2px 0}
+.layers label{display:flex;gap:10px;align-items:center;min-height:40px;cursor:pointer}
+.layers input{width:20px;height:20px;flex:none}
+table{border-collapse:collapse;width:100%;font-size:14px;margin:6px 0}
+th,td{border:1px solid var(--line);padding:5px 6px;text-align:left;vertical-align:top}
+th{background:var(--paper-2)}
+.ok{background:var(--ok-bg);color:var(--ok-ink);font-weight:700}
+.no{background:var(--no-bg);color:var(--no-ink);font-weight:700}
+.pts{font-size:28px;font-weight:900}
+.feedback{border-left:6px solid var(--accent);padding:4px 10px;margin:8px 0;background:#fffbe6}
+.feedback p{margin:4px 0}
+textarea{width:100%;min-height:70px;border:2px solid #000;border-radius:6px;padding:8px}
+input[type=text],input[type=search]{width:100%;min-height:44px;border:2px solid #000;border-radius:6px;padding:6px 10px}
+details{margin:6px 0}
+summary{cursor:pointer;font-weight:700;min-height:36px;display:flex;align-items:center}
+.err{background:var(--no-bg);color:var(--no-ink);border-radius:6px;padding:8px 10px}
+.spinner{display:inline-block;width:16px;height:16px;border:3px solid #ccc;border-top-color:#000;border-radius:50%;animation:spin 1s linear infinite;vertical-align:-3px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spinner{animation:none}}
+
+/* Credit tag */
+.credit{position:fixed;right:12px;bottom:12px;z-index:50;background:#000;color:#fff;border-top:3px solid var(--accent);padding:6px 10px;font-size:12px;line-height:1.35;border-radius:4px;text-align:right}
+
+/* Mobile */
+@media (max-width:820px){
+  .layout{flex-direction:column;height:auto}
+  .mapwrap{height:52vh;flex:none}
+  .panel{width:100%;border-left:0;border-top:1px solid var(--line)}
+  .maphint{display:none}
+  .topbar h1{font-size:17px}
+  .credit{position:static;margin:12px 16px 16px;display:inline-block}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#panel">Skip to game panel</a>
+<header class="topbar">
+  <div class="brand">
+    <span class="kicker">MapMaker Lesson Player · Lab</span>
+    <h1>Mystery Place <span id="lessonTitle"></span></h1>
+  </div>
+  <span class="badge" id="verBadge" title="App version">v1.0.0</span>
+</header>
+
+<main class="layout">
+  <section class="mapwrap" aria-label="Map">
+    <div id="viewDiv" role="application" aria-label="Interactive map. Click a place to read its data. With the keyboard, focus the map and use the arrow keys to pan and plus or minus to zoom, then use Read values at map centre."></div>
+    <div class="crosshair" aria-hidden="true"></div>
+    <p class="maphint">Click the map to read the data there · Keyboard: arrows pan, +/− zoom, centre cross = “map centre”</p>
+  </section>
+
+  <aside id="panel" class="panel" tabindex="-1" aria-label="Game panel">
+    <div id="screen" aria-live="off"><p><span class="spinner" aria-hidden="true"></span> Loading the map…</p></div>
+
+    <section id="toolsSec" class="sec" hidden aria-labelledby="toolsH">
+      <h2 id="toolsH">Investigate <span class="ver" id="verReader"></span></h2>
+      <p class="muted">Click the map, or pan to the centre cross and press the button. Values appear for the layers you have switched on.</p>
+      <div id="probe" class="probe"><p class="muted">No place inspected yet.</p></div>
+      <div class="row">
+        <button class="btn" id="btnProbeCentre" type="button">Read values at map centre</button>
+        <button class="btn primary" id="btnGuess" type="button" disabled>Make this my guess</button>
+      </div>
+      <label for="citySearch"><strong>Jump to a city</strong></label>
+      <div class="row" style="flex-wrap:nowrap">
+        <input id="citySearch" type="search" list="cityList" autocomplete="off" placeholder="Start typing a city name">
+        <button class="btn" id="btnCityGo" type="button" style="flex:none">Go</button>
+      </div>
+      <datalist id="cityList"></datalist>
+    </section>
+
+    <section id="layersSec" class="sec" hidden aria-labelledby="layersH">
+      <h2 id="layersH">Map layers</h2>
+      <ul id="layerList" class="layers"></ul>
+    </section>
+
+    <section id="teacherSec" class="sec" hidden aria-labelledby="teacherH">
+      <h2 id="teacherH">Teacher tools</h2>
+      <details id="keyDetails"><summary>Answer key for this game</summary><div id="answerKey"><p class="muted">Start a game to see its answer key.</p></div></details>
+      <details><summary>Check Teacher Guide values against the live data</summary>
+        <p class="muted">Reads the map data at each lesson city and compares it with the figures printed in the Teacher Guide.</p>
+        <button class="btn" id="btnGuideCheck" type="button">Run check</button>
+        <div id="guideCheck"></div>
+      </details>
+    </section>
+
+    <section class="sec" aria-labelledby="aboutH">
+      <details><summary id="aboutH">About and versions</summary>
+        <p class="muted">Lab prototype of a reusable lesson player. The lesson is a data spec (web map, layers, clues, places); the game reads answers directly from the map data.</p>
+        <table id="versionTable"><caption class="sr-only">Versions</caption></table>
+      </details>
+    </section>
+  </aside>
+</main>
+
+<div id="live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+<div class="credit">Created by Jason Sawle<br>© Esri 2026</div>
+
+<!-- ============ Pure logic (no SDK) — unit tested ============ -->
+<script id="lp-core">
+var LP = (function(){
+  "use strict";
+  var VERSIONS = {
+    app: "1.0.0",
+    models: [
+      { key:"reader",   name:"Data reader",      v:"1.0", note:"Reads climate class, precipitation, temperature band and elevation at a point" },
+      { key:"rounds",   name:"Round generator",  v:"1.0", note:"Picks mystery places; world set favours different climate regions, ≥1,500 km apart" },
+      { key:"scoring",  name:"Scoring",          v:"1.0", note:"Distance up to 3,000 + evidence matches 4 × 500 − 250 per extra clue; max 5,000" },
+      { key:"feedback", name:"Feedback rules",   v:"1.0", note:"Rule-based explanations comparing the guess with the mystery place" }
+    ]
+  };
+
+  function haversineKm(lat1, lon1, lat2, lon2){
+    var R = 6371.0088, toR = Math.PI/180;
+    var dLat = (lat2-lat1)*toR, dLon = (lon2-lon1)*toR;
+    var a = Math.sin(dLat/2)*Math.sin(dLat/2) + Math.cos(lat1*toR)*Math.cos(lat2*toR)*Math.sin(dLon/2)*Math.sin(dLon/2);
+    return 2*R*Math.asin(Math.min(1, Math.sqrt(a)));
+  }
+
+  function hashString(s){
+    var h = 2166136261 >>> 0;
+    for (var i=0;i<s.length;i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; }
+    return h >>> 0;
+  }
+  function mulberry32(seed){
+    var a = seed >>> 0;
+    return function(){
+      a = (a + 0x6D2B79F5) >>> 0;
+      var t = a;
+      t = Math.imul(t ^ (t >>> 15), t | 1);
+      t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  function shuffle(arr, rng){
+    var a = arr.slice();
+    for (var i=a.length-1;i>0;i--){ var j = Math.floor(rng()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; }
+    return a;
+  }
+
+  // ---- matching rules (Scoring v1.0) ----
+  function tempMatch(g, t){ return !!(g && t && g.min === t.min && g.max === t.max); }
+  function precipMatch(g, t){ return g != null && t != null && Math.abs(g - t) <= Math.max(100, 0.25*t); }
+  function elevMatch(g, t){ return g != null && t != null && Math.abs(g - t) <= Math.max(250, 0.25*Math.abs(t)); }
+  function climateMatch(g, t){ return !!(g && t && String(g).trim().toLowerCase() === String(t).trim().toLowerCase()); }
+
+  function matchAll(g, t){
+    return { temp: tempMatch(g.temp, t.temp), precip: precipMatch(g.precip, t.precip),
+             elev: elevMatch(g.elev, t.elev), climate: climateMatch(g.climate, t.climate) };
+  }
+
+  function scoreRound(distanceKm, matches, extraClues, cfg){
+    cfg = cfg || {};
+    var maxDist = cfg.maxDistancePts != null ? cfg.maxDistancePts : 3000;
+    var scaleKm = cfg.distanceScaleKm != null ? cfg.distanceScaleKm : 1000;
+    var perMatch = cfg.matchPts != null ? cfg.matchPts : 500;
+    var clueCost = cfg.extraClueCost != null ? cfg.extraClueCost : 250;
+    var distancePts = Math.round(maxDist * Math.exp(-Math.max(0, distanceKm)/scaleKm));
+    var n = 0; for (var k in matches){ if (matches[k]) n++; }
+    var evidencePts = n * perMatch;
+    var penalty = Math.max(0, extraClues|0) * clueCost;
+    var total = Math.max(0, distancePts + evidencePts - penalty);
+    return { distancePts: distancePts, evidencePts: evidencePts, matchCount: n, cluePenalty: penalty, total: total };
+  }
+
+  // ---- formatting ----
+  function fmtInt(n){ return n == null || isNaN(n) ? "—" : Math.round(n).toLocaleString("en-US"); }
+  function round10(n){ return Math.round(n/10)*10; }
+  function fmtTemp(t){ return t ? ("between " + t.min + " °C and " + t.max + " °C") : "no data"; }
+  function fmtTempShort(t){ return t ? (t.min + " to " + t.max + " °C") : "no data"; }
+  function fmtPrecip(p){ return p == null ? "no data" : ("about " + fmtInt(p) + " mm a year"); }
+  function fmtElev(e){
+    if (e == null) return "no data";
+    var r = Math.abs(e) >= 100 ? round10(e) : Math.round(e);
+    return r < 0 ? ("about " + fmtInt(-r) + " m below sea level") : ("about " + fmtInt(r) + " m above sea level");
+  }
+  function fmtClimate(c){ return c || "no data"; }
+  function fmtDistance(km){ return km < 10 ? (km.toFixed(1) + " km") : (fmtInt(km) + " km"); }
+
+  // ---- Feedback rules v1.0 ----
+  function tempMid(t){ return t ? (t.min + t.max)/2 : null; }
+  function buildFeedback(target, guess, distanceKm, matches){
+    var out = [];
+    if (distanceKm < 150) out.push("Excellent — you found the mystery place (or somewhere very close to it).");
+    var nMatch = 0; for (var k in matches){ if (matches[k]) nMatch++; }
+    if (distanceKm >= 150 && nMatch === 4) out.push("Your place matches every clue, so your reasoning was spot on. Many places share the same climate — the mystery place was just somewhere else with that climate.");
+    var gm = tempMid(guess.temp), tm = tempMid(target.temp);
+    if (gm != null && tm != null && gm < tm && guess.elev != null && target.elev != null && guess.elev - target.elev > 500)
+      out.push("Your place is about " + fmtInt(guess.elev - target.elev) + " m higher than the mystery place. Higher places are usually cooler — that helps explain the temperature difference.");
+    else if (gm != null && tm != null && gm < tm && Math.abs(guess.lat) > Math.abs(target.lat) + 5)
+      out.push("Your place is further from the equator (" + Math.abs(guess.lat).toFixed(0) + "° vs " + Math.abs(target.lat).toFixed(0) + "°), which usually means cooler temperatures.");
+    else if (gm != null && tm != null && gm > tm && Math.abs(guess.lat) < Math.abs(target.lat) - 5)
+      out.push("Your place is closer to the equator than the mystery place, which usually means warmer temperatures.");
+    if (guess.precip != null && target.precip != null && !matches.precip){
+      if (guess.precip < target.precip * 0.5) out.push("Your place is much drier (" + fmtInt(guess.precip) + " mm vs " + fmtInt(target.precip) + " mm a year). The precipitation layer can help you find wetter places.");
+      else if (guess.precip > target.precip * 2) out.push("Your place is much wetter (" + fmtInt(guess.precip) + " mm vs " + fmtInt(target.precip) + " mm a year). The precipitation layer can help you find drier places.");
+    }
+    if (!out.length) out.push("Compare your place with the mystery place in the table. Which clue would you use differently next time?");
+    return out.slice(0, 3);
+  }
+
+  // ---- Teacher Guide check ----
+  function guideCheck(guide, actual){
+    var rows = [];
+    if (guide.precip != null) rows.push({ field:"Precipitation (mm)", guide: guide.precip, live: actual.precip,
+      ok: actual.precip != null && Math.abs(actual.precip - guide.precip) <= Math.max(25, 0.05*guide.precip) });
+    if (guide.temp != null) rows.push({ field:"Temperature (°C)", guide: guide.temp, live: actual.temp ? fmtTempShort(actual.temp) : null,
+      ok: !!actual.temp && guide.temp >= actual.temp.min && guide.temp <= actual.temp.max });
+    if (guide.elev != null) rows.push({ field:"Elevation (m)", guide: guide.elev, live: actual.elev != null ? Math.round(actual.elev) : null,
+      ok: actual.elev != null && Math.abs(actual.elev - guide.elev) <= Math.max(50, 0.1*Math.abs(guide.elev)) });
+    if (guide.climate != null) rows.push({ field:"Climate region", guide: guide.climate, live: actual.climate,
+      ok: climateMatch(guide.climate, actual.climate) });
+    return rows;
+  }
+
+  // ---- CSV ----
+  function csvCell(v){
+    if (v == null) return "";
+    var s = String(v);
+    if (/^[=+\-@\t\r]/.test(s)) s = "'" + s;           // formula-injection guard
+    return /[",\r\n]/.test(s) ? '"' + s.replace(/"/g,'""') + '"' : s;
+  }
+  function toCSV(rows, cols){
+    var lines = [cols.map(function(c){ return csvCell(c.label); }).join(",")];
+    rows.forEach(function(r){ lines.push(cols.map(function(c){ return csvCell(r[c.key]); }).join(",")); });
+    return lines.join("\r\n");
+  }
+
+  function esc(s){
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; });
+  }
+
+  // Deep-merge a lesson spec over the default (objects merged, arrays replaced)
+  function mergeSpec(base, over){
+    if (over == null || typeof over !== "object" || Array.isArray(over)) return over === undefined ? base : over;
+    var out = {}; var k;
+    for (k in base) out[k] = base[k];
+    for (k in over){
+      out[k] = (base && typeof base[k] === "object" && !Array.isArray(base[k]) && base[k] !== null)
+        ? mergeSpec(base[k], over[k]) : over[k];
+    }
+    return out;
+  }
+
+  return { VERSIONS:VERSIONS, haversineKm:haversineKm, hashString:hashString, mulberry32:mulberry32, shuffle:shuffle,
+    tempMatch:tempMatch, precipMatch:precipMatch, elevMatch:elevMatch, climateMatch:climateMatch, matchAll:matchAll,
+    scoreRound:scoreRound, fmtInt:fmtInt, fmtTemp:fmtTemp, fmtTempShort:fmtTempShort, fmtPrecip:fmtPrecip, fmtElev:fmtElev,
+    fmtClimate:fmtClimate, fmtDistance:fmtDistance, buildFeedback:buildFeedback, guideCheck:guideCheck, toCSV:toCSV, esc:esc,
+    mergeSpec:mergeSpec };
+})();
+if (typeof module !== "undefined") module.exports = LP;
+</script>
+
+<!-- ============ Lesson spec (the part that changes per lesson) ============ -->
+<script id="lp-spec">
+var DEFAULT_LESSON = {
+  id: "climate-regions-uncovered",
+  title: "Climate Regions Uncovered",
+  portalUrl: "https://www.arcgis.com",
+  webmapId: "ba213b54efd74fdb9cf13086fa570ccf",
+  rounds: 5,
+  // Layers are matched by title so the same spec works on copies of the web map
+  layers: {
+    climate: { titleIncludes: "Climate Regions", classField: "BioClimCls", label: "Climate region" },
+    precip:  { titleIncludes: "Precipitation", label: "Average annual precipitation", unit: "mm" },
+    temp:    { titleIncludes: "Surface Air Temperature", minField: "TminC", maxField: "TmaxC", label: "Average annual temperature" },
+    elev:    { titleIncludes: "Elevation", serviceUrl: "https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/TopoBathy3D/ImageServer", label: "Elevation" },
+    cities:  { titleIncludes: "Cities", nameField: "Urban_Agglomeration", countryField: "Country_or_area", popField: "Pop_2025", latField: "Latitude", lonField: "Longitude" }
+  },
+  clues: { start: ["temp", "precip"], extra: ["elev", "climate"] },
+  scoring: { maxDistancePts: 3000, distanceScaleKm: 1000, matchPts: 500, extraClueCost: 250 },
+  sets: {
+    lesson: {
+      label: "Tropic of Cancer cities",
+      description: "The five cities from the lesson's elevation inquiry. All lie near the same latitude — so what makes their climates different?",
+      places: [
+        { name: "Masqat (Muscat)", country: "Oman",       lat: 23.588, lon: 58.383,   guide: { precip: 94,   temp: 27.5, elev: 79,   climate: "Tropical Dry" } },
+        { name: "Dhaka",           country: "Bangladesh", lat: 23.810, lon: 90.413,   guide: { precip: 2161, temp: 27.5, elev: 6,    climate: "Tropical Moist" } },
+        { name: "Durango",         country: "Mexico",     lat: 24.023, lon: -104.667, guide: { precip: 464,  temp: 17.5, elev: 1894, climate: "Warm Temperate Dry" } },
+        { name: "Havana",          country: "Cuba",       lat: 23.113, lon: -82.366,  guide: { precip: 1409, temp: 27.5, elev: 16,   climate: "Tropical Moist" } },
+        { name: "Aswan",           country: "Egypt",      lat: 24.089, lon: 32.899,   guide: { precip: 2,    temp: 27.5, elev: 143,  climate: "Tropical Desert" } }
+      ]
+    },
+    world: {
+      label: "World cities challenge",
+      description: "Five large cities picked at random from different climate regions. A new game every time.",
+      minPopulation: 1000000, minSeparationKm: 1500, distinctClimates: true
+    }
+  }
+};
+</script>
+
+<!-- ============ App (ArcGIS Maps SDK for JavaScript) ============ -->
+<script src="https://js.arcgis.com/4.31/"></script>
+<script id="lp-app">
+require([
+  "esri/WebMap", "esri/views/MapView", "esri/layers/GraphicsLayer", "esri/layers/ElevationLayer",
+  "esri/Graphic", "esri/geometry/Point", "esri/geometry/Polyline", "esri/geometry/geometryEngine",
+  "esri/geometry/projection", "esri/widgets/Legend", "esri/widgets/Expand", "esri/request", "esri/config"
+], function(WebMap, MapView, GraphicsLayer, ElevationLayer, Graphic, Point, Polyline, geometryEngine,
+            projection, Legend, Expand, esriRequest, esriConfig){
+  "use strict";
+  var $ = function(id){ return document.getElementById(id); };
+  var esc = LP.esc;
+  var params = new URLSearchParams(location.search);
+  var RM = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var V = LP.VERSIONS;
+  var mv = function(key){ var m = V.models.find(function(x){ return x.key === key; }); return m ? (m.name + " v" + m.v) : ""; };
+
+  var state = {
+    phase: "loading", spec: DEFAULT_LESSON, rng: Math.random, seed: params.get("seed"),
+    teacher: params.get("teacher") === "1",
+    targets: [], round: 0, results: [], cluesShown: 2, probe: null, guess: null,
+    cities: [], homeViewpoint: null
+  };
+  var L = {};               // resolved layers: climate, precip, temp, cities, elevService, elevGate
+  var classTable = null;    // pixel value -> class name
+  var gameLayer = new GraphicsLayer({ title: "Game", listMode: "hide" });
+  var probeLayer = new GraphicsLayer({ title: "Probe", listMode: "hide" });
+
+  // ---------- version UI ----------
+  $("verBadge").textContent = "v" + V.app;
+  $("verReader").textContent = mv("reader");
+  (function buildVersionTable(){
+    var h = '<thead><tr><th scope="col">Component</th><th scope="col">Version</th><th scope="col">What it does</th></tr></thead><tbody>';
+    h += '<tr><td>Lesson Player app</td><td>' + esc(V.app) + '</td><td>Whole app</td></tr>';
+    V.models.forEach(function(m){ h += '<tr><td>' + esc(m.name) + '</td><td>' + esc(m.v) + '</td><td>' + esc(m.note) + '</td></tr>'; });
+    h += '<tr><td>Lesson spec</td><td id="specVer">—</td><td>Web map, layers, clues and places for this lesson</td></tr>';
+    h += '<tr><td>ArcGIS Maps SDK for JavaScript</td><td>4.31</td><td>Map and data access</td></tr>';
+    $("versionTable").insertAdjacentHTML("beforeend", h + '</tbody>');
+  })();
+
+  function announce(msg){ var el = $("live"); el.textContent = ""; setTimeout(function(){ el.textContent = msg; }, 50); }
+  function setScreen(html, focusSel){
+    $("screen").innerHTML = html;
+    if (focusSel){ var f = $("screen").querySelector(focusSel); if (f) f.focus(); }
+  }
+  function showError(msg){
+    setScreen('<div class="err" role="alert"><strong>Something went wrong.</strong><p>' + esc(msg) + '</p></div>' +
+      '<div class="row"><button class="btn" type="button" onclick="location.reload()">Reload</button></div>');
+  }
+
+  // ---------- load lesson spec (optional ?lesson=URL) ----------
+  async function loadSpec(){
+    var url = params.get("lesson");
+    if (!url) return DEFAULT_LESSON;
+    try {
+      var r = await esriRequest(url, { responseType: "json" });
+      return LP.mergeSpec(DEFAULT_LESSON, r.data);
+    } catch (e){
+      console.warn("Lesson spec failed, using default", e);
+      announce("Could not load the lesson file, so the default lesson is shown.");
+      return DEFAULT_LESSON;
+    }
+  }
+
+  // ---------- map ----------
+  var view;
+  async function init(){
+    state.spec = await loadSpec();
+    if (state.seed) state.rng = LP.mulberry32(LP.hashString(state.seed));
+    $("lessonTitle").textContent = "· " + state.spec.title;
+    $("specVer").textContent = state.spec.version || state.spec.id;
+    if (state.spec.portalUrl) esriConfig.portalUrl = state.spec.portalUrl;
+
+    var map = new WebMap({ portalItem: { id: state.spec.webmapId } });
+    view = new MapView({ container: "viewDiv", map: map, popupEnabled: false, constraints: { minZoom: 1 } });
+    view.ui.add(new Expand({ view: view, content: new Legend({ view: view }), expandTooltip: "Show legend", expandIcon: "legend", group: "tr" }), "top-right");
+    await view.when();
+    map.addMany([probeLayer, gameLayer]);
+    state.homeViewpoint = view.viewpoint.clone();
+    await map.loadAll();
+    resolveLayers(map);
+    buildLayerList(map);
+
+    view.on("click", function(e){ if (state.phase === "playing" || state.phase === "result") probeAt(e.mapPoint); });
+
+    // non-blocking: cities list + class table
+    loadCities().catch(function(e){ console.warn("Cities list failed", e); });
+    classTable = await loadClassTable(L.climate).catch(function(e){ console.warn("Class table failed", e); return null; });
+
+    $("teacherSec").hidden = !state.teacher;
+    renderStart();
+  }
+
+  function findLayer(map, includes){
+    if (!includes) return null;
+    var s = includes.toLowerCase();
+    return map.allLayers.find(function(l){ return l.type !== "group" && l.title && l.title.toLowerCase().indexOf(s) !== -1; }) || null;
+  }
+  function resolveLayers(map){
+    var ly = state.spec.layers;
+    L.climate = findLayer(map, ly.climate.titleIncludes);
+    L.precip  = findLayer(map, ly.precip.titleIncludes);
+    L.temp    = findLayer(map, ly.temp.titleIncludes);
+    L.cities  = findLayer(map, ly.cities.titleIncludes);
+    L.elevGate = findLayer(map, ly.elev.titleIncludes);
+    L.elevService = ly.elev.serviceUrl ? new ElevationLayer({ url: ly.elev.serviceUrl }) : null;
+    var missing = ["climate","precip","temp"].filter(function(k){ return !L[k]; });
+    if (missing.length) console.warn("Layers not found for:", missing);
+  }
+
+  function buildLayerList(map){
+    var items = map.layers.toArray().filter(function(l){ return l.listMode !== "hide"; }).reverse();
+    var ul = $("layerList"); ul.innerHTML = "";
+    items.forEach(function(l, i){
+      var id = "lyr" + i;
+      var li = document.createElement("li");
+      li.innerHTML = '<label for="' + id + '"><input type="checkbox" id="' + id + '"> <span>' + esc(l.title) + '</span></label>';
+      var cb = li.querySelector("input");
+      cb.checked = l.visible;
+      cb.addEventListener("change", function(){ l.visible = cb.checked; });
+      l.watch("visible", function(v){ cb.checked = v; });
+      ul.appendChild(li);
+    });
+  }
+
+  async function loadCities(){
+    var c = state.spec.layers.cities;
+    if (!L.cities) return;
+    var res = await L.cities.queryFeatures({ where: c.popField + " >= 300000", outFields: [c.nameField, c.countryField, c.popField, c.latField, c.lonField], returnGeometry: false, num: 2000 });
+    state.cities = res.features.map(function(f){
+      var a = f.attributes;
+      return { name: a[c.nameField], country: a[c.countryField], pop: a[c.popField], lat: a[c.latField], lon: a[c.lonField] };
+    }).filter(function(x){ return x.name && x.lat != null && x.lon != null; });
+    var dl = $("cityList"); var frag = document.createDocumentFragment();
+    state.cities.slice().sort(function(a,b){ return a.name.localeCompare(b.name); }).forEach(function(x){
+      var o = document.createElement("option"); o.value = x.name + ", " + x.country; frag.appendChild(o);
+    });
+    dl.innerHTML = ""; dl.appendChild(frag);
+  }
+
+  // ---------- Data reader v1.0 ----------
+  async function toSR(pt, layer){
+    var sr = layer.spatialReference || (layer.rasterInfo && layer.rasterInfo.spatialReference);
+    if (!sr || sr.equals(pt.spatialReference)) return pt;
+    if (!projection.isLoaded()) await projection.load();
+    return projection.project(pt, sr);
+  }
+  async function identifyValue(layer, pt){
+    if (!layer || typeof layer.identify !== "function") return null;
+    await layer.load();
+    var p = await toSR(pt, layer);
+    var r = await layer.identify(p);
+    var v = r && r.value;
+    if (v == null) return null;
+    if (Array.isArray(v) || (v && typeof v.length === "number")) v = v[0];
+    if (typeof v === "string") v = parseFloat(v.split(/[ ,]/)[0]);
+    return (v == null || isNaN(v)) ? null : Number(v);
+  }
+  async function loadClassTable(layer){
+    if (!layer) return null;
+    await layer.load();
+    var rows = null;
+    var fs = layer.rasterInfo && layer.rasterInfo.attributeTable;
+    if (fs && fs.features && fs.features.length) rows = fs.features.map(function(f){ return f.attributes; });
+    if (!rows && layer.url){
+      var r = await esriRequest(layer.url + "/rasterAttributeTable", { query: { f: "json" }, responseType: "json" });
+      rows = (r.data && r.data.features || []).map(function(f){ return f.attributes; });
+    }
+    if (!rows || !rows.length) return null;
+    var keys = Object.keys(rows[0]);
+    var vKey = keys.find(function(k){ return /^value$/i.test(k); });
+    var want = (state.spec.layers.climate.classField || "").toLowerCase();
+    var cKey = keys.find(function(k){ return k.toLowerCase() === want; });
+    if (!vKey || !cKey) return null;
+    var m = new Map(); rows.forEach(function(a){ m.set(Number(a[vKey]), a[cKey]); });
+    return m;
+  }
+  async function readClimate(pt){
+    var v = await identifyValue(L.climate, pt);
+    if (v == null) return null;
+    return (classTable && classTable.get(v)) || ("Class " + v);
+  }
+  async function readPrecip(pt){
+    var v = await identifyValue(L.precip, pt);
+    return v == null || v < 0 ? null : v;
+  }
+  async function readTemp(pt){
+    if (!L.temp || typeof L.temp.queryFeatures !== "function") return null;
+    var t = state.spec.layers.temp;
+    var res = await L.temp.queryFeatures({ geometry: pt, spatialRelationship: "intersects", outFields: [t.minField, t.maxField], returnGeometry: false, num: 1 });
+    if (!res.features.length) return null;
+    var a = res.features[0].attributes;
+    return (a[t.minField] == null || a[t.maxField] == null) ? null : { min: a[t.minField], max: a[t.maxField] };
+  }
+  async function readElev(pt){
+    if (!L.elevService) return null;
+    await L.elevService.load();
+    var r = await L.elevService.queryElevation(pt, { demResolution: "finest-contiguous" });
+    return r && r.geometry && r.geometry.z != null ? r.geometry.z : null;
+  }
+  var safe = function(p){ return p.catch(function(e){ console.warn("read failed", e); return null; }); };
+  async function readAll(lat, lon, only){
+    var pt = new Point({ longitude: lon, latitude: lat });
+    var want = only || { climate:1, precip:1, temp:1, elev:1 };
+    var out = await Promise.all([
+      want.climate ? safe(readClimate(pt)) : null,
+      want.precip  ? safe(readPrecip(pt))  : null,
+      want.temp    ? safe(readTemp(pt))    : null,
+      want.elev    ? safe(readElev(pt))    : null
+    ]);
+    return { lat: lat, lon: lon, climate: out[0], precip: out[1], temp: out[2], elev: out[3] };
+  }
+  function nearestCity(lat, lon, maxKm){
+    var best = null, bd = Infinity;
+    state.cities.forEach(function(c){ var d = LP.haversineKm(lat, lon, c.lat, c.lon); if (d < bd){ bd = d; best = c; } });
+    return best && bd <= (maxKm || 60) ? best : null;
+  }
+
+  // ---------- Probe (Investigate) ----------
+  function visibleOf(layer){
+    if (!layer) return false;
+    var l = layer; while (l){ if (l.visible === false) return false; l = l.parent && l.parent.type === "group" ? l.parent : null; }
+    return true;
+  }
+  var probeSeq = 0;
+  async function probeAt(mapPoint){
+    var lat = mapPoint.latitude, lon = mapPoint.longitude;
+    if (lat == null || lon == null) return;
+    lon = ((lon + 540) % 360) - 180;
+    var seq = ++probeSeq;
+    probeLayer.removeAll();
+    probeLayer.add(new Graphic({ geometry: new Point({ longitude: lon, latitude: lat }),
+      symbol: { type: "simple-marker", style: "x", size: 14, color: [0,0,0,1], outline: { color: [0,0,0,1], width: 3 } } }));
+    $("probe").innerHTML = '<p><span class="spinner" aria-hidden="true"></span> Reading the data here…</p>';
+    var vis = { climate: visibleOf(L.climate), precip: visibleOf(L.precip), temp: visibleOf(L.temp), elev: visibleOf(L.elevGate) };
+    var vals = await readAll(lat, lon, vis);
+    if (seq !== probeSeq) return;
+    var near = nearestCity(lat, lon, 60);
+    state.probe = { lat: lat, lon: lon, near: near };
+    var ly = state.spec.layers;
+    function row(key, label, text, layer){
+      return '<dt>' + esc(label) + '</dt><dd>' + (vis[key] ? esc(text) : '<span class="muted">Switch on “' + esc(layer ? layer.title : label) + '” to read this</span>') + '</dd>';
+    }
+    var place = near ? ("Near " + near.name + ", " + near.country) : ("Latitude " + lat.toFixed(1) + "°, longitude " + lon.toFixed(1) + "°");
+    $("probe").innerHTML = '<p><strong>' + esc(place) + '</strong></p><dl>' +
+      row("temp", ly.temp.label, LP.fmtTempShort(vals.temp), L.temp) +
+      row("precip", ly.precip.label, LP.fmtPrecip(vals.precip), L.precip) +
+      row("elev", ly.elev.label, LP.fmtElev(vals.elev), L.elevGate) +
+      row("climate", ly.climate.label, LP.fmtClimate(vals.climate), L.climate) + '</dl>';
+    $("btnGuess").disabled = state.phase !== "playing";
+    var spoken = [place];
+    if (vis.temp) spoken.push("temperature " + LP.fmtTempShort(vals.temp));
+    if (vis.precip) spoken.push("precipitation " + LP.fmtPrecip(vals.precip));
+    if (vis.elev) spoken.push("elevation " + LP.fmtElev(vals.elev));
+    if (vis.climate) spoken.push("climate region " + LP.fmtClimate(vals.climate));
+    if (spoken.length === 1) spoken.push("switch on a data layer to read values");
+    announce(spoken.join(". "));
+  }
+
+  $("btnProbeCentre").addEventListener("click", function(){ if (view) probeAt(view.center); });
+  $("btnGuess").addEventListener("click", function(){
+    if (!state.probe || state.phase !== "playing") return;
+    state.guess = { lat: state.probe.lat, lon: state.probe.lon, near: state.probe.near };
+    drawGuess();
+    renderPlaying();
+    var b = $("btnCheck"); if (b) b.focus();
+    announce("Guess placed. Press Check my guess when you are ready, or keep investigating and choose another place.");
+  });
+  function goToCity(){
+    var q = $("citySearch").value.trim().toLowerCase();
+    if (!q) return;
+    var hit = state.cities.find(function(c){ return (c.name + ", " + c.country).toLowerCase() === q; }) ||
+              state.cities.find(function(c){ return c.name.toLowerCase().indexOf(q) === 0; }) ||
+              state.cities.find(function(c){ return c.name.toLowerCase().indexOf(q) !== -1; });
+    if (!hit){ announce("No city found with that name."); return; }
+    var pt = new Point({ longitude: hit.lon, latitude: hit.lat });
+    view.goTo({ target: pt, zoom: Math.max(view.zoom, 5) }, { animate: !RM }).catch(function(){});
+    probeAt(pt);
+  }
+  $("btnCityGo").addEventListener("click", goToCity);
+  $("citySearch").addEventListener("keydown", function(e){ if (e.key === "Enter"){ e.preventDefault(); goToCity(); } });
+
+  // ---------- graphics ----------
+  function pinSymbol(fill, style){ return { type: "simple-marker", style: style, size: 18, color: fill, outline: { color: [0,0,0,1], width: 2.5 } }; }
+  function labelSymbol(text){ return { type: "text", text: text, color: [0,0,0,1], haloColor: [255,255,255,1], haloSize: 2, yoffset: 16, font: { size: 12, weight: "bold" } }; }
+  function drawGuess(){
+    gameLayer.removeAll();
+    if (!state.guess) return;
+    var p = new Point({ longitude: state.guess.lon, latitude: state.guess.lat });
+    gameLayer.addMany([ new Graphic({ geometry: p, symbol: pinSymbol([255,255,255,1], "circle") }),
+                        new Graphic({ geometry: p, symbol: labelSymbol("Your guess") }) ]);
+  }
+  function drawReveal(target){
+    var g = new Point({ longitude: state.guess.lon, latitude: state.guess.lat });
+    var t = new Point({ longitude: target.lon, latitude: target.lat });
+    var line = new Polyline({ paths: [[[state.guess.lon, state.guess.lat], [target.lon, target.lat]]], spatialReference: { wkid: 4326 } });
+    try { line = geometryEngine.geodesicDensify(line, 100000); } catch(e){}
+    gameLayer.removeAll();
+    gameLayer.addMany([
+      new Graphic({ geometry: line, symbol: { type: "simple-line", color: [0,0,0,1], width: 2, style: "dash" } }),
+      new Graphic({ geometry: g, symbol: pinSymbol([255,255,255,1], "circle") }),
+      new Graphic({ geometry: g, symbol: labelSymbol("Your guess") }),
+      new Graphic({ geometry: t, symbol: pinSymbol([255,204,0,1], "diamond") }),
+      new Graphic({ geometry: t, symbol: labelSymbol("Mystery place: " + target.name) })
+    ]);
+    view.goTo(gameLayer.graphics.toArray().map(function(x){ return x.geometry; }), { animate: !RM }).then(function(){
+      if (view.zoom > 6) view.goTo({ zoom: 6 }, { animate: !RM });
+    }).catch(function(){});
+  }
+
+  // ---------- Round generator v1.0 ----------
+  async function generateTargets(setKey){
+    var spec = state.spec, n = spec.rounds || 5, set = spec.sets[setKey];
+    var picks;
+    if (setKey === "world"){
+      var pool = state.cities.filter(function(c){ return c.pop >= (set.minPopulation || 1000000); });
+      if (pool.length < n) throw new Error("The world cities list did not load. Try the Tropic of Cancer set instead.");
+      pool = LP.shuffle(pool, state.rng);
+      picks = []; var classes = new Set(), tries = 0;
+      for (var i = 0; i < pool.length && picks.length < n && tries < 40; i++){
+        var c = pool[i];
+        if (picks.some(function(p){ return LP.haversineKm(p.lat, p.lon, c.lat, c.lon) < (set.minSeparationKm || 1500); })) continue;
+        tries++;
+        var cls = await safe(readClimate(new Point({ longitude: c.lon, latitude: c.lat })));
+        if (!cls) continue;
+        if (set.distinctClimates && classes.has(cls)) continue;
+        classes.add(cls); picks.push(c);
+      }
+      for (var j = 0; j < pool.length && picks.length < n; j++){   // relax if needed
+        if (picks.indexOf(pool[j]) === -1) picks.push(pool[j]);
+      }
+    } else {
+      picks = LP.shuffle(set.places, state.rng).slice(0, n);
+    }
+    var vals = await Promise.all(picks.map(function(p){ return readAll(p.lat, p.lon); }));
+    return picks.map(function(p, i){ return Object.assign({}, vals[i], { name: p.name, country: p.country, guide: p.guide || null }); });
+  }
+
+  // ---------- screens ----------
+  function renderStart(){
+    state.phase = "start";
+    $("toolsSec").hidden = true; $("layersSec").hidden = true;
+    gameLayer.removeAll(); probeLayer.removeAll();
+    var sets = state.spec.sets;
+    var h = '<h2 tabindex="-1" id="startH">Can you find the mystery place?</h2>' +
+      '<p>You will get clues about a place’s climate. Use the map layers as your instruments to track it down. You score points for getting close <em>and</em> for choosing a place whose data matches the clues.</p>' +
+      '<fieldset style="border:0;padding:0;margin:0"><legend><strong>Choose a challenge</strong></legend>';
+    Object.keys(sets).forEach(function(k, i){
+      h += '<label class="choice"><input type="radio" name="set" value="' + esc(k) + '"' + (i === 0 ? ' checked' : '') + '><span><strong>' + esc(sets[k].label) + '</strong><br><span class="muted">' + esc(sets[k].description) + '</span></span></label>';
+    });
+    h += '</fieldset><p class="muted">' + (state.spec.rounds || 5) + ' rounds · up to 5,000 points each · no timer' + (state.seed ? ' · class code: <strong>' + esc(state.seed) + '</strong>' : '') + '</p>' +
+      '<button class="btn primary block" id="btnStart" type="button">Start</button>';
+    setScreen(h, "#startH");
+    $("btnStart").addEventListener("click", async function(){
+      var setKey = (document.querySelector('input[name="set"]:checked') || {}).value || "lesson";
+      setScreen('<p role="status"><span class="spinner" aria-hidden="true"></span> Choosing mystery places and reading their data…</p><p class="ver">' + esc(mv("rounds")) + '</p>');
+      try {
+        state.targets = await generateTargets(setKey);
+        state.setKey = setKey; state.round = 0; state.results = [];
+        renderAnswerKey();
+        startRound();
+      } catch (e){ console.error(e); showError(e.message || String(e)); }
+    });
+  }
+
+  function startRound(){
+    state.phase = "playing"; state.cluesShown = state.spec.clues.start.length; state.guess = null; state.probe = null;
+    gameLayer.removeAll(); probeLayer.removeAll();
+    $("probe").innerHTML = '<p class="muted">No place inspected yet.</p>';
+    $("btnGuess").disabled = true;
+    $("toolsSec").hidden = false; $("layersSec").hidden = false;
+    if (state.homeViewpoint) view.goTo(state.homeViewpoint, { animate: !RM }).catch(function(){});
+    renderPlaying(true);
+  }
+
+  function clueKeys(){ var c = state.spec.clues; return c.start.concat(c.extra).slice(0, state.cluesShown); }
+  function clueText(key, t){
+    if (key === "temp") return LP.fmtTemp(t.temp);
+    if (key === "precip") return LP.fmtPrecip(t.precip);
+    if (key === "elev") return LP.fmtElev(t.elev);
+    if (key === "climate") return LP.fmtClimate(t.climate);
+    return "";
+  }
+  function layerTitleFor(key){
+    var l = key === "elev" ? L.elevGate : L[key];
+    return l ? l.title : state.spec.layers[key].label;
+  }
+  function totalScore(){ return state.results.reduce(function(s, r){ return s + r.score.total; }, 0); }
+
+  function renderPlaying(focusHeading){
+    var t = state.targets[state.round];
+    var extraLeft = state.spec.clues.start.length + state.spec.clues.extra.length - state.cluesShown;
+    var h = '<div class="statusbar"><span>Round ' + (state.round + 1) + ' of ' + state.targets.length + '</span><span class="score">' + LP.fmtInt(totalScore()) + ' pts</span></div>' +
+      '<h2 tabindex="-1" id="roundH">Clues about the mystery place</h2><ul class="clues">';
+    clueKeys().forEach(function(k){
+      h += '<li class="clue"><span class="k">' + esc(state.spec.layers[k].label) + '</span><span class="v">' + esc(clueText(k, t)) + '</span><span class="use">Layer to use: ' + esc(layerTitleFor(k)) + '</span></li>';
+    });
+    h += '</ul>';
+    if (extraLeft > 0){
+      var nextKey = state.spec.clues.start.concat(state.spec.clues.extra)[state.cluesShown];
+      h += '<button class="btn block" id="btnClue" type="button">Reveal another clue: ' + esc(state.spec.layers[nextKey].label.toLowerCase()) + ' (−' + state.spec.scoring.extraClueCost + ' pts)</button>';
+    }
+    if (state.guess){
+      var gname = state.guess.near ? (state.guess.near.name + ", " + state.guess.near.country) : (state.guess.lat.toFixed(1) + "°, " + state.guess.lon.toFixed(1) + "°");
+      h += '<p style="margin-top:12px"><strong>Your guess:</strong> ' + esc(gname) + '</p><button class="btn primary block" id="btnCheck" type="button">Check my guess</button>';
+    } else {
+      h += '<p class="muted" style="margin-top:12px">Investigate places below, then choose <strong>Make this my guess</strong>.</p>';
+    }
+    setScreen(h, focusHeading ? "#roundH" : null);
+    var bc = $("btnClue");
+    if (bc) bc.addEventListener("click", function(){
+      state.cluesShown++; renderPlaying();
+      var keys = clueKeys(), k = keys[keys.length - 1];
+      announce("New clue. " + state.spec.layers[k].label + ": " + clueText(k, t));
+      var nb = $("btnClue") || $("btnCheck"); if (nb) nb.focus();
+    });
+    var ck = $("btnCheck");
+    if (ck) ck.addEventListener("click", checkGuess);
+  }
+
+  async function checkGuess(){
+    if (!state.guess) return;
+    state.phase = "checking";
+    $("btnGuess").disabled = true;
+    var t = state.targets[state.round];
+    setScreen('<p role="status"><span class="spinner" aria-hidden="true"></span> Comparing your place with the mystery place…</p>');
+    var g = await readAll(state.guess.lat, state.guess.lon);
+    var d = LP.haversineKm(g.lat, g.lon, t.lat, t.lon);
+    var matches = LP.matchAll(g, t);
+    var extra = state.cluesShown - state.spec.clues.start.length;
+    var score = LP.scoreRound(d, matches, extra, state.spec.scoring);
+    var fb = LP.buildFeedback(t, g, d, matches);
+    state.results.push({ round: state.round + 1, target: t, guess: g, guessNear: state.guess.near, distanceKm: d, matches: matches, extraClues: extra, score: score, feedback: fb, reflection: "" });
+    state.phase = "result";
+    drawReveal(t);
+    renderResult();
+    announce("The mystery place was " + t.name + ", " + t.country + ". You were " + LP.fmtDistance(d) + " away and scored " + LP.fmtInt(score.total) + " points.");
+  }
+
+  function mark(ok){ return ok ? '<td class="ok">✓ Match</td>' : '<td class="no">✗ Different</td>'; }
+  function renderResult(){
+    var r = state.results[state.results.length - 1], t = r.target, g = r.guess, s = r.score;
+    var last = state.round >= state.targets.length - 1;
+    var gname = r.guessNear ? (r.guessNear.name + ", " + r.guessNear.country) : "Your place";
+    var h = '<div class="statusbar"><span>Round ' + r.round + ' of ' + state.targets.length + '</span><span class="score">' + LP.fmtInt(totalScore()) + ' pts</span></div>' +
+      '<h2 tabindex="-1" id="resH">It was ' + esc(t.name) + ', ' + esc(t.country) + '</h2>' +
+      '<p><span class="pts">+' + LP.fmtInt(s.total) + '</span> points · you were ' + esc(LP.fmtDistance(r.distanceKm)) + ' away</p>' +
+      '<table><caption class="sr-only">How your place compares with the mystery place</caption><thead><tr><th scope="col">Data</th><th scope="col">Mystery place</th><th scope="col">' + esc(gname) + '</th><th scope="col">Result</th></tr></thead><tbody>' +
+      '<tr><th scope="row">Temperature</th><td>' + esc(LP.fmtTempShort(t.temp)) + '</td><td>' + esc(LP.fmtTempShort(g.temp)) + '</td>' + mark(r.matches.temp) + '</tr>' +
+      '<tr><th scope="row">Precipitation</th><td>' + esc(LP.fmtInt(t.precip)) + ' mm</td><td>' + esc(LP.fmtInt(g.precip)) + ' mm</td>' + mark(r.matches.precip) + '</tr>' +
+      '<tr><th scope="row">Elevation</th><td>' + esc(LP.fmtInt(t.elev)) + ' m</td><td>' + esc(LP.fmtInt(g.elev)) + ' m</td>' + mark(r.matches.elev) + '</tr>' +
+      '<tr><th scope="row">Climate region</th><td>' + esc(LP.fmtClimate(t.climate)) + '</td><td>' + esc(LP.fmtClimate(g.climate)) + '</td>' + mark(r.matches.climate) + '</tr>' +
+      '</tbody></table>' +
+      '<details><summary>How the points were worked out <span class="ver">&nbsp;' + esc(mv("scoring")) + '</span></summary><table><tbody>' +
+      '<tr><td>Distance</td><td>+' + LP.fmtInt(s.distancePts) + '</td></tr>' +
+      '<tr><td>Data matches (' + s.matchCount + ' of 4)</td><td>+' + LP.fmtInt(s.evidencePts) + '</td></tr>' +
+      '<tr><td>Extra clues (' + r.extraClues + ')</td><td>−' + LP.fmtInt(s.cluePenalty) + '</td></tr>' +
+      '<tr><th>Round total</th><th>' + LP.fmtInt(s.total) + '</th></tr></tbody></table></details>' +
+      '<div class="feedback"><p class="ver">' + esc(mv("feedback")) + '</p>' + r.feedback.map(function(x){ return '<p>' + esc(x) + '</p>'; }).join("") + '</div>' +
+      '<label for="reflect"><strong>Which clue or layer helped you most? Why?</strong> <span class="muted">(optional)</span></label>' +
+      '<textarea id="reflect"></textarea>' +
+      '<div class="row"><button class="btn primary block" id="btnNext" type="button">' + (last ? 'See my results' : 'Next round') + '</button></div>';
+    setScreen(h, "#resH");
+    $("btnNext").addEventListener("click", function(){
+      r.reflection = $("reflect").value.trim();
+      if (last) renderEnd(); else { state.round++; startRound(); }
+    });
+  }
+
+  var CSV_COLS = [
+    { key:"round", label:"Round" }, { key:"mystery", label:"Mystery place" }, { key:"guess", label:"My guess" },
+    { key:"distance", label:"Distance (km)" }, { key:"matches", label:"Data matches (of 4)" }, { key:"extra", label:"Extra clues" },
+    { key:"points", label:"Points" }, { key:"reflection", label:"Reflection" }
+  ];
+  function resultRows(){
+    return state.results.map(function(r){
+      return { round: r.round, mystery: r.target.name + ", " + r.target.country,
+        guess: r.guessNear ? (r.guessNear.name + ", " + r.guessNear.country) : (r.guess.lat.toFixed(2) + ", " + r.guess.lon.toFixed(2)),
+        distance: Math.round(r.distanceKm), matches: r.score.matchCount, extra: r.extraClues, points: r.score.total, reflection: r.reflection };
+    });
+  }
+  function renderEnd(){
+    state.phase = "end";
+    $("btnGuess").disabled = true;
+    var rows = resultRows();
+    var h = '<h2 tabindex="-1" id="endH">Game complete</h2><p><span class="pts">' + LP.fmtInt(totalScore()) + '</span> points out of ' + LP.fmtInt(state.targets.length * 5000) + '</p>' +
+      '<table><caption class="sr-only">Your results by round</caption><thead><tr><th scope="col">#</th><th scope="col">Mystery place</th><th scope="col">Distance</th><th scope="col">Matches</th><th scope="col">Points</th></tr></thead><tbody>' +
+      rows.map(function(x){ return '<tr><td>' + x.round + '</td><td>' + esc(x.mystery) + '</td><td>' + LP.fmtInt(x.distance) + ' km</td><td>' + x.matches + '/4</td><td>' + LP.fmtInt(x.points) + '</td></tr>'; }).join("") +
+      '</tbody></table>' +
+      '<p class="muted">Your results stay on this device. Download them if your teacher asks you to hand them in.</p>' +
+      '<div class="row"><button class="btn" id="btnCsv" type="button">Download my results (CSV)</button><button class="btn primary" id="btnAgain" type="button">Play again</button></div>';
+    setScreen(h, "#endH");
+    $("btnCsv").addEventListener("click", function(){
+      var csv = LP.toCSV(rows, CSV_COLS);
+      var blob = new Blob(["\ufeff" + csv], { type: "text/csv;charset=utf-8" });
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "mystery-place-" + state.spec.id + "-" + new Date().toISOString().slice(0,10) + ".csv";
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(function(){ URL.revokeObjectURL(a.href); }, 2000);
+    });
+    $("btnAgain").addEventListener("click", renderStart);
+    announce("Game complete. You scored " + LP.fmtInt(totalScore()) + " points.");
+  }
+
+  // ---------- Teacher tools ----------
+  function renderAnswerKey(){
+    if (!state.teacher) return;
+    var h = '<table><thead><tr><th scope="col">#</th><th scope="col">Place</th><th scope="col">Temp</th><th scope="col">Precip</th><th scope="col">Elev</th><th scope="col">Climate</th></tr></thead><tbody>';
+    state.targets.forEach(function(t, i){
+      h += '<tr><td>' + (i+1) + '</td><td>' + esc(t.name) + ', ' + esc(t.country) + '</td><td>' + esc(LP.fmtTempShort(t.temp)) + '</td><td>' + LP.fmtInt(t.precip) + ' mm</td><td>' + LP.fmtInt(t.elev) + ' m</td><td>' + esc(LP.fmtClimate(t.climate)) + '</td></tr>';
+    });
+    $("answerKey").innerHTML = h + '</tbody></table><p class="muted">Values read live from the map data (' + esc(mv("reader")) + ').</p>';
+  }
+  $("btnGuideCheck").addEventListener("click", async function(){
+    var out = $("guideCheck");
+    var places = (state.spec.sets.lesson && state.spec.sets.lesson.places || []).filter(function(p){ return p.guide; });
+    if (!places.length){ out.innerHTML = '<p class="muted">This lesson spec has no Teacher Guide values to check.</p>'; return; }
+    out.innerHTML = '<p role="status"><span class="spinner" aria-hidden="true"></span> Reading live data…</p>';
+    var vals = await Promise.all(places.map(function(p){ return readAll(p.lat, p.lon); }));
+    var issues = 0;
+    var h = '<table><thead><tr><th scope="col">Place</th><th scope="col">Data</th><th scope="col">Guide</th><th scope="col">Live</th><th scope="col">Check</th></tr></thead><tbody>';
+    places.forEach(function(p, i){
+      var rows = LP.guideCheck(p.guide, vals[i]);
+      rows.forEach(function(r, j){
+        if (!r.ok) issues++;
+        h += '<tr>' + (j === 0 ? '<th scope="row" rowspan="' + rows.length + '">' + esc(p.name) + '</th>' : '') + '<td>' + esc(r.field) + '</td><td>' + esc(r.guide) + '</td><td>' + esc(r.live == null ? "no data" : (typeof r.live === "number" ? LP.fmtInt(r.live) : r.live)) + '</td>' +
+          (r.ok ? '<td class="ok">✓ OK</td>' : '<td class="no">⚠ Differs</td>') + '</tr>';
+      });
+    });
+    out.innerHTML = '<p><strong>' + (issues ? issues + ' value(s) differ from the Guide.' : 'All values agree with the Guide.') + '</strong></p>' + h + '</tbody></table>' +
+      '<p class="muted">Tolerances: precipitation ±5% (min 25 mm), elevation ±10% (min 50 m), temperature must fall in the live 5 °C band. Small differences can come from exactly where the city point sits. Live elevation uses the World TopoBathy 3D service.</p>';
+    announce(issues ? issues + " values differ from the Teacher Guide." : "All values agree with the Teacher Guide.");
+  });
+
+  init().catch(function(e){ console.error(e); showError("The map could not be loaded. " + (e && e.message ? e.message : "")); });
+});
+</script>
+</body>
+</html>
