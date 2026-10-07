@@ -113,7 +113,7 @@ summary{cursor:pointer;font-weight:700;min-height:36px;display:flex;align-items:
     <span class="kicker">MapMaker Lesson Player · Lab</span>
     <h1>Mystery Place <span id="lessonTitle"></span></h1>
   </div>
-  <span class="badge" id="verBadge" title="App version">v1.0.0</span>
+  <span class="badge" id="verBadge" title="App version">v1.0.1</span>
 </header>
 
 <main class="layout">
@@ -174,9 +174,10 @@ summary{cursor:pointer;font-weight:700;min-height:36px;display:flex;align-items:
 var LP = (function(){
   "use strict";
   var VERSIONS = {
-    app: "1.0.0",
+    app: "1.0.1",
     models: [
-      { key:"reader",   name:"Data reader",      v:"1.0", note:"Reads climate class, precipitation, temperature band and elevation at a point" },
+      { key:"access",   name:"Layer access check", v:"1.0", note:"Tests each web map layer from this website before loading; layers that refuse access are skipped so no sign-in box appears" },
+      { key:"reader",   name:"Data reader",      v:"1.1", note:"Reads climate class, precipitation, temperature band and elevation at a point; elevation stays readable when its map layer is skipped" },
       { key:"rounds",   name:"Round generator",  v:"1.0", note:"Picks mystery places; world set favours different climate regions, ≥1,500 km apart" },
       { key:"scoring",  name:"Scoring",          v:"1.0", note:"Distance up to 3,000 + evidence matches 4 × 500 − 250 per extra clue; max 5,000" },
       { key:"feedback", name:"Feedback rules",   v:"1.0", note:"Rule-based explanations comparing the guess with the mystery place" }
@@ -286,6 +287,27 @@ var LP = (function(){
     return rows;
   }
 
+  // ---- Layer access check v1.0 ----
+  // Decide from a plain anonymous request whether a layer's service can be used from this site.
+  function classifyProbe(httpStatus, json, errName){
+    if (errName === "AbortError") return { ok:false, why:"timed out" };
+    if (errName) return { ok:false, why:"blocked or unreachable (" + errName + ")" };
+    if (httpStatus === 401 || httpStatus === 403) return { ok:false, why:"HTTP " + httpStatus + " – refused access" };
+    if (httpStatus >= 400) return { ok:false, why:"HTTP " + httpStatus };
+    if (json && json.error){
+      var c = json.error.code, m = json.error.message || "";
+      if (c === 498 || c === 499 || c === 401 || c === 403 || /token|permission|not authorized|sign in/i.test(m))
+        return { ok:false, why:(c ? c + " " : "") + m + (json.error.messageCode ? " (" + json.error.messageCode + ")" : "") };
+      return { ok:false, why:(c ? c + " " : "") + m };
+    }
+    return { ok:true, why:"" };
+  }
+  function probeUrl(url){
+    if (!url) return null;
+    var base = String(url).split("?")[0].replace(/\/+$/, "");
+    return base + "?f=json";
+  }
+
   // ---- CSV ----
   function csvCell(v){
     if (v == null) return "";
@@ -320,7 +342,7 @@ var LP = (function(){
     tempMatch:tempMatch, precipMatch:precipMatch, elevMatch:elevMatch, climateMatch:climateMatch, matchAll:matchAll,
     scoreRound:scoreRound, fmtInt:fmtInt, fmtTemp:fmtTemp, fmtTempShort:fmtTempShort, fmtPrecip:fmtPrecip, fmtElev:fmtElev,
     fmtClimate:fmtClimate, fmtDistance:fmtDistance, buildFeedback:buildFeedback, guideCheck:guideCheck, toCSV:toCSV, esc:esc,
-    mergeSpec:mergeSpec };
+    mergeSpec:mergeSpec, classifyProbe:classifyProbe, probeUrl:probeUrl };
 })();
 if (typeof module !== "undefined") module.exports = LP;
 </script>
@@ -385,7 +407,7 @@ require([
     phase: "loading", spec: DEFAULT_LESSON, rng: Math.random, seed: params.get("seed"),
     teacher: params.get("teacher") === "1",
     targets: [], round: 0, results: [], cluesShown: 2, probe: null, guess: null,
-    cities: [], homeViewpoint: null
+    cities: [], homeViewpoint: null, skipped: []
   };
   var L = {};               // resolved layers: climate, precip, temp, cities, elevService, elevGate
   var classTable = null;    // pixel value -> class name
@@ -438,13 +460,17 @@ require([
     if (state.spec.portalUrl) esriConfig.portalUrl = state.spec.portalUrl;
 
     var map = new WebMap({ portalItem: { id: state.spec.webmapId } });
+    await map.load();                       // web map JSON + layer objects only; no layer services touched yet
+    setScreen('<p role="status"><span class="spinner" aria-hidden="true"></span> Checking the map layers…</p><p class="ver">' + esc(mv("access")) + '</p>');
+    state.skipped = await screenLayers(map); // drop layers this website is not allowed to use, BEFORE anything loads them
     view = new MapView({ container: "viewDiv", map: map, popupEnabled: false, constraints: { minZoom: 1 } });
     view.ui.add(new Expand({ view: view, content: new Legend({ view: view }), expandTooltip: "Show legend", expandIcon: "legend", group: "tr" }), "top-right");
     await view.when();
     map.addMany([probeLayer, gameLayer]);
     state.homeViewpoint = view.viewpoint.clone();
-    await map.loadAll();
+    await map.loadAll().catch(function(e){ console.warn("Some layers failed to load", e); });
     resolveLayers(map);
+    renderSkipped();
     buildLayerList(map);
 
     view.on("click", function(e){ if (state.phase === "playing" || state.phase === "result") probeAt(e.mapPoint); });
@@ -455,6 +481,55 @@ require([
 
     $("teacherSec").hidden = !state.teacher;
     renderStart();
+  }
+
+  // ---------- Layer access check v1.0 ----------
+  // Plain fetch (not esriRequest) so the SDK's sign-in flow is never involved. The browser sends this
+  // site's origin as the referrer, so service-proxy referrer limits are tested exactly as the SDK would hit them.
+  async function testLayerAccess(layer){
+    var u = LP.probeUrl(layer.url);
+    if (!u) return { ok:true, why:"" };
+    var ctrl = typeof AbortController !== "undefined" ? new AbortController() : null;
+    var timer = ctrl ? setTimeout(function(){ ctrl.abort(); }, 8000) : null;
+    try {
+      var r = await fetch(u, { credentials: "omit", signal: ctrl ? ctrl.signal : undefined });
+      var j = null; try { j = await r.json(); } catch(_){}
+      return LP.classifyProbe(r.status, j, null);
+    } catch (e){
+      return LP.classifyProbe(0, null, (e && e.name) || "Error");
+    } finally { if (timer) clearTimeout(timer); }
+  }
+  async function screenLayers(map){
+    var layers = map.allLayers.toArray().filter(function(l){ return l.type !== "group" && l.url; });
+    var results = await Promise.all(layers.map(testLayerAccess));
+    var skipped = [];
+    layers.forEach(function(l, i){
+      if (results[i].ok) return;
+      skipped.push({ title: l.title, url: String(l.url).split("?")[0], why: results[i].why });
+      var parent = l.parent;
+      if (parent && typeof parent.remove === "function") parent.remove(l); else map.remove(l);
+    });
+    if (skipped.length){
+      // Backstop: fail any later request to a skipped service instantly, instead of prompting for sign-in.
+      esriConfig.request.interceptors.push({
+        urls: skipped.map(function(s){ return s.url; }),
+        before: function(){ return new Error("Layer skipped: this website is not allowed to use it"); }
+      });
+      console.warn("[Layer access check] Skipped layers:", skipped);
+    }
+    return skipped;
+  }
+  function renderSkipped(){
+    var s = state.skipped || [];
+    var host = $("teacherSec");
+    var box = document.createElement("details");
+    box.innerHTML = '<summary>Layer access check (' + (s.length ? s.length + ' skipped' : 'all layers OK') + ')</summary>' +
+      (s.length
+        ? '<p class="muted">These web map layers refused access from this website, so they were left out (no sign-in box is shown to students):</p><table><thead><tr><th scope="col">Layer</th><th scope="col">Response</th></tr></thead><tbody>' +
+          s.map(function(x){ return '<tr><td>' + esc(x.title) + '<br><span class="muted" style="word-break:break-all">' + esc(x.url) + '</span></td><td>' + esc(x.why) + '</td></tr>'; }).join("") +
+          '</tbody></table>' + (L.elevService ? '<p class="muted">Elevation values still work: they come from Esri’s public World Elevation 3D service.</p>' : '')
+        : '<p class="muted">Every web map layer can be used from this website.</p>');
+    host.insertBefore(box, host.querySelector("details"));
   }
 
   function findLayer(map, includes){
@@ -598,7 +673,9 @@ require([
     probeLayer.add(new Graphic({ geometry: new Point({ longitude: lon, latitude: lat }),
       symbol: { type: "simple-marker", style: "x", size: 14, color: [0,0,0,1], outline: { color: [0,0,0,1], width: 3 } } }));
     $("probe").innerHTML = '<p><span class="spinner" aria-hidden="true"></span> Reading the data here…</p>';
-    var vis = { climate: visibleOf(L.climate), precip: visibleOf(L.precip), temp: visibleOf(L.temp), elev: visibleOf(L.elevGate) };
+    // Elevation is read from the public 3D service; its map layer is only a "switch it on" gate when present.
+    var vis = { climate: visibleOf(L.climate), precip: visibleOf(L.precip), temp: visibleOf(L.temp),
+                elev: L.elevGate ? visibleOf(L.elevGate) : !!L.elevService };
     var vals = await readAll(lat, lon, vis);
     if (seq !== probeSeq) return;
     var near = nearestCity(lat, lon, 60);
@@ -749,7 +826,9 @@ require([
   }
   function layerTitleFor(key){
     var l = key === "elev" ? L.elevGate : L[key];
-    return l ? l.title : state.spec.layers[key].label;
+    if (l) return l.title;
+    if (key === "elev" && L.elevService) return "Elevation (shown when you investigate a place)";
+    return state.spec.layers[key].label;
   }
   function totalScore(){ return state.results.reduce(function(s, r){ return s + r.score.total; }, 0); }
 

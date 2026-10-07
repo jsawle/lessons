@@ -5,7 +5,14 @@ A reusable player for MapMaker lessons. Each lesson is a small data spec: web ma
 **Live:** https://jsawle.github.io/lessons/
 
 ## Games
-- **Mystery Place** (v1.0.0): students get climate clues and use the map layers to find the place. They score points for distance and for how well their place's data matches the clues.
+- **Mystery Place** (v1.0.1): students get climate clues and use the map layers to find the place. They score points for distance and for how well their place's data matches the clues.
+
+## Layer access check
+Before the map loads, the player tests each web map layer from this website. Any layer that refuses access (for example a service proxy limited to arcgis.com referrers) is skipped, so students never see a sign-in box. Teachers can see the list of skipped layers under Teacher tools (`?teacher=1`).
+
+## Changelog
+- **1.0.1**: Layer access check v1.0 added. Data reader v1.1: elevation stays readable when its map layer is skipped.
+- **1.0.0**: First lab release.
 
 ## URL options
 | Parameter | Effect |
