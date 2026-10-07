@@ -120,7 +120,7 @@ summary{cursor:pointer;font-weight:700;min-height:36px;display:flex;align-items:
     <h1>Mystery Place <span id="lessonTitle"></span></h1>
   </div>
   <a class="mmlink" id="mmHeader" href="#" target="_blank" rel="noopener" hidden>Open in MapMaker<span class="sr-only"> (opens in a new tab)</span></a>
-  <span class="badge" id="verBadge" title="App version">v1.1.0</span>
+  <span class="badge" id="verBadge" title="App version">v1.1.1</span>
 </header>
 
 <main class="layout">
@@ -174,14 +174,14 @@ summary{cursor:pointer;font-weight:700;min-height:36px;display:flex;align-items:
 </main>
 
 <div id="live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
-<div class="credit">Created by Jason Sawle<br>© Esri 2026</div>
+<div class="credit">Created by Jason Sawle</div>
 
 <!-- ============ Pure logic (no SDK) — unit tested ============ -->
 <script id="lp-core">
 var LP = (function(){
   "use strict";
   var VERSIONS = {
-    app: "1.1.0",
+    app: "1.1.1",
     models: [
       { key:"handoff",  name:"MapMaker handoff", v:"1.0", note:"Builds the “Investigate in MapMaker” links: the lesson’s MapMaker app opened on the same web map (app set per lesson or per distributor)" },
       { key:"access",   name:"Layer access check", v:"1.0", note:"Tests each web map layer from this website before loading; layers that refuse access are skipped so no sign-in box appears" },

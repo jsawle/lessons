@@ -5,7 +5,7 @@
 # Lesson Player game. The original Portfolio is only READ, never changed.
 # The copy is created PRIVATE in your own content; share it yourself when ready.
 #
-# Created by Jason Sawle · © Esri 2026
+# Created by Jason Sawle
 
 import copy, json, time, warnings
 from arcgis.gis import GIS
