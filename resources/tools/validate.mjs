@@ -52,9 +52,6 @@ if (good.length) {
   const bundle = Hub.bundle(site, index.lessons.map((id) => good.find((l) => l.id === id)).filter(Boolean));
   for (const p of Hub.checkBundle(bundle)) problems.push(`Hub: ${p}`);
 }
-// The map quick look address needs the web map ID in it, or every lesson would show the same map.
-const look = site.hubDemo && site.hubDemo.quickLook;
-if (look && !/^https:\/\/[^\s]+\{webmap\}/.test(look.url || "")) problems.push("site.json hubDemo.quickLook.url should be an https address containing {webmap}.");
 report();
 
 function report() {

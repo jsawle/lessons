@@ -1,4 +1,4 @@
-/* MapMaker resource pages: Hub page builder v1.2 (web map quick look; buttons that jump to sections; site colours).
+/* MapMaker resource pages: Hub page builder v1.3 (Vera embedded in the page; no map preview; buttons that jump to sections).
    Turns lesson files into ArcGIS Hub page layouts: sections of markdown cards that hold plain HTML
    and one <style> block, with no scripts, so the pages work inside Hub. Runs in the browser
    (window.MMRHub, for the Hub preview) and in Node (for the bundle the publishing notebook reads). */
@@ -7,10 +7,11 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "1.2";
+  var VERSION = "1.3";
   var esc = MMR.esc;
   var MONTHS = ["August", "September", "October", "November", "December", "January", "February", "March", "April", "May", "June", "July"];
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
+  var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
 
   /* Tags and attributes the pages use. The checker rejects anything else, so a lesson file can't
      put something into the Hub that Hub's own HTML cleaner might strip or mangle. "id" is only for
@@ -22,7 +23,7 @@
     attrs: ["class", "href", "target", "rel", "lang", "scope", "id"]
   };
   var ANCHOR_ID = /^[a-z0-9]+(-[a-z0-9]+)*$/;
-  var HEX32 = /^[0-9a-f]{32}$/i;
+  var MAX_FRAMES = 2;   // Esri's Hub help: no more than two iframe cards on a page, for phones
 
   /* Colours are Esri's Calcite design system tokens: brand #007AC2, brand-hover #00619B, brand-press #004874,
      text #141414 / #4A4A4A, border #D4D4D4, and tints of the status colours. Links use #00619B, which keeps
@@ -122,14 +123,14 @@
     for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; }
     return ("c" + h.toString(36) + "00000000").slice(0, 9);
   }
-  /* Hub layout pieces. A text card holds HTML; an embed card ("iframe-card", the same card the Support Hub
-     homepage uses for its video) shows another page, here the lesson's web map on its own (no MapMaker app). */
+  /* Hub layout pieces. A text card holds HTML; an embed card ("iframe-card", the card Hub's help calls the
+     Iframe card) shows another page, here Vera's chat page. Its title is the frame's accessible name. */
   function mdCard(id, markdown) {
     return { component: { name: "markdown-card", settings: { cardId: hashId(id), schemaVersion: 2.1, markdown: protect(markdown) } }, width: 12 };
   }
-  function frameCard(id, src, height) {
-    return { component: { name: "iframe-card", settings: { cardId: hashId(id), src: src, height: String(height), scrollable: false,
-      shareable: false, mobileShareable: false, shareableOnHover: false, mobileShareableOnHover: false } }, width: 12 };
+  function frameCard(id, src, height, title) {
+    return { component: { name: "iframe-card", settings: { cardId: hashId(id), src: src, height: String(height), scrollable: true,
+      shareable: false, mobileShareable: false, shareableOnHover: false, mobileShareableOnHover: false, title: title } }, width: 12 };
   }
   function section(cards) {
     return {
@@ -149,13 +150,6 @@
           return '<td><span class="mml-ph">' + esc(columns[j]) + ": </span>" + c + "</td>";
         }).join("") + "</tr>";
       }).join("") + "</tbody></table></div>";
-  }
-  /* The quick look at a web map: the address pattern in site.json (hubDemo.quickLook.url), so it can be
-     changed in one place without touching this code. */
-  function quickLookUrl(site, webmapId) {
-    var q = hubHome(site).quickLook || {};
-    if (!q.url || !HEX32.test(webmapId || "")) return null;
-    return q.url.replace("{webmap}", encodeURIComponent(webmapId));
   }
   /* An in-page anchor. Ids start with the page's slug, because Hub can scroll to a same-named id when a
      link moves between pages (Esri bug BUG-000178430; the workaround is ids unique across pages). */
@@ -236,7 +230,6 @@
     var slug = lesson.id, S = [], n = 0;
     var langs = Object.keys(lesson.languages);
     var mm = MMR.mapmakerUrl(site, lesson.map.webmapId);
-    var look = quickLookUrl(site, lesson.map.webmapId);
     function add(html) { S.push(section([mdCard(slug + ":" + n, html)])); n++; }
 
     // Hero
@@ -250,24 +243,16 @@
       jump(slug, "student-activity", "Student activity") + " " + jump(slug, "teacher-notes", "Teacher notes") + "</p>" +
       "<p>" + statusChip(lesson) + ' <span class="mml-muted">Content version ' + esc(lesson.contentVersion) + ", updated " + esc(lesson.updated) + ".</span></p></div>");
 
-    // About this map: a short intro, a quick look at the web map itself (an embed card), then layers and sources
+    // About this map
     var issues = lesson.knownIssues || [];
-    var height = (hubHome(site).quickLook || {}).height || 480;
-    S.push(section([
-      mdCard(slug + ":" + n + ":intro", '<div class="mml"><h2>About this map</h2><p class="mml-prose">' + (look
-        ? "A quick look at the map’s content: pan, zoom and click a feature to see its pop-up. Students work in MapMaker, which adds the tools the questions use: "
-        : "Students work with this map in MapMaker: ") + ext(mm, "open the map in MapMaker") + ".</p></div>")
-    ].concat(look ? [frameCard(slug + ":" + n + ":map", look, height)] : []).concat([
-      mdCard(slug + ":" + n, '<div class="mml"><p class="mml-prose">Each layer names its source, so you can check where the information comes from.</p>' +
-        table("Map layers and sources", ["Layer", "What it shows", "Source"], lesson.map.layers.map(function (l) {
-          return [esc(l.name) + (l.offAtStart ? ' <span class="mml-muted">(off when the map opens)</span>' : ""), t(l.shows), t(l.source)];
-        }), true) +
-        "<p><strong>Bookmarks:</strong> " + ((lesson.map.bookmarks || []).length ? lesson.map.bookmarks.map(esc).join("; ") : "none") + ".</p>" +
-        "<h3>Known issues</h3>" + (issues.length ? "<ul>" + issues.map(function (k) {
-          return '<li><span class="mml-chip ' + (k.status === "fixed" ? "mml-ok" : "mml-open") + '">' + (k.status === "fixed" ? "Fixed " : "Open ") + esc(k.date) + "</span> <strong>" + esc(k.where) + ":</strong> " + t(k.note) + "</li>";
-        }).join("") + "</ul>" : "<p>No known issues.</p>") + "</div>")
-    ])));
-    n++;
+    add('<div class="mml"><h2>About this map</h2><p class="mml-prose">Each layer names its source, so you can check where the information comes from.</p>' +
+      table("Map layers and sources", ["Layer", "What it shows", "Source"], lesson.map.layers.map(function (l) {
+        return [esc(l.name) + (l.offAtStart ? ' <span class="mml-muted">(off when the map opens)</span>' : ""), t(l.shows), t(l.source)];
+      }), true) +
+      "<p><strong>Bookmarks:</strong> " + ((lesson.map.bookmarks || []).length ? lesson.map.bookmarks.map(esc).join("; ") : "none") + ".</p>" +
+      "<h3>Known issues</h3>" + (issues.length ? "<ul>" + issues.map(function (k) {
+        return '<li><span class="mml-chip ' + (k.status === "fixed" ? "mml-ok" : "mml-open") + '">' + (k.status === "fixed" ? "Fixed " : "Open ") + esc(k.date) + "</span> <strong>" + esc(k.where) + ":</strong> " + t(k.note) + "</li>";
+      }).join("") + "</ul>" : "<p>No known issues.</p>") + "</div>");
 
     // Inquiry
     var inq = lesson.inquiry;
@@ -313,11 +298,17 @@
         return '<li><a href="' + esc(h.url) + '" target="_blank" rel="noopener"><span class="mml-card-title">' + esc(h.title) + '</span><span class="mml-card-text">For: ' + esc(h.covers.join(", ")) + "</span>" + NEW_TAB + "</a></li>";
       }).join("") + "</ul></div>");
 
-    // Vera
+    // Vera, in the page: her chat page in an embed card (compact "embed" mode), opened with this lesson named
+    // in the message box. Nothing is sent until the teacher sends it.
     var vUrl = MMR.veraUrl(site, lesson);
-    if (vUrl) add('<div class="mml"><h2>Make your own questions with Vera</h2><p class="mml-prose">Vera, the Support Hub’s AI assistant, has this lesson’s map, bookmarks, layers and sources. You can ask it for easier or harder questions, a short quiz, questions for your own state’s standards, or questions in another language.</p>' +
-      '<p class="mml-prose">Vera’s questions aren’t reviewed like this lesson. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem.</p>' +
-      '<p class="mml-actions">' + ext(vUrl, "Open Vera with this lesson", "mml-btn mml-primary") + "</p></div>");
+    if (vUrl) {
+      S.push(section([
+        mdCard(slug + ":" + n + ":intro", '<div class="mml"><h2>Make your own questions with Vera</h2><p class="mml-prose">Vera, the Support Hub’s AI assistant, has this lesson’s map, bookmarks, layers and sources. You can ask it for easier or harder questions, a short quiz, questions for your own state’s standards, or questions in another language.</p></div>'),
+        frameCard(slug + ":" + n + ":vera", vUrl + "&embed=1", VERA_HEIGHT, "Chat with Vera about " + lesson.title),
+        mdCard(slug + ":" + n, '<div class="mml"><p class="mml-prose mml-muted">Vera’s questions aren’t reviewed like this lesson. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem.</p></div>')
+      ]));
+      n++;
+    }
 
     // Report a problem
     add('<div class="mml"><h2>Report a problem</h2><p class="mml-prose">Found a mistake on the map, in the answers or on the student sheet? Tell the MapMaker team. Confirmed problems are listed under Known issues until they’re fixed.</p>' +
@@ -343,9 +334,9 @@
       return '<li><p class="mml-month">' + esc(l.planMonth || "") + '</p><h2><a href="/pages/' + esc(l.id) + '">' + esc(l.title) + "</a></h2>" +
         '<p class="mml-muted">' + esc(l.course + " · Grade " + l.grade + " · " + l.unit) + "</p><p>" + t(l.summary) + "</p><p>" + statusChip(l) + "</p></li>";
     }).join("") + "</ul></div>");
-    add('<div class="mml"><h2>In every lesson</h2><ul class="mml-prose"><li>A MapMaker map you can preview on the page or open in MapMaker, with each layer’s source listed.</li>' +
+    add('<div class="mml"><h2>In every lesson</h2><ul class="mml-prose"><li>A MapMaker map that opens straight from the page, with each layer’s source listed.</li>' +
       "<li>An inquiry with a compelling question and questions you can pick from.</li><li>A Word student sheet in English and Spanish that you can edit, print or open in Google Docs.</li>" +
-      "<li>Teacher notes with answers, common misunderstandings, key words and standards.</li><li>Links to how-to videos, and to Vera for making your own questions.</li></ul></div>");
+      "<li>Teacher notes with answers, common misunderstandings, key words and standards.</li><li>Links to how-to videos, and Vera on the page for making your own questions.</li></ul></div>");
     add(footer(site, null));
     return { slug: slug, kind: "catalogue", title: H.lessonsTitle || "Lessons", summary: H.lessonsIntro || "", tags: ["MapMaker", "Lessons"], layout: { sections: S } };
   }
@@ -387,7 +378,7 @@
   }
 
   /* The checker for Hub pages: text cards on one line with only allowed tags, attributes and placeholders,
-     the <style> block only in the very first card, embed cards only showing ArcGIS pages over https,
+     the <style> block only in the very first card, embed cards over https with a title (at most two a page),
      ids only on empty anchors, and every in-page link pointing at an anchor on the same page. */
   function pageIds(page) {
     var ids = [];
@@ -402,14 +393,17 @@
     return ids;
   }
   function checkPage(page, sheetKeys) {
-    var errs = [], first = true, ids = pageIds(page);
+    var errs = [], first = true, ids = pageIds(page), frames = 0;
     page.layout.sections.forEach(function (sec, i) {
       sec.rows.forEach(function (row, r) {
         row.cards.forEach(function (card) {
           var where = page.slug + " section " + (i + 1) + " row " + (r + 1), name = card.component && card.component.name;
           if (name === "iframe-card") {
-            var src = card.component.settings.src || "";
-            if (!/^https:\/\/([a-z0-9-]+\.)*arcgis\.com\//i.test(src)) errs.push(where + ": embed card should show an https ArcGIS page, not " + src + ".");
+            var fs = card.component.settings || {};
+            frames++;
+            if (!/^https:\/\/[^\s"<>]+$/i.test(fs.src || "")) errs.push(where + ": embed card should show an https page, not " + fs.src + ".");
+            if (!String(fs.title || "").trim()) errs.push(where + ": embed card needs a title, which screen readers announce for the frame.");
+            if (!(parseInt(fs.height, 10) > 0)) errs.push(where + ": embed card needs a height.");
             first = false;
             return;
           }
@@ -450,6 +444,7 @@
         });
       });
     });
+    if (frames > MAX_FRAMES) errs.push(page.slug + ": " + frames + " embed cards; Hub's help advises no more than " + MAX_FRAMES + " on a page.");
     return errs;
   }
 
@@ -483,6 +478,6 @@
   }
 
   return { VERSION: VERSION, CSS: CSS, ALLOWED: ALLOWED, lessonPage: lessonPage, cataloguePage: cataloguePage, bundle: bundle,
-    checkPage: checkPage, checkBundle: checkBundle, contrast: contrast, quickLookUrl: quickLookUrl,
+    checkPage: checkPage, checkBundle: checkBundle, contrast: contrast,
     sheetPlaceholder: sheetPlaceholder, protect: protect };
 });

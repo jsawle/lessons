@@ -54,9 +54,9 @@ A mock-up of Support Hub lesson pages, at `resources/`. Live at https://jsawle.g
 
 **To change a lesson**: edit its file, bump `contentVersion` (patch for typos, minor for changed questions, major for a new map) and set `updated`. When it has been checked, set `status` to `reviewed` and fill in `reviewed.by` and `reviewed.date`. Log map or answer problems under `knownIssues`.
 
-**Shared settings** live once in `resources/site.json`: Hub address and menu, Hub pages for each subject and course, the MapMaker app, tool names and their how-to pages, sheet wording, and the versions table. For the Hub demo site it also holds the map preview address (`hubDemo.quickLook`) and the site colours (`hubDemo.theme`).
+**Shared settings** live once in `resources/site.json`: Hub address and menu, Hub pages for each subject and course, the MapMaker app, tool names and their how-to pages, sheet wording, and the versions table. For the Hub demo site it also holds the site colours (`hubDemo.theme`).
 
-**Checks**: `node resources/tools/validate.mjs` runs the same checker as the page, confirms every file is listed in `index.json`, checks the Hub pages built from the files only use HTML that Hub keeps, checks every in-page link has its anchor (with ids unique across pages, the workaround for Esri bug BUG-000178430), checks the site colours have at least 4.5:1 contrast, and checks the versions table in `site.json` matches the code.
+**Checks**: `node resources/tools/validate.mjs` runs the same checker as the page, confirms every file is listed in `index.json`, checks the Hub pages built from the files only use HTML that Hub keeps, checks embed cards have a title for screen readers (at most two a page, as Hub's help advises), checks every in-page link has its anchor (with ids unique across pages, the workaround for Esri bug BUG-000178430), checks the site colours have at least 4.5:1 contrast, and checks the versions table in `site.json` matches the code.
 
 **Built files** (`resources/dist`, served by GitHub Pages): `hub-bundle.json` (the Hub pages), `sheets/*.docx` (Word student sheets), `vera_mapmaker_lessons.txt` (Vera's knowledge file) and `publish_to_hub.ipynb` (the publishing notebook). GitHub rebuilds and commits them after every change to `main`, so nobody builds them by hand. To build locally: `npm install --no-save docx@9.7.1`, then `node resources/tools/build-dist.mjs`.
 
@@ -67,21 +67,19 @@ A mock-up of Support Hub lesson pages, at `resources/`. Live at https://jsawle.g
 4. Republish the site (Edit layout, then Save/Publish) and add a "Lessons" menu link to `/pages/lessons`.
 Run it again after any lesson change: it updates the same pages and Word items. Edit the lesson file, not the Hub page; the page is rebuilt from the file. Preview any Hub page first at `resources/hub-preview.html?page=<slug>`.
 
-**Map preview** (About this map): an embed card showing the lesson's web map on its own, in Map Viewer's simplified embed view (`https://www.arcgis.com/apps/mapviewer/index.html?configurableview=true&webmap=<id>`), not the MapMaker app. Esri doesn't document this address; it's the view Map Viewer's Embed map › iFrame embed wraps, as recorded by a third-party project. If it misbehaves, change `hubDemo.quickLook.url` in `site.json`; Esri's documented fallback is `...?webmap={webmap}&mapOnly=true`, which hides Map Viewer's toolbars.
-
-**Vera**: each lesson page has "Open Vera with this lesson", which opens Vera's chat page (`vera.url` in `site.json`, currently the lab copy) with the lesson named in the message box. Vera answers from `vera_mapmaker_lessons.txt` in `resources/dist`. In Copilot Studio, upload it under Knowledge, wait for indexing to finish, then delete the old copy. List every bookmark in `map.bookmarks` and describe what each pop-up really shows in `shows`, because Vera writes questions only from those.
+**Vera**: each lesson page shows Vera in its "Make your own questions with Vera" section: Vera's chat page (`vera.url` in `site.json`, currently the lab copy) in a Hub embed card, in its compact `embed=1` mode, with the lesson named in the message box. Nothing is sent until the teacher sends it. Vera answers from `vera_mapmaker_lessons.txt` in `resources/dist`. In Copilot Studio, upload it under Knowledge, wait for indexing to finish, then delete the old copy. List every bookmark in `map.bookmarks` and describe what each pop-up really shows in `shows`, because Vera writes questions only from those.
 
 | File | Job | Version |
 |---|---|---|
-| `assets/render.js` | Page renderer (mock-up) | 1.2 |
+| `assets/render.js` | Page renderer (mock-up) | 1.3 |
 | `assets/sheet.js` | Word sheet builder | 1.1 |
 | `schema/lesson.schema.json` | Lesson file format | 1.1 |
 | `assets/lesson-core.js` | Checker | 1.1 |
 | `assets/lesson-core.js` | Vera knowledge builder | 1.0 |
-| `assets/hub-page.js` | Hub page builder | 1.2 |
+| `assets/hub-page.js` | Hub page builder | 1.3 |
 | `tools/publish_to_hub.py` | Hub publisher (notebook) | 1.2 |
 
-Resource pages app version 0.5.0. 0.5.0: About this map previews the web map itself (Map Viewer's simplified embed view) instead of the MapMaker app; the Student activity and Teacher notes buttons at the top of a lesson page move down the page instead of downloading the Word sheets (those stay in Student activity); the notebook sets the site's header, menu bar, button and link colours to Esri blue. 0.4.0: Hub pages use Esri (Calcite) colours instead of the MapMaker yellow and black, show a quick look at the map in About this map, and fix the footer table and button underlines that Hub's own styles overrode. 0.3.1: the publisher can be pasted into one notebook cell and run twice (dry run, then publish). 0.3.0: five Grade 8 US History lessons, Hub pages and the publishing notebook; long Word sheets get tighter writing lines so every sheet stays on one page. 0.2.0: Vera replaces the copy-and-paste AI summary; lesson format 1.1 adds bookmarks. Third-party code: `resources/vendor/docx` (docx 9.7.1, MIT licence).
+Resource pages app version 0.6.0. 0.6.0: Vera is embedded in each lesson page's Vera section instead of linked; the map preview is removed from About this map (back to the text and layer table). 0.5.0: About this map previews the web map itself (Map Viewer's simplified embed view) instead of the MapMaker app; the Student activity and Teacher notes buttons at the top of a lesson page move down the page instead of downloading the Word sheets (those stay in Student activity); the notebook sets the site's header, menu bar, button and link colours to Esri blue. 0.4.0: Hub pages use Esri (Calcite) colours instead of the MapMaker yellow and black, show a quick look at the map in About this map, and fix the footer table and button underlines that Hub's own styles overrode. 0.3.1: the publisher can be pasted into one notebook cell and run twice (dry run, then publish). 0.3.0: five Grade 8 US History lessons, Hub pages and the publishing notebook; long Word sheets get tighter writing lines so every sheet stays on one page. 0.2.0: Vera replaces the copy-and-paste AI summary; lesson format 1.1 adds bookmarks. Third-party code: `resources/vendor/docx` (docx 9.7.1, MIT licence).
 
 ## Privacy
 There are no accounts or logins, and no student data is collected or stored by Esri. Results stay on the student's device and can be downloaded or copied to hand in through the school's own systems.
