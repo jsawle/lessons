@@ -6,7 +6,7 @@
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  var VERSION = { renderer: "1.0", format: "1.0", checker: "1.0" };
+  var VERSION = { renderer: "1.1", format: "1.1", checker: "1.1", vera: "1.0" };
   var HEX32 = /^[0-9a-f]{32}$/i;
   var DATE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -64,31 +64,62 @@
     return out;
   }
 
-  /* The summary teachers can paste into an AI tool. Built from the lesson file, so it never needs editing. */
-  function aiSummary(site, lesson) {
+  /* Vera's link for a lesson: opens the Vera chat page with the lesson named in the message box. */
+  function veraUrl(site, lesson) {
+    if (!site.vera || !site.vera.url) return null;
+    return site.vera.url + "?lesson=" + encodeURIComponent(lesson.id) + "&title=" + encodeURIComponent(lesson.title);
+  }
+
+  /* One lesson's entry in Vera's knowledge file. Built from the lesson file, so it never needs editing.
+     Markdown links, because Vera's other knowledge files use them and Vera repeats links as written. */
+  function veraEntry(site, lesson) {
+    function md(text) { return String(text).replace(/\s+/g, " ").trim(); }
     var L = [];
-    L.push("MAP: " + lesson.title + " (National Geographic MapMaker)");
-    L.push("MAP LINK: " + mapmakerUrl(site, lesson.map.webmapId));
-    L.push("PURPOSE: " + plain(lesson.summary));
-    L.push("AUDIENCE: Grade " + lesson.grade + " " + lesson.course + ".");
-    L.push("");
-    L.push("LAYERS AND SOURCES");
-    lesson.map.layers.forEach(function (l) { L.push("- " + l.name + ": " + plain(l.source) + "."); });
-    if (lesson.keyFacts && lesson.keyFacts.length) {
-      L.push(""); L.push("KEY FACTS");
-      lesson.keyFacts.forEach(function (f) { L.push("- " + plain(f)); });
-    }
-    L.push(""); L.push("COMPELLING QUESTION"); L.push(plain(lesson.inquiry.compellingQuestion.en));
-    L.push(""); L.push("STUDENT QUESTIONS");
-    lesson.inquiry.questions.forEach(function (q, i) {
-      L.push((i + 1) + ". " + plain(q.title.en) + " " + plain(q.student.en) + (q.fill ? " " + plain(q.fill.en) : ""));
+    L.push("### " + lesson.title);
+    L.push("**Lesson ID:** " + lesson.id);
+    L.push("**Subject:** " + lesson.subject + ". **Course:** " + lesson.course + ". **Grade:** " + lesson.grade + ". **Unit:** " + lesson.unit + ". **Time:** " + lesson.time + ".");
+    L.push("**MapMaker map:** [Open " + lesson.title + " in MapMaker](" + mapmakerUrl(site, lesson.map.webmapId) + ")");
+    L.push("**Description:** " + md(lesson.summary));
+    L.push("**Bookmarks in this map:** " + ((lesson.map.bookmarks || []).length ? lesson.map.bookmarks.join("; ") : "none") + ".");
+    L.push("**Layers in this map (exact name: what students see; source):**");
+    lesson.map.layers.forEach(function (l) {
+      L.push("- " + l.name + (l.offAtStart ? " (off when the map opens)" : "") + ": " + md(l.shows).replace(/\.$/, "") + "; source: " + md(l.source) + ".");
     });
-    L.push("");
-    L.push("KEY WORDS: " + lesson.teacherNotes.keyWords.join(", ") + ".");
-    L.push("STANDARDS: " + lesson.standards.map(function (s) { return s.code; }).join("; ") + ".");
-    L.push("Use only these facts. Do not add places, dates or numbers that are not listed here.");
+    if (lesson.keyFacts && lesson.keyFacts.length) {
+      L.push("**Key facts:**");
+      lesson.keyFacts.forEach(function (f) { L.push("- " + md(f)); });
+    }
+    L.push("**Compelling question:** " + md(lesson.inquiry.compellingQuestion.en));
+    L.push("**Questions already in this lesson:**");
+    lesson.inquiry.questions.forEach(function (q, i) {
+      L.push((i + 1) + ". " + md(q.title.en) + " " + md(q.student.en) + (q.fill ? " " + md(q.fill.en) : ""));
+    });
+    if (lesson.teacherNotes.misconceptions && lesson.teacherNotes.misconceptions.length) {
+      L.push("**Common misunderstandings:**");
+      lesson.teacherNotes.misconceptions.forEach(function (m) { L.push("- \"" + md(m.claim) + "\" " + md(m.response)); });
+    }
+    L.push("**Key words:** " + lesson.teacherNotes.keyWords.join(", ") + ".");
+    L.push("**Standards:** " + lesson.standards.map(function (s) { return s.code; }).join("; ") + ".");
+    L.push("**How-to pages for the tools this lesson uses:** " + howToLinks(site, lesson).map(function (h) {
+      return "[" + h.title + "](" + h.url + ")"; }).join("; ") + ".");
+    L.push("**Languages:** student sheets in " + Object.keys(lesson.languages).map(function (k) { return (site.languageNamesInEnglish && site.languageNamesInEnglish[k]) || k; }).join(" and ") + ".");
+    L.push("**Lesson content version:** " + lesson.contentVersion + " (" + lesson.status + ", updated " + lesson.updated + ").");
     return L.join("\n");
   }
+
+  /* The whole knowledge file for Vera: a short header, then one entry per lesson. CRLF, like Vera's other files. */
+  function veraFile(site, lessons, builtOn) {
+    var head = [
+      "# MapMaker lessons on the Support Hub (questions, layers and sources)",
+      "Built " + builtOn + " from the lesson files by the MapMaker resource pages, Vera knowledge builder " + VERSION.vera + ". Do not edit by hand; edit the lesson files and rebuild.",
+      "",
+      "How to use this file: each lesson below has its own MapMaker map. When a teacher names one of these lessons (by title or lesson ID) and asks for new or different questions, base every question only on the bookmarks, layers and pop-up content listed for that lesson, and use bookmark and layer names exactly as written. If a request needs information that lesson's map does not show, say so plainly instead of inventing it. Use only the links listed for that lesson.",
+      ""
+    ];
+    return head.concat(lessons.map(function (l) { return veraEntry(site, l) + "\n"; })).join("\n").replace(/\r?\n/g, "\r\n");
+  }
+
+  function veraFileName() { return "vera_mapmaker_lessons.txt"; }
 
   /* One checker for the page and for the command line. Returns plain-English problems. */
   function check(site, lesson, fileName) {
@@ -116,6 +147,8 @@
     var map = lesson.map || {};
     need(HEX32.test(map.webmapId || ""), "map.webmapId should be a 32-character item ID.");
     need(Array.isArray(map.layers) && map.layers.length > 0, "map.layers needs at least one layer.");
+    if (map.bookmarks !== undefined) need(Array.isArray(map.bookmarks) && map.bookmarks.every(str),
+      "map.bookmarks should be a list of bookmark names, exactly as in the map.");
     (map.layers || []).forEach(function (l, i) {
       need(str(l.name) && str(l.shows) && str(l.source), "map.layers[" + (i + 1) + "] needs name, shows and source.");
     });
@@ -161,5 +194,5 @@
   }
 
   return { VERSION: VERSION, esc: esc, inline: inline, plain: plain, mapmakerUrl: mapmakerUrl, hubUrl: hubUrl,
-    howToLinks: howToLinks, aiSummary: aiSummary, check: check };
+    howToLinks: howToLinks, veraUrl: veraUrl, veraEntry: veraEntry, veraFile: veraFile, veraFileName: veraFileName, check: check };
 });

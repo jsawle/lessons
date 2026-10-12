@@ -70,7 +70,7 @@
 
     h.push('<div class="wrap layout"><nav class="toc" aria-labelledby="toc-h"><h2 id="toc-h">On this page</h2><ol>' +
       [["about", "About this map"], ["inquiry", "Inquiry"], ["student-activity", "Student activity"], ["teacher-notes", "Teacher notes"],
-       ["standards", "Standards"], ["how-to", "How-to videos"], ["ai", "Summary for AI tools"], ["report", "Report a problem"]]
+       ["standards", "Standards"], ["how-to", "How-to videos"], ["vera", "Questions with Vera"], ["report", "Report a problem"]]
         .map(function (t) { return '<li><a href="#' + t[0] + '">' + t[1] + "</a></li>"; }).join("") + '</ol></nav><div class="content">');
 
     // About this map
@@ -139,10 +139,13 @@
         return '<a class="card" href="' + esc(x.url) + '" target="_blank" rel="noopener"><h3>' + esc(x.title) + newTab + "</h3><p>For: " + esc(x.covers.join(", ")) + "</p></a>";
       }).join("") + "</div></section>");
 
-    // AI summary
-    h.push('<section id="ai" aria-labelledby="ai-h"><h2 id="ai-h">Summary for AI tools</h2><p class="prose">If you adapt materials with an AI tool, you can paste this into it so the tool works from the map’s own facts and sources. It is built from the same lesson file as this page.</p>' +
-      '<div class="sheet-tools"><button type="button" class="btn" id="copy-ai">Copy summary</button><p class="status-msg" id="copy-status" role="status" aria-live="polite"></p></div>' +
-      '<pre class="ai" id="ai-text" tabindex="0" aria-label="Summary for AI tools">' + esc(MMR.aiSummary(site, lesson)) + "</pre></section>");
+    // Vera
+    var vUrl = MMR.veraUrl(site, lesson);
+    if (vUrl) h.push('<section id="vera" aria-labelledby="vera-h"><h2 id="vera-h">Make your own questions with Vera</h2>' +
+      '<div class="prose"><p>Vera, the Support Hub\u2019s AI assistant, has this lesson\u2019s map, bookmarks, layers and sources. You can ask it for easier or harder questions, a short quiz, questions for your own state\u2019s standards, or questions in another language.</p>' +
+      '<p>Vera\u2019s questions aren\u2019t reviewed like this lesson. Each one should be answerable from the map; if one isn\u2019t, please tell us using Report a problem.</p></div>' +
+      '<p><a class="btn primary" href="' + esc(vUrl) + '" target="_blank" rel="noopener">Open Vera with this lesson' + newTab + "</a></p>" +
+      '<p class="muted">Vera opens with this lesson named in the message box, ready for you to add what you need before sending. In this mock-up the button opens a lab copy of Vera\u2019s chat page.</p></section>');
 
     // Report a problem
     h.push('<section id="report" aria-labelledby="rp-h"><h2 id="rp-h">Report a problem</h2><p class="prose">Found a mistake on the map, in the answers or on the student sheet? Tell the MapMaker team. Confirmed problems are listed under Known issues until they’re fixed.</p>' +
@@ -221,26 +224,29 @@
           .then(function () { b.disabled = false; });
       });
     });
-    $("copy-ai").addEventListener("click", function () {
-      var pre = $("ai-text"), cs = $("copy-status");
-      function selectIt() { var r = document.createRange(); r.selectNodeContents(pre); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); cs.textContent = "Selected. Press Ctrl+C or Cmd+C to copy."; }
-      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(pre.textContent).then(function () { cs.textContent = "Copied."; }, selectIt);
-      else selectIt();
-    });
   }
 
   /* ---------------- Catalogue ---------------- */
-  function renderCatalogue(site, lessons) {
+  function renderCatalogue(site, lessons, ready) {
     var courses = lessons.map(function (l) { return l.course; }).filter(function (v, i, a) { return a.indexOf(v) === i; });
-    var h = ['<div class="hero"><div class="wrap"><h1>Lessons</h1><p class="summary">Each lesson below is drawn from one file in <code>resources/lessons</code>. Add or edit a file, and its page, Word sheets and summary for AI tools update together.</p></div></div>'];
+    var h = ['<div class="hero"><div class="wrap"><h1>Lessons</h1><p class="summary">Each lesson below is drawn from one file in <code>resources/lessons</code>. Add or edit a file, and its page, Word sheets and entry in Vera\u2019s knowledge file update together.</p></div></div>'];
     h.push('<div class="wrap" style="padding-block:1.5rem 4rem;display:grid;gap:1rem">');
     if (courses.length > 1) h.push('<p><label for="course">Course </label><select id="course"><option value="">All courses</option>' +
       courses.map(function (c) { return "<option>" + esc(c) + "</option>"; }).join("") + "</select></p>");
     h.push('<div class="cards" id="list" style="padding-top:0">' + lessons.map(function (l) {
       return '<a class="card" data-course="' + esc(l.course) + '" href="lesson.html?id=' + encodeURIComponent(l.id) + '"><h2>' + esc(l.title) + "</h2><p>" +
         esc(l.course + " · Grade " + l.grade + " · " + l.unit) + '</p><p><span class="chip ' + esc(l.status) + '">' + esc(l.status === "draft" ? "Draft" : l.status === "reviewed" ? "Reviewed" : "Published") + "</span></p></a>";
-    }).join("") + "</div></div>");
+    }).join("") + "</div>");
+    h.push('<section class="team" aria-labelledby="team-h"><h2 id="team-h">For the MapMaker team</h2><p class="prose">Vera\u2019s knowledge file is made from every lesson file that passes the checker (' + ready.length + " of " + lessons.length + '). Upload it in Copilot Studio under Knowledge, wait for it to finish indexing, then delete the old copy.</p>' +
+      '<div class="sheet-tools"><button type="button" class="btn" id="vera-file">Download Vera knowledge file</button><p class="status-msg" id="vera-status" role="status" aria-live="polite"></p></div></section>');
+    h.push("</div>");
     $("main").innerHTML = h.join("");
+    $("vera-file").addEventListener("click", function () {
+      var blob = new Blob([MMR.veraFile(site, ready, new Date().toISOString().slice(0, 10))], { type: "text/plain;charset=utf-8" });
+      var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = MMR.veraFileName();
+      document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 2000);
+      $("vera-status").textContent = "Downloaded " + a.download + " with " + ready.length + " lesson" + (ready.length === 1 ? "" : "s") + ".";
+    });
     $("foot").innerHTML = '<div class="wrap"><h2 style="font-size:1rem">About these pages</h2>' + versionsTable(site, null) + "</div>";
     var sel = $("course");
     if (sel) sel.addEventListener("change", function () {
@@ -256,12 +262,14 @@
       return getJSON("lessons/index.json").then(function (idx) {
         return Promise.all(idx.lessons.map(function (id) { return getJSON("lessons/" + id + ".json").catch(function (e) { return { _error: e.message, id: id }; }); }));
       }).then(function (all) {
-        var bad = all.filter(function (l) { return l._error; }).map(function (l) { return l._error; });
+        var bad = all.filter(function (l) { return l._error; }).map(function (l) { return l._error; }), ready = [];
         all.filter(function (l) { return !l._error; }).forEach(function (l) {
-          MMR.check(site, l, l.id + ".json").forEach(function (p) { bad.push(l.id + ": " + p); });
+          var p = MMR.check(site, l, l.id + ".json");
+          p.forEach(function (x) { bad.push(l.id + ": " + x); });
+          if (!p.length) ready.push(l);
         });
         showProblems(bad, "The checker found problems in these lesson files:");
-        renderCatalogue(site, all.filter(function (l) { return !l._error; }));
+        renderCatalogue(site, all.filter(function (l) { return !l._error; }), ready);
       });
     }
     var id = new URLSearchParams(location.search).get("id") || "";

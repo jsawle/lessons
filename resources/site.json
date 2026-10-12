@@ -1,13 +1,18 @@
 {
   "app": {
     "name": "MapMaker resource pages (lab)",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "parts": {
-      "Page renderer": "1.0",
+      "Page renderer": "1.1",
       "Word sheet builder": "1.0",
-      "Lesson file format": "1.0",
-      "Checker": "1.0"
+      "Lesson file format": "1.1",
+      "Checker": "1.1",
+      "Vera knowledge builder": "1.0"
     }
+  },
+  "vera": {
+    "name": "Vera",
+    "url": "https://jsawle.github.io/Vera/vera_canvas_lab.html"
   },
   "mapmaker": {
     "label": "MapMaker",
@@ -49,5 +54,6 @@
     "en": { "name": "Name", "date": "Date", "bigQuestion": "Big question:", "yourAnswer": "Your answer:", "openMap": "Open the map in MapMaker:", "subtitle": "Student sheet" },
     "es": { "name": "Nombre", "date": "Fecha", "bigQuestion": "Pregunta central:", "yourAnswer": "Tu respuesta:", "openMap": "Abre el mapa en MapMaker:", "subtitle": "Hoja del estudiante" }
   },
-  "languageNames": { "en": "English", "es": "Español" }
+  "languageNames": { "en": "English", "es": "Español" },
+  "languageNamesInEnglish": { "en": "English", "es": "Spanish" }
 }

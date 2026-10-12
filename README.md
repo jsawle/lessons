@@ -44,7 +44,7 @@ Before the map loads, the player tests each web map layer from this website. Any
 ## Resource pages (lab)
 A mock-up of Support Hub lesson pages, at `resources/`. Live at https://jsawle.github.io/lessons/resources/
 
-**One file per lesson.** Everything on a lesson page comes from `resources/lessons/<id>.json`: the page, the English and Spanish Word student sheets, the how-to video links and the summary for AI tools. Change the file and all of them change together.
+**One file per lesson.** Everything on a lesson page comes from `resources/lessons/<id>.json`: the page, the English and Spanish Word student sheets, the how-to video links and the lesson's entry in Vera's knowledge file. Change the file and all of them change together.
 
 **To add a lesson**
 1. Copy `resources/lessons/_template.json` to `resources/lessons/<id>.json`, where `<id>` is lower-case words joined by hyphens. Set `"id"` to match.
@@ -58,16 +58,19 @@ A mock-up of Support Hub lesson pages, at `resources/`. Live at https://jsawle.g
 
 **Checks**: `node resources/tools/validate.mjs` runs the same checker as the page, and also confirms every file is listed in `index.json`. GitHub runs it on every push or pull request that touches `resources/`, then builds the Word sheets and keeps them as a download on the run.
 
+**Vera**: each lesson page has "Open Vera with this lesson", which opens Vera's chat page (`vera.url` in `site.json`, currently the lab copy) with the lesson named in the message box. Vera answers from `vera_mapmaker_lessons.txt`, made from every lesson file that passes the checker. Get it from the catalogue page's download button, from `node resources/tools/build-vera.mjs --out folder`, or from the `vera-knowledge` download on the GitHub Actions run. In Copilot Studio, upload it under Knowledge, wait for indexing to finish, then delete the old copy. List every bookmark in `map.bookmarks` and describe what each pop-up really shows in `shows`, because Vera writes questions only from those.
+
 **Word sheets for ArcGIS Online**: `npm install docx@9.7.1` once, then `node resources/tools/build-sheets.mjs [id ...] --out folder`. The files match the page's download buttons, because both use `resources/assets/sheet.js`.
 
 | File | Job | Version |
 |---|---|---|
-| `assets/render.js` | Page renderer | 1.0 |
+| `assets/render.js` | Page renderer | 1.1 |
 | `assets/sheet.js` | Word sheet builder | 1.0 |
-| `schema/lesson.schema.json` | Lesson file format | 1.0 |
-| `assets/lesson-core.js` | Checker, links and AI summary | 1.0 |
+| `schema/lesson.schema.json` | Lesson file format | 1.1 |
+| `assets/lesson-core.js` | Checker | 1.1 |
+| `assets/lesson-core.js` | Vera knowledge builder | 1.0 |
 
-Resource pages app version 0.1.0. Third-party code: `resources/vendor/docx` (docx 9.7.1, MIT licence).
+Resource pages app version 0.2.0 (0.2.0: Vera replaces the copy-and-paste AI summary; lesson format 1.1 adds bookmarks). Third-party code: `resources/vendor/docx` (docx 9.7.1, MIT licence).
 
 ## Privacy
 There are no accounts or logins, and no student data is collected or stored by Esri. Results stay on the student's device and can be downloaded or copied to hand in through the school's own systems.

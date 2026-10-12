@@ -114,7 +114,6 @@ ul.plain{margin:0;padding-left:1.2rem;display:grid;gap:.4rem}
 .vocab li{border:1px solid var(--line);border-radius:4px;padding:.15rem .6rem;font-weight:600}
 .howto{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
 .howto .card h3{font-size:1.05rem}
-pre.ai{margin:0;white-space:pre-wrap;word-break:break-word;background:var(--paper-2);border:1px solid var(--line);border-radius:8px;padding:1rem 1.1rem;font-family:var(--mono);font-size:.85rem;line-height:1.55;max-height:26rem;overflow:auto}
 
 .problems{background:var(--no-bg);color:var(--no-ink);border-bottom:2px solid var(--no-ink)}
 .problems .wrap{padding-block:.9rem;display:grid;gap:.4rem}
