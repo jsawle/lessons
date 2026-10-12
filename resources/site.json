@@ -1,0 +1,53 @@
+{
+  "app": {
+    "name": "MapMaker resource pages (lab)",
+    "version": "0.1.0",
+    "parts": {
+      "Page renderer": "1.0",
+      "Word sheet builder": "1.0",
+      "Lesson file format": "1.0",
+      "Checker": "1.0"
+    }
+  },
+  "mapmaker": {
+    "label": "MapMaker",
+    "portalUrl": "https://mpmkr.maps.arcgis.com",
+    "appId": "0cd1cdee853c413a84bfe4b9a6931f0d"
+  },
+  "hub": {
+    "name": "MapMaker Educator Support Hub",
+    "url": "https://mapmaker-support-hub-mpmkr.hub.arcgis.com",
+    "nav": [
+      { "label": "Home", "path": "/" },
+      { "label": "Lessons", "path": "/pages/lessons" },
+      { "label": "How To", "path": "/pages/how-to" },
+      { "label": "About", "path": "/pages/about-mapmaker" },
+      { "label": "More", "path": "/pages/more" }
+    ],
+    "feedbackPath": "/pages/feedback",
+    "subjectPaths": {
+      "World Cultures and Geography": "/pages/world-cultures-and-geography",
+      "History": "/pages/history",
+      "Earth Science": "/pages/earth-science",
+      "Life Science": "/pages/life-science"
+    },
+    "coursePaths": {
+      "US History": "/pages/us-history-ngl",
+      "World History": "/pages/world-history-ngl"
+    }
+  },
+  "tools": {
+    "bookmarks": { "label": "Bookmarks", "howTo": "navigating-mapmaker", "howToTitle": "Navigating MapMaker" },
+    "zoom": { "label": "Zoom", "howTo": "navigating-mapmaker", "howToTitle": "Navigating MapMaker" },
+    "popups": { "label": "Pop-ups", "howTo": "explore-layers-and-data", "howToTitle": "Explore Layers and Data" },
+    "layers": { "label": "Map layers", "howTo": "explore-layers-and-data", "howToTitle": "Explore Layers and Data" },
+    "legend": { "label": "Legend", "howTo": "explore-layers-and-data", "howToTitle": "Explore Layers and Data" },
+    "measure": { "label": "Measure", "howTo": "measure-with-mapmaker", "howToTitle": "Measure with MapMaker" },
+    "sketch": { "label": "Sketch", "howTo": "sketch-on-a-map", "howToTitle": "Sketch on a Map" }
+  },
+  "sheetText": {
+    "en": { "name": "Name", "date": "Date", "bigQuestion": "Big question:", "yourAnswer": "Your answer:", "openMap": "Open the map in MapMaker:", "subtitle": "Student sheet" },
+    "es": { "name": "Nombre", "date": "Fecha", "bigQuestion": "Pregunta central:", "yourAnswer": "Tu respuesta:", "openMap": "Abre el mapa en MapMaker:", "subtitle": "Hoja del estudiante" }
+  },
+  "languageNames": { "en": "English", "es": "Español" }
+}

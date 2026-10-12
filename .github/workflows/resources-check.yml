@@ -1,0 +1,30 @@
+name: Check lesson files
+
+on:
+  push:
+    paths: ["resources/**", ".github/workflows/resources-check.yml"]
+  pull_request:
+    paths: ["resources/**", ".github/workflows/resources-check.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check every lesson file
+        run: node resources/tools/validate.mjs
+      - name: Make the Word sheets (proves they build)
+        run: |
+          npm install --no-save docx@9.7.1
+          node resources/tools/build-sheets.mjs --out sheets-out
+      - name: Keep the Word sheets for upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: student-sheets
+          path: sheets-out/*.docx
