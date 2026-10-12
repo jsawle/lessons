@@ -1,4 +1,4 @@
-/* MapMaker resource pages: Hub page builder v1.3 (Vera embedded in the page; no map preview; buttons that jump to sections).
+/* MapMaker resource pages: Hub page builder v1.4 (Vera embedded in the page; no credit badge; buttons that jump to sections).
    Turns lesson files into ArcGIS Hub page layouts: sections of markdown cards that hold plain HTML
    and one <style> block, with no scripts, so the pages work inside Hub. Runs in the browser
    (window.MMRHub, for the Hub preview) and in Node (for the bundle the publishing notebook reads). */
@@ -7,7 +7,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "1.3";
+  var VERSION = "1.4";
   var esc = MMR.esc;
   var MONTHS = ["August", "September", "October", "November", "December", "January", "February", "March", "April", "May", "June", "July"];
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
@@ -98,8 +98,6 @@
     ".mml.mml-foot table,.mml.mml-foot tr,.mml.mml-foot th,.mml.mml-foot td{background:#004874!important;color:#fff!important}",
     ".mml.mml-foot th,.mml.mml-foot td{border-bottom:1px solid #3D6F92;padding:.3em .6em}",
     ".mml.mml-foot thead th{background:#003A5D!important;color:#fff!important}",
-    ".mml-credit{display:flex;justify-content:flex-end;margin:12px 0 0}",
-    ".mml-credit span{background:#141414;color:#fff;border-top:3px solid #007AC2;padding:6px 10px;font-size:12px;line-height:1.35;border-radius:4px}",
     "@media (max-width:640px){.mml h1{font-size:1.9rem}.mml-hero{padding:20px 16px 14px}.mml .mml-qs>li{padding-left:3em}.mml-foot{padding:16px}.mml table,.mml tbody,.mml tr,.mml th,.mml td{display:block;width:auto}.mml thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}.mml tr{border-bottom:1px solid #D4D4D4;padding:.45em 0}.mml tr:last-child{border-bottom:0}.mml th,.mml td{border:0;padding:.2em .8em}.mml-ph{display:inline;font-weight:700}}",
     "@media print{.mml-actions,.mml-foot{display:none}}"
   ].join("");
@@ -221,8 +219,7 @@
     return '<div class="mml mml-foot"><h2>About this page</h2>' +
       (lesson ? "<p>" + t(lesson.licence) + " Map data: credited to each source under About this map.</p>" : "") +
       "<p>This page is built from " + (lesson ? "one lesson file" : "the lesson files") + (repo ? ": " + ext(repo + (lesson ? "/blob/main/resources/lessons/" + lesson.id + ".json" : "/tree/main/resources/lessons"), lesson ? "<code>" + esc(lesson.id) + ".json</code>" : "resources/lessons") : "") +
-      ". Edit the file, not this page; the page is rebuilt from it.</p>" + versionsTable(site, lesson) +
-      '<div class="mml-credit"><span>Created by Jason Sawle</span></div></div>';
+      ". Edit the file, not this page; the page is rebuilt from it.</p>" + versionsTable(site, lesson) + "</div>";
   }
 
   /* ---------------- Lesson page ---------------- */
@@ -298,12 +295,12 @@
         return '<li><a href="' + esc(h.url) + '" target="_blank" rel="noopener"><span class="mml-card-title">' + esc(h.title) + '</span><span class="mml-card-text">For: ' + esc(h.covers.join(", ")) + "</span>" + NEW_TAB + "</a></li>";
       }).join("") + "</ul></div>");
 
-    // Vera, in the page: her chat page in an embed card (compact "embed" mode), opened with this lesson named
-    // in the message box. Nothing is sent until the teacher sends it.
+    // Vera, in the page: her chat page in an embed card ("embed" mode: Vera's own title, no lesson banner),
+    // opened with this lesson named in the message box. Nothing is sent until the teacher sends it.
     var vUrl = MMR.veraUrl(site, lesson);
     if (vUrl) {
       S.push(section([
-        mdCard(slug + ":" + n + ":intro", '<div class="mml"><h2>Make your own questions with Vera</h2><p class="mml-prose">Vera, the Support Hub’s AI assistant, has this lesson’s map, bookmarks, layers and sources. You can ask it for easier or harder questions, a short quiz, questions for your own state’s standards, or questions in another language.</p></div>'),
+        mdCard(slug + ":" + n + ":intro", '<div class="mml"><h2>Make your own questions with Vera</h2><p class="mml-prose">Vera, the Support Hub’s AI assistant, has this lesson’s map, bookmarks, layers and sources. The lesson is already named in Vera’s message box: add what you’d like, such as easier or harder questions, a short quiz, questions for your own state’s standards or questions in another language, then send it.</p></div>'),
         frameCard(slug + ":" + n + ":vera", vUrl + "&embed=1", VERA_HEIGHT, "Chat with Vera about " + lesson.title),
         mdCard(slug + ":" + n, '<div class="mml"><p class="mml-prose mml-muted">Vera’s questions aren’t reviewed like this lesson. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem.</p></div>')
       ]));
