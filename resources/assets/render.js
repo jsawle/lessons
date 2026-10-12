@@ -1,4 +1,4 @@
-/* MapMaker resource pages (lab): page renderer v1.2. Draws a lesson page or the catalogue from JSON files. */
+/* MapMaker resource pages (lab): page renderer v1.3. Draws a lesson page or the catalogue from JSON files. */
 (function () {
   "use strict";
   var MMR = window.MMR, esc = MMR.esc, inline = MMR.inline;
@@ -146,8 +146,8 @@
     if (vUrl) h.push('<section id="vera" aria-labelledby="vera-h"><h2 id="vera-h">Make your own questions with Vera</h2>' +
       '<div class="prose"><p>Vera, the Support Hub\u2019s AI assistant, has this lesson\u2019s map, bookmarks, layers and sources. You can ask it for easier or harder questions, a short quiz, questions for your own state\u2019s standards, or questions in another language.</p>' +
       '<p>Vera\u2019s questions aren\u2019t reviewed like this lesson. Each one should be answerable from the map; if one isn\u2019t, please tell us using Report a problem.</p></div>' +
-      '<p><a class="btn primary" href="' + esc(vUrl) + '" target="_blank" rel="noopener">Open Vera with this lesson' + newTab + "</a></p>" +
-      '<p class="muted">Vera opens with this lesson named in the message box, ready for you to add what you need before sending. In this mock-up the button opens a lab copy of Vera\u2019s chat page.</p></section>');
+      '<iframe class="vera-frame" src="' + esc(vUrl + "&embed=1") + '" title="' + esc("Chat with Vera about " + lesson.title) + '" loading="lazy"></iframe>' +
+      '<p class="muted">This is a lab copy of Vera\u2019s chat page.</p></section>');
 
     // Report a problem
     h.push('<section id="report" aria-labelledby="rp-h"><h2 id="rp-h">Report a problem</h2><p class="prose">Found a mistake on the map, in the answers or on the student sheet? Tell the MapMaker team. Confirmed problems are listed under Known issues until they’re fixed.</p>' +

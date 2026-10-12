@@ -48,6 +48,7 @@ p{margin:0}
 .btn.primary{background:var(--accent);border-color:var(--accent)}
 .btn.primary:hover{background:#ffd633}
 .btn svg{width:1.1em;height:1.1em;flex:none}
+.vera-frame{display:block;width:100%;max-width:60rem;height:640px;border:0;margin:.4rem 0 .6rem}
 .chip{display:inline-block;font-size:.78rem;font-weight:700;padding:.1rem .55rem;border-radius:999px;border:1px solid var(--line);background:#fff}
 .chip.draft{background:var(--note-bg);color:var(--note-ink);border-color:#e8d38a}
 .chip.reviewed,.chip.published,.chip.fixed{background:var(--ok-bg);color:var(--ok-ink);border-color:#b7dcc2}

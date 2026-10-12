@@ -22,7 +22,7 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to the page</a>
-<aside class="lab" aria-label="About this preview"><strong>Hub page preview.</strong> Each block below is one Hub card (text, or the embedded map), built from the same layout the publishing notebook sends to Hub. On Hub, the site's own header and footer replace the bar below, which shows the header colours the notebook sets. <a href="./">Lab mock-up</a></aside>
+<aside class="lab" aria-label="About this preview"><strong>Hub page preview.</strong> Each block below is one Hub card (text, or Vera in an embed card), built from the same layout the publishing notebook sends to Hub. On Hub, the site's own header and footer replace the bar below, which shows the header colours the notebook sets. <a href="./">Lab mock-up</a></aside>
 <header class="hubbar" aria-label="Site header (simulated)">
   <a class="name" id="site-name" href="hub-preview.html?page=lessons">MapMaker Lessons</a>
   <nav aria-label="Site"><ul><li><a href="hub-preview.html?page=lessons">Lessons</a></li></ul></nav>
@@ -56,8 +56,8 @@
           return row.cards.map(function (card) {
             var c = card.component;
             if (c.name === "iframe-card") {
-              // Hub draws this as an embed card; the preview gives the frame a title so it can be checked.
-              return '<iframe class="hubframe" title="Quick look at the web map" loading="lazy" src="' + MMR.esc(c.settings.src) + '" height="' + MMR.esc(c.settings.height) + '"></iframe>';
+              // Hub draws this as an Iframe card, with the card's title as the frame's title.
+              return '<iframe class="hubframe" title="' + MMR.esc(c.settings.title) + '" loading="lazy" src="' + MMR.esc(c.settings.src) + '" height="' + MMR.esc(c.settings.height) + '"></iframe>';
             }
             return c.settings.markdown
               .replace(/\{\{SHEET:([^}]+)\}\}/g, function (_, k) { return sheets[k] || "#"; })
