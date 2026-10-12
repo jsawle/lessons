@@ -1,20 +1,20 @@
 {
   "app": {
     "name": "MapMaker resource pages (lab)",
-    "version": "0.3.1",
+    "version": "0.4.0",
     "parts": {
       "Page renderer": "1.2",
       "Word sheet builder": "1.1",
       "Lesson file format": "1.1",
       "Checker": "1.1",
       "Vera knowledge builder": "1.0",
-      "Hub page builder": "1.0"
+      "Hub page builder": "1.1"
     }
   },
   "hubDemo": {
     "name": "MapMaker Lessons (demo)",
     "siteId": "9c39add73ebf47068e1dac37f6353b8d",
-    "url": "https://gis-4-schools.hub.arcgis.com",
+    "url": "https://mapmakerlessons-gis-4-schools.hub.arcgis.com",
     "lessonsSlug": "lessons",
     "lessonsTitle": "Lessons",
     "lessonsIntro": "Example lessons for Grade 8 US History. Each one pairs a MapMaker map with an inquiry, a Word student sheet in English and Spanish, and teacher notes.",

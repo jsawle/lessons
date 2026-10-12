@@ -76,10 +76,10 @@ Run it again after any lesson change: it updates the same pages and Word items. 
 | `schema/lesson.schema.json` | Lesson file format | 1.1 |
 | `assets/lesson-core.js` | Checker | 1.1 |
 | `assets/lesson-core.js` | Vera knowledge builder | 1.0 |
-| `assets/hub-page.js` | Hub page builder | 1.0 |
+| `assets/hub-page.js` | Hub page builder | 1.1 |
 | `tools/publish_to_hub.py` | Hub publisher (notebook) | 1.1 |
 
-Resource pages app version 0.3.1. 0.3.1: the publisher can be pasted into one notebook cell and run twice (dry run, then publish). 0.3.0: five Grade 8 US History lessons, Hub pages and the publishing notebook; long Word sheets get tighter writing lines so every sheet stays on one page. 0.2.0: Vera replaces the copy-and-paste AI summary; lesson format 1.1 adds bookmarks. Third-party code: `resources/vendor/docx` (docx 9.7.1, MIT licence).
+Resource pages app version 0.4.0. 0.4.0: Hub pages use Esri (Calcite) colours instead of the MapMaker yellow and black, show a quick look at the map in About this map, and fix the footer table and button underlines that Hub's own styles overrode. 0.3.1: the publisher can be pasted into one notebook cell and run twice (dry run, then publish). 0.3.0: five Grade 8 US History lessons, Hub pages and the publishing notebook; long Word sheets get tighter writing lines so every sheet stays on one page. 0.2.0: Vera replaces the copy-and-paste AI summary; lesson format 1.1 adds bookmarks. Third-party code: `resources/vendor/docx` (docx 9.7.1, MIT licence).
 
 ## Privacy
 There are no accounts or logins, and no student data is collected or stored by Esri. Results stay on the student's device and can be downloaded or copied to hand in through the school's own systems.

@@ -1,4 +1,4 @@
-/* MapMaker resource pages: Hub page builder v1.0.
+/* MapMaker resource pages: Hub page builder v1.1 (Esri colours; map quick look on lesson pages).
    Turns lesson files into ArcGIS Hub page layouts: sections of markdown cards that hold plain HTML
    and one <style> block, with no scripts, so the pages work inside Hub. Runs in the browser
    (window.MMRHub, for the Hub preview) and in Node (for the bundle the publishing notebook reads). */
@@ -7,7 +7,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "1.0";
+  var VERSION = "1.1";
   var esc = MMR.esc;
   var MONTHS = ["August", "September", "October", "November", "December", "January", "February", "March", "April", "May", "June", "July"];
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
@@ -20,74 +20,80 @@
     attrs: ["class", "href", "target", "rel", "lang", "scope"]
   };
 
+  /* Colours are Esri's Calcite design system tokens: brand #007AC2, brand-hover #00619B, brand-press #004874,
+     text #141414 / #4A4A4A, border #D4D4D4, and tints of the status colours. Links use #00619B, which keeps
+     4.5:1 contrast on the grey hero as well as on white. */
   var CSS = [
-    '.mml{font-family:"Avenir Next",Avenir,"Segoe UI",Helvetica,Arial,sans-serif;color:#111;font-size:17px;line-height:1.6;max-width:72rem;margin:0 auto;padding:6px 0}',
-    ".mml a{color:#0a4fa8;text-decoration:underline;text-underline-offset:.18em}",
-    ".mml a:focus-visible{outline:3px solid #0b5fff;outline-offset:2px}",
-    ".mml h1{font-size:2.4rem;line-height:1.15;font-weight:800;margin:.15em 0 .3em;color:#111}",
-    ".mml h2{display:inline-block;font-size:1.6rem;line-height:1.2;font-weight:800;margin:0 0 .6em;padding-bottom:.25em;border-bottom:3px solid #FFCC00;color:#111}",
-    ".mml h3{font-size:1.15rem;line-height:1.3;font-weight:800;margin:1em 0 .35em;color:#111}",
+    '.mml{font-family:"Avenir Next",Avenir,"Segoe UI",Helvetica,Arial,sans-serif;color:#141414;font-size:17px;line-height:1.6;max-width:72rem;margin:0 auto;padding:6px 0}',
+    ".mml a{color:#00619B;text-decoration:underline;text-underline-offset:.18em}",
+    ".mml a:hover{color:#004874}",
+    ".mml a:focus-visible{outline:3px solid #007AC2;outline-offset:2px}",
+    ".mml h1{font-size:2.4rem;line-height:1.15;font-weight:700;margin:.15em 0 .3em;color:#141414}",
+    ".mml h2{display:inline-block;font-size:1.6rem;line-height:1.2;font-weight:700;margin:0 0 .6em;padding-bottom:.25em;border-bottom:3px solid #007AC2;color:#141414}",
+    ".mml h3{font-size:1.15rem;line-height:1.3;font-weight:700;margin:1em 0 .35em;color:#141414}",
     ".mml p{margin:0 0 .7em}",
     ".mml ul,.mml ol{margin:0 0 .8em;padding-left:1.3em}",
     ".mml li{margin:0 0 .3em}",
     ".mml code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88em}",
     ".mml-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}",
-    ".mml-hero{background:#f4f4f2;border-bottom:3px solid #FFCC00;border-radius:8px;padding:26px 24px 18px}",
-    ".mml-crumbs{font-size:.95rem;color:#4a4a4a}",
+    ".mml-hero{background:#F3F3F3;border-top:4px solid #007AC2;border-radius:4px;padding:26px 24px 18px}",
+    ".mml-crumbs{font-size:.95rem;color:#4A4A4A}",
     ".mml-summary{font-size:1.15rem;max-width:46rem}",
     ".mml .mml-facts{list-style:none;padding:0;margin:.4em 0 1em;display:flex;flex-wrap:wrap;gap:.4em 1.8em}",
     ".mml-facts li{display:flex;flex-direction:column;margin:0}",
-    ".mml-k{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.07em;color:#4a4a4a;font-weight:700}",
+    ".mml-k{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.07em;color:#4A4A4A;font-weight:700}",
     ".mml-v{font-weight:600}",
     ".mml-actions{display:flex;flex-wrap:wrap;gap:.6em;margin:.3em 0 .9em}",
-    ".mml .mml-btn{display:inline-block;font-weight:700;line-height:1.25;padding:.65em 1em;border-radius:6px;border:2px solid #000;background:#fff;color:#000;text-decoration:none}",
-    ".mml .mml-btn:hover{background:#f4f4f2}",
-    ".mml .mml-primary{background:#FFCC00;border-color:#FFCC00}",
-    ".mml .mml-primary:hover{background:#ffd633}",
-    ".mml-chip{display:inline-block;font-size:.8rem;font-weight:700;padding:.1em .6em;border-radius:999px;border:1px solid #d6d6d0;background:#fff}",
-    ".mml-draft{background:#fff6dc;color:#4a3a06;border-color:#e8d38a}",
-    ".mml-ok{background:#e6f4ea;color:#11602a;border-color:#b7dcc2}",
-    ".mml-open{background:#fde8e8;color:#8a1c1c;border-color:#f2c1c1}",
-    ".mml-muted{color:#4a4a4a}",
+    ".mml .mml-btn{display:inline-block;font-weight:600;line-height:1.25;padding:.65em 1em;border-radius:4px;border:2px solid #007AC2;background:#fff;color:#00619B;text-decoration:none!important}",
+    ".mml .mml-btn:hover{background:#E8F2F9;color:#004874}",
+    ".mml .mml-primary{background:#007AC2;border-color:#007AC2;color:#fff}",
+    ".mml .mml-primary:hover{background:#00619B;border-color:#00619B;color:#fff}",
+    ".mml-chip{display:inline-block;font-size:.8rem;font-weight:600;padding:.1em .6em;border-radius:999px;border:1px solid #D4D4D4;background:#fff}",
+    ".mml-draft{background:#FDF2E6;color:#7A4300;border-color:#F2C48D}",
+    ".mml-ok{background:#E8F4EA;color:#1F6B2B;border-color:#AED6B5}",
+    ".mml-open{background:#FBEAE8;color:#A3261B;border-color:#F1B9B3}",
+    ".mml-muted{color:#4A4A4A}",
     ".mml-prose{max-width:46rem}",
-    ".mml-tablewrap{border:1px solid #d6d6d0;border-radius:8px;margin:0 0 1em}",
+    ".mml-tablewrap{border:1px solid #D4D4D4;border-radius:4px;margin:0 0 1em}",
     ".mml table{border-collapse:collapse;width:100%;font-size:.96rem;margin:0}",
-    ".mml th,.mml td{text-align:left;vertical-align:top;padding:.6em .8em;border-bottom:1px solid #d6d6d0;overflow-wrap:break-word}",
+    ".mml th,.mml td{text-align:left;vertical-align:top;padding:.6em .8em;border-bottom:1px solid #D4D4D4;overflow-wrap:break-word;color:#141414}",
     ".mml th code{white-space:nowrap}",
     ".mml-ph{display:none}",
-    ".mml thead th{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:#4a4a4a;background:#f4f4f2}",
+    ".mml thead th{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:#4A4A4A;background:#F3F3F3}",
     ".mml tr:last-child th,.mml tr:last-child td{border-bottom:0}",
-    ".mml-cq{border:2px solid #000;border-left:10px solid #FFCC00;border-radius:8px;padding:1em 1.2em;margin:0 0 1em}",
+    ".mml-cq{border:1px solid #D4D4D4;border-left:8px solid #007AC2;border-radius:4px;padding:1em 1.2em;margin:0 0 1em;background:#fff}",
     ".mml-cq .mml-q{font-size:1.3rem;font-weight:700;line-height:1.35;margin:.2em 0 0}",
     ".mml .mml-qs{list-style:none;padding:0;margin:0 0 1em;counter-reset:mmlq}",
-    ".mml-qs>li{counter-increment:mmlq;position:relative;border:1px solid #d6d6d0;border-radius:8px;padding:.85em 1.1em .5em 3.4em;margin:0 0 .9em}",
-    ".mml-qs>li::before{content:counter(mmlq);position:absolute;left:.9em;top:.85em;width:1.9em;height:1.9em;line-height:1.9em;text-align:center;border-radius:50%;background:#FFCC00;font-weight:800}",
+    ".mml-qs>li{counter-increment:mmlq;position:relative;border:1px solid #D4D4D4;border-radius:4px;padding:.85em 1.1em .5em 3.4em;margin:0 0 .9em}",
+    ".mml-qs>li::before{content:counter(mmlq);position:absolute;left:.9em;top:.85em;width:1.9em;height:1.9em;line-height:1.9em;text-align:center;border-radius:50%;background:#007AC2;color:#fff;font-weight:700}",
     ".mml-qs h3{margin:.1em 0 .3em}",
     ".mml-tools{font-size:.95rem}",
-    ".mml-sheet{border:1px solid #d6d6d0;border-radius:8px;padding:1.2em 1.4em .6em;max-width:46rem;box-shadow:0 1px 3px rgba(0,0,0,.06);background:#fff}",
+    ".mml-sheet{border:1px solid #D4D4D4;border-radius:4px;padding:1.2em 1.4em .6em;max-width:46rem;box-shadow:0 1px 3px rgba(0,0,0,.06);background:#fff}",
     ".mml-sheet ol{padding-left:1.4em}",
-    ".mml-blank{display:inline-block;min-width:6em;border-bottom:1px solid #4a4a4a}",
+    ".mml-blank{display:inline-block;min-width:6em;border-bottom:1px solid #4A4A4A}",
     ".mml .mml-words{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.45em}",
-    ".mml-words li{border:1px solid #d6d6d0;border-radius:4px;padding:.1em .6em;font-weight:600;margin:0}",
+    ".mml-words li{border:1px solid #D4D4D4;border-radius:4px;padding:.1em .6em;font-weight:600;margin:0}",
     ".mml .mml-cards{list-style:none;padding:0;margin:0 0 1em;display:flex;flex-wrap:wrap;gap:1em}",
     ".mml-cards>li{flex:1 1 15rem;min-width:0;margin:0}",
-    ".mml .mml-cards a{display:block;height:100%;border:1px solid #d6d6d0;border-top:6px solid #FFCC00;border-radius:8px;padding:.9em 1em;text-decoration:none;color:#111}",
+    ".mml .mml-cards a{display:block;height:100%;border:1px solid #D4D4D4;border-top:4px solid #007AC2;border-radius:4px;padding:.9em 1em;text-decoration:none!important;color:#141414}",
     ".mml .mml-cards a:hover{box-shadow:0 4px 14px rgba(0,0,0,.12)}",
-    ".mml-card-title{display:block;font-weight:800;font-size:1.05rem;color:#0a4fa8;text-decoration:underline}",
-    ".mml-card-text{display:block;color:#4a4a4a;font-size:.95rem}",
+    ".mml-card-title{display:block;font-weight:700;font-size:1.05rem;color:#00619B;text-decoration:underline}",
+    ".mml-card-text{display:block;color:#4A4A4A;font-size:.95rem}",
     ".mml .mml-lessons{list-style:none;padding:0;margin:0 0 1em;display:flex;flex-wrap:wrap;gap:1em}",
-    ".mml-lessons>li{flex:1 1 18rem;min-width:0;border:1px solid #d6d6d0;border-top:6px solid #FFCC00;border-radius:8px;padding:.9em 1.1em .4em;margin:0}",
+    ".mml-lessons>li{flex:1 1 18rem;min-width:0;border:1px solid #D4D4D4;border-top:4px solid #007AC2;border-radius:4px;padding:.9em 1.1em .4em;margin:0}",
     ".mml .mml-lessons h2{display:block;border:0;font-size:1.25rem;margin:.1em 0 .3em;padding:0}",
-    ".mml-month{font-size:.78rem;text-transform:uppercase;letter-spacing:.07em;font-weight:700;color:#4a4a4a;margin:0}",
-    ".mml-foot{background:#111;color:#fff;border-top:3px solid #FFCC00;border-radius:8px;padding:20px 24px 16px;font-size:.92rem}",
-    ".mml.mml-foot a{color:#FFCC00}",
+    ".mml-month{font-size:.78rem;text-transform:uppercase;letter-spacing:.07em;font-weight:700;color:#4A4A4A;margin:0}",
+    ".mml-foot{background:#004874;color:#fff;border-radius:4px;padding:20px 24px 16px;font-size:.92rem}",
+    ".mml.mml-foot p{color:#fff}",
+    ".mml.mml-foot a{color:#fff}",
     ".mml.mml-foot h2{display:block;color:#fff;font-size:1.05rem;border:0;padding:0;margin:0 0 .5em}",
-    ".mml-foot .mml-tablewrap{border-color:#333;max-width:32rem}",
-    ".mml-foot th,.mml-foot td{border-bottom:1px solid #333;padding:.3em .6em;color:#fff}",
-    ".mml-foot thead th{background:#222;color:#ddd}",
+    ".mml-foot .mml-tablewrap{border-color:#3D6F92;max-width:32rem}",
+    ".mml.mml-foot table,.mml.mml-foot tr,.mml.mml-foot th,.mml.mml-foot td{background:#004874!important;color:#fff!important}",
+    ".mml.mml-foot th,.mml.mml-foot td{border-bottom:1px solid #3D6F92;padding:.3em .6em}",
+    ".mml.mml-foot thead th{background:#003A5D!important;color:#fff!important}",
     ".mml-credit{display:flex;justify-content:flex-end;margin:12px 0 0}",
-    ".mml-credit span{background:#000;color:#fff;border-top:3px solid #FFCC00;padding:6px 10px;font-size:12px;line-height:1.35;border-radius:4px}",
-    "@media (max-width:640px){.mml h1{font-size:1.9rem}.mml-hero{padding:20px 16px 14px}.mml .mml-qs>li{padding-left:3em}.mml-foot{padding:16px}.mml table,.mml tbody,.mml tr,.mml th,.mml td{display:block;width:auto}.mml thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}.mml tr{border-bottom:1px solid #d6d6d0;padding:.45em 0}.mml tr:last-child{border-bottom:0}.mml th,.mml td{border:0;padding:.2em .8em}.mml-ph{display:inline;font-weight:700}}",
+    ".mml-credit span{background:#141414;color:#fff;border-top:3px solid #007AC2;padding:6px 10px;font-size:12px;line-height:1.35;border-radius:4px}",
+    "@media (max-width:640px){.mml h1{font-size:1.9rem}.mml-hero{padding:20px 16px 14px}.mml .mml-qs>li{padding-left:3em}.mml-foot{padding:16px}.mml table,.mml tbody,.mml tr,.mml th,.mml td{display:block;width:auto}.mml thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}.mml tr{border-bottom:1px solid #D4D4D4;padding:.45em 0}.mml tr:last-child{border-bottom:0}.mml th,.mml td{border:0;padding:.2em .8em}.mml-ph{display:inline;font-weight:700}}",
     "@media print{.mml-actions,.mml-foot{display:none}}"
   ].join("");
 
@@ -110,11 +116,20 @@
     for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; }
     return ("c" + h.toString(36) + "00000000").slice(0, 9);
   }
-  function section(slug, n, markdown) {
+  /* Hub layout pieces. A text card holds HTML; an embed card ("iframe-card", the same card the Support Hub
+     homepage uses for its video) shows another page, here the lesson's map in MapMaker. */
+  function mdCard(id, markdown) {
+    return { component: { name: "markdown-card", settings: { cardId: hashId(id), schemaVersion: 2.1, markdown: protect(markdown) } }, width: 12 };
+  }
+  function frameCard(id, src, height) {
+    return { component: { name: "iframe-card", settings: { cardId: hashId(id), src: src, height: String(height), scrollable: false,
+      shareable: false, mobileShareable: false, shareableOnHover: false, mobileShareableOnHover: false } }, width: 12 };
+  }
+  function section(cards) {
     return {
       containment: "fixed", isFooter: false,
       style: { background: { isFile: false, isUrl: true, state: "", display: {}, transparency: 0, position: { x: "center", y: "center" }, color: "transparent" }, rowLayout: "box" },
-      rows: [{ cards: [{ component: { name: "markdown-card", settings: { cardId: hashId(slug + ":" + n), schemaVersion: 2.1, markdown: protect(markdown) } }, width: 12 }] }],
+      rows: cards.map(function (c) { return { cards: [c] }; }),
       visibility: { access: "default", groups: [] }
     };
   }
@@ -181,7 +196,7 @@
     var slug = lesson.id, S = [], n = 0;
     var langs = Object.keys(lesson.languages);
     var mm = MMR.mapmakerUrl(site, lesson.map.webmapId);
-    function add(html) { S.push(section(slug, n++, html)); }
+    function add(html) { S.push(section([mdCard(slug + ":" + n, html)])); n++; }
 
     // Hero
     add("<style>" + CSS + "</style>" + '<div class="mml mml-hero"><p class="mml-crumbs"><a href="' + lessonsPath(site) + '">Lessons</a> › ' + esc(lesson.course) + "</p>" +
@@ -195,16 +210,22 @@
       }).join("") + "</p>" +
       "<p>" + statusChip(lesson) + ' <span class="mml-muted">Content version ' + esc(lesson.contentVersion) + ", updated " + esc(lesson.updated) + ".</span></p></div>");
 
-    // About this map
+    // About this map: a short intro, a quick look at the map (MapMaker in an embed card), then layers and sources
     var issues = lesson.knownIssues || [];
-    add('<div class="mml"><h2>About this map</h2><p class="mml-prose">Each layer names its source, so you can check where the information comes from.</p>' +
-      table("Map layers and sources", ["Layer", "What it shows", "Source"], lesson.map.layers.map(function (l) {
-        return [esc(l.name) + (l.offAtStart ? ' <span class="mml-muted">(off when the map opens)</span>' : ""), t(l.shows), t(l.source)];
-      }), true) +
-      "<p><strong>Bookmarks:</strong> " + ((lesson.map.bookmarks || []).length ? lesson.map.bookmarks.map(esc).join("; ") : "none") + ".</p>" +
-      "<h3>Known issues</h3>" + (issues.length ? "<ul>" + issues.map(function (k) {
-        return '<li><span class="mml-chip ' + (k.status === "fixed" ? "mml-ok" : "mml-open") + '">' + (k.status === "fixed" ? "Fixed " : "Open ") + esc(k.date) + "</span> <strong>" + esc(k.where) + ":</strong> " + t(k.note) + "</li>";
-      }).join("") + "</ul>" : "<p>No known issues.</p>") + "</div>");
+    S.push(section([
+      mdCard(slug + ":" + n + ":intro", '<div class="mml"><h2>About this map</h2><p class="mml-prose">A quick look at the map students use. You can pan, zoom and click it here, or ' +
+        ext(mm, "open it in MapMaker") + " for every tool.</p></div>"),
+      frameCard(slug + ":" + n + ":map", mm, 480),
+      mdCard(slug + ":" + n, '<div class="mml"><p class="mml-prose">Each layer names its source, so you can check where the information comes from.</p>' +
+        table("Map layers and sources", ["Layer", "What it shows", "Source"], lesson.map.layers.map(function (l) {
+          return [esc(l.name) + (l.offAtStart ? ' <span class="mml-muted">(off when the map opens)</span>' : ""), t(l.shows), t(l.source)];
+        }), true) +
+        "<p><strong>Bookmarks:</strong> " + ((lesson.map.bookmarks || []).length ? lesson.map.bookmarks.map(esc).join("; ") : "none") + ".</p>" +
+        "<h3>Known issues</h3>" + (issues.length ? "<ul>" + issues.map(function (k) {
+          return '<li><span class="mml-chip ' + (k.status === "fixed" ? "mml-ok" : "mml-open") + '">' + (k.status === "fixed" ? "Fixed " : "Open ") + esc(k.date) + "</span> <strong>" + esc(k.where) + ":</strong> " + t(k.note) + "</li>";
+        }).join("") + "</ul>" : "<p>No known issues.</p>") + "</div>")
+    ]));
+    n++;
 
     // Inquiry
     var inq = lesson.inquiry;
@@ -270,7 +291,7 @@
   function monthIndex(m) { var i = MONTHS.indexOf(m); return i < 0 ? 99 : i; }
   function cataloguePage(site, lessons) {
     var H = hubHome(site), slug = H.lessonsSlug || "lessons", S = [], n = 0;
-    function add(html) { S.push(section(slug, n++, html)); }
+    function add(html) { S.push(section([mdCard(slug + ":" + n, html)])); n++; }
     var sorted = lessons.slice().sort(function (a, b) { return monthIndex(a.planMonth) - monthIndex(b.planMonth) || a.title.localeCompare(b.title); });
     var courses = sorted.map(function (l) { return l.course; }).filter(function (v, i, a) { return a.indexOf(v) === i; });
     add("<style>" + CSS + "</style>" + '<div class="mml mml-hero"><h1>' + esc(H.lessonsTitle || "Lessons") + '</h1><p class="mml-summary">' + esc(H.lessonsIntro || "") + "</p>" +
@@ -323,31 +344,45 @@
     };
   }
 
-  /* The checker for Hub pages: one line per card, only allowed tags and attributes, known placeholders. */
+  /* The checker for Hub pages: text cards on one line with only allowed tags, attributes and placeholders,
+     the <style> block only in the very first card, and embed cards only showing ArcGIS pages over https. */
   function checkPage(page, sheetKeys) {
-    var errs = [];
+    var errs = [], first = true;
     page.layout.sections.forEach(function (sec, i) {
-      var md = sec.rows[0].cards[0].component.settings.markdown, where = page.slug + " section " + (i + 1);
-      if (/\n/.test(md)) errs.push(where + ": card text has a line break.");
-      if (i > 0 && /<style/i.test(md)) errs.push(where + ": only the first card may hold the <style> block.");
-      var body = md.replace(/<style>[\s\S]*?<\/style>/i, "");
-      (body.match(/<\/?([a-zA-Z0-9]+)([^>]*)>/g) || []).forEach(function (tag) {
-        var m = /^<\/?([a-zA-Z0-9]+)([^>]*)>$/.exec(tag);
-        var name = m[1].toLowerCase();
-        if (ALLOWED.tags.indexOf(name) < 0) errs.push(where + ": tag <" + name + "> isn't on the allowed list.");
-        var rest = m[2].replace(/([a-zA-Z_:][-a-zA-Z0-9_:.]*)\s*=\s*"[^"]*"/g, function (_, an) {
-          if (ALLOWED.attrs.indexOf(an.toLowerCase()) < 0) errs.push(where + ": attribute " + an + " on <" + name + "> isn't on the allowed list.");
-          return "";
+      sec.rows.forEach(function (row, r) {
+        row.cards.forEach(function (card) {
+          var where = page.slug + " section " + (i + 1) + " row " + (r + 1), name = card.component && card.component.name;
+          if (name === "iframe-card") {
+            var src = card.component.settings.src || "";
+            if (!/^https:\/\/([a-z0-9-]+\.)*arcgis\.com\//i.test(src)) errs.push(where + ": embed card should show an https ArcGIS page, not " + src + ".");
+            first = false;
+            return;
+          }
+          if (name !== "markdown-card") { errs.push(where + ": unexpected card type " + name + "."); return; }
+          var md = card.component.settings.markdown;
+          if (/\n/.test(md)) errs.push(where + ": card text has a line break.");
+          if (!first && /<style/i.test(md)) errs.push(where + ": only the first card may hold the <style> block.");
+          first = false;
+          var body = md.replace(/<style>[\s\S]*?<\/style>/i, "");
+          (body.match(/<\/?([a-zA-Z0-9]+)([^>]*)>/g) || []).forEach(function (tag) {
+            var m = /^<\/?([a-zA-Z0-9]+)([^>]*)>$/.exec(tag);
+            var tname = m[1].toLowerCase();
+            if (ALLOWED.tags.indexOf(tname) < 0) errs.push(where + ": tag <" + tname + "> isn't on the allowed list.");
+            var rest = m[2].replace(/([a-zA-Z_:][-a-zA-Z0-9_:.]*)\s*=\s*"[^"]*"/g, function (_, an) {
+              if (ALLOWED.attrs.indexOf(an.toLowerCase()) < 0) errs.push(where + ": attribute " + an + " on <" + tname + "> isn't on the allowed list.");
+              return "";
+            });
+            if (/[^\s\/]/.test(rest)) errs.push(where + ": unquoted or odd attribute text on <" + tname + ">: " + rest.trim());
+          });
+          (md.match(/\{\{[^}]*\}\}/g) || []).forEach(function (ph) {
+            var k = /^\{\{SHEET:(.+)\}\}$/.exec(ph);
+            if (!k || sheetKeys.indexOf(k[1]) < 0) errs.push(where + ": unknown placeholder " + ph + ".");
+          });
+          (md.match(/href="([^"]*)"/g) || []).forEach(function (h) {
+            var u = h.slice(6, -1);
+            if (!/^(https:\/\/|\/pages\/|\{\{SHEET:)/.test(u)) errs.push(where + ": link " + u + " should be https://, /pages/ or a sheet placeholder.");
+          });
         });
-        if (/[^\s\/]/.test(rest)) errs.push(where + ": unquoted or odd attribute text on <" + name + ">: " + rest.trim());
-      });
-      (md.match(/\{\{[^}]*\}\}/g) || []).forEach(function (ph) {
-        var k = /^\{\{SHEET:(.+)\}\}$/.exec(ph);
-        if (!k || sheetKeys.indexOf(k[1]) < 0) errs.push(where + ": unknown placeholder " + ph + ".");
-      });
-      (md.match(/href="([^"]*)"/g) || []).forEach(function (h) {
-        var u = h.slice(6, -1);
-        if (!/^(https:\/\/|\/pages\/|\{\{SHEET:)/.test(u)) errs.push(where + ": link " + u + " should be https://, /pages/ or a sheet placeholder.");
       });
     });
     return errs;

@@ -8,20 +8,21 @@
   body{margin:0;background:#fff;color:#111;font-family:"Avenir Next",Avenir,"Segoe UI",Helvetica,Arial,sans-serif}
   .skip{position:absolute;left:8px;top:-60px;background:#FFCC00;color:#000;padding:8px 12px;z-index:100;font-weight:700}
   .skip:focus{top:8px}
-  .lab{background:#fff6dc;color:#4a3a06;border-bottom:1px solid #e8d38a;font-size:.92rem;padding:.55rem 16px}
-  .lab a{color:#0a4fa8}
+  .lab{background:#E8F2F9;color:#004874;border-bottom:1px solid #B3D4EA;font-size:.92rem;padding:.55rem 16px}
+  .lab a{color:#00619B}
   .hubbar{background:#fff;border-bottom:1px solid #d6d6d0;padding:.8rem 16px;display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;align-items:center}
   .hubbar .name{font-size:1.3rem;font-weight:600;color:#111;text-decoration:none}
   .hubbar ul{display:flex;gap:1.2rem;list-style:none;margin:0;padding:0}
   .hubbar a{color:#111}
   main{padding:16px}
   .hubsection{margin:0 0 24px}
-  :focus-visible{outline:3px solid #0b5fff;outline-offset:2px}
+  .hubframe{display:block;width:100%;max-width:72rem;margin:0 auto 12px;border:1px solid #D4D4D4;border-radius:4px}
+  :focus-visible{outline:3px solid #007AC2;outline-offset:2px}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to the page</a>
-<aside class="lab" aria-label="About this preview"><strong>Hub page preview.</strong> Each block below is one Hub text card, built from the same layout the publishing notebook sends to Hub. On Hub, the site's own header and footer replace the bar below. <a href="./">Lab mock-up</a></aside>
+<aside class="lab" aria-label="About this preview"><strong>Hub page preview.</strong> Each block below is one Hub card (text, or the embedded map), built from the same layout the publishing notebook sends to Hub. On Hub, the site's own header and footer replace the bar below. <a href="./">Lab mock-up</a></aside>
 <header class="hubbar" aria-label="Site header (simulated)">
   <a class="name" id="site-name" href="hub-preview.html?page=lessons">MapMaker Lessons</a>
   <nav aria-label="Site"><ul><li><a href="hub-preview.html?page=lessons">Lessons</a></li></ul></nav>
@@ -45,10 +46,18 @@
       document.title = page.title + " – Hub page preview";
       var sheets = {}; b.sheets.forEach(function (s) { sheets[s.key] = "dist/sheets/" + s.fileName; });
       main.innerHTML = page.layout.sections.map(function (sec) {
-        var md = sec.rows[0].cards[0].component.settings.markdown
-          .replace(/\{\{SHEET:([^}]+)\}\}/g, function (_, k) { return sheets[k] || "#"; })
-          .replace(/href="\/pages\/([a-z0-9-]+)"/g, 'href="hub-preview.html?page=$1"');
-        return '<div class="hubsection">' + md + "</div>";
+        return '<div class="hubsection">' + sec.rows.map(function (row) {
+          return row.cards.map(function (card) {
+            var c = card.component;
+            if (c.name === "iframe-card") {
+              // Hub draws this as an embed card; the preview gives the frame a title so it can be checked.
+              return '<iframe class="hubframe" title="Quick look at the map in MapMaker" loading="lazy" src="' + MMR.esc(c.settings.src) + '" height="' + MMR.esc(c.settings.height) + '"></iframe>';
+            }
+            return c.settings.markdown
+              .replace(/\{\{SHEET:([^}]+)\}\}/g, function (_, k) { return sheets[k] || "#"; })
+              .replace(/href="\/pages\/([a-z0-9-]+)"/g, 'href="hub-preview.html?page=$1"');
+          }).join("");
+        }).join("") + "</div>";
       }).join("");
     });
   }).catch(function (e) { main.innerHTML = "<h1>This preview couldn't load</h1><p>" + MMR.esc(e.message) + "</p>"; });
