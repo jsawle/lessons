@@ -1,0 +1,152 @@
+{
+  "$schema": "../schema/lesson.schema.json",
+  "formatVersion": "1.0",
+  "id": "revolutionary-battles-1775-1776",
+  "contentVersion": "0.1.0",
+  "status": "draft",
+  "updated": "2026-10-12",
+  "reviewed": null,
+
+  "title": "1775–1776 Revolutionary Battles",
+  "sheetTitle": { "es": "Batallas de la Revolución, 1775–1776" },
+  "summary": "Explore how the geography of North America shaped the first two years of the American Revolution, from the first shots at Lexington and Concord to Washington's attack on Trenton.",
+  "subject": "History",
+  "course": "US History",
+  "unit": "Road to revolution and the Revolution",
+  "grade": "8",
+  "time": "45 minutes, or 10–15 per question",
+  "studentLogin": "Not needed to explore the map",
+  "planMonth": "October",
+
+  "map": {
+    "webmapId": "bda07736a1b9425ea19fdde282088bd6",
+    "layers": [
+      { "name": "Revolutionary War Battles", "shows": "21 battles from April 1775 to December 1776. Each pop-up gives the dates, leaders, troops, casualties and winner.", "source": "American Battlefield Trust" },
+      { "name": "Revolutionary War Battlefields", "shows": "Battlefield boundaries, and the core areas where the fighting was heaviest", "source": "National Park Service, American Battlefield Protection Program" },
+      { "name": "Turning Points", "shows": "Five events, from Lexington and Concord to Trenton, with short notes", "source": "Chris Bunin and Peter Trentacoste (2026), from National Park Service, US Army Center of Military History and Library of Congress sources" },
+      { "name": "Thirteen British Colonies", "shows": "Colony borders in 1763", "source": "National Geographic Society and Virginia Geographic Alliance, from the Historical Atlas of the United States (1988)" },
+      { "name": "1763 Proclamation Line", "shows": "The line west of which King George III barred colonial settlement", "source": "National Geographic Society and Virginia Geographic Alliance, from the Historical Atlas of the United States (1988)" },
+      { "name": "Key Port Cities, 1775–1781", "shows": "Ports that supplied armies and moved troops", "source": "Jay Feyerabend, [master's thesis](https://commons.lib.jmu.edu/masters202029/74), James Madison University (2021)", "offAtStart": true }
+    ]
+  },
+
+  "knownIssues": [],
+
+  "inquiry": {
+    "compellingQuestion": {
+      "en": "Why did the fighting move from Boston to New York, and then across New Jersey, in 1775–1776?",
+      "es": "¿Por qué los combates pasaron de Boston a Nueva York, y luego a través de Nueva Jersey, en 1775–1776?"
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "title": { "en": "Where did the war begin?", "es": "¿Dónde comenzó la guerra?" },
+        "task": "Open the Massachusetts bookmark and click Lexington and Concord, then Boston. Note the dates and the winner. Measure the straight-line distance from Boston to Concord.",
+        "tools": ["bookmarks", "popups", "measure"],
+        "student": {
+          "en": "Open the Massachusetts bookmark. Click Lexington and Concord. When was it fought, and who won?",
+          "es": "Abre el marcador Massachusetts. Haz clic en Lexington y Concord. ¿Cuándo fue la batalla y quién ganó?"
+        },
+        "fill": {
+          "en": "Measure the straight-line distance from Boston to Concord: ________ miles",
+          "es": "Mide la distancia en línea recta de Boston a Concord: ________ millas"
+        },
+        "answer": {
+          "text": "Lexington and Concord, 19 April 1775, an American victory. The siege of Boston ran from 19 April 1775 to 17 March 1776. Boston to Concord is about 16 miles (26 km) in a straight line, so expect answers of 15–17 miles."
+        }
+      },
+      {
+        "id": "q2",
+        "title": { "en": "Where was the fighting in 1775, and where in 1776?", "es": "¿Dónde se combatió en 1775 y dónde en 1776?" },
+        "task": "Click the battles and sort them into two lists by year. Which colonies saw fighting each year, and what changed?",
+        "tools": ["popups", "legend"],
+        "student": {
+          "en": "Click the battles and sort them by year. Which colonies had battles in 1775? Which in 1776? What changed?",
+          "es": "Haz clic en las batallas y ordénalas por año. ¿Qué colonias tuvieron batallas en 1775? ¿Y en 1776? ¿Qué cambió?"
+        },
+        "answer": {
+          "table": {
+            "caption": "Battles on the map by year and winner",
+            "columns": ["Year", "American victories", "British victories"],
+            "rows": [
+              ["1775 (8 battles)", "Lexington and Concord, Boston (siege) and Gloucester (Massachusetts); Fort Ticonderoga and Crown Point (New York); Great Bridge (Virginia)", "Bunker Hill (Massachusetts); Quebec (Quebec)"],
+              ["1776 (13 battles)", "Moores Creek Bridge (North Carolina); Sullivan's Island and Breach Inlet (South Carolina); Gwynn's Island (Virginia); Trenton (New Jersey)", "Brooklyn, Valcour Island, Pell's Point, White Plains, Fort Washington (New York); Fort Lee, Mount Holly (New Jersey); Newport (Rhode Island)"]
+            ]
+          },
+          "text": "Fighting began around Boston, then spread along the coast. From August 1776 most battles were in New York and New Jersey."
+        }
+      },
+      {
+        "id": "q3",
+        "title": { "en": "Why New York?", "es": "¿Por qué Nueva York?" },
+        "task": "Turn on Key Port Cities and zoom to New York. Compare its harbor and rivers with Boston's. What could a navy do from New York?",
+        "tools": ["layers", "zoom"],
+        "student": {
+          "en": "Turn on Key Port Cities and zoom to New York. Compare its harbor and rivers with Boston's. What could a navy do from New York?",
+          "es": "Activa la capa Key Port Cities (ciudades portuarias clave) y acércate a Nueva York. Compara su puerto y sus ríos con los de Boston. ¿Qué podía hacer una armada desde Nueva York?"
+        },
+        "answer": {
+          "text": "The American Battlefield Trust says the city's \"central position in the American Colonies and its port made it vital to commerce and a key strategic location\", and that British warships could \"dominate the river waterways that cut through New York City.\" The British left Boston in March 1776 and won at Brooklyn on 27 August. ([Battle of Brooklyn, American Battlefield Trust](https://www.battlefields.org/learn/revolutionary-war/battles/brooklyn))"
+        }
+      },
+      {
+        "id": "q4",
+        "title": { "en": "How did 1776 end?", "es": "¿Cómo terminó 1776?" },
+        "task": "Find Fort Washington, Fort Lee and Trenton, and note who won each. Measure the distance from New York City to Trenton.",
+        "tools": ["popups", "measure"],
+        "student": {
+          "en": "Find Fort Washington, Fort Lee and Trenton. Who won each?",
+          "es": "Busca Fort Washington, Fort Lee y Trenton. ¿Quién ganó cada batalla?"
+        },
+        "fill": {
+          "en": "Measure the distance from New York City to Trenton: ________ miles",
+          "es": "Mide la distancia de la ciudad de Nueva York a Trenton: ________ millas"
+        },
+        "answer": {
+          "text": "Fort Washington (16 November) and Fort Lee (20 November) were British victories; Trenton (26 December) was an American victory. New York City to Trenton is about 52 miles (84 km) in a straight line."
+        }
+      }
+    ],
+    "final": {
+      "teacher": "Students answer with evidence from at least two places on the map. Some ways to do it: a paragraph, a route drawn with Sketch, or bookmarks saved for a short talk.",
+      "student": {
+        "en": "Answer the big question using evidence from at least two places on the map. You can write a paragraph, sketch on the map, or both.",
+        "es": "Responde la pregunta central con evidencia de al menos dos lugares del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
+      },
+      "tools": ["sketch", "bookmarks"]
+    }
+  },
+
+  "teacherNotes": {
+    "beforeClass": "No preparation beyond checking the map opens on student devices. Students don't need accounts to explore it; saving their own copy needs a sign-in.",
+    "misconceptions": [
+      { "claim": "The early war was fought in Massachusetts.", "response": "By the end of 1776 the map shows battles in seven colonies and in Quebec." },
+      { "claim": "The winner is the side that lost fewer soldiers.", "response": "Bunker Hill is listed as a British victory. Students can compare the casualty figures in its pop-up." },
+      { "claim": "The Americans lost every battle in 1776.", "response": "The map shows American wins in the South that year, such as Moores Creek Bridge and Sullivan's Island, as well as Trenton." }
+    ],
+    "keyWords": ["siege", "militia", "Continental Army", "Loyalist", "harbor", "campaign", "retreat"]
+  },
+
+  "standards": [
+    { "code": "TX 8.4(C)", "text": "Explain the issues surrounding important events of the American Revolution, including declaring independence; fighting the battles of Lexington and Concord, Saratoga, and Yorktown; enduring the winter at Valley Forge; and signing the Treaty of Paris of 1783" },
+    { "code": "TX 8.10(A)", "text": "Locate places and regions directly related to major eras and turning points in the United States during the 17th, 18th, and 19th centuries" },
+    { "code": "TX 8.10(C)", "text": "Analyze the effects of physical and human geographic factors such as weather, landforms, waterways, transportation, and communication on major historical events in the United States" },
+    { "code": "FL SS.8.A.3.6", "text": "Examine the causes, course, and consequences of the American Revolution" },
+    { "code": "C3 D2.Geo.2.6-8", "text": "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions, and changes in their environmental characteristics" },
+    { "code": "C3 D2.His.14.6-8", "text": "Explain multiple causes and effects of events and developments in the past" }
+  ],
+
+  "keyFacts": [
+    "Battles on the map, 1775: Lexington and Concord, 19 Apr (American); Siege of Boston, 19 Apr 1775 – 17 Mar 1776 (American); Fort Ticonderoga, 10 May (American); Crown Point, 12 May (American); Bunker Hill, 17 Jun (British); Gloucester, 8–9 Aug (American); Great Bridge, 9 Dec (American); Quebec, 31 Dec (British).",
+    "Battles on the map, 1776: Moores Creek Bridge, 27 Feb (American); Sullivan's Island, 28 Jun (American); Breach Inlet, 28–29 Jun (American); Gwynn's Island, 8–10 Jul (American); Brooklyn, 27 Aug (British); Valcour Island, 11 Oct (British); Pell's Point, 18 Oct (British); White Plains, 28 Oct (British); Fort Washington, 16 Nov (British); Fort Lee, 20 Nov (British); Newport, 8–12 Dec (British); Mount Holly, 21–23 Dec (British); Trenton, 26 Dec (American).",
+    "New York's \"central position in the American Colonies and its port made it vital to commerce and a key strategic location\" (American Battlefield Trust).",
+    "Boston to Concord: about 16 miles (26 km) in a straight line. New York City to Trenton: about 52 miles (84 km)."
+  ],
+
+  "languages": {
+    "en": { "status": "final" },
+    "es": { "status": "draft", "note": "Spanish draft for review by a native speaker. Layer names stay in English, as they appear in MapMaker." }
+  },
+
+  "licence": "Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide."
+}

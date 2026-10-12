@@ -41,6 +41,34 @@ Before the map loads, the player tests each web map layer from this website. Any
 - **1.0.1**: Layer access check v1.0 added. Data reader v1.1: elevation stays readable when its map layer is skipped.
 - **1.0.0**: First lab release.
 
+## Resource pages (lab)
+A mock-up of Support Hub lesson pages, at `resources/`. Live at https://jsawle.github.io/lessons/resources/
+
+**One file per lesson.** Everything on a lesson page comes from `resources/lessons/<id>.json`: the page, the English and Spanish Word student sheets, the how-to video links and the summary for AI tools. Change the file and all of them change together.
+
+**To add a lesson**
+1. Copy `resources/lessons/_template.json` to `resources/lessons/<id>.json`, where `<id>` is lower-case words joined by hyphens. Set `"id"` to match.
+2. Fill it in. Editors that read JSON Schema (VS Code, for example) flag mistakes as you type, using `resources/schema/lesson.schema.json`.
+3. Add the id to `resources/lessons/index.json`.
+4. Open `resources/lesson.html?id=<id>`. Any problems show in a red banner at the top.
+
+**To change a lesson**: edit its file, bump `contentVersion` (patch for typos, minor for changed questions, major for a new map) and set `updated`. When it has been checked, set `status` to `reviewed` and fill in `reviewed.by` and `reviewed.date`. Log map or answer problems under `knownIssues`.
+
+**Shared settings** live once in `resources/site.json`: Hub address and menu, Hub pages for each subject and course, the MapMaker app, tool names and their how-to pages, sheet wording, and the versions table.
+
+**Checks**: `node resources/tools/validate.mjs` runs the same checker as the page, and also confirms every file is listed in `index.json`. GitHub runs it on every push or pull request that touches `resources/`, then builds the Word sheets and keeps them as a download on the run.
+
+**Word sheets for ArcGIS Online**: `npm install docx@9.7.1` once, then `node resources/tools/build-sheets.mjs [id ...] --out folder`. The files match the page's download buttons, because both use `resources/assets/sheet.js`.
+
+| File | Job | Version |
+|---|---|---|
+| `assets/render.js` | Page renderer | 1.0 |
+| `assets/sheet.js` | Word sheet builder | 1.0 |
+| `schema/lesson.schema.json` | Lesson file format | 1.0 |
+| `assets/lesson-core.js` | Checker, links and AI summary | 1.0 |
+
+Resource pages app version 0.1.0. Third-party code: `resources/vendor/docx` (docx 9.7.1, MIT licence).
+
 ## Privacy
 There are no accounts or logins, and no student data is collected or stored by Esri. Results stay on the student's device and can be downloaded or copied to hand in through the school's own systems.
 

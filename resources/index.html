@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lessons – MapMaker resource pages (lab)</title>
+<link rel="stylesheet" href="assets/resources.css">
+</head>
+<body data-page="catalogue">
+<a class="skip" href="#main">Skip to the lessons</a>
+<aside class="lab" aria-label="About this mock-up">
+  <div class="wrap"><strong>Lab mock-up</strong> of Support Hub lesson pages, hosted on GitHub Pages.</div>
+</aside>
+<header class="site" id="site-header"></header>
+<div id="problems"></div>
+<main id="main" tabindex="-1">
+  <p class="wrap" style="padding-block:2rem">Loading the lessons…</p>
+  <noscript><p class="wrap" style="padding-block:2rem">This page needs JavaScript to list the lessons.</p></noscript>
+</main>
+<section class="wrap how" aria-labelledby="how-h" style="padding-block:0 3rem">
+  <h2 id="how-h">How this works</h2>
+  <ol class="plain">
+    <li><strong>One file per lesson.</strong> Each lesson is a single file in <code>resources/lessons</code>. The page, the Word student sheets (English and Spanish), the how-to links and the summary for AI tools are all made from it, so they can't drift apart.</li>
+    <li><strong>Shared settings in one place.</strong> Hub links, the MapMaker app, tool names and sheet wording live in <code>resources/site.json</code>. Change them once and every lesson follows.</li>
+    <li><strong>A checker on every change.</strong> The same checker runs on the page (problems show in a red banner) and on GitHub for every push, so a broken file is caught before anyone sees it.</li>
+    <li><strong>Versions and review.</strong> Each lesson has its own content version, status (draft, reviewed, published), review record and known-issues list, shown on the page.</li>
+    <li><strong>Route to the Hub.</strong> The same file can later create the Hub page and the Word items in ArcGIS Online by script, so the Hub never needs hand editing.</li>
+  </ol>
+</section>
+<footer class="foot" id="foot"></footer>
+<aside class="credit" aria-label="Credit">Created by Jason Sawle</aside>
+<script src="assets/lesson-core.js"></script>
+<script src="assets/render.js"></script>
+</body>
+</html>

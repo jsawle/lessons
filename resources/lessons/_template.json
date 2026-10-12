@@ -1,0 +1,66 @@
+{
+  "$schema": "../schema/lesson.schema.json",
+  "formatVersion": "1.0",
+  "id": "copy-this-file-and-rename-it",
+  "contentVersion": "0.1.0",
+  "status": "draft",
+  "updated": "2026-10-12",
+  "reviewed": null,
+
+  "title": "Lesson title as teachers will search for it",
+  "sheetTitle": { "es": "Título en español" },
+  "summary": "One or two sentences on what students find out from the map.",
+  "subject": "History",
+  "course": "US History",
+  "unit": "Unit name as it appears in the course map plan",
+  "grade": "8",
+  "time": "45 minutes",
+  "studentLogin": "Not needed to explore the map",
+  "planMonth": "October",
+
+  "map": {
+    "webmapId": "00000000000000000000000000000000",
+    "layers": [
+      { "name": "Layer name exactly as in MapMaker", "shows": "What the layer shows", "source": "Who made the data. Links look like [text](https://example.org)" }
+    ]
+  },
+
+  "knownIssues": [],
+
+  "inquiry": {
+    "compellingQuestion": { "en": "The big question", "es": "La pregunta central" },
+    "questions": [
+      {
+        "id": "q1",
+        "title": { "en": "Short question title", "es": "Título breve" },
+        "task": "What students do on the map, written for the teacher.",
+        "tools": ["bookmarks", "popups"],
+        "student": { "en": "What students read on the sheet.", "es": "Lo que leen los estudiantes." },
+        "fill": { "en": "Optional fill-in line: ________ miles", "es": "Línea opcional: ________ millas" },
+        "answer": { "text": "Answer notes for the teacher, with sources." }
+      }
+    ],
+    "final": {
+      "teacher": "How students might answer the big question.",
+      "student": { "en": "Answer the big question using evidence from the map.", "es": "Responde la pregunta central con evidencia del mapa." },
+      "tools": ["sketch"]
+    }
+  },
+
+  "teacherNotes": {
+    "beforeClass": "Anything to check or prepare.",
+    "misconceptions": [ { "claim": "A common wrong idea.", "response": "What the map shows instead." } ],
+    "keyWords": ["word"]
+  },
+
+  "standards": [ { "code": "C3 D2.Geo.2.6-8", "text": "Full text of the standard" } ],
+
+  "keyFacts": ["Facts the AI summary can use. Each with its source."],
+
+  "languages": {
+    "en": { "status": "final" },
+    "es": { "status": "draft", "note": "Spanish draft for review by a native speaker." }
+  },
+
+  "licence": "Licence for the teacher and student materials."
+}
