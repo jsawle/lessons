@@ -3,14 +3,14 @@
  "builtOn": "2026-10-12",
  "app": {
   "name": "MapMaker resource pages (lab)",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "parts": {
-   "Page renderer": "1.2",
+   "Page renderer": "1.3",
    "Word sheet builder": "1.1",
    "Lesson file format": "1.1",
    "Checker": "1.1",
    "Vera knowledge builder": "1.0",
-   "Hub page builder": "1.2"
+   "Hub page builder": "1.3"
   }
  },
  "hub": {
@@ -154,7 +154,7 @@
            "settings": {
             "cardId": "c172rfs20",
             "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml\"><h2>In every lesson</h2><ul class=\"mml-prose\"><li>A MapMaker map you can preview on the page or open in MapMaker, with each layer’s source listed.</li><li>An inquiry with a compelling question and questions you can pick from.</li><li>A Word student sheet in English and Spanish that you can edit, print or open in Google Docs.</li><li>Teacher notes with answers, common misunderstandings, key words and standards.</li><li>Links to how-to videos, and to Vera for making your own questions.</li></ul></div>"
+            "markdown": "<div class=\"mml\"><h2>In every lesson</h2><ul class=\"mml-prose\"><li>A MapMaker map that opens straight from the page, with each layer’s source listed.</li><li>An inquiry with a compelling question and questions you can pick from.</li><li>A Word student sheet in English and Spanish that you can edit, print or open in Google Docs.</li><li>Teacher notes with answers, common misunderstandings, key words and standards.</li><li>Links to how-to videos, and Vera on the page for making your own questions.</li></ul></div>"
            }
           },
           "width": 12
@@ -194,7 +194,7 @@
            "settings": {
             "cardId": "c17cr1h10",
             "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml mml-foot\"><h2>About this page</h2><p>This page is built from the lesson files: <a href=\"https://github.com/jsawle/lessons/tree/main/resources/lessons\" target=\"_blank\" rel=\"noopener\">resources/lessons<span class=\"mml-sr\"> (opens in a new tab)</span></a>. Edit the file, not this page; the page is rebuilt from it.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Part</th><th scope=\"col\">Version</th></tr></thead><tbody><tr><th scope=\"row\">MapMaker resource pages</th><td><span class=\"mml-ph\">Version: </span>0.5.0</td></tr><tr><th scope=\"row\">Page renderer</th><td><span class=\"mml-ph\">Version: </span>1.2</td></tr><tr><th scope=\"row\">Word sheet builder</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Lesson file format</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Checker</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Vera knowledge builder</th><td><span class=\"mml-ph\">Version: </span>1.0</td></tr><tr><th scope=\"row\">Hub page builder</th><td><span class=\"mml-ph\">Version: </span>1.2</td></tr></tbody></table></div><div class=\"mml-credit\"><span>Created by Jason Sawle</span></div></div>"
+            "markdown": "<div class=\"mml mml-foot\"><h2>About this page</h2><p>This page is built from the lesson files: <a href=\"https://github.com/jsawle/lessons/tree/main/resources/lessons\" target=\"_blank\" rel=\"noopener\">resources/lessons<span class=\"mml-sr\"> (opens in a new tab)</span></a>. Edit the file, not this page; the page is rebuilt from it.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Part</th><th scope=\"col\">Version</th></tr></thead><tbody><tr><th scope=\"row\">MapMaker resource pages</th><td><span class=\"mml-ph\">Version: </span>0.6.0</td></tr><tr><th scope=\"row\">Page renderer</th><td><span class=\"mml-ph\">Version: </span>1.3</td></tr><tr><th scope=\"row\">Word sheet builder</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Lesson file format</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Checker</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Vera knowledge builder</th><td><span class=\"mml-ph\">Version: </span>1.0</td></tr><tr><th scope=\"row\">Hub page builder</th><td><span class=\"mml-ph\">Version: </span>1.3</td></tr></tbody></table></div><div class=\"mml-credit\"><span>Created by Jason Sawle</span></div></div>"
            }
           },
           "width": 12
@@ -290,44 +290,9 @@
           "component": {
            "name": "markdown-card",
            "settings": {
-            "cardId": "c1lc59k00",
-            "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml\"><h2>About this map</h2><p class=\"mml-prose\">A quick look at the map’s content: pan, zoom and click a feature to see its pop-up. Students work in MapMaker, which adds the tools the questions use: <a href=\"https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&amp;webmap=bda07736a1b9425ea19fdde282088bd6\" target=\"_blank\" rel=\"noopener\">open the map in MapMaker<span class=\"mml-sr\"> (opens in a new tab)</span></a>.</p></div>"
-           }
-          },
-          "width": 12
-         }
-        ]
-       },
-       {
-        "cards": [
-         {
-          "component": {
-           "name": "iframe-card",
-           "settings": {
-            "cardId": "c1jvoy0w0",
-            "src": "https://www.arcgis.com/apps/mapviewer/index.html?configurableview=true&webmap=bda07736a1b9425ea19fdde282088bd6",
-            "height": "480",
-            "scrollable": false,
-            "shareable": false,
-            "mobileShareable": false,
-            "shareableOnHover": false,
-            "mobileShareableOnHover": false
-           }
-          },
-          "width": 12
-         }
-        ]
-       },
-       {
-        "cards": [
-         {
-          "component": {
-           "name": "markdown-card",
-           "settings": {
             "cardId": "c1vd2t5k0",
             "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml\"><p class=\"mml-prose\">Each layer names its source, so you can check where the information comes from.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Layer</th><th scope=\"col\">What it shows</th><th scope=\"col\">Source</th></tr></thead><tbody><tr><th scope=\"row\">Revolutionary War Battles</th><td><span class=\"mml-ph\">What it shows: </span>21 battles from April 1775 to December 1776. Each pop-up gives the dates, a picture and a short account of the battle. The symbol color shows the winner, as listed in the legend (American victory or British victory).</td><td><span class=\"mml-ph\">Source: </span>American Battlefield Trust</td></tr><tr><th scope=\"row\">Revolutionary War Battlefields</th><td><span class=\"mml-ph\">What it shows: </span>Battlefield boundaries, and the core areas where the fighting was heaviest</td><td><span class=\"mml-ph\">Source: </span>National Park Service, American Battlefield Protection Program</td></tr><tr><th scope=\"row\">Turning Points</th><td><span class=\"mml-ph\">What it shows: </span>Five events, from Lexington and Concord to Trenton, with short notes</td><td><span class=\"mml-ph\">Source: </span>Chris Bunin and Peter Trentacoste (2026), from National Park Service, US Army Center of Military History and Library of Congress sources</td></tr><tr><th scope=\"row\">Thirteen British Colonies</th><td><span class=\"mml-ph\">What it shows: </span>Colony borders in 1763</td><td><span class=\"mml-ph\">Source: </span>National Geographic Society and Virginia Geographic Alliance, from the Historical Atlas of the United States (1988)</td></tr><tr><th scope=\"row\">1763 Proclamation Line</th><td><span class=\"mml-ph\">What it shows: </span>The line west of which King George III barred colonial settlement</td><td><span class=\"mml-ph\">Source: </span>National Geographic Society and Virginia Geographic Alliance, from the Historical Atlas of the United States (1988)</td></tr><tr><th scope=\"row\">Key Port Cities in the American Revolution 1775-1781 <span class=\"mml-muted\">(off when the map opens)</span></th><td><span class=\"mml-ph\">What it shows: </span>Ports that supplied armies and moved troops</td><td><span class=\"mml-ph\">Source: </span>Jay Feyerabend, <a href=\"https://commons.lib.jmu.edu/masters202029/74\" target=\"_blank\" rel=\"noopener\">master&#39;s thesis<span class=\"mml-sr\"> (opens in a new tab)</span></a>, James Madison University (2021)</td></tr></tbody></table></div><p><strong>Bookmarks:</strong> Massachusetts.</p><h3>Known issues</h3><p>No known issues.</p></div>"
+            "markdown": "<div class=\"mml\"><h2>About this map</h2><p class=\"mml-prose\">Each layer names its source, so you can check where the information comes from.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Layer</th><th scope=\"col\">What it shows</th><th scope=\"col\">Source</th></tr></thead><tbody><tr><th scope=\"row\">Revolutionary War Battles</th><td><span class=\"mml-ph\">What it shows: </span>21 battles from April 1775 to December 1776. Each pop-up gives the dates, a picture and a short account of the battle. The symbol color shows the winner, as listed in the legend (American victory or British victory).</td><td><span class=\"mml-ph\">Source: </span>American Battlefield Trust</td></tr><tr><th scope=\"row\">Revolutionary War Battlefields</th><td><span class=\"mml-ph\">What it shows: </span>Battlefield boundaries, and the core areas where the fighting was heaviest</td><td><span class=\"mml-ph\">Source: </span>National Park Service, American Battlefield Protection Program</td></tr><tr><th scope=\"row\">Turning Points</th><td><span class=\"mml-ph\">What it shows: </span>Five events, from Lexington and Concord to Trenton, with short notes</td><td><span class=\"mml-ph\">Source: </span>Chris Bunin and Peter Trentacoste (2026), from National Park Service, US Army Center of Military History and Library of Congress sources</td></tr><tr><th scope=\"row\">Thirteen British Colonies</th><td><span class=\"mml-ph\">What it shows: </span>Colony borders in 1763</td><td><span class=\"mml-ph\">Source: </span>National Geographic Society and Virginia Geographic Alliance, from the Historical Atlas of the United States (1988)</td></tr><tr><th scope=\"row\">1763 Proclamation Line</th><td><span class=\"mml-ph\">What it shows: </span>The line west of which King George III barred colonial settlement</td><td><span class=\"mml-ph\">Source: </span>National Geographic Society and Virginia Geographic Alliance, from the Historical Atlas of the United States (1988)</td></tr><tr><th scope=\"row\">Key Port Cities in the American Revolution 1775-1781 <span class=\"mml-muted\">(off when the map opens)</span></th><td><span class=\"mml-ph\">What it shows: </span>Ports that supplied armies and moved troops</td><td><span class=\"mml-ph\">Source: </span>Jay Feyerabend, <a href=\"https://commons.lib.jmu.edu/masters202029/74\" target=\"_blank\" rel=\"noopener\">master&#39;s thesis<span class=\"mml-sr\"> (opens in a new tab)</span></a>, James Madison University (2021)</td></tr></tbody></table></div><p><strong>Bookmarks:</strong> Massachusetts.</p><h3>Known issues</h3><p>No known issues.</p></div>"
            }
           },
           "width": 12
@@ -565,9 +530,45 @@
           "component": {
            "name": "markdown-card",
            "settings": {
+            "cardId": "c1vsuz3m0",
+            "schemaVersion": 2.1,
+            "markdown": "<div class=\"mml\"><h2>Make your own questions with Vera</h2><p class=\"mml-prose\">Vera, the Support Hub’s AI assistant, has this lesson’s map, bookmarks, layers and sources. You can ask it for easier or harder questions, a short quiz, questions for your own state’s standards, or questions in another language.</p></div>"
+           }
+          },
+          "width": 12
+         }
+        ]
+       },
+       {
+        "cards": [
+         {
+          "component": {
+           "name": "iframe-card",
+           "settings": {
+            "cardId": "clg9wi400",
+            "src": "https://jsawle.github.io/Vera/vera_canvas_lab.html?lesson=revolutionary-battles-1775-1776&title=1775%E2%80%931776%20Revolutionary%20Battles&embed=1",
+            "height": "640",
+            "scrollable": true,
+            "shareable": false,
+            "mobileShareable": false,
+            "shareableOnHover": false,
+            "mobileShareableOnHover": false,
+            "title": "Chat with Vera about 1775–1776 Revolutionary Battles"
+           }
+          },
+          "width": 12
+         }
+        ]
+       },
+       {
+        "cards": [
+         {
+          "component": {
+           "name": "markdown-card",
+           "settings": {
             "cardId": "c1x10fbe0",
             "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml\"><h2>Make your own questions with Vera</h2><p class=\"mml-prose\">Vera, the Support Hub’s AI assistant, has this lesson’s map, bookmarks, layers and sources. You can ask it for easier or harder questions, a short quiz, questions for your own state’s standards, or questions in another language.</p><p class=\"mml-prose\">Vera’s questions aren’t reviewed like this lesson. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem.</p><p class=\"mml-actions\"><a class=\"mml-btn mml-primary\" href=\"https://jsawle.github.io/Vera/vera_canvas_lab.html?lesson=revolutionary-battles-1775-1776&amp;title=1775%E2%80%931776%20Revolutionary%20Battles\" target=\"_blank\" rel=\"noopener\">Open Vera with this lesson<span class=\"mml-sr\"> (opens in a new tab)</span></a></p></div>"
+            "markdown": "<div class=\"mml\"><p class=\"mml-prose mml-muted\">Vera’s questions aren’t reviewed like this lesson. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem.</p></div>"
            }
           },
           "width": 12
@@ -647,7 +648,7 @@
            "settings": {
             "cardId": "c1t55zls0",
             "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml mml-foot\"><h2>About this page</h2><p>Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide. Map data: credited to each source under About this map.</p><p>This page is built from one lesson file: <a href=\"https://github.com/jsawle/lessons/blob/main/resources/lessons/revolutionary-battles-1775-1776.json\" target=\"_blank\" rel=\"noopener\"><code>revolutionary-battles-1775-1776.json</code><span class=\"mml-sr\"> (opens in a new tab)</span></a>. Edit the file, not this page; the page is rebuilt from it.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Part</th><th scope=\"col\">Version</th></tr></thead><tbody><tr><th scope=\"row\">MapMaker resource pages</th><td><span class=\"mml-ph\">Version: </span>0.5.0</td></tr><tr><th scope=\"row\">Page renderer</th><td><span class=\"mml-ph\">Version: </span>1.2</td></tr><tr><th scope=\"row\">Word sheet builder</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Lesson file format</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Checker</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Vera knowledge builder</th><td><span class=\"mml-ph\">Version: </span>1.0</td></tr><tr><th scope=\"row\">Hub page builder</th><td><span class=\"mml-ph\">Version: </span>1.2</td></tr><tr><th scope=\"row\">This lesson&#39;s content</th><td><span class=\"mml-ph\">Version: </span>0.2.1 (draft)</td></tr></tbody></table></div><div class=\"mml-credit\"><span>Created by Jason Sawle</span></div></div>"
+            "markdown": "<div class=\"mml mml-foot\"><h2>About this page</h2><p>Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide. Map data: credited to each source under About this map.</p><p>This page is built from one lesson file: <a href=\"https://github.com/jsawle/lessons/blob/main/resources/lessons/revolutionary-battles-1775-1776.json\" target=\"_blank\" rel=\"noopener\"><code>revolutionary-battles-1775-1776.json</code><span class=\"mml-sr\"> (opens in a new tab)</span></a>. Edit the file, not this page; the page is rebuilt from it.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Part</th><th scope=\"col\">Version</th></tr></thead><tbody><tr><th scope=\"row\">MapMaker resource pages</th><td><span class=\"mml-ph\">Version: </span>0.6.0</td></tr><tr><th scope=\"row\">Page renderer</th><td><span class=\"mml-ph\">Version: </span>1.3</td></tr><tr><th scope=\"row\">Word sheet builder</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Lesson file format</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Checker</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Vera knowledge builder</th><td><span class=\"mml-ph\">Version: </span>1.0</td></tr><tr><th scope=\"row\">Hub page builder</th><td><span class=\"mml-ph\">Version: </span>1.3</td></tr><tr><th scope=\"row\">This lesson&#39;s content</th><td><span class=\"mml-ph\">Version: </span>0.2.1 (draft)</td></tr></tbody></table></div><div class=\"mml-credit\"><span>Created by Jason Sawle</span></div></div>"
            }
           },
           "width": 12
@@ -743,44 +744,9 @@
           "component": {
            "name": "markdown-card",
            "settings": {
-            "cardId": "cj9dxsj00",
-            "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml\"><h2>About this map</h2><p class=\"mml-prose\">A quick look at the map’s content: pan, zoom and click a feature to see its pop-up. Students work in MapMaker, which adds the tools the questions use: <a href=\"https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&amp;webmap=3ec83a9d66454ade8aead0a64872d931\" target=\"_blank\" rel=\"noopener\">open the map in MapMaker<span class=\"mml-sr\"> (opens in a new tab)</span></a>.</p></div>"
-           }
-          },
-          "width": 12
-         }
-        ]
-       },
-       {
-        "cards": [
-         {
-          "component": {
-           "name": "iframe-card",
-           "settings": {
-            "cardId": "ceobs1300",
-            "src": "https://www.arcgis.com/apps/mapviewer/index.html?configurableview=true&webmap=3ec83a9d66454ade8aead0a64872d931",
-            "height": "480",
-            "scrollable": false,
-            "shareable": false,
-            "mobileShareable": false,
-            "shareableOnHover": false,
-            "mobileShareableOnHover": false
-           }
-          },
-          "width": 12
-         }
-        ]
-       },
-       {
-        "cards": [
-         {
-          "component": {
-           "name": "markdown-card",
-           "settings": {
             "cardId": "ceb2t6v00",
             "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml\"><p class=\"mml-prose\">Each layer names its source, so you can check where the information comes from.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Layer</th><th scope=\"col\">What it shows</th><th scope=\"col\">Source</th></tr></thead><tbody><tr><th scope=\"row\">Trails West</th><td><span class=\"mml-ph\">What it shows: </span>Seven trails west: Oregon, California, Mormon Pioneer, Old Spanish, Santa Fe, Butterfield Overland and Pony Express, each in its own color in the legend. Each pop-up gives the trail&#39;s name and a short history with dates.</td><td><span class=\"mml-ph\">Source: </span>National Geographic Education, from National Park Service trail information</td></tr><tr><th scope=\"row\">Transcontinental Railroads completed by 1911 <span class=\"mml-muted\">(off when the map opens)</span></th><td><span class=\"mml-ph\">What it shows: </span>Five transcontinental lines named in the legend: Great Northern, Northern Pacific, Union Pacific, Central Pacific and Southern Pacific. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team</td></tr><tr><th scope=\"row\">Railroads 1826 to 1911 <span class=\"mml-muted\">(off when the map opens)</span></th><td><span class=\"mml-ph\">What it shows: </span>Railroad lines built from 1826 to 1911. Each pop-up gives the year the line was in operation by.</td><td><span class=\"mml-ph\">Source: </span>Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team</td></tr><tr><th scope=\"row\">Indigenous Territories <span class=\"mml-muted\">(off when the map opens)</span></th><td><span class=\"mml-ph\">What it shows: </span>Approximate territories of Indigenous nations, from a community-made map. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Native Land Digital</td></tr></tbody></table></div><p><strong>Bookmarks:</strong> none.</p><h3>Known issues</h3><ul><li><span class=\"mml-chip mml-open\">Open 2026-10-12</span> <strong>Trails West pop-up (Oregon):</strong> Gives the years 1840 to 1860, then says many travelers were &quot;fleeing the American Civil War (1861-1865)&quot;, which began after that period.</li></ul></div>"
+            "markdown": "<div class=\"mml\"><h2>About this map</h2><p class=\"mml-prose\">Each layer names its source, so you can check where the information comes from.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Layer</th><th scope=\"col\">What it shows</th><th scope=\"col\">Source</th></tr></thead><tbody><tr><th scope=\"row\">Trails West</th><td><span class=\"mml-ph\">What it shows: </span>Seven trails west: Oregon, California, Mormon Pioneer, Old Spanish, Santa Fe, Butterfield Overland and Pony Express, each in its own color in the legend. Each pop-up gives the trail&#39;s name and a short history with dates.</td><td><span class=\"mml-ph\">Source: </span>National Geographic Education, from National Park Service trail information</td></tr><tr><th scope=\"row\">Transcontinental Railroads completed by 1911 <span class=\"mml-muted\">(off when the map opens)</span></th><td><span class=\"mml-ph\">What it shows: </span>Five transcontinental lines named in the legend: Great Northern, Northern Pacific, Union Pacific, Central Pacific and Southern Pacific. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team</td></tr><tr><th scope=\"row\">Railroads 1826 to 1911 <span class=\"mml-muted\">(off when the map opens)</span></th><td><span class=\"mml-ph\">What it shows: </span>Railroad lines built from 1826 to 1911. Each pop-up gives the year the line was in operation by.</td><td><span class=\"mml-ph\">Source: </span>Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team</td></tr><tr><th scope=\"row\">Indigenous Territories <span class=\"mml-muted\">(off when the map opens)</span></th><td><span class=\"mml-ph\">What it shows: </span>Approximate territories of Indigenous nations, from a community-made map. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Native Land Digital</td></tr></tbody></table></div><p><strong>Bookmarks:</strong> none.</p><h3>Known issues</h3><ul><li><span class=\"mml-chip mml-open\">Open 2026-10-12</span> <strong>Trails West pop-up (Oregon):</strong> Gives the years 1840 to 1860, then says many travelers were &quot;fleeing the American Civil War (1861-1865)&quot;, which began after that period.</li></ul></div>"
            }
           },
           "width": 12
@@ -1018,9 +984,45 @@
           "component": {
            "name": "markdown-card",
            "settings": {
+            "cardId": "c19nmuod0",
+            "schemaVersion": 2.1,
+            "markdown": "<div class=\"mml\"><h2>Make your own questions with Vera</h2><p class=\"mml-prose\">Vera, the Support Hub’s AI assistant, has this lesson’s map, bookmarks, layers and sources. You can ask it for easier or harder questions, a short quiz, questions for your own state’s standards, or questions in another language.</p></div>"
+           }
+          },
+          "width": 12
+         }
+        ]
+       },
+       {
+        "cards": [
+         {
+          "component": {
+           "name": "iframe-card",
+           "settings": {
+            "cardId": "cuif7mt00",
+            "src": "https://jsawle.github.io/Vera/vera_canvas_lab.html?lesson=roads-trails-and-rails-west&title=Roads%2C%20Trails%2C%20and%20Rails%20West&embed=1",
+            "height": "640",
+            "scrollable": true,
+            "shareable": false,
+            "mobileShareable": false,
+            "shareableOnHover": false,
+            "mobileShareableOnHover": false,
+            "title": "Chat with Vera about Roads, Trails, and Rails West"
+           }
+          },
+          "width": 12
+         }
+        ]
+       },
+       {
+        "cards": [
+         {
+          "component": {
+           "name": "markdown-card",
+           "settings": {
             "cardId": "cdr3lsx00",
             "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml\"><h2>Make your own questions with Vera</h2><p class=\"mml-prose\">Vera, the Support Hub’s AI assistant, has this lesson’s map, bookmarks, layers and sources. You can ask it for easier or harder questions, a short quiz, questions for your own state’s standards, or questions in another language.</p><p class=\"mml-prose\">Vera’s questions aren’t reviewed like this lesson. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem.</p><p class=\"mml-actions\"><a class=\"mml-btn mml-primary\" href=\"https://jsawle.github.io/Vera/vera_canvas_lab.html?lesson=roads-trails-and-rails-west&amp;title=Roads%2C%20Trails%2C%20and%20Rails%20West\" target=\"_blank\" rel=\"noopener\">Open Vera with this lesson<span class=\"mml-sr\"> (opens in a new tab)</span></a></p></div>"
+            "markdown": "<div class=\"mml\"><p class=\"mml-prose mml-muted\">Vera’s questions aren’t reviewed like this lesson. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem.</p></div>"
            }
           },
           "width": 12
@@ -1100,7 +1102,7 @@
            "settings": {
             "cardId": "cc35zn300",
             "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml mml-foot\"><h2>About this page</h2><p>Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide. Map data: credited to each source under About this map.</p><p>This page is built from one lesson file: <a href=\"https://github.com/jsawle/lessons/blob/main/resources/lessons/roads-trails-and-rails-west.json\" target=\"_blank\" rel=\"noopener\"><code>roads-trails-and-rails-west.json</code><span class=\"mml-sr\"> (opens in a new tab)</span></a>. Edit the file, not this page; the page is rebuilt from it.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Part</th><th scope=\"col\">Version</th></tr></thead><tbody><tr><th scope=\"row\">MapMaker resource pages</th><td><span class=\"mml-ph\">Version: </span>0.5.0</td></tr><tr><th scope=\"row\">Page renderer</th><td><span class=\"mml-ph\">Version: </span>1.2</td></tr><tr><th scope=\"row\">Word sheet builder</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Lesson file format</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Checker</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Vera knowledge builder</th><td><span class=\"mml-ph\">Version: </span>1.0</td></tr><tr><th scope=\"row\">Hub page builder</th><td><span class=\"mml-ph\">Version: </span>1.2</td></tr><tr><th scope=\"row\">This lesson&#39;s content</th><td><span class=\"mml-ph\">Version: </span>0.1.0 (draft)</td></tr></tbody></table></div><div class=\"mml-credit\"><span>Created by Jason Sawle</span></div></div>"
+            "markdown": "<div class=\"mml mml-foot\"><h2>About this page</h2><p>Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide. Map data: credited to each source under About this map.</p><p>This page is built from one lesson file: <a href=\"https://github.com/jsawle/lessons/blob/main/resources/lessons/roads-trails-and-rails-west.json\" target=\"_blank\" rel=\"noopener\"><code>roads-trails-and-rails-west.json</code><span class=\"mml-sr\"> (opens in a new tab)</span></a>. Edit the file, not this page; the page is rebuilt from it.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Part</th><th scope=\"col\">Version</th></tr></thead><tbody><tr><th scope=\"row\">MapMaker resource pages</th><td><span class=\"mml-ph\">Version: </span>0.6.0</td></tr><tr><th scope=\"row\">Page renderer</th><td><span class=\"mml-ph\">Version: </span>1.3</td></tr><tr><th scope=\"row\">Word sheet builder</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Lesson file format</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Checker</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Vera knowledge builder</th><td><span class=\"mml-ph\">Version: </span>1.0</td></tr><tr><th scope=\"row\">Hub page builder</th><td><span class=\"mml-ph\">Version: </span>1.3</td></tr><tr><th scope=\"row\">This lesson&#39;s content</th><td><span class=\"mml-ph\">Version: </span>0.1.0 (draft)</td></tr></tbody></table></div><div class=\"mml-credit\"><span>Created by Jason Sawle</span></div></div>"
            }
           },
           "width": 12
@@ -1196,44 +1198,9 @@
           "component": {
            "name": "markdown-card",
            "settings": {
-            "cardId": "c14nyjiv0",
-            "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml\"><h2>About this map</h2><p class=\"mml-prose\">A quick look at the map’s content: pan, zoom and click a feature to see its pop-up. Students work in MapMaker, which adds the tools the questions use: <a href=\"https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&amp;webmap=819f60a5a3344d958d24f505849abaaa\" target=\"_blank\" rel=\"noopener\">open the map in MapMaker<span class=\"mml-sr\"> (opens in a new tab)</span></a>.</p></div>"
-           }
-          },
-          "width": 12
-         }
-        ]
-       },
-       {
-        "cards": [
-         {
-          "component": {
-           "name": "iframe-card",
-           "settings": {
-            "cardId": "ctncwbf00",
-            "src": "https://www.arcgis.com/apps/mapviewer/index.html?configurableview=true&webmap=819f60a5a3344d958d24f505849abaaa",
-            "height": "480",
-            "scrollable": false,
-            "shareable": false,
-            "mobileShareable": false,
-            "shareableOnHover": false,
-            "mobileShareableOnHover": false
-           }
-          },
-          "width": 12
-         }
-        ]
-       },
-       {
-        "cards": [
-         {
-          "component": {
-           "name": "markdown-card",
-           "settings": {
             "cardId": "cjc5ir700",
             "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml\"><p class=\"mml-prose\">Each layer names its source, so you can check where the information comes from.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Layer</th><th scope=\"col\">What it shows</th><th scope=\"col\">Source</th></tr></thead><tbody><tr><th scope=\"row\">US States and Territories 1850</th><td><span class=\"mml-ph\">What it shows: </span>States and territories in four legend groups: free states, free by compromise, slave states, and slave by compromise. Each pop-up says whether the state or territory allowed slavery and from what year.</td><td><span class=\"mml-ph\">Source: </span>Traced from a map in Harper&#39;s Atlas of American History (1920), as the pop-ups say</td></tr><tr><th scope=\"row\">Internal Routes of the US Slave Trade</th><td><span class=\"mml-ph\">What it shows: </span>Routes along which enslaved people were forced to move within the United States. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Traced from Harper&#39;s Atlas of American History (1920)</td></tr><tr><th scope=\"row\">Underground Railroad Approximate Routes</th><td><span class=\"mml-ph\">What it shows: </span>Approximate routes that freedom seekers took north to the free states and Canada. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Traced from Harper&#39;s Atlas of American History (1920), an early-1900s interpretation</td></tr><tr><th scope=\"row\">Cities</th><td><span class=\"mml-ph\">What it shows: </span>69 towns and cities along the Underground Railroad routes, from Virginia and Kentucky to Ontario and Quebec. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Traced from Harper&#39;s Atlas of American History (1920)</td></tr><tr><th scope=\"row\">Missouri Compromise Line</th><td><span class=\"mml-ph\">What it shows: </span>The line at 36°30′ North set in 1820: slavery was barred north of it in the Louisiana Territory, except in Missouri. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Not stated on the layer (hosted by the MapMaker team)</td></tr><tr><th scope=\"row\">US 1850 Original Map <span class=\"mml-muted\">(off when the map opens)</span></th><td><span class=\"mml-ph\">What it shows: </span>A scan of the 1850 map that the other layers were traced from. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Harper&#39;s Atlas of American History (1920)</td></tr></tbody></table></div><p><strong>Bookmarks:</strong> Illinois, Indiana, and Ohio.</p><h3>Known issues</h3><ul><li><span class=\"mml-chip mml-open\">Open 2026-10-12</span> <strong>US States and Territories 1850 pop-up:</strong> The line &quot;It is recorded on the primary source as:&quot; shows a code number (for example 11) instead of the map&#39;s own wording.</li><li><span class=\"mml-chip mml-open\">Open 2026-10-12</span> <strong>US States and Territories 1850:</strong> The layer has separate West Virginia and Oklahoma features. In 1850 West Virginia was part of Virginia (it became a state in 1863), and Oklahoma was not a state or territory.</li></ul></div>"
+            "markdown": "<div class=\"mml\"><h2>About this map</h2><p class=\"mml-prose\">Each layer names its source, so you can check where the information comes from.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Layer</th><th scope=\"col\">What it shows</th><th scope=\"col\">Source</th></tr></thead><tbody><tr><th scope=\"row\">US States and Territories 1850</th><td><span class=\"mml-ph\">What it shows: </span>States and territories in four legend groups: free states, free by compromise, slave states, and slave by compromise. Each pop-up says whether the state or territory allowed slavery and from what year.</td><td><span class=\"mml-ph\">Source: </span>Traced from a map in Harper&#39;s Atlas of American History (1920), as the pop-ups say</td></tr><tr><th scope=\"row\">Internal Routes of the US Slave Trade</th><td><span class=\"mml-ph\">What it shows: </span>Routes along which enslaved people were forced to move within the United States. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Traced from Harper&#39;s Atlas of American History (1920)</td></tr><tr><th scope=\"row\">Underground Railroad Approximate Routes</th><td><span class=\"mml-ph\">What it shows: </span>Approximate routes that freedom seekers took north to the free states and Canada. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Traced from Harper&#39;s Atlas of American History (1920), an early-1900s interpretation</td></tr><tr><th scope=\"row\">Cities</th><td><span class=\"mml-ph\">What it shows: </span>69 towns and cities along the Underground Railroad routes, from Virginia and Kentucky to Ontario and Quebec. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Traced from Harper&#39;s Atlas of American History (1920)</td></tr><tr><th scope=\"row\">Missouri Compromise Line</th><td><span class=\"mml-ph\">What it shows: </span>The line at 36°30′ North set in 1820: slavery was barred north of it in the Louisiana Territory, except in Missouri. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Not stated on the layer (hosted by the MapMaker team)</td></tr><tr><th scope=\"row\">US 1850 Original Map <span class=\"mml-muted\">(off when the map opens)</span></th><td><span class=\"mml-ph\">What it shows: </span>A scan of the 1850 map that the other layers were traced from. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Harper&#39;s Atlas of American History (1920)</td></tr></tbody></table></div><p><strong>Bookmarks:</strong> Illinois, Indiana, and Ohio.</p><h3>Known issues</h3><ul><li><span class=\"mml-chip mml-open\">Open 2026-10-12</span> <strong>US States and Territories 1850 pop-up:</strong> The line &quot;It is recorded on the primary source as:&quot; shows a code number (for example 11) instead of the map&#39;s own wording.</li><li><span class=\"mml-chip mml-open\">Open 2026-10-12</span> <strong>US States and Territories 1850:</strong> The layer has separate West Virginia and Oklahoma features. In 1850 West Virginia was part of Virginia (it became a state in 1863), and Oklahoma was not a state or territory.</li></ul></div>"
            }
           },
           "width": 12
@@ -1471,9 +1438,45 @@
           "component": {
            "name": "markdown-card",
            "settings": {
+            "cardId": "cyxjp4p00",
+            "schemaVersion": 2.1,
+            "markdown": "<div class=\"mml\"><h2>Make your own questions with Vera</h2><p class=\"mml-prose\">Vera, the Support Hub’s AI assistant, has this lesson’s map, bookmarks, layers and sources. You can ask it for easier or harder questions, a short quiz, questions for your own state’s standards, or questions in another language.</p></div>"
+           }
+          },
+          "width": 12
+         }
+        ]
+       },
+       {
+        "cards": [
+         {
+          "component": {
+           "name": "iframe-card",
+           "settings": {
+            "cardId": "c1k8y4rl0",
+            "src": "https://jsawle.github.io/Vera/vera_canvas_lab.html?lesson=us-slavery-and-slave-trade-1850&title=US%20Slavery%20and%20Slave%20Trade%2C%201850&embed=1",
+            "height": "640",
+            "scrollable": true,
+            "shareable": false,
+            "mobileShareable": false,
+            "shareableOnHover": false,
+            "mobileShareableOnHover": false,
+            "title": "Chat with Vera about US Slavery and Slave Trade, 1850"
+           }
+          },
+          "width": 12
+         }
+        ]
+       },
+       {
+        "cards": [
+         {
+          "component": {
+           "name": "markdown-card",
+           "settings": {
             "cardId": "cl034x100",
             "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml\"><h2>Make your own questions with Vera</h2><p class=\"mml-prose\">Vera, the Support Hub’s AI assistant, has this lesson’s map, bookmarks, layers and sources. You can ask it for easier or harder questions, a short quiz, questions for your own state’s standards, or questions in another language.</p><p class=\"mml-prose\">Vera’s questions aren’t reviewed like this lesson. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem.</p><p class=\"mml-actions\"><a class=\"mml-btn mml-primary\" href=\"https://jsawle.github.io/Vera/vera_canvas_lab.html?lesson=us-slavery-and-slave-trade-1850&amp;title=US%20Slavery%20and%20Slave%20Trade%2C%201850\" target=\"_blank\" rel=\"noopener\">Open Vera with this lesson<span class=\"mml-sr\"> (opens in a new tab)</span></a></p></div>"
+            "markdown": "<div class=\"mml\"><p class=\"mml-prose mml-muted\">Vera’s questions aren’t reviewed like this lesson. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem.</p></div>"
            }
           },
           "width": 12
@@ -1553,7 +1556,7 @@
            "settings": {
             "cardId": "clk2caz00",
             "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml mml-foot\"><h2>About this page</h2><p>Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide. Map data: credited to each source under About this map.</p><p>This page is built from one lesson file: <a href=\"https://github.com/jsawle/lessons/blob/main/resources/lessons/us-slavery-and-slave-trade-1850.json\" target=\"_blank\" rel=\"noopener\"><code>us-slavery-and-slave-trade-1850.json</code><span class=\"mml-sr\"> (opens in a new tab)</span></a>. Edit the file, not this page; the page is rebuilt from it.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Part</th><th scope=\"col\">Version</th></tr></thead><tbody><tr><th scope=\"row\">MapMaker resource pages</th><td><span class=\"mml-ph\">Version: </span>0.5.0</td></tr><tr><th scope=\"row\">Page renderer</th><td><span class=\"mml-ph\">Version: </span>1.2</td></tr><tr><th scope=\"row\">Word sheet builder</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Lesson file format</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Checker</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Vera knowledge builder</th><td><span class=\"mml-ph\">Version: </span>1.0</td></tr><tr><th scope=\"row\">Hub page builder</th><td><span class=\"mml-ph\">Version: </span>1.2</td></tr><tr><th scope=\"row\">This lesson&#39;s content</th><td><span class=\"mml-ph\">Version: </span>0.1.0 (draft)</td></tr></tbody></table></div><div class=\"mml-credit\"><span>Created by Jason Sawle</span></div></div>"
+            "markdown": "<div class=\"mml mml-foot\"><h2>About this page</h2><p>Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide. Map data: credited to each source under About this map.</p><p>This page is built from one lesson file: <a href=\"https://github.com/jsawle/lessons/blob/main/resources/lessons/us-slavery-and-slave-trade-1850.json\" target=\"_blank\" rel=\"noopener\"><code>us-slavery-and-slave-trade-1850.json</code><span class=\"mml-sr\"> (opens in a new tab)</span></a>. Edit the file, not this page; the page is rebuilt from it.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Part</th><th scope=\"col\">Version</th></tr></thead><tbody><tr><th scope=\"row\">MapMaker resource pages</th><td><span class=\"mml-ph\">Version: </span>0.6.0</td></tr><tr><th scope=\"row\">Page renderer</th><td><span class=\"mml-ph\">Version: </span>1.3</td></tr><tr><th scope=\"row\">Word sheet builder</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Lesson file format</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Checker</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Vera knowledge builder</th><td><span class=\"mml-ph\">Version: </span>1.0</td></tr><tr><th scope=\"row\">Hub page builder</th><td><span class=\"mml-ph\">Version: </span>1.3</td></tr><tr><th scope=\"row\">This lesson&#39;s content</th><td><span class=\"mml-ph\">Version: </span>0.1.0 (draft)</td></tr></tbody></table></div><div class=\"mml-credit\"><span>Created by Jason Sawle</span></div></div>"
            }
           },
           "width": 12
@@ -1649,44 +1652,9 @@
           "component": {
            "name": "markdown-card",
            "settings": {
-            "cardId": "c14rxsqc0",
-            "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml\"><h2>About this map</h2><p class=\"mml-prose\">A quick look at the map’s content: pan, zoom and click a feature to see its pop-up. Students work in MapMaker, which adds the tools the questions use: <a href=\"https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&amp;webmap=7a06e8e2818941f99a3d40bb32e08118\" target=\"_blank\" rel=\"noopener\">open the map in MapMaker<span class=\"mml-sr\"> (opens in a new tab)</span></a>.</p></div>"
-           }
-          },
-          "width": 12
-         }
-        ]
-       },
-       {
-        "cards": [
-         {
-          "component": {
-           "name": "iframe-card",
-           "settings": {
-            "cardId": "c1j412wk0",
-            "src": "https://www.arcgis.com/apps/mapviewer/index.html?configurableview=true&webmap=7a06e8e2818941f99a3d40bb32e08118",
-            "height": "480",
-            "scrollable": false,
-            "shareable": false,
-            "mobileShareable": false,
-            "shareableOnHover": false,
-            "mobileShareableOnHover": false
-           }
-          },
-          "width": 12
-         }
-        ]
-       },
-       {
-        "cards": [
-         {
-          "component": {
-           "name": "markdown-card",
-           "settings": {
             "cardId": "c1fvekxg0",
             "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml\"><p class=\"mml-prose\">Each layer names its source, so you can check where the information comes from.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Layer</th><th scope=\"col\">What it shows</th><th scope=\"col\">Source</th></tr></thead><tbody><tr><th scope=\"row\">U.S. Civil War States and Territories (1863)</th><td><span class=\"mml-ph\">What it shows: </span>States and territories in 1863 in five legend groups: Union free states; Union slave states (border states); slave states that seceded before Fort Sumter, April 1861; slave states that seceded after Fort Sumter; and territories. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>State boundaries from IPUMS NHGIS, grouped by the MapMaker team</td></tr><tr><th scope=\"row\">Civil War Battlefield Boundary</th><td><span class=\"mml-ph\">What it shows: </span>The land each battle covered. Each pop-up gives the battle&#39;s name and its size in acres.</td><td><span class=\"mml-ph\">Source: </span>National Park Service, American Battlefield Protection Program</td></tr><tr><th scope=\"row\">Civil War Core Areas</th><td><span class=\"mml-ph\">What it shows: </span>The core of each battlefield, where the heaviest fighting took place. Same pop-up as the boundaries.</td><td><span class=\"mml-ph\">Source: </span>National Park Service, American Battlefield Protection Program</td></tr><tr><th scope=\"row\">Boundary between Union and Confederacy</th><td><span class=\"mml-ph\">What it shows: </span>The line between the Union and the Confederacy. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Not stated on the layer (hosted by the MapMaker team)</td></tr><tr><th scope=\"row\">Railroads 1826 to 1863 (static)</th><td><span class=\"mml-ph\">What it shows: </span>Railroads built by 1863. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team</td></tr><tr><th scope=\"row\">Civil War Battlefields</th><td><span class=\"mml-ph\">What it shows: </span>Locations of Civil War battles. No pop-up is set up for them in this map.</td><td><span class=\"mml-ph\">Source: </span>American Battlefield Trust</td></tr></tbody></table></div><p><strong>Bookmarks:</strong> none.</p><h3>Known issues</h3><ul><li><span class=\"mml-chip mml-open\">Open 2026-10-12</span> <strong>Civil War Core Areas pop-up:</strong> Uses the same text as the boundary layer, so it calls the core area &quot;the battlefield area&quot;.</li><li><span class=\"mml-chip mml-open\">Open 2026-10-12</span> <strong>Civil War Battlefields:</strong> No pop-up is set up for the battle points in this map, so students can&#39;t click them for names and dates.</li></ul></div>"
+            "markdown": "<div class=\"mml\"><h2>About this map</h2><p class=\"mml-prose\">Each layer names its source, so you can check where the information comes from.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Layer</th><th scope=\"col\">What it shows</th><th scope=\"col\">Source</th></tr></thead><tbody><tr><th scope=\"row\">U.S. Civil War States and Territories (1863)</th><td><span class=\"mml-ph\">What it shows: </span>States and territories in 1863 in five legend groups: Union free states; Union slave states (border states); slave states that seceded before Fort Sumter, April 1861; slave states that seceded after Fort Sumter; and territories. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>State boundaries from IPUMS NHGIS, grouped by the MapMaker team</td></tr><tr><th scope=\"row\">Civil War Battlefield Boundary</th><td><span class=\"mml-ph\">What it shows: </span>The land each battle covered. Each pop-up gives the battle&#39;s name and its size in acres.</td><td><span class=\"mml-ph\">Source: </span>National Park Service, American Battlefield Protection Program</td></tr><tr><th scope=\"row\">Civil War Core Areas</th><td><span class=\"mml-ph\">What it shows: </span>The core of each battlefield, where the heaviest fighting took place. Same pop-up as the boundaries.</td><td><span class=\"mml-ph\">Source: </span>National Park Service, American Battlefield Protection Program</td></tr><tr><th scope=\"row\">Boundary between Union and Confederacy</th><td><span class=\"mml-ph\">What it shows: </span>The line between the Union and the Confederacy. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Not stated on the layer (hosted by the MapMaker team)</td></tr><tr><th scope=\"row\">Railroads 1826 to 1863 (static)</th><td><span class=\"mml-ph\">What it shows: </span>Railroads built by 1863. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team</td></tr><tr><th scope=\"row\">Civil War Battlefields</th><td><span class=\"mml-ph\">What it shows: </span>Locations of Civil War battles. No pop-up is set up for them in this map.</td><td><span class=\"mml-ph\">Source: </span>American Battlefield Trust</td></tr></tbody></table></div><p><strong>Bookmarks:</strong> none.</p><h3>Known issues</h3><ul><li><span class=\"mml-chip mml-open\">Open 2026-10-12</span> <strong>Civil War Core Areas pop-up:</strong> Uses the same text as the boundary layer, so it calls the core area &quot;the battlefield area&quot;.</li><li><span class=\"mml-chip mml-open\">Open 2026-10-12</span> <strong>Civil War Battlefields:</strong> No pop-up is set up for the battle points in this map, so students can&#39;t click them for names and dates.</li></ul></div>"
            }
           },
           "width": 12
@@ -1924,9 +1892,45 @@
           "component": {
            "name": "markdown-card",
            "settings": {
+            "cardId": "c1a0vt4e0",
+            "schemaVersion": 2.1,
+            "markdown": "<div class=\"mml\"><h2>Make your own questions with Vera</h2><p class=\"mml-prose\">Vera, the Support Hub’s AI assistant, has this lesson’s map, bookmarks, layers and sources. You can ask it for easier or harder questions, a short quiz, questions for your own state’s standards, or questions in another language.</p></div>"
+           }
+          },
+          "width": 12
+         }
+        ]
+       },
+       {
+        "cards": [
+         {
+          "component": {
+           "name": "iframe-card",
+           "settings": {
+            "cardId": "c1c4vhjs0",
+            "src": "https://jsawle.github.io/Vera/vera_canvas_lab.html?lesson=civil-war-battlefields&title=Civil%20War%20Battlefields&embed=1",
+            "height": "640",
+            "scrollable": true,
+            "shareable": false,
+            "mobileShareable": false,
+            "shareableOnHover": false,
+            "mobileShareableOnHover": false,
+            "title": "Chat with Vera about Civil War Battlefields"
+           }
+          },
+          "width": 12
+         }
+        ]
+       },
+       {
+        "cards": [
+         {
+          "component": {
+           "name": "markdown-card",
+           "settings": {
             "cardId": "c1fbfdji0",
             "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml\"><h2>Make your own questions with Vera</h2><p class=\"mml-prose\">Vera, the Support Hub’s AI assistant, has this lesson’s map, bookmarks, layers and sources. You can ask it for easier or harder questions, a short quiz, questions for your own state’s standards, or questions in another language.</p><p class=\"mml-prose\">Vera’s questions aren’t reviewed like this lesson. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem.</p><p class=\"mml-actions\"><a class=\"mml-btn mml-primary\" href=\"https://jsawle.github.io/Vera/vera_canvas_lab.html?lesson=civil-war-battlefields&amp;title=Civil%20War%20Battlefields\" target=\"_blank\" rel=\"noopener\">Open Vera with this lesson<span class=\"mml-sr\"> (opens in a new tab)</span></a></p></div>"
+            "markdown": "<div class=\"mml\"><p class=\"mml-prose mml-muted\">Vera’s questions aren’t reviewed like this lesson. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem.</p></div>"
            }
           },
           "width": 12
@@ -2006,7 +2010,7 @@
            "settings": {
             "cardId": "c1dnhrdo0",
             "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml mml-foot\"><h2>About this page</h2><p>Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide. Map data: credited to each source under About this map.</p><p>This page is built from one lesson file: <a href=\"https://github.com/jsawle/lessons/blob/main/resources/lessons/civil-war-battlefields.json\" target=\"_blank\" rel=\"noopener\"><code>civil-war-battlefields.json</code><span class=\"mml-sr\"> (opens in a new tab)</span></a>. Edit the file, not this page; the page is rebuilt from it.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Part</th><th scope=\"col\">Version</th></tr></thead><tbody><tr><th scope=\"row\">MapMaker resource pages</th><td><span class=\"mml-ph\">Version: </span>0.5.0</td></tr><tr><th scope=\"row\">Page renderer</th><td><span class=\"mml-ph\">Version: </span>1.2</td></tr><tr><th scope=\"row\">Word sheet builder</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Lesson file format</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Checker</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Vera knowledge builder</th><td><span class=\"mml-ph\">Version: </span>1.0</td></tr><tr><th scope=\"row\">Hub page builder</th><td><span class=\"mml-ph\">Version: </span>1.2</td></tr><tr><th scope=\"row\">This lesson&#39;s content</th><td><span class=\"mml-ph\">Version: </span>0.1.0 (draft)</td></tr></tbody></table></div><div class=\"mml-credit\"><span>Created by Jason Sawle</span></div></div>"
+            "markdown": "<div class=\"mml mml-foot\"><h2>About this page</h2><p>Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide. Map data: credited to each source under About this map.</p><p>This page is built from one lesson file: <a href=\"https://github.com/jsawle/lessons/blob/main/resources/lessons/civil-war-battlefields.json\" target=\"_blank\" rel=\"noopener\"><code>civil-war-battlefields.json</code><span class=\"mml-sr\"> (opens in a new tab)</span></a>. Edit the file, not this page; the page is rebuilt from it.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Part</th><th scope=\"col\">Version</th></tr></thead><tbody><tr><th scope=\"row\">MapMaker resource pages</th><td><span class=\"mml-ph\">Version: </span>0.6.0</td></tr><tr><th scope=\"row\">Page renderer</th><td><span class=\"mml-ph\">Version: </span>1.3</td></tr><tr><th scope=\"row\">Word sheet builder</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Lesson file format</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Checker</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Vera knowledge builder</th><td><span class=\"mml-ph\">Version: </span>1.0</td></tr><tr><th scope=\"row\">Hub page builder</th><td><span class=\"mml-ph\">Version: </span>1.3</td></tr><tr><th scope=\"row\">This lesson&#39;s content</th><td><span class=\"mml-ph\">Version: </span>0.1.0 (draft)</td></tr></tbody></table></div><div class=\"mml-credit\"><span>Created by Jason Sawle</span></div></div>"
            }
           },
           "width": 12
@@ -2102,44 +2106,9 @@
           "component": {
            "name": "markdown-card",
            "settings": {
-            "cardId": "c1fackl70",
-            "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml\"><h2>About this map</h2><p class=\"mml-prose\">A quick look at the map’s content: pan, zoom and click a feature to see its pop-up. Students work in MapMaker, which adds the tools the questions use: <a href=\"https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&amp;webmap=1ba8cd3fc75a49a497be1137fce4c032\" target=\"_blank\" rel=\"noopener\">open the map in MapMaker<span class=\"mml-sr\"> (opens in a new tab)</span></a>.</p></div>"
-           }
-          },
-          "width": 12
-         }
-        ]
-       },
-       {
-        "cards": [
-         {
-          "component": {
-           "name": "iframe-card",
-           "settings": {
-            "cardId": "c5r9ewf00",
-            "src": "https://www.arcgis.com/apps/mapviewer/index.html?configurableview=true&webmap=1ba8cd3fc75a49a497be1137fce4c032",
-            "height": "480",
-            "scrollable": false,
-            "shareable": false,
-            "mobileShareable": false,
-            "shareableOnHover": false,
-            "mobileShareableOnHover": false
-           }
-          },
-          "width": 12
-         }
-        ]
-       },
-       {
-        "cards": [
-         {
-          "component": {
-           "name": "markdown-card",
-           "settings": {
             "cardId": "cf9myq700",
             "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml\"><p class=\"mml-prose\">Each layer names its source, so you can check where the information comes from.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Layer</th><th scope=\"col\">What it shows</th><th scope=\"col\">Source</th></tr></thead><tbody><tr><th scope=\"row\">Key Places in the Union March to Vicksburg</th><td><span class=\"mml-ph\">What it shows: </span>Places on Grant&#39;s route in spring 1863, labeled on the map: Miliken&#39;s Bend, New Carthage, Hard Times, Bruinsburg Bend and Edwards. No pop-ups.</td><td><span class=\"mml-ph\">Source: </span>Placed by the MapMaker team</td></tr><tr><th scope=\"row\">Railroads 1826 to 1911</th><td><span class=\"mml-ph\">What it shows: </span>Railroads built from 1826 to 1911, so it includes lines built after the war. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team</td></tr><tr><th scope=\"row\">Civil War Battlefields <span class=\"mml-muted\">(off when the map opens)</span></th><td><span class=\"mml-ph\">What it shows: </span>Civil War battles. Each pop-up gives the battle&#39;s name, dates and a picture.</td><td><span class=\"mml-ph\">Source: </span>American Battlefield Trust</td></tr></tbody></table></div><p><strong>Bookmarks:</strong> The Battle of Vicksburg.</p><h3>Known issues</h3><ul><li><span class=\"mml-chip mml-open\">Open 2026-10-12</span> <strong>Key Places in the Union March to Vicksburg:</strong> The label &quot;Miliken&#39;s Bend&quot; is usually spelled Milliken&#39;s Bend, and the point at Vicksburg itself is titled &quot;Point&quot;.</li></ul></div>"
+            "markdown": "<div class=\"mml\"><h2>About this map</h2><p class=\"mml-prose\">Each layer names its source, so you can check where the information comes from.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Layer</th><th scope=\"col\">What it shows</th><th scope=\"col\">Source</th></tr></thead><tbody><tr><th scope=\"row\">Key Places in the Union March to Vicksburg</th><td><span class=\"mml-ph\">What it shows: </span>Places on Grant&#39;s route in spring 1863, labeled on the map: Miliken&#39;s Bend, New Carthage, Hard Times, Bruinsburg Bend and Edwards. No pop-ups.</td><td><span class=\"mml-ph\">Source: </span>Placed by the MapMaker team</td></tr><tr><th scope=\"row\">Railroads 1826 to 1911</th><td><span class=\"mml-ph\">What it shows: </span>Railroads built from 1826 to 1911, so it includes lines built after the war. No pop-up.</td><td><span class=\"mml-ph\">Source: </span>Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team</td></tr><tr><th scope=\"row\">Civil War Battlefields <span class=\"mml-muted\">(off when the map opens)</span></th><td><span class=\"mml-ph\">What it shows: </span>Civil War battles. Each pop-up gives the battle&#39;s name, dates and a picture.</td><td><span class=\"mml-ph\">Source: </span>American Battlefield Trust</td></tr></tbody></table></div><p><strong>Bookmarks:</strong> The Battle of Vicksburg.</p><h3>Known issues</h3><ul><li><span class=\"mml-chip mml-open\">Open 2026-10-12</span> <strong>Key Places in the Union March to Vicksburg:</strong> The label &quot;Miliken&#39;s Bend&quot; is usually spelled Milliken&#39;s Bend, and the point at Vicksburg itself is titled &quot;Point&quot;.</li></ul></div>"
            }
           },
           "width": 12
@@ -2377,9 +2346,45 @@
           "component": {
            "name": "markdown-card",
            "settings": {
+            "cardId": "c1n8rdud0",
+            "schemaVersion": 2.1,
+            "markdown": "<div class=\"mml\"><h2>Make your own questions with Vera</h2><p class=\"mml-prose\">Vera, the Support Hub’s AI assistant, has this lesson’s map, bookmarks, layers and sources. You can ask it for easier or harder questions, a short quiz, questions for your own state’s standards, or questions in another language.</p></div>"
+           }
+          },
+          "width": 12
+         }
+        ]
+       },
+       {
+        "cards": [
+         {
+          "component": {
+           "name": "iframe-card",
+           "settings": {
+            "cardId": "c7u23yl00",
+            "src": "https://jsawle.github.io/Vera/vera_canvas_lab.html?lesson=the-battle-of-vicksburg&title=The%20Battle%20of%20Vicksburg&embed=1",
+            "height": "640",
+            "scrollable": true,
+            "shareable": false,
+            "mobileShareable": false,
+            "shareableOnHover": false,
+            "mobileShareableOnHover": false,
+            "title": "Chat with Vera about The Battle of Vicksburg"
+           }
+          },
+          "width": 12
+         }
+        ]
+       },
+       {
+        "cards": [
+         {
+          "component": {
+           "name": "markdown-card",
+           "settings": {
             "cardId": "cepnrc900",
             "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml\"><h2>Make your own questions with Vera</h2><p class=\"mml-prose\">Vera, the Support Hub’s AI assistant, has this lesson’s map, bookmarks, layers and sources. You can ask it for easier or harder questions, a short quiz, questions for your own state’s standards, or questions in another language.</p><p class=\"mml-prose\">Vera’s questions aren’t reviewed like this lesson. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem.</p><p class=\"mml-actions\"><a class=\"mml-btn mml-primary\" href=\"https://jsawle.github.io/Vera/vera_canvas_lab.html?lesson=the-battle-of-vicksburg&amp;title=The%20Battle%20of%20Vicksburg\" target=\"_blank\" rel=\"noopener\">Open Vera with this lesson<span class=\"mml-sr\"> (opens in a new tab)</span></a></p></div>"
+            "markdown": "<div class=\"mml\"><p class=\"mml-prose mml-muted\">Vera’s questions aren’t reviewed like this lesson. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem.</p></div>"
            }
           },
           "width": 12
@@ -2459,7 +2464,7 @@
            "settings": {
             "cardId": "chhjs9z00",
             "schemaVersion": 2.1,
-            "markdown": "<div class=\"mml mml-foot\"><h2>About this page</h2><p>Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide. Map data: credited to each source under About this map.</p><p>This page is built from one lesson file: <a href=\"https://github.com/jsawle/lessons/blob/main/resources/lessons/the-battle-of-vicksburg.json\" target=\"_blank\" rel=\"noopener\"><code>the-battle-of-vicksburg.json</code><span class=\"mml-sr\"> (opens in a new tab)</span></a>. Edit the file, not this page; the page is rebuilt from it.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Part</th><th scope=\"col\">Version</th></tr></thead><tbody><tr><th scope=\"row\">MapMaker resource pages</th><td><span class=\"mml-ph\">Version: </span>0.5.0</td></tr><tr><th scope=\"row\">Page renderer</th><td><span class=\"mml-ph\">Version: </span>1.2</td></tr><tr><th scope=\"row\">Word sheet builder</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Lesson file format</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Checker</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Vera knowledge builder</th><td><span class=\"mml-ph\">Version: </span>1.0</td></tr><tr><th scope=\"row\">Hub page builder</th><td><span class=\"mml-ph\">Version: </span>1.2</td></tr><tr><th scope=\"row\">This lesson&#39;s content</th><td><span class=\"mml-ph\">Version: </span>0.1.0 (draft)</td></tr></tbody></table></div><div class=\"mml-credit\"><span>Created by Jason Sawle</span></div></div>"
+            "markdown": "<div class=\"mml mml-foot\"><h2>About this page</h2><p>Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide. Map data: credited to each source under About this map.</p><p>This page is built from one lesson file: <a href=\"https://github.com/jsawle/lessons/blob/main/resources/lessons/the-battle-of-vicksburg.json\" target=\"_blank\" rel=\"noopener\"><code>the-battle-of-vicksburg.json</code><span class=\"mml-sr\"> (opens in a new tab)</span></a>. Edit the file, not this page; the page is rebuilt from it.</p><div class=\"mml-tablewrap\"><table><thead><tr><th scope=\"col\">Part</th><th scope=\"col\">Version</th></tr></thead><tbody><tr><th scope=\"row\">MapMaker resource pages</th><td><span class=\"mml-ph\">Version: </span>0.6.0</td></tr><tr><th scope=\"row\">Page renderer</th><td><span class=\"mml-ph\">Version: </span>1.3</td></tr><tr><th scope=\"row\">Word sheet builder</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Lesson file format</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Checker</th><td><span class=\"mml-ph\">Version: </span>1.1</td></tr><tr><th scope=\"row\">Vera knowledge builder</th><td><span class=\"mml-ph\">Version: </span>1.0</td></tr><tr><th scope=\"row\">Hub page builder</th><td><span class=\"mml-ph\">Version: </span>1.3</td></tr><tr><th scope=\"row\">This lesson&#39;s content</th><td><span class=\"mml-ph\">Version: </span>0.1.0 (draft)</td></tr></tbody></table></div><div class=\"mml-credit\"><span>Created by Jason Sawle</span></div></div>"
            }
           },
           "width": 12
