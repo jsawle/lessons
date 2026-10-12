@@ -1,0 +1,156 @@
+{
+  "$schema": "../schema/lesson.schema.json",
+  "formatVersion": "1.1",
+  "id": "roads-trails-and-rails-west",
+  "contentVersion": "0.1.0",
+  "status": "draft",
+  "updated": "2026-10-12",
+  "reviewed": null,
+
+  "title": "Roads, Trails, and Rails West",
+  "sheetTitle": { "es": "Caminos, senderos y ferrocarriles hacia el Oeste" },
+  "summary": "Follow the trails settlers took west in the 1800s, see whose lands they crossed, and find out how railroads replaced the wagon trails.",
+  "subject": "History",
+  "course": "US History",
+  "unit": "Westward expansion and Manifest Destiny",
+  "grade": "8",
+  "time": "45 minutes, or 10–15 per question",
+  "studentLogin": "Not needed to explore the map",
+  "planMonth": "February",
+
+  "map": {
+    "webmapId": "3ec83a9d66454ade8aead0a64872d931",
+    "bookmarks": [],
+    "layers": [
+      { "name": "Trails West", "shows": "Seven trails west: Oregon, California, Mormon Pioneer, Old Spanish, Santa Fe, Butterfield Overland and Pony Express, each in its own color in the legend. Each pop-up gives the trail's name and a short history with dates.", "source": "National Geographic Education, from National Park Service trail information" },
+      { "name": "Transcontinental Railroads completed by 1911", "shows": "Five transcontinental lines named in the legend: Great Northern, Northern Pacific, Union Pacific, Central Pacific and Southern Pacific. No pop-up.", "source": "Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team", "offAtStart": true },
+      { "name": "Railroads 1826 to 1911", "shows": "Railroad lines built from 1826 to 1911. Each pop-up gives the year the line was in operation by.", "source": "Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team", "offAtStart": true },
+      { "name": "Indigenous Territories", "shows": "Approximate territories of Indigenous nations, from a community-made map. No pop-up.", "source": "Native Land Digital", "offAtStart": true }
+    ]
+  },
+
+  "knownIssues": [
+    { "where": "Trails West pop-up (Oregon)", "note": "Gives the years 1840 to 1860, then says many travelers were \"fleeing the American Civil War (1861-1865)\", which began after that period.", "status": "open", "date": "2026-10-12" }
+  ],
+
+  "inquiry": {
+    "compellingQuestion": {
+      "en": "How did trails and then railroads change the American West, and for whom?",
+      "es": "¿Cómo cambiaron los senderos, y después los ferrocarriles, el Oeste de Estados Unidos, y para quién?"
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "title": { "en": "Where did the trails begin?", "es": "¿Dónde empezaban los senderos?" },
+        "task": "Click three trails and note where each started and ended. Most began in Missouri: why there?",
+        "tools": ["popups", "legend"],
+        "student": {
+          "en": "Click three trails. Where did each one start and end? In which state do most of the trails start?",
+          "es": "Haz clic en tres senderos. ¿Dónde empezaba y terminaba cada uno? ¿En qué estado empiezan la mayoría de los senderos?"
+        },
+        "answer": {
+          "table": {
+            "caption": "Where the trails started and ended, from their pop-ups",
+            "columns": ["Trail", "From", "To"],
+            "rows": [
+              ["Oregon", "Independence, Missouri", "Willamette River valley, near Portland, Oregon"],
+              ["California", "Independence, Missouri, and Omaha, Nebraska", "Northern California"],
+              ["Mormon Pioneer", "Near Omaha, Nebraska", "Salt Lake City, Utah"],
+              ["Santa Fe", "Missouri", "Santa Fe, New Mexico"],
+              ["Pony Express", "St. Joseph, Missouri", "Sacramento, California"],
+              ["Butterfield Overland", "St. Louis, Missouri, and Memphis, Tennessee, via Fort Smith, Arkansas", "San Francisco, California"],
+              ["Old Spanish", "Abiquiú, New Mexico", "Los Angeles, California"]
+            ]
+          },
+          "text": "Most start in Missouri, at the western edge of the settled states and on the Missouri River, where travelers could buy supplies before setting out."
+        }
+      },
+      {
+        "id": "q2",
+        "title": { "en": "How far, and how many?", "es": "¿Qué distancia y cuántas personas?" },
+        "task": "Open the Oregon Trail pop-up for its length and how many people used it. Measure the straight-line distance from Independence, Missouri, to Portland, Oregon, and compare it with the trail's length.",
+        "tools": ["popups", "measure"],
+        "student": {
+          "en": "Click the Oregon Trail. How long was it, and how many people traveled it? Why is the trail longer than a straight line?",
+          "es": "Haz clic en el sendero de Oregón. ¿Qué longitud tenía y cuántas personas lo recorrieron? ¿Por qué el sendero es más largo que una línea recta?"
+        },
+        "fill": {
+          "en": "Measure the straight-line distance from Independence, Missouri, to Portland, Oregon: ________ miles",
+          "es": "Mide la distancia en línea recta de Independence (Misuri) a Portland (Oregón): ________ millas"
+        },
+        "answer": {
+          "text": "The pop-up gives about 2,000 miles (3,219 km) and 300,000 to 400,000 people between 1840 and 1860. The straight line is about 1,500 miles (2,420 km). The trail is longer because it followed rivers for water and grass, and crossed the Rocky Mountains through passes."
+        }
+      },
+      {
+        "id": "q3",
+        "title": { "en": "Whose land?", "es": "¿De quién era la tierra?" },
+        "task": "Turn on Indigenous Territories and follow one trail. Was the West empty land when the trails were built?",
+        "tools": ["layers"],
+        "student": {
+          "en": "Turn on the Indigenous Territories layer and follow one trail. Was the land the trail crossed empty? What might the trail have meant for the people who lived there?",
+          "es": "Activa la capa Indigenous Territories (territorios indígenas) y sigue un sendero. ¿Estaba vacía la tierra que cruzaba el sendero? ¿Qué pudo significar el sendero para las personas que vivían allí?"
+        },
+        "answer": {
+          "text": "No. The layer shows Indigenous nations' territories across all the land the trails crossed. The map's description notes that Manifest Destiny overlooked the Indigenous and Hispanic people already living in the West, and that trails and railways crossing Native lands led to conflict and great loss of land."
+        }
+      },
+      {
+        "id": "q4",
+        "title": { "en": "From trails to rails", "es": "De los senderos a los rieles" },
+        "task": "Turn on the Railroads layers. Which trail does the first transcontinental line follow most closely? Click a railroad line to see when it was in operation.",
+        "tools": ["layers", "popups", "legend"],
+        "student": {
+          "en": "Turn on the Railroads layers. Which trails does the Union Pacific and Central Pacific line follow most closely? Click a railroad line: when was it in operation?",
+          "es": "Activa las capas de ferrocarriles. ¿Qué senderos sigue más de cerca la línea Union Pacific y Central Pacific? Haz clic en una línea de ferrocarril: ¿desde cuándo funcionaba?"
+        },
+        "answer": {
+          "text": "It runs close to the California and Mormon Pioneer trails across Nebraska, Wyoming, Utah and Nevada. The first transcontinental railroad was completed in 1869, the year the California Trail pop-up says that trail's use ended. The Pony Express pop-up says it stopped in October 1861, when a transcontinental telegraph line was completed."
+        }
+      }
+    ],
+    "final": {
+      "teacher": "Students answer with evidence from at least two layers. Some ways to do it: a paragraph, one journey sketched on the map with notes, or a short talk using the map.",
+      "student": {
+        "en": "Answer the big question using evidence from at least two layers on the map. You can write a paragraph, sketch on the map, or both.",
+        "es": "Responde la pregunta central con evidencia de al menos dos capas del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
+      },
+      "tools": ["sketch"]
+    }
+  },
+
+  "teacherNotes": {
+    "beforeClass": "The Railroads and Indigenous Territories layers are off when the map opens; students turn them on in the layer list. The map has no bookmarks, so students zoom and pan to find places.",
+    "misconceptions": [
+      { "claim": "The West was empty before settlers arrived.", "response": "The Indigenous Territories layer shows nations' lands across the whole region the trails crossed." },
+      { "claim": "Everyone went west on the Oregon Trail.", "response": "The map shows seven trails, to Oregon, California, Utah, New Mexico and Southern California." },
+      { "claim": "The Pony Express lasted for decades.", "response": "Its pop-up says it ran for 18 months, from April 1860 to October 1861." }
+    ],
+    "keyWords": ["Manifest Destiny", "emigrant", "trail", "transcontinental railroad", "telegraph", "Indigenous nation"]
+  },
+
+  "standards": [
+    { "code": "TX 8.6(B)", "text": "Explain the political, economic, and social roots of Manifest Destiny" },
+    { "code": "TX 8.6(C)", "text": "Analyze the relationship between the concept of Manifest Destiny and the westward growth of the nation" },
+    { "code": "TX 8.11(A)", "text": "Analyze how physical characteristics of the environment influenced population distribution, settlement patterns, and economic activities in the United States during the 17th, 18th, and 19th centuries" },
+    { "code": "FL SS.8.A.4.1", "text": "Examine the causes, course, and consequences of United States westward expansion and its growing diplomatic assertiveness" },
+    { "code": "C3 D2.Geo.7.6-8", "text": "Explain how changes in transportation and communication technology influence the spatial connections among human settlements and affect the diffusion of ideas and cultural practices" },
+    { "code": "C3 D2.His.14.6-8", "text": "Explain multiple causes and effects of events and developments in the past" }
+  ],
+
+  "keyFacts": [
+    "Oregon Trail (pop-up): about 2,000 miles (3,219 km) from Independence, Missouri, to the Willamette River valley near Portland, Oregon; historians estimate 300,000 to 400,000 people traveled it between 1840 and 1860.",
+    "California Trail (pop-up): Independence, Missouri, and Omaha, Nebraska, to Northern California; gold at Sutter's Mill in 1848 drew many more travelers; in use until 1869.",
+    "Pony Express (pop-up): St. Joseph, Missouri, to Sacramento, California, in 10 days with 153 stations; April 1860 to October 1861, when a transcontinental telegraph line was completed.",
+    "Santa Fe Trail (pop-up): about 900 miles (1,450 km) from Missouri to Santa Fe, New Mexico; used from 1821; replaced when the Atchison, Topeka and Santa Fe railroad reached Santa Fe in 1880.",
+    "The first transcontinental railroad (Union Pacific and Central Pacific) was completed in 1869.",
+    "Straight-line distance from Independence, Missouri, to Portland, Oregon: about 1,500 miles (2,420 km)."
+  ],
+
+  "languages": {
+    "en": { "status": "final" },
+    "es": { "status": "draft", "note": "Spanish draft for review by a native speaker. Layer names stay in English, as they appear in MapMaker." }
+  },
+
+  "licence": "Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide."
+}

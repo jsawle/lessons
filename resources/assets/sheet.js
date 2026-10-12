@@ -1,4 +1,4 @@
-/* MapMaker resource pages: Word student sheet builder v1.0.
+/* MapMaker resource pages: Word student sheet builder v1.1.
    Builds one language's sheet from a lesson file. Works in the browser (pass window.docx)
    and in Node (pass require("docx")), so the downloaded file and the file uploaded to
    ArcGIS Online always match the page. */
@@ -7,7 +7,9 @@
   else root.MMRSheet = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "1.0";
+  var VERSION = "1.1";
+  /* Sheets with more question text than this get tighter writing lines, so every sheet stays on one page. */
+  var LONG_SHEET_CHARS = 1040;
   var FONT = "Arial";
   var LANG_TAG = { en: "en-US", es: "es-US" };
 
@@ -17,9 +19,13 @@
     var D = docx, T = site.sheetText[lang] || site.sheetText.en, tag = LANG_TAG[lang] || lang;
     var L = { language: { value: tag } };
     function run(text, extra) { return new D.TextRun(Object.assign({ text: MMR.plain(text) }, L, extra || {})); }
+    var textChars = lesson.inquiry.questions.reduce(function (n, q) {
+      return n + MMR.plain(q.title[lang]).length + MMR.plain(q.student[lang]).length + (q.fill ? MMR.plain(q.fill[lang]).length : 0);
+    }, MMR.plain(lesson.inquiry.final.student[lang]).length + MMR.plain(lesson.inquiry.compellingQuestion[lang]).length);
+    var lineGap = textChars > LONG_SHEET_CHARS ? 120 : 170;
     function lines(n) {
       var out = [];
-      for (var i = 0; i < n; i++) out.push(new D.Paragraph({ spacing: { before: 170 },
+      for (var i = 0; i < n; i++) out.push(new D.Paragraph({ spacing: { before: lineGap },
         border: { bottom: { style: D.BorderStyle.SINGLE, size: 4, color: i % 2 ? "8A949E" : "8A949F", space: 1 } },
         children: [run("")] }));
       return out;

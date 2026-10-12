@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.1",
   "id": "revolutionary-battles-1775-1776",
-  "contentVersion": "0.2.0",
+  "contentVersion": "0.2.1",
   "status": "draft",
   "updated": "2026-10-12",
   "reviewed": null,
@@ -53,7 +53,7 @@
           "es": "Mide la distancia en línea recta de Boston a Concord: ________ millas"
         },
         "answer": {
-          "text": "Lexington and Concord, 19 April 1775, an American victory. The siege of Boston ran from 19 April 1775 to 17 March 1776. Boston to Concord is about 16 miles (26 km) in a straight line, so expect answers of 15–17 miles."
+          "text": "Lexington and Concord, April 19, 1775, an American victory. The siege of Boston ran from April 19, 1775, to March 17, 1776. Boston to Concord is about 16 miles (26 km) in a straight line, so expect answers of 15–17 miles."
         }
       },
       {
@@ -87,7 +87,7 @@
           "es": "Activa la capa Key Port Cities (ciudades portuarias clave) y acércate a Nueva York. Compara su puerto y sus ríos con los de Boston. ¿Qué podía hacer una armada desde Nueva York?"
         },
         "answer": {
-          "text": "The American Battlefield Trust says the city's \"central position in the American Colonies and its port made it vital to commerce and a key strategic location\", and that British warships could \"dominate the river waterways that cut through New York City.\" The British left Boston in March 1776 and won at Brooklyn on 27 August. ([Battle of Brooklyn, American Battlefield Trust](https://www.battlefields.org/learn/revolutionary-war/battles/brooklyn))"
+          "text": "The American Battlefield Trust says the city's \"central position in the American Colonies and its port made it vital to commerce and a key strategic location\", and that British warships could \"dominate the river waterways that cut through New York City.\" The British left Boston in March 1776 and won at Brooklyn on August 27. ([Battle of Brooklyn, American Battlefield Trust](https://www.battlefields.org/learn/revolutionary-war/battles/brooklyn))"
         }
       },
       {
@@ -104,7 +104,7 @@
           "es": "Mide la distancia de la ciudad de Nueva York a Trenton: ________ millas"
         },
         "answer": {
-          "text": "Fort Washington (16 November) and Fort Lee (20 November) were British victories; Trenton (26 December) was an American victory. New York City to Trenton is about 52 miles (84 km) in a straight line."
+          "text": "Fort Washington (November 16) and Fort Lee (November 20) were British victories; Trenton (December 26) was an American victory. New York City to Trenton is about 52 miles (84 km) in a straight line."
         }
       }
     ],
@@ -138,8 +138,8 @@
   ],
 
   "keyFacts": [
-    "Battles on the map, 1775: Lexington and Concord, 19 Apr (American); Siege of Boston, 19 Apr 1775 – 17 Mar 1776 (American); Fort Ticonderoga, 10 May (American); Crown Point, 12 May (American); Bunker Hill, 17 Jun (British); Gloucester, 8–9 Aug (American); Great Bridge, 9 Dec (American); Quebec, 31 Dec (British).",
-    "Battles on the map, 1776: Moores Creek Bridge, 27 Feb (American); Sullivan's Island, 28 Jun (American); Breach Inlet, 28–29 Jun (American); Gwynn's Island, 8–10 Jul (American); Brooklyn, 27 Aug (British); Valcour Island, 11 Oct (British); Pell's Point, 18 Oct (British); White Plains, 28 Oct (British); Fort Washington, 16 Nov (British); Fort Lee, 20 Nov (British); Newport, 8–12 Dec (British); Mount Holly, 21–23 Dec (British); Trenton, 26 Dec (American).",
+    "Battles on the map, 1775: Lexington and Concord, Apr 19 (American); Siege of Boston, Apr 19, 1775 – Mar 17, 1776 (American); Fort Ticonderoga, May 10 (American); Crown Point, May 12 (American); Bunker Hill, Jun 17 (British); Gloucester, Aug 8–9 (American); Great Bridge, Dec 9 (American); Quebec, Dec 31 (British).",
+    "Battles on the map, 1776: Moores Creek Bridge, Feb 27 (American); Sullivan's Island, Jun 28 (American); Breach Inlet, Jun 28–29 (American); Gwynn's Island, Jul 8–10 (American); Brooklyn, Aug 27 (British); Valcour Island, Oct 11 (British); Pell's Point, Oct 18 (British); White Plains, Oct 28 (British); Fort Washington, Nov 16 (British); Fort Lee, Nov 20 (British); Newport, Dec 8–12 (British); Mount Holly, Dec 21–23 (British); Trenton, Dec 26 (American).",
     "New York's \"central position in the American Colonies and its port made it vital to commerce and a key strategic location\" (American Battlefield Trust).",
     "Boston to Concord: about 16 miles (26 km) in a straight line. New York City to Trenton: about 52 miles (84 km)."
   ],

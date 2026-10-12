@@ -1,0 +1,148 @@
+{
+  "$schema": "../schema/lesson.schema.json",
+  "formatVersion": "1.1",
+  "id": "civil-war-battlefields",
+  "contentVersion": "0.1.0",
+  "status": "draft",
+  "updated": "2026-10-12",
+  "reviewed": null,
+
+  "title": "Civil War Battlefields",
+  "sheetTitle": { "es": "Campos de batalla de la Guerra Civil" },
+  "summary": "See how the United States split in 1861, compare the railroads of the North and the South, and find where the war's battles were fought.",
+  "subject": "History",
+  "course": "US History",
+  "unit": "The Civil War",
+  "grade": "8",
+  "time": "45 minutes, or 10–15 per question",
+  "studentLogin": "Not needed to explore the map",
+  "planMonth": "April",
+
+  "map": {
+    "webmapId": "7a06e8e2818941f99a3d40bb32e08118",
+    "bookmarks": [],
+    "layers": [
+      { "name": "U.S. Civil War States and Territories (1863)", "shows": "States and territories in 1863 in five legend groups: Union free states; Union slave states (border states); slave states that seceded before Fort Sumter, April 1861; slave states that seceded after Fort Sumter; and territories. No pop-up.", "source": "State boundaries from IPUMS NHGIS, grouped by the MapMaker team" },
+      { "name": "Civil War Battlefield Boundary", "shows": "The land each battle covered. Each pop-up gives the battle's name and its size in acres.", "source": "National Park Service, American Battlefield Protection Program" },
+      { "name": "Civil War Core Areas", "shows": "The core of each battlefield, where the heaviest fighting took place. Same pop-up as the boundaries.", "source": "National Park Service, American Battlefield Protection Program" },
+      { "name": "Boundary between Union and Confederacy", "shows": "The line between the Union and the Confederacy. No pop-up.", "source": "Not stated on the layer (hosted by the MapMaker team)" },
+      { "name": "Railroads 1826 to 1863 (static)", "shows": "Railroads built by 1863. No pop-up.", "source": "Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team" },
+      { "name": "Civil War Battlefields", "shows": "Locations of Civil War battles. No pop-up is set up for them in this map.", "source": "American Battlefield Trust" }
+    ]
+  },
+
+  "knownIssues": [
+    { "where": "Civil War Core Areas pop-up", "note": "Uses the same text as the boundary layer, so it calls the core area \"the battlefield area\".", "status": "open", "date": "2026-10-12" },
+    { "where": "Civil War Battlefields", "note": "No pop-up is set up for the battle points in this map, so students can't click them for names and dates.", "status": "open", "date": "2026-10-12" }
+  ],
+
+  "inquiry": {
+    "compellingQuestion": {
+      "en": "How did the geography of a divided nation shape the Civil War?",
+      "es": "¿Cómo influyó la geografía de una nación dividida en la Guerra Civil?"
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "title": { "en": "A nation divided", "es": "Una nación dividida" },
+        "task": "Use the legend for U.S. Civil War States and Territories (1863) to sort the states: which seceded before Fort Sumter, which after, and which slave states stayed in the Union?",
+        "tools": ["legend"],
+        "student": {
+          "en": "Use the legend. Which states left the Union before the attack on Fort Sumter in April 1861? Which left after? Which slave states stayed in the Union?",
+          "es": "Usa la leyenda. ¿Qué estados dejaron la Unión antes del ataque al fuerte Sumter en abril de 1861? ¿Cuáles se fueron después? ¿Qué estados esclavistas se quedaron en la Unión?"
+        },
+        "answer": {
+          "table": {
+            "caption": "States by group on the map, 1863",
+            "columns": ["Group", "States on the map"],
+            "rows": [
+              ["Seceded before Fort Sumter (7)", "South Carolina, Mississippi, Florida, Alabama, Georgia, Louisiana, Texas"],
+              ["Seceded after Fort Sumter (4)", "Virginia, Arkansas, North Carolina, Tennessee"],
+              ["Union slave states, the border states (5)", "Delaware, Maryland, Kentucky, Missouri, West Virginia"],
+              ["Union free states (19)", "Maine, New Hampshire, Vermont, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, Pennsylvania, Ohio, Indiana, Illinois, Michigan, Wisconsin, Minnesota, Iowa, Kansas, California, Oregon"]
+            ]
+          },
+          "text": "West Virginia split from Virginia and joined the Union as a state in June 1863, which is why it appears on this 1863 map."
+        }
+      },
+      {
+        "id": "q2",
+        "title": { "en": "The border states", "es": "Los estados fronterizos" },
+        "task": "Zoom to Washington, D.C. Which states border it? Why did keeping Maryland in the Union matter?",
+        "tools": ["zoom", "legend"],
+        "student": {
+          "en": "Zoom to Washington, D.C. Which two states border it? What would have happened to the capital if Maryland had left the Union?",
+          "es": "Acércate a Washington D. C. ¿Qué dos estados lo rodean? ¿Qué le habría pasado a la capital si Maryland hubiera dejado la Unión?"
+        },
+        "answer": {
+          "text": "Maryland and Virginia. Virginia joined the Confederacy, so if Maryland had seceded, the Union capital would have been surrounded by Confederate states."
+        }
+      },
+      {
+        "id": "q3",
+        "title": { "en": "Railroads, North and South", "es": "Ferrocarriles, Norte y Sur" },
+        "task": "Compare the Railroads 1826 to 1863 layer north and south of the Boundary between Union and Confederacy. Which side had more railroads, and why would that matter in a war?",
+        "tools": ["layers", "zoom"],
+        "student": {
+          "en": "Compare the railroads north and south of the boundary between the Union and the Confederacy. Which side had more? Why would railroads matter in a war?",
+          "es": "Compara los ferrocarriles al norte y al sur de la frontera entre la Unión y la Confederación. ¿Qué lado tenía más? ¿Por qué importaban los ferrocarriles en una guerra?"
+        },
+        "answer": {
+          "text": "The North had a much denser railroad network, so it could move soldiers, food and weapons faster and farther. The map shows lines, not mileage; for figures, use the 1860 census."
+        }
+      },
+      {
+        "id": "q4",
+        "title": { "en": "Where were the battles?", "es": "¿Dónde fueron las batallas?" },
+        "task": "Zoom to Virginia, then to Maryland and Pennsylvania, and click battlefield boundaries for names and sizes. Where were most battles fought, and which were fought in Union states?",
+        "tools": ["zoom", "popups"],
+        "student": {
+          "en": "Zoom to Virginia, then to Maryland and Pennsylvania. Click two battlefield boundaries. Where were most battles fought? Name a battle fought in a Union state.",
+          "es": "Acércate a Virginia y luego a Maryland y Pensilvania. Haz clic en dos límites de campos de batalla. ¿Dónde se libraron la mayoría de las batallas? Nombra una batalla librada en un estado de la Unión."
+        },
+        "answer": {
+          "text": "Most battlefields on the map are in the Confederate states, above all Virginia. Antietam (Maryland, 1862) and Gettysburg (Pennsylvania, 1863) were fought in Union states."
+        }
+      }
+    ],
+    "final": {
+      "teacher": "Students answer with evidence from at least two layers. Some ways to do it: a paragraph, a sketch of the front line with notes, or bookmarks saved for a short talk.",
+      "student": {
+        "en": "Answer the big question using evidence from at least two layers on the map. You can write a paragraph, sketch on the map, or both.",
+        "es": "Responde la pregunta central con evidencia de al menos dos capas del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
+      },
+      "tools": ["sketch", "bookmarks"]
+    }
+  },
+
+  "teacherNotes": {
+    "beforeClass": "The map has no bookmarks, so students zoom to Virginia, Washington, D.C., Maryland and Pennsylvania themselves. The battle points have no pop-ups in this map; the battlefield boundary pop-ups carry the names.",
+    "misconceptions": [
+      { "claim": "All slave states joined the Confederacy.", "response": "The legend shows five slave states that stayed in the Union: Delaware, Maryland, Kentucky, Missouri and West Virginia." },
+      { "claim": "The war was fought evenly across the North and the South.", "response": "Most battlefields on the map are in Confederate states, above all Virginia." }
+    ],
+    "keyWords": ["secession", "Union", "Confederacy", "border state", "Fort Sumter", "battlefield", "railroad network"]
+  },
+
+  "standards": [
+    { "code": "FL SS.8.A.5.4", "text": "Identify the division (Confederate and Union States, Border states, western territories) of the United States at the outbreak of the Civil War" },
+    { "code": "TX 8.10(A)", "text": "Locate places and regions directly related to major eras and turning points in the United States during the 17th, 18th, and 19th centuries" },
+    { "code": "TX 8.10(C)", "text": "Analyze the effects of physical and human geographic factors such as weather, landforms, waterways, transportation, and communication on major historical events in the United States" },
+    { "code": "C3 D2.Geo.2.6-8", "text": "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions, and changes in their environmental characteristics" },
+    { "code": "C3 D2.His.14.6-8", "text": "Explain multiple causes and effects of events and developments in the past" }
+  ],
+
+  "keyFacts": [
+    "Seceded before Fort Sumter (April 1861), per the map: South Carolina, Mississippi, Florida, Alabama, Georgia, Louisiana and Texas.",
+    "Seceded after Fort Sumter, per the map: Virginia, Arkansas, North Carolina and Tennessee.",
+    "Union slave (border) states on the 1863 map: Delaware, Maryland, Kentucky, Missouri and West Virginia (a state from June 1863).",
+    "Antietam (Maryland, 1862) and Gettysburg (Pennsylvania, 1863) were fought in Union states."
+  ],
+
+  "languages": {
+    "en": { "status": "final" },
+    "es": { "status": "draft", "note": "Spanish draft for review by a native speaker. Layer names stay in English, as they appear in MapMaker." }
+  },
+
+  "licence": "Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide."
+}

@@ -1,4 +1,4 @@
-/* MapMaker resource pages (lab): page renderer v1.0. Draws a lesson page or the catalogue from JSON files. */
+/* MapMaker resource pages (lab): page renderer v1.2. Draws a lesson page or the catalogue from JSON files. */
 (function () {
   "use strict";
   var MMR = window.MMR, esc = MMR.esc, inline = MMR.inline;
@@ -39,6 +39,8 @@
   /* ---------------- Lesson page ---------------- */
   function renderLesson(site, lesson) {
     document.title = lesson.title + " – " + site.hub.name + " (lab)";
+    var hubLink = $("hub-link");
+    if (hubLink) hubLink.href = "hub-preview.html?page=" + encodeURIComponent(lesson.id);
     var mmUrl = MMR.mapmakerUrl(site, lesson.map.webmapId);
     var langs = Object.keys(lesson.languages);
     var courseUrl = site.hub.coursePaths[lesson.course] ? MMR.hubUrl(site, site.hub.coursePaths[lesson.course]) : null;
@@ -227,16 +229,24 @@
   }
 
   /* ---------------- Catalogue ---------------- */
+  var MONTHS = ["August", "September", "October", "November", "December", "January", "February", "March", "April", "May", "June", "July"];
   function renderCatalogue(site, lessons, ready) {
+    lessons = lessons.slice().sort(function (a, b) {
+      var ma = MONTHS.indexOf(a.planMonth), mb = MONTHS.indexOf(b.planMonth);
+      return (ma < 0 ? 99 : ma) - (mb < 0 ? 99 : mb) || a.title.localeCompare(b.title);
+    });
     var courses = lessons.map(function (l) { return l.course; }).filter(function (v, i, a) { return a.indexOf(v) === i; });
     var h = ['<div class="hero"><div class="wrap"><h1>Lessons</h1><p class="summary">Each lesson below is drawn from one file in <code>resources/lessons</code>. Add or edit a file, and its page, Word sheets and entry in Vera\u2019s knowledge file update together.</p></div></div>'];
     h.push('<div class="wrap" style="padding-block:1.5rem 4rem;display:grid;gap:1rem">');
     if (courses.length > 1) h.push('<p><label for="course">Course </label><select id="course"><option value="">All courses</option>' +
       courses.map(function (c) { return "<option>" + esc(c) + "</option>"; }).join("") + "</select></p>");
     h.push('<div class="cards" id="list" style="padding-top:0">' + lessons.map(function (l) {
-      return '<a class="card" data-course="' + esc(l.course) + '" href="lesson.html?id=' + encodeURIComponent(l.id) + '"><h2>' + esc(l.title) + "</h2><p>" +
-        esc(l.course + " · Grade " + l.grade + " · " + l.unit) + '</p><p><span class="chip ' + esc(l.status) + '">' + esc(l.status === "draft" ? "Draft" : l.status === "reviewed" ? "Reviewed" : "Published") + "</span></p></a>";
+      return '<div class="card" data-course="' + esc(l.course) + '"><p class="muted" style="font-size:.8rem;text-transform:uppercase;letter-spacing:.07em;font-weight:700">' + esc(l.planMonth || "") + "</p>" +
+        '<h2><a href="lesson.html?id=' + encodeURIComponent(l.id) + '">' + esc(l.title) + "</a></h2><p>" +
+        esc(l.course + " · Grade " + l.grade + " · " + l.unit) + '</p><p><span class="chip ' + esc(l.status) + '">' + esc(l.status === "draft" ? "Draft" : l.status === "reviewed" ? "Reviewed" : "Published") + "</span>" +
+        ' <a href="hub-preview.html?page=' + encodeURIComponent(l.id) + '">Hub version</a></p></div>';
     }).join("") + "</div>");
+    h.push('<p><a href="hub-preview.html?page=' + encodeURIComponent((site.hubDemo && site.hubDemo.lessonsSlug) || "lessons") + '">See these lessons as Hub pages (preview)</a></p>');
     h.push('<section class="team" aria-labelledby="team-h"><h2 id="team-h">For the MapMaker team</h2><p class="prose">Vera\u2019s knowledge file is made from every lesson file that passes the checker (' + ready.length + " of " + lessons.length + '). Upload it in Copilot Studio under Knowledge, wait for it to finish indexing, then delete the old copy.</p>' +
       '<div class="sheet-tools"><button type="button" class="btn" id="vera-file">Download Vera knowledge file</button><p class="status-msg" id="vera-status" role="status" aria-live="polite"></p></div></section>');
     h.push("</div>");
