@@ -1,0 +1,171 @@
+# MapMaker lessons on the Support Hub (questions, layers and sources)
+Built 2026-10-12 from the lesson files by the MapMaker resource pages, Vera knowledge builder 1.0. Do not edit by hand; edit the lesson files and rebuild.
+
+How to use this file: each lesson below has its own MapMaker map. When a teacher names one of these lessons (by title or lesson ID) and asks for new or different questions, base every question only on the bookmarks, layers and pop-up content listed for that lesson, and use bookmark and layer names exactly as written. If a request needs information that lesson's map does not show, say so plainly instead of inventing it. Use only the links listed for that lesson.
+
+### 1775–1776 Revolutionary Battles
+**Lesson ID:** revolutionary-battles-1775-1776
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** Road to revolution and the Revolution. **Time:** 45 minutes, or 10–15 per question.
+**MapMaker map:** [Open 1775–1776 Revolutionary Battles in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=bda07736a1b9425ea19fdde282088bd6)
+**Description:** Explore how the geography of North America shaped the first two years of the American Revolution, from the first shots at Lexington and Concord to Washington's attack on Trenton.
+**Bookmarks in this map:** Massachusetts.
+**Layers in this map (exact name: what students see; source):**
+- Revolutionary War Battles: 21 battles from April 1775 to December 1776. Each pop-up gives the dates, a picture and a short account of the battle. The symbol color shows the winner, as listed in the legend (American victory or British victory); source: American Battlefield Trust.
+- Revolutionary War Battlefields: Battlefield boundaries, and the core areas where the fighting was heaviest; source: National Park Service, American Battlefield Protection Program.
+- Turning Points: Five events, from Lexington and Concord to Trenton, with short notes; source: Chris Bunin and Peter Trentacoste (2026), from National Park Service, US Army Center of Military History and Library of Congress sources.
+- Thirteen British Colonies: Colony borders in 1763; source: National Geographic Society and Virginia Geographic Alliance, from the Historical Atlas of the United States (1988).
+- 1763 Proclamation Line: The line west of which King George III barred colonial settlement; source: National Geographic Society and Virginia Geographic Alliance, from the Historical Atlas of the United States (1988).
+- Key Port Cities in the American Revolution 1775-1781 (off when the map opens): Ports that supplied armies and moved troops; source: Jay Feyerabend, [master's thesis](https://commons.lib.jmu.edu/masters202029/74), James Madison University (2021).
+**Key facts:**
+- Battles on the map, 1775: Lexington and Concord, Apr 19 (American); Siege of Boston, Apr 19, 1775 – Mar 17, 1776 (American); Fort Ticonderoga, May 10 (American); Crown Point, May 12 (American); Bunker Hill, Jun 17 (British); Gloucester, Aug 8–9 (American); Great Bridge, Dec 9 (American); Quebec, Dec 31 (British).
+- Battles on the map, 1776: Moores Creek Bridge, Feb 27 (American); Sullivan's Island, Jun 28 (American); Breach Inlet, Jun 28–29 (American); Gwynn's Island, Jul 8–10 (American); Brooklyn, Aug 27 (British); Valcour Island, Oct 11 (British); Pell's Point, Oct 18 (British); White Plains, Oct 28 (British); Fort Washington, Nov 16 (British); Fort Lee, Nov 20 (British); Newport, Dec 8–12 (British); Mount Holly, Dec 21–23 (British); Trenton, Dec 26 (American).
+- New York's "central position in the American Colonies and its port made it vital to commerce and a key strategic location" (American Battlefield Trust).
+- Boston to Concord: about 16 miles (26 km) in a straight line. New York City to Trenton: about 52 miles (84 km).
+**Compelling question:** Why did the fighting move from Boston to New York, and then across New Jersey, in 1775–1776?
+**Questions already in this lesson:**
+1. Where did the war begin? Open the Massachusetts bookmark. Click Lexington and Concord. When was it fought? Use the legend to find out who won. Measure the straight-line distance from Boston to Concord: ________ miles
+2. Where was the fighting in 1775, and where in 1776? Click the battles and sort them by year. Which colonies had battles in 1775? Which in 1776? What changed?
+3. Why New York? Turn on Key Port Cities and zoom to New York. Compare its harbor and rivers with Boston's. What could a navy do from New York?
+4. How did 1776 end? Find Fort Washington, Fort Lee and Trenton. Who won each? Measure the distance from New York City to Trenton: ________ miles
+**Common misunderstandings:**
+- "The early war was fought in Massachusetts." By the end of 1776 the map shows battles in seven colonies and in Quebec.
+- "The winner is the side that lost fewer soldiers." Bunker Hill is shown as a British victory, yet its pop-up says the British had twice as many casualties as the Patriots.
+- "The Americans lost every battle in 1776." The map shows American wins in the South that year, such as Moores Creek Bridge and Sullivan's Island, as well as Trenton.
+**Key words:** siege, militia, Continental Army, Loyalist, harbor, campaign, retreat.
+**Standards:** TX 8.4(C); TX 8.10(A); TX 8.10(C); FL SS.8.A.3.6; C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
+**How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
+**Languages:** student sheets in English and Spanish.
+**Lesson content version:** 0.2.1 (draft, updated 2026-10-12).
+
+### Roads, Trails, and Rails West
+**Lesson ID:** roads-trails-and-rails-west
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** Westward expansion and Manifest Destiny. **Time:** 45 minutes, or 10–15 per question.
+**MapMaker map:** [Open Roads, Trails, and Rails West in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=3ec83a9d66454ade8aead0a64872d931)
+**Description:** Follow the trails settlers took west in the 1800s, see whose lands they crossed, and find out how railroads replaced the wagon trails.
+**Bookmarks in this map:** none.
+**Layers in this map (exact name: what students see; source):**
+- Trails West: Seven trails west: Oregon, California, Mormon Pioneer, Old Spanish, Santa Fe, Butterfield Overland and Pony Express, each in its own color in the legend. Each pop-up gives the trail's name and a short history with dates; source: National Geographic Education, from National Park Service trail information.
+- Transcontinental Railroads completed by 1911 (off when the map opens): Five transcontinental lines named in the legend: Great Northern, Northern Pacific, Union Pacific, Central Pacific and Southern Pacific. No pop-up; source: Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team.
+- Railroads 1826 to 1911 (off when the map opens): Railroad lines built from 1826 to 1911. Each pop-up gives the year the line was in operation by; source: Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team.
+- Indigenous Territories (off when the map opens): Approximate territories of Indigenous nations, from a community-made map. No pop-up; source: Native Land Digital.
+**Key facts:**
+- Oregon Trail (pop-up): about 2,000 miles (3,219 km) from Independence, Missouri, to the Willamette River valley near Portland, Oregon; historians estimate 300,000 to 400,000 people traveled it between 1840 and 1860.
+- California Trail (pop-up): Independence, Missouri, and Omaha, Nebraska, to Northern California; gold at Sutter's Mill in 1848 drew many more travelers; in use until 1869.
+- Pony Express (pop-up): St. Joseph, Missouri, to Sacramento, California, in 10 days with 153 stations; April 1860 to October 1861, when a transcontinental telegraph line was completed.
+- Santa Fe Trail (pop-up): about 900 miles (1,450 km) from Missouri to Santa Fe, New Mexico; used from 1821; replaced when the Atchison, Topeka and Santa Fe railroad reached Santa Fe in 1880.
+- The first transcontinental railroad (Union Pacific and Central Pacific) was completed in 1869.
+- Straight-line distance from Independence, Missouri, to Portland, Oregon: about 1,500 miles (2,420 km).
+**Compelling question:** How did trails and then railroads change the American West, and for whom?
+**Questions already in this lesson:**
+1. Where did the trails begin? Click three trails. Where did each one start and end? In which state do most of the trails start?
+2. How far, and how many? Click the Oregon Trail. How long was it, and how many people traveled it? Why is the trail longer than a straight line? Measure the straight-line distance from Independence, Missouri, to Portland, Oregon: ________ miles
+3. Whose land? Turn on the Indigenous Territories layer and follow one trail. Was the land the trail crossed empty? What might the trail have meant for the people who lived there?
+4. From trails to rails Turn on the Railroads layers. Which trails does the Union Pacific and Central Pacific line follow most closely? Click a railroad line: when was it in operation?
+**Common misunderstandings:**
+- "The West was empty before settlers arrived." The Indigenous Territories layer shows nations' lands across the whole region the trails crossed.
+- "Everyone went west on the Oregon Trail." The map shows seven trails, to Oregon, California, Utah, New Mexico and Southern California.
+- "The Pony Express lasted for decades." Its pop-up says it ran for 18 months, from April 1860 to October 1861.
+**Key words:** Manifest Destiny, emigrant, trail, transcontinental railroad, telegraph, Indigenous nation.
+**Standards:** TX 8.6(B); TX 8.6(C); TX 8.11(A); FL SS.8.A.4.1; C3 D2.Geo.7.6-8; C3 D2.His.14.6-8.
+**How-to pages for the tools this lesson uses:** [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
+**Languages:** student sheets in English and Spanish.
+**Lesson content version:** 0.1.0 (draft, updated 2026-10-12).
+
+### US Slavery and Slave Trade, 1850
+**Lesson ID:** us-slavery-and-slave-trade-1850
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** Reform and the road to war. **Time:** 45 minutes, or 10–15 per question.
+**MapMaker map:** [Open US Slavery and Slave Trade, 1850 in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=819f60a5a3344d958d24f505849abaaa)
+**Description:** Compare free and slave states in 1850, follow the routes of the internal slave trade south, and trace the Underground Railroad north to freedom.
+**Bookmarks in this map:** Illinois, Indiana, and Ohio.
+**Layers in this map (exact name: what students see; source):**
+- US States and Territories 1850: States and territories in four legend groups: free states, free by compromise, slave states, and slave by compromise. Each pop-up says whether the state or territory allowed slavery and from what year; source: Traced from a map in Harper's Atlas of American History (1920), as the pop-ups say.
+- Internal Routes of the US Slave Trade: Routes along which enslaved people were forced to move within the United States. No pop-up; source: Traced from Harper's Atlas of American History (1920).
+- Underground Railroad Approximate Routes: Approximate routes that freedom seekers took north to the free states and Canada. No pop-up; source: Traced from Harper's Atlas of American History (1920), an early-1900s interpretation.
+- Cities: 69 towns and cities along the Underground Railroad routes, from Virginia and Kentucky to Ontario and Quebec. No pop-up; source: Traced from Harper's Atlas of American History (1920).
+- Missouri Compromise Line: The line at 36°30′ North set in 1820: slavery was barred north of it in the Louisiana Territory, except in Missouri. No pop-up; source: Not stated on the layer (hosted by the MapMaker team).
+- US 1850 Original Map (off when the map opens): A scan of the 1850 map that the other layers were traced from. No pop-up; source: Harper's Atlas of American History (1920).
+**Key facts:**
+- Free states in 1850 on the map (16): Maine, New Hampshire, Vermont, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, Pennsylvania, Ohio, Indiana, Illinois, Michigan, Wisconsin, Iowa and California.
+- Slave states in 1850 on the map (15): Delaware, Maryland, Virginia, North Carolina, South Carolina, Georgia, Florida, Alabama, Mississippi, Louisiana, Texas, Arkansas, Tennessee, Kentucky and Missouri.
+- Missouri Compromise (1820): slavery barred north of 36°30′ North in the Louisiana Territory, except Missouri; Maine admitted as a free state at the same time.
+- Underground Railroad cities on the map include Ripley, Cincinnati, Cleveland, Ashtabula, Toledo and Oberlin (Ohio), Detroit (Michigan), and Chatham and Toronto (Ontario) and Montreal (Quebec) in Canada.
+- The layers are traced from Harper's Atlas of American History (1920); current scholarship may differ.
+**Compelling question:** How did slavery divide the United States by 1850?
+**Questions already in this lesson:**
+1. Free states and slave states Use the legend to find the free states and the slave states. How many of each are there? Where is the line between them in the East?
+2. The Missouri Compromise Find the Missouri Compromise Line. Slavery was banned north of it in the Louisiana Territory. Which slave state lies mostly north of the line?
+3. The internal slave trade Follow the Internal Routes of the US Slave Trade. In which states do the routes start, and where do they end? In which direction were enslaved people forced to move?
+4. Routes to freedom Open the Illinois, Indiana, and Ohio bookmark. Follow the Underground Railroad routes north from the Ohio River. Where do they lead?
+**Common misunderstandings:**
+- "Freedom seekers were safe once they reached a free state." After the Fugitive Slave Act of 1850 they could be captured in free states, which is why many routes on the map continue to Canada.
+- "The Underground Railroad was a real railroad." The routes on the map are paths people walked, rode or sailed, with help along the way; the name borrowed railroad words.
+- "Every Northern state banned slavery at the same time." The pop-ups give a different year for each free state.
+**Key words:** free state, slave state, Missouri Compromise, Fugitive Slave Act, Underground Railroad, freedom seeker, abolition.
+**Standards:** FL SS.8.A.5.2; TX 8.10(A); C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
+**How-to pages for the tools this lesson uses:** [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
+**Languages:** student sheets in English and Spanish.
+**Lesson content version:** 0.1.0 (draft, updated 2026-10-12).
+
+### Civil War Battlefields
+**Lesson ID:** civil-war-battlefields
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The Civil War. **Time:** 45 minutes, or 10–15 per question.
+**MapMaker map:** [Open Civil War Battlefields in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=7a06e8e2818941f99a3d40bb32e08118)
+**Description:** See how the United States split in 1861, compare the railroads of the North and the South, and find where the war's battles were fought.
+**Bookmarks in this map:** none.
+**Layers in this map (exact name: what students see; source):**
+- U.S. Civil War States and Territories (1863): States and territories in 1863 in five legend groups: Union free states; Union slave states (border states); slave states that seceded before Fort Sumter, April 1861; slave states that seceded after Fort Sumter; and territories. No pop-up; source: State boundaries from IPUMS NHGIS, grouped by the MapMaker team.
+- Civil War Battlefield Boundary: The land each battle covered. Each pop-up gives the battle's name and its size in acres; source: National Park Service, American Battlefield Protection Program.
+- Civil War Core Areas: The core of each battlefield, where the heaviest fighting took place. Same pop-up as the boundaries; source: National Park Service, American Battlefield Protection Program.
+- Boundary between Union and Confederacy: The line between the Union and the Confederacy. No pop-up; source: Not stated on the layer (hosted by the MapMaker team).
+- Railroads 1826 to 1863 (static): Railroads built by 1863. No pop-up; source: Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team.
+- Civil War Battlefields: Locations of Civil War battles. No pop-up is set up for them in this map; source: American Battlefield Trust.
+**Key facts:**
+- Seceded before Fort Sumter (April 1861), per the map: South Carolina, Mississippi, Florida, Alabama, Georgia, Louisiana and Texas.
+- Seceded after Fort Sumter, per the map: Virginia, Arkansas, North Carolina and Tennessee.
+- Union slave (border) states on the 1863 map: Delaware, Maryland, Kentucky, Missouri and West Virginia (a state from June 1863).
+- Antietam (Maryland, 1862) and Gettysburg (Pennsylvania, 1863) were fought in Union states.
+**Compelling question:** How did the geography of a divided nation shape the Civil War?
+**Questions already in this lesson:**
+1. A nation divided Use the legend. Which states left the Union before the attack on Fort Sumter in April 1861? Which left after? Which slave states stayed in the Union?
+2. The border states Zoom to Washington, D.C. Which two states border it? What would have happened to the capital if Maryland had left the Union?
+3. Railroads, North and South Compare the railroads north and south of the boundary between the Union and the Confederacy. Which side had more? Why would railroads matter in a war?
+4. Where were the battles? Zoom to Virginia, then to Maryland and Pennsylvania. Click two battlefield boundaries. Where were most battles fought? Name a battle fought in a Union state.
+**Common misunderstandings:**
+- "All slave states joined the Confederacy." The legend shows five slave states that stayed in the Union: Delaware, Maryland, Kentucky, Missouri and West Virginia.
+- "The war was fought evenly across the North and the South." Most battlefields on the map are in Confederate states, above all Virginia.
+**Key words:** secession, Union, Confederacy, border state, Fort Sumter, battlefield, railroad network.
+**Standards:** FL SS.8.A.5.4; TX 8.10(A); TX 8.10(C); C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
+**How-to pages for the tools this lesson uses:** [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
+**Languages:** student sheets in English and Spanish.
+**Lesson content version:** 0.1.0 (draft, updated 2026-10-12).
+
+### The Battle of Vicksburg
+**Lesson ID:** the-battle-of-vicksburg
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The Civil War. **Time:** 45 minutes, or 10–15 per question.
+**MapMaker map:** [Open The Battle of Vicksburg in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=1ba8cd3fc75a49a497be1137fce4c032)
+**Description:** Follow Grant's 1863 march to Vicksburg along the Mississippi River, and see why taking the city split the Confederacy in two.
+**Bookmarks in this map:** The Battle of Vicksburg.
+**Layers in this map (exact name: what students see; source):**
+- Key Places in the Union March to Vicksburg: Places on Grant's route in spring 1863, labeled on the map: Miliken's Bend, New Carthage, Hard Times, Bruinsburg Bend and Edwards. No pop-ups; source: Placed by the MapMaker team.
+- Railroads 1826 to 1911: Railroads built from 1826 to 1911, so it includes lines built after the war. No pop-up; source: Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team.
+- Civil War Battlefields (off when the map opens): Civil War battles. Each pop-up gives the battle's name, dates and a picture; source: American Battlefield Trust.
+**Key facts:**
+- Battles of the campaign, from the Civil War Battlefields pop-ups: Grand Gulf, April 29, 1863; Port Gibson, May 1; Raymond, May 12; Jackson, May 14; Champion Hill, May 16; Big Black River Bridge, May 17; Vicksburg, May 18 to July 4, 1863.
+- Grant crossed the Mississippi at Bruinsburg on April 30, 1863.
+- Vicksburg surrendered on July 4, 1863; Port Hudson, Louisiana, on July 9, 1863.
+- Milliken's Bend to Bruinsburg Bend: about 33 miles (53 km) in a straight line.
+**Compelling question:** Why did the Union need Vicksburg, and how did Grant take it?
+**Questions already in this lesson:**
+1. Why Vicksburg? Open The Battle of Vicksburg bookmark. Find Vicksburg on the Mississippi River. Where does the railroad from Vicksburg lead? Why would both sides want the city?
+2. Grant's route Find Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend and Edwards. Which side of the river is each on? Why did Grant march south before crossing the river? Measure the distance from Milliken's Bend to Bruinsburg Bend: ________ miles
+3. The battles of May 1863 Turn on the Civil War Battlefields layer. Click the battles between Bruinsburg and Vicksburg and list them in order by date.
+4. Splitting the Confederacy Zoom out to see the whole Mississippi River. Vicksburg surrendered on July 4, 1863. Which Confederate states were cut off west of the river?
+**Common misunderstandings:**
+- "Grant attacked Vicksburg straight across the river." The key places show he marched south on the Louisiana side and crossed at Bruinsburg, well south of the city.
+- "Vicksburg fell in a single battle." Its pop-up gives May 18 to July 4, 1863: a siege of about six weeks.
+- "Gettysburg was the only turning point of July 1863." Vicksburg surrendered on July 4, 1863, the day after Gettysburg ended, and gave the Union the Mississippi.
+**Key words:** siege, campaign, bluff, gunboat, supply line, surrender.
+**Standards:** FL SS.8.A.5.1; TX 8.10(C); C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
+**How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
+**Languages:** student sheets in English and Spanish.
+**Lesson content version:** 0.1.0 (draft, updated 2026-10-12).
