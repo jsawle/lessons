@@ -43,7 +43,7 @@ for (const l of lessons) for (const lang of Object.keys(l.languages)) {
 }
 
 const bundle = Hub.bundle(site, lessons, { sheetFileName: Sheet.fileName });
-const pageProblems = bundle.pages.flatMap((p) => Hub.checkPage(p, bundle.sheets.map((s) => s.key)));
+const pageProblems = Hub.checkBundle(bundle);
 if (pageProblems.length) { console.error("Hub pages have problems:\n  - " + pageProblems.join("\n  - ")); process.exit(1); }
 writeFileSync(join(out, "hub-bundle.json"), JSON.stringify(bundle, null, 1) + "\n");
 writeFileSync(join(out, MMR.veraFileName()), MMR.veraFile(site, lessons, bundle.builtOn), "utf8");

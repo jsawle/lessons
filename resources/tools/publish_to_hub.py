@@ -1,6 +1,6 @@
 # =====================================================================
-# PUBLISH MAPMAKER LESSONS TO THE HUB (demo)          publisher v1.1
-# MapMaker resource pages 0.4.0. Created by Jason Sawle.
+# PUBLISH MAPMAKER LESSONS TO THE HUB (demo)          publisher v1.2
+# MapMaker resource pages 0.5.0. Created by Jason Sawle.
 #
 # Run in an ArcGIS Notebook, signed in as the account that owns the
 # site (GIS-4-Schools). Paste it all into one cell (or split it at the
@@ -11,13 +11,17 @@
 #      publish. It then checks its own work.
 #
 # What it does
-#   1. Backs up the site's data.
+#   1. Backs up the site's data, and any unpublished draft from the
+#      site editor.
 #   2. Reads hub-bundle.json, built on GitHub from the lesson files.
 #   3. Uploads each student sheet as a Word item (English, Spanish).
 #   4. Creates or updates one Hub Page per lesson, plus a Lessons page.
 #   5. Registers every page in the site's pages list. This is the step
 #      that makes /pages/<slug> addresses and menu links work.
-#   6. Shares everything.
+#   6. Sets the site's colours (header, menu bar, buttons, links) to the
+#      Esri blue in the bundle, in the live site and in any editor draft.
+#      Set SET_COLOURS = False to leave the colours alone.
+#   7. Shares everything.
 # Afterwards: republish the site in the site editor (the last lines of
 # the output say how).
 #
@@ -32,6 +36,7 @@ SITE_ID    = "9c39add73ebf47068e1dac37f6353b8d"   # MapMaker Lessons, mapmakerle
 BUNDLE_URL = "https://jsawle.github.io/lessons/resources/dist/hub-bundle.json"
 DRY_RUN    = True          # set to False when the plan looks right, then run again
 SHARE_WITH = "everyone"    # "everyone" (public) or "org"
+SET_COLOURS = True         # set the site's header, menu bar, button and link colours (Esri blue)
 
 import os
 HOME = "/arcgis/home" if os.path.isdir("/arcgis/home") else os.getcwd()
@@ -64,6 +69,50 @@ BACKUP_PATH = os.path.join(BACKUP_DIR, f"site_{SITE_ID}_{stamp}.json")
 with open(BACKUP_PATH, "w") as f:
     json.dump(sdata, f, indent=2)
 
+# The site editor keeps unpublished changes in a draft file on the site item (draft-<number>.json, the name
+# Esri's @esri/hub-sites code uses). Publishing in the editor copies the draft's layout and colours over the
+# live site, so the colours are set in the draft too.
+DRAFT_RE = re.compile(r"^draft-\d+\.json$")
+
+
+def read_json_reply(x):
+    """gis._con.get returns a dict, a JSON string or a downloaded file's path, depending on the API version."""
+    if isinstance(x, str) and os.path.isfile(x):
+        with open(x) as f:
+            return json.load(f)
+    return json.loads(x) if isinstance(x, str) else x
+
+
+def site_drafts():
+    try:
+        res = read_json_reply(gis._con.get(f"{REST}/content/items/{site.id}/resources", {"f": "json", "num": 100}))
+        names = [r.get("resource", "") for r in (res or {}).get("resources", [])]
+    except Exception as e:
+        print(f"[WARN] Couldn't list the site's files, so couldn't check for an editor draft: {e}")
+        return None
+    out = {}
+    for name in names:
+        if DRAFT_RE.match(name):
+            try:
+                out[name] = read_json_reply(gis._con.get(f"{REST}/content/items/{site.id}/resources/{name}", {}))
+            except Exception as e:
+                print(f"[WARN] Couldn't read the editor draft {name}: {e}")
+    return out
+
+
+def colours(theme):
+    th = theme if isinstance(theme, dict) else {}
+    return {part: {k: v for k, v in (th.get(part) or {}).items() if k in ("background", "text", "link")}
+            for part in ("header", "globalNav", "button", "body")}
+
+
+drafts = site_drafts()
+drafts_checked = drafts is not None
+drafts = drafts or {}
+for name, d in drafts.items():
+    with open(os.path.join(BACKUP_DIR, f"site_{SITE_ID}_{stamp}_{name}"), "w") as f:
+        json.dump(d, f, indent=2)
+
 pages_now = sdata["values"].get("pages", [])
 print(f"[ok] Signed in as {me}. Org URL key: {KEY}")
 print(f"[ok] Site: {site.title} ({site.type}), owner {site.owner}")
@@ -72,6 +121,17 @@ print(f"[ok] Backup written: {BACKUP_PATH}  <- download it from the Files pane b
 print(f"[ok] Pages registered now: {len(pages_now)}")
 for p in pages_now:
     print(f"       /pages/{p.get('slug')} -> {p.get('id')}")
+print(f"[ok] Site colours now: {json.dumps(colours(sdata['values'].get('theme')))}")
+hdr = (((sdata["values"].get("layout") or {}).get("header") or {}).get("component") or {}).get("settings") or {}
+print(f"       Header type: {hdr.get('headerType', 'not set')}" + ("; the site also has its own header CSS, which can override colours" if sdata["values"].get("headerCss") else ""))
+if drafts:
+    print(f"[ok] The site editor has an unpublished draft: {', '.join(drafts)} (backed up next to the site backup)")
+    for name, d in drafts.items():
+        print(f"       draft colours: {json.dumps(colours(((d.get('data') or {}).get('values') or {}).get('theme')))}")
+elif drafts_checked:
+    print("[ok] No unpublished draft in the site editor")
+else:
+    print("[WARN] If you open the site editor and it shows the old colours, don't publish there; send this output instead.")
 if site.owner != me:
     print("[WARN] You are not the site's owner, so saving the site may fail.")
 if not KEY:
@@ -166,10 +226,49 @@ for p in bundle["pages"]:
         print(f"[plan] {'update' if it else 'create'} Hub page /pages/{slug}: {p['title']}" + (f"  ({it.id})" if it else ""))
         print(f"[plan] {'already registered' if reg else 'register'}: /pages/{slug}")
 
+# Site colours: only the keys in the bundle change; everything else in the theme (fonts, logo...) stays.
+WANT_THEME = (bundle["hub"].get("theme") or {}) if SET_COLOURS else {}
+# Hub's own default theme (DEFAULT_THEME in Esri's hub.js), used only if the site has no theme saved at all.
+HUB_DEFAULT_THEME = {"header": {"background": "#fff", "text": "#4c4c4c"}, "body": {"background": "#fff", "text": "#4c4c4c", "link": "#0079c1"},
+                     "button": {"background": "#0079c1", "text": "#fff"}, "logo": {"small": ""},
+                     "fonts": {"base": {"url": "", "family": "Avenir Next"}, "heading": {"url": "", "family": "Avenir Next"}}}
+
+
+def with_colours(theme):
+    """A copy of the theme with the bundle's colours set."""
+    out = json.loads(json.dumps(theme if isinstance(theme, dict) and theme else HUB_DEFAULT_THEME))
+    for part, vals in WANT_THEME.items():
+        if isinstance(vals, dict):
+            if not isinstance(out.get(part), dict):
+                out[part] = {}
+            out[part].update(vals)
+    return out
+
+
+colour_changes = []
+if WANT_THEME:
+    now_theme = sdata["values"].get("theme") if isinstance(sdata["values"].get("theme"), dict) else {}
+    for part, vals in WANT_THEME.items():
+        for k, v in vals.items():
+            old = (now_theme.get(part) or {}).get(k)
+            if str(old).lower() != str(v).lower():
+                colour_changes.append(f"{part} {k}: {old} -> {v}")
+                print(f"[plan] site colour, {part} {k}: {old} -> {v}")
+    if not colour_changes:
+        print("[plan] site colours already match the bundle")
+    for name, d in drafts.items():
+        dt = ((d.get("data") or {}).get("values") or {}).get("theme")
+        if isinstance(dt, dict) and with_colours(dt) != dt:
+            print(f"[plan] set the same colours in the editor draft {name}, so publishing it later keeps them")
+elif SET_COLOURS:
+    print("[skip] This bundle has no site colours (it was built before resource pages 0.5.0)")
+else:
+    print("[skip] SET_COLOURS is False: the site's colours are left as they are")
+
 print()
 print(f"Plan: {sum(1 for e in sheet_plan if e['item'] is None)} Word items to create, {sum(1 for e in sheet_plan if e['item'])} to update; "
       f"{sum(1 for e in page_plan if e['item'] is None and not e['conflict'])} pages to create, "
-      f"{sum(1 for e in page_plan if e['item'] and not e['conflict'])} to update; sharing with {SHARE_WITH}.")
+      f"{sum(1 for e in page_plan if e['item'] and not e['conflict'])} to update; {len(colour_changes)} site colours to change; sharing with {SHARE_WITH}.")
 if problems:
     print("\nPROBLEMS (pages with a conflict are skipped):")
     for x in problems:
@@ -281,7 +380,7 @@ else:
         save_state()
         written.append((p["slug"], it.id, p["title"]))
 
-    # 3. Register the pages on the site (re-read it first, so nothing else is lost)
+    # 3. Register the pages and set the colours on the site (re-read it first, so nothing else is lost)
     fresh = site.get_data()
     if isinstance(fresh, str):
         fresh = json.loads(fresh)
@@ -300,12 +399,32 @@ else:
                 entry["title"] = title
                 changed = True
             print(f"[skip] /pages/{slug} already registered")
+    if WANT_THEME:
+        new_theme = with_colours(fresh["values"].get("theme"))
+        if new_theme != fresh["values"].get("theme"):
+            fresh["values"]["theme"] = new_theme
+            changed = True
+            print("[ok] set the site colours: header, menu bar, buttons, links")
     if changed:
         ok = site.update(data=fresh)
         if not ok:
             res = gis._con.post(f"{REST}/content/users/{site.owner}/items/{site.id}/update", {"f": "json", "text": json.dumps(fresh)})
             ok = bool(res.get("success"))
-        print("[ok] saved the site's pages list" if ok else "[ERR] couldn't save the site's pages list")
+        print("[ok] saved the site's pages list and colours" if ok else "[ERR] couldn't save the site's pages list and colours")
+
+    # 4. The same colours in the editor's draft, if there is one (only a draft that already holds colours)
+    for name, d in drafts.items():
+        vals = (d.get("data") or {}).get("values") or {}
+        if not WANT_THEME or not isinstance(vals.get("theme"), dict):
+            continue
+        new_theme = with_colours(vals["theme"])
+        if new_theme == vals["theme"]:
+            print(f"[skip] the editor draft {name} already has the colours")
+            continue
+        vals["theme"] = new_theme
+        res = gis._con.post(f"{REST}/content/users/{site.owner}/items/{site.id}/updateResources",
+                            {"f": "json", "fileName": name, "text": json.dumps(d)})
+        print(f"[ok] set the colours in the editor draft {name}" if res.get("success") else f"[ERR] couldn't update the editor draft {name}: {res}")
     print("\nPublished. Checking...")
 
 
@@ -330,10 +449,16 @@ if not DRY_RUN:
     for key, sid in state["sheets"].items():
         it = gis.content.get(sid)
         print(f"[{'ok' if it is not None and it.access in ('public', 'org') else 'ERR'}] Word item {key}: {sid} ({it.access if it else 'missing'})")
+    if WANT_THEME:
+        th = check["values"].get("theme") or {}
+        miss = [f"{part} {k}" for part, vals in WANT_THEME.items() for k, v in vals.items() if str((th.get(part) or {}).get(k)).lower() != str(v).lower()]
+        all_ok = all_ok and not miss
+        print(f"[{'ERR' if miss else 'ok'}] site colours: " + (f"not set: {', '.join(miss)}" if miss else json.dumps(colours(th))))
 
     print("\nNEXT, by hand (a few minutes):")
     print("  1. Republish the site: open it in your Hub workspace, choose Edit layout, then Save/Publish.")
-    print("     Republishing is what made /pages/ addresses work on the Support Hub in July.")
+    print("     Republishing is what made /pages/ addresses work on the Support Hub in July. The header")
+    print("     should already be blue in the editor; if it isn't, don't publish, and send the output above.")
     print("  2. Add a 'Lessons' link to the site's header menu, pointing to /pages/lessons.")
     print("  3. In a private browser window, open:")
     for p in bundle["pages"]:
@@ -342,10 +467,15 @@ if not DRY_RUN:
 
 
 # %% CELL 6 — UNDO (emergency only). Uncomment to use.
-# Restores the site's data from the backup, and deletes the pages and Word items this script made.
+# Restores the site's data (pages list and colours) and any editor draft from this run's backups,
+# and deletes the pages and Word items this script made.
 #
 # with open(BACKUP_PATH) as f:
 #     site.update(data=json.load(f))
+# for name in drafts:   # the editor draft, as it was before this run
+#     with open(os.path.join(BACKUP_DIR, f"site_{SITE_ID}_{stamp}_{name}")) as f:
+#         print("restoring draft", name, gis._con.post(f"{REST}/content/users/{site.owner}/items/{site.id}/updateResources",
+#                                                      {"f": "json", "fileName": name, "text": f.read()}))
 # for pid in state["pages"].values():
 #     it = gis.content.get(pid)
 #     if it is not None and it.owner == me:

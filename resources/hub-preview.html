@@ -6,7 +6,7 @@
 <title>Hub page preview – MapMaker resource pages (lab)</title>
 <style>
   body{margin:0;background:#fff;color:#111;font-family:"Avenir Next",Avenir,"Segoe UI",Helvetica,Arial,sans-serif}
-  .skip{position:absolute;left:8px;top:-60px;background:#FFCC00;color:#000;padding:8px 12px;z-index:100;font-weight:700}
+  .skip{position:absolute;left:8px;top:-60px;background:#007AC2;color:#fff;padding:8px 12px;z-index:100;font-weight:700}
   .skip:focus{top:8px}
   .lab{background:#E8F2F9;color:#004874;border-bottom:1px solid #B3D4EA;font-size:.92rem;padding:.55rem 16px}
   .lab a{color:#00619B}
@@ -22,7 +22,7 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to the page</a>
-<aside class="lab" aria-label="About this preview"><strong>Hub page preview.</strong> Each block below is one Hub card (text, or the embedded map), built from the same layout the publishing notebook sends to Hub. On Hub, the site's own header and footer replace the bar below. <a href="./">Lab mock-up</a></aside>
+<aside class="lab" aria-label="About this preview"><strong>Hub page preview.</strong> Each block below is one Hub card (text, or the embedded map), built from the same layout the publishing notebook sends to Hub. On Hub, the site's own header and footer replace the bar below, which shows the header colours the notebook sets. <a href="./">Lab mock-up</a></aside>
 <header class="hubbar" aria-label="Site header (simulated)">
   <a class="name" id="site-name" href="hub-preview.html?page=lessons">MapMaker Lessons</a>
   <nav aria-label="Site"><ul><li><a href="hub-preview.html?page=lessons">Lessons</a></li></ul></nav>
@@ -40,6 +40,12 @@
       return Promise.all(idx.lessons.map(function (id) { return getJSON("lessons/" + id + ".json"); }));
     }).then(function (lessons) {
       var b = MMRHub.bundle(site, lessons);
+      // Show the site header in the colours the notebook sets on the Hub site.
+      var th = b.hub.theme && b.hub.theme.header, bar = document.querySelector(".hubbar");
+      if (th) {
+        bar.style.background = th.background; bar.style.borderBottomColor = th.background;
+        [].forEach.call(bar.querySelectorAll("a"), function (a) { a.style.color = th.text; a.style.outlineColor = th.text; });
+      }
       var want = new URLSearchParams(location.search).get("page") || b.hub.lessonsSlug;
       var page = b.pages.filter(function (p) { return p.slug === want; })[0];
       if (!page) { main.innerHTML = "<h1>No such page</h1><p><a href=\"hub-preview.html\">See the lessons</a></p>"; return; }
@@ -51,7 +57,7 @@
             var c = card.component;
             if (c.name === "iframe-card") {
               // Hub draws this as an embed card; the preview gives the frame a title so it can be checked.
-              return '<iframe class="hubframe" title="Quick look at the map in MapMaker" loading="lazy" src="' + MMR.esc(c.settings.src) + '" height="' + MMR.esc(c.settings.height) + '"></iframe>';
+              return '<iframe class="hubframe" title="Quick look at the web map" loading="lazy" src="' + MMR.esc(c.settings.src) + '" height="' + MMR.esc(c.settings.height) + '"></iframe>';
             }
             return c.settings.markdown
               .replace(/\{\{SHEET:([^}]+)\}\}/g, function (_, k) { return sheets[k] || "#"; })
