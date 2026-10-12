@@ -1,6 +1,6 @@
 # =====================================================================
-# PUBLISH MAPMAKER LESSONS TO THE HUB (demo)          publisher v1.2
-# MapMaker resource pages 0.5.0. Created by Jason Sawle.
+# PUBLISH MAPMAKER LESSONS TO THE HUB (demo)          publisher v1.3
+# MapMaker resource pages 0.6.1. Created by Jason Sawle.
 #
 # Run in an ArcGIS Notebook, signed in as the account that owns the
 # site (GIS-4-Schools). Paste it all into one cell (or split it at the
@@ -14,7 +14,10 @@
 #   1. Backs up the site's data, and any unpublished draft from the
 #      site editor.
 #   2. Reads hub-bundle.json, built on GitHub from the lesson files.
-#   3. Uploads each student sheet as a Word item (English, Spanish).
+#   3. Downloads every student sheet first, then uploads each one as a
+#      Word item (English, Spanish). If GitHub answers with a temporary
+#      error, it waits and tries again; if it still can't download,
+#      it stops before changing anything on the Hub.
 #   4. Creates or updates one Hub Page per lesson, plus a Lessons page.
 #   5. Registers every page in the site's pages list. This is the step
 #      that makes /pages/<slug> addresses and menu links work.
@@ -48,7 +51,7 @@ print(f"DRY_RUN = {DRY_RUN}. Files go in {HOME}.")
 
 # %% CELL 1 — Connect, read the site, BACK IT UP
 from arcgis.gis import GIS
-import json, datetime, tempfile, re, requests
+import json, datetime, tempfile, re, time, requests
 
 gis = GIS("home")
 me = gis.users.me.username
@@ -139,9 +142,27 @@ if not KEY:
 
 
 # %% CELL 2 — Read the lesson bundle from GitHub
-r = requests.get(BUNDLE_URL, timeout=60)
-r.raise_for_status()
-bundle = r.json()
+def fetch(url, what):
+    """Download from GitHub Pages, trying again after a temporary error (a 5xx or 429 answer, a dropped
+    connection or a timeout). GitHub Pages sometimes answers 503 for a moment, e.g. just after it republishes."""
+    waits = [5, 15, 45]
+    for attempt in range(len(waits) + 1):
+        try:
+            r = requests.get(url, timeout=60)
+            if r.status_code < 500 and r.status_code != 429:
+                r.raise_for_status()   # 404 and other permanent errors stop at once
+                return r
+            err = f"{r.status_code} {r.reason}"
+        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
+            err = type(e).__name__
+        if attempt < len(waits):
+            print(f"[WARN] {what}: GitHub answered {err}. Trying again in {waits[attempt]} s...")
+            time.sleep(waits[attempt])
+    raise RuntimeError(f"[ERR] Couldn't download {what} from GitHub after {len(waits) + 1} tries ({err}). "
+                       "Nothing on the Hub was changed in this run. Run the cell again in a few minutes.")
+
+
+bundle = fetch(BUNDLE_URL, "hub-bundle.json").json()
 assert bundle.get("format") == "mml-hub-bundle/1", f"[ERR] Unexpected bundle format: {bundle.get('format')}"
 print(f"[ok] Bundle built {bundle['builtOn']}, MapMaker resource pages {bundle['app']['version']}")
 for name, ver in bundle["app"]["parts"].items():
@@ -317,14 +338,17 @@ else:
     work = tempfile.mkdtemp()
     sheet_urls, written = {}, []
 
+    # 0. Download every Word sheet first, so a download problem stops the run before anything on the Hub changes
+    for e in sheet_plan:
+        s = e["sheet"]
+        with open(os.path.join(work, s["fileName"]), "wb") as f:
+            f.write(fetch(s["url"], s["fileName"]).content)
+    print(f"[ok] downloaded {len(sheet_plan)} Word sheets from GitHub")
+
     # 1. Word items
     for e in sheet_plan:
         s, it = e["sheet"], e["item"]
         local = os.path.join(work, s["fileName"])
-        rr = requests.get(s["url"], timeout=60)
-        rr.raise_for_status()
-        with open(local, "wb") as f:
-            f.write(rr.content)
         props = {"title": s["title"], "snippet": s["snippet"], "description": s["description"], "tags": ",".join(s["tags"])}
         if it is None:
             props.update({"type": "Microsoft Word", "typeKeywords": s["keyword"]})
