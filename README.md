@@ -61,10 +61,10 @@ A mock-up of Support Hub lesson pages, at `resources/`. Live at https://jsawle.g
 **Built files** (`resources/dist`, served by GitHub Pages): `hub-bundle.json` (the Hub pages), `sheets/*.docx` (Word student sheets), `vera_mapmaker_lessons.txt` (Vera's knowledge file) and `publish_to_hub.ipynb` (the publishing notebook). GitHub rebuilds and commits them after every change to `main`, so nobody builds them by hand. To build locally: `npm install --no-save docx@9.7.1`, then `node resources/tools/build-dist.mjs`.
 
 **Publishing to the Hub demo site** (`hubDemo` in `site.json`: MapMaker Lessons, gis-4-schools.hub.arcgis.com)
-1. Download `https://jsawle.github.io/lessons/resources/dist/publish_to_hub.ipynb` and add it to ArcGIS Online as a notebook, signed in as the site's owner.
-2. Run CELL 0 to 3. CELL 1 backs up the site; CELL 3 prints the plan (dry run).
-3. Set `DRY_RUN = False` in CELL 0, run CELL 0, then CELL 4. It uploads the Word sheets as Word items, creates or updates one Hub Page per lesson plus a Lessons page, registers each page in the site's pages list, and shares everything.
-4. Run CELL 5 to check, then republish the site (Edit layout, then Save/Publish) and add a "Lessons" menu link to `/pages/lessons`.
+1. In an ArcGIS Notebook signed in as the site's owner, paste all of `resources/tools/publish_to_hub.py` (raw: `https://raw.githubusercontent.com/jsawle/lessons/main/resources/tools/publish_to_hub.py`) into one cell, or upload `dist/publish_to_hub.ipynb`.
+2. Run it with `DRY_RUN = True`: it backs up the site and prints the plan. Nothing is written.
+3. Set `DRY_RUN = False` and run it again. It uploads the Word sheets as Word items, creates or updates one Hub Page per lesson plus a Lessons page, registers each page in the site's pages list, shares everything and checks its work.
+4. Republish the site (Edit layout, then Save/Publish) and add a "Lessons" menu link to `/pages/lessons`.
 Run it again after any lesson change: it updates the same pages and Word items. Edit the lesson file, not the Hub page; the page is rebuilt from the file. Preview any Hub page first at `resources/hub-preview.html?page=<slug>`.
 
 **Vera**: each lesson page has "Open Vera with this lesson", which opens Vera's chat page (`vera.url` in `site.json`, currently the lab copy) with the lesson named in the message box. Vera answers from `vera_mapmaker_lessons.txt` in `resources/dist`. In Copilot Studio, upload it under Knowledge, wait for indexing to finish, then delete the old copy. List every bookmark in `map.bookmarks` and describe what each pop-up really shows in `shows`, because Vera writes questions only from those.
@@ -77,9 +77,9 @@ Run it again after any lesson change: it updates the same pages and Word items. 
 | `assets/lesson-core.js` | Checker | 1.1 |
 | `assets/lesson-core.js` | Vera knowledge builder | 1.0 |
 | `assets/hub-page.js` | Hub page builder | 1.0 |
-| `tools/publish_to_hub.py` | Hub publisher (notebook) | 1.0 |
+| `tools/publish_to_hub.py` | Hub publisher (notebook) | 1.1 |
 
-Resource pages app version 0.3.0. 0.3.0: five Grade 8 US History lessons, Hub pages and the publishing notebook; long Word sheets get tighter writing lines so every sheet stays on one page. 0.2.0: Vera replaces the copy-and-paste AI summary; lesson format 1.1 adds bookmarks. Third-party code: `resources/vendor/docx` (docx 9.7.1, MIT licence).
+Resource pages app version 0.3.1. 0.3.1: the publisher can be pasted into one notebook cell and run twice (dry run, then publish). 0.3.0: five Grade 8 US History lessons, Hub pages and the publishing notebook; long Word sheets get tighter writing lines so every sheet stays on one page. 0.2.0: Vera replaces the copy-and-paste AI summary; lesson format 1.1 adds bookmarks. Third-party code: `resources/vendor/docx` (docx 9.7.1, MIT licence).
 
 ## Privacy
 There are no accounts or logins, and no student data is collected or stored by Esri. Results stay on the student's device and can be downloaded or copied to hand in through the school's own systems.
