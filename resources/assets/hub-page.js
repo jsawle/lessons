@@ -1,4 +1,4 @@
-/* MapMaker resource pages: Hub page builder v1.1 (Esri colours; map quick look on lesson pages).
+/* MapMaker resource pages: Hub page builder v1.2 (web map quick look; buttons that jump to sections; site colours).
    Turns lesson files into ArcGIS Hub page layouts: sections of markdown cards that hold plain HTML
    and one <style> block, with no scripts, so the pages work inside Hub. Runs in the browser
    (window.MMRHub, for the Hub preview) and in Node (for the bundle the publishing notebook reads). */
@@ -7,18 +7,22 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "1.1";
+  var VERSION = "1.2";
   var esc = MMR.esc;
   var MONTHS = ["August", "September", "October", "November", "December", "January", "February", "March", "April", "May", "June", "July"];
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
 
   /* Tags and attributes the pages use. The checker rejects anything else, so a lesson file can't
-     put something into the Hub that Hub's own HTML cleaner might strip or mangle. */
+     put something into the Hub that Hub's own HTML cleaner might strip or mangle. "id" is only for
+     section anchors, written the way Esri's Hub article 000039921 shows: an empty <a id="..."></a>
+     above the heading, with a lower-case, hyphenated id. */
   var ALLOWED = {
     tags: ["style", "div", "p", "span", "a", "h1", "h2", "h3", "ul", "ol", "li", "strong", "em", "code", "br",
       "table", "thead", "tbody", "tr", "th", "td"],
-    attrs: ["class", "href", "target", "rel", "lang", "scope"]
+    attrs: ["class", "href", "target", "rel", "lang", "scope", "id"]
   };
+  var ANCHOR_ID = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+  var HEX32 = /^[0-9a-f]{32}$/i;
 
   /* Colours are Esri's Calcite design system tokens: brand #007AC2, brand-hover #00619B, brand-press #004874,
      text #141414 / #4A4A4A, border #D4D4D4, and tints of the status colours. Links use #00619B, which keeps
@@ -36,6 +40,8 @@
     ".mml li{margin:0 0 .3em}",
     ".mml code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88em}",
     ".mml-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}",
+    // Section anchors: the gap above keeps a heading clear of a site header that stays at the top of the screen.
+    ".mml .mml-anchor{display:block;height:0;scroll-margin-top:96px}",
     ".mml-hero{background:#F3F3F3;border-top:4px solid #007AC2;border-radius:4px;padding:26px 24px 18px}",
     ".mml-crumbs{font-size:.95rem;color:#4A4A4A}",
     ".mml-summary{font-size:1.15rem;max-width:46rem}",
@@ -117,7 +123,7 @@
     return ("c" + h.toString(36) + "00000000").slice(0, 9);
   }
   /* Hub layout pieces. A text card holds HTML; an embed card ("iframe-card", the same card the Support Hub
-     homepage uses for its video) shows another page, here the lesson's map in MapMaker. */
+     homepage uses for its video) shows another page, here the lesson's web map on its own (no MapMaker app). */
   function mdCard(id, markdown) {
     return { component: { name: "markdown-card", settings: { cardId: hashId(id), schemaVersion: 2.1, markdown: protect(markdown) } }, width: 12 };
   }
@@ -144,6 +150,40 @@
         }).join("") + "</tr>";
       }).join("") + "</tbody></table></div>";
   }
+  /* The quick look at a web map: the address pattern in site.json (hubDemo.quickLook.url), so it can be
+     changed in one place without touching this code. */
+  function quickLookUrl(site, webmapId) {
+    var q = hubHome(site).quickLook || {};
+    if (!q.url || !HEX32.test(webmapId || "")) return null;
+    return q.url.replace("{webmap}", encodeURIComponent(webmapId));
+  }
+  /* An in-page anchor. Ids start with the page's slug, because Hub can scroll to a same-named id when a
+     link moves between pages (Esri bug BUG-000178430; the workaround is ids unique across pages). */
+  function anchorId(slug, name) { return slug + "-" + name; }
+  function anchor(slug, name) { return '<a class="mml-anchor" id="' + anchorId(slug, name) + '"></a>'; }
+  function jump(slug, name, label) { return '<a class="mml-btn" href="#' + anchorId(slug, name) + '">' + label + "</a>"; }
+
+  /* WCAG 2 contrast ratio between two #RRGGBB (or #RGB) colours. */
+  function luminance(hex) {
+    var h = String(hex).replace("#", "");
+    if (h.length === 3) h = h.replace(/(.)/g, "$1$1");
+    return [0, 2, 4].map(function (i) {
+      var c = parseInt(h.substr(i, 2), 16) / 255;
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+    }).reduce(function (sum, c, i) { return sum + c * [0.2126, 0.7152, 0.0722][i]; }, 0);
+  }
+  function contrast(a, b) {
+    var x = luminance(a), y = luminance(b);
+    return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05);
+  }
+  /* The site colours for the publishing notebook: site.json hubDemo.theme without its note. */
+  function siteTheme(site) {
+    var th = hubHome(site).theme, out = {};
+    if (!th) return null;
+    Object.keys(th).forEach(function (k) { if (k !== "about") out[k] = th[k]; });
+    return out;
+  }
+
   function langName(site, lang) { return (site.languageNames && site.languageNames[lang]) || lang; }
   /* Inside a phrase, Spanish (and most languages) write the language name in lower case: "Hoja del estudiante (español)". */
   function langInPhrase(site, lang) { var n = langName(site, lang); return lang === "en" ? n : n.toLowerCase(); }
@@ -196,6 +236,7 @@
     var slug = lesson.id, S = [], n = 0;
     var langs = Object.keys(lesson.languages);
     var mm = MMR.mapmakerUrl(site, lesson.map.webmapId);
+    var look = quickLookUrl(site, lesson.map.webmapId);
     function add(html) { S.push(section([mdCard(slug + ":" + n, html)])); n++; }
 
     // Hero
@@ -204,18 +245,19 @@
       '<ul class="mml-facts">' + [["Grade", lesson.grade], ["Time", lesson.time], ["Unit", lesson.unit], ["Student login", lesson.studentLogin]].map(function (f) {
         return '<li><span class="mml-k">' + f[0] + '</span><span class="mml-v">' + esc(f[1]) + "</span></li>";
       }).join("") + "</ul>" +
-      '<p class="mml-actions">' + ext(mm, "Open in MapMaker", "mml-btn mml-primary") + langs.map(function (l) {
-        var T = site.sheetText[l];
-        return ' <a class="mml-btn" href="' + sheetPlaceholder(lesson.id, l) + '"' + (l !== "en" ? ' lang="' + l + '"' : "") + ">" + esc(T.subtitle) + " (Word, " + esc(langInPhrase(site, l)) + ")</a>";
-      }).join("") + "</p>" +
+      // The plain buttons move down the page to their sections, as on the mock-up; the Word downloads are in Student activity.
+      '<p class="mml-actions">' + ext(mm, "Open in MapMaker", "mml-btn mml-primary") + " " +
+      jump(slug, "student-activity", "Student activity") + " " + jump(slug, "teacher-notes", "Teacher notes") + "</p>" +
       "<p>" + statusChip(lesson) + ' <span class="mml-muted">Content version ' + esc(lesson.contentVersion) + ", updated " + esc(lesson.updated) + ".</span></p></div>");
 
-    // About this map: a short intro, a quick look at the map (MapMaker in an embed card), then layers and sources
+    // About this map: a short intro, a quick look at the web map itself (an embed card), then layers and sources
     var issues = lesson.knownIssues || [];
+    var height = (hubHome(site).quickLook || {}).height || 480;
     S.push(section([
-      mdCard(slug + ":" + n + ":intro", '<div class="mml"><h2>About this map</h2><p class="mml-prose">A quick look at the map students use. You can pan, zoom and click it here, or ' +
-        ext(mm, "open it in MapMaker") + " for every tool.</p></div>"),
-      frameCard(slug + ":" + n + ":map", mm, 480),
+      mdCard(slug + ":" + n + ":intro", '<div class="mml"><h2>About this map</h2><p class="mml-prose">' + (look
+        ? "A quick look at the map’s content: pan, zoom and click a feature to see its pop-up. Students work in MapMaker, which adds the tools the questions use: "
+        : "Students work with this map in MapMaker: ") + ext(mm, "open the map in MapMaker") + ".</p></div>")
+    ].concat(look ? [frameCard(slug + ":" + n + ":map", look, height)] : []).concat([
       mdCard(slug + ":" + n, '<div class="mml"><p class="mml-prose">Each layer names its source, so you can check where the information comes from.</p>' +
         table("Map layers and sources", ["Layer", "What it shows", "Source"], lesson.map.layers.map(function (l) {
           return [esc(l.name) + (l.offAtStart ? ' <span class="mml-muted">(off when the map opens)</span>' : ""), t(l.shows), t(l.source)];
@@ -224,7 +266,7 @@
         "<h3>Known issues</h3>" + (issues.length ? "<ul>" + issues.map(function (k) {
           return '<li><span class="mml-chip ' + (k.status === "fixed" ? "mml-ok" : "mml-open") + '">' + (k.status === "fixed" ? "Fixed " : "Open ") + esc(k.date) + "</span> <strong>" + esc(k.where) + ":</strong> " + t(k.note) + "</li>";
         }).join("") + "</ul>" : "<p>No known issues.</p>") + "</div>")
-    ]));
+    ])));
     n++;
 
     // Inquiry
@@ -237,7 +279,7 @@
       ((inq.final.tools || []).length ? '<p class="mml-tools"><span class="mml-muted">Tools:</span> ' + toolLinks(site, inq.final.tools) + "</p>" : "") + "</div>");
 
     // Student activity
-    add('<div class="mml"><h2>Student activity</h2><p class="mml-prose">This is what students see on the Word sheet. Download it to edit it, print it, or open it in Google Docs.</p>' +
+    add('<div class="mml">' + anchor(slug, "student-activity") + '<h2>Student activity</h2><p class="mml-prose">This is what students see on the Word sheet. Download it to edit it, print it, or open it in Google Docs.</p>' +
       '<p class="mml-actions">' + langs.map(function (l) {
         return '<a class="mml-btn" href="' + sheetPlaceholder(lesson.id, l) + '"' + (l !== "en" ? ' lang="' + l + '"' : "") + ">Download Word (" + esc(langName(site, l)) + ")</a>";
       }).join(" ") + "</p>" + sheetPreview(site, lesson, "en") +
@@ -247,7 +289,7 @@
 
     // Teacher notes
     var tn = lesson.teacherNotes;
-    add('<div class="mml"><h2>Teacher notes</h2><h3>Before class</h3><p class="mml-prose">' + t(tn.beforeClass) + "</p><h3>Answer notes</h3>" +
+    add('<div class="mml">' + anchor(slug, "teacher-notes") + '<h2>Teacher notes</h2><h3>Before class</h3><p class="mml-prose">' + t(tn.beforeClass) + "</p><h3>Answer notes</h3>" +
       inq.questions.map(function (q, i) {
         var a = q.answer, body = "";
         if (a.table) body += table(a.table.caption || "Answer table", a.table.columns, a.table.rows.map(function (r) { return r.map(t); }), true);
@@ -301,7 +343,7 @@
       return '<li><p class="mml-month">' + esc(l.planMonth || "") + '</p><h2><a href="/pages/' + esc(l.id) + '">' + esc(l.title) + "</a></h2>" +
         '<p class="mml-muted">' + esc(l.course + " · Grade " + l.grade + " · " + l.unit) + "</p><p>" + t(l.summary) + "</p><p>" + statusChip(l) + "</p></li>";
     }).join("") + "</ul></div>");
-    add('<div class="mml"><h2>In every lesson</h2><ul class="mml-prose"><li>A MapMaker map that opens straight from the page, with each layer’s source listed.</li>' +
+    add('<div class="mml"><h2>In every lesson</h2><ul class="mml-prose"><li>A MapMaker map you can preview on the page or open in MapMaker, with each layer’s source listed.</li>' +
       "<li>An inquiry with a compelling question and questions you can pick from.</li><li>A Word student sheet in English and Spanish that you can edit, print or open in Google Docs.</li>" +
       "<li>Teacher notes with answers, common misunderstandings, key words and standards.</li><li>Links to how-to videos, and to Vera for making your own questions.</li></ul></div>");
     add(footer(site, null));
@@ -337,7 +379,7 @@
       format: "mml-hub-bundle/1",
       builtOn: builtOn(lessons),
       app: { name: site.app.name, version: site.app.version, parts: site.app.parts },
-      hub: { siteId: H.siteId, url: H.url, lessonsSlug: H.lessonsSlug || "lessons" },
+      hub: { siteId: H.siteId, url: H.url, lessonsSlug: H.lessonsSlug || "lessons", theme: siteTheme(site) },
       pages: [cataloguePage(site, lessons)].concat(lessons.map(function (l) { return lessonPage(site, l); })),
       sheets: sheets(site, lessons, dist, opts.sheetFileName || function (l, lang) { return l.id + "-student-sheet-" + lang + ".docx"; }),
       vera: { fileName: MMR.veraFileName(), url: dist.replace(/\/+$/, "") + "/" + MMR.veraFileName() }
@@ -345,9 +387,22 @@
   }
 
   /* The checker for Hub pages: text cards on one line with only allowed tags, attributes and placeholders,
-     the <style> block only in the very first card, and embed cards only showing ArcGIS pages over https. */
+     the <style> block only in the very first card, embed cards only showing ArcGIS pages over https,
+     ids only on empty anchors, and every in-page link pointing at an anchor on the same page. */
+  function pageIds(page) {
+    var ids = [];
+    page.layout.sections.forEach(function (sec) {
+      sec.rows.forEach(function (row) {
+        row.cards.forEach(function (card) {
+          var md = card.component && card.component.settings && card.component.settings.markdown;
+          if (md) (md.match(/\sid="[^"]*"/g) || []).forEach(function (a) { ids.push(a.replace(/^\sid="|"$/g, "")); });
+        });
+      });
+    });
+    return ids;
+  }
   function checkPage(page, sheetKeys) {
-    var errs = [], first = true;
+    var errs = [], first = true, ids = pageIds(page);
     page.layout.sections.forEach(function (sec, i) {
       sec.rows.forEach(function (row, r) {
         row.cards.forEach(function (card) {
@@ -368,8 +423,13 @@
             var m = /^<\/?([a-zA-Z0-9]+)([^>]*)>$/.exec(tag);
             var tname = m[1].toLowerCase();
             if (ALLOWED.tags.indexOf(tname) < 0) errs.push(where + ": tag <" + tname + "> isn't on the allowed list.");
-            var rest = m[2].replace(/([a-zA-Z_:][-a-zA-Z0-9_:.]*)\s*=\s*"[^"]*"/g, function (_, an) {
+            var rest = m[2].replace(/([a-zA-Z_:][-a-zA-Z0-9_:.]*)\s*=\s*"([^"]*)"/g, function (_, an, av) {
               if (ALLOWED.attrs.indexOf(an.toLowerCase()) < 0) errs.push(where + ": attribute " + an + " on <" + tname + "> isn't on the allowed list.");
+              if (an.toLowerCase() === "id") {
+                if (tname !== "a") errs.push(where + ": id belongs on an empty <a> anchor, not <" + tname + ">.");
+                if (!ANCHOR_ID.test(av)) errs.push(where + ": anchor id " + av + " should be lower-case words joined by hyphens.");
+                if (ids.indexOf(av) !== ids.lastIndexOf(av)) errs.push(where + ": anchor id " + av + " is used twice on this page.");
+              }
               return "";
             });
             if (/[^\s\/]/.test(rest)) errs.push(where + ": unquoted or odd attribute text on <" + tname + ">: " + rest.trim());
@@ -378,9 +438,14 @@
             var k = /^\{\{SHEET:(.+)\}\}$/.exec(ph);
             if (!k || sheetKeys.indexOf(k[1]) < 0) errs.push(where + ": unknown placeholder " + ph + ".");
           });
+          (md.match(/<a [^>]*\sid="[^"]*"[^>]*>(.*?)<\/a>/g) || []).forEach(function (a) {
+            if (!/^<a class="mml-anchor" id="[^"]*"><\/a>$/.test(a)) errs.push(where + ": an anchor should be an empty <a class=\"mml-anchor\" id=\"...\"></a>: " + a);
+          });
           (md.match(/href="([^"]*)"/g) || []).forEach(function (h) {
             var u = h.slice(6, -1);
-            if (!/^(https:\/\/|\/pages\/|\{\{SHEET:)/.test(u)) errs.push(where + ": link " + u + " should be https://, /pages/ or a sheet placeholder.");
+            if (u.charAt(0) === "#") {
+              if (ids.indexOf(u.slice(1)) < 0) errs.push(where + ": link " + u + " has no matching anchor on this page.");
+            } else if (!/^(https:\/\/|\/pages\/|\{\{SHEET:)/.test(u)) errs.push(where + ": link " + u + " should be https://, /pages/, #anchor or a sheet placeholder.");
           });
         });
       });
@@ -388,6 +453,36 @@
     return errs;
   }
 
+  /* Checks across the whole bundle: every page, anchor ids unique across pages (BUG-000178430), and the site
+     colours readable (WCAG AA, 4.5:1 for text). */
+  function checkBundle(b) {
+    var keys = b.sheets.map(function (s) { return s.key; }), errs = [], seen = {};
+    b.pages.forEach(function (p) {
+      errs = errs.concat(checkPage(p, keys));
+      pageIds(p).forEach(function (id) {
+        if (seen[id] && seen[id] !== p.slug) errs.push(p.slug + ": anchor id " + id + " is also used on " + seen[id] + ".");
+        seen[id] = p.slug;
+      });
+    });
+    var th = b.hub && b.hub.theme, HEX = /^#([0-9a-f]{3}|[0-9a-f]{6})$/i;
+    if (th) {
+      [["header", "text", "background"], ["globalNav", "text", "background"], ["button", "text", "background"]].forEach(function (k) {
+        var part = th[k[0]];
+        if (!part) return;
+        if (!HEX.test(part[k[1]] || "") || !HEX.test(part[k[2]] || "")) { errs.push("site colours: " + k[0] + " needs #RRGGBB text and background."); return; }
+        var c = contrast(part[k[1]], part[k[2]]);
+        if (c < 4.5) errs.push("site colours: " + k[0] + " text " + part[k[1]] + " on " + part[k[2]] + " is " + c.toFixed(2) + ":1; it needs 4.5:1.");
+      });
+      if (th.body && th.body.link) {
+        var bg = th.body.background || "#FFFFFF";
+        if (!HEX.test(th.body.link) || !HEX.test(bg)) errs.push("site colours: body link and background need #RRGGBB.");
+        else if (contrast(th.body.link, bg) < 4.5) errs.push("site colours: links " + th.body.link + " on " + bg + " are " + contrast(th.body.link, bg).toFixed(2) + ":1; they need 4.5:1.");
+      }
+    }
+    return errs;
+  }
+
   return { VERSION: VERSION, CSS: CSS, ALLOWED: ALLOWED, lessonPage: lessonPage, cataloguePage: cataloguePage, bundle: bundle,
-    checkPage: checkPage, sheetPlaceholder: sheetPlaceholder, protect: protect };
+    checkPage: checkPage, checkBundle: checkBundle, contrast: contrast, quickLookUrl: quickLookUrl,
+    sheetPlaceholder: sheetPlaceholder, protect: protect };
 });
