@@ -1,20 +1,25 @@
 # =====================================================================
-# PUBLISH MAPMAKER LESSONS TO THE HUB (demo)          publisher v1.0
-# MapMaker resource pages 0.3.0. Created by Jason Sawle.
+# PUBLISH MAPMAKER LESSONS TO THE HUB (demo)          publisher v1.1
+# MapMaker resource pages 0.3.1. Created by Jason Sawle.
 #
 # Run in an ArcGIS Notebook, signed in as the account that owns the
-# site (GIS-4-Schools). Run cell by cell. NOTHING is written until
-# CELL 4, and CELL 4 only writes when DRY_RUN = False.
+# site (GIS-4-Schools). Paste it all into one cell (or split it at the
+# "# %% CELL" lines if you prefer).
+#   1. Run it with DRY_RUN = True: it backs up the site and prints the
+#      plan. Nothing is written.
+#   2. If the plan looks right, set DRY_RUN = False and run it again to
+#      publish. It then checks its own work.
 #
 # What it does
-#   1. Backs up the site's data (CELL 1).
+#   1. Backs up the site's data.
 #   2. Reads hub-bundle.json, built on GitHub from the lesson files.
 #   3. Uploads each student sheet as a Word item (English, Spanish).
 #   4. Creates or updates one Hub Page per lesson, plus a Lessons page.
 #   5. Registers every page in the site's pages list. This is the step
 #      that makes /pages/<slug> addresses and menu links work.
 #   6. Shares everything.
-# Afterwards: republish the site in the site editor (CELL 5 says how).
+# Afterwards: republish the site in the site editor (the last lines of
+# the output say how).
 #
 # Safe to run again: it updates the pages and Word items it made last
 # time (it remembers them in mml_hub_state.json) instead of adding new
@@ -22,10 +27,10 @@
 # =====================================================================
 
 
-# %% CELL 0 — Settings (run again after changing DRY_RUN)
+# %% CELL 0 — Settings
 SITE_ID    = "9c39add73ebf47068e1dac37f6353b8d"   # MapMaker Lessons, gis-4-schools.hub.arcgis.com
 BUNDLE_URL = "https://jsawle.github.io/lessons/resources/dist/hub-bundle.json"
-DRY_RUN    = True          # set to False when the plan in CELL 3 looks right
+DRY_RUN    = True          # set to False when the plan looks right, then run again
 SHARE_WITH = "everyone"    # "everyone" (public) or "org"
 
 import os
@@ -63,12 +68,12 @@ pages_now = sdata["values"].get("pages", [])
 print(f"[ok] Signed in as {me}. Org URL key: {KEY}")
 print(f"[ok] Site: {site.title} ({site.type}), owner {site.owner}")
 print(f"[ok] Site address: {SITE_URL}")
-print(f"[ok] Backup written: {BACKUP_PATH}  <- download it from the Files pane before CELL 4")
+print(f"[ok] Backup written: {BACKUP_PATH}  <- download it from the Files pane before publishing")
 print(f"[ok] Pages registered now: {len(pages_now)}")
 for p in pages_now:
     print(f"       /pages/{p.get('slug')} -> {p.get('id')}")
 if site.owner != me:
-    print("[WARN] You are not the site's owner, so saving the site in CELL 4 may fail.")
+    print("[WARN] You are not the site's owner, so saving the site may fail.")
 if not KEY:
     print("[WARN] No org URL key found; page slugs need it. STOP and check gis.properties.")
 
@@ -102,7 +107,7 @@ def save_state():
         json.dump(state, f, indent=2)
 
 
-# %% CELL 3 — DRY RUN: work out what will be created, updated and registered. No writes.
+# %% CELL 3 — PLAN: work out what will be created, updated and registered. No writes.
 def owned(item_id):
     """The item, if it exists and belongs to you."""
     if not item_id:
@@ -173,7 +178,7 @@ else:
     print("No conflicts.")
 
 
-# %% CELL 4 — WRITE. Only when DRY_RUN = False, after CELL 3 looks right and the backup is downloaded.
+# %% CELL 4 — WRITE. Only when DRY_RUN = False, after the plan looks right and the backup is downloaded.
 def share(item):
     """Share an item with everyone or the organization. Works with old and new ArcGIS API for Python."""
     level = "EVERYONE" if SHARE_WITH == "everyone" else "ORGANIZATION"
@@ -206,8 +211,8 @@ def data_url(item_id):
 
 
 if DRY_RUN:
-    print("[skip] DRY_RUN is True, so nothing was written.")
-    print("       When CELL 3 looks right: set DRY_RUN = False in CELL 0, run CELL 0, then run this cell.")
+    print("\n[skip] DRY_RUN is True, so nothing was written.")
+    print("       If the plan above looks right, set DRY_RUN = False at the top and run it again.")
 else:
     now = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S.000Z")
     work = tempfile.mkdtemp()
@@ -301,38 +306,39 @@ else:
             res = gis._con.post(f"{REST}/content/users/{site.owner}/items/{site.id}/update", {"f": "json", "text": json.dumps(fresh)})
             ok = bool(res.get("success"))
         print("[ok] saved the site's pages list" if ok else "[ERR] couldn't save the site's pages list")
-    print("\nDone. Run CELL 5 to check, then republish the site.")
+    print("\nPublished. Checking...")
 
 
 # %% CELL 5 — CHECK, then republish by hand
-check = site.get_data()
-if isinstance(check, str):
-    check = json.loads(check)
-regs = {x.get("slug"): x.get("id") for x in check["values"].get("pages", [])}
-all_ok = True
-for p in bundle["pages"]:
-    slug, pid = p["slug"], state["pages"].get(p["slug"])
-    it = gis.content.get(pid) if pid else None
-    if it is None:
-        print(f"[ERR] /pages/{slug}: no page item"); all_ok = False; continue
-    d = it.get_data()
-    d = json.loads(d) if isinstance(d, str) else d
-    linked = any(s.get("id") == SITE_ID for s in d.get("values", {}).get("sites", []))
-    good = regs.get(slug) == pid and linked and it.access in ("public", "org")
-    all_ok = all_ok and good
-    print(f"[{'ok' if good else 'ERR'}] /pages/{slug}: registered={regs.get(slug) == pid}, linked to site={linked}, shared={it.access}")
-for key, sid in state["sheets"].items():
-    it = gis.content.get(sid)
-    print(f"[{'ok' if it is not None and it.access in ('public', 'org') else 'ERR'}] Word item {key}: {sid} ({it.access if it else 'missing'})")
+if not DRY_RUN:
+    check = site.get_data()
+    if isinstance(check, str):
+        check = json.loads(check)
+    regs = {x.get("slug"): x.get("id") for x in check["values"].get("pages", [])}
+    all_ok = True
+    for p in bundle["pages"]:
+        slug, pid = p["slug"], state["pages"].get(p["slug"])
+        it = gis.content.get(pid) if pid else None
+        if it is None:
+            print(f"[ERR] /pages/{slug}: no page item"); all_ok = False; continue
+        d = it.get_data()
+        d = json.loads(d) if isinstance(d, str) else d
+        linked = any(s.get("id") == SITE_ID for s in d.get("values", {}).get("sites", []))
+        good = regs.get(slug) == pid and linked and it.access in ("public", "org")
+        all_ok = all_ok and good
+        print(f"[{'ok' if good else 'ERR'}] /pages/{slug}: registered={regs.get(slug) == pid}, linked to site={linked}, shared={it.access}")
+    for key, sid in state["sheets"].items():
+        it = gis.content.get(sid)
+        print(f"[{'ok' if it is not None and it.access in ('public', 'org') else 'ERR'}] Word item {key}: {sid} ({it.access if it else 'missing'})")
 
-print("\nNEXT, by hand (a few minutes):")
-print("  1. Republish the site: open it in your Hub workspace, choose Edit layout, then Save/Publish.")
-print("     Republishing is what made /pages/ addresses work on the Support Hub in July.")
-print("  2. Add a 'Lessons' link to the site's header menu, pointing to /pages/lessons.")
-print("  3. In a private browser window, open:")
-for p in bundle["pages"]:
-    print(f"       {SITE_URL}/pages/{p['slug']}")
-print("\nAll checks passed." if all_ok else "\nSome checks failed: see [ERR] lines above.")
+    print("\nNEXT, by hand (a few minutes):")
+    print("  1. Republish the site: open it in your Hub workspace, choose Edit layout, then Save/Publish.")
+    print("     Republishing is what made /pages/ addresses work on the Support Hub in July.")
+    print("  2. Add a 'Lessons' link to the site's header menu, pointing to /pages/lessons.")
+    print("  3. In a private browser window, open:")
+    for p in bundle["pages"]:
+        print(f"       {SITE_URL}/pages/{p['slug']}")
+    print("\nAll checks passed." if all_ok else "\nSome checks failed: see [ERR] lines above.")
 
 
 # %% CELL 6 — UNDO (emergency only). Uncomment to use.
