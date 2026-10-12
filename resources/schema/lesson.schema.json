@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://jsawle.github.io/lessons/resources/schema/lesson.schema.json",
-  "title": "MapMaker lesson file, format 1.0",
+  "title": "MapMaker lesson file, format 1.1",
   "description": "One file per lesson. The page, Word student sheets, how-to links and AI summary are made from it. Text fields allow **bold** and [link text](https://address) only.",
   "type": "object",
   "required": ["formatVersion", "id", "contentVersion", "status", "updated", "title", "summary", "subject", "course", "unit", "grade", "time", "studentLogin", "map", "inquiry", "teacherNotes", "standards", "languages", "licence"],
@@ -21,7 +21,7 @@
   },
   "properties": {
     "$schema": { "type": "string" },
-    "formatVersion": { "const": "1.0" },
+    "formatVersion": { "const": "1.1" },
     "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "Must match the file name." },
     "contentVersion": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$", "description": "Bump on every change: patch for typos, minor for new or changed questions, major for a new map." },
     "status": { "enum": ["draft", "reviewed", "published"] },
@@ -47,6 +47,7 @@
       "required": ["webmapId", "layers"],
       "properties": {
         "webmapId": { "type": "string", "pattern": "^[0-9a-fA-F]{32}$" },
+        "bookmarks": { "type": "array", "items": { "$ref": "#/$defs/text" }, "description": "Bookmark names exactly as in the map. Vera uses them, so list every one." },
         "layers": {
           "type": "array", "minItems": 1,
           "items": {

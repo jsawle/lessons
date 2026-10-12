@@ -23,8 +23,15 @@ jobs:
         run: |
           npm install --no-save docx@9.7.1
           node resources/tools/build-sheets.mjs --out sheets-out
+      - name: Make Vera's knowledge file
+        run: node resources/tools/build-vera.mjs --out vera-out
       - name: Keep the Word sheets for upload
         uses: actions/upload-artifact@v4
         with:
           name: student-sheets
           path: sheets-out/*.docx
+      - name: Keep Vera's knowledge file for upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: vera-knowledge
+          path: vera-out/*.txt

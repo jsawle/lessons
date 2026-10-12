@@ -1,6 +1,6 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.0",
+  "formatVersion": "1.1",
   "id": "copy-this-file-and-rename-it",
   "contentVersion": "0.1.0",
   "status": "draft",
@@ -20,6 +20,7 @@
 
   "map": {
     "webmapId": "00000000000000000000000000000000",
+    "bookmarks": ["Bookmark name exactly as in the map"],
     "layers": [
       { "name": "Layer name exactly as in MapMaker", "shows": "What the layer shows", "source": "Who made the data. Links look like [text](https://example.org)" }
     ]

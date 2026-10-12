@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.0",
+  "formatVersion": "1.1",
   "id": "revolutionary-battles-1775-1776",
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "status": "draft",
   "updated": "2026-10-12",
   "reviewed": null,
@@ -20,13 +20,14 @@
 
   "map": {
     "webmapId": "bda07736a1b9425ea19fdde282088bd6",
+    "bookmarks": ["Massachusetts"],
     "layers": [
-      { "name": "Revolutionary War Battles", "shows": "21 battles from April 1775 to December 1776. Each pop-up gives the dates, leaders, troops, casualties and winner.", "source": "American Battlefield Trust" },
+      { "name": "Revolutionary War Battles", "shows": "21 battles from April 1775 to December 1776. Each pop-up gives the dates, a picture and a short account of the battle. The symbol color shows the winner, as listed in the legend (American victory or British victory).", "source": "American Battlefield Trust" },
       { "name": "Revolutionary War Battlefields", "shows": "Battlefield boundaries, and the core areas where the fighting was heaviest", "source": "National Park Service, American Battlefield Protection Program" },
       { "name": "Turning Points", "shows": "Five events, from Lexington and Concord to Trenton, with short notes", "source": "Chris Bunin and Peter Trentacoste (2026), from National Park Service, US Army Center of Military History and Library of Congress sources" },
       { "name": "Thirteen British Colonies", "shows": "Colony borders in 1763", "source": "National Geographic Society and Virginia Geographic Alliance, from the Historical Atlas of the United States (1988)" },
       { "name": "1763 Proclamation Line", "shows": "The line west of which King George III barred colonial settlement", "source": "National Geographic Society and Virginia Geographic Alliance, from the Historical Atlas of the United States (1988)" },
-      { "name": "Key Port Cities, 1775–1781", "shows": "Ports that supplied armies and moved troops", "source": "Jay Feyerabend, [master's thesis](https://commons.lib.jmu.edu/masters202029/74), James Madison University (2021)", "offAtStart": true }
+      { "name": "Key Port Cities in the American Revolution 1775-1781", "shows": "Ports that supplied armies and moved troops", "source": "Jay Feyerabend, [master's thesis](https://commons.lib.jmu.edu/masters202029/74), James Madison University (2021)", "offAtStart": true }
     ]
   },
 
@@ -41,11 +42,11 @@
       {
         "id": "q1",
         "title": { "en": "Where did the war begin?", "es": "¿Dónde comenzó la guerra?" },
-        "task": "Open the Massachusetts bookmark and click Lexington and Concord, then Boston. Note the dates and the winner. Measure the straight-line distance from Boston to Concord.",
-        "tools": ["bookmarks", "popups", "measure"],
+        "task": "Open the Massachusetts bookmark and click Lexington and Concord, then Boston. Note the dates, and the winner from the symbol color and legend. Measure the straight-line distance from Boston to Concord.",
+        "tools": ["bookmarks", "popups", "legend", "measure"],
         "student": {
-          "en": "Open the Massachusetts bookmark. Click Lexington and Concord. When was it fought, and who won?",
-          "es": "Abre el marcador Massachusetts. Haz clic en Lexington y Concord. ¿Cuándo fue la batalla y quién ganó?"
+          "en": "Open the Massachusetts bookmark. Click Lexington and Concord. When was it fought? Use the legend to find out who won.",
+          "es": "Abre el marcador Massachusetts. Haz clic en Lexington y Concord. ¿Cuándo fue la batalla? Usa la leyenda para saber quién ganó."
         },
         "fill": {
           "en": "Measure the straight-line distance from Boston to Concord: ________ miles",
@@ -121,7 +122,7 @@
     "beforeClass": "No preparation beyond checking the map opens on student devices. Students don't need accounts to explore it; saving their own copy needs a sign-in.",
     "misconceptions": [
       { "claim": "The early war was fought in Massachusetts.", "response": "By the end of 1776 the map shows battles in seven colonies and in Quebec." },
-      { "claim": "The winner is the side that lost fewer soldiers.", "response": "Bunker Hill is listed as a British victory. Students can compare the casualty figures in its pop-up." },
+      { "claim": "The winner is the side that lost fewer soldiers.", "response": "Bunker Hill is shown as a British victory, yet its pop-up says the British had twice as many casualties as the Patriots." },
       { "claim": "The Americans lost every battle in 1776.", "response": "The map shows American wins in the South that year, such as Moores Creek Bridge and Sullivan's Island, as well as Trenton." }
     ],
     "keyWords": ["siege", "militia", "Continental Army", "Loyalist", "harbor", "campaign", "retreat"]
