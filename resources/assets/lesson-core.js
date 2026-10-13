@@ -6,7 +6,7 @@
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  var VERSION = { renderer: "1.4", format: "1.1", checker: "1.1", vera: "1.0" };
+  var VERSION = { renderer: "1.5", format: "1.1", checker: "1.1", vera: "1.0" };
   var HEX32 = /^[0-9a-f]{32}$/i;
   var DATE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -39,6 +39,14 @@
     var q = "appid=" + encodeURIComponent(mm.appId);
     if (HEX32.test(webmapId || "")) q += "&webmap=" + encodeURIComponent(webmapId);
     return base + "/apps/instant/atlas/index.html?" + q;
+  }
+
+  /* Google's script-free Share to Classroom link. It carries only the address to share (the one parameter
+     Google documents for this form), so it shares the MapMaker map. Null if the button is switched off. */
+  function classroomShareUrl(site, url) {
+    var c = (site && site.classroom) || {};
+    if (!/^https:\/\//.test(c.shareUrl || "") || !/^https:\/\//.test(c.icon || "") || !/^https:\/\//.test(url || "")) return null;
+    return c.shareUrl + "?url=" + encodeURIComponent(url);
   }
 
   function hubUrl(site, path) {
@@ -193,6 +201,6 @@
     return errs;
   }
 
-  return { VERSION: VERSION, esc: esc, inline: inline, plain: plain, mapmakerUrl: mapmakerUrl, hubUrl: hubUrl,
+  return { VERSION: VERSION, esc: esc, inline: inline, plain: plain, mapmakerUrl: mapmakerUrl, classroomShareUrl: classroomShareUrl, hubUrl: hubUrl,
     howToLinks: howToLinks, veraUrl: veraUrl, veraEntry: veraEntry, veraFile: veraFile, veraFileName: veraFileName, check: check };
 });

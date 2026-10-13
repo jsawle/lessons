@@ -1,4 +1,4 @@
-/* MapMaker resource pages: Hub page builder v1.4 (Vera embedded in the page; no credit badge; buttons that jump to sections).
+/* MapMaker resource pages: Hub page builder v1.5 (Share to Google Classroom button; Vera embedded in the page; buttons that jump to sections).
    Turns lesson files into ArcGIS Hub page layouts: sections of markdown cards that hold plain HTML
    and one <style> block, with no scripts, so the pages work inside Hub. Runs in the browser
    (window.MMRHub, for the Hub preview) and in Node (for the bundle the publishing notebook reads). */
@@ -7,7 +7,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "1.4";
+  var VERSION = "1.5";
   var esc = MMR.esc;
   var MONTHS = ["August", "September", "October", "November", "December", "January", "February", "March", "April", "May", "June", "July"];
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
@@ -16,11 +16,12 @@
   /* Tags and attributes the pages use. The checker rejects anything else, so a lesson file can't
      put something into the Hub that Hub's own HTML cleaner might strip or mangle. "id" is only for
      section anchors, written the way Esri's Hub article 000039921 shows: an empty <a id="..."></a>
-     above the heading, with a lower-case, hyphenated id. */
+     above the heading, with a lower-case, hyphenated id. <img> is only for the Google Classroom icon; Esri's
+     ArcGIS HTML sanitizer keeps img with src, alt, width and height. */
   var ALLOWED = {
     tags: ["style", "div", "p", "span", "a", "h1", "h2", "h3", "ul", "ol", "li", "strong", "em", "code", "br",
-      "table", "thead", "tbody", "tr", "th", "td"],
-    attrs: ["class", "href", "target", "rel", "lang", "scope", "id"]
+      "table", "thead", "tbody", "tr", "th", "td", "img"],
+    attrs: ["class", "href", "target", "rel", "lang", "scope", "id", "src", "alt", "width", "height"]
   };
   var ANCHOR_ID = /^[a-z0-9]+(-[a-z0-9]+)*$/;
   var MAX_FRAMES = 2;   // Esri's Hub help: no more than two iframe cards on a page, for phones
@@ -115,6 +116,32 @@
     return '<a' + (cls ? ' class="' + cls + '"' : "") + ' href="' + esc(href) + '" target="_blank" rel="noopener">' + label + NEW_TAB + "</a>";
   }
   function sheetPlaceholder(lessonId, lang) { return "{{SHEET:" + lessonId + ":" + lang + "}}"; }
+
+  /* Share to Google Classroom. Google's branding guidelines: the approved wording, the official icon on the
+     left at 32-96 px and unaltered, Roboto Bold, and a 20% black shade on the icon on hover. Roboto Bold is
+     served with the lesson files (SIL Open Font License); if Hub drops the @font-face rule, Arial Bold shows. */
+  function classroomCss(site) {
+    var c = site.classroom || {};
+    if (!c.icon) return "";
+    var px = Math.max(32, Math.min(96, parseInt(c.iconSize, 10) || 32));
+    return (c.font ? '@font-face{font-family:"MML Roboto";font-style:normal;font-weight:700;font-display:swap;src:url(' + c.font + ') format("woff2")}' : "") +
+      '.mml .mml-gc{display:inline-flex;align-items:center;gap:.5em;padding:.3em 1em .3em .45em;font-family:"MML Roboto",Roboto,Arial,sans-serif;font-weight:700}' +
+      ".mml .mml-gc img{display:block;flex:none;width:" + px + "px;height:" + px + "px;border:0;margin:0}" +
+      ".mml .mml-gc:hover img{filter:brightness(.8)}";
+  }
+  /* Google asks for this attribution wherever its marks are used. Shown only on pages that carry the button. */
+  function classroomNotice(site, lesson) {
+    var c = site.classroom || {};
+    if (!MMR.classroomShareUrl(site, MMR.mapmakerUrl(site, lesson.map.webmapId))) return "";
+    return '<p class="mml-muted">' + esc(c.notice || "Google Classroom is a trademark of Google LLC.") + " Use of this trademark is subject to " +
+      ext(c.permissionsUrl || "https://www.google.com/permissions/", "Google Brand Permissions") + ".</p>";
+  }
+  function classroomButton(site, mapUrl) {
+    var c = site.classroom || {}, share = MMR.classroomShareUrl(site, mapUrl);
+    if (!share) return "";
+    var px = Math.max(32, Math.min(96, parseInt(c.iconSize, 10) || 32));
+    return ext(share, '<img src="' + esc(c.icon) + '" alt="" width="' + px + '" height="' + px + '">' + esc(c.label || "Share to Google Classroom"), "mml-btn mml-gc");
+  }
 
   function hashId(s) {
     var h = 2166136261;
@@ -218,6 +245,7 @@
     var repo = (hubHome(site).repoUrl || "").replace(/\/+$/, "");
     return '<div class="mml mml-foot"><h2>About this page</h2>' +
       (lesson ? "<p>" + t(lesson.licence) + " Map data: credited to each source under About this map.</p>" : "") +
+      (lesson ? classroomNotice(site, lesson) : "") +
       "<p>This page is built from " + (lesson ? "one lesson file" : "the lesson files") + (repo ? ": " + ext(repo + (lesson ? "/blob/main/resources/lessons/" + lesson.id + ".json" : "/tree/main/resources/lessons"), lesson ? "<code>" + esc(lesson.id) + ".json</code>" : "resources/lessons") : "") +
       ". Edit the file, not this page; the page is rebuilt from it.</p>" + versionsTable(site, lesson) + "</div>";
   }
@@ -230,13 +258,14 @@
     function add(html) { S.push(section([mdCard(slug + ":" + n, html)])); n++; }
 
     // Hero
-    add("<style>" + CSS + "</style>" + '<div class="mml mml-hero"><p class="mml-crumbs"><a href="' + lessonsPath(site) + '">Lessons</a> › ' + esc(lesson.course) + "</p>" +
+    var gc = classroomButton(site, mm);
+    add("<style>" + CSS + classroomCss(site) + "</style>" + '<div class="mml mml-hero"><p class="mml-crumbs"><a href="' + lessonsPath(site) + '">Lessons</a> › ' + esc(lesson.course) + "</p>" +
       "<h1>" + esc(lesson.title) + '</h1><p class="mml-summary">' + t(lesson.summary) + "</p>" +
       '<ul class="mml-facts">' + [["Grade", lesson.grade], ["Time", lesson.time], ["Unit", lesson.unit], ["Student login", lesson.studentLogin]].map(function (f) {
         return '<li><span class="mml-k">' + f[0] + '</span><span class="mml-v">' + esc(f[1]) + "</span></li>";
       }).join("") + "</ul>" +
       // The plain buttons move down the page to their sections, as on the mock-up; the Word downloads are in Student activity.
-      '<p class="mml-actions">' + ext(mm, "Open in MapMaker", "mml-btn mml-primary") + " " +
+      '<p class="mml-actions">' + ext(mm, "Open in MapMaker", "mml-btn mml-primary") + " " + (gc ? gc + " " : "") +
       jump(slug, "student-activity", "Student activity") + " " + jump(slug, "teacher-notes", "Teacher notes") + "</p>" +
       "<p>" + statusChip(lesson) + ' <span class="mml-muted">Content version ' + esc(lesson.contentVersion) + ", updated " + esc(lesson.updated) + ".</span></p></div>");
 
@@ -264,7 +293,9 @@
     add('<div class="mml">' + anchor(slug, "student-activity") + '<h2>Student activity</h2><p class="mml-prose">This is what students see on the Word sheet. Download it to edit it, print it, or open it in Google Docs.</p>' +
       '<p class="mml-actions">' + langs.map(function (l) {
         return '<a class="mml-btn" href="' + sheetPlaceholder(lesson.id, l) + '"' + (l !== "en" ? ' lang="' + l + '"' : "") + ">Download Word (" + esc(langName(site, l)) + ")</a>";
-      }).join(" ") + "</p>" + sheetPreview(site, lesson, "en") +
+      }).join(" ") + (gc ? " " + gc : "") + "</p>" +
+      (gc ? '<p class="mml-muted">The Google Classroom button shares the MapMaker map with a class. It doesn’t include the Word sheet, which can be attached in Classroom.</p>' : "") +
+      sheetPreview(site, lesson, "en") +
       langs.filter(function (l) { return l !== "en" && lesson.languages[l].note; }).map(function (l) {
         return '<p class="mml-muted">' + esc(langName(site, l)) + ": " + esc(lesson.languages[l].note) + "</p>";
       }).join("") + "</div>");
@@ -416,6 +447,9 @@
             if (ALLOWED.tags.indexOf(tname) < 0) errs.push(where + ": tag <" + tname + "> isn't on the allowed list.");
             var rest = m[2].replace(/([a-zA-Z_:][-a-zA-Z0-9_:.]*)\s*=\s*"([^"]*)"/g, function (_, an, av) {
               if (ALLOWED.attrs.indexOf(an.toLowerCase()) < 0) errs.push(where + ": attribute " + an + " on <" + tname + "> isn't on the allowed list.");
+              if ((an.toLowerCase() === "src" || an.toLowerCase() === "width" || an.toLowerCase() === "height" || an.toLowerCase() === "alt") && tname !== "img")
+                errs.push(where + ": attribute " + an + " belongs only on <img>.");
+              if (an.toLowerCase() === "src" && !/^https:\/\/[^\s"<>]+$/i.test(av)) errs.push(where + ": image " + av + " should be an https address.");
               if (an.toLowerCase() === "id") {
                 if (tname !== "a") errs.push(where + ": id belongs on an empty <a> anchor, not <" + tname + ">.");
                 if (!ANCHOR_ID.test(av)) errs.push(where + ": anchor id " + av + " should be lower-case words joined by hyphens.");
@@ -424,6 +458,10 @@
               return "";
             });
             if (/[^\s\/]/.test(rest)) errs.push(where + ": unquoted or odd attribute text on <" + tname + ">: " + rest.trim());
+            if (tname === "img" && tag.charAt(1) !== "/") {
+              if (!/\salt="/.test(tag)) errs.push(where + ": <img> needs alt text (alt=\"\" if the picture is decoration).");
+              if (!/\swidth="\d+"/.test(tag) || !/\sheight="\d+"/.test(tag)) errs.push(where + ": <img> needs a width and height, so the page doesn't jump as it loads.");
+            }
           });
           (md.match(/\{\{[^}]*\}\}/g) || []).forEach(function (ph) {
             var k = /^\{\{SHEET:(.+)\}\}$/.exec(ph);
