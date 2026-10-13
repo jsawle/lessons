@@ -1,5 +1,5 @@
 # MapMaker lessons on the Support Hub (questions, layers and sources)
-Built 2026-10-12 from the lesson files by the MapMaker resource pages, Vera knowledge builder 1.0. Do not edit by hand; edit the lesson files and rebuild.
+Built 2026-10-13 from the lesson files by the MapMaker resource pages, Vera knowledge builder 1.1. Do not edit by hand; edit the lesson files and rebuild.
 
 How to use this file: each lesson below has its own MapMaker map. When a teacher names one of these lessons (by title or lesson ID) and asks for new or different questions, base every question only on the bookmarks, layers and pop-up content listed for that lesson, and use bookmark and layer names exactly as written. If a request needs information that lesson's map does not show, say so plainly instead of inventing it. Use only the links listed for that lesson.
 
@@ -21,12 +21,15 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 - Battles on the map, 1776: Moores Creek Bridge, Feb 27 (American); Sullivan's Island, Jun 28 (American); Breach Inlet, Jun 28–29 (American); Gwynn's Island, Jul 8–10 (American); Brooklyn, Aug 27 (British); Valcour Island, Oct 11 (British); Pell's Point, Oct 18 (British); White Plains, Oct 28 (British); Fort Washington, Nov 16 (British); Fort Lee, Nov 20 (British); Newport, Dec 8–12 (British); Mount Holly, Dec 21–23 (British); Trenton, Dec 26 (American).
 - New York's "central position in the American Colonies and its port made it vital to commerce and a key strategic location" (American Battlefield Trust).
 - Boston to Concord: about 16 miles (26 km) in a straight line. New York City to Trenton: about 52 miles (84 km).
+**What students read before they start:** British soldiers marched out of Boston to seize weapons that colonists had stored at Concord. The fighting that followed started the American Revolution. For the next two years, the British army and navy and the new Continental Army, led by George Washington, fought over the colonies' cities, rivers and harbors.
+**How the student sheet explains the map's symbols:** Diamonds mark battles: blue for an American victory, red for a British victory. Each diamond is placed at the battle's usual location, but the fighting covered a wider area: gray shaded areas show the battlefield, and areas with diagonal stripes show the core, where the fighting was heaviest. Zoom in to see white numbered circles: five turning points, numbered in the order they happened.
 **Compelling question:** Why did the fighting move from Boston to New York, and then across New Jersey, in 1775–1776?
 **Questions already in this lesson:**
-1. Where did the war begin? Open the Massachusetts bookmark. Click Lexington and Concord. When was it fought? Use the legend to find out who won. Measure the straight-line distance from Boston to Concord: ________ miles
-2. Where was the fighting in 1775, and where in 1776? Click the battles and sort them by year. Which colonies had battles in 1775? Which in 1776? What changed?
-3. Why New York? Turn on Key Port Cities and zoom to New York. Compare its harbor and rivers with Boston's. What could a navy do from New York?
-4. How did 1776 end? Find Fort Washington, Fort Lee and Trenton. Who won each? Measure the distance from New York City to Trenton: ________ miles
+1. Where did the war begin? Open the Massachusetts bookmark. Click the diamond at Lexington and Concord. When was it fought? Use the legend to find out who won. Measure the straight-line distance from Boston to Concord: ________ miles
+2. Where was the fighting in 1775, and where in 1776? Zoom out until you can see every diamond, from Quebec to South Carolina. Click each one and write its name under the year it was fought. Which colonies had battles in 1775? Which in 1776? What changed?
+3. Why New York? In Map layers, turn on Key Port Cities in the American Revolution 1775-1781 (it's inside Revolutionary War Battlefields). Zoom in on New York City. Compare its harbor and rivers with Boston's. What could a navy do from New York?
+4. How did 1776 end? Zoom in on New York City until the numbered circles appear, then follow circles 4 and 5. Click the diamonds for Fort Washington, Fort Lee and Trenton. Who won each? Measure the distance from New York City to Trenton: ________ miles
+**Closing reflection already in this lesson:** What did the map show you about 1775–1776 that you might not have noticed from reading alone?
 **Common misunderstandings:**
 - "The early war was fought in Massachusetts." By the end of 1776 the map shows battles in seven colonies and in Quebec.
 - "The winner is the side that lost fewer soldiers." Bunker Hill is shown as a British victory, yet its pop-up says the British had twice as many casualties as the Patriots.
@@ -35,7 +38,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** TX 8.4(C); TX 8.10(A); TX 8.10(C); FL SS.8.A.3.6; C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.2.1 (draft, updated 2026-10-12).
+**Lesson content version:** 0.3.0 (draft, updated 2026-10-13).
 
 ### Roads, Trails, and Rails West
 **Lesson ID:** roads-trails-and-rails-west
