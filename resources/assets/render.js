@@ -1,4 +1,4 @@
-/* MapMaker resource pages (lab): page renderer v1.4. Draws a lesson page or the catalogue from JSON files. */
+/* MapMaker resource pages (lab): page renderer v1.5 (Share to Google Classroom button). Draws a lesson page or the catalogue from JSON files. */
 (function () {
   "use strict";
   var MMR = window.MMR, esc = MMR.esc, inline = MMR.inline;
@@ -42,6 +42,10 @@
     var hubLink = $("hub-link");
     if (hubLink) hubLink.href = "hub-preview.html?page=" + encodeURIComponent(lesson.id);
     var mmUrl = MMR.mapmakerUrl(site, lesson.map.webmapId);
+    // Share to Google Classroom shares the map, never this page (it holds the answer notes). Left out if switched off.
+    var gcShare = MMR.classroomShareUrl(site, mmUrl), gcSet = site.classroom || {};
+    var gc = gcShare ? '<a class="btn gc" href="' + esc(gcShare) + '" target="_blank" rel="noopener"><img src="' + esc(gcSet.icon) + '" alt="" width="32" height="32">' +
+      esc(gcSet.label || "Share to Google Classroom") + '<span class="sr-only"> (opens in a new tab)</span></a>' : "";
     var langs = Object.keys(lesson.languages);
     var courseUrl = site.hub.coursePaths[lesson.course] ? MMR.hubUrl(site, site.hub.coursePaths[lesson.course]) : null;
     var subjectUrl = site.hub.subjectPaths[lesson.subject] ? MMR.hubUrl(site, site.hub.subjectPaths[lesson.subject]) : null;
@@ -59,7 +63,7 @@
     h.push('<p class="summary">' + inline(lesson.summary) + "</p>");
     h.push('<dl class="facts"><div><dt>Grade</dt><dd>' + esc(lesson.grade) + "</dd></div><div><dt>Time</dt><dd>" + esc(lesson.time) +
       "</dd></div><div><dt>Unit</dt><dd>" + esc(lesson.unit) + "</dd></div><div><dt>Student login</dt><dd>" + esc(lesson.studentLogin) + "</dd></div></dl>");
-    h.push('<div class="actions"><a class="btn primary" href="' + esc(mmUrl) + '" target="_blank" rel="noopener">' + mapIcon + "Open in MapMaker" + newTab + "</a>" +
+    h.push('<div class="actions"><a class="btn primary" href="' + esc(mmUrl) + '" target="_blank" rel="noopener">' + mapIcon + "Open in MapMaker" + newTab + "</a>" + gc +
       '<a class="btn" href="#student-activity">Student activity</a><a class="btn" href="#teacher-notes">Teacher notes</a></div>');
     h.push("</div></div>");
 
@@ -108,7 +112,8 @@
       return '<button type="button" data-lang="' + l + '" aria-pressed="' + (i === 0) + '">' + esc(site.languageNames[l]) + "</button>";
     }).join("") + "</div>" : "") + langs.map(function (l) {
       return '<button type="button" class="btn" data-download="' + l + '">Download Word (' + esc(site.languageNames[l]) + ")</button>";
-    }).join("") + '<p class="status-msg" id="dl-status" role="status" aria-live="polite"></p></div>');
+    }).join("") + gc + '<p class="status-msg" id="dl-status" role="status" aria-live="polite"></p></div>');
+    if (gc) h.push('<p class="muted">The Google Classroom button shares the MapMaker map with a class. It doesn’t include the Word sheet, which can be attached in Classroom.</p>');
     langs.forEach(function (l, i) { h.push(sheetPreview(site, lesson, l, i > 0)); });
     h.push("</section>");
 
@@ -158,6 +163,8 @@
     $("main").innerHTML = h.join("");
 
     $("foot").innerHTML = '<div class="wrap"><p>' + inline(lesson.licence) + " Map data: credited to each source in About this map.</p>" +
+      (gc ? "<p>" + esc(gcSet.notice || "Google Classroom is a trademark of Google LLC.") + ' Use of this trademark is subject to <a href="' +
+        esc(gcSet.permissionsUrl || "https://www.google.com/permissions/") + '" target="_blank" rel="noopener">Google Brand Permissions<span class="sr-only"> (opens in a new tab)</span></a>.</p>' : "") +
       '<h2 style="font-size:1rem">About this page</h2>' + versionsTable(site, lesson) +
       "<p>Lesson file: <code>resources/lessons/" + esc(lesson.id) + ".json</code></p></div>";
 

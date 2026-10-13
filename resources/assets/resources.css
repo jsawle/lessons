@@ -48,6 +48,12 @@ p{margin:0}
 .btn.primary{background:var(--accent);border-color:var(--accent)}
 .btn.primary:hover{background:#ffd633}
 .btn svg{width:1.1em;height:1.1em;flex:none}
+/* Share to Google Classroom: Google's branding guidelines ask for the official icon on the left (32 px or more, unaltered),
+   Roboto Bold, and a 20% black shade on the icon on hover. Roboto: SIL Open Font License, see fonts/OFL.txt. */
+@font-face{font-family:"MML Roboto";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/roboto-latin-700-normal.woff2) format("woff2")}
+.btn.gc{font-family:"MML Roboto",Roboto,Arial,sans-serif;padding:.3rem 1.05rem .3rem .45rem}
+.btn.gc img{width:32px;height:32px;flex:none;display:block}
+.btn.gc:hover img{filter:brightness(.8)}
 .vera-frame{display:block;width:100%;max-width:60rem;height:640px;border:0;margin:.4rem 0 .6rem}
 .chip{display:inline-block;font-size:.78rem;font-weight:700;padding:.1rem .55rem;border-radius:999px;border:1px solid var(--line);background:#fff}
 .chip.draft{background:var(--note-bg);color:var(--note-ink);border-color:#e8d38a}

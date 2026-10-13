@@ -1,14 +1,14 @@
 {
   "app": {
     "name": "MapMaker resource pages (lab)",
-    "version": "0.7.0",
+    "version": "0.8.0",
     "parts": {
-      "Page renderer": "1.4",
+      "Page renderer": "1.5",
       "Word sheet builder": "1.1",
       "Lesson file format": "1.1",
       "Checker": "1.1",
       "Vera knowledge builder": "1.0",
-      "Hub page builder": "1.4"
+      "Hub page builder": "1.5"
     }
   },
   "hubDemo": {
@@ -31,6 +31,16 @@
   "vera": {
     "name": "Vera",
     "url": "https://jsawle.github.io/Vera/vera_canvas_lab.html"
+  },
+  "classroom": {
+    "about": "Share to Google Classroom button on each lesson page. It shares the lesson's MapMaker map, never the lesson page, which holds the answer notes. Follows Google's Classroom branding guidelines: approved wording, the official icon on the left (32 to 96 px, unaltered), Roboto Bold, a 20% black shade on the icon on hover, and the trademark notice in the page footer. The button is left out if icon is empty.",
+    "label": "Share to Google Classroom",
+    "shareUrl": "https://classroom.google.com/share",
+    "icon": "https://jsawle.github.io/lessons/resources/assets/brand/classroom-icon.png",
+    "iconSize": 32,
+    "font": "https://jsawle.github.io/lessons/resources/assets/fonts/roboto-latin-700-normal.woff2",
+    "notice": "Google Classroom is a trademark of Google LLC.",
+    "permissionsUrl": "https://www.google.com/permissions/"
   },
   "mapmaker": {
     "label": "MapMaker",
