@@ -109,6 +109,8 @@ ol.sq>li::before{content:counter(sq);width:2.2rem;height:2.2rem;display:grid;pla
 .toggle button[aria-pressed="true"]{background:#000;color:#fff}
 .sheet{border:1px solid var(--line);border-radius:8px;padding:1.4rem 1.4rem 1.6rem;display:grid;gap:.9rem;max-width:46rem;background:#fff;box-shadow:0 1px 3px rgb(0 0 0 / .06)}
 .sheet h3{font-size:1.35rem}
+.sheet h4{font-size:1.05rem;margin:.4rem 0 -.3rem}
+.sheet .tip{background:var(--paper-2);border-radius:4px;padding:.5rem .75rem}
 .sheet ol{margin:0;padding-left:1.3rem;display:grid;gap:.85rem}
 .sheet .blank{display:inline-block;min-width:6rem;border-bottom:1px solid var(--ink-2)}
 .status-msg{min-height:1.4em;font-size:.95rem}

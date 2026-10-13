@@ -1,10 +1,10 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.1",
+  "formatVersion": "1.2",
   "id": "revolutionary-battles-1775-1776",
-  "contentVersion": "0.2.1",
+  "contentVersion": "0.3.0",
   "status": "draft",
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "reviewed": null,
 
   "title": "1775–1776 Revolutionary Battles",
@@ -42,11 +42,11 @@
       {
         "id": "q1",
         "title": { "en": "Where did the war begin?", "es": "¿Dónde comenzó la guerra?" },
-        "task": "Open the Massachusetts bookmark and click Lexington and Concord, then Boston. Note the dates, and the winner from the symbol color and legend. Measure the straight-line distance from Boston to Concord.",
+        "task": "Open the Massachusetts bookmark and click the Lexington and Concord diamond, then Boston. Note the dates, and the winner from the symbol color and legend. Measure the straight-line distance from Boston to Concord.",
         "tools": ["bookmarks", "popups", "legend", "measure"],
         "student": {
-          "en": "Open the Massachusetts bookmark. Click Lexington and Concord. When was it fought? Use the legend to find out who won.",
-          "es": "Abre el marcador Massachusetts. Haz clic en Lexington y Concord. ¿Cuándo fue la batalla? Usa la leyenda para saber quién ganó."
+          "en": "Open the Massachusetts bookmark. Click the diamond at Lexington and Concord. When was it fought? Use the legend to find out who won.",
+          "es": "Abre el marcador Massachusetts. Haz clic en el rombo de Lexington y Concord. ¿Cuándo fue la batalla? Usa la leyenda para saber quién ganó."
         },
         "fill": {
           "en": "Measure the straight-line distance from Boston to Concord: ________ miles",
@@ -59,12 +59,13 @@
       {
         "id": "q2",
         "title": { "en": "Where was the fighting in 1775, and where in 1776?", "es": "¿Dónde se combatió en 1775 y dónde en 1776?" },
-        "task": "Click the battles and sort them into two lists by year. Which colonies saw fighting each year, and what changed?",
+        "task": "Zoom out to see all 21 battles, from Quebec to South Carolina, and sort them into two lists by year. Which colonies saw fighting each year, and what changed?",
         "tools": ["popups", "legend"],
         "student": {
-          "en": "Click the battles and sort them by year. Which colonies had battles in 1775? Which in 1776? What changed?",
-          "es": "Haz clic en las batallas y ordénalas por año. ¿Qué colonias tuvieron batallas en 1775? ¿Y en 1776? ¿Qué cambió?"
+          "en": "Zoom out until you can see every diamond, from Quebec to South Carolina. Click each one and write its name under the year it was fought. Which colonies had battles in 1775? Which in 1776? What changed?",
+          "es": "Aléjate hasta ver todos los rombos, desde Quebec hasta Carolina del Sur. Haz clic en cada uno y escribe su nombre bajo el año en que se combatió. ¿Qué colonias tuvieron batallas en 1775? ¿Y en 1776? ¿Qué cambió?"
         },
+        "lines": 5,
         "answer": {
           "table": {
             "caption": "Battles on the map by year and winner",
@@ -80,11 +81,11 @@
       {
         "id": "q3",
         "title": { "en": "Why New York?", "es": "¿Por qué Nueva York?" },
-        "task": "Turn on Key Port Cities and zoom to New York. Compare its harbor and rivers with Boston's. What could a navy do from New York?",
+        "task": "Turn on Key Port Cities (it sits inside the Revolutionary War Battlefields group) and zoom to New York City. Compare its harbor and rivers with Boston's. What could a navy do from New York?",
         "tools": ["layers", "zoom"],
         "student": {
-          "en": "Turn on Key Port Cities and zoom to New York. Compare its harbor and rivers with Boston's. What could a navy do from New York?",
-          "es": "Activa la capa Key Port Cities (ciudades portuarias clave) y acércate a Nueva York. Compara su puerto y sus ríos con los de Boston. ¿Qué podía hacer una armada desde Nueva York?"
+          "en": "In Map layers, turn on Key Port Cities in the American Revolution 1775-1781 (it's inside Revolutionary War Battlefields). Zoom in on New York City. Compare its harbor and rivers with Boston's. What could a navy do from New York?",
+          "es": "En las capas del mapa (Map layers), activa Key Port Cities in the American Revolution 1775-1781 (ciudades portuarias clave; está dentro de Revolutionary War Battlefields). Acércate a la ciudad de Nueva York. Compara su puerto y sus ríos con los de Boston. ¿Qué podía hacer una armada desde Nueva York?"
         },
         "answer": {
           "text": "The American Battlefield Trust says the city's \"central position in the American Colonies and its port made it vital to commerce and a key strategic location\", and that British warships could \"dominate the river waterways that cut through New York City.\" The British left Boston in March 1776 and won at Brooklyn on August 27. ([Battle of Brooklyn, American Battlefield Trust](https://www.battlefields.org/learn/revolutionary-war/battles/brooklyn))"
@@ -93,11 +94,11 @@
       {
         "id": "q4",
         "title": { "en": "How did 1776 end?", "es": "¿Cómo terminó 1776?" },
-        "task": "Find Fort Washington, Fort Lee and Trenton, and note who won each. Measure the distance from New York City to Trenton.",
+        "task": "Zoom in near New York City until the numbered turning points show, and follow circles 4 and 5. Find Fort Washington, Fort Lee and Trenton, and note who won each. Measure the distance from New York City to Trenton.",
         "tools": ["popups", "measure"],
         "student": {
-          "en": "Find Fort Washington, Fort Lee and Trenton. Who won each?",
-          "es": "Busca Fort Washington, Fort Lee y Trenton. ¿Quién ganó cada batalla?"
+          "en": "Zoom in on New York City until the numbered circles appear, then follow circles 4 and 5. Click the diamonds for Fort Washington, Fort Lee and Trenton. Who won each?",
+          "es": "Acércate a la ciudad de Nueva York hasta que aparezcan los círculos numerados y sigue los círculos 4 y 5. Haz clic en los rombos de Fort Washington, Fort Lee y Trenton. ¿Quién ganó cada batalla?"
         },
         "fill": {
           "en": "Measure the distance from New York City to Trenton: ________ miles",
@@ -115,6 +116,22 @@
         "es": "Responde la pregunta central con evidencia de al menos dos lugares del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
       },
       "tools": ["sketch", "bookmarks"]
+    }
+  },
+
+  "studentSupport": {
+    "beforeYouStart": {
+      "en": "British soldiers marched out of Boston to seize weapons that colonists had stored at Concord. The fighting that followed started the American Revolution. For the next two years, the British army and navy and the new Continental Army, led by George Washington, fought over the colonies' cities, rivers and harbors.",
+      "es": "Soldados británicos salieron de Boston para apoderarse de las armas que los colonos habían guardado en Concord. Los combates que siguieron dieron inicio a la Revolución estadounidense. Durante los dos años siguientes, el ejército y la armada británicos y el nuevo Ejército Continental, dirigido por George Washington, lucharon por las ciudades, los ríos y los puertos de las colonias."
+    },
+    "readingTheMap": {
+      "en": "Diamonds mark battles: blue for an American victory, red for a British victory. Each diamond is placed at the battle's usual location, but the fighting covered a wider area: gray shaded areas show the battlefield, and areas with diagonal stripes show the core, where the fighting was heaviest. Zoom in to see white numbered circles: five turning points, numbered in the order they happened.",
+      "es": "Los rombos marcan las batallas: azul si ganaron los estadounidenses, rojo si ganaron los británicos. Cada rombo está en el lugar donde se suele situar la batalla, pero los combates ocuparon un área mayor: las zonas grises muestran el campo de batalla y las zonas rayadas, el núcleo, donde la lucha fue más intensa. Acércate para ver círculos blancos numerados: cinco momentos decisivos, numerados en el orden en que ocurrieron."
+    },
+    "tips": ["popups"],
+    "reflection": {
+      "en": "What did the map show you about 1775–1776 that you might not have noticed from reading alone?",
+      "es": "¿Qué te mostró el mapa sobre 1775–1776 que quizá no habrías notado solo con la lectura?"
     }
   },
 

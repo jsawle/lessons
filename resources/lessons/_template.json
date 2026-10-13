@@ -1,6 +1,6 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.1",
+  "formatVersion": "1.2",
   "id": "copy-this-file-and-rename-it",
   "contentVersion": "0.1.0",
   "status": "draft",
@@ -38,6 +38,7 @@
         "tools": ["bookmarks", "popups"],
         "student": { "en": "What students read on the sheet.", "es": "Lo que leen los estudiantes." },
         "fill": { "en": "Optional fill-in line: ________ miles", "es": "Línea opcional: ________ millas" },
+        "lines": 3,
         "answer": { "text": "Answer notes for the teacher, with sources." }
       }
     ],
@@ -46,6 +47,13 @@
       "student": { "en": "Answer the big question using evidence from the map.", "es": "Responde la pregunta central con evidencia del mapa." },
       "tools": ["sketch"]
     }
+  },
+
+  "studentSupport": {
+    "beforeYouStart": { "en": "Optional. Two or three sentences of context, without giving away answers. Adding studentSupport makes a two-page student sheet.", "es": "Opcional. Dos o tres oraciones de contexto." },
+    "readingTheMap": { "en": "Optional. What each symbol on the map means, checked against the web map.", "es": "Opcional. Qué significa cada símbolo del mapa." },
+    "tips": ["popups"],
+    "reflection": { "en": "Optional. What did the map show you that you might not have noticed from reading alone?", "es": "Opcional. ¿Qué te mostró el mapa que quizá no habrías notado solo con la lectura?" }
   },
 
   "teacherNotes": {

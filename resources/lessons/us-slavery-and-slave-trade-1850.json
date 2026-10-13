@@ -1,6 +1,6 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.1",
+  "formatVersion": "1.2",
   "id": "us-slavery-and-slave-trade-1850",
   "contentVersion": "0.1.0",
   "status": "draft",

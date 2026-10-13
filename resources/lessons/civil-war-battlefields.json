@@ -1,6 +1,6 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.1",
+  "formatVersion": "1.2",
   "id": "civil-war-battlefields",
   "contentVersion": "0.1.0",
   "status": "draft",
