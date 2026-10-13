@@ -6,7 +6,7 @@
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  var VERSION = { renderer: "1.5", format: "1.1", checker: "1.1", vera: "1.0" };
+  var VERSION = { renderer: "1.6", format: "1.2", checker: "1.2", vera: "1.1" };
   var HEX32 = /^[0-9a-f]{32}$/i;
   var DATE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -97,11 +97,15 @@
       L.push("**Key facts:**");
       lesson.keyFacts.forEach(function (f) { L.push("- " + md(f)); });
     }
+    var sup = lesson.studentSupport || {};
+    if (sup.beforeYouStart) L.push("**What students read before they start:** " + md(sup.beforeYouStart.en));
+    if (sup.readingTheMap) L.push("**How the student sheet explains the map's symbols:** " + md(sup.readingTheMap.en));
     L.push("**Compelling question:** " + md(lesson.inquiry.compellingQuestion.en));
     L.push("**Questions already in this lesson:**");
     lesson.inquiry.questions.forEach(function (q, i) {
       L.push((i + 1) + ". " + md(q.title.en) + " " + md(q.student.en) + (q.fill ? " " + md(q.fill.en) : ""));
     });
+    if (sup.reflection) L.push("**Closing reflection already in this lesson:** " + md(sup.reflection.en));
     if (lesson.teacherNotes.misconceptions && lesson.teacherNotes.misconceptions.length) {
       L.push("**Common misunderstandings:**");
       lesson.teacherNotes.misconceptions.forEach(function (m) { L.push("- \"" + md(m.claim) + "\" " + md(m.response)); });
@@ -176,6 +180,7 @@
       lang(q.title, w + " title", langs);
       lang(q.student, w + " student text", langs);
       if (q.fill) lang(q.fill, w + " fill-in line", langs);
+      if (q.lines !== undefined) need(Number.isInteger(q.lines) && q.lines >= 1 && q.lines <= 8, w + ": lines (writing lines on the sheet) should be a whole number from 1 to 8.");
       need(str(q.task), w + ": task (the teacher-facing version) is missing.");
       need(Array.isArray(q.tools) && q.tools.length > 0, w + ": list the MapMaker tools it uses.");
       (q.tools || []).forEach(function (t) { need(!!site.tools[t], w + ": unknown tool \"" + t + "\". Known tools: " + Object.keys(site.tools).join(", ") + "."); });
@@ -189,6 +194,28 @@
     need(str(fin.teacher), "inquiry.final.teacher is missing.");
     lang(fin.student, "inquiry.final.student", langs);
     (fin.tools || []).forEach(function (t) { need(!!site.tools[t], "inquiry.final: unknown tool \"" + t + "\"."); });
+    if (lesson.studentSupport !== undefined) {
+      var sup = lesson.studentSupport || {};
+      need(typeof sup === "object" && !Array.isArray(sup), "studentSupport should be an object.");
+      need(sup.beforeYouStart || sup.readingTheMap || (sup.tips || []).length || sup.reflection,
+        "studentSupport is empty: give at least one of beforeYouStart, readingTheMap, tips or reflection.");
+      if (sup.beforeYouStart) lang(sup.beforeYouStart, "studentSupport.beforeYouStart", langs);
+      if (sup.readingTheMap) lang(sup.readingTheMap, "studentSupport.readingTheMap", langs);
+      if (sup.reflection) lang(sup.reflection, "studentSupport.reflection", langs);
+      if (sup.tips !== undefined) need(Array.isArray(sup.tips), "studentSupport.tips should be a list, such as [\"popups\"].");
+      (Array.isArray(sup.tips) ? sup.tips : []).forEach(function (k) {
+        langs.forEach(function (lg) {
+          var T = (site.sheetText || {})[lg] || {};
+          need(T.tips && str(T.tips[k]), "studentSupport.tips: no \"" + k + "\" tip in site.json sheetText." + lg + ".tips.");
+        });
+      });
+      langs.forEach(function (lg) {
+        var T = (site.sheetText || {})[lg] || {};
+        ["beforeYouStart", "readingTheMap", "questions", "lookingBack", "tip"].forEach(function (k) {
+          need(str(T[k]), "site.json sheetText." + lg + "." + k + " is missing (the two-page sheet's wording).");
+        });
+      });
+    }
     var tn = lesson.teacherNotes || {};
     need(str(tn.beforeClass), "teacherNotes.beforeClass is missing.");
     need(Array.isArray(tn.keyWords) && tn.keyWords.length > 0, "teacherNotes.keyWords needs at least one word.");

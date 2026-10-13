@@ -1,4 +1,4 @@
-/* MapMaker resource pages (lab): page renderer v1.5 (Share to Google Classroom button). Draws a lesson page or the catalogue from JSON files. */
+/* MapMaker resource pages (lab): page renderer v1.6 (two-page student sheets; Share to Google Classroom button). Draws a lesson page or the catalogue from JSON files. */
 (function () {
   "use strict";
   var MMR = window.MMR, esc = MMR.esc, inline = MMR.inline;
@@ -184,17 +184,27 @@
     }).join("") + "</ul>";
   }
 
+  /* The extra sections a lesson's studentSupport adds to the sheet (two-page sheet), as on the Word file. */
+  function supportTop(site, lesson, lang) {
+    var S = lesson.studentSupport, T = site.sheetText[lang];
+    if (!S) return "";
+    return (S.beforeYouStart ? "<h4>" + esc(T.beforeYouStart) + "</h4><p>" + inline(S.beforeYouStart[lang]) + "</p>" : "") +
+      (S.readingTheMap ? "<h4>" + esc(T.readingTheMap) + "</h4><p>" + inline(S.readingTheMap[lang]) + "</p>" : "") +
+      (S.tips || []).map(function (k) { return '<p class="tip"><strong>' + esc(T.tip) + "</strong> " + esc(T.tips[k]) + "</p>"; }).join("") +
+      "<h4>" + esc(T.questions) + "</h4>";
+  }
   function sheetPreview(site, lesson, lang, hidden) {
-    var T = site.sheetText[lang], blank = function (s) { return esc(MMR.plain(s)).replace(/_{3,}/g, '<span class="blank">&nbsp;</span>'); };
+    var S = lesson.studentSupport, T = site.sheetText[lang], blank = function (s) { return esc(MMR.plain(s)).replace(/_{3,}/g, '<span class="blank">&nbsp;</span>'); };
     var title = lang === "en" ? lesson.title : (lesson.sheetTitle && lesson.sheetTitle[lang]) || lesson.title;
     var note = lesson.languages[lang] && lesson.languages[lang].note;
     return '<article class="sheet" id="sheet-' + lang + '" lang="' + lang + '" aria-label="' + esc(T.subtitle + ", " + site.languageNames[lang]) + '"' + (hidden ? " hidden" : "") + ">" +
       "<h3>" + esc(title) + "</h3><p>" + esc(T.name) + ' <span class="blank">&nbsp;</span> &nbsp; ' + esc(T.date) + ' <span class="blank">&nbsp;</span></p>' +
       "<p><strong>" + esc(T.bigQuestion) + "</strong> " + inline(lesson.inquiry.compellingQuestion[lang]) + "</p>" +
-      "<p><em>" + esc(T.openMap + " " + lesson.title) + "</em></p><ol>" +
+      "<p><em>" + esc(T.openMap + " " + lesson.title) + "</em></p>" + supportTop(site, lesson, lang) + "<ol>" +
       lesson.inquiry.questions.map(function (q) {
         return "<li><strong>" + inline(q.title[lang]) + "</strong> " + inline(q.student[lang]) + (q.fill ? " " + blank(q.fill[lang]) : "") + "</li>";
       }).join("") + "</ol><p><strong>" + esc(T.yourAnswer) + "</strong> " + inline(lesson.inquiry.final.student[lang]) + "</p>" +
+      (S && S.reflection ? "<h4>" + esc(T.lookingBack) + "</h4><p>" + inline(S.reflection[lang]) + "</p>" : "") +
       (note ? '<p class="muted" lang="en">' + esc(note) + "</p>" : "") + "</article>";
   }
 

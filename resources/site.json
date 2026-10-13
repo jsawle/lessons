@@ -1,14 +1,14 @@
 {
   "app": {
     "name": "MapMaker resource pages (lab)",
-    "version": "0.8.0",
+    "version": "0.9.0",
     "parts": {
-      "Page renderer": "1.5",
-      "Word sheet builder": "1.1",
-      "Lesson file format": "1.1",
-      "Checker": "1.1",
-      "Vera knowledge builder": "1.0",
-      "Hub page builder": "1.5"
+      "Page renderer": "1.6",
+      "Word sheet builder": "1.2",
+      "Lesson file format": "1.2",
+      "Checker": "1.2",
+      "Vera knowledge builder": "1.1",
+      "Hub page builder": "1.6"
     }
   },
   "hubDemo": {
@@ -79,8 +79,12 @@
     "sketch": { "label": "Sketch", "howTo": "sketch-on-a-map", "howToTitle": "Sketch on a Map" }
   },
   "sheetText": {
-    "en": { "name": "Name", "date": "Date", "bigQuestion": "Big question:", "yourAnswer": "Your answer:", "openMap": "Open the map in MapMaker:", "subtitle": "Student sheet" },
-    "es": { "name": "Nombre", "date": "Fecha", "bigQuestion": "Pregunta central:", "yourAnswer": "Tu respuesta:", "openMap": "Abre el mapa en MapMaker:", "subtitle": "Hoja del estudiante" }
+    "en": { "name": "Name", "date": "Date", "bigQuestion": "Big question:", "yourAnswer": "Your answer:", "openMap": "Open the map in MapMaker:", "subtitle": "Student sheet",
+      "beforeYouStart": "Before you start", "readingTheMap": "Reading the map", "questions": "Questions", "lookingBack": "Looking back", "tip": "Tip:",
+      "tips": { "popups": "If a pop-up says 1 of 2 (or more), more than one thing is at that spot. Use the arrows in the pop-up to see each one." } },
+    "es": { "name": "Nombre", "date": "Fecha", "bigQuestion": "Pregunta central:", "yourAnswer": "Tu respuesta:", "openMap": "Abre el mapa en MapMaker:", "subtitle": "Hoja del estudiante",
+      "beforeYouStart": "Antes de empezar", "readingTheMap": "Cómo leer el mapa", "questions": "Preguntas", "lookingBack": "Reflexión", "tip": "Consejo:",
+      "tips": { "popups": "Si una ventana emergente dice 1 de 2 (o más), hay más de un elemento en ese lugar. Usa las flechas de la ventana para ver cada uno." } }
   },
   "languageNames": { "en": "English", "es": "Español" },
   "languageNamesInEnglish": { "en": "English", "es": "Spanish" }

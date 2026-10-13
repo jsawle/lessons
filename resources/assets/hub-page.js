@@ -1,4 +1,4 @@
-/* MapMaker resource pages: Hub page builder v1.5 (Share to Google Classroom button; Vera embedded in the page; buttons that jump to sections).
+/* MapMaker resource pages: Hub page builder v1.6 (two-page student sheet preview; Share to Google Classroom button; Vera embedded in the page; buttons that jump to sections).
    Turns lesson files into ArcGIS Hub page layouts: sections of markdown cards that hold plain HTML
    and one <style> block, with no scripts, so the pages work inside Hub. Runs in the browser
    (window.MMRHub, for the Hub preview) and in Node (for the bundle the publishing notebook reads). */
@@ -7,7 +7,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "1.5";
+  var VERSION = "1.6";
   var esc = MMR.esc;
   var MONTHS = ["August", "September", "October", "November", "December", "January", "February", "March", "April", "May", "June", "July"];
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
@@ -19,7 +19,7 @@
      above the heading, with a lower-case, hyphenated id. <img> is only for the Google Classroom icon; Esri's
      ArcGIS HTML sanitizer keeps img with src, alt, width and height. */
   var ALLOWED = {
-    tags: ["style", "div", "p", "span", "a", "h1", "h2", "h3", "ul", "ol", "li", "strong", "em", "code", "br",
+    tags: ["style", "div", "p", "span", "a", "h1", "h2", "h3", "h4", "ul", "ol", "li", "strong", "em", "code", "br",
       "table", "thead", "tbody", "tr", "th", "td", "img"],
     attrs: ["class", "href", "target", "rel", "lang", "scope", "id", "src", "alt", "width", "height"]
   };
@@ -78,6 +78,8 @@
     ".mml-tools{font-size:.95rem}",
     ".mml-sheet{border:1px solid #D4D4D4;border-radius:4px;padding:1.2em 1.4em .6em;max-width:46rem;box-shadow:0 1px 3px rgba(0,0,0,.06);background:#fff}",
     ".mml-sheet ol{padding-left:1.4em}",
+    ".mml-sheet h4{font-size:1.05rem;line-height:1.3;font-weight:700;margin:1em 0 .3em;color:#141414}",
+    ".mml-sheet .mml-tip{background:#F3F3F3;border-radius:4px;padding:.5em .75em}",
     ".mml-blank{display:inline-block;min-width:6em;border-bottom:1px solid #4A4A4A}",
     ".mml .mml-words{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.45em}",
     ".mml-words li{border:1px solid #D4D4D4;border-radius:4px;padding:.1em .6em;font-weight:600;margin:0}",
@@ -222,17 +224,27 @@
     }).join(" · ");
   }
 
+  /* The extra sections a lesson's studentSupport adds to the sheet (two-page sheet), as on the Word file. */
+  function supportTop(site, lesson, lang) {
+    var S = lesson.studentSupport, T = site.sheetText[lang];
+    if (!S) return "";
+    return (S.beforeYouStart ? "<h4>" + esc(T.beforeYouStart) + "</h4><p>" + t(S.beforeYouStart[lang]) + "</p>" : "") +
+      (S.readingTheMap ? "<h4>" + esc(T.readingTheMap) + "</h4><p>" + t(S.readingTheMap[lang]) + "</p>" : "") +
+      (S.tips || []).map(function (k) { return '<p class="mml-tip"><strong>' + esc(T.tip) + "</strong> " + esc(T.tips[k]) + "</p>"; }).join("") +
+      "<h4>" + esc(T.questions) + "</h4>";
+  }
   function sheetPreview(site, lesson, lang) {
-    var T = site.sheetText[lang];
+    var T = site.sheetText[lang], S = lesson.studentSupport;
     var title = lang === "en" ? lesson.title : (lesson.sheetTitle && lesson.sheetTitle[lang]) || lesson.title;
     function blanks(s) { return esc(MMR.plain(s)).replace(/_{3,}/g, '<span class="mml-blank"> </span>'); }
     return '<div class="mml-sheet" lang="' + lang + '"><h3>' + esc(title) + '</h3><p class="mml-muted">' + esc(T.subtitle) + "</p>" +
       "<p>" + esc(T.name) + ' <span class="mml-blank"> </span> ' + esc(T.date) + ' <span class="mml-blank"> </span></p>' +
       "<p><strong>" + esc(T.bigQuestion) + "</strong> " + t(lesson.inquiry.compellingQuestion[lang]) + "</p>" +
-      "<p><em>" + esc(T.openMap + " " + lesson.title) + "</em></p><ol>" +
+      "<p><em>" + esc(T.openMap + " " + lesson.title) + "</em></p>" + supportTop(site, lesson, lang) + "<ol>" +
       lesson.inquiry.questions.map(function (q) {
         return "<li><strong>" + t(q.title[lang]) + "</strong> " + t(q.student[lang]) + (q.fill ? " " + blanks(q.fill[lang]) : "") + "</li>";
-      }).join("") + "</ol><p><strong>" + esc(T.yourAnswer) + "</strong> " + t(lesson.inquiry.final.student[lang]) + "</p></div>";
+      }).join("") + "</ol><p><strong>" + esc(T.yourAnswer) + "</strong> " + t(lesson.inquiry.final.student[lang]) + "</p>" +
+      (S && S.reflection ? "<h4>" + esc(T.lookingBack) + "</h4><p>" + t(S.reflection[lang]) + "</p>" : "") + "</div>";
   }
 
   function versionsTable(site, lesson) {
