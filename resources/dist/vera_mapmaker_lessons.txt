@@ -1,5 +1,5 @@
 # MapMaker lessons on the Support Hub (questions, layers and sources)
-Built 2026-10-13 from the lesson files by the MapMaker resource pages, Vera knowledge builder 1.1. Do not edit by hand; edit the lesson files and rebuild.
+Built 2026-10-14 from the lesson files by the MapMaker resource pages, Vera knowledge builder 1.1. Do not edit by hand; edit the lesson files and rebuild.
 
 How to use this file: each lesson below has its own MapMaker map. When a teacher names one of these lessons (by title or lesson ID) and asks for new or different questions, base every question only on the bookmarks, layers and pop-up content listed for that lesson, and use bookmark and layer names exactly as written. If a request needs information that lesson's map does not show, say so plainly instead of inventing it. Use only the links listed for that lesson.
 
@@ -58,12 +58,15 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 - Santa Fe Trail (pop-up): about 900 miles (1,450 km) from Missouri to Santa Fe, New Mexico; used from 1821; replaced when the Atchison, Topeka and Santa Fe railroad reached Santa Fe in 1880.
 - The first transcontinental railroad (Union Pacific and Central Pacific) was completed in 1869.
 - Straight-line distance from Independence, Missouri, to Portland, Oregon: about 1,500 miles (2,420 km).
+**What students read before they start:** In the 1800s, hundreds of thousands of people from the eastern United States went west in wagons, looking for farmland, gold or a place to practice their religion freely. A journey along one of the trails could take months. Later in the century, railroads were built across the West.
+**How the student sheet explains the map's symbols:** Each trail is a dotted line in its own color; the legend names them. Railroads and Indigenous Territories are off when the map opens: turn them on in Map layers. Thick colored lines are the transcontinental railroads, and thin gray lines are other railroads. Each Indigenous nation's territory is shaded in its own color, and its name appears when you zoom in. The territories are approximate and aren't listed in the legend.
 **Compelling question:** How did trails and then railroads change the American West, and for whom?
 **Questions already in this lesson:**
-1. Where did the trails begin? Click three trails. Where did each one start and end? In which state do most of the trails start?
-2. How far, and how many? Click the Oregon Trail. How long was it, and how many people traveled it? Why is the trail longer than a straight line? Measure the straight-line distance from Independence, Missouri, to Portland, Oregon: ________ miles
-3. Whose land? Turn on the Indigenous Territories layer and follow one trail. Was the land the trail crossed empty? What might the trail have meant for the people who lived there?
-4. From trails to rails Turn on the Railroads layers. Which trails does the Union Pacific and Central Pacific line follow most closely? Click a railroad line: when was it in operation?
+1. Where did the trails begin? Click three of the dotted trail lines. Where did each one start and end? In which state do most of the trails start?
+2. How far, and how many? Click the Oregon Trail (find its color in the legend). How long was it, and how many people traveled it? Why is the trail longer than a straight line? Measure the straight-line distance from Independence, Missouri, to Portland, Oregon: ________ miles
+3. Whose land? In Map layers, turn on Indigenous Territories. Zoom in until the nations' names appear, then follow one trail. Was the land the trail crossed empty? What might the trail have meant for the people who lived there?
+4. From trails to rails In Map layers, turn on Railroads. Which trails does the Union Pacific and Central Pacific line follow most closely? Click a thin gray railroad line: when was it in operation?
+**Closing reflection already in this lesson:** What did the map show you about the journey west that you might not have noticed from reading alone?
 **Common misunderstandings:**
 - "The West was empty before settlers arrived." The Indigenous Territories layer shows nations' lands across the whole region the trails crossed.
 - "Everyone went west on the Oregon Trail." The map shows seven trails, to Oregon, California, Utah, New Mexico and Southern California.
@@ -72,7 +75,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** TX 8.6(B); TX 8.6(C); TX 8.11(A); FL SS.8.A.4.1; C3 D2.Geo.7.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.1.0 (draft, updated 2026-10-12).
+**Lesson content version:** 0.2.0 (draft, updated 2026-10-14).
 
 ### US Slavery and Slave Trade, 1850
 **Lesson ID:** us-slavery-and-slave-trade-1850
@@ -93,12 +96,15 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 - Missouri Compromise (1820): slavery barred north of 36°30′ North in the Louisiana Territory, except Missouri; Maine admitted as a free state at the same time.
 - Underground Railroad cities on the map include Ripley, Cincinnati, Cleveland, Ashtabula, Toledo and Oberlin (Ohio), Detroit (Michigan), and Chatham and Toronto (Ontario) and Montreal (Quebec) in Canada.
 - The layers are traced from Harper's Atlas of American History (1920); current scholarship may differ.
+**What students read before they start:** By 1850, the Northern states had ended slavery or passed laws to end it, but in the South slavery was legal and growing. More than 3 million people were enslaved in the United States. Each time a new state joined the Union, Congress argued over whether slavery would be allowed there.
+**How the student sheet explains the map's symbols:** States and territories are shaded brown if they were free and green if they allowed slavery; the paler shades mean free, or slave, because of a compromise. A gray dashed line marks the Missouri Compromise Line. Solid black lines are internal routes of the slave trade. They have no arrows. Dashed and dotted lines in the same layer show sea routes and the voyages of two ships, the Amistad and the Creole. Orange lines are approximate Underground Railroad routes. Zoom in to see the towns along them: orange dots in the United States, black dots in Canada.
 **Compelling question:** How did slavery divide the United States by 1850?
 **Questions already in this lesson:**
 1. Free states and slave states Use the legend to find the free states and the slave states. How many of each are there? Where is the line between them in the East?
-2. The Missouri Compromise Find the Missouri Compromise Line. Slavery was banned north of it in the Louisiana Territory. Which slave state lies mostly north of the line?
-3. The internal slave trade Follow the Internal Routes of the US Slave Trade. In which states do the routes start, and where do they end? In which direction were enslaved people forced to move?
-4. Routes to freedom Open the Illinois, Indiana, and Ohio bookmark. Follow the Underground Railroad routes north from the Ohio River. Where do they lead?
+2. The Missouri Compromise Find the Missouri Compromise Line (the gray dashed line). Slavery was banned north of it in the Louisiana Territory. Which slave state lies mostly north of the line?
+3. The internal slave trade Follow the solid black lines of the Internal Routes of the US Slave Trade. Which states do the routes connect? The lines have no arrows, so use what you have learned: in which direction were enslaved people forced to move?
+4. Routes to freedom Open the Illinois, Indiana, and Ohio bookmark. Follow the orange Underground Railroad routes north from the Ohio River, and zoom in to read the names of the towns along them. Where do the routes lead?
+**Closing reflection already in this lesson:** What did the map show you about slavery in 1850 that you might not have noticed from reading alone?
 **Common misunderstandings:**
 - "Freedom seekers were safe once they reached a free state." After the Fugitive Slave Act of 1850 they could be captured in free states, which is why many routes on the map continue to Canada.
 - "The Underground Railroad was a real railroad." The routes on the map are paths people walked, rode or sailed, with help along the way; the name borrowed railroad words.
@@ -107,7 +113,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** FL SS.8.A.5.2; TX 8.10(A); C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.1.0 (draft, updated 2026-10-12).
+**Lesson content version:** 0.2.0 (draft, updated 2026-10-14).
 
 ### Civil War Battlefields
 **Lesson ID:** civil-war-battlefields
@@ -127,12 +133,15 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 - Seceded after Fort Sumter, per the map: Virginia, Arkansas, North Carolina and Tennessee.
 - Union slave (border) states on the 1863 map: Delaware, Maryland, Kentucky, Missouri and West Virginia (a state from June 1863).
 - Antietam (Maryland, 1862) and Gettysburg (Pennsylvania, 1863) were fought in Union states.
+**What students read before they start:** In November 1860, Abraham Lincoln was elected president. He opposed the spread of slavery into the western territories, and Southern slave states began to leave the Union to form the Confederate States of America. In April 1861, Confederate forces attacked Fort Sumter, a Union fort in South Carolina, and the Civil War began.
+**How the student sheet explains the map's symbols:** States are shaded by side in 1863: shades of blue for the Union and shades of brown for the Confederacy; the legend explains each shade. A white dashed line marks the boundary between the two sides. Thin dark gray lines are railroads built by 1863. Diamonds mark battles: blue for a Union victory, brown for a Confederate victory, white if neither side won. Bigger diamonds mean more soldiers were killed, wounded, captured or missing. Tan shaded areas show the land each battlefield covered, and areas with diagonal stripes show where the fighting was heaviest.
 **Compelling question:** How did the geography of a divided nation shape the Civil War?
 **Questions already in this lesson:**
 1. A nation divided Use the legend. Which states left the Union before the attack on Fort Sumter in April 1861? Which left after? Which slave states stayed in the Union?
 2. The border states Zoom to Washington, D.C. Which two states border it? What would have happened to the capital if Maryland had left the Union?
-3. Railroads, North and South Compare the railroads north and south of the boundary between the Union and the Confederacy. Which side had more? Why would railroads matter in a war?
-4. Where were the battles? Zoom to Virginia, then to Maryland and Pennsylvania. Click two battlefield boundaries. Where were most battles fought? Name a battle fought in a Union state.
+3. Railroads, North and South Compare the railroads (thin dark gray lines) north and south of the white dashed boundary between the Union and the Confederacy. Which side had more? Why would railroads matter in a war?
+4. Where were the battles? Zoom to Virginia, then to Maryland and Pennsylvania. Click the tan shaded areas of two battlefields to read their names. Where were most battles fought? Name a battle fought in a Union state.
+**Closing reflection already in this lesson:** What did the map show you about the Civil War that you might not have noticed from reading alone?
 **Common misunderstandings:**
 - "All slave states joined the Confederacy." The legend shows five slave states that stayed in the Union: Delaware, Maryland, Kentucky, Missouri and West Virginia.
 - "The war was fought evenly across the North and the South." Most battlefields on the map are in Confederate states, above all Virginia.
@@ -140,7 +149,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** FL SS.8.A.5.4; TX 8.10(A); TX 8.10(C); C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.1.0 (draft, updated 2026-10-12).
+**Lesson content version:** 0.2.0 (draft, updated 2026-10-14).
 
 ### The Battle of Vicksburg
 **Lesson ID:** the-battle-of-vicksburg
@@ -157,12 +166,15 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 - Grant crossed the Mississippi at Bruinsburg on April 30, 1863.
 - Vicksburg surrendered on July 4, 1863; Port Hudson, Louisiana, on July 9, 1863.
 - Milliken's Bend to Bruinsburg Bend: about 33 miles (53 km) in a straight line.
+**What students read before they start:** In 1862, Union forces captured New Orleans and Memphis, two cities on the Mississippi River. Between the two, the Confederates still held part of the river, including the city of Vicksburg, Mississippi. In spring 1863, Union General Ulysses S. Grant set out to capture it.
+**How the student sheet explains the map's symbols:** The yellow pin is Vicksburg. Dark pins mark places on Grant's route, each with its name. Railroads are thin dark lines with short cross marks, like a track; they appear when you zoom in, and they include lines built after the war. Civil War Battlefields is off when the map opens: turn it on in Map layers. Its diamonds mark battles: blue for a Union victory, gray for a Confederate victory, yellow if neither side won.
 **Compelling question:** Why did the Union need Vicksburg, and how did Grant take it?
 **Questions already in this lesson:**
-1. Why Vicksburg? Open The Battle of Vicksburg bookmark. Find Vicksburg on the Mississippi River. Where does the railroad from Vicksburg lead? Why would both sides want the city?
-2. Grant's route Find Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend and Edwards. Which side of the river is each on? Why did Grant march south before crossing the river? Measure the distance from Milliken's Bend to Bruinsburg Bend: ________ miles
-3. The battles of May 1863 Turn on the Civil War Battlefields layer. Click the battles between Bruinsburg and Vicksburg and list them in order by date.
+1. Why Vicksburg? Open The Battle of Vicksburg bookmark. Vicksburg is the yellow pin on the Mississippi River. Zoom in until the railroads appear: where does the railroad from Vicksburg lead? Why would both sides want the city?
+2. Grant's route Find the dark pins for Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend and Edwards. Which side of the river is each on? Why did Grant march south before crossing the river? Measure the distance from Milliken's Bend to Bruinsburg Bend: ________ miles
+3. The battles of May 1863 In Map layers, turn on Civil War Battlefields. Click the diamonds between Bruinsburg and Vicksburg and list the battles in order by date.
 4. Splitting the Confederacy Zoom out to see the whole Mississippi River. Vicksburg surrendered on July 4, 1863. Which Confederate states were cut off west of the river?
+**Closing reflection already in this lesson:** What did the map show you about the Vicksburg campaign that you might not have noticed from reading alone?
 **Common misunderstandings:**
 - "Grant attacked Vicksburg straight across the river." The key places show he marched south on the Louisiana side and crossed at Bruinsburg, well south of the city.
 - "Vicksburg fell in a single battle." Its pop-up gives May 18 to July 4, 1863: a siege of about six weeks.
@@ -171,4 +183,4 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** FL SS.8.A.5.1; TX 8.10(C); C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.1.0 (draft, updated 2026-10-12).
+**Lesson content version:** 0.2.0 (draft, updated 2026-10-14).
