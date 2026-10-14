@@ -1,0 +1,330 @@
+{
+  "$schema": "../schema/lesson.schema.json",
+  "formatVersion": "1.2",
+  "id": "war-of-1812-and-monroe-doctrine",
+  "contentVersion": "0.1.0",
+  "status": "draft",
+  "updated": "2026-10-14",
+  "reviewed": null,
+  "title": "The War of 1812 and the Monroe Doctrine, 1807–1823",
+  "sheetTitle": {
+    "es": "La guerra de 1812 y la doctrina Monroe, 1807–1823"
+  },
+  "summary": "Find where the War of 1812 was fought, see what Spain gave up in 1819, and compare Latin America's new nations with the Monroe Doctrine of 1823.",
+  "subject": "History",
+  "course": "US History",
+  "unit": "The early republic",
+  "grade": "8",
+  "time": "45 minutes, or 10–15 per question",
+  "studentLogin": "Not needed to explore the map",
+  "planMonth": "November",
+  "map": {
+    "webmapId": "fad1cdb9d5704401a4e05c34f7ee693c",
+    "bookmarks": [
+      "The War of 1812",
+      "The 1819 boundary",
+      "Latin America in 1825"
+    ],
+    "layers": [
+      {
+        "name": "Historic National Boundaries: 1800",
+        "shows": "Borders in 1800, before the Louisiana Purchase, with the United States shaded pink. Each pop-up names the country.",
+        "source": "University of Minnesota (historic national boundaries), from the MapMaker catalogue"
+      },
+      {
+        "name": "Land Spain gave up in 1819",
+        "shows": "Land Spain gave up in the Adams–Onís Treaty, including East and West Florida (green). Each pop-up gives a short note.",
+        "source": "MapMaker catalogue (US territorial acquisitions)",
+        "offAtStart": true
+      },
+      {
+        "name": "Battlefield Boundaries: War of 1812",
+        "shows": "The land each battlefield covered (tan) and its core area (lighter tan). Each pop-up gives the battle and its size in acres.",
+        "source": "National Park Service, American Battlefield Protection Program"
+      },
+      {
+        "name": "Adams–Onís Treaty line, 1819",
+        "shows": "The 1819 boundary with Spain as a pink dashed line in seven parts, drawn from the treaty's description and approximate. Each pop-up describes its part.",
+        "source": "Treaty text from the Avalon Project, Yale Law School; drawn on Natural Earth rivers",
+        "offAtStart": true
+      },
+      {
+        "name": "Battles of the War of 1812",
+        "shows": "52 battles from 1811 to 1815 as diamonds: blue for an American victory, red for a British victory, gray if inconclusive; bigger diamonds mean more casualties. Each pop-up gives the dates, the casualties and a short account. The layer calls every opponent of the United States British, including the Red Stick Creeks.",
+        "source": "American Battlefield Trust (War of 1812 Battles map)"
+      },
+      {
+        "name": "Latin American independence and US recognition",
+        "shows": "Ten Latin American nations, labeled with the year of independence: blue circles if the United States recognized them by 1824, orange diamonds if it recognized them later (1826 to 1862). Each pop-up gives the capital, today's countries, independence and recognition.",
+        "source": "Office of the Historian, U.S. Department of State; Library of Congress country studies",
+        "offAtStart": true
+      }
+    ]
+  },
+  "knownIssues": [],
+  "inquiry": {
+    "compellingQuestion": {
+      "en": "How did the War of 1812 and the years after it change the United States' place in North and South America?",
+      "es": "¿Cómo cambiaron la guerra de 1812 y los años siguientes el lugar de Estados Unidos en América del Norte y del Sur?"
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "title": {
+          "en": "Where was the war fought?",
+          "es": "¿Dónde se combatió?"
+        },
+        "task": "Open The War of 1812 bookmark and use the battle diamonds to find the three main areas of fighting.",
+        "tools": [
+          "bookmarks",
+          "popups",
+          "legend"
+        ],
+        "student": {
+          "en": "Open The War of 1812 bookmark and click some diamonds in each group. In which three areas was most of the fighting?",
+          "es": "Abre el marcador The War of 1812 y haz clic en algunos rombos de cada grupo. ¿En qué tres zonas se combatió más?"
+        },
+        "lines": 3,
+        "answer": {
+          "text": "Along the border with British Canada around the Great Lakes (Michigan, Ohio, New York and Ontario); around Chesapeake Bay (Maryland and Virginia), where the British won at Bladensburg, burned Washington and then failed to take Baltimore; and in the South along the Gulf Coast and in Alabama, including the Creek War and New Orleans."
+        }
+      },
+      {
+        "id": "q2",
+        "title": {
+          "en": "The biggest battles",
+          "es": "Las batallas más grandes"
+        },
+        "task": "Click the largest diamonds to find the battles with the most casualties, their dates and results, and compare the date of New Orleans with the Treaty of Ghent.",
+        "tools": [
+          "popups",
+          "zoom"
+        ],
+        "student": {
+          "en": "Click the three biggest diamonds. Where and when was each battle fought, and who won? The peace treaty was signed at Ghent, in Europe, on December 24, 1814. Which big battle came after it?",
+          "es": "Haz clic en los tres rombos más grandes. ¿Dónde y cuándo se libró cada batalla, y quién ganó? El tratado de paz se firmó en Gante, en Europa, el 24 de diciembre de 1814. ¿Qué gran batalla fue posterior al tratado?"
+        },
+        "lines": 4,
+        "answer": {
+          "table": {
+            "caption": "Battles with the most casualties, from the pop-ups",
+            "columns": [
+              "Battle",
+              "Dates",
+              "Result",
+              "Casualties"
+            ],
+            "rows": [
+              [
+                "Siege of Fort Erie (Ontario)",
+                "August 4 – September 21, 1814",
+                "American victory",
+                "2,628"
+              ],
+              [
+                "New Orleans (Louisiana)",
+                "January 8, 1815",
+                "American victory",
+                "2,096"
+              ],
+              [
+                "Lundy's Lane (Ontario)",
+                "July 25, 1814",
+                "Inconclusive",
+                "1,731"
+              ],
+              [
+                "Horseshoe Bend (Alabama)",
+                "March 27, 1814",
+                "American victory over the Red Stick Creeks",
+                "1,339"
+              ],
+              [
+                "Queenston Heights (Ontario)",
+                "October 13, 1812",
+                "British victory",
+                "1,233"
+              ]
+            ]
+          },
+          "text": "New Orleans was fought on January 8, 1815, two weeks after the Treaty of Ghent was signed; news of the peace hadn't yet crossed the Atlantic. Horseshoe Bend was fought against the Red Stick Creeks, not the British, though the layer calls the other side British."
+        }
+      },
+      {
+        "id": "q3",
+        "title": {
+          "en": "Florida and a new border",
+          "es": "Florida y una nueva frontera"
+        },
+        "task": "Open The 1819 boundary bookmark, turn on Land Spain gave up in 1819 and the Adams–Onís Treaty line, and read their pop-ups to describe what the treaty settled.",
+        "tools": [
+          "bookmarks",
+          "layers",
+          "popups"
+        ],
+        "student": {
+          "en": "Open The 1819 boundary bookmark. Turn on Land Spain gave up in 1819 and Adams–Onís Treaty line, 1819, and click the green land and each part of the pink dashed line. What did the United States gain from Spain? Which rivers and lines of latitude and longitude does the new border follow?",
+          "es": "Abre el marcador The 1819 boundary. Activa Land Spain gave up in 1819 y Adams–Onís Treaty line, 1819, y haz clic en la tierra verde y en cada tramo de la línea discontinua rosada. ¿Qué obtuvo Estados Unidos de España? ¿Qué ríos y qué líneas de latitud y longitud sigue la nueva frontera?"
+        },
+        "lines": 3,
+        "answer": {
+          "text": "Spain ceded East and West Florida (the United States already held much of West Florida), and the United States took on $5 million of Americans' claims against Spain instead of paying a price. The border ran up the Sabine River, north to the Red River, west along the Red to 100° W, north to the Arkansas River, up the Arkansas to its source, north to 42° N, and west along 42° N to the Pacific. The treaty was ratified in 1821."
+        }
+      },
+      {
+        "id": "q4",
+        "title": {
+          "en": "New nations and the Monroe Doctrine",
+          "es": "Nuevas naciones y la doctrina Monroe"
+        },
+        "task": "Open Latin America in 1825, turn on the independence layer, and compare the dates of independence and US recognition with President Monroe's message of December 2, 1823.",
+        "tools": [
+          "bookmarks",
+          "layers",
+          "popups"
+        ],
+        "student": {
+          "en": "Open the Latin America in 1825 bookmark and turn on Latin American independence and US recognition. Click the blue circles: which nations had the United States recognized before President Monroe's message of December 2, 1823? Why might Monroe have warned European powers to stay out of the Americas?",
+          "es": "Abre el marcador Latin America in 1825 y activa Latin American independence and US recognition. Haz clic en los círculos azules: ¿qué naciones había reconocido Estados Unidos antes del mensaje del presidente Monroe del 2 de diciembre de 1823? ¿Por qué crees que Monroe advirtió a las potencias europeas que no intervinieran en América?"
+        },
+        "lines": 4,
+        "answer": {
+          "table": {
+            "caption": "Recognized by the United States by 1824, from the pop-ups",
+            "columns": [
+              "Nation",
+              "Independence",
+              "Recognized by the United States"
+            ],
+            "rows": [
+              [
+                "Republic of Colombia",
+                "1819",
+                "June 19, 1822"
+              ],
+              [
+                "Mexico",
+                "1821",
+                "December 12, 1822"
+              ],
+              [
+                "Buenos Ayres (Argentina)",
+                "1816",
+                "January 27, 1823"
+              ],
+              [
+                "Chile",
+                "1818",
+                "January 27, 1823"
+              ],
+              [
+                "Brazil",
+                "1822",
+                "May 26, 1824"
+              ],
+              [
+                "Federation of Central America",
+                "1821",
+                "August 4, 1824"
+              ]
+            ]
+          },
+          "text": "Before December 2, 1823 the United States had recognized Colombia, Mexico, Buenos Ayres and Chile. Monroe warned European powers not to set up new colonies in the Americas or interfere with the newly independent nations, and said the United States would stay out of Europe's wars. Haiti, independent since 1804, was not recognized until 1862."
+        }
+      }
+    ],
+    "final": {
+      "teacher": "Students answer with evidence from at least two layers. Some ways to do it: a paragraph; a sketch of the British blockade along the coast and of the area the Monroe Doctrine covered; or a short talk using the map.",
+      "student": {
+        "en": "Answer the big question using evidence from at least two layers on the map. You can write a paragraph, sketch on the map, or both.",
+        "es": "Responde la pregunta central con evidencia de al menos dos capas del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
+      },
+      "tools": [
+        "sketch"
+      ]
+    }
+  },
+  "studentSupport": {
+    "beforeYouStart": {
+      "en": "In the early 1800s Britain and France were at war, and both seized American ships. British warships also forced sailors off American ships into the Royal Navy, and Britain supported Native nations resisting American settlement. In June 1812 the United States declared war on Britain.",
+      "es": "A comienzos del siglo XIX, Gran Bretaña y Francia estaban en guerra, y ambas se apoderaban de barcos estadounidenses. Además, los buques de guerra británicos obligaban a marineros de barcos estadounidenses a servir en la Marina Real, y Gran Bretaña apoyaba a los pueblos indígenas que se resistían a los asentamientos estadounidenses. En junio de 1812, Estados Unidos le declaró la guerra a Gran Bretaña."
+    },
+    "readingTheMap": {
+      "en": "The map has no place names: click a feature to see its name. Pink shading shows the United States in 1800. Diamonds mark battles: blue for an American victory, red for a British victory, gray if neither side won; bigger diamonds mean more casualties. Tan shading shows battlefield land. Three layers are off when the map opens: the land Spain gave up in 1819 (green), the treaty line (pink dashes) and the Latin American nations, shown as blue circles if the United States recognized them by 1824 and orange diamonds if later.",
+      "es": "El mapa no tiene nombres de lugares: haz clic en un elemento para ver su nombre. El sombreado rosado muestra Estados Unidos en 1800. Los rombos marcan las batallas: azul si ganaron los estadounidenses, rojo si ganaron los británicos y gris si ningún bando ganó; los rombos más grandes indican más bajas. El sombreado color canela muestra el terreno de los campos de batalla. Tres capas están desactivadas al abrir el mapa: la tierra que España cedió en 1819 (verde), la línea del tratado (rayas rosadas) y las naciones latinoamericanas, que aparecen como círculos azules si Estados Unidos las reconoció hasta 1824 y como rombos naranjas si fue más tarde."
+    },
+    "tips": [
+      "popups"
+    ],
+    "reflection": {
+      "en": "What did the map show you about the War of 1812 and its results that you might not have noticed from reading alone?",
+      "es": "¿Qué te mostró el mapa sobre la guerra de 1812 y sus resultados que quizá no habrías notado solo con la lectura?"
+    }
+  },
+  "teacherNotes": {
+    "beforeClass": "Three layers are off when the map opens: Land Spain gave up in 1819, the Adams–Onís Treaty line and the Latin American nations. The basemap has no place names, so students click a feature to see its name. The battles layer, from the American Battlefield Trust, calls every opponent of the United States British, including the Red Stick Creeks at Fort Mims and Horseshoe Bend in Alabama; it also includes Tippecanoe (November 1811), fought before the war against a Native confederacy.",
+    "misconceptions": [
+      {
+        "claim": "The United States won the War of 1812 and gained land.",
+        "response": "The Treaty of Ghent returned the borders to where they were before the war, and the map shows American and British victories on every front."
+      },
+      {
+        "claim": "The Battle of New Orleans won the war.",
+        "response": "It was fought on January 8, 1815, after the Treaty of Ghent was signed on December 24, 1814."
+      },
+      {
+        "claim": "Every battle was against British soldiers.",
+        "response": "The battles in Alabama were part of the Creek War, fought against the Red Stick Creeks."
+      }
+    ],
+    "keyWords": [
+      "impressment",
+      "blockade",
+      "Treaty of Ghent",
+      "cession",
+      "boundary",
+      "recognition",
+      "Monroe Doctrine",
+      "independence"
+    ]
+  },
+  "standards": [
+    {
+      "code": "TX 8.5(E)",
+      "text": "Explain the causes, important events, and effects of the War of 1812"
+    },
+    {
+      "code": "TX 8.5(F)",
+      "text": "Identify the foreign policies of presidents Washington through Monroe and explain the impact of Washington's Farewell Address and the Monroe Doctrine"
+    },
+    {
+      "code": "FL SS.8.A.4.1",
+      "text": "Examine the causes, course, and consequences of United States westward expansion and its growing diplomatic assertiveness (War of 1812, Convention of 1818, Adams-Onis Treaty, Missouri Compromise, Monroe Doctrine, Trail of Tears, Texas annexation, Manifest Destiny, Oregon Territory, Mexican American War/Mexican Cession, California Gold Rush, Compromise of 1850, Kansas Nebraska Act, Gadsden Purchase)."
+    },
+    {
+      "code": "C3 D2.His.1.6-8",
+      "text": "Analyze connections among events and developments in broader historical contexts."
+    },
+    {
+      "code": "C3 D2.Geo.2.6-8",
+      "text": "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions, and changes in their environmental characteristics."
+    }
+  ],
+  "keyFacts": [
+    "Battles with the most casualties (pop-ups): Siege of Fort Erie (August 4 – September 21, 1814) 2,628; New Orleans (January 8, 1815) 2,096; Lundy's Lane (July 25, 1814) 1,731; Horseshoe Bend (March 27, 1814) 1,339; Queenston Heights (October 13, 1812) 1,233.",
+    "The Treaty of Ghent was signed on December 24, 1814.",
+    "Adams–Onís Treaty, 1819 (ratified 1821): Spain ceded East and West Florida (the United States already held much of West Florida); the United States took on $5 million in claims; the border ran along the Sabine, Red and Arkansas rivers to 42° N and west to the Pacific.",
+    "US recognition (pop-ups): Colombia 19 June 1822, Mexico 12 December 1822, Buenos Ayres and Chile 27 January 1823, Brazil 26 May 1824, Central America 4 August 1824, Peru 2 May 1826, Bolivia 1848, Paraguay 1852, Haiti 1862.",
+    "The Monroe Doctrine was set out in President Monroe's annual message of 2 December 1823."
+  ],
+  "languages": {
+    "en": {
+      "status": "final"
+    },
+    "es": {
+      "status": "draft",
+      "note": "Spanish draft for review by a native speaker. Layer and bookmark names stay in English, as they appear in MapMaker."
+    }
+  },
+  "licence": "Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide."
+}

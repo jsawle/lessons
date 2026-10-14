@@ -1,0 +1,254 @@
+{
+  "$schema": "../schema/lesson.schema.json",
+  "formatVersion": "1.2",
+  "id": "rights-and-responsibilities-where-we-live",
+  "contentVersion": "0.1.0",
+  "status": "draft",
+  "updated": "2026-10-14",
+  "reviewed": null,
+  "title": "Rights and Responsibilities Where We Live",
+  "sheetTitle": {
+    "es": "Derechos y responsabilidades donde vivimos"
+  },
+  "summary": "Map the public places in your own community where people use the rights in the Bill of Rights and carry out their responsibilities as citizens, and find who represents your district in Congress.",
+  "subject": "History",
+  "course": "US History",
+  "unit": "The Bill of Rights and citizenship",
+  "grade": "8",
+  "time": "45 minutes, or 10–15 per question",
+  "studentLogin": "Not needed to explore the map",
+  "planMonth": "November",
+  "map": {
+    "webmapId": "59467ac7d7c64542acaa6a3e9c19ebf4",
+    "bookmarks": [
+      "The United States"
+    ],
+    "layers": [
+      {
+        "name": "Congressional districts (119th Congress)",
+        "shows": "District boundaries for the 119th Congress (2025–2027) as blue outlines. Each pop-up names the district's representative in the House and their party.",
+        "source": "Esri; U.S. Census Bureau; Clerk of the U.S. House of Representatives (MapMaker catalogue)"
+      },
+      {
+        "name": "National Register of Historic Places",
+        "shows": "Places on the National Register as diamonds colored by type: building, structure, district, site or object. They appear when you zoom in. Each pop-up gives the name and address.",
+        "source": "National Park Service (MapMaker catalogue)",
+        "offAtStart": true
+      }
+    ]
+  },
+  "knownIssues": [],
+  "inquiry": {
+    "compellingQuestion": {
+      "en": "Where in our community do people use their rights and carry out their responsibilities?",
+      "es": "¿Dónde, en nuestra comunidad, las personas ejercen sus derechos y cumplen sus responsabilidades?"
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "title": {
+          "en": "Who represents us?",
+          "es": "¿Quién nos representa?"
+        },
+        "task": "Zoom to your community and click inside your congressional district to read who represents it and their party. Count your state's districts.",
+        "tools": [
+          "zoom",
+          "popups"
+        ],
+        "student": {
+          "en": "Zoom to your community. The blue lines are the boundaries of congressional districts. Click inside your district: who represents it in the House of Representatives, and which party do they belong to? How many districts does your state have?",
+          "es": "Acércate a tu comunidad. Las líneas azules son los límites de los distritos del Congreso. Haz clic dentro de tu distrito: ¿quién lo representa en la Cámara de Representantes y a qué partido pertenece? ¿Cuántos distritos tiene tu estado?"
+        },
+        "answer": {
+          "text": "It depends on where you are. The pop-up names the representative and party for the 119th Congress (2025–2027); a seat that has changed hands since the layer was updated may differ. A state's number of districts equals its House seats after the 2020 census, for example California 52, Texas 38 and Florida 28; six states have one. The map's description lists the states with new district lines for the elections on 3 November 2026."
+        }
+      },
+      {
+        "id": "q2",
+        "title": {
+          "en": "Rights in public places",
+          "es": "Derechos en lugares públicos"
+        },
+        "task": "Students sketch pins on four public places near the school, such as a courthouse, polling place, city hall, library, newspaper office or place of worship, and label each with a right in the Bill of Rights that people use there.",
+        "tools": [
+          "zoom",
+          "sketch"
+        ],
+        "student": {
+          "en": "Zoom in near your school. Sketch a pin on four public places, such as a courthouse, a polling place, city hall, a library, a newspaper office or a place of worship. Label each pin with a right from the Bill of Rights that people use there. Choose public places, not homes.",
+          "es": "Acércate a la zona de tu escuela. Coloca un marcador en cuatro lugares públicos, como un tribunal, un centro de votación, el ayuntamiento, una biblioteca, la redacción de un periódico o un lugar de culto. Escribe en cada marcador un derecho de la Carta de Derechos que las personas ejercen allí. Elige lugares públicos, no viviendas."
+        },
+        "lines": 4,
+        "answer": {
+          "table": {
+            "caption": "Some places and the rights people use there",
+            "columns": [
+              "Place",
+              "Right",
+              "Amendment"
+            ],
+            "rows": [
+              [
+                "Newspaper office",
+                "Freedom of the press",
+                "First"
+              ],
+              [
+                "Place of worship",
+                "Free exercise of religion",
+                "First"
+              ],
+              [
+                "City hall or a public square",
+                "Peaceable assembly and petitioning the government",
+                "First"
+              ],
+              [
+                "Library",
+                "Freedom of speech and of the press: reading and sharing ideas",
+                "First"
+              ],
+              [
+                "Courthouse",
+                "Due process; a speedy, public trial by jury, with a lawyer",
+                "Fifth, Sixth and Seventh"
+              ]
+            ]
+          },
+          "text": "A polling place connects with voting, which later amendments protect (the 15th, 19th and 26th) rather than the Bill of Rights."
+        }
+      },
+      {
+        "id": "q3",
+        "title": {
+          "en": "Responsibilities",
+          "es": "Responsabilidades"
+        },
+        "task": "Students add pins for places where people carry out responsibilities as citizens, such as voting, jury service and paying taxes, and sort the responsibilities into required by law and voluntary.",
+        "tools": [
+          "sketch"
+        ],
+        "student": {
+          "en": "Add a pin for each place where people carry out a responsibility as citizens, such as voting, serving on a jury or paying taxes. Which of these responsibilities are required by law, and which are voluntary?",
+          "es": "Coloca un marcador en cada lugar donde las personas cumplen una responsabilidad como ciudadanos, como votar, formar parte de un jurado o pagar impuestos. ¿Cuáles de estas responsabilidades exige la ley y cuáles son voluntarias?"
+        },
+        "answer": {
+          "text": "Required by law: obeying laws, paying taxes, serving on a jury when called and, for most men aged 18 through 25, being registered with the Selective Service System. Voluntary: voting, staying informed, volunteering and taking part in community meetings. Voting is a right and a responsibility, but no federal law requires it."
+        }
+      },
+      {
+        "id": "q4",
+        "title": {
+          "en": "History where we live",
+          "es": "Historia donde vivimos"
+        },
+        "task": "Turn on National Register of Historic Places, zoom in until the diamonds appear, and click two near the school. Look for a public building and the right or responsibility it connects with.",
+        "tools": [
+          "layers",
+          "zoom",
+          "popups"
+        ],
+        "student": {
+          "en": "In Map layers, turn on National Register of Historic Places. Zoom in until the diamonds appear, and click two near your school. Is either a public building, such as a courthouse, post office, school or library? Which right or responsibility does it connect with?",
+          "es": "En las capas del mapa (Map layers), activa National Register of Historic Places. Acércate hasta que aparezcan los rombos y haz clic en dos cercanos a tu escuela. ¿Alguno es un edificio público, como un tribunal, una oficina de correos, una escuela o una biblioteca? ¿Con qué derecho o responsabilidad se relaciona?"
+        },
+        "answer": {
+          "text": "It depends on where you are. Courthouses connect with jury service and the right to a fair trial; post offices and newspaper buildings with sharing news and ideas; schools and libraries with staying informed. If nothing is listed nearby, zoom out to the nearest town."
+        }
+      }
+    ],
+    "final": {
+      "teacher": "Students answer with evidence from their own map. Some ways to do it: a paragraph, the finished map downloaded as an image or a PDF with a short caption, or a short talk using the map.",
+      "student": {
+        "en": "Use your map to answer the big question. Choose the three places that best show rights and responsibilities in your community, and explain your choices.",
+        "es": "Usa tu mapa para responder la pregunta central. Elige los tres lugares que mejor muestran los derechos y las responsabilidades en tu comunidad, y explica tu elección."
+      },
+      "tools": [
+        "sketch"
+      ]
+    }
+  },
+  "studentSupport": {
+    "beforeYouStart": {
+      "en": "In 1791, ten amendments, known as the Bill of Rights, were added to the Constitution. They protect rights such as freedom of speech, religion and the press, the right to gather peacefully, and the right to a fair trial. Citizens also have responsibilities to their community and their country.",
+      "es": "En 1791 se añadieron a la Constitución diez enmiendas, conocidas como la Carta de Derechos. Protegen derechos como la libertad de expresión, de religión y de prensa, el derecho a reunirse pacíficamente y el derecho a un juicio justo. Los ciudadanos también tienen responsabilidades con su comunidad y su país."
+    },
+    "readingTheMap": {
+      "en": "Blue lines are the boundaries of congressional districts for the 119th Congress (2025–2027); click inside one to see who represents it. National Register of Historic Places is off when the map opens: turn it on in Map layers and zoom in to see its diamonds, colored by type of place. Put your pins on public places, not homes.",
+      "es": "Las líneas azules son los límites de los distritos del Congreso número 119 (2025–2027); haz clic dentro de uno para ver quién lo representa. La capa National Register of Historic Places está desactivada al abrir el mapa: actívala en las capas del mapa (Map layers) y acércate para ver sus rombos, de colores según el tipo de lugar. Coloca tus marcadores en lugares públicos, no en viviendas."
+    },
+    "tips": [
+      "popups"
+    ],
+    "reflection": {
+      "en": "What did the map show you about your own community that you hadn't noticed before?",
+      "es": "¿Qué te mostró el mapa sobre tu propia comunidad que no habías notado antes?"
+    }
+  },
+  "teacherNotes": {
+    "beforeClass": "Students need to find your community on the map; the Topographic basemap has place names. Without a sign-in, sketches aren't saved, so students can download an image or export a PDF to keep the work. Pins on public places keep students' addresses private. The midterm elections are on 3 November 2026, and the map's description lists the states that have new district lines for them.",
+    "misconceptions": [
+      {
+        "claim": "The Bill of Rights lists all of a citizen's rights.",
+        "response": "The Ninth Amendment says other rights are kept by the people, and later amendments added rights, such as the voting rights in the 15th, 19th and 26th."
+      },
+      {
+        "claim": "Voting is required by law.",
+        "response": "No federal law requires it. Serving on a jury when called and paying taxes are required."
+      },
+      {
+        "claim": "Everyone in a state votes for the same representative.",
+        "response": "Each district elects its own representative; senators are chosen by the whole state."
+      }
+    ],
+    "keyWords": [
+      "amendment",
+      "Bill of Rights",
+      "civil liberties",
+      "citizen",
+      "responsibility",
+      "congressional district",
+      "representative",
+      "jury"
+    ]
+  },
+  "standards": [
+    {
+      "code": "TX 8.19(B)",
+      "text": "Summarize rights guaranteed in the Bill of Rights"
+    },
+    {
+      "code": "TX 8.19(C)",
+      "text": "Identify examples of responsible citizenship, including obeying rules and laws, staying informed on public issues, voting, and serving on juries"
+    },
+    {
+      "code": "FL SS.8.CG.2.5",
+      "text": "Analyze how the Bill of Rights guarantees civil rights and liberties to citizens."
+    },
+    {
+      "code": "C3 D2.Civ.2.6-8",
+      "text": "Explain specific roles played by citizens (such as voters, jurors, taxpayers, members of the armed forces, petitioners, protesters, and office-holders)."
+    },
+    {
+      "code": "C3 D2.Civ.8.6-8",
+      "text": "Analyze ideas and principles contained in the founding documents of the United States, and explain how they influence the social and political system."
+    }
+  ],
+  "keyFacts": [
+    "The Bill of Rights, the first ten amendments, was ratified on 15 December 1791.",
+    "First Amendment: freedom of religion, speech and the press, peaceable assembly and petition. Fifth: due process. Sixth: a speedy, public trial by jury and the help of a lawyer. Seventh: jury trials in civil cases.",
+    "House seats by state follow the 2020 census, for example California 52, Texas 38 and Florida 28; six states have one seat.",
+    "The map's districts are those of the 119th Congress (2025–2027). Its description lists the states with new districts for the 3 November 2026 elections.",
+    "Voting rights were extended by the 15th (race, 1870), 19th (sex, 1920) and 26th (age 18, 1971) Amendments."
+  ],
+  "languages": {
+    "en": {
+      "status": "final"
+    },
+    "es": {
+      "status": "draft",
+      "note": "Spanish draft for review by a native speaker. Layer and bookmark names stay in English, as they appear in MapMaker."
+    }
+  },
+  "licence": "Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide."
+}

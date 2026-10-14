@@ -1,0 +1,251 @@
+{
+  "$schema": "../schema/lesson.schema.json",
+  "formatVersion": "1.2",
+  "id": "presidential-elections-1796-1800",
+  "contentVersion": "0.1.0",
+  "status": "draft",
+  "updated": "2026-10-14",
+  "reviewed": null,
+  "title": "Presidential Elections, 1796 and 1800",
+  "sheetTitle": {
+    "es": "Elecciones presidenciales de 1796 y 1800"
+  },
+  "summary": "Compare how each state's electors voted in 1796 and 1800, see which states changed sides, and find two Supreme Court cases that shaped the new government.",
+  "subject": "History",
+  "course": "US History",
+  "unit": "The early republic",
+  "grade": "8",
+  "time": "45 minutes, or 10–15 per question",
+  "studentLogin": "Not needed to explore the map",
+  "planMonth": "November",
+  "map": {
+    "webmapId": "6173219d9cd84812bcd4fed859b2c182",
+    "bookmarks": [
+      "The sixteen states"
+    ],
+    "layers": [
+      {
+        "name": "Election of 1796: electors' votes",
+        "shows": "A pie on each of the 16 states: electors' votes for John Adams (Federalist, orange) and Thomas Jefferson (Democratic-Republican, blue), with bigger pies for more electors. Each pop-up lists the votes for each main candidate, with the rest grouped as others.",
+        "source": "National Archives (Electoral College results); state outlines from Natural Earth"
+      },
+      {
+        "name": "Election of 1800: electors' votes",
+        "shows": "The same for 1800. Each pop-up lists every candidate's votes and explains the Jefferson–Burr tie.",
+        "source": "National Archives (Electoral College results); state outlines from Natural Earth",
+        "offAtStart": true
+      },
+      {
+        "name": "Landmark Supreme Court cases, 1803 and 1819",
+        "shows": "Pink squares for Marbury v. Madison (1803, Washington, D.C.) and McCulloch v. Maryland (1819, Baltimore), labeled with the case name and year. Each pop-up gives the question, the ruling, why it matters and why it's placed there.",
+        "source": "National Archives (Milestone Documents)"
+      }
+    ]
+  },
+  "knownIssues": [],
+  "inquiry": {
+    "compellingQuestion": {
+      "en": "How did the first political parties divide the country?",
+      "es": "¿Cómo dividieron al país los primeros partidos políticos?"
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "title": {
+          "en": "The election of 1796",
+          "es": "La elección de 1796"
+        },
+        "task": "Open The sixteen states bookmark. Use the pies to find which regions mostly voted for Adams and which for Jefferson, and which states split.",
+        "tools": [
+          "bookmarks",
+          "popups",
+          "legend"
+        ],
+        "student": {
+          "en": "Open The sixteen states bookmark and click the pies for 1796. Which part of the country mostly voted for Adams, and which for Jefferson? Which states split their votes?",
+          "es": "Abre el marcador The sixteen states y haz clic en los gráficos de 1796. ¿Qué parte del país votó sobre todo por Adams y cuál por Jefferson? ¿Qué estados dividieron sus votos?"
+        },
+        "lines": 3,
+        "answer": {
+          "text": "Adams won every elector's vote in New England, New York, New Jersey and Delaware. Jefferson won the South and the West: Virginia, North Carolina, South Carolina, Georgia, Kentucky and Tennessee, and most of Pennsylvania. Maryland (Adams 7, Jefferson 4), Pennsylvania (Jefferson 14, Adams 1), Virginia (Jefferson 20, Adams 1) and North Carolina (Jefferson 11, Adams 1) split. Adams won with 71 votes to Jefferson's 68, so Jefferson, the runner-up, became vice president."
+        }
+      },
+      {
+        "id": "q2",
+        "title": {
+          "en": "The election of 1800",
+          "es": "La elección de 1800"
+        },
+        "task": "Turn off 1796 and turn on 1800. Find the large state that changed from Adams to Jefferson, and the states that split.",
+        "tools": [
+          "layers",
+          "popups"
+        ],
+        "student": {
+          "en": "In Map layers, turn off Election of 1796 and turn on Election of 1800. Which large state changed from Adams to Jefferson? Which states split their votes this time?",
+          "es": "En las capas del mapa (Map layers), desactiva Election of 1796 y activa Election of 1800. ¿Qué estado grande pasó de Adams a Jefferson? ¿Qué estados dividieron sus votos esta vez?"
+        },
+        "answer": {
+          "text": "New York's 12 electors voted for Adams in 1796 and for Jefferson in 1800. Without that change Adams would have had 77 votes to Jefferson's 61; instead Jefferson had 73 and Adams 65. In 1800 Maryland split 5–5, and Pennsylvania (Jefferson 8, Adams 7) and North Carolina (Jefferson 8, Adams 4) split."
+        }
+      },
+      {
+        "id": "q3",
+        "title": {
+          "en": "A tie",
+          "es": "Un empate"
+        },
+        "task": "Read an 1800 pop-up to find who tied with Jefferson, why the House of Representatives chose the president, and what the 12th Amendment changed.",
+        "tools": [
+          "popups"
+        ],
+        "student": {
+          "en": "In 1800 each elector still cast two votes. Click Virginia and New York. Who received the same number of votes as Jefferson? Why did the House of Representatives have to choose the president?",
+          "es": "En 1800 cada elector todavía emitía dos votos. Haz clic en Virginia y en Nueva York. ¿Quién recibió el mismo número de votos que Jefferson? ¿Por qué tuvo que elegir al presidente la Cámara de Representantes?"
+        },
+        "fill": {
+          "en": "Jefferson: ____ votes. Aaron Burr: ____ votes.",
+          "es": "Jefferson: ____ votos. Aaron Burr: ____ votos."
+        },
+        "answer": {
+          "text": "Aaron Burr, Jefferson's own running mate. Each elector voted for both, so Jefferson and Burr tied with 73 votes each, and the tie sent the election to the House of Representatives, which chose Jefferson on 17 February 1801. The 12th Amendment (1804) then gave electors separate votes for president and vice president."
+        }
+      },
+      {
+        "id": "q4",
+        "title": {
+          "en": "The Supreme Court",
+          "es": "La Corte Suprema"
+        },
+        "task": "Click the two pink squares, Marbury v. Madison and McCulloch v. Maryland, and note the question, the ruling and why each matters.",
+        "tools": [
+          "popups"
+        ],
+        "student": {
+          "en": "Click the two pink squares: Marbury v. Madison (1803) and McCulloch v. Maryland (1819). For each, write the question the Court answered and why the ruling matters.",
+          "es": "Haz clic en los dos cuadrados rosados: Marbury v. Madison (1803) y McCulloch v. Maryland (1819). Para cada caso, escribe la pregunta que respondió la Corte y por qué es importante el fallo."
+        },
+        "lines": 4,
+        "answer": {
+          "table": {
+            "caption": "The two cases, from the pop-ups",
+            "columns": [
+              "Case",
+              "Question",
+              "Why it matters"
+            ],
+            "rows": [
+              [
+                "Marbury v. Madison (1803)",
+                "Could the Supreme Court order Secretary of State James Madison to deliver William Marbury's commission?",
+                "Judicial review: courts can decide whether laws and actions follow the Constitution (\"A Law repugnant to the Constitution is void\")."
+              ],
+              [
+                "McCulloch v. Maryland (1819)",
+                "Could Congress charter a national bank, and could a state tax it?",
+                "Congress may use appropriate means to carry out its powers, and federal law overrides state law, so Maryland's tax was void."
+              ]
+            ]
+          },
+          "text": "Marbury grew out of the change of party in 1801: Marbury was one of John Adams's last-minute appointments, and Jefferson's administration did not deliver his commission."
+        }
+      }
+    ],
+    "final": {
+      "teacher": "Students answer with evidence from at least two layers. Some ways to do it: a paragraph; a sketch that marks each party's region; or sketch pins for the First Bank of the United States (Philadelphia, 1791) and Washington's Farewell Address (published in Philadelphia, 1796), with notes.",
+      "student": {
+        "en": "Answer the big question using evidence from at least two layers on the map. You can write a paragraph, sketch on the map, or both.",
+        "es": "Responde la pregunta central con evidencia de al menos dos capas del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
+      },
+      "tools": [
+        "sketch"
+      ]
+    }
+  },
+  "studentSupport": {
+    "beforeYouStart": {
+      "en": "George Washington belonged to no party, and in 1796, as he prepared to leave office, he warned Americans against parties. By then two had formed: the Federalists, led by John Adams and Alexander Hamilton, and the Democratic-Republicans, led by Thomas Jefferson and James Madison. Each elector cast two votes for president, and the runner-up became vice president.",
+      "es": "George Washington no pertenecía a ningún partido y, en 1796, cuando se preparaba para dejar la presidencia, advirtió a los estadounidenses contra los partidos. Para entonces ya se habían formado dos: los federalistas, encabezados por John Adams y Alexander Hamilton, y los demócrata-republicanos, encabezados por Thomas Jefferson y James Madison. Cada elector emitía dos votos para presidente, y quien quedaba en segundo lugar era vicepresidente."
+    },
+    "readingTheMap": {
+      "en": "The map has no place names: click a pie to see the state's name. Each pie shows how a state's electors voted: orange for John Adams (Federalist) and blue for Thomas Jefferson (Democratic-Republican). Bigger pies mean more electors. Each elector cast two votes; the pop-up lists the other candidates. Election of 1800 is off when the map opens. Pink squares mark two Supreme Court cases. Maine is shown within Massachusetts and West Virginia within Virginia, and territories aren't shown.",
+      "es": "El mapa no tiene nombres de lugares: haz clic en un gráfico circular para ver el nombre del estado. Cada gráfico muestra cómo votaron los electores de un estado: naranja para John Adams (federalista) y azul para Thomas Jefferson (demócrata-republicano). Los gráficos más grandes indican más electores. Cada elector emitía dos votos; la ventana emergente muestra a los demás candidatos. La capa Election of 1800 está desactivada al abrir el mapa. Los cuadrados rosados marcan dos casos de la Corte Suprema. Maine aparece dentro de Massachusetts y Virginia Occidental dentro de Virginia, y no se muestran los territorios."
+    },
+    "tips": [
+      "popups"
+    ],
+    "reflection": {
+      "en": "What did the map show you about the first political parties that you might not have noticed from reading alone?",
+      "es": "¿Qué te mostró el mapa sobre los primeros partidos políticos que quizá no habrías notado solo con la lectura?"
+    }
+  },
+  "teacherNotes": {
+    "beforeClass": "Election of 1800 is off when the map opens; with both elections on, the pies overlap. The basemap has no place names, so students click a pie to see the state. The pies show only Adams's and Jefferson's votes; the pop-ups list the other candidates (in 1796 the minor ones are grouped as others, as in the National Archives table).",
+    "misconceptions": [
+      {
+        "claim": "Voters chose the president directly.",
+        "response": "Electors did, and states chose their electors in different ways. In 1796 and 1800 each elector cast two votes."
+      },
+      {
+        "claim": "Adams and Jefferson ran together.",
+        "response": "They were rivals from different parties: in 1796 Jefferson, the runner-up, became Adams's vice president."
+      },
+      {
+        "claim": "The 1800 tie was between Jefferson and Adams.",
+        "response": "It was between Jefferson and his own running mate, Aaron Burr, with 73 votes each."
+      }
+    ],
+    "keyWords": [
+      "political party",
+      "Federalist",
+      "Democratic-Republican",
+      "elector",
+      "Electoral College",
+      "12th Amendment",
+      "judicial review",
+      "implied powers"
+    ]
+  },
+  "standards": [
+    {
+      "code": "TX 8.5(D)",
+      "text": "Explain the origin and development of American political parties"
+    },
+    {
+      "code": "TX 8.18(A)",
+      "text": "Identify the origin of judicial review"
+    },
+    {
+      "code": "TX 8.18(B)",
+      "text": "Summarize the issues, decisions, and significance of landmark Supreme Court cases, including Marbury v. Madison, McCulloch v. Maryland, and Gibbons v. Ogden"
+    },
+    {
+      "code": "FL SS.8.A.3.13",
+      "text": "Explain major domestic and international economic, military, political, and socio-cultural events of John Adams's presidency."
+    },
+    {
+      "code": "FL SS.8.A.3.14",
+      "text": "Explain major domestic and international economic, military, political, and socio-cultural events of Thomas Jefferson's presidency."
+    },
+    {
+      "code": "C3 D2.Civ.4.6-8",
+      "text": "Explain the powers and limits of the three branches of government, public officials, and bureaucracies at different levels in the United States and in other countries."
+    }
+  ],
+  "keyFacts": [
+    "1796 electors' votes (pop-ups): Adams 71, Jefferson 68; Adams became president and Jefferson vice president. Split states: Maryland (Adams 7, Jefferson 4), Pennsylvania (Jefferson 14, Adams 1), Virginia (Jefferson 20, Adams 1), North Carolina (Jefferson 11, Adams 1).",
+    "1800 electors' votes (pop-ups): Jefferson 73, Aaron Burr 73, Adams 65. New York's 12 votes went to Adams in 1796 and to Jefferson in 1800. The House chose Jefferson on 17 February 1801.",
+    "12th Amendment (1804): separate electoral votes for president and vice president.",
+    "Marbury v. Madison (1803): judicial review. McCulloch v. Maryland (1819): Congress could charter a national bank, and Maryland could not tax it."
+  ],
+  "languages": {
+    "en": {
+      "status": "final"
+    },
+    "es": {
+      "status": "draft",
+      "note": "Spanish draft for review by a native speaker. Layer and bookmark names stay in English, as they appear in MapMaker."
+    }
+  },
+  "licence": "Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide."
+}
