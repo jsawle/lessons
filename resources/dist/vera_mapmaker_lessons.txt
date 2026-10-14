@@ -184,3 +184,181 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
 **Lesson content version:** 0.2.0 (draft, updated 2026-10-14).
+
+### We the People: Representation and Ratification, 1787–1791
+**Lesson ID:** we-the-people-1787-1791
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The Constitution. **Time:** 45 minutes, or 10–15 per question.
+**MapMaker map:** [Open We the People: Representation and Ratification, 1787–1791 in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=eba1ea7488624f3c88ef094167ed03ca)
+**Description:** See how House seats were shared out after the 1790 census, how the three-fifths clause changed the count, and how close each state's vote to ratify was.
+**Bookmarks in this map:** The states in 1790; New England and New York; The South.
+**Layers in this map (exact name: what students see; source):**
+- Population in 1790: free and enslaved: A pie on each state: free people (blue) and enslaved people (orange-red) in the 1790 census, with bigger pies for more people. Each pop-up gives the counts, the state's House seats in 1793, its two senators, and the seats it would have had if enslaved people had been counted in full or not at all; source: 1790 census figures as tabulated on Wikipedia, checked against the 1793 House seats; seats from the National Archives; ratio from the U.S. Census Bureau; state outlines from Natural Earth.
+- House seats in 1793 (off when the map opens): States shaded from pale to dark blue by their House seats under the apportionment act of 14 April 1792, labeled with the state's abbreviation and seats. Same pop-up as the population layer; source: National Archives.
+- House seats today (2020 apportionment) (off when the map opens): Each state's House seats after the 2020 census; source: U.S. Census Bureau (MapMaker catalogue).
+- Ratifying the Constitution, 1787–1791 (off when the map opens): A pie where each state's ratifying convention met: votes to ratify (blue) and against (orange-red), with bigger pies for more delegates. Labels give the state and the order it ratified. North Carolina has two: its first convention, at Hillsborough in 1788, did not ratify. The 1788 pie shows 83 for and 184 against, but that convention voted 184–84 neither to ratify nor to reject (see Known issues); source: Center for the Study of the American Constitution, University of Wisconsin–Madison (votes, dates and meeting places).
+**Key facts:**
+- 1790 census and 1793 House seats (pop-ups): Virginia 747,610 people, 292,627 enslaved, 19 seats (22 if enslaved people were counted in full, 13 if not counted); North Carolina 393,751, 100,572 enslaved, 10 seats (11 or 8); Maryland 319,728, 103,036 enslaved, 8 seats (9 or 6); South Carolina 249,073, 107,094 enslaved, 6 seats (7 or 4); Delaware 59,094, 1 seat.
+- The House had 105 seats under the act of 14 April 1792, one for every 33,000 people counted; at the same ratio, counting no enslaved people would have given 90. Every state had two senators.
+- Ratification votes (pop-ups): Delaware 30–0 (1st, 7 December 1787); Pennsylvania 46–23; New Jersey 38–0; Georgia 26–0; Connecticut 128–40; Massachusetts 187–168; Maryland 63–11; South Carolina 149–73; New Hampshire 57–47 (9th, 21 June 1788); Virginia 89–79; New York 30–27; North Carolina 194–77 (12th, 21 November 1789; on 1 August 1788 the Hillsborough convention had voted 184–84 neither to ratify nor to reject); Rhode Island 34–32 (13th, 29 May 1790); Vermont 105–4 (14th, 10 January 1791, before joining the Union).
+- The map uses today's state outlines, except that Maine is shown within Massachusetts and West Virginia within Virginia, as in the 1790s.
+**What students read before they start:** In 1787, delegates from twelve states met in Philadelphia and wrote the Constitution. Large and small states disagreed about how many votes each should have in Congress. The Constitution would take effect only when nine states had ratified it, each at a special convention.
+**How the student sheet explains the map's symbols:** The map has no place names: click a pie or a state to see its name. Pies on the states show the people in 1790: blue for free, orange-red for enslaved, and bigger pies for more people. Three layers are off when the map opens. In House seats in 1793, darker blue means more seats. In Ratifying the Constitution, each pie sits where a state's convention met: blue for votes to ratify, orange-red for votes against, and labels give the order each state ratified. Maine is shown within Massachusetts and West Virginia within Virginia.
+**Compelling question:** How did the Constitution balance large and small states, and how close did it come to being rejected?
+**Questions already in this lesson:**
+1. Who lived where in 1790? Open The states in 1790 bookmark and click the pies. Which state had the most people? In which states were more than a quarter of the people enslaved?
+2. Seats in Congress In Map layers, turn on House seats in 1793. Which state had the most seats in the House of Representatives, and which the fewest? How many senators did every state have?
+3. The three-fifths clause Under the three-fifths clause, three of every five enslaved people were counted when House seats were shared out. Click Virginia and South Carolina: how many seats would each have had if enslaved people had been counted in full, or not at all? Which states gained seats by counting people who could not vote? Virginia: ____ seats with the three-fifths clause; ____ if enslaved people were not counted.
+4. How close was ratification? Turn off Population in 1790 and House seats in 1793, and turn on Ratifying the Constitution. Click the pies to find the three closest votes. Why does North Carolina have two pies?
+**Closing reflection already in this lesson:** What did the map show you about the Constitution that you might not have noticed from reading alone?
+**Common misunderstandings:**
+- "The three-fifths clause gave enslaved people a share of representation." It gave slaveholding states more seats, not enslaved people a voice: they could not vote. Virginia's pop-up shows 19 seats under the clause, against 13 if enslaved people had not been counted.
+- "Every state ratified the Constitution easily." Rhode Island ratified by 34 to 32 and New York by 30 to 27, and North Carolina's first convention refused to ratify.
+- "Large states had more senators." Every state had two senators; only House seats followed population.
+**Key words:** ratify, convention, census, apportionment, Great Compromise, three-fifths clause, Federalist, Anti-Federalist.
+**Standards:** TX 8.4(D); TX 8.17(A); FL SS.8.A.3.10; FL SS.8.A.3.11; C3 D2.Civ.5.6-8; C3 D2.Geo.2.6-8.
+**How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
+**Languages:** student sheets in English and Spanish.
+**Lesson content version:** 0.1.0 (draft, updated 2026-10-14).
+
+### Rights and Responsibilities Where We Live
+**Lesson ID:** rights-and-responsibilities-where-we-live
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The Bill of Rights and citizenship. **Time:** 45 minutes, or 10–15 per question.
+**MapMaker map:** [Open Rights and Responsibilities Where We Live in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=59467ac7d7c64542acaa6a3e9c19ebf4)
+**Description:** Map the public places in your own community where people use the rights in the Bill of Rights and carry out their responsibilities as citizens, and find who represents your district in Congress.
+**Bookmarks in this map:** The United States.
+**Layers in this map (exact name: what students see; source):**
+- Congressional districts (119th Congress): District boundaries for the 119th Congress (2025–2027) as blue outlines. Each pop-up names the district's representative in the House and their party; source: Esri; U.S. Census Bureau; Clerk of the U.S. House of Representatives (MapMaker catalogue).
+- National Register of Historic Places (off when the map opens): Places on the National Register as diamonds colored by type: building, structure, district, site or object. They appear when you zoom in. Each pop-up gives the name and address; source: National Park Service (MapMaker catalogue).
+**Key facts:**
+- The Bill of Rights, the first ten amendments, was ratified on 15 December 1791.
+- First Amendment: freedom of religion, speech and the press, peaceable assembly and petition. Fifth: due process. Sixth: a speedy, public trial by jury and the help of a lawyer. Seventh: jury trials in civil cases.
+- House seats by state follow the 2020 census, for example California 52, Texas 38 and Florida 28; six states have one seat.
+- The map's districts are those of the 119th Congress (2025–2027). Its description lists the states with new districts for the 3 November 2026 elections.
+- Voting rights were extended by the 15th (race, 1870), 19th (sex, 1920) and 26th (age 18, 1971) Amendments.
+**What students read before they start:** In 1791, ten amendments, known as the Bill of Rights, were added to the Constitution. They protect rights such as freedom of speech, religion and the press, the right to gather peacefully, and the right to a fair trial. Citizens also have responsibilities to their community and their country.
+**How the student sheet explains the map's symbols:** Blue lines are the boundaries of congressional districts for the 119th Congress (2025–2027); click inside one to see who represents it. National Register of Historic Places is off when the map opens: turn it on in Map layers and zoom in to see its diamonds, colored by type of place. Put your pins on public places, not homes.
+**Compelling question:** Where in our community do people use their rights and carry out their responsibilities?
+**Questions already in this lesson:**
+1. Who represents us? Zoom to your community. The blue lines are the boundaries of congressional districts. Click inside your district: who represents it in the House of Representatives, and which party do they belong to? How many districts does your state have?
+2. Rights in public places Zoom in near your school. Sketch a pin on four public places, such as a courthouse, a polling place, city hall, a library, a newspaper office or a place of worship. Label each pin with a right from the Bill of Rights that people use there. Choose public places, not homes.
+3. Responsibilities Add a pin for each place where people carry out a responsibility as citizens, such as voting, serving on a jury or paying taxes. Which of these responsibilities are required by law, and which are voluntary?
+4. History where we live In Map layers, turn on National Register of Historic Places. Zoom in until the diamonds appear, and click two near your school. Is either a public building, such as a courthouse, post office, school or library? Which right or responsibility does it connect with?
+**Closing reflection already in this lesson:** What did the map show you about your own community that you hadn't noticed before?
+**Common misunderstandings:**
+- "The Bill of Rights lists all of a citizen's rights." The Ninth Amendment says other rights are kept by the people, and later amendments added rights, such as the voting rights in the 15th, 19th and 26th.
+- "Voting is required by law." No federal law requires it. Serving on a jury when called and paying taxes are required.
+- "Everyone in a state votes for the same representative." Each district elects its own representative; senators are chosen by the whole state.
+**Key words:** amendment, Bill of Rights, civil liberties, citizen, responsibility, congressional district, representative, jury.
+**Standards:** TX 8.19(B); TX 8.19(C); FL SS.8.CG.2.5; C3 D2.Civ.2.6-8; C3 D2.Civ.8.6-8.
+**How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
+**Languages:** student sheets in English and Spanish.
+**Lesson content version:** 0.1.0 (draft, updated 2026-10-14).
+
+### Presidential Elections, 1796 and 1800
+**Lesson ID:** presidential-elections-1796-1800
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The early republic. **Time:** 45 minutes, or 10–15 per question.
+**MapMaker map:** [Open Presidential Elections, 1796 and 1800 in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=6173219d9cd84812bcd4fed859b2c182)
+**Description:** Compare how each state's electors voted in 1796 and 1800, see which states changed sides, and find two Supreme Court cases that shaped the new government.
+**Bookmarks in this map:** The sixteen states.
+**Layers in this map (exact name: what students see; source):**
+- Election of 1796: electors' votes: A pie on each of the 16 states: electors' votes for John Adams (Federalist, orange) and Thomas Jefferson (Democratic-Republican, blue), with bigger pies for more electors. Each pop-up lists the votes for each main candidate, with the rest grouped as others; source: National Archives (Electoral College results); state outlines from Natural Earth.
+- Election of 1800: electors' votes (off when the map opens): The same for 1800. Each pop-up lists every candidate's votes and explains the Jefferson–Burr tie; source: National Archives (Electoral College results); state outlines from Natural Earth.
+- Landmark Supreme Court cases, 1803 and 1819: Pink squares for Marbury v. Madison (1803, Washington, D.C.) and McCulloch v. Maryland (1819, Baltimore), labeled with the case name and year. Each pop-up gives the question, the ruling, why it matters and why it's placed there; source: National Archives (Milestone Documents).
+**Key facts:**
+- 1796 electors' votes (pop-ups): Adams 71, Jefferson 68; Adams became president and Jefferson vice president. Split states: Maryland (Adams 7, Jefferson 4), Pennsylvania (Jefferson 14, Adams 1), Virginia (Jefferson 20, Adams 1), North Carolina (Jefferson 11, Adams 1).
+- 1800 electors' votes (pop-ups): Jefferson 73, Aaron Burr 73, Adams 65. New York's 12 votes went to Adams in 1796 and to Jefferson in 1800. The House chose Jefferson on 17 February 1801.
+- 12th Amendment (1804): separate electoral votes for president and vice president.
+- Marbury v. Madison (1803): judicial review. McCulloch v. Maryland (1819): Congress could charter a national bank, and Maryland could not tax it.
+**What students read before they start:** George Washington belonged to no party, and in 1796, as he prepared to leave office, he warned Americans against parties. By then two had formed: the Federalists, led by John Adams and Alexander Hamilton, and the Democratic-Republicans, led by Thomas Jefferson and James Madison. Each elector cast two votes for president, and the runner-up became vice president.
+**How the student sheet explains the map's symbols:** The map has no place names: click a pie to see the state's name. Each pie shows how a state's electors voted: orange for John Adams (Federalist) and blue for Thomas Jefferson (Democratic-Republican). Bigger pies mean more electors. Each elector cast two votes; the pop-up lists the other candidates. Election of 1800 is off when the map opens. Pink squares mark two Supreme Court cases. Maine is shown within Massachusetts and West Virginia within Virginia, and territories aren't shown.
+**Compelling question:** How did the first political parties divide the country?
+**Questions already in this lesson:**
+1. The election of 1796 Open The sixteen states bookmark and click the pies for 1796. Which part of the country mostly voted for Adams, and which for Jefferson? Which states split their votes?
+2. The election of 1800 In Map layers, turn off Election of 1796 and turn on Election of 1800. Which large state changed from Adams to Jefferson? Which states split their votes this time?
+3. A tie In 1800 each elector still cast two votes. Click Virginia and New York. Who received the same number of votes as Jefferson? Why did the House of Representatives have to choose the president? Jefferson: ____ votes. Aaron Burr: ____ votes.
+4. The Supreme Court Click the two pink squares: Marbury v. Madison (1803) and McCulloch v. Maryland (1819). For each, write the question the Court answered and why the ruling matters.
+**Closing reflection already in this lesson:** What did the map show you about the first political parties that you might not have noticed from reading alone?
+**Common misunderstandings:**
+- "Voters chose the president directly." Electors did, and states chose their electors in different ways. In 1796 and 1800 each elector cast two votes.
+- "Adams and Jefferson ran together." They were rivals from different parties: in 1796 Jefferson, the runner-up, became Adams's vice president.
+- "The 1800 tie was between Jefferson and Adams." It was between Jefferson and his own running mate, Aaron Burr, with 73 votes each.
+**Key words:** political party, Federalist, Democratic-Republican, elector, Electoral College, 12th Amendment, judicial review, implied powers.
+**Standards:** TX 8.5(D); TX 8.18(A); TX 8.18(B); FL SS.8.A.3.13; FL SS.8.A.3.14; C3 D2.Civ.4.6-8.
+**How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
+**Languages:** student sheets in English and Spanish.
+**Lesson content version:** 0.1.0 (draft, updated 2026-10-14).
+
+### The Louisiana Purchase and the Corps of Discovery, 1803–1806
+**Lesson ID:** louisiana-purchase-1803-1806
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The early republic. **Time:** 45 minutes, or 10–15 per question.
+**MapMaker map:** [Open The Louisiana Purchase and the Corps of Discovery, 1803–1806 in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=f8af7269e5c14e69b060d6184d04ff85)
+**Description:** Compare the Louisiana Purchase with the United States of 1803, see why the Mississippi River and New Orleans mattered, and follow Lewis and Clark's route across rivers and biomes to the Pacific.
+**Bookmarks in this map:** The Louisiana Purchase; Up the Missouri; Across the Rockies to the Pacific.
+**Layers in this map (exact name: what students see; source):**
+- Territorial acquisitions to 1803: The land Britain gave up in 1783 (green) and the Louisiana Purchase of 1803 (yellow). Edges of the purchase that were settled later are in other colors or stripes: with Britain in 1818, and with Texas in 1845 and the Mexican Cession in 1848. Each pop-up gives a short note; source: MapMaker catalogue (US territorial acquisitions).
+- Biomes (off when the map opens): Today's biomes, shaded by type; each pop-up names the biome and ecoregion; source: RESOLVE Ecoregions 2017, via Esri (MapMaker catalogue).
+- United States Watersheds (off when the map opens): River basins outlined in brown, from the largest regions down to small watersheds; each pop-up names the basin; source: U.S. Geological Survey Watershed Boundary Dataset, via Esri (MapMaker catalogue).
+- Lewis and Clark National Historic Trail: The National Park Service's line of the expedition's route, about 4,900 miles from Pittsburgh to the mouth of the Columbia River; source: National Park Service, Lewis and Clark National Historic Trail.
+- Lewis and Clark campsites (approximate): Approximate places where the Corps of Discovery camped, 1803–1806; source: National Park Service, from Robert Bergantino, Montana Bureau of Mines and Geology.
+**Key facts:**
+- Louisiana Purchase (pop-up): about 530 million acres bought from France in 1803 for $15 million.
+- Lewis and Clark National Historic Trail: about 4,900 miles from Pittsburgh to the mouth of the Columbia River (National Park Service).
+- Straight-line distance from Pittsburgh to the mouth of the Columbia River: about 2,200 miles (3,560 km).
+- The National Park Service says the expedition met more than 50 Tribal Nations.
+- The 1803 treaty set no boundaries. The United States treated the purchase as the land drained by the Mississippi's western rivers, so in the north its western edge was the Continental Divide; the Pacific Northwest was not part of it. The south-western edge was fixed by the Adams–Onís Treaty in 1819.
+**What students read before they start:** In 1803 the United States bought France's claim to a huge area west of the Mississippi River. President Thomas Jefferson sent the Corps of Discovery, led by Meriwether Lewis and William Clark, to explore it and look for a water route to the Pacific Ocean. The expedition set out in 1803 and returned in 1806.
+**How the student sheet explains the map's symbols:** The map has no place names: click an area or a line to see its name. Green is the land Britain gave up to the United States in 1783; yellow is the Louisiana Purchase of 1803. Edges of the purchase settled later have other colors or stripes. A line follows the Lewis and Clark National Historic Trail, and small symbols mark the Corps' approximate campsites. United States Watersheds and Biomes are off when the map opens and show today's landscape.
+**Compelling question:** What did the Louisiana Purchase add to the United States, and whose land was it?
+**Questions already in this lesson:**
+1. A bigger country Open The Louisiana Purchase bookmark. Compare the yellow Louisiana Purchase with the green land of the United States in 1783. About how much bigger did the country become? Click the Louisiana Purchase: how much land was it, and what did it cost? Size: about ____ million acres. Price: $____ million.
+2. Why New Orleans? In Map layers, turn on United States Watersheds. Click inside the large brown outlines along the Ohio and Missouri rivers. Which river regions are they? Their rivers flow into the Mississippi and past New Orleans to the Gulf of Mexico. Why did control of New Orleans matter to American farmers?
+3. Up the Missouri Open the Up the Missouri bookmark and follow the trail up the Missouri River. Turn off United States Watersheds, turn on Biomes, and click along the route. Which biome covers the Great Plains? Why do you think the Corps traveled along rivers?
+4. Across the Rockies Open the Across the Rockies to the Pacific bookmark. Where does the trail leave the Louisiana Purchase? Was the Pacific coast part of it? Measure the straight-line distance from the trail's eastern end, at Pittsburgh, Pennsylvania, to the Pacific coast. Straight-line distance: ________ miles. The trail itself is about 4,900 miles long.
+**Closing reflection already in this lesson:** What did the map show you about the Louisiana Purchase that you might not have noticed from reading alone?
+**Common misunderstandings:**
+- "The United States bought the land from the people who lived there." It bought France's claim. Native nations lived on and governed much of the land, which the United States later took through treaties and force.
+- "Lewis and Clark explored only the Louisiana Purchase." West of the Rocky Mountains the trail leaves the purchase: the Pacific Northwest was not part of it.
+- "The Louisiana Purchase was the state of Louisiana." It stretched from the Gulf of Mexico to British North America, covering all or part of 15 of today's states.
+**Key words:** Louisiana Purchase, Corps of Discovery, expedition, watershed, river basin, biome, Continental Divide, Tribal Nation.
+**Standards:** TX 8.6(B); TX 8.10(A); TX 8.10(C); FL SS.8.A.3.14; FL SS.8.G.1.2; C3 D2.Geo.2.6-8.
+**How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
+**Languages:** student sheets in English and Spanish.
+**Lesson content version:** 0.1.0 (draft, updated 2026-10-14).
+
+### The War of 1812 and the Monroe Doctrine, 1807–1823
+**Lesson ID:** war-of-1812-and-monroe-doctrine
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The early republic. **Time:** 45 minutes, or 10–15 per question.
+**MapMaker map:** [Open The War of 1812 and the Monroe Doctrine, 1807–1823 in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=fad1cdb9d5704401a4e05c34f7ee693c)
+**Description:** Find where the War of 1812 was fought, see what Spain gave up in 1819, and compare Latin America's new nations with the Monroe Doctrine of 1823.
+**Bookmarks in this map:** The War of 1812; The 1819 boundary; Latin America in 1825.
+**Layers in this map (exact name: what students see; source):**
+- Historic National Boundaries: 1800: Borders in 1800, before the Louisiana Purchase, with the United States shaded pink. Each pop-up names the country; source: University of Minnesota (historic national boundaries), from the MapMaker catalogue.
+- Land Spain gave up in 1819 (off when the map opens): Land Spain gave up in the Adams–Onís Treaty, including East and West Florida (green). Each pop-up gives a short note; source: MapMaker catalogue (US territorial acquisitions).
+- Battlefield Boundaries: War of 1812: The land each battlefield covered (tan) and its core area (lighter tan). Each pop-up gives the battle and its size in acres; source: National Park Service, American Battlefield Protection Program.
+- Adams–Onís Treaty line, 1819 (off when the map opens): The 1819 boundary with Spain as a pink dashed line in seven parts, drawn from the treaty's description and approximate. Each pop-up describes its part; source: Treaty text from the Avalon Project, Yale Law School; drawn on Natural Earth rivers.
+- Battles of the War of 1812: 52 battles from 1811 to 1815 as diamonds: blue for an American victory, red for a British victory, gray if inconclusive; bigger diamonds mean more casualties. Each pop-up gives the dates, the casualties and a short account. The layer calls every opponent of the United States British, including the Red Stick Creeks; source: American Battlefield Trust (War of 1812 Battles map).
+- Latin American independence and US recognition (off when the map opens): Ten Latin American nations, labeled with the year of independence: blue circles if the United States recognized them by 1824, orange diamonds if it recognized them later (1826 to 1862). Each pop-up gives the capital, today's countries, independence and recognition; source: Office of the Historian, U.S. Department of State; Library of Congress country studies.
+**Key facts:**
+- Battles with the most casualties (pop-ups): Siege of Fort Erie (August 4 – September 21, 1814) 2,628; New Orleans (January 8, 1815) 2,096; Lundy's Lane (July 25, 1814) 1,731; Horseshoe Bend (March 27, 1814) 1,339; Queenston Heights (October 13, 1812) 1,233.
+- The Treaty of Ghent was signed on December 24, 1814.
+- Adams–Onís Treaty, 1819 (ratified 1821): Spain ceded East and West Florida (the United States already held much of West Florida); the United States took on $5 million in claims; the border ran along the Sabine, Red and Arkansas rivers to 42° N and west to the Pacific.
+- US recognition (pop-ups): Colombia 19 June 1822, Mexico 12 December 1822, Buenos Ayres and Chile 27 January 1823, Brazil 26 May 1824, Central America 4 August 1824, Peru 2 May 1826, Bolivia 1848, Paraguay 1852, Haiti 1862.
+- The Monroe Doctrine was set out in President Monroe's annual message of 2 December 1823.
+**What students read before they start:** In the early 1800s Britain and France were at war, and both seized American ships. British warships also forced sailors off American ships into the Royal Navy, and Britain supported Native nations resisting American settlement. In June 1812 the United States declared war on Britain.
+**How the student sheet explains the map's symbols:** The map has no place names: click a feature to see its name. Pink shading shows the United States in 1800. Diamonds mark battles: blue for an American victory, red for a British victory, gray if neither side won; bigger diamonds mean more casualties. Tan shading shows battlefield land. Three layers are off when the map opens: the land Spain gave up in 1819 (green), the treaty line (pink dashes) and the Latin American nations, shown as blue circles if the United States recognized them by 1824 and orange diamonds if later.
+**Compelling question:** How did the War of 1812 and the years after it change the United States' place in North and South America?
+**Questions already in this lesson:**
+1. Where was the war fought? Open The War of 1812 bookmark and click some diamonds in each group. In which three areas was most of the fighting?
+2. The biggest battles Click the three biggest diamonds. Where and when was each battle fought, and who won? The peace treaty was signed at Ghent, in Europe, on December 24, 1814. Which big battle came after it?
+3. Florida and a new border Open The 1819 boundary bookmark. Turn on Land Spain gave up in 1819 and Adams–Onís Treaty line, 1819, and click the green land and each part of the pink dashed line. What did the United States gain from Spain? Which rivers and lines of latitude and longitude does the new border follow?
+4. New nations and the Monroe Doctrine Open the Latin America in 1825 bookmark and turn on Latin American independence and US recognition. Click the blue circles: which nations had the United States recognized before President Monroe's message of December 2, 1823? Why might Monroe have warned European powers to stay out of the Americas?
+**Closing reflection already in this lesson:** What did the map show you about the War of 1812 and its results that you might not have noticed from reading alone?
+**Common misunderstandings:**
+- "The United States won the War of 1812 and gained land." The Treaty of Ghent returned the borders to where they were before the war, and the map shows American and British victories on every front.
+- "The Battle of New Orleans won the war." It was fought on January 8, 1815, after the Treaty of Ghent was signed on December 24, 1814.
+- "Every battle was against British soldiers." The battles in Alabama were part of the Creek War, fought against the Red Stick Creeks.
+**Key words:** impressment, blockade, Treaty of Ghent, cession, boundary, recognition, Monroe Doctrine, independence.
+**Standards:** TX 8.5(E); TX 8.5(F); FL SS.8.A.4.1; C3 D2.His.1.6-8; C3 D2.Geo.2.6-8.
+**How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
+**Languages:** student sheets in English and Spanish.
+**Lesson content version:** 0.1.0 (draft, updated 2026-10-14).
