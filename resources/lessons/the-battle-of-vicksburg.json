@@ -2,9 +2,9 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.2",
   "id": "the-battle-of-vicksburg",
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "status": "draft",
-  "updated": "2026-10-12",
+  "updated": "2026-10-14",
   "reviewed": null,
 
   "title": "The Battle of Vicksburg",
@@ -41,11 +41,11 @@
       {
         "id": "q1",
         "title": { "en": "Why Vicksburg?", "es": "¿Por qué Vicksburg?" },
-        "task": "Open The Battle of Vicksburg bookmark. Look at where Vicksburg sits on the Mississippi River and where the railroad leads east. Why would both sides want the city?",
+        "task": "Open The Battle of Vicksburg bookmark. Vicksburg is the yellow pin. Look at where it sits on the Mississippi River and, zoomed in (the railroads only show at closer scales), where the railroad leads east. Why would both sides want the city?",
         "tools": ["bookmarks", "zoom"],
         "student": {
-          "en": "Open The Battle of Vicksburg bookmark. Find Vicksburg on the Mississippi River. Where does the railroad from Vicksburg lead? Why would both sides want the city?",
-          "es": "Abre el marcador The Battle of Vicksburg. Busca Vicksburg en el río Misisipi. ¿A dónde lleva el ferrocarril que sale de Vicksburg? ¿Por qué querrían la ciudad ambos lados?"
+          "en": "Open The Battle of Vicksburg bookmark. Vicksburg is the yellow pin on the Mississippi River. Zoom in until the railroads appear: where does the railroad from Vicksburg lead? Why would both sides want the city?",
+          "es": "Abre el marcador The Battle of Vicksburg. Vicksburg es el alfiler amarillo junto al río Misisipi. Acércate hasta que aparezcan los ferrocarriles: ¿a dónde lleva el ferrocarril que sale de Vicksburg? ¿Por qué querrían la ciudad ambos lados?"
         },
         "answer": {
           "text": "Vicksburg stands on high bluffs over a bend in the Mississippi, so its guns controlled traffic on the river. A railroad ran east to Jackson, linking the river to the rest of the Confederacy. Whoever held Vicksburg controlled the river between the Confederacy's eastern and western states."
@@ -57,8 +57,8 @@
         "task": "Find the key places and put them in order along Grant's route: Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend, then Edwards. Measure the distance from Milliken's Bend to Bruinsburg Bend.",
         "tools": ["zoom", "measure"],
         "student": {
-          "en": "Find Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend and Edwards. Which side of the river is each on? Why did Grant march south before crossing the river?",
-          "es": "Busca Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend y Edwards. ¿De qué lado del río está cada lugar? ¿Por qué marchó Grant hacia el sur antes de cruzar el río?"
+          "en": "Find the dark pins for Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend and Edwards. Which side of the river is each on? Why did Grant march south before crossing the river?",
+          "es": "Busca los alfileres oscuros de Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend y Edwards. ¿De qué lado del río está cada lugar? ¿Por qué marchó Grant hacia el sur antes de cruzar el río?"
         },
         "fill": {
           "en": "Measure the distance from Milliken's Bend to Bruinsburg Bend: ________ miles",
@@ -71,12 +71,13 @@
       {
         "id": "q3",
         "title": { "en": "The battles of May 1863", "es": "Las batallas de mayo de 1863" },
-        "task": "Turn on Civil War Battlefields and click the battles between Bruinsburg and Vicksburg. Put them in order by date.",
+        "task": "Turn on Civil War Battlefields and click the diamonds between Bruinsburg and Vicksburg. Put the battles in order by date.",
         "tools": ["layers", "popups"],
         "student": {
-          "en": "Turn on the Civil War Battlefields layer. Click the battles between Bruinsburg and Vicksburg and list them in order by date.",
-          "es": "Activa la capa Civil War Battlefields (campos de batalla de la Guerra Civil). Haz clic en las batallas entre Bruinsburg y Vicksburg y ordénalas por fecha."
+          "en": "In Map layers, turn on Civil War Battlefields. Click the diamonds between Bruinsburg and Vicksburg and list the battles in order by date.",
+          "es": "En las capas del mapa (Map layers), activa Civil War Battlefields (campos de batalla de la Guerra Civil). Haz clic en los rombos entre Bruinsburg y Vicksburg y ordena las batallas por fecha."
         },
+        "lines": 5,
         "answer": {
           "table": {
             "caption": "Battles of Grant's Vicksburg campaign, from the pop-ups",
@@ -114,6 +115,22 @@
         "es": "Responde la pregunta central con evidencia de al menos dos lugares del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
       },
       "tools": ["sketch", "bookmarks"]
+    }
+  },
+
+  "studentSupport": {
+    "beforeYouStart": {
+      "en": "In 1862, Union forces captured New Orleans and Memphis, two cities on the Mississippi River. Between the two, the Confederates still held part of the river, including the city of Vicksburg, Mississippi. In spring 1863, Union General Ulysses S. Grant set out to capture it.",
+      "es": "En 1862, las fuerzas de la Unión tomaron Nueva Orleans y Memphis, dos ciudades a orillas del río Misisipi. Entre ambas, los confederados todavía controlaban parte del río, incluida la ciudad de Vicksburg, en Misisipi. En la primavera de 1863, el general de la Unión Ulysses S. Grant se propuso tomarla."
+    },
+    "readingTheMap": {
+      "en": "The yellow pin is Vicksburg. Dark pins mark places on Grant's route, each with its name. Railroads are thin dark lines with short cross marks, like a track; they appear when you zoom in, and they include lines built after the war. Civil War Battlefields is off when the map opens: turn it on in Map layers. Its diamonds mark battles: blue for a Union victory, gray for a Confederate victory, yellow if neither side won.",
+      "es": "El alfiler amarillo es Vicksburg. Los alfileres oscuros marcan lugares de la ruta de Grant, cada uno con su nombre. Los ferrocarriles son líneas oscuras finas con pequeñas marcas transversales, como una vía; aparecen al acercarte e incluyen líneas construidas después de la guerra. La capa Civil War Battlefields está desactivada al abrir el mapa: actívala en las capas del mapa (Map layers). Sus rombos marcan las batallas: azul si ganó la Unión, gris si ganó la Confederación y amarillo si ningún bando ganó."
+    },
+    "tips": ["popups"],
+    "reflection": {
+      "en": "What did the map show you about the Vicksburg campaign that you might not have noticed from reading alone?",
+      "es": "¿Qué te mostró el mapa sobre la campaña de Vicksburg que quizá no habrías notado solo con la lectura?"
     }
   },
 
