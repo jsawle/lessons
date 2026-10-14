@@ -2,9 +2,9 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.2",
   "id": "roads-trails-and-rails-west",
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "status": "draft",
-  "updated": "2026-10-12",
+  "updated": "2026-10-14",
   "reviewed": null,
 
   "title": "Roads, Trails, and Rails West",
@@ -45,9 +45,10 @@
         "task": "Click three trails and note where each started and ended. Most began in Missouri: why there?",
         "tools": ["popups", "legend"],
         "student": {
-          "en": "Click three trails. Where did each one start and end? In which state do most of the trails start?",
-          "es": "Haz clic en tres senderos. ¿Dónde empezaba y terminaba cada uno? ¿En qué estado empiezan la mayoría de los senderos?"
+          "en": "Click three of the dotted trail lines. Where did each one start and end? In which state do most of the trails start?",
+          "es": "Haz clic en tres de las líneas punteadas de los senderos. ¿Dónde empezaba y terminaba cada uno? ¿En qué estado empiezan la mayoría de los senderos?"
         },
+        "lines": 4,
         "answer": {
           "table": {
             "caption": "Where the trails started and ended, from their pop-ups",
@@ -71,8 +72,8 @@
         "task": "Open the Oregon Trail pop-up for its length and how many people used it. Measure the straight-line distance from Independence, Missouri, to Portland, Oregon, and compare it with the trail's length.",
         "tools": ["popups", "measure"],
         "student": {
-          "en": "Click the Oregon Trail. How long was it, and how many people traveled it? Why is the trail longer than a straight line?",
-          "es": "Haz clic en el sendero de Oregón. ¿Qué longitud tenía y cuántas personas lo recorrieron? ¿Por qué el sendero es más largo que una línea recta?"
+          "en": "Click the Oregon Trail (find its color in the legend). How long was it, and how many people traveled it? Why is the trail longer than a straight line?",
+          "es": "Haz clic en el sendero de Oregón (busca su color en la leyenda). ¿Qué longitud tenía y cuántas personas lo recorrieron? ¿Por qué el sendero es más largo que una línea recta?"
         },
         "fill": {
           "en": "Measure the straight-line distance from Independence, Missouri, to Portland, Oregon: ________ miles",
@@ -85,11 +86,11 @@
       {
         "id": "q3",
         "title": { "en": "Whose land?", "es": "¿De quién era la tierra?" },
-        "task": "Turn on Indigenous Territories and follow one trail. Was the West empty land when the trails were built?",
+        "task": "Turn on Indigenous Territories and zoom in until the nations' names appear, then follow one trail. Was the West empty land when the trails were built?",
         "tools": ["layers"],
         "student": {
-          "en": "Turn on the Indigenous Territories layer and follow one trail. Was the land the trail crossed empty? What might the trail have meant for the people who lived there?",
-          "es": "Activa la capa Indigenous Territories (territorios indígenas) y sigue un sendero. ¿Estaba vacía la tierra que cruzaba el sendero? ¿Qué pudo significar el sendero para las personas que vivían allí?"
+          "en": "In Map layers, turn on Indigenous Territories. Zoom in until the nations' names appear, then follow one trail. Was the land the trail crossed empty? What might the trail have meant for the people who lived there?",
+          "es": "En las capas del mapa (Map layers), activa Indigenous Territories (territorios indígenas). Acércate hasta que aparezcan los nombres de las naciones y sigue un sendero. ¿Estaba vacía la tierra que cruzaba el sendero? ¿Qué pudo significar el sendero para las personas que vivían allí?"
         },
         "answer": {
           "text": "No. The layer shows Indigenous nations' territories across all the land the trails crossed. The map's description notes that Manifest Destiny overlooked the Indigenous and Hispanic people already living in the West, and that trails and railways crossing Native lands led to conflict and great loss of land."
@@ -98,11 +99,11 @@
       {
         "id": "q4",
         "title": { "en": "From trails to rails", "es": "De los senderos a los rieles" },
-        "task": "Turn on the Railroads layers. Which trail does the first transcontinental line follow most closely? Click a railroad line to see when it was in operation.",
+        "task": "Turn on the Railroads group. Which trail does the first transcontinental line follow most closely? Click a thin gray railroad line to see when it was in operation (the transcontinental lines have no pop-up).",
         "tools": ["layers", "popups", "legend"],
         "student": {
-          "en": "Turn on the Railroads layers. Which trails does the Union Pacific and Central Pacific line follow most closely? Click a railroad line: when was it in operation?",
-          "es": "Activa las capas de ferrocarriles. ¿Qué senderos sigue más de cerca la línea Union Pacific y Central Pacific? Haz clic en una línea de ferrocarril: ¿desde cuándo funcionaba?"
+          "en": "In Map layers, turn on Railroads. Which trails does the Union Pacific and Central Pacific line follow most closely? Click a thin gray railroad line: when was it in operation?",
+          "es": "En las capas del mapa (Map layers), activa Railroads (ferrocarriles). ¿Qué senderos sigue más de cerca la línea Union Pacific y Central Pacific? Haz clic en una línea gris fina de ferrocarril: ¿desde cuándo funcionaba?"
         },
         "answer": {
           "text": "It runs close to the California and Mormon Pioneer trails across Nebraska, Wyoming, Utah and Nevada. The first transcontinental railroad was completed in 1869, the year the California Trail pop-up says that trail's use ended. The Pony Express pop-up says it stopped in October 1861, when a transcontinental telegraph line was completed."
@@ -116,6 +117,22 @@
         "es": "Responde la pregunta central con evidencia de al menos dos capas del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
       },
       "tools": ["sketch"]
+    }
+  },
+
+  "studentSupport": {
+    "beforeYouStart": {
+      "en": "In the 1800s, hundreds of thousands of people from the eastern United States went west in wagons, looking for farmland, gold or a place to practice their religion freely. A journey along one of the trails could take months. Later in the century, railroads were built across the West.",
+      "es": "En el siglo XIX, cientos de miles de personas del este de Estados Unidos viajaron al Oeste en carretas, en busca de tierras de cultivo, oro o un lugar donde practicar su religión libremente. Un viaje por uno de los senderos podía durar meses. Más adelante en ese siglo, se construyeron ferrocarriles a través del Oeste."
+    },
+    "readingTheMap": {
+      "en": "Each trail is a dotted line in its own color; the legend names them. Railroads and Indigenous Territories are off when the map opens: turn them on in Map layers. Thick colored lines are the transcontinental railroads, and thin gray lines are other railroads. Each Indigenous nation's territory is shaded in its own color, and its name appears when you zoom in. The territories are approximate and aren't listed in the legend.",
+      "es": "Cada sendero es una línea punteada de un color distinto; la leyenda indica sus nombres. Las capas Railroads e Indigenous Territories están desactivadas al abrir el mapa: actívalas en las capas del mapa (Map layers). Las líneas gruesas de colores son los ferrocarriles transcontinentales y las líneas grises finas son otros ferrocarriles. El territorio de cada nación indígena tiene su propio color, y su nombre aparece al acercarte. Los territorios son aproximados y no aparecen en la leyenda."
+    },
+    "tips": ["popups"],
+    "reflection": {
+      "en": "What did the map show you about the journey west that you might not have noticed from reading alone?",
+      "es": "¿Qué te mostró el mapa sobre el viaje al Oeste que quizá no habrías notado solo con la lectura?"
     }
   },
 

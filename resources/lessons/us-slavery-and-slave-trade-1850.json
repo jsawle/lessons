@@ -2,9 +2,9 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.2",
   "id": "us-slavery-and-slave-trade-1850",
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "status": "draft",
-  "updated": "2026-10-12",
+  "updated": "2026-10-14",
   "reviewed": null,
 
   "title": "US Slavery and Slave Trade, 1850",
@@ -61,8 +61,8 @@
         "task": "Find the Missouri Compromise Line. Which slave state lies mostly north of it, and why does that matter?",
         "tools": ["zoom", "legend"],
         "student": {
-          "en": "Find the Missouri Compromise Line. Slavery was banned north of it in the Louisiana Territory. Which slave state lies mostly north of the line?",
-          "es": "Busca la línea del Compromiso de Misuri. La esclavitud estaba prohibida al norte de ella en el territorio de Luisiana. ¿Qué estado esclavista está mayormente al norte de la línea?"
+          "en": "Find the Missouri Compromise Line (the gray dashed line). Slavery was banned north of it in the Louisiana Territory. Which slave state lies mostly north of the line?",
+          "es": "Busca la línea del Compromiso de Misuri (la línea gris discontinua). La esclavitud estaba prohibida al norte de ella en el territorio de Luisiana. ¿Qué estado esclavista está mayormente al norte de la línea?"
         },
         "answer": {
           "text": "Missouri. It was admitted as a slave state in 1820 even though most of it lies north of 36°30′ North; Maine was admitted as a free state at the same time to keep the Senate balanced (from the layer's notes)."
@@ -71,11 +71,11 @@
       {
         "id": "q3",
         "title": { "en": "The internal slave trade", "es": "La trata interna de esclavos" },
-        "task": "Follow the Internal Routes of the US Slave Trade. In which states do they start and end, and which way did they run?",
+        "task": "Follow the solid black lines of the Internal Routes of the US Slave Trade. The lines have no arrows, so students use which states the routes connect and what they have learned to say which way enslaved people were forced to move.",
         "tools": ["layers", "zoom"],
         "student": {
-          "en": "Follow the Internal Routes of the US Slave Trade. In which states do the routes start, and where do they end? In which direction were enslaved people forced to move?",
-          "es": "Sigue la capa Internal Routes of the US Slave Trade (rutas internas de la trata de esclavos). ¿En qué estados empiezan las rutas y dónde terminan? ¿En qué dirección fueron obligadas a moverse las personas esclavizadas?"
+          "en": "Follow the solid black lines of the Internal Routes of the US Slave Trade. Which states do the routes connect? The lines have no arrows, so use what you have learned: in which direction were enslaved people forced to move?",
+          "es": "Sigue las líneas negras continuas de la capa Internal Routes of the US Slave Trade (rutas internas de la trata de esclavos). ¿Qué estados conectan las rutas? Las líneas no tienen flechas, así que usa lo que has aprendido: ¿en qué dirección fueron obligadas a moverse las personas esclavizadas?"
         },
         "answer": {
           "text": "The routes run from the older slave states of the Upper South, such as Virginia, Maryland and Kentucky, south and west to the Deep South, such as Mississippi, Louisiana and Alabama. Check the exact routes on the map, which follow the 1920 atlas. You can connect this with the spread of cotton growing."
@@ -84,11 +84,11 @@
       {
         "id": "q4",
         "title": { "en": "Routes to freedom", "es": "Rutas hacia la libertad" },
-        "task": "Open the Illinois, Indiana, and Ohio bookmark and follow the Underground Railroad routes north from the Ohio River. Where do they lead, and why do many continue to Canada?",
+        "task": "Open the Illinois, Indiana, and Ohio bookmark and follow the orange Underground Railroad routes north from the Ohio River; the towns' names appear when zoomed in. Where do they lead, and why do many continue to Canada?",
         "tools": ["bookmarks", "layers"],
         "student": {
-          "en": "Open the Illinois, Indiana, and Ohio bookmark. Follow the Underground Railroad routes north from the Ohio River. Where do they lead?",
-          "es": "Abre el marcador Illinois, Indiana, and Ohio. Sigue las rutas del Ferrocarril Subterráneo hacia el norte desde el río Ohio. ¿A dónde llevan?"
+          "en": "Open the Illinois, Indiana, and Ohio bookmark. Follow the orange Underground Railroad routes north from the Ohio River, and zoom in to read the names of the towns along them. Where do the routes lead?",
+          "es": "Abre el marcador Illinois, Indiana, and Ohio. Sigue hacia el norte, desde el río Ohio, las rutas anaranjadas del Ferrocarril Subterráneo, y acércate para leer los nombres de las ciudades a lo largo de ellas. ¿A dónde llevan las rutas?"
         },
         "answer": {
           "text": "North across Ohio, Indiana and Illinois to Lake Erie and the Detroit River, at places such as Cleveland, Ashtabula, Toledo and Detroit, and on to Canada (Chatham and Toronto in Ontario, Montreal in Quebec). After the Fugitive Slave Act of 1850, people who had escaped could be seized even in free states, so Canada was safer."
@@ -102,6 +102,22 @@
         "es": "Responde la pregunta central con evidencia de al menos dos capas del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
       },
       "tools": ["sketch"]
+    }
+  },
+
+  "studentSupport": {
+    "beforeYouStart": {
+      "en": "By 1850, the Northern states had ended slavery or passed laws to end it, but in the South slavery was legal and growing. More than 3 million people were enslaved in the United States. Each time a new state joined the Union, Congress argued over whether slavery would be allowed there.",
+      "es": "Hacia 1850, los estados del Norte habían abolido la esclavitud o aprobado leyes para abolirla, pero en el Sur la esclavitud era legal y seguía creciendo. Más de 3 millones de personas estaban esclavizadas en Estados Unidos. Cada vez que un nuevo estado se unía a la Unión, el Congreso discutía si allí se permitiría la esclavitud."
+    },
+    "readingTheMap": {
+      "en": "States and territories are shaded brown if they were free and green if they allowed slavery; the paler shades mean free, or slave, because of a compromise. A gray dashed line marks the Missouri Compromise Line. Solid black lines are internal routes of the slave trade. They have no arrows. Dashed and dotted lines in the same layer show sea routes and the voyages of two ships, the Amistad and the Creole. Orange lines are approximate Underground Railroad routes. Zoom in to see the towns along them: orange dots in the United States, black dots in Canada.",
+      "es": "Los estados y territorios aparecen en tonos marrones si eran libres y en tonos verdes si permitían la esclavitud; los tonos más claros indican que eran libres, o esclavistas, por un compromiso. Una línea gris discontinua marca la línea del Compromiso de Misuri. Las líneas negras continuas son rutas internas de la trata de esclavos. No tienen flechas. Las líneas discontinuas y punteadas de la misma capa muestran rutas marítimas y los viajes de dos barcos, el Amistad y el Creole. Las líneas anaranjadas son rutas aproximadas del Ferrocarril Subterráneo. Acércate para ver las ciudades a lo largo de ellas: puntos anaranjados en Estados Unidos y puntos negros en Canadá."
+    },
+    "tips": ["popups"],
+    "reflection": {
+      "en": "What did the map show you about slavery in 1850 that you might not have noticed from reading alone?",
+      "es": "¿Qué te mostró el mapa sobre la esclavitud en 1850 que quizá no habrías notado solo con la lectura?"
     }
   },
 
