@@ -1,0 +1,252 @@
+{
+  "$schema": "../schema/lesson.schema.json",
+  "formatVersion": "1.2",
+  "id": "louisiana-purchase-1803-1806",
+  "contentVersion": "0.1.0",
+  "status": "draft",
+  "updated": "2026-10-14",
+  "reviewed": null,
+  "title": "The Louisiana Purchase and the Corps of Discovery, 1803–1806",
+  "sheetTitle": {
+    "es": "La compra de Luisiana y el Cuerpo de Descubrimiento, 1803–1806"
+  },
+  "summary": "Compare the Louisiana Purchase with the United States of 1803, see why the Mississippi River and New Orleans mattered, and follow Lewis and Clark's route across rivers and biomes to the Pacific.",
+  "subject": "History",
+  "course": "US History",
+  "unit": "The early republic",
+  "grade": "8",
+  "time": "45 minutes, or 10–15 per question",
+  "studentLogin": "Not needed to explore the map",
+  "planMonth": "November",
+  "map": {
+    "webmapId": "f8af7269e5c14e69b060d6184d04ff85",
+    "bookmarks": [
+      "The Louisiana Purchase",
+      "Up the Missouri",
+      "Across the Rockies to the Pacific"
+    ],
+    "layers": [
+      {
+        "name": "Territorial acquisitions to 1803",
+        "shows": "The land Britain gave up in 1783 (green) and the Louisiana Purchase of 1803 (yellow). Edges of the purchase that were settled later are in other colors or stripes: with Britain in 1818, and with Texas in 1845 and the Mexican Cession in 1848. Each pop-up gives a short note.",
+        "source": "MapMaker catalogue (US territorial acquisitions)"
+      },
+      {
+        "name": "Biomes",
+        "shows": "Today's biomes, shaded by type; each pop-up names the biome and ecoregion.",
+        "source": "RESOLVE Ecoregions 2017, via Esri (MapMaker catalogue)",
+        "offAtStart": true
+      },
+      {
+        "name": "United States Watersheds",
+        "shows": "River basins outlined in brown, from the largest regions down to small watersheds; each pop-up names the basin.",
+        "source": "U.S. Geological Survey Watershed Boundary Dataset, via Esri (MapMaker catalogue)",
+        "offAtStart": true
+      },
+      {
+        "name": "Lewis and Clark National Historic Trail",
+        "shows": "The National Park Service's line of the expedition's route, about 4,900 miles from Pittsburgh to the mouth of the Columbia River.",
+        "source": "National Park Service, Lewis and Clark National Historic Trail"
+      },
+      {
+        "name": "Lewis and Clark campsites (approximate)",
+        "shows": "Approximate places where the Corps of Discovery camped, 1803–1806.",
+        "source": "National Park Service, from Robert Bergantino, Montana Bureau of Mines and Geology"
+      }
+    ]
+  },
+  "knownIssues": [],
+  "inquiry": {
+    "compellingQuestion": {
+      "en": "What did the Louisiana Purchase add to the United States, and whose land was it?",
+      "es": "¿Qué le añadió la compra de Luisiana a Estados Unidos, y de quién era esa tierra?"
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "title": {
+          "en": "A bigger country",
+          "es": "Un país más grande"
+        },
+        "task": "Open The Louisiana Purchase bookmark. Compare the yellow Louisiana Purchase with the green land of 1783, and click the purchase for its size and price.",
+        "tools": [
+          "bookmarks",
+          "popups",
+          "legend"
+        ],
+        "student": {
+          "en": "Open The Louisiana Purchase bookmark. Compare the yellow Louisiana Purchase with the green land of the United States in 1783. About how much bigger did the country become? Click the Louisiana Purchase: how much land was it, and what did it cost?",
+          "es": "Abre el marcador The Louisiana Purchase. Compara la compra de Luisiana, en amarillo, con el territorio de Estados Unidos en 1783, en verde. ¿Cuánto más grande se hizo el país, aproximadamente? Haz clic en la compra de Luisiana: ¿cuánta tierra era y cuánto costó?"
+        },
+        "fill": {
+          "en": "Size: about ____ million acres. Price: $____ million.",
+          "es": "Superficie: unos ____ millones de acres. Precio: ____ millones de dólares."
+        },
+        "answer": {
+          "text": "About 530 million acres for $15 million (from the pop-up), roughly doubling the size of the United States. Some edges were settled later: the strip given to Britain in 1818 (striped), and the parts that came with Texas in 1845 and the Mexican Cession in 1848."
+        }
+      },
+      {
+        "id": "q2",
+        "title": {
+          "en": "Why New Orleans?",
+          "es": "¿Por qué Nueva Orleans?"
+        },
+        "task": "Turn on United States Watersheds and click the large river regions west of the Appalachians and along the Missouri. Explain why farmers there needed New Orleans.",
+        "tools": [
+          "layers",
+          "popups",
+          "zoom"
+        ],
+        "student": {
+          "en": "In Map layers, turn on United States Watersheds. Click inside the large brown outlines along the Ohio and Missouri rivers. Which river regions are they? Their rivers flow into the Mississippi and past New Orleans to the Gulf of Mexico. Why did control of New Orleans matter to American farmers?",
+          "es": "En las capas del mapa (Map layers), activa United States Watersheds. Haz clic dentro de los grandes contornos marrones a lo largo de los ríos Ohio y Misuri. ¿Qué regiones fluviales son? Sus ríos desembocan en el Misisipi, que pasa por Nueva Orleans antes de llegar al golfo de México. ¿Por qué era importante para los agricultores estadounidenses controlar Nueva Orleans?"
+        },
+        "lines": 3,
+        "answer": {
+          "text": "The Ohio, Upper Mississippi and Missouri river regions all drain into the Mississippi. Farmers in Kentucky, Tennessee and Ohio shipped their crops downriver, so whoever held New Orleans could close their route to market. In 1802 Spanish officials there stopped Americans storing goods in the port, and Jefferson tried to buy New Orleans before France offered all of Louisiana."
+        }
+      },
+      {
+        "id": "q3",
+        "title": {
+          "en": "Up the Missouri",
+          "es": "Río Misuri arriba"
+        },
+        "task": "Open the Up the Missouri bookmark, follow the trail upriver, and turn on Biomes to name the biome the Corps crossed on the Great Plains.",
+        "tools": [
+          "bookmarks",
+          "layers",
+          "popups"
+        ],
+        "student": {
+          "en": "Open the Up the Missouri bookmark and follow the trail up the Missouri River. Turn off United States Watersheds, turn on Biomes, and click along the route. Which biome covers the Great Plains? Why do you think the Corps traveled along rivers?",
+          "es": "Abre el marcador Up the Missouri y sigue la ruta río Misuri arriba. Desactiva United States Watersheds, activa Biomes y haz clic a lo largo de la ruta. ¿Qué bioma cubre las Grandes Llanuras? ¿Por qué crees que el Cuerpo viajaba siguiendo los ríos?"
+        },
+        "answer": {
+          "text": "Temperate grasslands, savannas and shrublands cover the Great Plains along the Missouri. The Corps traveled upriver by boat: the rivers gave a route, water and food, and the campsites line the riverbanks."
+        }
+      },
+      {
+        "id": "q4",
+        "title": {
+          "en": "Across the Rockies",
+          "es": "A través de las Montañas Rocosas"
+        },
+        "task": "Open the Across the Rockies to the Pacific bookmark. Note where the trail leaves the Louisiana Purchase, then measure the straight-line distance from the trail's eastern end at Pittsburgh to its western end on the Pacific coast.",
+        "tools": [
+          "bookmarks",
+          "measure"
+        ],
+        "student": {
+          "en": "Open the Across the Rockies to the Pacific bookmark. Where does the trail leave the Louisiana Purchase? Was the Pacific coast part of it? Measure the straight-line distance from the trail's eastern end, at Pittsburgh, Pennsylvania, to the Pacific coast.",
+          "es": "Abre el marcador Across the Rockies to the Pacific. ¿Dónde sale la ruta de la compra de Luisiana? ¿Formaba parte de ella la costa del Pacífico? Mide la distancia en línea recta desde el extremo este de la ruta, en Pittsburgh (Pensilvania), hasta la costa del Pacífico."
+        },
+        "fill": {
+          "en": "Straight-line distance: ________ miles. The trail itself is about 4,900 miles long.",
+          "es": "Distancia en línea recta: ________ millas. La ruta mide unas 4,900 millas."
+        },
+        "answer": {
+          "text": "The trail leaves the purchase in the Rocky Mountains, at the Continental Divide; the Pacific Northwest was not part of the purchase. The straight-line distance is about 2,200 miles (expect 2,100–2,300), less than half the trail's 4,900 miles, because the Corps followed winding rivers and mountain passes. The National Park Service says the expedition met more than 50 Tribal Nations along the way."
+        }
+      }
+    ],
+    "final": {
+      "teacher": "Students answer with evidence from at least two layers, and recognize that the map doesn't show the Native nations whose land this was. Some ways to do it: a paragraph; sketch pins for New Orleans, where control of the Mississippi mattered to western farmers, and for Haiti, whose revolution shaped the sale, with notes; or a short talk using the map.",
+      "student": {
+        "en": "Answer the big question using evidence from at least two layers. Remember that the people already living on this land aren't on the map. You can write a paragraph, sketch on the map, or both.",
+        "es": "Responde la pregunta central con evidencia de al menos dos capas. Recuerda que el mapa no muestra a los pueblos que ya vivían en esta tierra. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
+      },
+      "tools": [
+        "sketch"
+      ]
+    }
+  },
+  "studentSupport": {
+    "beforeYouStart": {
+      "en": "In 1803 the United States bought France's claim to a huge area west of the Mississippi River. President Thomas Jefferson sent the Corps of Discovery, led by Meriwether Lewis and William Clark, to explore it and look for a water route to the Pacific Ocean. The expedition set out in 1803 and returned in 1806.",
+      "es": "En 1803, Estados Unidos compró a Francia su reclamación sobre una enorme región al oeste del río Misisipi. El presidente Thomas Jefferson envió al Cuerpo de Descubrimiento, dirigido por Meriwether Lewis y William Clark, a explorarla y a buscar una ruta por agua hasta el océano Pacífico. La expedición partió en 1803 y regresó en 1806."
+    },
+    "readingTheMap": {
+      "en": "The map has no place names: click an area or a line to see its name. Green is the land Britain gave up to the United States in 1783; yellow is the Louisiana Purchase of 1803. Edges of the purchase settled later have other colors or stripes. A line follows the Lewis and Clark National Historic Trail, and small symbols mark the Corps' approximate campsites. United States Watersheds and Biomes are off when the map opens and show today's landscape.",
+      "es": "El mapa no tiene nombres de lugares: haz clic en una zona o una línea para ver su nombre. El verde es la tierra que Gran Bretaña cedió a Estados Unidos en 1783; el amarillo, la compra de Luisiana de 1803. Los bordes de la compra que se definieron más tarde tienen otros colores o rayas. Una línea sigue la ruta histórica nacional de Lewis y Clark, y pequeños símbolos marcan los campamentos aproximados del Cuerpo. Las capas United States Watersheds y Biomes están desactivadas al abrir el mapa y muestran el paisaje actual."
+    },
+    "tips": [
+      "popups"
+    ],
+    "reflection": {
+      "en": "What did the map show you about the Louisiana Purchase that you might not have noticed from reading alone?",
+      "es": "¿Qué te mostró el mapa sobre la compra de Luisiana que quizá no habrías notado solo con la lectura?"
+    }
+  },
+  "teacherNotes": {
+    "beforeClass": "Watersheds and Biomes are off when the map opens. The basemap has no place names, so students may need help finding Pittsburgh and New Orleans. The trail and campsite layers come from the National Park Service, and the questions don't depend on their pop-ups. The map has no layer of the Native nations the Corps met: the National Park Service says there were more than 50, and the final answer should recognize them.",
+    "misconceptions": [
+      {
+        "claim": "The United States bought the land from the people who lived there.",
+        "response": "It bought France's claim. Native nations lived on and governed much of the land, which the United States later took through treaties and force."
+      },
+      {
+        "claim": "Lewis and Clark explored only the Louisiana Purchase.",
+        "response": "West of the Rocky Mountains the trail leaves the purchase: the Pacific Northwest was not part of it."
+      },
+      {
+        "claim": "The Louisiana Purchase was the state of Louisiana.",
+        "response": "It stretched from the Gulf of Mexico to British North America, covering all or part of 15 of today's states."
+      }
+    ],
+    "keyWords": [
+      "Louisiana Purchase",
+      "Corps of Discovery",
+      "expedition",
+      "watershed",
+      "river basin",
+      "biome",
+      "Continental Divide",
+      "Tribal Nation"
+    ]
+  },
+  "standards": [
+    {
+      "code": "TX 8.6(B)",
+      "text": "Analyze the westward growth of the nation, including the Louisiana Purchase and Manifest Destiny"
+    },
+    {
+      "code": "TX 8.10(A)",
+      "text": "Locate places and regions directly related to major eras and turning points in the United States during the 17th, 18th, and 19th centuries"
+    },
+    {
+      "code": "TX 8.10(C)",
+      "text": "Analyze the effects of physical and human geographic factors such as weather, landforms, waterways, transportation, and communication on major historical events in the United States"
+    },
+    {
+      "code": "FL SS.8.A.3.14",
+      "text": "Explain major domestic and international economic, military, political, and socio-cultural events of Thomas Jefferson's presidency."
+    },
+    {
+      "code": "FL SS.8.G.1.2",
+      "text": "Use appropriate geographic tools and terms to identify and describe significant places and regions in American history."
+    },
+    {
+      "code": "C3 D2.Geo.2.6-8",
+      "text": "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions, and changes in their environmental characteristics."
+    }
+  ],
+  "keyFacts": [
+    "Louisiana Purchase (pop-up): about 530 million acres bought from France in 1803 for $15 million.",
+    "Lewis and Clark National Historic Trail: about 4,900 miles from Pittsburgh to the mouth of the Columbia River (National Park Service).",
+    "Straight-line distance from Pittsburgh to the mouth of the Columbia River: about 2,200 miles (3,560 km).",
+    "The National Park Service says the expedition met more than 50 Tribal Nations.",
+    "The 1803 treaty set no boundaries. The United States treated the purchase as the land drained by the Mississippi's western rivers, so in the north its western edge was the Continental Divide; the Pacific Northwest was not part of it. The south-western edge was fixed by the Adams–Onís Treaty in 1819."
+  ],
+  "languages": {
+    "en": {
+      "status": "final"
+    },
+    "es": {
+      "status": "draft",
+      "note": "Spanish draft for review by a native speaker. Layer and bookmark names stay in English, as they appear in MapMaker."
+    }
+  },
+  "licence": "Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide."
+}

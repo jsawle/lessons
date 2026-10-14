@@ -1,0 +1,383 @@
+{
+  "$schema": "../schema/lesson.schema.json",
+  "formatVersion": "1.2",
+  "id": "we-the-people-1787-1791",
+  "contentVersion": "0.1.0",
+  "status": "draft",
+  "updated": "2026-10-14",
+  "reviewed": null,
+  "title": "We the People: Representation and Ratification, 1787–1791",
+  "sheetTitle": {
+    "es": "Nosotros, el pueblo: representación y ratificación, 1787–1791"
+  },
+  "summary": "See how House seats were shared out after the 1790 census, how the three-fifths clause changed the count, and how close each state's vote to ratify was.",
+  "subject": "History",
+  "course": "US History",
+  "unit": "The Constitution",
+  "grade": "8",
+  "time": "45 minutes, or 10–15 per question",
+  "studentLogin": "Not needed to explore the map",
+  "planMonth": "November",
+  "map": {
+    "webmapId": "eba1ea7488624f3c88ef094167ed03ca",
+    "bookmarks": [
+      "The states in 1790",
+      "New England and New York",
+      "The South"
+    ],
+    "layers": [
+      {
+        "name": "Population in 1790: free and enslaved",
+        "shows": "A pie on each state: free people (blue) and enslaved people (orange-red) in the 1790 census, with bigger pies for more people. Each pop-up gives the counts, the state's House seats in 1793, its two senators, and the seats it would have had if enslaved people had been counted in full or not at all.",
+        "source": "1790 census figures as tabulated on Wikipedia, checked against the 1793 House seats; seats from the National Archives; ratio from the U.S. Census Bureau; state outlines from Natural Earth"
+      },
+      {
+        "name": "House seats in 1793",
+        "shows": "States shaded from pale to dark blue by their House seats under the apportionment act of 14 April 1792, labeled with the state's abbreviation and seats. Same pop-up as the population layer.",
+        "source": "National Archives",
+        "offAtStart": true
+      },
+      {
+        "name": "House seats today (2020 apportionment)",
+        "shows": "Each state's House seats after the 2020 census.",
+        "source": "U.S. Census Bureau (MapMaker catalogue)",
+        "offAtStart": true
+      },
+      {
+        "name": "Ratifying the Constitution, 1787–1791",
+        "shows": "A pie where each state's ratifying convention met: votes to ratify (blue) and against (orange-red), with bigger pies for more delegates. Labels give the state and the order it ratified. North Carolina has two: its first convention, at Hillsborough in 1788, did not ratify. The 1788 pie shows 83 for and 184 against, but that convention voted 184–84 neither to ratify nor to reject (see Known issues).",
+        "source": "Center for the Study of the American Constitution, University of Wisconsin–Madison (votes, dates and meeting places)",
+        "offAtStart": true
+      }
+    ]
+  },
+  "knownIssues": [
+    {
+      "date": "2026-10-14",
+      "status": "open",
+      "where": "Ratifying the Constitution, North Carolina (1788)",
+      "note": "The pie shows 83 for and 184 against, dated 2 August 1788, as if the Hillsborough convention voted to reject. It voted 184–84 on 1 August 1788 neither to ratify nor to reject the Constitution until amendments were considered ([NCpedia](https://www.ncpedia.org/government/convention-1788))."
+    }
+  ],
+  "inquiry": {
+    "compellingQuestion": {
+      "en": "How did the Constitution balance large and small states, and how close did it come to being rejected?",
+      "es": "¿Cómo equilibró la Constitución a los estados grandes y pequeños, y qué tan cerca estuvo de ser rechazada?"
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "title": {
+          "en": "Who lived where in 1790?",
+          "es": "¿Quién vivía dónde en 1790?"
+        },
+        "task": "Open The states in 1790 bookmark. Use the pies and pop-ups to find the most populous state and the states where more than a quarter of the people were enslaved.",
+        "tools": [
+          "bookmarks",
+          "popups",
+          "legend"
+        ],
+        "student": {
+          "en": "Open The states in 1790 bookmark and click the pies. Which state had the most people? In which states were more than a quarter of the people enslaved?",
+          "es": "Abre el marcador The states in 1790 y haz clic en los gráficos circulares. ¿Qué estado tenía más habitantes? ¿En qué estados más de una cuarta parte de la población estaba esclavizada?"
+        },
+        "lines": 3,
+        "answer": {
+          "table": {
+            "caption": "States where more than a quarter of the people were enslaved in 1790, from the pop-ups",
+            "columns": [
+              "State",
+              "People",
+              "Enslaved",
+              "Share enslaved"
+            ],
+            "rows": [
+              [
+                "South Carolina",
+                "249,073",
+                "107,094",
+                "43.0%"
+              ],
+              [
+                "Virginia",
+                "747,610",
+                "292,627",
+                "39.1%"
+              ],
+              [
+                "Georgia",
+                "82,548",
+                "29,264",
+                "35.5%"
+              ],
+              [
+                "Maryland",
+                "319,728",
+                "103,036",
+                "32.2%"
+              ],
+              [
+                "North Carolina",
+                "393,751",
+                "100,572",
+                "25.5%"
+              ]
+            ]
+          },
+          "text": "Virginia had the most people, 747,610 (Kentucky was counted separately). Massachusetts, which then included Maine, was next with 475,327."
+        }
+      },
+      {
+        "id": "q2",
+        "title": {
+          "en": "Seats in Congress",
+          "es": "Escaños en el Congreso"
+        },
+        "task": "Turn on House seats in 1793. Compare the largest and smallest states' seats in the House with their seats in the Senate.",
+        "tools": [
+          "layers",
+          "popups"
+        ],
+        "student": {
+          "en": "In Map layers, turn on House seats in 1793. Which state had the most seats in the House of Representatives, and which the fewest? How many senators did every state have?",
+          "es": "En las capas del mapa (Map layers), activa House seats in 1793. ¿Qué estado tenía más escaños en la Cámara de Representantes y cuál tenía menos? ¿Cuántos senadores tenía cada estado?"
+        },
+        "answer": {
+          "text": "Virginia had the most, 19 of the 105 seats; Delaware had the fewest, 1. Every state had 2 senators. This was the Great Compromise: seats in the House by population, which suited the large states, and an equal Senate, which protected the small ones. House seats were one for every 33,000 people counted."
+        }
+      },
+      {
+        "id": "q3",
+        "title": {
+          "en": "The three-fifths clause",
+          "es": "La cláusula de los tres quintos"
+        },
+        "task": "Click Virginia and South Carolina. Their pop-ups give the seats each would have had if enslaved people had been counted in full, or not at all. Compare these with the actual seats.",
+        "tools": [
+          "popups"
+        ],
+        "student": {
+          "en": "Under the three-fifths clause, three of every five enslaved people were counted when House seats were shared out. Click Virginia and South Carolina: how many seats would each have had if enslaved people had been counted in full, or not at all? Which states gained seats by counting people who could not vote?",
+          "es": "Según la cláusula de los tres quintos, se contaban tres de cada cinco personas esclavizadas al repartir los escaños de la Cámara. Haz clic en Virginia y en Carolina del Sur: ¿cuántos escaños habría tenido cada uno si se hubiera contado a todas las personas esclavizadas, o a ninguna? ¿Qué estados ganaron escaños al contar a personas que no podían votar?"
+        },
+        "fill": {
+          "en": "Virginia: ____ seats with the three-fifths clause; ____ if enslaved people were not counted.",
+          "es": "Virginia: ____ escaños con la cláusula de los tres quintos; ____ si no se contaba a las personas esclavizadas."
+        },
+        "answer": {
+          "table": {
+            "caption": "House seats in 1793, from the pop-ups",
+            "columns": [
+              "State",
+              "Seats (three-fifths)",
+              "If counted in full",
+              "If not counted"
+            ],
+            "rows": [
+              [
+                "Virginia",
+                "19",
+                "22",
+                "13"
+              ],
+              [
+                "North Carolina",
+                "10",
+                "11",
+                "8"
+              ],
+              [
+                "Maryland",
+                "8",
+                "9",
+                "6"
+              ],
+              [
+                "South Carolina",
+                "6",
+                "7",
+                "4"
+              ],
+              [
+                "New York",
+                "10",
+                "10",
+                "9"
+              ],
+              [
+                "Georgia",
+                "2",
+                "2",
+                "1"
+              ],
+              [
+                "Kentucky",
+                "2",
+                "2",
+                "1"
+              ]
+            ]
+          },
+          "text": "Counting three-fifths of enslaved people gave these states 15 more seats than not counting them, at the same ratio of one seat per 33,000 people: 105 seats in all instead of 90. Virginia alone gained 6. Enslaved people were counted, but they could not vote."
+        }
+      },
+      {
+        "id": "q4",
+        "title": {
+          "en": "How close was ratification?",
+          "es": "¿Qué tan reñida fue la ratificación?"
+        },
+        "task": "Turn off the population and House seats layers and turn on Ratifying the Constitution. Find the closest votes and North Carolina's two conventions.",
+        "tools": [
+          "layers",
+          "popups"
+        ],
+        "student": {
+          "en": "Turn off Population in 1790 and House seats in 1793, and turn on Ratifying the Constitution. Click the pies to find the three closest votes. Why does North Carolina have two pies?",
+          "es": "Desactiva Population in 1790 y House seats in 1793, y activa Ratifying the Constitution. Haz clic en los gráficos para encontrar las tres votaciones más reñidas. ¿Por qué Carolina del Norte tiene dos gráficos?"
+        },
+        "lines": 3,
+        "answer": {
+          "table": {
+            "caption": "The closest ratification votes, from the pop-ups",
+            "columns": [
+              "State",
+              "Vote",
+              "Date",
+              "Order"
+            ],
+            "rows": [
+              [
+                "Rhode Island",
+                "34–32",
+                "May 29, 1790",
+                "13th"
+              ],
+              [
+                "New York",
+                "30–27",
+                "July 26, 1788",
+                "11th"
+              ],
+              [
+                "Massachusetts",
+                "187–168",
+                "February 6, 1788",
+                "6th"
+              ],
+              [
+                "Virginia",
+                "89–79",
+                "June 25, 1788",
+                "10th"
+              ],
+              [
+                "New Hampshire",
+                "57–47",
+                "June 21, 1788",
+                "9th"
+              ]
+            ]
+          },
+          "text": "By share of the vote the closest were Rhode Island, New York and Massachusetts; by number of votes, Rhode Island (2), New York (3), then Virginia and New Hampshire (10 each). New Hampshire was the ninth state, enough to put the Constitution into effect. North Carolina's first convention, at Hillsborough, voted 184–84 on 1 August 1788 neither to ratify nor to reject the Constitution until amendments were considered; a second, at Fayetteville, ratified in November 1789, after Congress had proposed the Bill of Rights. The map's 1788 pie shows this as 83 for and 184 against: see Known issues."
+        }
+      }
+    ],
+    "final": {
+      "teacher": "Students answer with evidence from at least two layers. Some ways to do it: a paragraph; sketch pins for James Madison, Alexander Hamilton, Patrick Henry and George Mason, each with a quote and the principle it argues about; or a short talk using the map.",
+      "student": {
+        "en": "Answer the big question using evidence from at least two layers on the map. You can write a paragraph, sketch on the map, or both.",
+        "es": "Responde la pregunta central con evidencia de al menos dos capas del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
+      },
+      "tools": [
+        "sketch"
+      ]
+    }
+  },
+  "studentSupport": {
+    "beforeYouStart": {
+      "en": "In 1787, delegates from twelve states met in Philadelphia and wrote the Constitution. Large and small states disagreed about how many votes each should have in Congress. The Constitution would take effect only when nine states had ratified it, each at a special convention.",
+      "es": "En 1787, delegados de doce estados se reunieron en Filadelfia y redactaron la Constitución. Los estados grandes y los pequeños no estaban de acuerdo sobre cuántos votos debía tener cada uno en el Congreso. La Constitución solo entraría en vigor cuando nueve estados la ratificaran, cada uno en una convención especial."
+    },
+    "readingTheMap": {
+      "en": "The map has no place names: click a pie or a state to see its name. Pies on the states show the people in 1790: blue for free, orange-red for enslaved, and bigger pies for more people. Three layers are off when the map opens. In House seats in 1793, darker blue means more seats. In Ratifying the Constitution, each pie sits where a state's convention met: blue for votes to ratify, orange-red for votes against, and labels give the order each state ratified. Maine is shown within Massachusetts and West Virginia within Virginia.",
+      "es": "El mapa no tiene nombres de lugares: haz clic en un gráfico circular o en un estado para ver su nombre. Los gráficos sobre los estados muestran la población en 1790: azul para las personas libres, rojo anaranjado para las esclavizadas, y los gráficos más grandes indican más habitantes. Tres capas están desactivadas al abrir el mapa. En House seats in 1793, un azul más oscuro indica más escaños. En Ratifying the Constitution, cada gráfico está donde se reunió la convención de un estado: azul para los votos a favor de ratificar, rojo anaranjado para los votos en contra, y las etiquetas indican el orden en que ratificó cada estado. Maine aparece dentro de Massachusetts y Virginia Occidental dentro de Virginia."
+    },
+    "tips": [
+      "popups"
+    ],
+    "reflection": {
+      "en": "What did the map show you about the Constitution that you might not have noticed from reading alone?",
+      "es": "¿Qué te mostró el mapa sobre la Constitución que quizá no habrías notado solo con la lectura?"
+    }
+  },
+  "teacherNotes": {
+    "beforeClass": "House seats in 1793, House seats today and Ratifying the Constitution are off when the map opens. The basemap has no place names, so students click a pie or a state to see its name. The population pies and the ratification pies overlap, so question 4 asks students to turn the population layer off.",
+    "misconceptions": [
+      {
+        "claim": "The three-fifths clause gave enslaved people a share of representation.",
+        "response": "It gave slaveholding states more seats, not enslaved people a voice: they could not vote. Virginia's pop-up shows 19 seats under the clause, against 13 if enslaved people had not been counted."
+      },
+      {
+        "claim": "Every state ratified the Constitution easily.",
+        "response": "Rhode Island ratified by 34 to 32 and New York by 30 to 27, and North Carolina's first convention refused to ratify."
+      },
+      {
+        "claim": "Large states had more senators.",
+        "response": "Every state had two senators; only House seats followed population."
+      }
+    ],
+    "keyWords": [
+      "ratify",
+      "convention",
+      "census",
+      "apportionment",
+      "Great Compromise",
+      "three-fifths clause",
+      "Federalist",
+      "Anti-Federalist"
+    ]
+  },
+  "standards": [
+    {
+      "code": "TX 8.4(D)",
+      "text": "Analyze the issues of the Constitutional Convention of 1787, including the Great Compromise and the Three-Fifths Compromise"
+    },
+    {
+      "code": "TX 8.17(A)",
+      "text": "Analyze the arguments of the Federalists and Anti-Federalists, including those of Alexander Hamilton, Patrick Henry, James Madison, and George Mason, and explain how their debates exemplify civil discourse"
+    },
+    {
+      "code": "FL SS.8.A.3.10",
+      "text": "Examine the course and consequences of the Constitutional Convention (New Jersey Plan, Virginia Plan, Great Compromise, Three-Fifths Compromise, compromises regarding taxation and slave trade, Electoral College, state vs. federal power, empowering a president)."
+    },
+    {
+      "code": "FL SS.8.A.3.11",
+      "text": "Analyze support and opposition (Federalists, Federalist Papers, Anti-Federalists, Bill of Rights) to ratification of the U.S. Constitution."
+    },
+    {
+      "code": "C3 D2.Civ.5.6-8",
+      "text": "Explain the origins, functions, and structure of government with reference to the U.S. Constitution, state constitutions, and selected other systems of government."
+    },
+    {
+      "code": "C3 D2.Geo.2.6-8",
+      "text": "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions, and changes in their environmental characteristics."
+    }
+  ],
+  "keyFacts": [
+    "1790 census and 1793 House seats (pop-ups): Virginia 747,610 people, 292,627 enslaved, 19 seats (22 if enslaved people were counted in full, 13 if not counted); North Carolina 393,751, 100,572 enslaved, 10 seats (11 or 8); Maryland 319,728, 103,036 enslaved, 8 seats (9 or 6); South Carolina 249,073, 107,094 enslaved, 6 seats (7 or 4); Delaware 59,094, 1 seat.",
+    "The House had 105 seats under the act of 14 April 1792, one for every 33,000 people counted; at the same ratio, counting no enslaved people would have given 90. Every state had two senators.",
+    "Ratification votes (pop-ups): Delaware 30–0 (1st, 7 December 1787); Pennsylvania 46–23; New Jersey 38–0; Georgia 26–0; Connecticut 128–40; Massachusetts 187–168; Maryland 63–11; South Carolina 149–73; New Hampshire 57–47 (9th, 21 June 1788); Virginia 89–79; New York 30–27; North Carolina 194–77 (12th, 21 November 1789; on 1 August 1788 the Hillsborough convention had voted 184–84 neither to ratify nor to reject); Rhode Island 34–32 (13th, 29 May 1790); Vermont 105–4 (14th, 10 January 1791, before joining the Union).",
+    "The map uses today's state outlines, except that Maine is shown within Massachusetts and West Virginia within Virginia, as in the 1790s."
+  ],
+  "languages": {
+    "en": {
+      "status": "final"
+    },
+    "es": {
+      "status": "draft",
+      "note": "Spanish draft for review by a native speaker. Layer and bookmark names stay in English, as they appear in MapMaker."
+    }
+  },
+  "licence": "Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide."
+}

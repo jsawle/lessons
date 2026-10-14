@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "MapMaker resource pages (lab)",
-    "version": "0.9.1",
+    "version": "0.10.0",
     "parts": {
       "Page renderer": "1.6",
       "Word sheet builder": "1.2",
