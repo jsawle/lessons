@@ -1,4 +1,4 @@
-/* MapMaker resource pages (lab): page renderer v2.2 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
+/* MapMaker resource pages (lab): page renderer v2.3 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
    standards in the hero; Vera link and a copyable AI prompt). Draws a lesson page, its teacher page (?view=teacher) or the catalogue from JSON files. */
 (function () {
   "use strict";
@@ -82,16 +82,6 @@
       h.push('<div class="actions"><a class="btn primary" href="' + esc(mmUrl) + '" target="_blank" rel="noopener">' + mapIcon + "Open in MapMaker" + newTab + "</a>" +
         '<a class="btn" href="' + lessonHref + '">Lesson page</a><button type="button" class="btn" data-download="teacher">Download Word (teacher notes)</button></div><p class="status-msg" id="dl-status" role="status" aria-live="polite"></p>');
     } else {
-      var off = lesson.map.layers.filter(function (l) { return l.offAtStart; }).map(function (l) { return l.name; });
-      h.push('<div class="actions"><a class="btn primary" href="' + esc(mmUrl) + '" target="_blank" rel="noopener">' + mapIcon + "Open in MapMaker" + newTab + "</a>" + gc +
-        '<a class="btn" href="#student-activity">Student sheet</a><a class="btn" href="#standards">Standards</a></div>');
-      h.push('<div class="quick"><h2>Five minutes before class</h2><ol>' + [
-        "Open the map in MapMaker and click through the bookmarks" + ((lesson.map.bookmarks || []).length ? " (" + lesson.map.bookmarks.map(esc).join(", ") + ")" : "") + ". No account or login is needed.",
-        off.length ? "In Map layers, note that " + off.map(esc).join(" and ") + (off.length > 1 ? " are" : " is") + " off when the map opens; students turn " + (off.length > 1 ? "them" : "it") + " on when a question asks." : "Check the legend: it changes with the zoom level and with which layers are on.",
-        "Download the Word student sheet (English or Spanish) under Student activity, or print it.",
-        gc ? "Share the map with your class with the Google Classroom button, and attach the sheet in Classroom; the button shares the map only." : "Share the map link with your class and hand out the sheet.",
-        "Read the answers and what to accept in the teacher notes (linked at the foot of this page). Share the lesson page or the map with students, not the teacher notes."
-      ].map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ol></div>");
     }
     h.push("</div></div>");
 
@@ -308,8 +298,8 @@
       if (other.length) groups.push("Other");
       groups.forEach(function (u) {
         var these = u === "Other" ? other : inCourse.filter(function (l) { return l.unit === u; });
-        h.push('<section class="unit" data-course="' + esc(course) + '"><h2>' + esc(u) + (courses.length > 1 ? ' <span class="muted">(' + esc(course) + ")</span>" : "") + '</h2><div class="cards" style="padding-top:0">' + these.map(function (l) {
-          return '<div class="card"><h3><a href="lesson.html?id=' + encodeURIComponent(l.id) + '">' + esc(l.title) + "</a></h3><p>" +
+        h.push('<section class="unit" data-course="' + esc(course) + '"><h2>' + esc(u) + (courses.length > 1 ? ' <span class="muted">(' + esc(course) + ")</span>" : "") + '</h2><div class="cards cards-3" style="padding-top:0">' + these.map(function (l) {
+          return '<div class="card lesson-card"><h3><a href="lesson.html?id=' + encodeURIComponent(l.id) + '">' + esc(l.title) + "</a></h3><p>" +
             esc("Grade " + l.grade + " · " + l.time) + ((l.alsoFits || []).length ? " · also fits: " + esc(l.alsoFits.join("; ")) : "") + "</p><p>" + inline(l.summary) + "</p>" +
             '<p><a href="lesson.html?id=' + encodeURIComponent(l.id) + '&view=teacher">Teacher notes and answers</a> · <a href="hub-preview.html?page=' + encodeURIComponent(l.id) + '">Hub version</a></p></div>';
         }).join("") + "</div></section>");

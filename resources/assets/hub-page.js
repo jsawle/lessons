@@ -10,7 +10,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "2.2";
+  var VERSION = "2.3";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
@@ -61,14 +61,10 @@
     ".mml .mml-primary:hover{background:#00619B;border-color:#00619B;color:#fff}",
     ".mml-chip{display:inline-block;font-size:.8rem;font-weight:600;padding:.1em .6em;border-radius:999px;border:1px solid #D4D4D4;background:#fff}",
     ".mml-notice{background:#FDF2E6;border:1px solid #F2C48D;border-left:8px solid #C97A00;border-radius:4px;padding:.8em 1.1em;margin:0 0 1em;color:#141414}",
-    ".mml .mml-quick{border:1px solid #D4D4D4;border-radius:4px;background:#fff;padding:.8em 1.1em .4em;margin:.6em 0 .4em;max-width:46rem}",
-    ".mml .mml-quick h2{display:block;font-size:1.05rem;border:0;margin:0 0 .4em;padding:0}",
-    ".mml .mml-quick ol{margin:0 0 .4em;padding-left:1.4em}",
     ".mml .mml-std{list-style:none;padding:0;margin:0;display:inline}",
     ".mml .mml-std li{display:inline;margin:0}",
     ".mml .mml-std li+li::before{content:\" · \";color:#4A4A4A}",
     ".mml .mml-unit{display:block;border:0;font-size:1.3rem;margin:1.2em 0 .4em;padding:0 0 .2em;border-bottom:2px solid #D4D4D4}",
-    ".mml .mml-lessons h3{display:block;border:0;font-size:1.2rem;margin:.1em 0 .3em;padding:0}",
     ".mml-ans{border:1px solid #D4D4D4;border-radius:4px;padding:.85em 1.1em .5em;margin:0 0 .9em}",
     ".mml-ans h3{margin:0 0 .4em}",
     ".mml-ans .mml-k{margin-top:.5em}",
@@ -103,11 +99,18 @@
     ".mml .mml-cards a:hover{box-shadow:0 4px 14px rgba(0,0,0,.12)}",
     ".mml-card-title{display:block;font-weight:700;font-size:1.05rem;color:#00619B;text-decoration:underline}",
     ".mml-card-text{display:block;color:#4A4A4A;font-size:.95rem}",
-    ".mml .mml-lessons{list-style:none;padding:0;margin:0 0 1em;display:flex;flex-wrap:wrap;gap:1em}",
-    ".mml-lessons>li{flex:1 1 18rem;max-width:calc(50% - .5em);min-width:0;border:1px solid #D4D4D4;border-top:4px solid #007AC2;border-radius:4px;padding:.9em 1.1em .4em;margin:0;display:flex;flex-direction:column}",
-    ".mml-lessons>li>p:nth-last-child(2){flex:1}",
-    "@media (max-width:640px){.mml-lessons>li{max-width:none}}",
-    ".mml .mml-lessons h2{display:block;border:0;font-size:1.25rem;margin:.1em 0 .3em;padding:0}",
+    ".mml .mml-lessons{list-style:none;padding:0;margin:0 0 1.4em;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1em}",
+    ".mml-lessons>li{position:relative;height:17.5rem;overflow:hidden;border:1px solid #D4D4D4;border-top:4px solid #007AC2;border-radius:4px;padding:.9em 1.1em 2.6em;margin:0;background:#fff;transition:transform .2s ease,box-shadow .2s ease,border-top-width .2s ease}",
+    ".mml-lessons>li:hover,.mml-lessons>li:focus-within{transform:translateY(-4px);box-shadow:0 8px 22px rgba(0,0,0,.14);border-top-width:8px}",
+    ".mml-lessons>li:hover h3 a,.mml-lessons>li:focus-within h3 a{color:#004874}",
+    ".mml .mml-lessons h3{display:block;border:0;font-size:1.3rem;line-height:1.25;font-weight:800;margin:.1em 0 .35em;padding:0}",
+    ".mml .mml-lessons h3 a{text-decoration:none}",
+    ".mml .mml-lessons h3 a:hover,.mml .mml-lessons h3 a:focus-visible{text-decoration:underline}",
+    ".mml-lessons .mml-sum{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}",
+    ".mml-lessons .mml-tn{position:absolute;left:1.1em;right:1.1em;bottom:.8em;margin:0}",
+    "@media (max-width:900px){.mml .mml-lessons{grid-template-columns:repeat(2,minmax(0,1fr))}}",
+    "@media (max-width:640px){.mml .mml-lessons{grid-template-columns:1fr}.mml-lessons>li{height:auto;padding-bottom:2.6em}}",
+    "@media (prefers-reduced-motion:reduce){.mml-lessons>li{transition:none}.mml-lessons>li:hover{transform:none}}",
     ".mml-foot{background:#004874;color:#fff;border-radius:4px;padding:20px 24px 16px;font-size:.92rem}",
     ".mml.mml-foot p{color:#fff}",
     ".mml.mml-foot a{color:#fff}",
@@ -246,18 +249,6 @@
       return '<li><span class="mml-k">' + f[0] + '</span><span class="mml-v">' + f[1] + "</span></li>";
     }).join("") + "</ul>";
   }
-  /* The five-minutes-before-class list, built from the lesson so it is always right. */
-  function quickStart(site, lesson, gc) {
-    var off = lesson.map.layers.filter(function (l) { return l.offAtStart; }).map(function (l) { return l.name; });
-    var steps = [
-      "Open the map in MapMaker and click through the bookmarks" + ((lesson.map.bookmarks || []).length ? " (" + lesson.map.bookmarks.map(esc).join(", ") + ")" : "") + ". No account or login is needed.",
-      off.length ? "In Map layers, note that " + off.map(esc).join(" and ") + (off.length > 1 ? " are" : " is") + " off when the map opens; students turn " + (off.length > 1 ? "them" : "it") + " on when a question asks." : "Check the legend: it changes with the zoom level and with which layers are on.",
-      "Download the Word student sheet (English or Spanish) under Student activity, or print it.",
-      gc ? "Share the map with your class with the Google Classroom button, and attach the sheet in Classroom; the button shares the map only." : "Share the map link with your class and hand out the sheet.",
-      "Read the answers and what to accept in the teacher notes (linked at the foot of this page). Share the lesson page or the map with students, not the teacher notes."
-    ];
-    return '<div class="mml-quick"><h2>Five minutes before class</h2><ol>' + steps.map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ol></div>";
-  }
   function toolLinks(site, tools) {
     return (tools || []).map(function (k) {
       var tl = site.tools[k];
@@ -317,8 +308,7 @@
     add("<style>" + CSS + classroomCss(site) + "</style>" + '<div class="mml mml-hero"><p class="mml-crumbs"><a href="' + lessonsPath(site) + '">Lessons</a> › ' + esc(lesson.course) + " › " + esc(lesson.unit) + "</p>" +
       "<h1>" + esc(lesson.title) + '</h1><p class="mml-summary">' + t(lesson.summary) + "</p>" + factsList(site, lesson) +
       '<p class="mml-actions">' + ext(mm, "Open in MapMaker", "mml-btn mml-primary") + " " + (gc ? gc + " " : "") +
-      jump(slug, "student-activity", "Student sheet") + " " + jump(slug, "standards", "Standards") + "</p>" +
-      quickStart(site, lesson, gc) + "</div>");
+      jump(slug, "student-activity", "Student sheet") + " " + jump(slug, "standards", "Standards") + "</p></div>");
 
     // About this map (the team's known-issues notes stay in the lesson file and the lab mock-up, not here)
     add('<div class="mml"><h2>About this map</h2><p class="mml-prose">Each layer names its source, so you can check where the information comes from.</p>' +
@@ -427,12 +417,12 @@
       groups.forEach(function (u) {
         body += '<h2 class="mml-unit">' + esc(u) + '</h2><ul class="mml-lessons">' + inCourse.filter(function (l) { return l.unit === u; }).map(function (l) {
           return '<li><h3><a href="/pages/' + esc(l.id) + '">' + esc(l.title) + "</a></h3>" +
-            '<p class="mml-muted">Grade ' + esc(l.grade) + " · " + esc(l.time) + ((l.alsoFits || []).length ? " · also fits: " + l.alsoFits.map(esc).join("; ") : "") + "</p><p>" + t(l.summary) + '</p><p class="mml-muted">For teachers: <a href="/pages/' + esc(teacherSlug(l)) + '">notes and answers</a></p></li>';
+            '<p class="mml-muted">Grade ' + esc(l.grade) + " · " + esc(l.time) + ((l.alsoFits || []).length ? " · also fits: " + l.alsoFits.map(esc).join("; ") : "") + '</p><p class="mml-sum">' + t(l.summary) + '</p><p class="mml-muted mml-tn">For teachers: <a href="/pages/' + esc(teacherSlug(l)) + '">notes and answers</a></p></li>';
         }).join("") + "</ul>";
       });
       var other = inCourse.filter(function (l) { return units.indexOf(l.unit) < 0; });
       if (other.length) body += '<h2 class="mml-unit">Other</h2><ul class="mml-lessons">' + other.map(function (l) {
-        return '<li><h3><a href="/pages/' + esc(l.id) + '">' + esc(l.title) + "</a></h3><p>" + t(l.summary) + "</p></li>";
+        return '<li><h3><a href="/pages/' + esc(l.id) + '">' + esc(l.title) + '</a></h3><p class="mml-sum">' + t(l.summary) + "</p></li>";
       }).join("") + "</ul>";
     });
     add('<div class="mml">' + body + "</div>");
