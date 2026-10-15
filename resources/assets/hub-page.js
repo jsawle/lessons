@@ -10,7 +10,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "2.4";
+  var VERSION = "2.5";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
@@ -290,7 +290,7 @@
   function footer(site, lesson) {
     var repo = (hubHome(site).repoUrl || "").replace(/\/+$/, "");
     return '<div class="mml mml-foot"><h2>About this page</h2>' +
-      (lesson && lesson.kindOfPage !== "teacher" ? '<p>For teachers: <a href="/pages/' + esc(teacherSlug(lesson)) + '">notes and answers for this lesson</a>.</p>' : "") +
+
       (lesson ? "<p>" + t(lesson.licence) + " Map data: credited to each source under About this map.</p>" : "") +
       (lesson ? classroomNotice(site, lesson) : "") +
       "<p>This page is built from " + (lesson ? "one lesson file" : "the lesson files") + (repo ? ": " + ext(repo + (lesson ? "/blob/main/resources/lessons/" + lesson.id + ".json" : "/tree/main/resources/lessons"), lesson ? "<code>" + esc(lesson.id) + ".json</code>" : "resources/lessons") : "") +
@@ -309,7 +309,7 @@
     add("<style>" + CSS + classroomCss(site) + "</style>" + '<div class="mml mml-hero"><p class="mml-crumbs"><a href="' + lessonsPath(site) + '">Lessons</a> › ' + esc(lesson.course) + " › " + esc(lesson.unit) + "</p>" +
       "<h1>" + esc(lesson.title) + '</h1><p class="mml-summary">' + t(lesson.summary) + "</p>" + factsList(site, lesson) +
       '<p class="mml-actions">' + ext(mm, "Open in MapMaker", "mml-btn mml-primary") + " " + (gc ? gc + " " : "") +
-      jump(slug, "student-activity", "Student sheet") + " " + jump(slug, "standards", "Standards") + "</p></div>");
+      jump(slug, "student-activity", "Student sheet") + " " + jump(slug, "teacher-notes", "Teacher notes") + "</p></div>");
 
     // About this map (the team's known-issues notes stay in the lesson file and the lab mock-up, not here)
     add('<div class="mml"><h2>About this map</h2><p class="mml-prose">Each layer names its source, so you can check where the information comes from.</p>' +
@@ -321,7 +321,7 @@
     // Inquiry (no answers here; they are on the teacher page)
     var inq = lesson.inquiry;
     add('<div class="mml"><h2>Inquiry</h2><div class="mml-cq"><span class="mml-k">Compelling question</span><p class="mml-q">' + t(inq.compellingQuestion.en) + "</p></div>" +
-      '<p class="mml-prose">Pick the questions that suit your class. Each one is answered from the map, lists the MapMaker tools it uses, and links to how-to videos. Answers and what to accept are in the teacher notes, linked at the foot of this page.</p><ol class="mml-qs">' +
+      '<p class="mml-prose">Pick the questions that suit your class. Each one is answered from the map, lists the MapMaker tools it uses, and links to how-to videos. Answers and what to accept are linked under Teacher notes.</p><ol class="mml-qs">' +
       inq.questions.map(function (q) {
         return "<li><h3>" + t(q.title.en) + "</h3><p>" + t(q.task) + '</p><p class="mml-tools"><span class="mml-muted">Tools:</span> ' + toolLinks(site, q.tools) + "</p></li>";
       }).join("") + "</ol><h3>Answering the compelling question</h3><p class=\"mml-prose\">" + t(inq.final.teacher) + "</p>" +
@@ -340,6 +340,15 @@
       langs.filter(function (l) { return l !== "en" && lesson.languages[l].note; }).map(function (l) {
         return '<p class="mml-muted">' + esc(langName(site, l)) + ": " + esc(lesson.languages[l].note) + "</p>";
       }).join("") + "</div>");
+
+    // Teacher notes: everything a teacher needs except the answers, which sit on the teacher page.
+    var tn = lesson.teacherNotes;
+    add('<div class="mml">' + anchor(slug, "teacher-notes") + '<h2>Teacher notes</h2><h3>Before class</h3><p class="mml-prose">' + t(tn.beforeClass) + "</p>" +
+      (tn.misconceptions && tn.misconceptions.length ? "<h3>Common misunderstandings</h3><ul>" + tn.misconceptions.map(function (m) {
+        return "<li><strong>“" + t(m.claim) + "”</strong> " + t(m.response) + "</li>";
+      }).join("") + "</ul>" : "") +
+      '<h3>Key words</h3><ul class="mml-words">' + tn.keyWords.map(function (k) { return "<li>" + esc(k) + "</li>"; }).join("") + "</ul>" +
+      '<h3>Answers</h3><p class="mml-prose">Where to find each answer on the map and what to accept are kept off this page, so it can be shared with students: <a href="/pages/' + esc(teacherSlug(lesson)) + '">answer notes</a> (web page) or <a href="' + sheetPlaceholder(lesson.id, "teacher") + '">Download Word (teacher notes)</a>.</p></div>');
 
     // How-to videos
     add('<div class="mml"><h2>How-to videos</h2><p class="mml-prose">Short videos on the MapMaker Educator Support Hub for the tools this lesson uses.</p><ul class="mml-cards">' +
@@ -382,20 +391,15 @@
     var mm = MMR.mapmakerUrl(site, lesson.map.webmapId);
     function add(html) { S.push(section([mdCard(slug + ":" + n, html)])); n++; }
     add("<style>" + CSS + "</style>" + '<div class="mml mml-hero"><p class="mml-crumbs"><a href="' + lessonsPath(site) + '">Lessons</a> › <a href="/pages/' + esc(lesson.id) + '">' + esc(lesson.title) + "</a></p>" +
-      "<h1>Teacher notes: " + esc(lesson.title) + '</h1><div class="mml-notice"><strong>For teachers.</strong> This page holds the answers and what to accept. With students, share the lesson page or the map, not this page.</div>' +
+      "<h1>Answer notes: " + esc(lesson.title) + '</h1><div class="mml-notice"><strong>For teachers.</strong> This page holds the answers and what to accept. With students, share the lesson page or the map, not this page.</div>' +
       factsList(site, lesson) +
       '<p class="mml-actions">' + ext(mm, "Open in MapMaker", "mml-btn mml-primary") + ' <a class="mml-btn" href="/pages/' + esc(lesson.id) + '">Lesson page</a> <a class="mml-btn" href="' + sheetPlaceholder(lesson.id, "teacher") + '">Download Word (teacher notes)</a></p></div>');
-    add('<div class="mml"><h2>Before class</h2><p class="mml-prose">' + t(tn.beforeClass) + "</p></div>");
     add('<div class="mml"><h2>Answer notes</h2><div class="mml-cq"><span class="mml-k">Compelling question</span><p class="mml-q">' + t(inq.compellingQuestion.en) + "</p></div>" +
       inq.questions.map(function (q, i) { return answerBlock(site, q, i); }).join("") +
       '<h3>Answering the compelling question</h3><p class="mml-prose">' + t(inq.final.teacher) + "</p></div>");
-    add('<div class="mml">' + (tn.misconceptions && tn.misconceptions.length ? "<h2>Common misunderstandings</h2><ul>" + tn.misconceptions.map(function (m) {
-        return "<li><strong>“" + t(m.claim) + "”</strong> " + t(m.response) + "</li>";
-      }).join("") + "</ul>" : "") +
-      '<h2>Key words</h2><ul class="mml-words">' + tn.keyWords.map(function (k) { return "<li>" + esc(k) + "</li>"; }).join("") + "</ul>" +
-      "<h2>Standards</h2>" + standardsTable(site, lesson) + "</div>");
+    add('<div class="mml"><h2>Standards</h2>' + standardsTable(site, lesson) + "</div>");
     add(footer(site, Object.assign({}, lesson, { kindOfPage: "teacher" })));
-    return { slug: slug, kind: "teacher", lessonId: lesson.id, title: "Teacher notes: " + lesson.title, summary: "Answers, what to accept, common misunderstandings and key words for the MapMaker lesson " + MMR.plain(lesson.title) + ". For teachers.",
+    return { slug: slug, kind: "teacher", lessonId: lesson.id, title: "Answer notes: " + lesson.title, summary: "Where to find each answer on the map and what to accept, for the MapMaker lesson " + MMR.plain(lesson.title) + ". For teachers.",
       tags: ["MapMaker", "Teacher notes", lesson.course, "Grade " + lesson.grade, lesson.unit], contentVersion: lesson.contentVersion,
       layout: { sections: S } };
   }
