@@ -351,7 +351,7 @@
       "<h3>Map skills</h3>" + ul(MMR.skills(site, lesson), "mml-words") +
       "<h3>Ways to run this lesson</h3>" + ul(MMR.instructionalModels(site, lesson), "mml-words") +
       (teach.materials ? '<h3>Materials</h3><p class="mml-prose">' + esc(teach.materials) + "</p>" : "") +
-      '<h3>Before class</h3><p class="mml-prose">' + t(tn.beforeClass) + "</p>" + ((teach.prep || []).length ? ul(teach.prep) : "") +
+      '<h3>Before class</h3><p class="mml-prose"><strong>About this map:</strong> ' + t(tn.beforeClass) + "</p>" + ((teach.prep || []).length ? ul(teach.prep) : "") +
       ((lesson.discussion || []).length ? "<h3>Discussion questions</h3><ol>" + lesson.discussion.map(function (q) { return "<li>" + t(q) + "</li>"; }).join("") + "</ol>" : "") +
       (tn.misconceptions && tn.misconceptions.length ? "<h3>Common misunderstandings</h3><ul>" + tn.misconceptions.map(function (m) {
         return "<li><strong>“" + t(m.claim) + "”</strong> " + t(m.response) + "</li>";

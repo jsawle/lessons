@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.4",
   "id": "rights-and-responsibilities-where-we-live",
-  "contentVersion": "0.3.0",
+  "contentVersion": "0.3.1",
   "status": "draft",
   "updated": "2026-10-15",
   "reviewed": null,
@@ -204,7 +204,7 @@
     }
   },
   "teacherNotes": {
-    "beforeClass": "Open the map and zoom to your town to check the basemap labels its public buildings. National Register of Historic Places is off at the start. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet separately). No account or login is needed. Sketches are not saved, so students finish in one session or take a screenshot. Read the answers on the teacher page.",
+    "beforeClass": "Before class, zoom to your own town and check the basemap labels its public buildings at close zoom. National Register of Historic Places is off when the map opens; its pop-ups give an address but not a name. Students sketch on the map, so remind them sketches are not saved: finish in one session or take a screenshot.",
     "misconceptions": [
       {
         "claim": "The Bill of Rights lists all of a citizen's rights.",

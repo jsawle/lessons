@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.4",
   "id": "revolutionary-battles-1775-1776",
-  "contentVersion": "0.5.0",
+  "contentVersion": "0.5.1",
   "status": "draft",
   "updated": "2026-10-15",
   "reviewed": null,
@@ -257,7 +257,7 @@
     }
   },
   "teacherNotes": {
-    "beforeClass": "Open the map and check it loads. Every layer is on except Key Port Cities, which students turn on for question 3. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet separately). No account or login is needed. Sketches are not saved, so students who sketch should finish in one session or take a screenshot. Read the answers on the teacher page.",
+    "beforeClass": "Every layer is on when the map opens except Key Port Cities, which students turn on for question 3. The Massachusetts bookmark takes students to the first battles.",
     "misconceptions": [
       {
         "claim": "The early war was fought in Massachusetts.",

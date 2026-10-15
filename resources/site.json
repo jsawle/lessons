@@ -1,7 +1,7 @@
 {
  "app": {
   "name": "MapMaker resource pages (lab)",
-  "version": "0.12.0",
+  "version": "0.12.1",
   "parts": {
    "Page renderer": "2.6",
    "Word sheet builder": "1.4",
@@ -248,12 +248,12 @@
    "Homework or flipped classroom"
   ],
   "prep": [
-   "Preview the map: click through the bookmarks and pop-ups, and look at the legend at the zoom levels the questions use.",
-   "Decide whether students work alone, in pairs or as a whole class.",
-   "Encourage students to look for patterns and make observations, not just find the right answers.",
-   "Some layers aren't used by the questions; they're there for further study."
+   "Open the map and click through the bookmarks and pop-ups. Check the legend at the zoom levels the questions use; it changes as you zoom and as layers are turned on and off.",
+   "Decide whether students work alone, in pairs or as a whole class, and whether they use the printed sheet or a digital copy.",
+   "Encourage students to look for patterns and make observations, not just to find the right answers.",
+   "Layers the questions don't use are there for further study."
   ],
-  "materials": "The lesson includes the MapMaker map, a two-page Word student sheet in English and Spanish, and these teacher notes. Print the sheet or share it digitally; it opens in Word and Google Docs. No account or login is needed."
+  "materials": "The lesson includes the MapMaker map, a two-page Word student sheet in English and Spanish, and these teacher notes. Print the sheet or share it digitally; it opens in Word and Google Docs. Share the map with the Google Classroom button or by pasting its link, and attach the sheet separately. No account or login is needed. Sketches on the map are not saved between sessions."
  },
  "licence": "The National Geographic Society and Esri make this content available under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence, except as noted. The licence excludes the National Geographic and Esri logos (the words National Geographic with the yellow border logo, and the Esri globe and letters) and any images included in the content. The logos and images may not be removed, altered or changed."
 }
