@@ -1,4 +1,4 @@
-/* MapMaker resource pages (lab): page renderer v2.3 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
+/* MapMaker resource pages (lab): page renderer v2.4 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
    standards in the hero; Vera link and a copyable AI prompt). Draws a lesson page, its teacher page (?view=teacher) or the catalogue from JSON files. */
 (function () {
   "use strict";
