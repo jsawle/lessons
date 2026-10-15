@@ -148,3 +148,12 @@ footer.foot thead th{background:#111;color:#ccc}
 .unit h2{font-size:1.3rem;font-weight:800;border-bottom:2px solid var(--line);padding-bottom:.2rem}
 .card h3{font-size:1.1rem;font-weight:800}
 .card h3 a{color:var(--link)}
+
+/* 2.3: three equal lesson cards per row with a hover lift */
+.cards-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.cards-3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.cards-3{grid-template-columns:1fr}}
+.lesson-card{height:17.5rem;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+.lesson-card:hover,.lesson-card:focus-within{transform:translateY(-4px);box-shadow:0 8px 22px rgba(0,0,0,.14)}
+.lesson-card h3{font-size:1.3rem}
+@media (prefers-reduced-motion:reduce){.lesson-card{transition:none}.lesson-card:hover{transform:none}}
