@@ -1,4 +1,4 @@
-/* MapMaker resource pages (lab): page renderer v2.4 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
+/* MapMaker resource pages (lab): page renderer v2.5 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
    standards in the hero; Vera link and a copyable AI prompt). Draws a lesson page, its teacher page (?view=teacher) or the catalogue from JSON files. */
 (function () {
   "use strict";
@@ -74,7 +74,7 @@
       (subjectUrl ? '<li><a href="' + esc(subjectUrl) + '">' + esc(lesson.subject) + "</a></li>" : "<li>" + esc(lesson.subject) + "</li>") +
       (courseUrl ? '<li><a href="' + esc(courseUrl) + '">' + esc(lesson.course) + "</a></li>" : "<li>" + esc(lesson.course) + "</li>") +
       (teacherView ? '<li><a href="' + lessonHref + '">' + esc(lesson.title) + "</a></li>" : "<li>" + esc(lesson.unit) + "</li>") + "</ol></nav>");
-    h.push('<h1 id="lesson-title">' + (teacherView ? "Teacher notes: " : "") + esc(lesson.title) + "</h1>");
+    h.push('<h1 id="lesson-title">' + (teacherView ? "Answer notes: " : "") + esc(lesson.title) + "</h1>");
     if (teacherView) h.push('<p class="notice"><strong>For teachers.</strong> This page holds the answers and what to accept. With students, share the lesson page or the map, not this page.</p>');
     else h.push('<p class="summary">' + inline(lesson.summary) + "</p>");
     h.push(facts(site, lesson));
@@ -123,7 +123,7 @@
       "</div></div>");
 
     h.push('<div class="wrap layout"><nav class="toc" aria-labelledby="toc-h"><h2 id="toc-h">On this page</h2><ol>' +
-      [["about", "About this map"], ["inquiry", "Inquiry"], ["standards", "Standards"], ["student-activity", "Student activity"],
+      [["about", "About this map"], ["inquiry", "Inquiry"], ["standards", "Standards"], ["student-activity", "Student activity"], ["teacher-notes", "Teacher notes"],
        ["how-to", "How-to videos"], ["own", "Make your own questions"], ["report", "Report a problem"]]
         .map(function (t) { return '<li><a href="#' + t[0] + '">' + t[1] + "</a></li>"; }).join("") + '</ol></nav><div class="content">');
 
@@ -144,7 +144,7 @@
     // Inquiry
     h.push('<section id="inquiry" aria-labelledby="inquiry-h"><h2 id="inquiry-h">Inquiry</h2>');
     h.push('<div class="cq"><span class="label">Compelling question</span><p class="q">' + inline(inq.compellingQuestion.en) + "</p></div>");
-    h.push('<p class="prose">Pick the questions that suit your class. Each one is answered from the map and lists the MapMaker tools it uses. Answers and what to accept are in the teacher notes, linked at the foot of this page.</p>');
+    h.push('<p class="prose">Pick the questions that suit your class. Each one is answered from the map and lists the MapMaker tools it uses. Answers and what to accept are linked under Teacher notes.</p>');
     h.push('<ol class="sq">' + inq.questions.map(function (q) {
       return "<li><h3>" + inline(q.title.en) + "</h3><p>" + inline(q.task) + "</p>" + toolTags(site, q.tools) + "</li>";
     }).join("") + "</ol>");
@@ -165,6 +165,14 @@
     if (gc) h.push('<p class="muted">The Share to Google Classroom button at the top of the page shares the MapMaker map with a class. It doesn’t include the Word sheet, which can be attached in Classroom.</p>');
     langs.forEach(function (l, i) { h.push(sheetPreview(site, lesson, l, i > 0)); });
     h.push("</section>");
+
+    // Teacher notes (everything except the answers, which are on the teacher view)
+    h.push('<section id="teacher-notes" aria-labelledby="tn-h"><h2 id="tn-h">Teacher notes</h2><div class="prose"><h3>Before class</h3><p>' + inline(tn.beforeClass) + "</p></div>" +
+      (tn.misconceptions && tn.misconceptions.length ? '<h3>Common misunderstandings</h3><ul class="plain">' + tn.misconceptions.map(function (m) {
+        return "<li><strong>\u201c" + inline(m.claim) + "\u201d</strong> " + inline(m.response) + "</li>";
+      }).join("") + "</ul>" : "") +
+      '<h3>Key words</h3><ul class="vocab">' + tn.keyWords.map(function (k) { return "<li>" + esc(k) + "</li>"; }).join("") + "</ul>" +
+      '<div class="prose"><h3>Answers</h3><p>Where to find each answer on the map and what to accept are kept off this page, so it can be shared with students: <a href="' + teacherHref + '">answer notes</a> (web page) or <button type="button" class="btn" data-download="teacher">Download Word (teacher notes)</button></p></div></section>');
 
     // How-to
     h.push('<section id="how-to" aria-labelledby="ht-h"><h2 id="ht-h">How-to videos</h2><p class="prose">Videos on the Support Hub for the tools this lesson uses.</p><div class="howto">' +
@@ -190,7 +198,7 @@
     h.push("</div></div>");
     $("main").innerHTML = h.join("");
 
-    $("foot").innerHTML = '<div class="wrap"><p>For teachers: <a href="' + teacherHref + '">notes and answers for this lesson</a>.</p><p>' + inline(lesson.licence) + " Map data: credited to each source in About this map.</p>" +
+    $("foot").innerHTML = '<div class="wrap"><p>' + inline(lesson.licence) + " Map data: credited to each source in About this map.</p>" +
       (gc ? "<p>" + esc(gcSet.notice || "Google Classroom is a trademark of Google LLC.") + ' Use of this trademark is subject to <a href="' +
         esc(gcSet.permissionsUrl || "https://www.google.com/permissions/") + '" target="_blank" rel="noopener">Google Brand Permissions<span class="sr-only"> (opens in a new tab)</span></a>.</p>' : "") +
       '<h2 style="font-size:1rem">About this page</h2>' + versionsTable(site, lesson) +
