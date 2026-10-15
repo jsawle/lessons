@@ -11,7 +11,7 @@
   else root.MMRSheet = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "1.3";
+  var VERSION = "1.4";
   /* Sheets with more question text than this get tighter writing lines, so every sheet stays on one page. */
   var LONG_SHEET_CHARS = 1040;
   /* The same for two-page sheets (lessons with studentSupport), counting the extra sections too. */
@@ -144,7 +144,7 @@
 
   /* ---------------- Teacher notes (English): the answers, kept out of the student materials ---------------- */
   function buildTeacher(docx, site, lesson) {
-    var D = docx, T = site.sheetText.en, inq = lesson.inquiry, tn = lesson.teacherNotes;
+    var D = docx, T = site.sheetText.en, inq = lesson.inquiry, tn = lesson.teacherNotes, teach = site.teaching || {};
     function run(text, extra) { return new D.TextRun(Object.assign({ text: MMR.plain(text) }, extra || {})); }
     function p(text, extra) { return new D.Paragraph(Object.assign({ spacing: { after: 100 }, children: [run(text)] }, extra || {})); }
     function labelled(label, text) {
@@ -174,12 +174,23 @@
       new D.Paragraph({ spacing: { after: 40 }, children: [run("Map: ", { italics: true }),
         new D.ExternalHyperlink({ link: mapUrl, children: [run(lesson.title, { color: "0A4FA8", underline: { type: D.UnderlineType.SINGLE } })] })] }),
       new D.Paragraph({ style: "Credits", spacing: { after: 120 }, children: [run((T.sheetUrl || "Map address:") + " " + mapUrl)] }),
-      p("Standards: " + stds.map(function (s) { return s.code; }).join(" · ")),
-      h2("Before class"), p(tn.beforeClass),
-      h2("Answer notes"),
-      new D.Paragraph({ shading: { type: D.ShadingType.CLEAR, fill: "E5EDF5" }, spacing: { after: 120 },
-        children: [run(T.bigQuestion + " ", { bold: true }), run(inq.compellingQuestion.en)] })
+      p("Subjects: " + (lesson.subjects || []).join(", ") + ". Standards: " + stds.map(function (s) { return s.code; }).join(" · ")),
+      h2("Learning objectives"), p("Students will:")
     ];
+    (lesson.objectives || []).forEach(function (o) { kids.push(new D.Paragraph({ numbering: { reference: "b", level: 0 }, spacing: { after: 60 }, children: [run(o)] })); });
+    kids.push(h2("Map skills"), p(MMR.skills(site, lesson).join(", ") + "."));
+    kids.push(h2("Ways to run this lesson"), p(MMR.instructionalModels(site, lesson).join(" · ")));
+    if (teach.materials) kids.push(h2("Materials"), p(teach.materials));
+    kids.push(h2("Before class"), p(tn.beforeClass));
+    (teach.prep || []).forEach(function (o) { kids.push(new D.Paragraph({ numbering: { reference: "b", level: 0 }, spacing: { after: 60 }, children: [run(o)] })); });
+    if ((lesson.discussion || []).length) { kids.push(h2("Discussion questions")); lesson.discussion.forEach(function (q) { kids.push(new D.Paragraph({ numbering: { reference: "n", level: 0 }, spacing: { after: 60 }, children: [run(q)] })); }); }
+    if ((lesson.resources || []).length) {
+      kids.push(h2("Further reading"));
+      lesson.resources.forEach(function (r) { kids.push(new D.Paragraph({ numbering: { reference: "b", level: 0 }, spacing: { after: 60 }, children: [new D.ExternalHyperlink({ link: r.url, children: [run(r.title, { color: "0A4FA8", underline: { type: D.UnderlineType.SINGLE } })] }), run(r.source ? " (" + r.source + ")" : "")] })); });
+    }
+    kids.push(h2("Answer notes"),
+      new D.Paragraph({ shading: { type: D.ShadingType.CLEAR, fill: "E5EDF5" }, spacing: { after: 120 },
+        children: [run(T.bigQuestion + " ", { bold: true }), run(inq.compellingQuestion.en)] }));
     inq.questions.forEach(function (q, i) {
       var a = q.answer || {};
       kids.push(h3((i + 1) + ". " + MMR.plain(q.title.en)));
@@ -207,6 +218,7 @@
     var credits = (T.mapData || "Map data:") + " " + lesson.map.layers.map(function (l) { return MMR.plain(l.source).replace(/ \(https:[^)]*\)/g, ""); })
       .filter(function (v, i, a) { return a.indexOf(v) === i; }).join("; ") + ".";
     kids.push(new D.Paragraph({ style: "Credits", spacing: { before: 360 }, children: [run(credits)] }));
+    kids.push(new D.Paragraph({ style: "Credits", spacing: { before: 120 }, children: [run(site.licence || lesson.licence || "")] }));
     return new D.Document({
       creator: "MapMaker resource pages", title: "Teacher notes: " + lesson.title,
       description: "Teacher notes, " + lesson.contentVersion,

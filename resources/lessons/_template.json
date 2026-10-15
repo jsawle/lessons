@@ -1,6 +1,6 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.3",
+  "formatVersion": "1.4",
   "id": "copy-this-file-and-rename-it",
   "contentVersion": "0.1.0",
   "status": "draft",
@@ -18,6 +18,10 @@
     "Westward expansion and Manifest Destiny"
   ],
   "grade": "8",
+  "subjects": [
+    "US History",
+    "Geography"
+  ],
   "time": "45 minutes",
   "studentLogin": "Not needed to explore the map",
   "map": {
@@ -78,6 +82,22 @@
       ]
     }
   },
+  "objectives": [
+    "Students will… (3 to 5 lines)",
+    "…",
+    "…"
+  ],
+  "discussion": [
+    "A debrief question for the class.",
+    "Another."
+  ],
+  "resources": [
+    {
+      "title": "A reading for teachers",
+      "url": "https://education.nationalgeographic.org/resource/…/",
+      "source": "National Geographic Education"
+    }
+  ],
   "studentSupport": {
     "beforeYouStart": {
       "en": "Optional. Two or three sentences of context, without giving away answers. Adding studentSupport makes a two-page student sheet.",
@@ -122,5 +142,5 @@
       "note": "Spanish draft for review by a native speaker."
     }
   },
-  "licence": "Licence for the teacher and student materials."
+  "licence": "The National Geographic Society and Esri make this content available under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence, except as noted. The licence excludes the National Geographic and Esri logos (the words National Geographic with the yellow border logo, and the Esri globe and letters) and any images included in the content. The logos and images may not be removed, altered or changed."
 }

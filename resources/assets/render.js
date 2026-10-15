@@ -1,4 +1,4 @@
-/* MapMaker resource pages (lab): page renderer v2.5 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
+/* MapMaker resource pages (lab): page renderer v2.6 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
    standards in the hero; Vera link and a copyable AI prompt). Draws a lesson page, its teacher page (?view=teacher) or the catalogue from JSON files. */
 (function () {
   "use strict";
@@ -167,11 +167,20 @@
     h.push("</section>");
 
     // Teacher notes (everything except the answers, which are on the teacher view)
-    h.push('<section id="teacher-notes" aria-labelledby="tn-h"><h2 id="tn-h">Teacher notes</h2><div class="prose"><h3>Before class</h3><p>' + inline(tn.beforeClass) + "</p></div>" +
+    var teach = site.teaching || {};
+    h.push('<section id="teacher-notes" aria-labelledby="tn-h"><h2 id="tn-h">Teacher notes</h2>' +
+      '<div class="prose"><p><strong>Subjects:</strong> ' + (lesson.subjects || []).map(esc).join(", ") + ". <strong>Grade:</strong> " + esc(lesson.grade) + ". <strong>Time:</strong> " + esc(lesson.time) + "</p>" +
+      "<h3>Learning objectives</h3><p>Students will:</p><ul>" + (lesson.objectives || []).map(function (o) { return "<li>" + inline(o) + "</li>"; }).join("") + "</ul></div>" +
+      '<h3>Map skills</h3><ul class="vocab">' + MMR.skills(site, lesson).map(function (k) { return "<li>" + esc(k) + "</li>"; }).join("") + "</ul>" +
+      '<h3>Ways to run this lesson</h3><ul class="vocab">' + MMR.instructionalModels(site, lesson).map(function (k) { return "<li>" + esc(k) + "</li>"; }).join("") + "</ul>" +
+      (teach.materials ? '<div class="prose"><h3>Materials</h3><p>' + esc(teach.materials) + "</p></div>" : "") +
+      '<div class="prose"><h3>Before class</h3><p>' + inline(tn.beforeClass) + "</p>" + ((teach.prep || []).length ? "<ul>" + teach.prep.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") + "</div>" +
+      ((lesson.discussion || []).length ? '<div class="prose"><h3>Discussion questions</h3><ol>' + lesson.discussion.map(function (q) { return "<li>" + inline(q) + "</li>"; }).join("") + "</ol></div>" : "") +
       (tn.misconceptions && tn.misconceptions.length ? '<h3>Common misunderstandings</h3><ul class="plain">' + tn.misconceptions.map(function (m) {
         return "<li><strong>\u201c" + inline(m.claim) + "\u201d</strong> " + inline(m.response) + "</li>";
       }).join("") + "</ul>" : "") +
       '<h3>Key words</h3><ul class="vocab">' + tn.keyWords.map(function (k) { return "<li>" + esc(k) + "</li>"; }).join("") + "</ul>" +
+      ((lesson.resources || []).length ? '<div class="prose"><h3>Further reading</h3><ul>' + lesson.resources.map(function (r) { return '<li><a href="' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(r.title) + newTab + "</a>" + (r.source ? ' <span class="muted">(' + esc(r.source) + ")</span>" : "") + "</li>"; }).join("") + "</ul></div>" : "") +
       '<div class="prose"><h3>Answers</h3><p>Where to find each answer on the map and what to accept are kept off this page, so it can be shared with students: <a href="' + teacherHref + '">answer notes</a> (web page) or <button type="button" class="btn" data-download="teacher">Download Word (teacher notes)</button></p></div></section>');
 
     // How-to
@@ -198,7 +207,7 @@
     h.push("</div></div>");
     $("main").innerHTML = h.join("");
 
-    $("foot").innerHTML = '<div class="wrap"><p>' + inline(lesson.licence) + " Map data: credited to each source in About this map.</p>" +
+    $("foot").innerHTML = '<div class="wrap"><p>' + inline(site.licence || lesson.licence) + " Map data: credited to each source in About this map.</p>" +
       (gc ? "<p>" + esc(gcSet.notice || "Google Classroom is a trademark of Google LLC.") + ' Use of this trademark is subject to <a href="' +
         esc(gcSet.permissionsUrl || "https://www.google.com/permissions/") + '" target="_blank" rel="noopener">Google Brand Permissions<span class="sr-only"> (opens in a new tab)</span></a>.</p>' : "") +
       '<h2 style="font-size:1rem">About this page</h2>' + versionsTable(site, lesson) +

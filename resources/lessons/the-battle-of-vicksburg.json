@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.3",
+  "formatVersion": "1.4",
   "id": "the-battle-of-vicksburg",
-  "contentVersion": "0.3.1",
+  "contentVersion": "0.4.0",
   "status": "draft",
   "updated": "2026-10-15",
   "reviewed": null,
@@ -15,6 +15,11 @@
   "course": "US History",
   "unit": "The Civil War",
   "grade": "8",
+  "subjects": [
+    "US History",
+    "Geography",
+    "Social Studies"
+  ],
   "time": "45 minutes, or 10–15 per question",
   "studentLogin": "Not needed to explore the map",
   "map": {
@@ -192,6 +197,35 @@
       ]
     }
   },
+  "objectives": [
+    "Locate Vicksburg on the Mississippi River and follow the railroad east to Jackson to explain why both sides wanted the city.",
+    "Put the key places on Grant's route in order, say which bank of the river each is on, and measure the distance from Milliken's Bend to Bruinsburg Bend.",
+    "List the battles of the Vicksburg campaign in date order from the Civil War Battlefields pop-ups.",
+    "Identify from the basemap which Confederate states lay west of the Mississippi and what the Union controlled once Vicksburg and Port Hudson had fallen.",
+    "Use evidence from at least two places on the map to explain why the Union needed Vicksburg and how Grant took it."
+  ],
+  "discussion": [
+    "Grant marched his army down the far bank and crossed more than 30 miles south of the city. What on the map explains that choice, and what risks did it carry?",
+    "Between Port Gibson on May 1 and the start of the siege on May 18, the battles run east toward Jackson and then back west. Why might Grant have gone to Jackson first instead of straight to Vicksburg?",
+    "Zoomed out, the river runs from Memphis to the Gulf with Louisiana, Arkansas and Texas on the far side. How does the map help explain why Vicksburg's surrender, and not just Gettysburg, was a turning point of July 1863?"
+  ],
+  "resources": [
+    {
+      "title": "Defining Battles of the Civil War",
+      "url": "https://education.nationalgeographic.org/resource/defining-battles-civil-war/",
+      "source": "National Geographic Education"
+    },
+    {
+      "title": "Grant at Vicksburg",
+      "url": "https://www.nps.gov/articles/000/grant-at-vicksburg.htm",
+      "source": "National Park Service"
+    },
+    {
+      "title": "History & Culture, Vicksburg National Military Park",
+      "url": "https://www.nps.gov/vick/learn/historyculture/index.htm",
+      "source": "National Park Service"
+    }
+  ],
   "studentSupport": {
     "beforeYouStart": {
       "en": "In 1862, Union forces captured New Orleans and Memphis, two cities on the Mississippi River. Between the two, the Confederates still held part of the river, including the city of Vicksburg, Mississippi. In spring 1863, Union General Ulysses S. Grant set out to capture it.",
@@ -261,5 +295,5 @@
       "note": "Spanish draft for review by a native speaker. Layer and bookmark names stay in English, as they appear in MapMaker."
     }
   },
-  "licence": "Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide."
+  "licence": "The National Geographic Society and Esri make this content available under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence, except as noted. The licence excludes the National Geographic and Esri logos (the words National Geographic with the yellow border logo, and the Esri globe and letters) and any images included in the content. The logos and images may not be removed, altered or changed."
 }

@@ -10,7 +10,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "2.5";
+  var VERSION = "2.6";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
@@ -291,7 +291,7 @@
     var repo = (hubHome(site).repoUrl || "").replace(/\/+$/, "");
     return '<div class="mml mml-foot"><h2>About this page</h2>' +
 
-      (lesson ? "<p>" + t(lesson.licence) + " Map data: credited to each source under About this map.</p>" : "") +
+      "<p>" + t(site.licence || (lesson && lesson.licence) || "") + (lesson ? " Map data: credited to each source under About this map." : "") + "</p>" +
       (lesson ? classroomNotice(site, lesson) : "") +
       "<p>This page is built from " + (lesson ? "one lesson file" : "the lesson files") + (repo ? ": " + ext(repo + (lesson ? "/blob/main/resources/lessons/" + lesson.id + ".json" : "/tree/main/resources/lessons"), lesson ? "<code>" + esc(lesson.id) + ".json</code>" : "resources/lessons") : "") +
       ". Edit the file, not this page; the page is rebuilt from it.</p>" + versionsTable(site, lesson) + "</div>";
@@ -341,13 +341,25 @@
         return '<p class="mml-muted">' + esc(langName(site, l)) + ": " + esc(lesson.languages[l].note) + "</p>";
       }).join("") + "</div>");
 
-    // Teacher notes: everything a teacher needs except the answers, which sit on the teacher page.
-    var tn = lesson.teacherNotes;
-    add('<div class="mml">' + anchor(slug, "teacher-notes") + '<h2>Teacher notes</h2><h3>Before class</h3><p class="mml-prose">' + t(tn.beforeClass) + "</p>" +
+    // Teacher notes: a full teacher guide (objectives, skills, ways to run it, before class, discussion, misunderstandings,
+    // key words, further reading); only the answers sit on the answer page.
+    var tn = lesson.teacherNotes, teach = site.teaching || {};
+    function ul(items, cls) { return "<ul" + (cls ? ' class="' + cls + '"' : "") + ">" + items.map(function (x) { return "<li>" + t(x) + "</li>"; }).join("") + "</ul>"; }
+    add('<div class="mml">' + anchor(slug, "teacher-notes") + '<h2>Teacher notes</h2>' +
+      '<p class="mml-prose"><strong>Subjects:</strong> ' + (lesson.subjects || []).map(esc).join(", ") + ". <strong>Grade:</strong> " + esc(lesson.grade) + ". <strong>Time:</strong> " + esc(lesson.time) + ".</p>" +
+      "<h3>Learning objectives</h3><p>Students will:</p>" + ul(lesson.objectives || []) +
+      "<h3>Map skills</h3>" + ul(MMR.skills(site, lesson), "mml-words") +
+      "<h3>Ways to run this lesson</h3>" + ul(MMR.instructionalModels(site, lesson), "mml-words") +
+      (teach.materials ? '<h3>Materials</h3><p class="mml-prose">' + esc(teach.materials) + "</p>" : "") +
+      '<h3>Before class</h3><p class="mml-prose">' + t(tn.beforeClass) + "</p>" + ((teach.prep || []).length ? ul(teach.prep) : "") +
+      ((lesson.discussion || []).length ? "<h3>Discussion questions</h3><ol>" + lesson.discussion.map(function (q) { return "<li>" + t(q) + "</li>"; }).join("") + "</ol>" : "") +
       (tn.misconceptions && tn.misconceptions.length ? "<h3>Common misunderstandings</h3><ul>" + tn.misconceptions.map(function (m) {
         return "<li><strong>“" + t(m.claim) + "”</strong> " + t(m.response) + "</li>";
       }).join("") + "</ul>" : "") +
       '<h3>Key words</h3><ul class="mml-words">' + tn.keyWords.map(function (k) { return "<li>" + esc(k) + "</li>"; }).join("") + "</ul>" +
+      ((lesson.resources || []).length ? "<h3>Further reading</h3><ul>" + lesson.resources.map(function (r) {
+        return "<li>" + ext(r.url, esc(r.title)) + (r.source ? ' <span class="mml-muted">(' + esc(r.source) + ")</span>" : "") + "</li>";
+      }).join("") + "</ul>" : "") +
       '<h3>Answers</h3><p class="mml-prose">Where to find each answer on the map and what to accept are kept off this page, so it can be shared with students: <a href="/pages/' + esc(teacherSlug(lesson)) + '">answer notes</a> (web page) or <a href="' + sheetPlaceholder(lesson.id, "teacher") + '">Download Word (teacher notes)</a>.</p></div>');
 
     // How-to videos
