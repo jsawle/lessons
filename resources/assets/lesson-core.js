@@ -6,7 +6,7 @@
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  var VERSION = { renderer: "2.0", format: "1.3", checker: "1.3", vera: "1.2", prompt: "1.0" };
+  var VERSION = { renderer: "2.1", format: "1.3", checker: "1.3", vera: "1.2", prompt: "1.0" };
   var HEX32 = /^[0-9a-f]{32}$/i;
   var DATE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -78,6 +78,12 @@
     return site.vera.url + "?lesson=" + encodeURIComponent(lesson.id) + "&title=" + encodeURIComponent(lesson.title);
   }
 
+  /* The prompt page for a lesson (prompt.html on GitHub Pages), which the Hub page embeds in a frame card. */
+  function promptUrl(site, lesson) {
+    var u = ((site && site.aiPrompt) || {}).pageUrl;
+    if (!/^https:\/\//.test(u || "")) return null;
+    return u + "?id=" + encodeURIComponent(lesson.id);
+  }
   /* The ordered unit list for a course (site.json units), and a lesson's place in it. */
   function unitList(site, course) {
     var u = (site && site.units) || {};
@@ -272,6 +278,6 @@
   }
 
   return { VERSION: VERSION, esc: esc, inline: inline, plain: plain, mapmakerUrl: mapmakerUrl, classroomShareUrl: classroomShareUrl, hubUrl: hubUrl,
-    howToLinks: howToLinks, veraUrl: veraUrl, veraEntry: veraEntry, veraFile: veraFile, veraFileName: veraFileName, aiPrompt: aiPrompt,
+    howToLinks: howToLinks, veraUrl: veraUrl, veraEntry: veraEntry, veraFile: veraFile, veraFileName: veraFileName, aiPrompt: aiPrompt, promptUrl: promptUrl,
     unitList: unitList, unitIndex: unitIndex, sortStandards: sortStandards, standardPrefix: standardPrefix, standardLabel: standardLabel, check: check };
 });

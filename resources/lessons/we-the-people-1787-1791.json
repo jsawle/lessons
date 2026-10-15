@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.3",
   "id": "we-the-people-1787-1791",
-  "contentVersion": "0.2.0",
+  "contentVersion": "0.2.1",
   "status": "draft",
   "updated": "2026-10-15",
   "reviewed": null,
@@ -247,7 +247,7 @@
         "lines": 3,
         "answer": {
           "where": "Ratifying the Constitution layer; legend: blue = voted to ratify, orange-red = voted against. Pop-up first line: Rhode Island 34 for, 32 against (label RI 13, May 29, 1790); New York 30–27 (NY 11, July 26, 1788); Massachusetts 187–168 (MA 6, February 6, 1788). By number of votes the next closest are Virginia 89–79 (VA 10) and New Hampshire 57–47 (NH 9, the ninth state, enough to put the Constitution into effect). North Carolina: the NC (1788) pie at Hillsborough, titled \"Did not ratify (first convention)\", 83 for, 184 against, with a note that a second convention ratified in November 1789; the NC 12 pie at Fayetteville, 194–77, November 21, 1789.",
-          "accept": "A good answer names Rhode Island, New York and Massachusetts (accept Virginia or New Hampshire if the student counts the gap in votes rather than the share), and explains that North Carolina's first convention did not ratify and a second one did more than a year later, after Congress had proposed the Bill of Rights. Sources differ on the 1788 vote and date (see Known issues); accept the pop-up's figures.",
+          "accept": "A good answer names Rhode Island, New York and Massachusetts (accept Virginia or New Hampshire if the student counts the gap in votes rather than the share), and explains that North Carolina's first convention did not ratify and a second one did more than a year later, after Congress had proposed the Bill of Rights. Sources differ on the exact 1788 vote and date; accept the pop-up's figures.",
           "table": {
             "caption": "Every ratification vote on the map, from the pop-ups",
             "columns": [
@@ -257,21 +257,96 @@
               "Date"
             ],
             "rows": [
-              ["DE 1", "Delaware", "30–0", "December 7, 1787"],
-              ["PA 2", "Pennsylvania", "46–23", "December 12, 1787"],
-              ["NJ 3", "New Jersey", "38–0", "December 18, 1787"],
-              ["GA 4", "Georgia", "26–0", "December 31, 1787"],
-              ["CT 5", "Connecticut", "128–40", "January 9, 1788"],
-              ["MA 6", "Massachusetts", "187–168", "February 6, 1788"],
-              ["MD 7", "Maryland", "63–11", "April 26, 1788"],
-              ["SC 8", "South Carolina", "149–73", "May 23, 1788"],
-              ["NH 9", "New Hampshire", "57–47", "June 21, 1788"],
-              ["VA 10", "Virginia", "89–79", "June 25, 1788"],
-              ["NY 11", "New York", "30–27", "July 26, 1788"],
-              ["NC (1788)", "North Carolina, first convention", "83–184, did not ratify", "August 2, 1788"],
-              ["NC 12", "North Carolina", "194–77", "November 21, 1789"],
-              ["RI 13", "Rhode Island", "34–32", "May 29, 1790"],
-              ["VT 14", "Vermont (before joining the Union)", "105–4", "January 10, 1791"]
+              [
+                "DE 1",
+                "Delaware",
+                "30–0",
+                "December 7, 1787"
+              ],
+              [
+                "PA 2",
+                "Pennsylvania",
+                "46–23",
+                "December 12, 1787"
+              ],
+              [
+                "NJ 3",
+                "New Jersey",
+                "38–0",
+                "December 18, 1787"
+              ],
+              [
+                "GA 4",
+                "Georgia",
+                "26–0",
+                "December 31, 1787"
+              ],
+              [
+                "CT 5",
+                "Connecticut",
+                "128–40",
+                "January 9, 1788"
+              ],
+              [
+                "MA 6",
+                "Massachusetts",
+                "187–168",
+                "February 6, 1788"
+              ],
+              [
+                "MD 7",
+                "Maryland",
+                "63–11",
+                "April 26, 1788"
+              ],
+              [
+                "SC 8",
+                "South Carolina",
+                "149–73",
+                "May 23, 1788"
+              ],
+              [
+                "NH 9",
+                "New Hampshire",
+                "57–47",
+                "June 21, 1788"
+              ],
+              [
+                "VA 10",
+                "Virginia",
+                "89–79",
+                "June 25, 1788"
+              ],
+              [
+                "NY 11",
+                "New York",
+                "30–27",
+                "July 26, 1788"
+              ],
+              [
+                "NC (1788)",
+                "North Carolina, first convention",
+                "83–184, did not ratify",
+                "August 2, 1788"
+              ],
+              [
+                "NC 12",
+                "North Carolina",
+                "194–77",
+                "November 21, 1789"
+              ],
+              [
+                "RI 13",
+                "Rhode Island",
+                "34–32",
+                "May 29, 1790"
+              ],
+              [
+                "VT 14",
+                "Vermont (before joining the Union)",
+                "105–4",
+                "January 10, 1791"
+              ]
             ]
           }
         }

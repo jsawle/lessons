@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prompt for your own AI – MapMaker lessons</title>
+<meta name="robots" content="noindex">
+<!-- MapMaker resource pages: prompt page v1.0. Shows one lesson's prompt for a teacher's own AI tool, with a copy
+     button, so the Hub lesson page can embed it in a frame card instead of printing the whole prompt.
+     Open as prompt.html?id=<lesson id>. Built from site.json and the lesson file with lesson-core.js, so the
+     prompt matches Vera's knowledge entry and never names a layer the map doesn't have. -->
+<style>
+  :root{--brand:#007AC2;--brand-hover:#00619B;--brand-press:#004874;--ink:#141414;--ink-2:#4A4A4A;--line:#D4D4D4;--paper:#fff;--paper-2:#F3F3F3}
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{font-family:"Avenir Next",Avenir,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);font-size:16px;line-height:1.5;display:flex;flex-direction:column;padding:10px 12px}
+  .bar{display:flex;flex-wrap:wrap;gap:.6em;align-items:center;margin:0 0 .6em}
+  button{font:inherit;font-weight:600;line-height:1.25;padding:.55em 1em;border-radius:4px;border:2px solid var(--brand);background:var(--brand);color:#fff;cursor:pointer}
+  button.plain{background:#fff;color:var(--brand-hover)}
+  button:hover{background:var(--brand-hover);border-color:var(--brand-hover);color:#fff}
+  button:focus-visible,textarea:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+  .status{margin:0;min-height:1.4em;color:var(--ink-2);font-size:.95rem}
+  textarea{flex:1;width:100%;min-height:9em;resize:vertical;border:1px solid var(--line);border-radius:4px;background:var(--paper-2);padding:.8em 1em;font:14px/1.5 ui-monospace,Menlo,Consolas,monospace;color:var(--ink)}
+  .err{color:#A3261B}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+</style>
+</head>
+<body>
+<h1 class="sr" id="h">Prompt for your own AI</h1>
+<div class="bar">
+  <button type="button" id="copy">Copy the prompt</button>
+  <button type="button" class="plain" id="select">Select all</button>
+  <p class="status" id="status" role="status" aria-live="polite"></p>
+</div>
+<label class="sr" for="prompt">The prompt</label>
+<textarea id="prompt" readonly spellcheck="false" aria-labelledby="h"></textarea>
+<script src="assets/lesson-core.js"></script>
+<script>
+(function () {
+  "use strict";
+  var MMR = window.MMR, ta = document.getElementById("prompt"), st = document.getElementById("status");
+  var id = new URLSearchParams(location.search).get("id") || "";
+  function say(t, bad) { st.textContent = t; st.className = "status" + (bad ? " err" : ""); }
+  function getJSON(url) {
+    return fetch(url, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(url + " could not be loaded (" + r.status + ")."); return r.json(); });
+  }
+  if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(id)) { say("No lesson chosen.", true); return; }
+  Promise.all([getJSON("site.json"), getJSON("lessons/" + id + ".json")]).then(function (r) {
+    var site = r[0], lesson = r[1];
+    document.title = "Prompt for your own AI: " + lesson.title;
+    ta.value = MMR.aiPrompt(site, lesson);
+    ta.rows = 12;
+  }).catch(function (e) { say("The prompt couldn’t be built: " + e.message, true); });
+  document.getElementById("select").addEventListener("click", function () { ta.focus(); ta.select(); say("Selected. Press Ctrl+C (or Cmd+C) to copy."); });
+  document.getElementById("copy").addEventListener("click", function () {
+    var done = function () { say("Copied. Paste it into your AI tool, then add what you want."); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(ta.value).then(done).catch(fallback);
+    else fallback();
+    function fallback() {
+      try { ta.focus(); ta.select(); if (document.execCommand("copy")) return done(); } catch (e) {}
+      say("Couldn’t copy automatically: use Select all, then copy.", true);
+    }
+  });
+})();
+</script>
+</body>
+</html>

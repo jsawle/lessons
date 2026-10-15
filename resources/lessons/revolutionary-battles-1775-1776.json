@@ -2,13 +2,14 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.3",
   "id": "revolutionary-battles-1775-1776",
-  "contentVersion": "0.4.0",
+  "contentVersion": "0.4.1",
   "status": "draft",
   "updated": "2026-10-15",
   "reviewed": null,
-
   "title": "1775–1776 Revolutionary Battles",
-  "sheetTitle": { "es": "Batallas de la Revolución, 1775–1776" },
+  "sheetTitle": {
+    "es": "Batallas de la Revolución, 1775–1776"
+  },
   "summary": "Explore how the geography of North America shaped the first two years of the American Revolution, from the first shots at Lexington and Concord to Washington's attack on Trenton.",
   "subject": "History",
   "course": "US History",
@@ -16,20 +17,45 @@
   "grade": "8",
   "time": "45 minutes, or 10–15 per question",
   "studentLogin": "Not needed to explore the map",
-
   "map": {
     "webmapId": "bda07736a1b9425ea19fdde282088bd6",
-    "bookmarks": ["Massachusetts"],
+    "bookmarks": [
+      "Massachusetts"
+    ],
     "layers": [
-      { "name": "Revolutionary War Battles", "shows": "21 battles from April 1775 to December 1776. Each pop-up gives the battle's name and dates, a picture and a short account. The winner is shown only by the diamond's color, as listed in the legend (American Victory or British Victory); the pop-up does not state it in words.", "source": "American Battlefield Trust" },
-      { "name": "Revolutionary War Battlefields", "shows": "Battlefield boundaries (gray) and the core areas where the fighting was heaviest (diagonal stripes). No pop-ups.", "source": "National Park Service, American Battlefield Protection Program" },
-      { "name": "Turning Points", "shows": "Five white circles numbered 1 to 5, from Lexington and Concord to Trenton, that appear when you zoom in. Each pop-up gives the event's name, year, a short account (the Battle_details field) and the victor.", "source": "Chris Bunin and Peter Trentacoste (2026), from National Park Service, US Army Center of Military History and Library of Congress sources" },
-      { "name": "Thirteen British Colonies", "shows": "Colony areas and borders in 1763. The pop-up gives the colony's name.", "source": "National Geographic Society and Virginia Geographic Alliance, from the Historical Atlas of the United States (1988)" },
-      { "name": "1763 Proclamation Line", "shows": "The line west of which King George III barred colonial settlement", "source": "National Geographic Society and Virginia Geographic Alliance, from the Historical Atlas of the United States (1988)" },
-      { "name": "Key Port Cities in the American Revolution 1775-1781", "shows": "Ports that supplied armies and moved troops, from New England to the Caribbean and Britain. The legend separates a Major Port City (larger symbol) from a smaller Port. The layer has no pop-ups and no labels.", "source": "Jay Feyerabend, [master's thesis](https://commons.lib.jmu.edu/masters202029/74), James Madison University (2021)", "offAtStart": true }
+      {
+        "name": "Revolutionary War Battles",
+        "shows": "21 battles from April 1775 to December 1776. Each pop-up gives the battle's name and dates, a picture and a short account. The winner is shown only by the diamond's color, as listed in the legend (American Victory or British Victory); the pop-up does not state it in words.",
+        "source": "American Battlefield Trust"
+      },
+      {
+        "name": "Revolutionary War Battlefields",
+        "shows": "Battlefield boundaries (gray) and the core areas where the fighting was heaviest (diagonal stripes). No pop-ups.",
+        "source": "National Park Service, American Battlefield Protection Program"
+      },
+      {
+        "name": "Turning Points",
+        "shows": "Five white circles numbered 1 to 5, from Lexington and Concord to Trenton, that appear when you zoom in. Each pop-up gives the event's name, year, a short account (the Battle_details field) and the victor.",
+        "source": "Chris Bunin and Peter Trentacoste (2026), from National Park Service, US Army Center of Military History and Library of Congress sources"
+      },
+      {
+        "name": "Thirteen British Colonies",
+        "shows": "Colony areas and borders in 1763. The pop-up gives the colony's name.",
+        "source": "National Geographic Society and Virginia Geographic Alliance, from the Historical Atlas of the United States (1988)"
+      },
+      {
+        "name": "1763 Proclamation Line",
+        "shows": "The line west of which King George III barred colonial settlement",
+        "source": "National Geographic Society and Virginia Geographic Alliance, from the Historical Atlas of the United States (1988)"
+      },
+      {
+        "name": "Key Port Cities in the American Revolution 1775-1781",
+        "shows": "Ports that supplied armies and moved troops, from New England to the Caribbean and Britain. The legend separates a Major Port City (larger symbol) from a smaller Port. The layer has no pop-ups and no labels.",
+        "source": "Jay Feyerabend, [master's thesis](https://commons.lib.jmu.edu/masters202029/74), James Madison University (2021)",
+        "offAtStart": true
+      }
     ]
   },
-
   "knownIssues": [
     {
       "date": "2026-10-15",
@@ -38,7 +64,6 @@
       "note": "Circle 1 (Lexington and Concord) gives Victor: Britain; it was an American victory, as the Revolutionary War Battles legend shows. The layer's Notes field on circles 3 to 5 holds the next circle's text and is cut off mid-sentence; the pop-up shows the Battle_details field instead, which is correct. The MapMaker team is correcting the layer. Until then, use the Battle_details text in the pop-up and the Battles legend for the winner."
     }
   ],
-
   "inquiry": {
     "compellingQuestion": {
       "en": "Why did the fighting move from Boston to New York, and then across New Jersey, in 1775–1776?",
@@ -47,9 +72,17 @@
     "questions": [
       {
         "id": "q1",
-        "title": { "en": "Where did the war begin?", "es": "¿Dónde comenzó la guerra?" },
+        "title": {
+          "en": "Where did the war begin?",
+          "es": "¿Dónde comenzó la guerra?"
+        },
         "task": "Open the Massachusetts bookmark and click the Lexington and Concord diamond, then the Boston diamond. Read the dates in each pop-up, and the winner from the diamond's color and the legend. Measure the straight-line distance from Boston to Concord.",
-        "tools": ["bookmarks", "popups", "legend", "measure"],
+        "tools": [
+          "bookmarks",
+          "popups",
+          "legend",
+          "measure"
+        ],
         "student": {
           "en": "Open the Massachusetts bookmark. Click the diamond at Lexington and Concord. When was it fought? Use the legend to find out who won. Then click the Boston diamond: how long did the siege of Boston last?",
           "es": "Abre el marcador Massachusetts. Haz clic en el rombo de Lexington and Concord. ¿Cuándo fue la batalla? Usa la leyenda para saber quién ganó. Luego haz clic en el rombo de Boston: ¿cuánto duró el sitio de Boston?"
@@ -60,14 +93,21 @@
         },
         "answer": {
           "where": "Massachusetts bookmark. Lexington and Concord pop-up, the date line under the title: April 19, 1775. Legend (Revolutionary War Battles): blue diamond = American Victory, red = British Victory. Boston pop-up: April 19, 1775 to March 17, 1776, about 11 months. Measure tool, Boston to Concord: about 16 miles (accept 15 to 17).",
-          "text": "The Turning Points circle 1 pop-up at the same spot says Victor: Britain, which is wrong (see Known issues); the Battles legend is right."
+          "text": "Use the Revolutionary War Battles legend for the result."
         }
       },
       {
         "id": "q2",
-        "title": { "en": "Where was the fighting in 1775, and where in 1776?", "es": "¿Dónde se combatió en 1775 y dónde se combatió en 1776?" },
+        "title": {
+          "en": "Where was the fighting in 1775, and where in 1776?",
+          "es": "¿Dónde se combatió en 1775 y dónde se combatió en 1776?"
+        },
         "task": "Zoom out until all 21 diamonds show, from Quebec to South Carolina. Click each one, read its dates, and sort the battles into two lists by year. Use the legend for the winner. Which colonies saw fighting each year, and what changed?",
-        "tools": ["zoom", "popups", "legend"],
+        "tools": [
+          "zoom",
+          "popups",
+          "legend"
+        ],
         "student": {
           "en": "Zoom out until you can see every diamond, from Quebec to South Carolina. Click each one and write its name under the year it was fought. Use the legend to mark who won. Which colonies had battles in 1775? Which in 1776? What changed?",
           "es": "Aléjate hasta ver todos los rombos, desde Quebec hasta Carolina del Sur. Haz clic en cada uno y escribe su nombre bajo el año en que se combatió. Usa la leyenda para marcar quién ganó. ¿Qué colonias tuvieron batallas en 1775? ¿Y en 1776? ¿Qué cambió?"
@@ -78,19 +118,40 @@
           "accept": "A good answer lists most of the 21 battles under the right year (8 in 1775, 13 in 1776), names Massachusetts, New York, Virginia and Quebec for 1775 and adds North Carolina, South Carolina, New Jersey and Rhode Island for 1776, and says that the fighting began around Boston and then spread along the coast, with most battles from August 1776 in New York and New Jersey, where the British won nearly all of them.",
           "table": {
             "caption": "Battles on the map by year and winner (from the pop-up dates and the legend)",
-            "columns": ["Year", "American victories", "British victories"],
+            "columns": [
+              "Year",
+              "American victories",
+              "British victories"
+            ],
             "rows": [
-              ["1775 (8 battles)", "Lexington and Concord, Boston (siege) and Gloucester (Massachusetts); Fort Ticonderoga and Crown Point (New York); Great Bridge (Virginia)", "Bunker Hill (Massachusetts); Quebec (Quebec)"],
-              ["1776 (13 battles)", "Moores Creek Bridge (North Carolina); Sullivan's Island and Breach Inlet (South Carolina); Gwynn's Island (Virginia); Trenton (New Jersey)", "Brooklyn, Valcour Island, Pell's Point, White Plains, Fort Washington (New York); Fort Lee, Mount Holly (New Jersey); Newport (Rhode Island)"]
+              [
+                "1775 (8 battles)",
+                "Lexington and Concord, Boston (siege) and Gloucester (Massachusetts); Fort Ticonderoga and Crown Point (New York); Great Bridge (Virginia)",
+                "Bunker Hill (Massachusetts); Quebec (Quebec)"
+              ],
+              [
+                "1776 (13 battles)",
+                "Moores Creek Bridge (North Carolina); Sullivan's Island and Breach Inlet (South Carolina); Gwynn's Island (Virginia); Trenton (New Jersey)",
+                "Brooklyn, Valcour Island, Pell's Point, White Plains, Fort Washington (New York); Fort Lee, Mount Holly (New Jersey); Newport (Rhode Island)"
+              ]
             ]
           }
         }
       },
       {
         "id": "q3",
-        "title": { "en": "Why New York?", "es": "¿Por qué Nueva York?" },
+        "title": {
+          "en": "Why New York?",
+          "es": "¿Por qué Nueva York?"
+        },
         "task": "Turn on Key Port Cities (it sits inside the Revolutionary War Battlefields group). Students use the legend to tell a Major Port City from a smaller Port, name the major ports between Boston and Charleston (the layer has no pop-ups, so the battle diamonds and the coastline help), measure New York to Philadelphia and New York to Boston, and say what a navy based at New York could reach.",
-        "tools": ["layers", "legend", "zoom", "popups", "measure"],
+        "tools": [
+          "layers",
+          "legend",
+          "zoom",
+          "popups",
+          "measure"
+        ],
         "student": {
           "en": "In Map layers, turn on Key Port Cities in the American Revolution 1775-1781 (it's inside Revolutionary War Battlefields). Use the legend to tell a Major Port City from a smaller Port. Boston and Charleston are major ports: which other major ports lie between them? The layer has no pop-ups, so use the coastline and the battle diamonds nearby to name them. Measure from New York to Philadelphia and from New York to Boston. Looking at the map, what could a navy based at New York reach?",
           "es": "En las capas del mapa (Map layers), activa Key Port Cities in the American Revolution 1775-1781 (ciudades portuarias clave; está dentro de Revolutionary War Battlefields). Usa la leyenda para distinguir un puerto principal (Major Port City) de un puerto menor (Port). Boston y Charleston son puertos principales: ¿qué otros puertos principales hay entre ellos? La capa no tiene ventanas emergentes, así que usa la costa y los rombos de batallas cercanos para nombrarlos. Mide de Nueva York a Filadelfia y de Nueva York a Boston. Mirando el mapa, ¿qué podía alcanzar una armada con base en Nueva York?"
@@ -108,9 +169,17 @@
       },
       {
         "id": "q4",
-        "title": { "en": "How did 1776 end?", "es": "¿Cómo terminó 1776?" },
+        "title": {
+          "en": "How did 1776 end?",
+          "es": "¿Cómo terminó 1776?"
+        },
         "task": "Zoom in near New York City until the numbered turning points show, and follow circles 4 and 5. Click the diamonds for Fort Washington, Fort Lee and Trenton, and read the dates and the winner from the legend. Measure the distance from New York City to Trenton.",
-        "tools": ["zoom", "popups", "legend", "measure"],
+        "tools": [
+          "zoom",
+          "popups",
+          "legend",
+          "measure"
+        ],
         "student": {
           "en": "Zoom in on New York City until the numbered circles appear, then follow circles 4 and 5. Click the diamonds for Fort Washington, Fort Lee and Trenton. When was each fought, and who won?",
           "es": "Acércate a la ciudad de Nueva York hasta que aparezcan los círculos numerados y sigue los círculos 4 y 5. Haz clic en los rombos de Fort Washington, Fort Lee y Trenton. ¿Cuándo se combatió cada batalla y quién ganó?"
@@ -120,7 +189,7 @@
           "es": "Mide la distancia de la ciudad de Nueva York a Trenton: ________ millas"
         },
         "answer": {
-          "where": "Turning Points circles 4 (Fall of New York City, 1776, Victor: Britain) and 5 (Washington Strikes Back, 1776, Victor: United States); the pop-up's Battle_details text is right, but the layer's Notes field on these circles is wrong until the layer is fixed (see Known issues). Revolutionary War Battles pop-ups: Fort Washington, November 16, 1776, and Fort Lee, November 20, 1776, red = British Victory; Trenton, December 26, 1776, blue = American Victory. Measure tool, New York City to Trenton: about 52 miles (accept 48 to 56)."
+          "where": "Turning Points circles 4 (Fall of New York City, 1776, Victor: Britain) and 5 (Washington Strikes Back, 1776, Victor: United States); the pop-up's Battle details text tells the story of each. Revolutionary War Battles pop-ups: Fort Washington, November 16, 1776, and Fort Lee, November 20, 1776, red = British Victory; Trenton, December 26, 1776, blue = American Victory. Measure tool, New York City to Trenton: about 52 miles (accept 48 to 56)."
         }
       }
     ],
@@ -130,10 +199,12 @@
         "en": "Answer the big question using evidence from at least two places on the map. You can write a paragraph, sketch on the map, or both.",
         "es": "Responde la pregunta central con evidencia de al menos dos lugares del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
       },
-      "tools": ["sketch", "bookmarks"]
+      "tools": [
+        "sketch",
+        "bookmarks"
+      ]
     }
   },
-
   "studentSupport": {
     "beforeYouStart": {
       "en": "British soldiers marched out of Boston to seize weapons that colonists had stored at Concord. The fighting that followed started the American Revolution. For the next two years, the British army and navy and the new Continental Army, led by George Washington, fought over the colonies' cities, rivers and harbors.",
@@ -143,36 +214,74 @@
       "en": "Diamonds mark battles. A battle's pop-up gives its name, dates and story, but not the winner in words: the diamond's color shows the winner, so use the legend. Each diamond is placed at the battle's usual location, but the fighting covered a wider area: gray shaded areas show the battlefield, and areas with diagonal stripes show the core, where the fighting was heaviest. Zoom in to see white numbered circles: five turning points, numbered in the order they happened. The Key Port Cities layer has no pop-ups: the legend tells a major port from a smaller one.",
       "es": "Los rombos marcan las batallas. La ventana emergente de una batalla da su nombre, sus fechas y su historia, pero no dice quién ganó: el color del rombo muestra al ganador, así que usa la leyenda. Cada rombo está en el lugar donde se suele situar la batalla, pero los combates ocuparon un área mayor: las zonas grises muestran el campo de batalla y las zonas rayadas, el núcleo, donde la lucha fue más intensa. Acércate para ver círculos blancos numerados: cinco momentos decisivos, numerados en el orden en que ocurrieron. La capa Key Port Cities (ciudades portuarias clave) no tiene ventanas emergentes: la leyenda distingue un puerto principal de uno menor."
     },
-    "tips": ["popups"],
+    "tips": [
+      "popups"
+    ],
     "reflection": {
       "en": "What did the map show you about 1775–1776 that you might not have noticed from reading alone?",
       "es": "¿Qué te mostró el mapa sobre 1775–1776 que quizá no habrías notado solo con la lectura?"
     }
   },
-
   "teacherNotes": {
-    "beforeClass": "Open the map and check it loads. Every layer is on except Key Port Cities, which students turn on for question 3. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet separately). No account or login is needed. Sketches are not saved, so students who sketch should finish in one session or take a screenshot. Read the answers on the teacher page and the known issue with the Turning Points layer.",
+    "beforeClass": "Open the map and check it loads. Every layer is on except Key Port Cities, which students turn on for question 3. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet separately). No account or login is needed. Sketches are not saved, so students who sketch should finish in one session or take a screenshot. Read the answers on the teacher page.",
     "misconceptions": [
-      { "claim": "The early war was fought in Massachusetts.", "response": "By the end of 1776 the map shows battles in seven colonies and in Quebec." },
-      { "claim": "The winner is the side that lost fewer soldiers.", "response": "Bunker Hill is shown as a British victory, yet its pop-up says the British had twice as many casualties as the Patriots." },
-      { "claim": "The Americans lost every battle in 1776.", "response": "The map shows American wins in the South that year, such as Moores Creek Bridge and Sullivan's Island, as well as Trenton." }
+      {
+        "claim": "The early war was fought in Massachusetts.",
+        "response": "By the end of 1776 the map shows battles in seven colonies and in Quebec."
+      },
+      {
+        "claim": "The winner is the side that lost fewer soldiers.",
+        "response": "Bunker Hill is shown as a British victory, yet its pop-up says the British had twice as many casualties as the Patriots."
+      },
+      {
+        "claim": "The Americans lost every battle in 1776.",
+        "response": "The map shows American wins in the South that year, such as Moores Creek Bridge and Sullivan's Island, as well as Trenton."
+      }
     ],
-    "keyWords": ["siege", "militia", "Continental Army", "Loyalist", "harbor", "campaign", "retreat"]
+    "keyWords": [
+      "siege",
+      "militia",
+      "Continental Army",
+      "Loyalist",
+      "harbor",
+      "campaign",
+      "retreat"
+    ]
   },
-
   "standards": [
-    { "code": "TX 8.4(C)", "text": "Explain the issues surrounding important events of the American Revolution, including declaring independence; fighting the battles of Lexington and Concord, Saratoga, and Yorktown; enduring the winter at Valley Forge; and signing the Treaty of Paris of 1783" },
-    { "code": "TX 8.10(A)", "text": "Locate places and regions directly related to major eras and turning points in the United States during the 17th, 18th, and 19th centuries" },
-    { "code": "TX 8.10(C)", "text": "Analyze the effects of physical and human geographic factors such as weather, landforms, waterways, transportation, and communication on major historical events in the United States" },
-    { "code": "FL SS.8.A.3.6", "text": "Examine the causes, course, and consequences of the American Revolution" },
-    { "code": "C3 D2.Geo.2.6-8", "text": "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions, and changes in their environmental characteristics" },
-    { "code": "C3 D2.His.14.6-8", "text": "Explain multiple causes and effects of events and developments in the past" }
+    {
+      "code": "TX 8.4(C)",
+      "text": "Explain the issues surrounding important events of the American Revolution, including declaring independence; fighting the battles of Lexington and Concord, Saratoga, and Yorktown; enduring the winter at Valley Forge; and signing the Treaty of Paris of 1783"
+    },
+    {
+      "code": "TX 8.10(A)",
+      "text": "Locate places and regions directly related to major eras and turning points in the United States during the 17th, 18th, and 19th centuries"
+    },
+    {
+      "code": "TX 8.10(C)",
+      "text": "Analyze the effects of physical and human geographic factors such as weather, landforms, waterways, transportation, and communication on major historical events in the United States"
+    },
+    {
+      "code": "FL SS.8.A.3.6",
+      "text": "Examine the causes, course, and consequences of the American Revolution"
+    },
+    {
+      "code": "C3 D2.Geo.2.6-8",
+      "text": "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions, and changes in their environmental characteristics"
+    },
+    {
+      "code": "C3 D2.His.14.6-8",
+      "text": "Explain multiple causes and effects of events and developments in the past"
+    }
   ],
-
   "languages": {
-    "en": { "status": "final" },
-    "es": { "status": "draft", "note": "Spanish draft for review by a native speaker. Layer names stay in English, as they appear in MapMaker." }
+    "en": {
+      "status": "final"
+    },
+    "es": {
+      "status": "draft",
+      "note": "Spanish draft for review by a native speaker. Layer names stay in English, as they appear in MapMaker."
+    }
   },
-
   "licence": "Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide."
 }
