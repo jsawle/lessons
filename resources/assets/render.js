@@ -1,4 +1,4 @@
-/* MapMaker resource pages (lab): page renderer v2.1 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
+/* MapMaker resource pages (lab): page renderer v2.2 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
    standards in the hero; Vera link and a copyable AI prompt). Draws a lesson page, its teacher page (?view=teacher) or the catalogue from JSON files. */
 (function () {
   "use strict";
@@ -83,7 +83,7 @@
         '<a class="btn" href="' + lessonHref + '">Lesson page</a><button type="button" class="btn" data-download="teacher">Download Word (teacher notes)</button></div><p class="status-msg" id="dl-status" role="status" aria-live="polite"></p>');
     } else {
       var off = lesson.map.layers.filter(function (l) { return l.offAtStart; }).map(function (l) { return l.name; });
-      h.push('<div class="actions"><a class="btn primary" href="' + esc(mmUrl) + '" target="_blank" rel="noopener">' + mapIcon + "Open in MapMaker" + newTab + "</a>" +
+      h.push('<div class="actions"><a class="btn primary" href="' + esc(mmUrl) + '" target="_blank" rel="noopener">' + mapIcon + "Open in MapMaker" + newTab + "</a>" + gc +
         '<a class="btn" href="#student-activity">Student sheet</a><a class="btn" href="#standards">Standards</a></div>');
       h.push('<div class="quick"><h2>Five minutes before class</h2><ol>' + [
         "Open the map in MapMaker and click through the bookmarks" + ((lesson.map.bookmarks || []).length ? " (" + lesson.map.bookmarks.map(esc).join(", ") + ")" : "") + ". No account or login is needed.",
@@ -171,8 +171,8 @@
       return '<button type="button" data-lang="' + l + '" aria-pressed="' + (i === 0) + '">' + esc(site.languageNames[l]) + "</button>";
     }).join("") + "</div>" : "") + langs.map(function (l) {
       return '<button type="button" class="btn" data-download="' + l + '">Download Word (' + esc(site.languageNames[l]) + ")</button>";
-    }).join("") + gc + '<p class="status-msg" id="dl-status" role="status" aria-live="polite"></p></div>');
-    if (gc) h.push('<p class="muted">The Google Classroom button shares the MapMaker map with a class. It doesn’t include the Word sheet, which can be attached in Classroom.</p>');
+    }).join("") + '<p class="status-msg" id="dl-status" role="status" aria-live="polite"></p></div>');
+    if (gc) h.push('<p class="muted">The Share to Google Classroom button at the top of the page shares the MapMaker map with a class. It doesn’t include the Word sheet, which can be attached in Classroom.</p>');
     langs.forEach(function (l, i) { h.push(sheetPreview(site, lesson, l, i > 0)); });
     h.push("</section>");
 
