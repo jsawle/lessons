@@ -1,7 +1,7 @@
 /* MapMaker resource pages: Hub page builder v2.1 (a teacher page per lesson that holds the answers; no answers, status,
    months or known-issue notes on the lesson page; lessons grouped by unit; standards in the hero; a Vera link and the
    AI prompt in a frame card with a copy button on each lesson page, with Vera embedded on the Lessons page only; one
-   Share to Google Classroom button).
+   Share to Google Classroom button, in the hero).
    Turns lesson files into ArcGIS Hub page layouts: sections of markdown cards that hold plain HTML
    and one <style> block, with no scripts, so the pages work inside Hub. Runs in the browser
    (window.MMRHub, for the Hub preview) and in Node (for the bundle the publishing notebook reads). */
@@ -10,7 +10,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "2.1";
+  var VERSION = "2.2";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
@@ -316,7 +316,7 @@
     var gc = classroomButton(site, mm);
     add("<style>" + CSS + classroomCss(site) + "</style>" + '<div class="mml mml-hero"><p class="mml-crumbs"><a href="' + lessonsPath(site) + '">Lessons</a> › ' + esc(lesson.course) + " › " + esc(lesson.unit) + "</p>" +
       "<h1>" + esc(lesson.title) + '</h1><p class="mml-summary">' + t(lesson.summary) + "</p>" + factsList(site, lesson) +
-      '<p class="mml-actions">' + ext(mm, "Open in MapMaker", "mml-btn mml-primary") + " " +
+      '<p class="mml-actions">' + ext(mm, "Open in MapMaker", "mml-btn mml-primary") + " " + (gc ? gc + " " : "") +
       jump(slug, "student-activity", "Student sheet") + " " + jump(slug, "standards", "Standards") + "</p>" +
       quickStart(site, lesson, gc) + "</div>");
 
@@ -343,8 +343,8 @@
     add('<div class="mml">' + anchor(slug, "student-activity") + '<h2>Student activity</h2><p class="mml-prose">This is what students see on the Word sheet. Download it to edit it, print it, or open it in Google Docs. Students need no account or login.</p>' +
       '<p class="mml-actions">' + langs.map(function (l) {
         return '<a class="mml-btn" href="' + sheetPlaceholder(lesson.id, l) + '"' + (l !== "en" ? ' lang="' + l + '"' : "") + ">Download Word (" + esc(langName(site, l)) + ")</a>";
-      }).join(" ") + (gc ? " " + gc : "") + "</p>" +
-      (gc ? '<p class="mml-muted">The Google Classroom button shares the MapMaker map with a class. It doesn’t include the Word sheet, which can be attached in Classroom.</p>' : "") +
+      }).join(" ") + "</p>" +
+      (gc ? '<p class="mml-muted">The Share to Google Classroom button at the top of the page shares the MapMaker map with a class. It doesn’t include the Word sheet, which can be attached in Classroom.</p>' : "") +
       sheetPreview(site, lesson, "en") +
       langs.filter(function (l) { return l !== "en" && lesson.languages[l].note; }).map(function (l) {
         return '<p class="mml-muted">' + esc(langName(site, l)) + ": " + esc(lesson.languages[l].note) + "</p>";
