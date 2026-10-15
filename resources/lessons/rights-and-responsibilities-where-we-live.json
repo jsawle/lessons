@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.3",
   "id": "rights-and-responsibilities-where-we-live",
-  "contentVersion": "0.2.0",
+  "contentVersion": "0.2.1",
   "status": "draft",
   "updated": "2026-10-15",
   "reviewed": null,
@@ -33,7 +33,7 @@
       },
       {
         "name": "National Register of Historic Places",
-        "shows": "Places on the National Register as diamonds colored by type: building, structure, district, site or object. They appear when you zoom in. Each pop-up gives the address, city, county and state, and a link to the National Archives record, but not the place's name (see Known issues).",
+        "shows": "Places on the National Register as diamonds colored by type: building, structure, district, site or object. They appear when you zoom in. Each pop-up gives the address, city, county and state, and a link to the National Archives record, but not the place's name; read the name from the basemap label or the National Archives record.",
         "source": "National Park Service (MapMaker catalogue)",
         "offAtStart": true
       }
@@ -135,7 +135,7 @@
         },
         "lines": 3,
         "answer": {
-          "where": "National Register of Historic Places layer, on at close zoom. Pop-up: address, city, county, state, resource type and a National Archive Information link; the place name is missing (see Known issues). Legend: diamond colors for building, structure, district, site and object. If nothing is listed nearby, zoom out to the nearest town.",
+          "where": "National Register of Historic Places layer, on at close zoom. Pop-up: address, city, county, state, resource type and a National Archive Information link; the place name is not shown, so students read it from the basemap label or the National Archives record. Legend: diamond colors for building, structure, district, site and object. If nothing is listed nearby, zoom out to the nearest town.",
           "accept": "Two places identified by address or name, with a sensible link for any public building: a courthouse with jury service and a fair trial; a post office or newspaper building with sharing news and ideas; a school or library with staying informed. Accept \"neither is a public building\" with a reason."
         }
       }
@@ -169,7 +169,7 @@
     }
   },
   "teacherNotes": {
-    "beforeClass": "Open the map and zoom to your town to check the basemap labels its public buildings. National Register of Historic Places is off at the start. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet separately). No account or login is needed. Sketches are not saved, so students finish in one session or take a screenshot. Read the answers on the teacher page and the known issue with the historic places pop-up.",
+    "beforeClass": "Open the map and zoom to your town to check the basemap labels its public buildings. National Register of Historic Places is off at the start. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet separately). No account or login is needed. Sketches are not saved, so students finish in one session or take a screenshot. Read the answers on the teacher page.",
     "misconceptions": [
       {
         "claim": "The Bill of Rights lists all of a citizen's rights.",

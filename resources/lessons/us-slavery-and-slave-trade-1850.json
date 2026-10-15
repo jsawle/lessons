@@ -2,42 +2,89 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.3",
   "id": "us-slavery-and-slave-trade-1850",
-  "contentVersion": "0.3.0",
+  "contentVersion": "0.3.1",
   "status": "draft",
   "updated": "2026-10-15",
   "reviewed": null,
-
   "title": "US Slavery and Slave Trade, 1850",
-  "sheetTitle": { "es": "La esclavitud y la trata de esclavos en EE. UU., 1850" },
+  "sheetTitle": {
+    "es": "La esclavitud y la trata de esclavos en EE. UU., 1850"
+  },
   "summary": "Compare free and slave states in 1850, follow the routes of the internal slave trade south, and trace the Underground Railroad north to freedom.",
   "subject": "History",
   "course": "US History",
   "unit": "Reform and the road to war",
-  "alsoFits": ["Sectional economies: industry, cities and immigration"],
+  "alsoFits": [
+    "Sectional economies: industry, cities and immigration"
+  ],
   "grade": "8",
   "time": "45 minutes, or 10–15 per question",
   "studentLogin": "Not needed to explore the map",
-
   "map": {
     "webmapId": "819f60a5a3344d958d24f505849abaaa",
-    "bookmarks": ["Illinois, Indiana, and Ohio"],
+    "bookmarks": [
+      "Illinois, Indiana, and Ohio"
+    ],
     "layers": [
-      { "name": "US States and Territories 1850", "shows": "States and territories in four legend groups: Free states; Free states and territories by compromise; Slave states; and Slave states and territories by compromise. Each pop-up is titled with the state's name and says whether it allowed slavery and from what year.", "source": "Traced from a map in Harper's Atlas of American History (1920), as the pop-ups say" },
-      { "name": "Internal Routes of the US Slave Trade", "shows": "Solid black lines along which enslaved people were forced to move within the United States, with no arrows; dashed and dotted lines in the same layer are sea routes and the voyages of the Amistad and the Creole. No pop-up.", "source": "Traced from Harper's Atlas of American History (1920)" },
-      { "name": "Underground Railroad Approximate Routes", "shows": "Approximate routes that freedom seekers took north to the free states and Canada, as orange lines. No pop-up.", "source": "Traced from Harper's Atlas of American History (1920), an early-1900s interpretation" },
-      { "name": "Cities", "shows": "69 towns and cities along the Underground Railroad routes, from Virginia and Kentucky to Ontario and Quebec, as dots with name labels that appear when zoomed in. No pop-up.", "source": "Traced from Harper's Atlas of American History (1920)" },
-      { "name": "Missouri Compromise Line", "shows": "The line at 36°30′ North set in 1820. Its pop-up gives the line's name, the year it was enacted and a note on what it divided.", "source": "Not stated on the layer (hosted by the MapMaker team)" },
-      { "name": "US 1850 Original Map", "shows": "A scan of the 1850 map that the other layers were traced from. No pop-up.", "source": "Harper's Atlas of American History (1920)", "offAtStart": true }
+      {
+        "name": "US States and Territories 1850",
+        "shows": "States and territories in four legend groups: Free states; Free states and territories by compromise; Slave states; and Slave states and territories by compromise. Each pop-up is titled with the state's name and says whether it allowed slavery and from what year.",
+        "source": "Traced from a map in Harper's Atlas of American History (1920), as the pop-ups say"
+      },
+      {
+        "name": "Internal Routes of the US Slave Trade",
+        "shows": "Solid black lines along which enslaved people were forced to move within the United States, with no arrows; dashed and dotted lines in the same layer are sea routes and the voyages of the Amistad and the Creole. No pop-up.",
+        "source": "Traced from Harper's Atlas of American History (1920)"
+      },
+      {
+        "name": "Underground Railroad Approximate Routes",
+        "shows": "Approximate routes that freedom seekers took north to the free states and Canada, as orange lines. No pop-up.",
+        "source": "Traced from Harper's Atlas of American History (1920), an early-1900s interpretation"
+      },
+      {
+        "name": "Cities",
+        "shows": "69 towns and cities along the Underground Railroad routes, from Virginia and Kentucky to Ontario and Quebec, as dots with name labels that appear when zoomed in. No pop-up.",
+        "source": "Traced from Harper's Atlas of American History (1920)"
+      },
+      {
+        "name": "Missouri Compromise Line",
+        "shows": "The line at 36°30′ North set in 1820. Its pop-up gives the line's name, the year it was enacted and a note on what it divided.",
+        "source": "Not stated on the layer (hosted by the MapMaker team)"
+      },
+      {
+        "name": "US 1850 Original Map",
+        "shows": "A scan of the 1850 map that the other layers were traced from. No pop-up.",
+        "source": "Harper's Atlas of American History (1920)",
+        "offAtStart": true
+      }
     ]
   },
-
   "knownIssues": [
-    { "where": "US States and Territories 1850 pop-up", "note": "The line \"It is recorded on the primary source as:\" shows a code number (for example 11) instead of the map's own wording.", "status": "open", "date": "2026-10-12" },
-    { "where": "US States and Territories 1850", "note": "The layer has separate West Virginia and Oklahoma features. In 1850 West Virginia was part of Virginia (it became a state in 1863; its pop-up year is 1863), and Oklahoma was not a state or territory.", "status": "open", "date": "2026-10-12" },
-    { "where": "US States and Territories 1850", "note": "Missouri is drawn twice, as two overlapping features: once under Slave states and once under Slave states and territories by compromise. Clicking it gives a pop-up that says 1 of 2.", "status": "open", "date": "2026-10-15" },
-    { "where": "US States and Territories 1850 pop-up", "note": "Some pop-up years can puzzle students: Illinois gives 1848 (its new constitution, though it entered as a free state in 1818), Maine gives 1783 (when it was still part of Massachusetts), and New Jersey has no year, so its pop-up reads oddly.", "status": "open", "date": "2026-10-15" }
+    {
+      "where": "US States and Territories 1850 pop-up",
+      "note": "The line \"It is recorded on the primary source as:\" shows a code number (for example 11) instead of the map's own wording.",
+      "status": "open",
+      "date": "2026-10-12"
+    },
+    {
+      "where": "US States and Territories 1850",
+      "note": "The layer has separate West Virginia and Oklahoma features. In 1850 West Virginia was part of Virginia (it became a state in 1863; its pop-up year is 1863), and Oklahoma was not a state or territory.",
+      "status": "open",
+      "date": "2026-10-12"
+    },
+    {
+      "where": "US States and Territories 1850",
+      "note": "Missouri is drawn twice, as two overlapping features: once under Slave states and once under Slave states and territories by compromise. Clicking it gives a pop-up that says 1 of 2.",
+      "status": "open",
+      "date": "2026-10-15"
+    },
+    {
+      "where": "US States and Territories 1850 pop-up",
+      "note": "Some pop-up years can puzzle students: Illinois gives 1848 (its new constitution, though it entered as a free state in 1818), Maine gives 1783 (when it was still part of Massachusetts), and New Jersey has no year, so its pop-up reads oddly.",
+      "status": "open",
+      "date": "2026-10-15"
+    }
   ],
-
   "inquiry": {
     "compellingQuestion": {
       "en": "How did slavery divide the United States by 1850?",
@@ -46,9 +93,16 @@
     "questions": [
       {
         "id": "q1",
-        "title": { "en": "Free states and slave states", "es": "Estados libres y estados esclavistas" },
+        "title": {
+          "en": "Free states and slave states",
+          "es": "Estados libres y estados esclavistas"
+        },
         "task": "Open the legend for US States and Territories 1850 and count the states in the Free states group and the Slave states group (click a state to read its name in the pop-up). Then click two states to read when each became free or slave. Where is the dividing line in the East?",
-        "tools": ["legend", "popups", "zoom"],
+        "tools": [
+          "legend",
+          "popups",
+          "zoom"
+        ],
         "student": {
           "en": "Open the legend and find the four groups for US States and Territories 1850. Count the states shaded as Free states and as Slave states; click a state to read its name. Then click two states to read what year each became free or slave. Where is the line between free and slave states in the East?",
           "es": "Abre la leyenda y busca los cuatro grupos de la capa US States and Territories 1850 (estados y territorios de EE. UU. en 1850). Cuenta los estados sombreados como Free states (estados libres) y como Slave states (estados esclavistas); haz clic en un estado para leer su nombre. Luego haz clic en dos estados para leer en qué año cada uno se volvió libre o esclavista. ¿Dónde está la línea entre estados libres y esclavistas en el Este?"
@@ -58,12 +112,27 @@
           "where": "Legend for US States and Territories 1850: four groups. Following the legend shades, the Free states group has 14 states; Iowa and California sit in the paler Free states and territories by compromise group. The Slave states group has 15 as drawn, counting West Virginia; Texas sits in the paler Slave states and territories by compromise group, and Missouri is drawn twice (once in each slave group), so accept 14 to 16 free and 14 to 16 slave with reasons. Pop-up title gives the state name; the first line gives the year (for example Pennsylvania 1780, Virginia 1788). In the East the shades change along the southern border of Pennsylvania and then the Ohio River.",
           "table": {
             "caption": "States by legend group on the map, 1850",
-            "columns": ["Legend group", "States as drawn"],
+            "columns": [
+              "Legend group",
+              "States as drawn"
+            ],
             "rows": [
-              ["Free states (14)", "Maine, New Hampshire, Vermont, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, Pennsylvania, Ohio, Indiana, Illinois, Michigan, Wisconsin"],
-              ["Free states and territories by compromise", "Iowa and California, plus Oregon, Minnesota and the unorganized territories"],
-              ["Slave states (15 as drawn)", "Delaware, Maryland, Virginia, West Virginia (part of Virginia in 1850), North Carolina, South Carolina, Georgia, Florida, Alabama, Mississippi, Louisiana, Arkansas, Tennessee, Kentucky, Missouri"],
-              ["Slave states and territories by compromise", "Texas and Missouri (drawn a second time), plus New Mexico and Utah territories and the Indian Territory (drawn as Oklahoma)"]
+              [
+                "Free states (14)",
+                "Maine, New Hampshire, Vermont, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, Pennsylvania, Ohio, Indiana, Illinois, Michigan, Wisconsin"
+              ],
+              [
+                "Free states and territories by compromise",
+                "Iowa and California, plus Oregon, Minnesota and the unorganized territories"
+              ],
+              [
+                "Slave states (15 as drawn)",
+                "Delaware, Maryland, Virginia, West Virginia (part of Virginia in 1850), North Carolina, South Carolina, Georgia, Florida, Alabama, Mississippi, Louisiana, Arkansas, Tennessee, Kentucky, Missouri"
+              ],
+              [
+                "Slave states and territories by compromise",
+                "Texas and Missouri (drawn a second time), plus New Mexico and Utah territories and the Indian Territory (drawn as Oklahoma)"
+              ]
             ]
           },
           "text": "Historically there were 15 free and 15 slave states in 1850 (Iowa and California free, Texas slave). The legend groups split them by how they became free or slave, so the counts students get depend on which groups they add together; the reasoning matters more than the number."
@@ -71,9 +140,16 @@
       },
       {
         "id": "q2",
-        "title": { "en": "The Missouri Compromise", "es": "El Compromiso de Misuri" },
+        "title": {
+          "en": "The Missouri Compromise",
+          "es": "El Compromiso de Misuri"
+        },
         "task": "Find the Missouri Compromise Line (gray dashed) and click it for its pop-up. Which slave state lies mostly north of it, and why does that matter?",
-        "tools": ["zoom", "legend", "popups"],
+        "tools": [
+          "zoom",
+          "legend",
+          "popups"
+        ],
         "student": {
           "en": "Find the Missouri Compromise Line (the gray dashed line) and click it to read its pop-up. What year was it enacted? Slavery was banned north of it in the Louisiana Territory. Which slave state lies mostly north of the line, and why does that matter?",
           "es": "Busca la línea del Compromiso de Misuri (la línea gris discontinua) y haz clic en ella para leer su ventana emergente. ¿En qué año se aprobó? La esclavitud estaba prohibida al norte de ella en el territorio de Luisiana. ¿Qué estado esclavista está mayormente al norte de la línea, y por qué importa?"
@@ -85,9 +161,16 @@
       },
       {
         "id": "q3",
-        "title": { "en": "The internal slave trade", "es": "La trata interna de esclavos" },
+        "title": {
+          "en": "The internal slave trade",
+          "es": "La trata interna de esclavos"
+        },
         "task": "Follow the solid black lines of Internal Routes of the US Slave Trade (turn Underground Railroad Approximate Routes off in Map layers to see them clearly). Click the states where the lines begin and where they come together to read their names. Where do the lines reach the coast? The lines have no arrows, so students infer the direction from the pattern and what they have learned.",
-        "tools": ["layers", "zoom", "popups"],
+        "tools": [
+          "layers",
+          "zoom",
+          "popups"
+        ],
         "student": {
           "en": "In Map layers, turn off Underground Railroad Approximate Routes so the solid black lines of Internal Routes of the US Slave Trade stand out. Click the states where the lines begin and where they come together to read their names. Where do the lines reach the coast? The lines have no arrows: from the pattern and what you have learned, which way were enslaved people forced to move?",
           "es": "En las capas del mapa (Map layers), desactiva Underground Railroad Approximate Routes (rutas aproximadas del Ferrocarril Subterráneo) para que resalten las líneas negras continuas de la capa Internal Routes of the US Slave Trade (rutas internas de la trata de esclavos). Haz clic en los estados donde empiezan las líneas y donde se juntan para leer sus nombres. ¿Dónde llegan las líneas a la costa? Las líneas no tienen flechas: según el patrón y lo que has aprendido, ¿en qué dirección fueron obligadas a moverse las personas esclavizadas?"
@@ -99,9 +182,16 @@
       },
       {
         "id": "q4",
-        "title": { "en": "Routes to freedom", "es": "Rutas hacia la libertad" },
+        "title": {
+          "en": "Routes to freedom",
+          "es": "Rutas hacia la libertad"
+        },
         "task": "Open the Illinois, Indiana, and Ohio bookmark and follow the orange Underground Railroad routes north from the Ohio River; the Cities labels appear when zoomed in. Where do they lead, and why do many continue to Canada?",
-        "tools": ["bookmarks", "layers", "zoom"],
+        "tools": [
+          "bookmarks",
+          "layers",
+          "zoom"
+        ],
         "student": {
           "en": "Open the Illinois, Indiana, and Ohio bookmark. Follow the orange Underground Railroad routes north from the Ohio River, and zoom in to read the names of the towns along them. Where do the routes lead? Why do you think many keep going past the free states?",
           "es": "Abre el marcador Illinois, Indiana, and Ohio. Sigue hacia el norte, desde el río Ohio, las rutas anaranjadas del Ferrocarril Subterráneo, y acércate para leer los nombres de las ciudades a lo largo de ellas. ¿A dónde llevan las rutas? ¿Por qué crees que muchas siguen más allá de los estados libres?"
@@ -118,10 +208,11 @@
         "en": "Answer the big question using evidence from at least two layers on the map. You can write a paragraph, sketch on the map, or both.",
         "es": "Responde la pregunta central con evidencia de al menos dos capas del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
       },
-      "tools": ["sketch"]
+      "tools": [
+        "sketch"
+      ]
     }
   },
-
   "studentSupport": {
     "beforeYouStart": {
       "en": "By 1850, the Northern states had ended slavery or passed laws to end it, but in the South slavery was legal and growing. More than 3 million people were enslaved in the United States. Each time a new state joined the Union, Congress argued over whether slavery would be allowed there.",
@@ -131,34 +222,66 @@
       "en": "States and territories are shaded brown if they were free and green if they allowed slavery; the paler shades mean free, or slave, because of a compromise. Open the legend to see the four groups. Click a state to read its name and year in the pop-up. A gray dashed line marks the Missouri Compromise Line; click it for its pop-up. Solid black lines are internal routes of the slave trade. They have no arrows. Dashed and dotted lines in the same layer show sea routes and the voyages of two ships, the Amistad and the Creole. Orange lines are approximate Underground Railroad routes. Zoom in to see the towns along them: orange dots in the United States, black dots in Canada.",
       "es": "Los estados y territorios aparecen en tonos marrones si eran libres y en tonos verdes si permitían la esclavitud; los tonos más claros indican que eran libres, o esclavistas, por un compromiso. Abre la leyenda para ver los cuatro grupos. Haz clic en un estado para leer su nombre y su año en la ventana emergente. Una línea gris discontinua marca la línea del Compromiso de Misuri; haz clic en ella para ver su ventana emergente. Las líneas negras continuas son rutas internas de la trata de esclavos. No tienen flechas. Las líneas discontinuas y punteadas de la misma capa muestran rutas marítimas y los viajes de dos barcos, el Amistad y el Creole. Las líneas anaranjadas son rutas aproximadas del Ferrocarril Subterráneo. Acércate para ver las ciudades a lo largo de ellas: puntos anaranjados en Estados Unidos y puntos negros en Canadá."
     },
-    "tips": ["popups"],
+    "tips": [
+      "popups"
+    ],
     "reflection": {
       "en": "What did the map show you about slavery in 1850 that you might not have noticed from reading alone?",
       "es": "¿Qué te mostró el mapa sobre la esclavitud en 1850 que quizá no habrías notado solo con la lectura?"
     }
   },
-
   "teacherNotes": {
-    "beforeClass": "Open the map in MapMaker. Only US 1850 Original Map is off at the start (the scanned source map, useful for comparing with the traced layers); students turn Underground Railroad Approximate Routes off for question 3. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet). Read the answers and the known issues on the teacher page. No account or login is needed. Sketches are not saved.",
+    "beforeClass": "Open the map in MapMaker. Only US 1850 Original Map is off at the start (the scanned source map, useful for comparing with the traced layers); students turn Underground Railroad Approximate Routes off for question 3. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet). Read the answers on the teacher page. No account or login is needed. Sketches are not saved.",
     "misconceptions": [
-      { "claim": "Freedom seekers were safe once they reached a free state.", "response": "After the Fugitive Slave Act of 1850 they could be captured in free states, which is why many routes on the map continue to Canada." },
-      { "claim": "The Underground Railroad was a real railroad.", "response": "The routes on the map are paths people walked, rode or sailed, with help along the way; the name borrowed railroad words." },
-      { "claim": "Every Northern state banned slavery at the same time.", "response": "The pop-ups give a different year for each free state." }
+      {
+        "claim": "Freedom seekers were safe once they reached a free state.",
+        "response": "After the Fugitive Slave Act of 1850 they could be captured in free states, which is why many routes on the map continue to Canada."
+      },
+      {
+        "claim": "The Underground Railroad was a real railroad.",
+        "response": "The routes on the map are paths people walked, rode or sailed, with help along the way; the name borrowed railroad words."
+      },
+      {
+        "claim": "Every Northern state banned slavery at the same time.",
+        "response": "The pop-ups give a different year for each free state."
+      }
     ],
-    "keyWords": ["free state", "slave state", "Missouri Compromise", "Fugitive Slave Act", "Underground Railroad", "freedom seeker", "abolition"]
+    "keyWords": [
+      "free state",
+      "slave state",
+      "Missouri Compromise",
+      "Fugitive Slave Act",
+      "Underground Railroad",
+      "freedom seeker",
+      "abolition"
+    ]
   },
-
   "standards": [
-    { "code": "FL SS.8.A.5.2", "text": "Analyze the role of slavery in the development of sectional conflict" },
-    { "code": "TX 8.10(A)", "text": "Locate places and regions directly related to major eras and turning points in the United States during the 17th, 18th, and 19th centuries" },
-    { "code": "C3 D2.Geo.2.6-8", "text": "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions, and changes in their environmental characteristics" },
-    { "code": "C3 D2.His.14.6-8", "text": "Explain multiple causes and effects of events and developments in the past" }
+    {
+      "code": "FL SS.8.A.5.2",
+      "text": "Analyze the role of slavery in the development of sectional conflict"
+    },
+    {
+      "code": "TX 8.10(A)",
+      "text": "Locate places and regions directly related to major eras and turning points in the United States during the 17th, 18th, and 19th centuries"
+    },
+    {
+      "code": "C3 D2.Geo.2.6-8",
+      "text": "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions, and changes in their environmental characteristics"
+    },
+    {
+      "code": "C3 D2.His.14.6-8",
+      "text": "Explain multiple causes and effects of events and developments in the past"
+    }
   ],
-
   "languages": {
-    "en": { "status": "final" },
-    "es": { "status": "draft", "note": "Spanish draft for review by a native speaker. Layer names stay in English, as they appear in MapMaker." }
+    "en": {
+      "status": "final"
+    },
+    "es": {
+      "status": "draft",
+      "note": "Spanish draft for review by a native speaker. Layer names stay in English, as they appear in MapMaker."
+    }
   },
-
   "licence": "Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide."
 }

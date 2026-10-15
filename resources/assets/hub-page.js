@@ -1,6 +1,7 @@
-/* MapMaker resource pages: Hub page builder v2.0 (a teacher page per lesson that holds the answers; no answers, status
-   or months on the lesson page; lessons grouped by unit; standards in the hero; a Vera link and an AI prompt on each
-   lesson page, with Vera embedded on the Lessons page only; one Share to Google Classroom button).
+/* MapMaker resource pages: Hub page builder v2.1 (a teacher page per lesson that holds the answers; no answers, status,
+   months or known-issue notes on the lesson page; lessons grouped by unit; standards in the hero; a Vera link and the
+   AI prompt in a frame card with a copy button on each lesson page, with Vera embedded on the Lessons page only; one
+   Share to Google Classroom button).
    Turns lesson files into ArcGIS Hub page layouts: sections of markdown cards that hold plain HTML
    and one <style> block, with no scripts, so the pages work inside Hub. Runs in the browser
    (window.MMRHub, for the Hub preview) and in Node (for the bundle the publishing notebook reads). */
@@ -9,10 +10,11 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "2.0";
+  var VERSION = "2.1";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
+  var PROMPT_HEIGHT = 300; // the prompt page: two buttons and a scrolling text box
 
   /* Tags and attributes the pages use. The checker rejects anything else, so a lesson file can't
      put something into the Hub that Hub's own HTML cleaner might strip or mangle. "id" is only for
@@ -65,8 +67,6 @@
     ".mml .mml-std{list-style:none;padding:0;margin:0;display:inline}",
     ".mml .mml-std li{display:inline;margin:0}",
     ".mml .mml-std li+li::before{content:\" · \";color:#4A4A4A}",
-    ".mml .mml-prompt{border:1px solid #D4D4D4;border-radius:4px;background:#F9F9F9;padding:1em 1.2em;margin:0 0 1em;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9rem;line-height:1.5;max-width:46rem;user-select:all;-webkit-user-select:all}",
-    ".mml .mml-prompt p{margin:0 0 .6em}",
     ".mml .mml-unit{display:block;border:0;font-size:1.3rem;margin:1.2em 0 .4em;padding:0 0 .2em;border-bottom:2px solid #D4D4D4}",
     ".mml .mml-lessons h3{display:block;border:0;font-size:1.2rem;margin:.1em 0 .3em;padding:0}",
     ".mml-ans{border:1px solid #D4D4D4;border-radius:4px;padding:.85em 1.1em .5em;margin:0 0 .9em}",
@@ -104,7 +104,9 @@
     ".mml-card-title{display:block;font-weight:700;font-size:1.05rem;color:#00619B;text-decoration:underline}",
     ".mml-card-text{display:block;color:#4A4A4A;font-size:.95rem}",
     ".mml .mml-lessons{list-style:none;padding:0;margin:0 0 1em;display:flex;flex-wrap:wrap;gap:1em}",
-    ".mml-lessons>li{flex:1 1 18rem;min-width:0;border:1px solid #D4D4D4;border-top:4px solid #007AC2;border-radius:4px;padding:.9em 1.1em .4em;margin:0}",
+    ".mml-lessons>li{flex:1 1 18rem;max-width:calc(50% - .5em);min-width:0;border:1px solid #D4D4D4;border-top:4px solid #007AC2;border-radius:4px;padding:.9em 1.1em .4em;margin:0;display:flex;flex-direction:column}",
+    ".mml-lessons>li>p:nth-last-child(2){flex:1}",
+    "@media (max-width:640px){.mml-lessons>li{max-width:none}}",
     ".mml .mml-lessons h2{display:block;border:0;font-size:1.25rem;margin:.1em 0 .3em;padding:0}",
     ".mml-foot{background:#004874;color:#fff;border-radius:4px;padding:20px 24px 16px;font-size:.92rem}",
     ".mml.mml-foot p{color:#fff}",
@@ -252,7 +254,7 @@
       off.length ? "In Map layers, note that " + off.map(esc).join(" and ") + (off.length > 1 ? " are" : " is") + " off when the map opens; students turn " + (off.length > 1 ? "them" : "it") + " on when a question asks." : "Check the legend: it changes with the zoom level and with which layers are on.",
       "Download the Word student sheet (English or Spanish) under Student activity, or print it.",
       gc ? "Share the map with your class with the Google Classroom button, and attach the sheet in Classroom; the button shares the map only." : "Share the map link with your class and hand out the sheet.",
-      "Read the answers and what to accept on the teacher page. Share the lesson page or the map with students, not the teacher page."
+      "Read the answers and what to accept in the teacher notes (linked at the foot of this page). Share the lesson page or the map with students, not the teacher notes."
     ];
     return '<div class="mml-quick"><h2>Five minutes before class</h2><ol>' + steps.map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ol></div>";
   }
@@ -296,6 +298,7 @@
   function footer(site, lesson) {
     var repo = (hubHome(site).repoUrl || "").replace(/\/+$/, "");
     return '<div class="mml mml-foot"><h2>About this page</h2>' +
+      (lesson && lesson.kindOfPage !== "teacher" ? '<p>For teachers: <a href="/pages/' + esc(teacherSlug(lesson)) + '">notes and answers for this lesson</a>.</p>' : "") +
       (lesson ? "<p>" + t(lesson.licence) + " Map data: credited to each source under About this map.</p>" : "") +
       (lesson ? classroomNotice(site, lesson) : "") +
       "<p>This page is built from " + (lesson ? "one lesson file" : "the lesson files") + (repo ? ": " + ext(repo + (lesson ? "/blob/main/resources/lessons/" + lesson.id + ".json" : "/tree/main/resources/lessons"), lesson ? "<code>" + esc(lesson.id) + ".json</code>" : "resources/lessons") : "") +
@@ -314,24 +317,20 @@
     add("<style>" + CSS + classroomCss(site) + "</style>" + '<div class="mml mml-hero"><p class="mml-crumbs"><a href="' + lessonsPath(site) + '">Lessons</a> › ' + esc(lesson.course) + " › " + esc(lesson.unit) + "</p>" +
       "<h1>" + esc(lesson.title) + '</h1><p class="mml-summary">' + t(lesson.summary) + "</p>" + factsList(site, lesson) +
       '<p class="mml-actions">' + ext(mm, "Open in MapMaker", "mml-btn mml-primary") + " " +
-      jump(slug, "student-activity", "Student sheet") + ' <a class="mml-btn" href="/pages/' + esc(teacherSlug(lesson)) + '">Teacher notes and answers</a></p>' +
+      jump(slug, "student-activity", "Student sheet") + " " + jump(slug, "standards", "Standards") + "</p>" +
       quickStart(site, lesson, gc) + "</div>");
 
-    // About this map
-    var issues = lesson.knownIssues || [];
+    // About this map (the team's known-issues notes stay in the lesson file and the lab mock-up, not here)
     add('<div class="mml"><h2>About this map</h2><p class="mml-prose">Each layer names its source, so you can check where the information comes from.</p>' +
       table("Map layers and sources", ["Layer", "What it shows", "Source"], lesson.map.layers.map(function (l) {
         return [esc(l.name) + (l.offAtStart ? ' <span class="mml-muted">(off when the map opens)</span>' : ""), t(l.shows), t(l.source)];
       }), true) +
-      "<p><strong>Bookmarks:</strong> " + ((lesson.map.bookmarks || []).length ? lesson.map.bookmarks.map(esc).join("; ") : "none") + ".</p>" +
-      "<h3>Things to know about this map</h3>" + (issues.length ? "<ul>" + issues.map(function (k) {
-        return '<li><span class="mml-chip ' + (k.status === "fixed" ? "mml-ok" : "mml-open") + '">' + (k.status === "fixed" ? "Fixed " : "Open ") + esc(k.date) + "</span> <strong>" + esc(k.where) + ":</strong> " + t(k.note) + "</li>";
-      }).join("") + "</ul>" : "<p>Nothing to report.</p>") + "</div>");
+      "<p><strong>Bookmarks:</strong> " + ((lesson.map.bookmarks || []).length ? lesson.map.bookmarks.map(esc).join("; ") : "none") + ".</p></div>");
 
     // Inquiry (no answers here; they are on the teacher page)
     var inq = lesson.inquiry;
     add('<div class="mml"><h2>Inquiry</h2><div class="mml-cq"><span class="mml-k">Compelling question</span><p class="mml-q">' + t(inq.compellingQuestion.en) + "</p></div>" +
-      '<p class="mml-prose">Pick the questions that suit your class. Each one is answered from the map, lists the MapMaker tools it uses, and links to how-to videos. Answers and what to accept are on the <a href="/pages/' + esc(teacherSlug(lesson)) + '">teacher page</a>.</p><ol class="mml-qs">' +
+      '<p class="mml-prose">Pick the questions that suit your class. Each one is answered from the map, lists the MapMaker tools it uses, and links to how-to videos. Answers and what to accept are in the teacher notes, linked at the foot of this page.</p><ol class="mml-qs">' +
       inq.questions.map(function (q) {
         return "<li><h3>" + t(q.title.en) + "</h3><p>" + t(q.task) + '</p><p class="mml-tools"><span class="mml-muted">Tools:</span> ' + toolLinks(site, q.tools) + "</p></li>";
       }).join("") + "</ol><h3>Answering the compelling question</h3><p class=\"mml-prose\">" + t(inq.final.teacher) + "</p>" +
@@ -357,17 +356,19 @@
         return '<li><a href="' + esc(h.url) + '" target="_blank" rel="noopener"><span class="mml-card-title">' + esc(h.title) + '</span><span class="mml-card-text">For: ' + esc(h.covers.join(", ")) + "</span>" + NEW_TAB + "</a></li>";
       }).join("") + "</ul></div>");
 
-    // Make your own questions: a link to Vera with the lesson pre-filled, and a prompt for the teacher's own AI tool.
-    var vUrl = MMR.veraUrl(site, lesson), ai = site.aiPrompt || {};
-    add('<div class="mml"><h2>Make your own questions</h2>' +
+    // Make your own questions: a link to Vera with the lesson pre-filled, and the prompt for the teacher's own AI tool
+    // in a frame card (prompt.html on GitHub Pages, which has a copy button), so the page stays short.
+    var vUrl = MMR.veraUrl(site, lesson), ai = site.aiPrompt || {}, pUrl = MMR.promptUrl(site, lesson);
+    var own = [mdCard(slug + ":" + n + ":intro", '<div class="mml"><h2>Make your own questions</h2>' +
       (vUrl ? '<h3>Ask Vera</h3><p class="mml-prose">Vera, the Support Hub’s AI assistant, has this lesson’s map, bookmarks, layers and questions, but not the answers. Open her with this lesson already named, then ask for easier or harder questions, a short quiz, questions for your own state’s standards, or questions in another language.</p>' +
         '<p class="mml-actions">' + ext(vUrl, "Ask Vera about this lesson", "mml-btn") + "</p>" : "") +
-      "<h3>" + esc(ai.label || "Prompt for your own AI") + '</h3><p class="mml-prose">If your school uses a different AI tool, copy everything in the box and paste it in, then add what you want. The prompt lists this map’s layers, pop-ups and bookmarks and tells the tool not to invent any, so its questions stay answerable in MapMaker.</p>' +
-      '<div class="mml-prompt" lang="en">' + MMR.aiPrompt(site, lesson).split("\n").map(function (line) { return "<p>" + (line.trim() ? esc(line) : "&nbsp;") + "</p>"; }).join("") + "</div>" +
-      '<p class="mml-prose mml-muted">Questions from Vera or another AI tool aren’t reviewed like this lesson. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem.</p></div>');
+      "<h3>" + esc(ai.label || "Prompt for your own AI") + '</h3><p class="mml-prose">If your school uses a different AI tool, copy the prompt below and paste it in, then add what you want. It lists this map’s layers, pop-ups and bookmarks and tells the tool not to invent any, so its questions stay answerable in MapMaker.</p></div>')];
+    if (pUrl) own.push(frameCard(slug + ":" + n + ":prompt", pUrl, PROMPT_HEIGHT, (ai.label || "Prompt for your own AI") + ": " + lesson.title));
+    own.push(mdCard(slug + ":" + n, '<div class="mml"><p class="mml-prose mml-muted">' + (pUrl ? "" : "The prompt page isn’t set up (aiPrompt.pageUrl in site.json). ") + 'Questions from Vera or another AI tool aren’t reviewed like this lesson. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem.</p></div>'));
+    S.push(section(own)); n++;
 
     // Report a problem
-    add('<div class="mml"><h2>Report a problem</h2><p class="mml-prose">Found a mistake on the map, in the questions or on the student sheet? Tell the MapMaker team. Confirmed problems are listed under Things to know about this map until they’re fixed.</p>' +
+    add('<div class="mml"><h2>Report a problem</h2><p class="mml-prose">Found a mistake on the map, in the questions or on the student sheet? Tell the MapMaker team. We check every report and fix the map or the lesson.</p>' +
       '<p class="mml-actions">' + ext(MMR.hubUrl(site, site.hub.feedbackPath), "Report a problem", "mml-btn") + "</p></div>");
 
     add(footer(site, lesson));
@@ -402,7 +403,7 @@
       }).join("") + "</ul>" : "") +
       '<h2>Key words</h2><ul class="mml-words">' + tn.keyWords.map(function (k) { return "<li>" + esc(k) + "</li>"; }).join("") + "</ul>" +
       "<h2>Standards</h2>" + standardsTable(site, lesson) + "</div>");
-    add(footer(site, lesson));
+    add(footer(site, Object.assign({}, lesson, { kindOfPage: "teacher" })));
     return { slug: slug, kind: "teacher", lessonId: lesson.id, title: "Teacher notes: " + lesson.title, summary: "Answers, what to accept, common misunderstandings and key words for the MapMaker lesson " + MMR.plain(lesson.title) + ". For teachers.",
       tags: ["MapMaker", "Teacher notes", lesson.course, "Grade " + lesson.grade, lesson.unit], contentVersion: lesson.contentVersion,
       layout: { sections: S } };
@@ -426,7 +427,7 @@
       groups.forEach(function (u) {
         body += '<h2 class="mml-unit">' + esc(u) + '</h2><ul class="mml-lessons">' + inCourse.filter(function (l) { return l.unit === u; }).map(function (l) {
           return '<li><h3><a href="/pages/' + esc(l.id) + '">' + esc(l.title) + "</a></h3>" +
-            '<p class="mml-muted">Grade ' + esc(l.grade) + " · " + esc(l.time) + ((l.alsoFits || []).length ? " · also fits: " + l.alsoFits.map(esc).join("; ") : "") + "</p><p>" + t(l.summary) + '</p><p><a href="/pages/' + esc(teacherSlug(l)) + '">Teacher notes and answers</a></p></li>';
+            '<p class="mml-muted">Grade ' + esc(l.grade) + " · " + esc(l.time) + ((l.alsoFits || []).length ? " · also fits: " + l.alsoFits.map(esc).join("; ") : "") + "</p><p>" + t(l.summary) + '</p><p class="mml-muted">For teachers: <a href="/pages/' + esc(teacherSlug(l)) + '">notes and answers</a></p></li>';
         }).join("") + "</ul>";
       });
       var other = inCourse.filter(function (l) { return units.indexOf(l.unit) < 0; });

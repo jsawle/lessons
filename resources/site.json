@@ -1,15 +1,15 @@
 {
  "app": {
   "name": "MapMaker resource pages (lab)",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "parts": {
-   "Page renderer": "2.0",
+   "Page renderer": "2.1",
    "Word sheet builder": "1.3",
    "Lesson file format": "1.3",
    "Checker": "1.3",
    "Vera knowledge builder": "1.2",
    "AI prompt builder": "1.0",
-   "Hub page builder": "2.0"
+   "Hub page builder": "2.1"
   }
  },
  "hubDemo": {
@@ -223,6 +223,7 @@
  "aiPrompt": {
   "about": "Prompt teachers can paste into the AI tool their school allows. The lesson's map, layers, bookmarks and questions are added after these rules, from the lesson file, so the prompt never names a layer the map doesn't have.",
   "label": "Prompt for your own AI",
+  "pageUrl": "https://jsawle.github.io/lessons/resources/prompt.html",
   "rules": [
    "You are helping a teacher make classroom questions for a National Geographic MapMaker lesson. The map, its layers, what each pop-up shows, its bookmarks and the questions already written are listed below.",
    "Use only the layers, pop-up contents and bookmarks listed. Do not invent layers, tools, data or map features. If a question would need information this map does not show, say so instead of inventing it.",
