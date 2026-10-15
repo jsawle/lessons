@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.4",
   "id": "louisiana-purchase-1803-1806",
-  "contentVersion": "0.3.0",
+  "contentVersion": "0.3.1",
   "status": "draft",
   "updated": "2026-10-15",
   "reviewed": null,
@@ -228,7 +228,7 @@
     }
   },
   "teacherNotes": {
-    "beforeClass": "Open the map in MapMaker: United States Watersheds and Biomes are off at the start; the territories, trail and campsites are on. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet). Read the answers on the teacher page. The basemap has no place names, so students may need help finding Pittsburgh and New Orleans. No account or login is needed. Sketches are not saved.",
+    "beforeClass": "United States Watersheds and Biomes are off when the map opens; the territories, trail and campsites are on. The basemap has no place names, so students may need help finding Pittsburgh and New Orleans. The trail and campsite layers have no pop-ups.",
     "misconceptions": [
       {
         "claim": "The United States bought the land from the people who lived there.",

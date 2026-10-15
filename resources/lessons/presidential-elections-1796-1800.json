@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.4",
   "id": "presidential-elections-1796-1800",
-  "contentVersion": "0.3.0",
+  "contentVersion": "0.3.1",
   "status": "draft",
   "updated": "2026-10-15",
   "reviewed": null,
@@ -211,7 +211,7 @@
     }
   },
   "teacherNotes": {
-    "beforeClass": "Open the map in MapMaker: Election of 1800 is off at the start (with both elections on, the pies overlap); the 1796 and Supreme Court layers are on. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet). Read the answers on the teacher page. No account or login is needed. Sketches are not saved, so students who sketch for the final task should screenshot or describe them.",
+    "beforeClass": "When the map opens, Election of 1796 and the Supreme Court layer are on and Election of 1800 is off, because the two sets of pie charts overlap. Students switch between the two elections in Map layers for questions 2 and 3.",
     "misconceptions": [
       {
         "claim": "Voters chose the president directly.",

@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.4",
   "id": "roads-trails-and-rails-west",
-  "contentVersion": "0.4.0",
+  "contentVersion": "0.4.1",
   "status": "draft",
   "updated": "2026-10-15",
   "reviewed": null,
@@ -267,7 +267,7 @@
     }
   },
   "teacherNotes": {
-    "beforeClass": "Open the map in MapMaker. The Railroads group and Indigenous Territories are off at the start; students turn them on in Map layers for questions 3 and 4. There are no bookmarks, so students zoom and pan. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet). Read the answers on the teacher page. No account or login is needed. Sketches are not saved.",
+    "beforeClass": "The Railroads group and Indigenous Territories are off when the map opens; students turn them on in Map layers for questions 3 and 4. There are no bookmarks, so students zoom and pan to the trails themselves.",
     "misconceptions": [
       {
         "claim": "The West was empty before settlers arrived.",

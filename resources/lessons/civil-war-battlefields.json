@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.4",
   "id": "civil-war-battlefields",
-  "contentVersion": "0.4.0",
+  "contentVersion": "0.4.1",
   "status": "draft",
   "updated": "2026-10-15",
   "reviewed": null,
@@ -255,7 +255,7 @@
     }
   },
   "teacherNotes": {
-    "beforeClass": "Open the map in MapMaker: every layer is on at the start and there are no bookmarks, so students zoom to Virginia, Washington, D.C., Maryland and Pennsylvania themselves. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet). Read the answers on the teacher page. No account or login is needed. Sketches are not saved.",
+    "beforeClass": "Every layer is on when the map opens and there are no bookmarks, so students zoom to Virginia, Washington, D.C., Maryland and Pennsylvania themselves. Battle pop-ups give the name and dates; the result is read from the legend.",
     "misconceptions": [
       {
         "claim": "All slave states joined the Confederacy.",

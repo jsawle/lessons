@@ -181,7 +181,7 @@
     kids.push(h2("Map skills"), p(MMR.skills(site, lesson).join(", ") + "."));
     kids.push(h2("Ways to run this lesson"), p(MMR.instructionalModels(site, lesson).join(" · ")));
     if (teach.materials) kids.push(h2("Materials"), p(teach.materials));
-    kids.push(h2("Before class"), p(tn.beforeClass));
+    kids.push(h2("Before class"), new D.Paragraph({ spacing: { after: 100 }, children: [run("About this map: ", { bold: true }), run(tn.beforeClass)] }));
     (teach.prep || []).forEach(function (o) { kids.push(new D.Paragraph({ numbering: { reference: "b", level: 0 }, spacing: { after: 60 }, children: [run(o)] })); });
     if ((lesson.discussion || []).length) { kids.push(h2("Discussion questions")); lesson.discussion.forEach(function (q) { kids.push(new D.Paragraph({ numbering: { reference: "n", level: 0 }, spacing: { after: 60 }, children: [run(q)] })); }); }
     if ((lesson.resources || []).length) {

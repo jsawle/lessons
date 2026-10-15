@@ -174,7 +174,7 @@
       '<h3>Map skills</h3><ul class="vocab">' + MMR.skills(site, lesson).map(function (k) { return "<li>" + esc(k) + "</li>"; }).join("") + "</ul>" +
       '<h3>Ways to run this lesson</h3><ul class="vocab">' + MMR.instructionalModels(site, lesson).map(function (k) { return "<li>" + esc(k) + "</li>"; }).join("") + "</ul>" +
       (teach.materials ? '<div class="prose"><h3>Materials</h3><p>' + esc(teach.materials) + "</p></div>" : "") +
-      '<div class="prose"><h3>Before class</h3><p>' + inline(tn.beforeClass) + "</p>" + ((teach.prep || []).length ? "<ul>" + teach.prep.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") + "</div>" +
+      '<div class="prose"><h3>Before class</h3><p><strong>About this map:</strong> ' + inline(tn.beforeClass) + "</p>" + ((teach.prep || []).length ? "<ul>" + teach.prep.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") + "</div>" +
       ((lesson.discussion || []).length ? '<div class="prose"><h3>Discussion questions</h3><ol>' + lesson.discussion.map(function (q) { return "<li>" + inline(q) + "</li>"; }).join("") + "</ol></div>" : "") +
       (tn.misconceptions && tn.misconceptions.length ? '<h3>Common misunderstandings</h3><ul class="plain">' + tn.misconceptions.map(function (m) {
         return "<li><strong>\u201c" + inline(m.claim) + "\u201d</strong> " + inline(m.response) + "</li>";

@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.4",
   "id": "war-of-1812-and-monroe-doctrine",
-  "contentVersion": "0.3.0",
+  "contentVersion": "0.3.1",
   "status": "draft",
   "updated": "2026-10-15",
   "reviewed": null,
@@ -306,7 +306,7 @@
     }
   },
   "teacherNotes": {
-    "beforeClass": "Open the map in MapMaker: three layers are off at the start (Land Spain gave up in 1819, Adams–Onís Treaty line, 1819 and Latin American independence and US recognition); the boundaries and battles are on. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet). Read the answers on the teacher page. No account or login is needed. Sketches are not saved.",
+    "beforeClass": "When the map opens, the boundaries and battles are on and three layers are off: Land Spain gave up in 1819, Adams–Onís Treaty line, 1819, and Latin American independence and US recognition. Students turn them on for questions 3 and 4.",
     "misconceptions": [
       {
         "claim": "The United States won the War of 1812 and gained land.",

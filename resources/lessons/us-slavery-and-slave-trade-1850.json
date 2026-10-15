@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.4",
   "id": "us-slavery-and-slave-trade-1850",
-  "contentVersion": "0.4.0",
+  "contentVersion": "0.4.1",
   "status": "draft",
   "updated": "2026-10-15",
   "reviewed": null,
@@ -266,7 +266,7 @@
     }
   },
   "teacherNotes": {
-    "beforeClass": "Open the map in MapMaker. Only US 1850 Original Map is off at the start (the scanned source map, useful for comparing with the traced layers); students turn Underground Railroad Approximate Routes off for question 3. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet). Read the answers on the teacher page. No account or login is needed. Sketches are not saved.",
+    "beforeClass": "Only US 1850 Original Map is off when the map opens (the scanned source map, worth comparing with the traced layers). For question 3, students turn Underground Railroad Approximate Routes off so the slave-trade routes stand out.",
     "misconceptions": [
       {
         "claim": "Freedom seekers were safe once they reached a free state.",

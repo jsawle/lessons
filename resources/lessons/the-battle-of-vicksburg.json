@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.4",
   "id": "the-battle-of-vicksburg",
-  "contentVersion": "0.4.0",
+  "contentVersion": "0.4.1",
   "status": "draft",
   "updated": "2026-10-15",
   "reviewed": null,
@@ -244,7 +244,7 @@
     }
   },
   "teacherNotes": {
-    "beforeClass": "Open the map in MapMaker and open The Battle of Vicksburg bookmark. Civil War Battlefields is off at the start; students turn it on for questions 3 and 4. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet). Read the answers on the teacher page. No account or login is needed. Sketches are not saved.",
+    "beforeClass": "Start from The Battle of Vicksburg bookmark. Civil War Battlefields is off when the map opens; students turn it on for questions 3 and 4. Jackson, Mississippi, is a basemap label, not a pin.",
     "misconceptions": [
       {
         "claim": "Grant attacked Vicksburg straight across the river.",

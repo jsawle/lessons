@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.4",
   "id": "we-the-people-1787-1791",
-  "contentVersion": "0.3.0",
+  "contentVersion": "0.3.1",
   "status": "draft",
   "updated": "2026-10-15",
   "reviewed": null,
@@ -416,7 +416,7 @@
     }
   },
   "teacherNotes": {
-    "beforeClass": "Open the map and check it loads. House seats in 1793, House seats today and Ratifying the Constitution are off at the start; the basemap has no place names, so students click for a state's name. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet separately). No account or login is needed; sketches are not saved. Read the answers on the teacher page.",
+    "beforeClass": "When the map opens, only the 1790 population layer is on; students turn on House seats in 1793, House seats today and Ratifying the Constitution as the questions ask. The basemap has no place names, so students click a state to see its name.",
     "misconceptions": [
       {
         "claim": "The three-fifths clause gave enslaved people a share of representation.",
