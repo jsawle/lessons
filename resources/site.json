@@ -1,15 +1,15 @@
 {
  "app": {
   "name": "MapMaker resource pages (lab)",
-  "version": "0.11.3",
+  "version": "0.11.4",
   "parts": {
-   "Page renderer": "2.3",
+   "Page renderer": "2.4",
    "Word sheet builder": "1.3",
    "Lesson file format": "1.3",
    "Checker": "1.3",
    "Vera knowledge builder": "1.2",
    "AI prompt builder": "1.0",
-   "Hub page builder": "2.3"
+   "Hub page builder": "2.4"
   }
  },
  "hubDemo": {
@@ -43,7 +43,7 @@
  "vera": {
   "name": "Vera",
   "url": "https://jsawle.github.io/Vera/vera_canvas_lab.html",
-  "note": "Vera's chat page. Lesson pages link to it with the lesson pre-filled; the embed appears on the Lessons page only."
+  "note": "Vera's chat page. The Lessons page has an Ask Vera button; lesson pages link to it with the lesson pre-filled. No embeds."
  },
  "classroom": {
   "about": "Share to Google Classroom button on each lesson page. It shares the lesson's MapMaker map, never the lesson page, which holds the answer notes. Follows Google's Classroom branding guidelines: approved wording, the official icon on the left (32 to 96 px, unaltered), Roboto Bold, a 20% black shade on the icon on hover, and the trademark notice in the page footer. The button is left out if icon is empty.",

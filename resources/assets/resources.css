@@ -157,3 +157,6 @@ footer.foot thead th{background:#111;color:#ccc}
 .lesson-card:hover,.lesson-card:focus-within{transform:translateY(-4px);box-shadow:0 8px 22px rgba(0,0,0,.14)}
 .lesson-card h3{font-size:1.3rem}
 @media (prefers-reduced-motion:reduce){.lesson-card{transition:none}.lesson-card:hover{transform:none}}
+
+/* 2.4: prominent topic headings on the Lessons page */
+.unit h2{font-size:1.65rem;font-weight:800;color:#004874;border-left:8px solid var(--link);border-bottom:2px solid var(--line);padding:0 0 .3rem .6rem}

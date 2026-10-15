@@ -1,6 +1,6 @@
 /* MapMaker resource pages: Hub page builder v2.1 (a teacher page per lesson that holds the answers; no answers, status,
    months or known-issue notes on the lesson page; lessons grouped by unit; standards in the hero; a Vera link and the
-   AI prompt in a frame card with a copy button on each lesson page, with Vera embedded on the Lessons page only; one
+   AI prompt in a frame card with a copy button on each lesson page, with an Ask Vera button on the Lessons page; one
    Share to Google Classroom button, in the hero).
    Turns lesson files into ArcGIS Hub page layouts: sections of markdown cards that hold plain HTML
    and one <style> block, with no scripts, so the pages work inside Hub. Runs in the browser
@@ -10,7 +10,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "2.3";
+  var VERSION = "2.4";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
@@ -64,7 +64,8 @@
     ".mml .mml-std{list-style:none;padding:0;margin:0;display:inline}",
     ".mml .mml-std li{display:inline;margin:0}",
     ".mml .mml-std li+li::before{content:\" · \";color:#4A4A4A}",
-    ".mml .mml-unit{display:block;border:0;font-size:1.3rem;margin:1.2em 0 .4em;padding:0 0 .2em;border-bottom:2px solid #D4D4D4}",
+    ".mml .mml-unit{display:block;font-size:1.65rem;line-height:1.2;font-weight:800;color:#004874;margin:1.6em 0 .6em;padding:0 0 .3em .6em;border:0;border-left:8px solid #007AC2;border-bottom:2px solid #D4D4D4}",
+    ".mml .mml-unit:first-child{margin-top:.4em}",
     ".mml-ans{border:1px solid #D4D4D4;border-radius:4px;padding:.85em 1.1em .5em;margin:0 0 .9em}",
     ".mml-ans h3{margin:0 0 .4em}",
     ".mml-ans .mml-k{margin-top:.5em}",
@@ -429,16 +430,10 @@
     add('<div class="mml"><h2>In every lesson</h2><ul class="mml-prose"><li>A MapMaker map that opens straight from the page, with each layer’s source listed. No account or login is needed.</li>' +
       "<li>An inquiry with a compelling question and questions you can pick from, each answered from the map.</li><li>A Word student sheet in English and Spanish that you can edit, print or open in Google Docs.</li>" +
       "<li>A separate teacher page, and a Word file, with where to find each answer on the map, what to accept, common misunderstandings, key words and standards.</li><li>Links to how-to videos, a link to Vera, and a prompt for your own AI tool.</li></ul></div>");
-    // Vera lives here, once, rather than on every lesson page.
+    // Vera: one link, not an embed. Her home is the Support Hub; each lesson page links to her with the lesson pre-filled.
     var V = site.vera || {};
-    if (V.url) {
-      S.push(section([
-        mdCard(slug + ":" + n + ":intro", '<div class="mml"><h2>Make your own questions with Vera</h2><p class="mml-prose">Vera, the Support Hub’s AI assistant, has every lesson’s map, bookmarks, layers and questions, but not the answers. Name a lesson and ask for easier or harder questions, a short quiz, questions for your own state’s standards or questions in another language. Each lesson page also has a prompt you can paste into another AI tool.</p></div>'),
-        frameCard(slug + ":" + n + ":vera", V.url + "?embed=1", VERA_HEIGHT, "Chat with Vera about the MapMaker lessons"),
-        mdCard(slug + ":" + n, '<div class="mml"><p class="mml-prose mml-muted">Vera’s questions aren’t reviewed like these lessons. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem on the lesson page.</p></div>')
-      ]));
-      n++;
-    }
+    if (V.url) add('<div class="mml"><h2>Make your own questions</h2><p class="mml-prose">Vera, the Support Hub’s AI assistant, has every lesson’s map, bookmarks, layers and questions, but not the answers. Name a lesson and ask for easier or harder questions, a short quiz, questions for your own state’s standards or questions in another language. Each lesson page also has a prompt you can paste into another AI tool.</p>' +
+      '<p class="mml-actions">' + ext(V.url, "Ask Vera", "mml-btn") + '</p><p class="mml-prose mml-muted">Vera’s questions aren’t reviewed like these lessons. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem on the lesson page.</p></div>');
     add(footer(site, null));
     return { slug: slug, kind: "catalogue", title: H.lessonsTitle || "Lessons", summary: H.lessonsIntro || "", tags: ["MapMaker", "Lessons"], layout: { sections: S } };
   }
