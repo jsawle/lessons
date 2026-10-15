@@ -1,10 +1,10 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.2",
+  "formatVersion": "1.3",
   "id": "rights-and-responsibilities-where-we-live",
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "status": "draft",
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "reviewed": null,
   "title": "Rights and Responsibilities Where We Live",
   "sheetTitle": {
@@ -13,11 +13,13 @@
   "summary": "Map the public places in your own community where people use the rights in the Bill of Rights and carry out their responsibilities as citizens, and find who represents your district in Congress.",
   "subject": "History",
   "course": "US History",
-  "unit": "The Bill of Rights and citizenship",
+  "unit": "Confederation and the Constitution",
+  "alsoFits": [
+    "The early republic"
+  ],
   "grade": "8",
   "time": "45 minutes, or 10–15 per question",
   "studentLogin": "Not needed to explore the map",
-  "planMonth": "November",
   "map": {
     "webmapId": "59467ac7d7c64542acaa6a3e9c19ebf4",
     "bookmarks": [
@@ -26,18 +28,25 @@
     "layers": [
       {
         "name": "Congressional districts (119th Congress)",
-        "shows": "District boundaries for the 119th Congress (2025–2027) as blue outlines. Each pop-up names the district's representative in the House and their party.",
+        "shows": "District boundaries for the 119th Congress (2025–2027) as blue outlines. Each pop-up reads \"[Representative Name] ([Party]) represents [State] Congressional District [number]\".",
         "source": "Esri; U.S. Census Bureau; Clerk of the U.S. House of Representatives (MapMaker catalogue)"
       },
       {
         "name": "National Register of Historic Places",
-        "shows": "Places on the National Register as diamonds colored by type: building, structure, district, site or object. They appear when you zoom in. Each pop-up gives the name and address.",
+        "shows": "Places on the National Register as diamonds colored by type: building, structure, district, site or object. They appear when you zoom in. Each pop-up gives the address, city, county and state, and a link to the National Archives record, but not the place's name (see Known issues).",
         "source": "National Park Service (MapMaker catalogue)",
         "offAtStart": true
       }
     ]
   },
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "date": "2026-10-15",
+      "status": "open",
+      "where": "National Register of Historic Places pop-up",
+      "note": "The pop-up shows the address, city, county and state but not the place's name: the Resource Name field (RESNAME) is hidden, so students see an address without a name. Being raised with the MapMaker team. Until it is fixed, students can follow the pop-up's National Archive Information link for the name, or read the name off the Topographic basemap when the building is labeled."
+    }
+  ],
   "inquiry": {
     "compellingQuestion": {
       "en": "Where in our community do people use their rights and carry out their responsibilities?",
@@ -50,17 +59,19 @@
           "en": "Who represents us?",
           "es": "¿Quién nos representa?"
         },
-        "task": "Zoom to your community and click inside your congressional district to read who represents it and their party. Count your state's districts.",
+        "task": "Students zoom to their town on the Topographic basemap and click inside their congressional district to read the pop-up, which names the representative, their party and the district number. Then they zoom out to the whole state and count the blue-outlined districts.",
         "tools": [
           "zoom",
           "popups"
         ],
         "student": {
-          "en": "Zoom to your community. The blue lines are the boundaries of congressional districts. Click inside your district: who represents it in the House of Representatives, and which party do they belong to? How many districts does your state have?",
-          "es": "Acércate a tu comunidad. Las líneas azules son los límites de los distritos del Congreso. Haz clic dentro de tu distrito: ¿quién lo representa en la Cámara de Representantes y a qué partido pertenece? ¿Cuántos distritos tiene tu estado?"
+          "en": "Zoom to your town; the basemap has place names. The blue lines are the boundaries of congressional districts. Click inside your district: who represents it in the House of Representatives, which party do they belong to, and what is the district's number? Zoom out to see your whole state: how many districts does it have?",
+          "es": "Acércate a tu pueblo o ciudad; el mapa base tiene nombres de lugares. Las líneas azules son los límites de los distritos del Congreso. Haz clic dentro de tu distrito: ¿quién lo representa en la Cámara de Representantes, a qué partido pertenece y qué número tiene el distrito? Aléjate para ver todo tu estado: ¿cuántos distritos tiene?"
         },
+        "lines": 3,
         "answer": {
-          "text": "It depends on where you are. The pop-up names the representative and party for the 119th Congress (2025–2027); a seat that has changed hands since the layer was updated may differ. A state's number of districts equals its House seats after the 2020 census, for example California 52, Texas 38 and Florida 28; six states have one. The map's description lists the states with new district lines for the elections on 3 November 2026."
+          "where": "Congressional districts (119th Congress) pop-up: \"[Representative Name] ([Party]) represents [State] Congressional District [number]\". The district count is the number of blue-outlined areas in the state when zoomed out, which equals the state's House seats after the 2020 census: for example California 52, Texas 38, Florida 28; six states (Alaska, Delaware, North Dakota, South Dakota, Vermont and Wyoming) have one, shown as the whole state.",
+          "accept": "Accept the name and party as the pop-up gives them for the 119th Congress (2025–2027); a seat that has changed hands since the layer was updated may differ. In California, Florida, Louisiana, North Carolina, Ohio, Tennessee, Texas and Utah the district on the November 2026 ballot may differ from the one shown (see the map's description)."
         }
       },
       {
@@ -69,53 +80,19 @@
           "en": "Rights in public places",
           "es": "Derechos en lugares públicos"
         },
-        "task": "Students sketch pins on four public places near the school, such as a courthouse, polling place, city hall, library, newspaper office or place of worship, and label each with a right in the Bill of Rights that people use there.",
+        "task": "Students zoom in on their town until the Topographic basemap labels buildings, pick four public places it shows or that they know (courthouse, city hall, library, place of worship, polling place, newspaper office), sketch a pin on each and label it with a right from the Bill of Rights that people use there. Sketches are not saved, so students finish in one session or take a screenshot.",
         "tools": [
           "zoom",
           "sketch"
         ],
         "student": {
-          "en": "Zoom in near your school. Sketch a pin on four public places, such as a courthouse, a polling place, city hall, a library, a newspaper office or a place of worship. Label each pin with a right from the Bill of Rights that people use there. Choose public places, not homes.",
-          "es": "Acércate a la zona de tu escuela. Coloca un marcador en cuatro lugares públicos, como un tribunal, un centro de votación, el ayuntamiento, una biblioteca, la redacción de un periódico o un lugar de culto. Escribe en cada marcador un derecho de la Carta de Derechos que las personas ejercen allí. Elige lugares públicos, no viviendas."
+          "en": "Zoom in on your town until the basemap shows building names. Find four public places, such as a courthouse, city hall, a library, a place of worship, a polling place or a newspaper office. Use Sketch to put a pin on each one and write next to it a right from the Bill of Rights that people use there. Choose public places, not homes. Sketches are not saved, so finish in one lesson or take a screenshot.",
+          "es": "Acércate a tu pueblo o ciudad hasta que el mapa base muestre nombres de edificios. Encuentra cuatro lugares públicos, como un tribunal, el ayuntamiento, una biblioteca, un lugar de culto, un centro de votación o la redacción de un periódico. Usa Sketch (dibujar) para colocar un marcador en cada uno y escribe junto a él un derecho de la Carta de Derechos que las personas ejercen allí. Elige lugares públicos, no viviendas. Los dibujos no se guardan, así que termina en una sola clase o toma una captura de pantalla."
         },
         "lines": 4,
         "answer": {
-          "table": {
-            "caption": "Some places and the rights people use there",
-            "columns": [
-              "Place",
-              "Right",
-              "Amendment"
-            ],
-            "rows": [
-              [
-                "Newspaper office",
-                "Freedom of the press",
-                "First"
-              ],
-              [
-                "Place of worship",
-                "Free exercise of religion",
-                "First"
-              ],
-              [
-                "City hall or a public square",
-                "Peaceable assembly and petitioning the government",
-                "First"
-              ],
-              [
-                "Library",
-                "Freedom of speech and of the press: reading and sharing ideas",
-                "First"
-              ],
-              [
-                "Courthouse",
-                "Due process; a speedy, public trial by jury, with a lawyer",
-                "Fifth, Sixth and Seventh"
-              ]
-            ]
-          },
-          "text": "A polling place connects with voting, which later amendments protect (the 15th, 19th and 26th) rather than the Bill of Rights."
+          "where": "The Topographic basemap labels schools, churches, courthouses, libraries and city halls in most towns at close zoom. Sketch tool: a pin and a text label at each place. There is no stored answer; the teacher checks the student's screen or screenshot.",
+          "accept": "Four pins on public places (not homes), each paired with a right that fits: a newspaper office with freedom of the press, a place of worship with free exercise of religion, city hall or a public square with assembly and petition, a library with speech and the press, a courthouse with due process or a jury trial (Fifth, Sixth and Seventh Amendments). A polling place connects with voting, which later amendments protect (15th, 19th and 26th), so accept it with that note."
         }
       },
       {
@@ -124,16 +101,19 @@
           "en": "Responsibilities",
           "es": "Responsabilidades"
         },
-        "task": "Students add pins for places where people carry out responsibilities as citizens, such as voting, jury service and paying taxes, and sort the responsibilities into required by law and voluntary.",
+        "task": "Students start from the courthouse or city hall they pinned in question 2, add pins for places where people carry out responsibilities as citizens (voting, jury service, paying taxes), and sort the responsibilities into required by law and voluntary.",
         "tools": [
+          "zoom",
           "sketch"
         ],
         "student": {
-          "en": "Add a pin for each place where people carry out a responsibility as citizens, such as voting, serving on a jury or paying taxes. Which of these responsibilities are required by law, and which are voluntary?",
-          "es": "Coloca un marcador en cada lugar donde las personas cumplen una responsabilidad como ciudadanos, como votar, formar parte de un jurado o pagar impuestos. ¿Cuáles de estas responsabilidades exige la ley y cuáles son voluntarias?"
+          "en": "Start at the courthouse or city hall you pinned. Add a pin for each place where people carry out a responsibility as citizens, such as voting, serving on a jury or paying taxes. Next to each pin write the responsibility. Which of these responsibilities are required by law, and which are voluntary?",
+          "es": "Empieza en el tribunal o el ayuntamiento que marcaste. Añade un marcador en cada lugar donde las personas cumplen una responsabilidad como ciudadanos, como votar, formar parte de un jurado o pagar impuestos. Junto a cada marcador escribe la responsabilidad. ¿Cuáles de estas responsabilidades exige la ley y cuáles son voluntarias?"
         },
+        "lines": 3,
         "answer": {
-          "text": "Required by law: obeying laws, paying taxes, serving on a jury when called and, for most men aged 18 through 25, being registered with the Selective Service System. Voluntary: voting, staying informed, volunteering and taking part in community meetings. Voting is a right and a responsibility, but no federal law requires it."
+          "where": "Sketch pins on the student's map, usually at the courthouse (jury service), a polling place such as a school, library or church (voting), and a post office or tax office (paying taxes). There is no stored answer; check the screen or screenshot.",
+          "accept": "At least two pins with a responsibility each, and a sort that puts obeying laws, paying taxes, jury service when called and, for most men aged 18 through 25, Selective Service registration under required by law, and voting, staying informed, volunteering and attending community meetings under voluntary. Accept the point that voting is both a right and a responsibility, but no federal law requires it."
         }
       },
       {
@@ -142,23 +122,26 @@
           "en": "History where we live",
           "es": "Historia donde vivimos"
         },
-        "task": "Turn on National Register of Historic Places, zoom in until the diamonds appear, and click two near the school. Look for a public building and the right or responsibility it connects with.",
+        "task": "Turn on National Register of Historic Places, zoom in until the diamonds appear, and click the two nearest the school. The pop-up gives the address but not the name, so students match the diamond to the basemap label or follow the pop-up's National Archive Information link. Look for a public building and the right or responsibility it connects with.",
         "tools": [
           "layers",
+          "legend",
           "zoom",
           "popups"
         ],
         "student": {
-          "en": "In Map layers, turn on National Register of Historic Places. Zoom in until the diamonds appear, and click two near your school. Is either a public building, such as a courthouse, post office, school or library? Which right or responsibility does it connect with?",
-          "es": "En las capas del mapa (Map layers), activa National Register of Historic Places. Acércate hasta que aparezcan los rombos y haz clic en dos cercanos a tu escuela. ¿Alguno es un edificio público, como un tribunal, una oficina de correos, una escuela o una biblioteca? ¿Con qué derecho o responsabilidad se relaciona?"
+          "en": "In Map layers, turn on National Register of Historic Places. Zoom in until the diamonds appear, and click the two nearest your school. The pop-up gives the address; to find the name, look at the basemap label under the diamond or open the pop-up's National Archive Information link. Use the legend to tell a building from a district or a site. Is either a public building, such as a courthouse, post office, school or library? Which right or responsibility does it connect with?",
+          "es": "En las capas del mapa (Map layers), activa National Register of Historic Places (Registro Nacional de Lugares Históricos). Acércate hasta que aparezcan los rombos y haz clic en los dos más cercanos a tu escuela. La ventana emergente da la dirección; para saber el nombre, mira la etiqueta del mapa base bajo el rombo o abre el enlace National Archive Information de la ventana. Usa la leyenda para distinguir un edificio (building) de un distrito (district) o un sitio (site). ¿Alguno es un edificio público, como un tribunal, una oficina de correos, una escuela o una biblioteca? ¿Con qué derecho o responsabilidad se relaciona?"
         },
+        "lines": 3,
         "answer": {
-          "text": "It depends on where you are. Courthouses connect with jury service and the right to a fair trial; post offices and newspaper buildings with sharing news and ideas; schools and libraries with staying informed. If nothing is listed nearby, zoom out to the nearest town."
+          "where": "National Register of Historic Places layer, on at close zoom. Pop-up: address, city, county, state, resource type and a National Archive Information link; the place name is missing (see Known issues). Legend: diamond colors for building, structure, district, site and object. If nothing is listed nearby, zoom out to the nearest town.",
+          "accept": "Two places identified by address or name, with a sensible link for any public building: a courthouse with jury service and a fair trial; a post office or newspaper building with sharing news and ideas; a school or library with staying informed. Accept \"neither is a public building\" with a reason."
         }
       }
     ],
     "final": {
-      "teacher": "Students answer with evidence from their own map. Some ways to do it: a paragraph, the finished map downloaded as an image or a PDF with a short caption, or a short talk using the map.",
+      "teacher": "Students answer with evidence from their own map. Some ways to do it: a paragraph, a screenshot of the sketched map with a short caption, or a short talk using the map. Sketches are not saved between sessions.",
       "student": {
         "en": "Use your map to answer the big question. Choose the three places that best show rights and responsibilities in your community, and explain your choices.",
         "es": "Usa tu mapa para responder la pregunta central. Elige los tres lugares que mejor muestran los derechos y las responsabilidades en tu comunidad, y explica tu elección."
@@ -174,8 +157,8 @@
       "es": "En 1791 se añadieron a la Constitución diez enmiendas, conocidas como la Carta de Derechos. Protegen derechos como la libertad de expresión, de religión y de prensa, el derecho a reunirse pacíficamente y el derecho a un juicio justo. Los ciudadanos también tienen responsabilidades con su comunidad y su país."
     },
     "readingTheMap": {
-      "en": "Blue lines are the boundaries of congressional districts for the 119th Congress (2025–2027); click inside one to see who represents it. National Register of Historic Places is off when the map opens: turn it on in Map layers and zoom in to see its diamonds, colored by type of place. Put your pins on public places, not homes.",
-      "es": "Las líneas azules son los límites de los distritos del Congreso número 119 (2025–2027); haz clic dentro de uno para ver quién lo representa. La capa National Register of Historic Places está desactivada al abrir el mapa: actívala en las capas del mapa (Map layers) y acércate para ver sus rombos, de colores según el tipo de lugar. Coloca tus marcadores en lugares públicos, no en viviendas."
+      "en": "The Topographic basemap has place names, and labels public buildings when you zoom in close. Blue lines are the boundaries of congressional districts for the 119th Congress (2025–2027); click inside one to see who represents it. National Register of Historic Places is off when the map opens: turn it on in Map layers and zoom in to see its diamonds, colored by type of place (see the legend). Its pop-ups give an address but not a name. Put your pins on public places, not homes. Sketches are not saved when you close the map.",
+      "es": "El mapa base Topographic (topográfico) tiene nombres de lugares y muestra los nombres de los edificios públicos cuando te acercas mucho. Las líneas azules son los límites de los distritos del Congreso número 119 (2025–2027); haz clic dentro de uno para ver quién lo representa. La capa National Register of Historic Places está desactivada al abrir el mapa: actívala en las capas del mapa (Map layers) y acércate para ver sus rombos, de colores según el tipo de lugar (mira la leyenda). Sus ventanas emergentes dan una dirección, pero no un nombre. Coloca tus marcadores en lugares públicos, no en viviendas. Los dibujos no se guardan al cerrar el mapa."
     },
     "tips": [
       "popups"
@@ -186,7 +169,7 @@
     }
   },
   "teacherNotes": {
-    "beforeClass": "Students need to find your community on the map; the Topographic basemap has place names. Without a sign-in, sketches aren't saved, so students can download an image or export a PDF to keep the work. Pins on public places keep students' addresses private. The midterm elections are on 3 November 2026, and the map's description lists the states that have new district lines for them.",
+    "beforeClass": "Open the map and zoom to your town to check the basemap labels its public buildings. National Register of Historic Places is off at the start. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet separately). No account or login is needed. Sketches are not saved, so students finish in one session or take a screenshot. Read the answers on the teacher page and the known issue with the historic places pop-up.",
     "misconceptions": [
       {
         "claim": "The Bill of Rights lists all of a citizen's rights.",
@@ -232,14 +215,11 @@
     {
       "code": "C3 D2.Civ.8.6-8",
       "text": "Analyze ideas and principles contained in the founding documents of the United States, and explain how they influence the social and political system."
+    },
+    {
+      "code": "C3 D2.Geo.1.6-8",
+      "text": "Construct maps to represent and explain the spatial patterns of cultural and environmental characteristics."
     }
-  ],
-  "keyFacts": [
-    "The Bill of Rights, the first ten amendments, was ratified on 15 December 1791.",
-    "First Amendment: freedom of religion, speech and the press, peaceable assembly and petition. Fifth: due process. Sixth: a speedy, public trial by jury and the help of a lawyer. Seventh: jury trials in civil cases.",
-    "House seats by state follow the 2020 census, for example California 52, Texas 38 and Florida 28; six states have one seat.",
-    "The map's districts are those of the 119th Congress (2025–2027). Its description lists the states with new districts for the 3 November 2026 elections.",
-    "Voting rights were extended by the 15th (race, 1870), 19th (sex, 1920) and 26th (age 18, 1971) Amendments."
   ],
   "languages": {
     "en": {

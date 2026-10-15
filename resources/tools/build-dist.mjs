@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // Builds everything the Hub publishing notebook and Vera need, from the lesson files, into resources/dist:
-//   hub-bundle.json             Hub page layouts (lesson pages + Lessons page) and the list of Word items
+//   hub-bundle.json             Hub page layouts (Lessons page, lesson pages, teacher pages) and the list of Word items
 //   sheets/<id>-student-sheet-<lang>.docx   the Word student sheets (same builder as the page's download buttons)
+//   sheets/<id>-teacher-notes-en.docx       the Word teacher notes (answers; linked from the teacher page only)
 //   vera_mapmaker_lessons.txt   Vera's knowledge file
 //   publish_to_hub.ipynb        the publishing notebook, made from tools/publish_to_hub.py (upload it to ArcGIS Notebooks)
 // Only lesson files that pass the checker are included. GitHub runs this on every change and commits the result.
@@ -35,14 +36,17 @@ for (const id of ids) {
 
 mkdirSync(join(out, "sheets"), { recursive: true });
 // Remove sheets for lessons or languages that no longer exist.
-const keep = new Set(lessons.flatMap((l) => Object.keys(l.languages).map((lang) => Sheet.fileName(l, lang))));
+const keep = new Set(lessons.flatMap((l) => Object.keys(l.languages).map((lang) => Sheet.fileName(l, lang)).concat([Sheet.teacherFileName(l)])));
 for (const f of readdirSync(join(out, "sheets"))) if (!keep.has(f)) rmSync(join(out, "sheets", f));
 
-for (const l of lessons) for (const lang of Object.keys(l.languages)) {
-  writeFileSync(join(out, "sheets", Sheet.fileName(l, lang)), await docx.Packer.toBuffer(Sheet.build(docx, site, l, lang)));
+for (const l of lessons) {
+  for (const lang of Object.keys(l.languages)) {
+    writeFileSync(join(out, "sheets", Sheet.fileName(l, lang)), await docx.Packer.toBuffer(Sheet.build(docx, site, l, lang)));
+  }
+  writeFileSync(join(out, "sheets", Sheet.teacherFileName(l)), await docx.Packer.toBuffer(Sheet.buildTeacher(docx, site, l)));
 }
 
-const bundle = Hub.bundle(site, lessons, { sheetFileName: Sheet.fileName });
+const bundle = Hub.bundle(site, lessons, { sheetFileName: Sheet.fileName, teacherFileName: Sheet.teacherFileName });
 const pageProblems = Hub.checkBundle(bundle);
 if (pageProblems.length) { console.error("Hub pages have problems:\n  - " + pageProblems.join("\n  - ")); process.exit(1); }
 writeFileSync(join(out, "hub-bundle.json"), JSON.stringify(bundle, null, 1) + "\n");
@@ -62,5 +66,5 @@ const nb = {
 };
 writeFileSync(join(out, "publish_to_hub.ipynb"), JSON.stringify(nb, null, 1) + "\n");
 
-console.log(`Built resources/dist: ${bundle.pages.length} Hub pages, ${bundle.sheets.length} Word sheets, Vera's knowledge file and the publishing notebook, from ${lessons.length} lesson files.`);
+console.log(`Built resources/dist: ${bundle.pages.length} Hub pages, ${bundle.sheets.length} Word files (student sheets and teacher notes), Vera's knowledge file and the publishing notebook, from ${lessons.length} lesson files.`);
 process.exit(failed ? 1 : 0);

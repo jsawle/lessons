@@ -1,6 +1,6 @@
 # =====================================================================
 # PUBLISH MAPMAKER LESSONS TO THE HUB (demo)          publisher v1.3
-# MapMaker resource pages 0.6.1. Created by Jason Sawle.
+# MapMaker resource pages 0.11.0.
 #
 # Run in an ArcGIS Notebook, signed in as the account that owns the
 # site (GIS-4-Schools). Paste it all into one cell (or split it at the
@@ -14,11 +14,13 @@
 #   1. Backs up the site's data, and any unpublished draft from the
 #      site editor.
 #   2. Reads hub-bundle.json, built on GitHub from the lesson files.
-#   3. Downloads every student sheet first, then uploads each one as a
-#      Word item (English, Spanish). If GitHub answers with a temporary
+#   3. Downloads every Word file first (student sheets in English and
+#      Spanish, and the teacher notes), then uploads each one as a Word
+#      item. If GitHub answers with a temporary
 #      error, it waits and tries again; if it still can't download,
 #      it stops before changing anything on the Hub.
-#   4. Creates or updates one Hub Page per lesson, plus a Lessons page.
+#   4. Creates or updates two Hub Pages per lesson (the lesson page and
+#      its teacher page, /pages/<id>-teacher), plus a Lessons page.
 #   5. Registers every page in the site's pages list. This is the step
 #      that makes /pages/<slug> addresses and menu links work.
 #   6. Sets the site's colours (header, menu bar, buttons, links) to the

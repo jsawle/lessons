@@ -136,3 +136,15 @@ footer.foot th,footer.foot td{border-bottom:1px solid #333;padding:.35rem .6rem}
 footer.foot thead th{background:#111;color:#ccc}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{.lab,.site,.toc,.actions,.sheet-tools,footer.foot{display:none}}
+/* 2.0: quick start, teacher notice, AI prompt, unit groups */
+.quick{border:1px solid var(--line);border-radius:8px;background:#fff;padding:.8rem 1.1rem .4rem;max-width:46rem}
+.quick h2{font-size:1.05rem;font-weight:800;margin:0 0 .4rem}
+.quick ol{margin:0 0 .4rem;padding-left:1.4rem}
+.quick li{margin:0 0 .3rem}
+.notice{background:var(--note-bg);color:var(--note-ink);border:1px solid #e8d38a;border-left:8px solid #c97a00;border-radius:8px;padding:.8rem 1.1rem;max-width:46rem}
+.prompt{border:1px solid var(--line);border-radius:8px;background:var(--paper-2);padding:1rem 1.2rem;font-size:.9rem;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere;max-width:46rem;max-height:28rem;overflow:auto}
+.prompt:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.unit{display:grid;gap:.5rem;margin-bottom:1.25rem}
+.unit h2{font-size:1.3rem;font-weight:800;border-bottom:2px solid var(--line);padding-bottom:.2rem}
+.card h3{font-size:1.1rem;font-weight:800}
+.card h3 a{color:var(--link)}

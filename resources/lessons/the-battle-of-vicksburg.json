@@ -1,10 +1,10 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.2",
+  "formatVersion": "1.3",
   "id": "the-battle-of-vicksburg",
-  "contentVersion": "0.2.0",
+  "contentVersion": "0.3.0",
   "status": "draft",
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "reviewed": null,
 
   "title": "The Battle of Vicksburg",
@@ -16,20 +16,20 @@
   "grade": "8",
   "time": "45 minutes, or 10–15 per question",
   "studentLogin": "Not needed to explore the map",
-  "planMonth": "April",
 
   "map": {
     "webmapId": "1ba8cd3fc75a49a497be1137fce4c032",
     "bookmarks": ["The Battle of Vicksburg"],
     "layers": [
-      { "name": "Key Places in the Union March to Vicksburg", "shows": "Places on Grant's route in spring 1863, labeled on the map: Miliken's Bend, New Carthage, Hard Times, Bruinsburg Bend and Edwards. No pop-ups.", "source": "Placed by the MapMaker team" },
-      { "name": "Railroads 1826 to 1911", "shows": "Railroads built from 1826 to 1911, so it includes lines built after the war. No pop-up.", "source": "Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team" },
-      { "name": "Civil War Battlefields", "shows": "Civil War battles. Each pop-up gives the battle's name, dates and a picture.", "source": "American Battlefield Trust", "offAtStart": true }
+      { "name": "Key Places in the Union March to Vicksburg", "shows": "Places on Grant's route in spring 1863, as dark pins labeled on the map: Miliken's Bend, New Carthage, Hard Times, Bruinsburg Bend and Edwards, plus a yellow pin at Vicksburg. No pop-ups.", "source": "Placed by the MapMaker team" },
+      { "name": "Railroads 1826 to 1911", "shows": "Railroads built from 1826 to 1911, so it includes lines built after the war. They only draw when zoomed in. No pop-up.", "source": "Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team" },
+      { "name": "Civil War Battlefields", "shows": "Civil War battles as diamonds colored by result. Each pop-up gives the battle's name and dates and a picture; it does not give the result.", "source": "American Battlefield Trust", "offAtStart": true }
     ]
   },
 
   "knownIssues": [
-    { "where": "Key Places in the Union March to Vicksburg", "note": "The label \"Miliken's Bend\" is usually spelled Milliken's Bend, and the point at Vicksburg itself is titled \"Point\".", "status": "open", "date": "2026-10-12" }
+    { "where": "Key Places in the Union March to Vicksburg", "note": "The label \"Miliken's Bend\" is usually spelled Milliken's Bend, and the point at Vicksburg itself is titled \"Point\".", "status": "open", "date": "2026-10-12" },
+    { "where": "Civil War Battlefields", "note": "Port Gibson appears twice in the layer (two identical features at the same spot), so its pop-up says 1 of 2.", "status": "open", "date": "2026-10-15" }
   ],
 
   "inquiry": {
@@ -41,20 +41,21 @@
       {
         "id": "q1",
         "title": { "en": "Why Vicksburg?", "es": "¿Por qué Vicksburg?" },
-        "task": "Open The Battle of Vicksburg bookmark. Vicksburg is the yellow pin. Look at where it sits on the Mississippi River and, zoomed in (the railroads only show at closer scales), where the railroad leads east. Why would both sides want the city?",
+        "task": "Open The Battle of Vicksburg bookmark. Vicksburg is the yellow pin. Look at where it sits on the Mississippi River. Zoom in until the railroads draw and follow the line east from Vicksburg to Jackson, Mississippi, the state capital, which is a basemap label (not a pin). Why would both sides want the city?",
         "tools": ["bookmarks", "zoom"],
         "student": {
-          "en": "Open The Battle of Vicksburg bookmark. Vicksburg is the yellow pin on the Mississippi River. Zoom in until the railroads appear: where does the railroad from Vicksburg lead? Why would both sides want the city?",
-          "es": "Abre el marcador The Battle of Vicksburg. Vicksburg es el alfiler amarillo junto al río Misisipi. Acércate hasta que aparezcan los ferrocarriles: ¿a dónde lleva el ferrocarril que sale de Vicksburg? ¿Por qué querrían la ciudad ambos lados?"
+          "en": "Open The Battle of Vicksburg bookmark. Vicksburg is the yellow pin on the Mississippi River. Zoom in until the railroads appear and follow the line east from Vicksburg. Find Jackson, Mississippi, on the basemap (the state capital, east of Vicksburg). Why would both sides want Vicksburg?",
+          "es": "Abre el marcador The Battle of Vicksburg (la batalla de Vicksburg). Vicksburg es el alfiler amarillo junto al río Misisipi. Acércate hasta que aparezcan los ferrocarriles y sigue la línea hacia el este desde Vicksburg. Busca Jackson, Misisipi, en el mapa base (la capital del estado, al este de Vicksburg). ¿Por qué querrían Vicksburg ambos lados?"
         },
         "answer": {
-          "text": "Vicksburg stands on high bluffs over a bend in the Mississippi, so its guns controlled traffic on the river. A railroad ran east to Jackson, linking the river to the rest of the Confederacy. Whoever held Vicksburg controlled the river between the Confederacy's eastern and western states."
+          "where": "The Battle of Vicksburg bookmark; yellow pin at Vicksburg on a bend of the Mississippi; Railroads 1826 to 1911 layer, which draws when zoomed in to about 1:1,500,000 or closer; Jackson is a label on the Modern Antique basemap about 40 miles east.",
+          "accept": "A good answer says Vicksburg sits on the river, so whoever held it controlled traffic on the Mississippi, and that its railroad linked the river to Jackson and the rest of the Confederacy, so it was both a river stronghold and a rail junction. Mentioning the bluffs or guns is extra, not on the map."
         }
       },
       {
         "id": "q2",
         "title": { "en": "Grant's route", "es": "La ruta de Grant" },
-        "task": "Find the key places and put them in order along Grant's route: Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend, then Edwards. Measure the distance from Milliken's Bend to Bruinsburg Bend.",
+        "task": "Find the dark pins and put them in order along Grant's route: Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend, then Edwards. Which side of the river is each on? Measure the straight-line distance from Milliken's Bend to Bruinsburg Bend.",
         "tools": ["zoom", "measure"],
         "student": {
           "en": "Find the dark pins for Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend and Edwards. Which side of the river is each on? Why did Grant march south before crossing the river?",
@@ -65,20 +66,22 @@
           "es": "Mide la distancia de Milliken's Bend a Bruinsburg Bend: ________ millas"
         },
         "answer": {
-          "text": "Milliken's Bend, New Carthage and Hard Times are on the Louisiana (west) side; Bruinsburg Bend and Edwards are in Mississippi. Vicksburg's guns and the swamps north of the city made a direct attack too hard, so Grant marched south down the Louisiana side and crossed the river at Bruinsburg on April 30, 1863, then turned northeast. Milliken's Bend to Bruinsburg Bend is about 33 miles (53 km) in a straight line."
+          "where": "Key Places in the Union March to Vicksburg pins, read against the river and the basemap state labels: Milliken's Bend, New Carthage and Hard Times are on the west (Louisiana) bank; Bruinsburg Bend and Edwards are on the east (Mississippi) side. Measure tool, Milliken's Bend pin to Bruinsburg Bend pin: about 33 miles in a straight line (accept 31 to 36).",
+          "accept": "A good answer notices that Vicksburg's pin sits on the river between Milliken's Bend (north) and Bruinsburg Bend (south), so Grant could not cross right at the city; he marched down the far bank, out of reach of the city, crossed well to the south, then turned back toward Vicksburg from the east (Edwards)."
         }
       },
       {
         "id": "q3",
         "title": { "en": "The battles of May 1863", "es": "Las batallas de mayo de 1863" },
-        "task": "Turn on Civil War Battlefields and click the diamonds between Bruinsburg and Vicksburg. Put the battles in order by date.",
-        "tools": ["layers", "popups"],
+        "task": "Turn on Civil War Battlefields in Map layers and click the diamonds between Bruinsburg Bend and Vicksburg, and east toward Jackson. Put the battles in order by date from the pop-ups.",
+        "tools": ["layers", "popups", "zoom"],
         "student": {
-          "en": "In Map layers, turn on Civil War Battlefields. Click the diamonds between Bruinsburg and Vicksburg and list the battles in order by date.",
-          "es": "En las capas del mapa (Map layers), activa Civil War Battlefields (campos de batalla de la Guerra Civil). Haz clic en los rombos entre Bruinsburg y Vicksburg y ordena las batallas por fecha."
+          "en": "In Map layers, turn on Civil War Battlefields. Click the diamonds between Bruinsburg Bend and Vicksburg, and east toward Jackson, and list the battles in order by date.",
+          "es": "En las capas del mapa (Map layers), activa Civil War Battlefields (campos de batalla de la Guerra Civil). Haz clic en los rombos entre Bruinsburg Bend y Vicksburg, y hacia el este en dirección a Jackson, y ordena las batallas por fecha."
         },
         "lines": 5,
         "answer": {
+          "where": "Civil War Battlefields pop-ups: the name is in bold and the dates below it. Port Gibson's pop-up says 1 of 2 (a duplicate feature). Grand Gulf (April 29, 1863), on the river just north of Bruinsburg, is the Union navy's failed attack before the crossing; accept it if students include it.",
           "table": {
             "caption": "Battles of Grant's Vicksburg campaign, from the pop-ups",
             "columns": ["Battle", "Dates"],
@@ -88,33 +91,33 @@
               ["Jackson, Mississippi", "May 14, 1863"],
               ["Champion Hill", "May 16, 1863"],
               ["Big Black River Bridge", "May 17, 1863"],
-              ["Vicksburg", "May 18 – July 4, 1863"]
+              ["Vicksburg", "May 18, 1863 – July 4, 1863"]
             ]
-          },
-          "text": "Grand Gulf (April 29, 1863) was the Union navy's failed attack just before the crossing at Bruinsburg."
+          }
         }
       },
       {
         "id": "q4",
         "title": { "en": "Splitting the Confederacy", "es": "La Confederación partida en dos" },
-        "task": "Zoom out to see the whole Mississippi River. After Vicksburg surrendered on July 4, 1863, which Confederate states were cut off from the rest?",
-        "tools": ["zoom"],
+        "task": "Zoom out to see the whole Mississippi River from Memphis to the Gulf. With Civil War Battlefields on, click the diamond at Port Hudson, Louisiana, south of Vicksburg, for its dates. Using the state names on the basemap, which states lie west of the river, and what did the Union control once both Vicksburg and Port Hudson had surrendered?",
+        "tools": ["zoom", "layers", "popups"],
         "student": {
-          "en": "Zoom out to see the whole Mississippi River. Vicksburg surrendered on July 4, 1863. Which Confederate states were cut off west of the river?",
-          "es": "Aléjate para ver todo el río Misisipi. Vicksburg se rindió el 4 de julio de 1863. ¿Qué estados confederados quedaron aislados al oeste del río?"
+          "en": "Zoom out until you can see the Mississippi River from Memphis to the Gulf of Mexico. Keep Civil War Battlefields on and click the diamond at Port Hudson, in Louisiana south of Vicksburg: when did it end? Read the state names on the basemap. Which states lie west of the river? What could the Union control once Vicksburg and Port Hudson had both fallen?",
+          "es": "Aléjate hasta ver el río Misisipi desde Memphis hasta el golfo de México. Mantén activada la capa Civil War Battlefields y haz clic en el rombo de Port Hudson, en Luisiana, al sur de Vicksburg: ¿cuándo terminó? Lee los nombres de los estados en el mapa base. ¿Qué estados quedan al oeste del río? ¿Qué pudo controlar la Unión una vez que cayeron Vicksburg y Port Hudson?"
         },
         "answer": {
-          "text": "Texas, Arkansas and most of Louisiana. After Port Hudson, Louisiana, surrendered on July 9, 1863, the Union controlled the whole river."
+          "where": "Civil War Battlefields pop-up for Port Hudson: May 21, 1863 – July 9, 1863. Vicksburg pop-up: May 18, 1863 – July 4, 1863. Basemap state labels west of the river: Louisiana (most of it), Arkansas, Texas (and Missouri further north, Union side).",
+          "accept": "Port Hudson surrendered on July 9, 1863, five days after Vicksburg. A good answer names Louisiana, Arkansas and Texas west of the river and says the Union then controlled the whole Mississippi, so those Confederate states were cut off from the rest of the Confederacy and the river was open to Union ships and closed to Confederate supplies."
         }
       }
     ],
     "final": {
-      "teacher": "Students answer with evidence from at least two places on the map. Some ways to do it: a paragraph, Grant's route sketched on the map, or bookmarks saved for a short talk.",
+      "teacher": "Students answer with evidence from at least two places on the map. Some ways to do it: a paragraph, Grant's route sketched on the map (sketches are not saved, so students should screenshot or describe them), or a short talk using the map.",
       "student": {
         "en": "Answer the big question using evidence from at least two places on the map. You can write a paragraph, sketch on the map, or both.",
         "es": "Responde la pregunta central con evidencia de al menos dos lugares del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
       },
-      "tools": ["sketch", "bookmarks"]
+      "tools": ["sketch"]
     }
   },
 
@@ -124,8 +127,8 @@
       "es": "En 1862, las fuerzas de la Unión tomaron Nueva Orleans y Memphis, dos ciudades a orillas del río Misisipi. Entre ambas, los confederados todavía controlaban parte del río, incluida la ciudad de Vicksburg, en Misisipi. En la primavera de 1863, el general de la Unión Ulysses S. Grant se propuso tomarla."
     },
     "readingTheMap": {
-      "en": "The yellow pin is Vicksburg. Dark pins mark places on Grant's route, each with its name. Railroads are thin dark lines with short cross marks, like a track; they appear when you zoom in, and they include lines built after the war. Civil War Battlefields is off when the map opens: turn it on in Map layers. Its diamonds mark battles: blue for a Union victory, gray for a Confederate victory, yellow if neither side won.",
-      "es": "El alfiler amarillo es Vicksburg. Los alfileres oscuros marcan lugares de la ruta de Grant, cada uno con su nombre. Los ferrocarriles son líneas oscuras finas con pequeñas marcas transversales, como una vía; aparecen al acercarte e incluyen líneas construidas después de la guerra. La capa Civil War Battlefields está desactivada al abrir el mapa: actívala en las capas del mapa (Map layers). Sus rombos marcan las batallas: azul si ganó la Unión, gris si ganó la Confederación y amarillo si ningún bando ganó."
+      "en": "The yellow pin is Vicksburg. Dark pins mark places on Grant's route, each with its name. City and state names, such as Jackson and Louisiana, are part of the basemap. Railroads are thin dark lines with short cross marks, like a track; they appear when you zoom in, and they include lines built after the war. Civil War Battlefields is off when the map opens: turn it on in Map layers. Its diamonds mark battles, colored by who won: use the legend to read the result, because a battle's pop-up gives its name and dates but not the result.",
+      "es": "El alfiler amarillo es Vicksburg. Los alfileres oscuros marcan lugares de la ruta de Grant, cada uno con su nombre. Los nombres de ciudades y estados, como Jackson y Luisiana, forman parte del mapa base. Los ferrocarriles son líneas oscuras finas con pequeñas marcas transversales, como una vía; aparecen al acercarte e incluyen líneas construidas después de la guerra. La capa Civil War Battlefields está desactivada al abrir el mapa: actívala en las capas del mapa (Map layers). Sus rombos marcan las batallas, con un color según quién ganó: usa la leyenda para saber el resultado, porque la ventana emergente de una batalla da su nombre y sus fechas, pero no el resultado."
     },
     "tips": ["popups"],
     "reflection": {
@@ -135,7 +138,7 @@
   },
 
   "teacherNotes": {
-    "beforeClass": "Civil War Battlefields is off when the map opens. The railroad layer shows lines built up to 1911, so some did not exist in 1863. The key places have labels but no pop-ups.",
+    "beforeClass": "Open the map in MapMaker and open The Battle of Vicksburg bookmark. Civil War Battlefields is off at the start; students turn it on for questions 3 and 4. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet). Read the answers on the teacher page. No account or login is needed. Sketches are not saved.",
     "misconceptions": [
       { "claim": "Grant attacked Vicksburg straight across the river.", "response": "The key places show he marched south on the Louisiana side and crossed at Bruinsburg, well south of the city." },
       { "claim": "Vicksburg fell in a single battle.", "response": "Its pop-up gives May 18 to July 4, 1863: a siege of about six weeks." },
@@ -149,13 +152,6 @@
     { "code": "TX 8.10(C)", "text": "Analyze the effects of physical and human geographic factors such as weather, landforms, waterways, transportation, and communication on major historical events in the United States" },
     { "code": "C3 D2.Geo.2.6-8", "text": "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions, and changes in their environmental characteristics" },
     { "code": "C3 D2.His.14.6-8", "text": "Explain multiple causes and effects of events and developments in the past" }
-  ],
-
-  "keyFacts": [
-    "Battles of the campaign, from the Civil War Battlefields pop-ups: Grand Gulf, April 29, 1863; Port Gibson, May 1; Raymond, May 12; Jackson, May 14; Champion Hill, May 16; Big Black River Bridge, May 17; Vicksburg, May 18 to July 4, 1863.",
-    "Grant crossed the Mississippi at Bruinsburg on April 30, 1863.",
-    "Vicksburg surrendered on July 4, 1863; Port Hudson, Louisiana, on July 9, 1863.",
-    "Milliken's Bend to Bruinsburg Bend: about 33 miles (53 km) in a straight line."
   ],
 
   "languages": {
