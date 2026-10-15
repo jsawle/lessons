@@ -1,39 +1,74 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.3",
+  "formatVersion": "1.4",
   "id": "roads-trails-and-rails-west",
-  "contentVersion": "0.3.0",
+  "contentVersion": "0.4.0",
   "status": "draft",
   "updated": "2026-10-15",
   "reviewed": null,
-
   "title": "Roads, Trails, and Rails West",
-  "sheetTitle": { "es": "Caminos, senderos y ferrocarriles hacia el Oeste" },
+  "sheetTitle": {
+    "es": "Caminos, senderos y ferrocarriles hacia el Oeste"
+  },
   "summary": "Follow the trails settlers took west in the 1800s, see whose lands they crossed, and find out how railroads replaced the wagon trails.",
   "subject": "History",
   "course": "US History",
   "unit": "Westward expansion and Manifest Destiny",
-  "alsoFits": ["Sectional economies: industry, cities and immigration"],
+  "alsoFits": [
+    "Sectional economies: industry, cities and immigration"
+  ],
   "grade": "8",
+  "subjects": [
+    "US History",
+    "Geography",
+    "Indigenous Studies",
+    "Economics"
+  ],
   "time": "45 minutes, or 10–15 per question",
   "studentLogin": "Not needed to explore the map",
-
   "map": {
     "webmapId": "3ec83a9d66454ade8aead0a64872d931",
     "bookmarks": [],
     "layers": [
-      { "name": "Trails West", "shows": "Seven trails west: Oregon, California, Mormon Pioneer, Old Spanish, Santa Fe, Butterfield Overland and Pony Express, each a dotted line in its own color in the legend. Each pop-up is titled with the trail's name and gives a short history with places, dates and distances.", "source": "National Geographic Education, from National Park Service trail information" },
-      { "name": "Transcontinental Railroads completed by 1911", "shows": "Five transcontinental lines as thick colored lines named in the legend: Great Northern, Northern Pacific, Transcontinental Railroad (Union Pacific), Transcontinental Railroad (Central Pacific) and Southern Pacific. No pop-up. In the Railroads group.", "source": "Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team", "offAtStart": true },
-      { "name": "Railroads 1826 to 1911", "shows": "All railroad lines built from 1826 to 1911, as thin gray lines. Each pop-up gives the railroad's name (where recorded) and the year it was in operation by. In the Railroads group.", "source": "Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team", "offAtStart": true },
-      { "name": "Indigenous Territories", "shows": "Approximate territories of Indigenous nations, from a community-made map, each shaded in its own color with the nation's name appearing when zoomed in. Not listed in the legend. No pop-up.", "source": "Native Land Digital", "offAtStart": true }
+      {
+        "name": "Trails West",
+        "shows": "Seven trails west: Oregon, California, Mormon Pioneer, Old Spanish, Santa Fe, Butterfield Overland and Pony Express, each a dotted line in its own color in the legend. Each pop-up is titled with the trail's name and gives a short history with places, dates and distances.",
+        "source": "National Geographic Education, from National Park Service trail information"
+      },
+      {
+        "name": "Transcontinental Railroads completed by 1911",
+        "shows": "Five transcontinental lines as thick colored lines named in the legend: Great Northern, Northern Pacific, Transcontinental Railroad (Union Pacific), Transcontinental Railroad (Central Pacific) and Southern Pacific. No pop-up. In the Railroads group.",
+        "source": "Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team",
+        "offAtStart": true
+      },
+      {
+        "name": "Railroads 1826 to 1911",
+        "shows": "All railroad lines built from 1826 to 1911, as thin gray lines. Each pop-up gives the railroad's name (where recorded) and the year it was in operation by. In the Railroads group.",
+        "source": "Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team",
+        "offAtStart": true
+      },
+      {
+        "name": "Indigenous Territories",
+        "shows": "Approximate territories of Indigenous nations, from a community-made map, each shaded in its own color with the nation's name appearing when zoomed in. Not listed in the legend. No pop-up.",
+        "source": "Native Land Digital",
+        "offAtStart": true
+      }
     ]
   },
-
   "knownIssues": [
-    { "where": "Trails West pop-up (Oregon)", "note": "Gives the years 1840 to 1860, then says many travelers were \"fleeing the American Civil War (1861-1865)\", which began after that period.", "status": "open", "date": "2026-10-12" },
-    { "where": "Trails West pop-up (Mormon Pioneer)", "note": "The description ends mid-sentence.", "status": "open", "date": "2026-10-15" }
+    {
+      "where": "Trails West pop-up (Oregon)",
+      "note": "Gives the years 1840 to 1860, then says many travelers were \"fleeing the American Civil War (1861-1865)\", which began after that period.",
+      "status": "open",
+      "date": "2026-10-12"
+    },
+    {
+      "where": "Trails West pop-up (Mormon Pioneer)",
+      "note": "The description ends mid-sentence.",
+      "status": "open",
+      "date": "2026-10-15"
+    }
   ],
-
   "inquiry": {
     "compellingQuestion": {
       "en": "How did trails and then railroads change the American West, and for whom?",
@@ -42,9 +77,15 @@
     "questions": [
       {
         "id": "q1",
-        "title": { "en": "Where did the trails begin?", "es": "¿Dónde empezaban los senderos?" },
+        "title": {
+          "en": "Where did the trails begin?",
+          "es": "¿Dónde empezaban los senderos?"
+        },
         "task": "Click three trails (use the legend to tell them apart) and note from each pop-up where the trail started and ended. Most began in Missouri: why there?",
-        "tools": ["popups", "legend"],
+        "tools": [
+          "popups",
+          "legend"
+        ],
         "student": {
           "en": "Click three of the dotted trail lines (the legend shows which color is which trail). From each pop-up, where did the trail start and end? In which state do most of the trails start?",
           "es": "Haz clic en tres de las líneas punteadas de los senderos (la leyenda muestra qué color corresponde a cada sendero). Según cada ventana emergente, ¿dónde empezaba y terminaba el sendero? ¿En qué estado empiezan la mayoría de los senderos?"
@@ -54,15 +95,47 @@
           "where": "Trails West pop-ups (title is the trail name, the text gives the places). Most trails start in Missouri: Independence (Oregon, California), St. Joseph (Pony Express), St. Louis (Butterfield Overland) or Missouri in general (Santa Fe). On the map, the Mormon Pioneer trail's eastern end is at Nauvoo, Illinois, on the Mississippi, and its pop-up mentions Nauvoo and Omaha.",
           "table": {
             "caption": "Where the trails started and ended, from their pop-ups and the map",
-            "columns": ["Trail", "From", "To"],
+            "columns": [
+              "Trail",
+              "From",
+              "To"
+            ],
             "rows": [
-              ["Oregon", "Independence, Missouri", "Willamette River valley, near Portland, Oregon"],
-              ["California", "Independence, Missouri, and Omaha, Nebraska", "Northern California"],
-              ["Mormon Pioneer", "Nauvoo, Illinois (the line's eastern end on the map), then past Omaha, Nebraska", "Salt Lake City, Utah"],
-              ["Santa Fe", "Missouri", "Santa Fe, New Mexico"],
-              ["Pony Express", "St. Joseph, Missouri", "Sacramento, California"],
-              ["Butterfield Overland", "St. Louis, Missouri, and Memphis, Tennessee, via Fort Smith, Arkansas", "San Francisco, California"],
-              ["Old Spanish", "Abiquiú, New Mexico", "Los Angeles, California"]
+              [
+                "Oregon",
+                "Independence, Missouri",
+                "Willamette River valley, near Portland, Oregon"
+              ],
+              [
+                "California",
+                "Independence, Missouri, and Omaha, Nebraska",
+                "Northern California"
+              ],
+              [
+                "Mormon Pioneer",
+                "Nauvoo, Illinois (the line's eastern end on the map), then past Omaha, Nebraska",
+                "Salt Lake City, Utah"
+              ],
+              [
+                "Santa Fe",
+                "Missouri",
+                "Santa Fe, New Mexico"
+              ],
+              [
+                "Pony Express",
+                "St. Joseph, Missouri",
+                "Sacramento, California"
+              ],
+              [
+                "Butterfield Overland",
+                "St. Louis, Missouri, and Memphis, Tennessee, via Fort Smith, Arkansas",
+                "San Francisco, California"
+              ],
+              [
+                "Old Spanish",
+                "Abiquiú, New Mexico",
+                "Los Angeles, California"
+              ]
             ]
           },
           "accept": "Missouri. For why, a good answer uses the map: Missouri was at the western edge of the settled states and on the Missouri River, so it was the last place to buy supplies and the river was the way in."
@@ -70,9 +143,17 @@
       },
       {
         "id": "q2",
-        "title": { "en": "How far, and how many?", "es": "¿Qué distancia y cuántas personas?" },
+        "title": {
+          "en": "How far, and how many?",
+          "es": "¿Qué distancia y cuántas personas?"
+        },
         "task": "Open the Oregon Trail pop-up for its length and how many people used it. Measure the straight-line distance from Independence, Missouri (on the basemap, just east of Kansas City), to Portland, Oregon, and compare it with the trail's length.",
-        "tools": ["popups", "measure", "legend", "zoom"],
+        "tools": [
+          "popups",
+          "measure",
+          "legend",
+          "zoom"
+        ],
         "student": {
           "en": "Click the Oregon Trail (find its color in the legend). How long was it, and how many people traveled it? Then use Measure for a straight line from Independence, Missouri (on the basemap, next to Kansas City), to Portland, Oregon. Why is the trail longer than a straight line?",
           "es": "Haz clic en el sendero de Oregón (busca su color en la leyenda). ¿Qué longitud tenía y cuántas personas lo recorrieron? Luego usa la herramienta de medir (Measure) para trazar una línea recta de Independence, Misuri (en el mapa base, junto a Kansas City), a Portland, Oregón. ¿Por qué el sendero es más largo que una línea recta?"
@@ -88,9 +169,15 @@
       },
       {
         "id": "q3",
-        "title": { "en": "Whose land?", "es": "¿De quién era la tierra?" },
+        "title": {
+          "en": "Whose land?",
+          "es": "¿De quién era la tierra?"
+        },
         "task": "Turn on Indigenous Territories in Map layers and zoom in until the nations' names appear, then follow one trail from end to end. Was the West empty land when the trails were built? What might the trail have meant for the people who lived there?",
-        "tools": ["layers", "zoom"],
+        "tools": [
+          "layers",
+          "zoom"
+        ],
         "student": {
           "en": "In Map layers, turn on Indigenous Territories. Zoom in until the nations' names appear, then follow one trail from one end to the other. Name two nations whose land it crossed. Was the land the trail crossed empty? What might the trail have meant for the people who lived there?",
           "es": "En las capas del mapa (Map layers), activa Indigenous Territories (territorios indígenas). Acércate hasta que aparezcan los nombres de las naciones y sigue un sendero de un extremo al otro. Nombra dos naciones cuyas tierras cruzaba. ¿Estaba vacía la tierra que cruzaba el sendero? ¿Qué pudo significar el sendero para las personas que vivían allí?"
@@ -102,9 +189,16 @@
       },
       {
         "id": "q4",
-        "title": { "en": "From trails to rails", "es": "De los senderos a los rieles" },
+        "title": {
+          "en": "From trails to rails",
+          "es": "De los senderos a los rieles"
+        },
         "task": "Turn on the Railroads group in Map layers. Using the legend, which trails does the Union Pacific and Central Pacific line follow most closely? Click a thin gray railroad line to see when it was in operation (the thick transcontinental lines have no pop-up).",
-        "tools": ["layers", "popups", "legend"],
+        "tools": [
+          "layers",
+          "popups",
+          "legend"
+        ],
         "student": {
           "en": "In Map layers, turn on Railroads. Use the legend to find the Transcontinental Railroad (Union Pacific) and (Central Pacific) lines. Which trails do they follow most closely? Click a thin gray railroad line: when was it in operation by?",
           "es": "En las capas del mapa (Map layers), activa Railroads (ferrocarriles). Usa la leyenda para encontrar las líneas Transcontinental Railroad (Union Pacific) y (Central Pacific). ¿Qué senderos siguen más de cerca? Haz clic en una línea gris fina de ferrocarril: ¿desde cuándo funcionaba?"
@@ -121,10 +215,40 @@
         "en": "Answer the big question using evidence from at least two layers on the map. You can write a paragraph, sketch on the map, or both.",
         "es": "Responde la pregunta central con evidencia de al menos dos capas del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
       },
-      "tools": ["sketch"]
+      "tools": [
+        "sketch"
+      ]
     }
   },
-
+  "objectives": [
+    "Identify where three of the seven trails started and ended from their pop-ups, and explain from the map why most began in Missouri.",
+    "Measure the straight-line distance from Independence, Missouri, to Portland, Oregon, and compare it with the Oregon Trail's length in its pop-up.",
+    "Name Indigenous nations whose lands a trail crossed, using the Indigenous Territories layer.",
+    "Compare the transcontinental railroad lines in the legend with the dotted trails to see which routes the railroads followed.",
+    "Use evidence from at least two layers to explain how trails and then railroads changed the West, and for whom."
+  ],
+  "discussion": [
+    "The Oregon Trail is about 500 miles longer than the straight line you measured. What did the dotted line follow instead, and what does that say about what a wagon party needed most?",
+    "With Indigenous Territories turned on, how did the map change for you? What might a trail have meant for the people whose lands it crossed, and whose story does the Trails West layer leave out?",
+    "The Union Pacific and Central Pacific lines run close to the California and Mormon Pioneer trails. Why might the railroad builders have chosen the same route, and what happened to the trails once the railroad opened?"
+  ],
+  "resources": [
+    {
+      "title": "Tracking Growth in the U.S.",
+      "url": "https://education.nationalgeographic.org/resource/tracking-growth-us/",
+      "source": "National Geographic Education"
+    },
+    {
+      "title": "History & Culture, Oregon National Historic Trail",
+      "url": "https://www.nps.gov/oreg/learn/historyculture/index.htm",
+      "source": "National Park Service"
+    },
+    {
+      "title": "Primary Source Set: Westward Expansion: Encounters at a Cultural Crossroads",
+      "url": "https://www.loc.gov/classroom-materials/westward-expansion-encounters-at-a-cultural-crossroads/",
+      "source": "Library of Congress"
+    }
+  ],
   "studentSupport": {
     "beforeYouStart": {
       "en": "In the 1800s, hundreds of thousands of people from the eastern United States went west in wagons, looking for farmland, gold or a place to practice their religion freely. A journey along one of the trails could take months. Later in the century, railroads were built across the West.",
@@ -134,36 +258,73 @@
       "en": "Each trail is a dotted line in its own color; the legend names them, and clicking a trail opens its pop-up. City and state names are part of the basemap. Railroads and Indigenous Territories are off when the map opens: turn them on in Map layers. Thick colored lines are the transcontinental railroads, named in the legend, and thin gray lines are other railroads; only the thin gray lines have pop-ups. Each Indigenous nation's territory is shaded in its own color, and its name appears when you zoom in. The territories are approximate and aren't listed in the legend.",
       "es": "Cada sendero es una línea punteada de un color distinto; la leyenda indica sus nombres, y al hacer clic en un sendero se abre su ventana emergente. Los nombres de ciudades y estados forman parte del mapa base. Las capas Railroads e Indigenous Territories están desactivadas al abrir el mapa: actívalas en las capas del mapa (Map layers). Las líneas gruesas de colores son los ferrocarriles transcontinentales, con sus nombres en la leyenda, y las líneas grises finas son otros ferrocarriles; solo las líneas grises finas tienen ventana emergente. El territorio de cada nación indígena tiene su propio color, y su nombre aparece al acercarte. Los territorios son aproximados y no aparecen en la leyenda."
     },
-    "tips": ["popups"],
+    "tips": [
+      "popups"
+    ],
     "reflection": {
       "en": "What did the map show you about the journey west that you might not have noticed from reading alone?",
       "es": "¿Qué te mostró el mapa sobre el viaje al Oeste que quizá no habrías notado solo con la lectura?"
     }
   },
-
   "teacherNotes": {
     "beforeClass": "Open the map in MapMaker. The Railroads group and Indigenous Territories are off at the start; students turn them on in Map layers for questions 3 and 4. There are no bookmarks, so students zoom and pan. Download the student sheet. Share the map with the Google Classroom button (it shares the map only; attach the sheet). Read the answers on the teacher page. No account or login is needed. Sketches are not saved.",
     "misconceptions": [
-      { "claim": "The West was empty before settlers arrived.", "response": "The Indigenous Territories layer shows nations' lands across the whole region the trails crossed." },
-      { "claim": "Everyone went west on the Oregon Trail.", "response": "The map shows seven trails, to Oregon, California, Utah, New Mexico and Southern California." },
-      { "claim": "The Pony Express lasted for decades.", "response": "Its pop-up says it ran for 18 months, from April 1860 to October 1861." }
+      {
+        "claim": "The West was empty before settlers arrived.",
+        "response": "The Indigenous Territories layer shows nations' lands across the whole region the trails crossed."
+      },
+      {
+        "claim": "Everyone went west on the Oregon Trail.",
+        "response": "The map shows seven trails, to Oregon, California, Utah, New Mexico and Southern California."
+      },
+      {
+        "claim": "The Pony Express lasted for decades.",
+        "response": "Its pop-up says it ran for 18 months, from April 1860 to October 1861."
+      }
     ],
-    "keyWords": ["Manifest Destiny", "emigrant", "trail", "transcontinental railroad", "telegraph", "Indigenous nation"]
+    "keyWords": [
+      "Manifest Destiny",
+      "emigrant",
+      "trail",
+      "transcontinental railroad",
+      "telegraph",
+      "Indigenous nation"
+    ]
   },
-
   "standards": [
-    { "code": "TX 8.6(B)", "text": "Explain the political, economic, and social roots of Manifest Destiny" },
-    { "code": "TX 8.6(C)", "text": "Analyze the relationship between the concept of Manifest Destiny and the westward growth of the nation" },
-    { "code": "TX 8.11(A)", "text": "Analyze how physical characteristics of the environment influenced population distribution, settlement patterns, and economic activities in the United States during the 17th, 18th, and 19th centuries" },
-    { "code": "FL SS.8.A.4.1", "text": "Examine the causes, course, and consequences of United States westward expansion and its growing diplomatic assertiveness" },
-    { "code": "C3 D2.Geo.7.6-8", "text": "Explain how changes in transportation and communication technology influence the spatial connections among human settlements and affect the diffusion of ideas and cultural practices" },
-    { "code": "C3 D2.His.14.6-8", "text": "Explain multiple causes and effects of events and developments in the past" }
+    {
+      "code": "TX 8.6(B)",
+      "text": "Explain the political, economic, and social roots of Manifest Destiny"
+    },
+    {
+      "code": "TX 8.6(C)",
+      "text": "Analyze the relationship between the concept of Manifest Destiny and the westward growth of the nation"
+    },
+    {
+      "code": "TX 8.11(A)",
+      "text": "Analyze how physical characteristics of the environment influenced population distribution, settlement patterns, and economic activities in the United States during the 17th, 18th, and 19th centuries"
+    },
+    {
+      "code": "FL SS.8.A.4.1",
+      "text": "Examine the causes, course, and consequences of United States westward expansion and its growing diplomatic assertiveness"
+    },
+    {
+      "code": "C3 D2.Geo.7.6-8",
+      "text": "Explain how changes in transportation and communication technology influence the spatial connections among human settlements and affect the diffusion of ideas and cultural practices"
+    },
+    {
+      "code": "C3 D2.His.14.6-8",
+      "text": "Explain multiple causes and effects of events and developments in the past"
+    }
   ],
-
   "languages": {
-    "en": { "status": "final" },
-    "es": { "status": "draft", "note": "Spanish draft for review by a native speaker. Layer names stay in English, as they appear in MapMaker." }
+    "en": {
+      "status": "final"
+    },
+    "es": {
+      "status": "draft",
+      "note": "Spanish draft for review by a native speaker. Layer names stay in English, as they appear in MapMaker."
+    }
   },
-
-  "licence": "Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide."
+  "licence": "The National Geographic Society and Esri make this content available under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence, except as noted. The licence excludes the National Geographic and Esri logos (the words National Geographic with the yellow border logo, and the Esri globe and letters) and any images included in the content. The logos and images may not be removed, altered or changed."
 }

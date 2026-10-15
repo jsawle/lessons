@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.3",
+  "formatVersion": "1.4",
   "id": "war-of-1812-and-monroe-doctrine",
-  "contentVersion": "0.2.0",
+  "contentVersion": "0.3.0",
   "status": "draft",
   "updated": "2026-10-15",
   "reviewed": null,
@@ -18,6 +18,11 @@
     "Westward expansion and Manifest Destiny"
   ],
   "grade": "8",
+  "subjects": [
+    "US History",
+    "Geography",
+    "Government"
+  ],
   "time": "45 minutes, or 10–15 per question",
   "studentLogin": "Not needed to explore the map",
   "map": {
@@ -254,6 +259,35 @@
       ]
     }
   },
+  "objectives": [
+    "Use the battle diamonds in the Battles of the War of 1812 layer to identify the three main areas of fighting.",
+    "Click the largest diamonds to find the battles with the most casualties, their dates and results, and compare the date of New Orleans with the Treaty of Ghent.",
+    "Read the pop-ups of the Land Spain gave up in 1819 and Adams–Onís Treaty line layers to describe what the treaty settled.",
+    "Compare the dates of independence and US recognition in the Latin American independence layer with Monroe's message of December 2, 1823.",
+    "Use the locations of the battles and the 1819 boundary as evidence to explain how the United States' position in North America changed between 1812 and 1823."
+  ],
+  "discussion": [
+    "The battle diamonds cluster in three areas far apart. From the map, what was each side trying to control in each area, and why was none of them decisive?",
+    "The Battle of New Orleans was fought after the Treaty of Ghent was signed. Looking at where Ghent and New Orleans are, what does that gap tell you about how news travelled and how wars ended in 1815?",
+    "Most Latin American nations had declared independence before Monroe's 1823 message, and the United States recognized several of them. Comparing the dates on the map, was the Monroe Doctrine leading events or following them?"
+  ],
+  "resources": [
+    {
+      "title": "War of 1812",
+      "url": "https://www.nps.gov/subjects/warof1812/index.htm",
+      "source": "National Park Service"
+    },
+    {
+      "title": "Treaty of Ghent (1814)",
+      "url": "https://www.archives.gov/milestone-documents/treaty-of-ghent",
+      "source": "National Archives"
+    },
+    {
+      "title": "Monroe Doctrine (1823)",
+      "url": "https://www.archives.gov/milestone-documents/monroe-doctrine",
+      "source": "National Archives"
+    }
+  ],
   "studentSupport": {
     "beforeYouStart": {
       "en": "In the early 1800s Britain and France were at war, and both seized American ships. British warships also forced sailors off American ships into the Royal Navy, and Britain supported Native nations resisting American settlement. In June 1812 the United States declared war on Britain.",
@@ -333,5 +367,5 @@
       "note": "Spanish draft for review by a native speaker. Layer and bookmark names stay in English, as they appear in MapMaker."
     }
   },
-  "licence": "Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide."
+  "licence": "The National Geographic Society and Esri make this content available under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence, except as noted. The licence excludes the National Geographic and Esri logos (the words National Geographic with the yellow border logo, and the Esri globe and letters) and any images included in the content. The logos and images may not be removed, altered or changed."
 }

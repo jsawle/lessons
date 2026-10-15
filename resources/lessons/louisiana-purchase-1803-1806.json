@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.3",
+  "formatVersion": "1.4",
   "id": "louisiana-purchase-1803-1806",
-  "contentVersion": "0.2.0",
+  "contentVersion": "0.3.0",
   "status": "draft",
   "updated": "2026-10-15",
   "reviewed": null,
@@ -18,6 +18,12 @@
     "Westward expansion and Manifest Destiny"
   ],
   "grade": "8",
+  "subjects": [
+    "US History",
+    "Geography",
+    "Indigenous Studies",
+    "Economics"
+  ],
   "time": "45 minutes, or 10–15 per question",
   "studentLogin": "Not needed to explore the map",
   "map": {
@@ -175,6 +181,35 @@
       ]
     }
   },
+  "objectives": [
+    "Use the legend to compare the Louisiana Purchase with the land of 1783 and read the purchase pop-up for its size and price.",
+    "Use the United States Watersheds layer to name the Ohio and Missouri watersheds and trace on the basemap where their rivers reach the sea.",
+    "Follow the Lewis and Clark trail and campsites up the Missouri and use the Biomes layer to name the biomes the expedition crossed.",
+    "Find where the trail leaves the Louisiana Purchase and measure the straight-line distance from Pittsburgh to the Pacific coast.",
+    "Use the watershed boundaries and river routes as evidence to explain why New Orleans mattered to farmers west of the Appalachians."
+  ],
+  "discussion": [
+    "The purchase pop-up gives a price and an area. Looking at the watershed layer, what did the United States actually gain control of, and why was the river mouth worth more than the land?",
+    "The map has layers for the purchase, the rivers and the expedition's campsites, but none for the Native nations who lived on and governed most of this land. Whose land was the Louisiana Purchase, and what would a layer showing them change about how you read the map?",
+    "The trail runs well beyond the yellow purchase boundary before it reaches the Pacific. Using the distance you measured and the biomes you crossed, what does the route suggest about Jefferson's goals?"
+  ],
+  "resources": [
+    {
+      "title": "Exploring the Louisiana Purchase",
+      "url": "https://education.nationalgeographic.org/resource/louisiana-purchase-map/",
+      "source": "National Geographic Education"
+    },
+    {
+      "title": "Lewis and Clark Trail",
+      "url": "https://education.nationalgeographic.org/resource/lewis-and-clark-trail/",
+      "source": "National Geographic Education"
+    },
+    {
+      "title": "Louisiana Purchase Treaty (1803)",
+      "url": "https://www.archives.gov/milestone-documents/louisiana-purchase-treaty",
+      "source": "National Archives"
+    }
+  ],
   "studentSupport": {
     "beforeYouStart": {
       "en": "In 1803 the United States bought France's claim to a huge area west of the Mississippi River. Native nations lived on and governed most of that land; the National Park Service says the expedition met more than 50 Tribal Nations. President Thomas Jefferson sent the Corps of Discovery, led by Meriwether Lewis and William Clark, to explore it and look for a water route to the Pacific Ocean. The expedition set out in 1803 and returned in 1806.",
@@ -254,5 +289,5 @@
       "note": "Spanish draft for review by a native speaker. Layer and bookmark names stay in English, as they appear in MapMaker."
     }
   },
-  "licence": "Teacher and student materials: CC BY-NC-SA 4.0, as a placeholder; the licence is for National Geographic and Esri to decide."
+  "licence": "The National Geographic Society and Esri make this content available under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence, except as noted. The licence excludes the National Geographic and Esri logos (the words National Geographic with the yellow border logo, and the Esri globe and letters) and any images included in the content. The logos and images may not be removed, altered or changed."
 }

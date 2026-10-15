@@ -6,7 +6,7 @@
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  var VERSION = { renderer: "2.5", format: "1.3", checker: "1.3", vera: "1.2", prompt: "1.0" };
+  var VERSION = { renderer: "2.6", format: "1.4", checker: "1.4", vera: "1.3", prompt: "1.1" };
   var HEX32 = /^[0-9a-f]{32}$/i;
   var DATE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -72,6 +72,22 @@
     return out;
   }
 
+  /* Map skills a lesson practises, derived from the tools its questions use (site.json tools[].skill). */
+  function skills(site, lesson) {
+    var out = [], seen = {};
+    var qs = ((lesson.inquiry && lesson.inquiry.questions) || []).concat([{ tools: (lesson.inquiry && lesson.inquiry.final && lesson.inquiry.final.tools) || [] }]);
+    qs.forEach(function (q) {
+      (q.tools || []).forEach(function (k) {
+        var t = site.tools[k], label = t && (t.skill || t.label);
+        if (label && !seen[label]) { seen[label] = true; out.push(label); }
+      });
+    });
+    return out;
+  }
+  function instructionalModels(site, lesson) {
+    return (lesson.instructionalModels && lesson.instructionalModels.length) ? lesson.instructionalModels : (((site.teaching || {}).instructionalModels) || []);
+  }
+
   /* Vera's link for a lesson: opens the Vera chat page with the lesson named in the message box. */
   function veraUrl(site, lesson) {
     if (!site.vera || !site.vera.url) return null;
@@ -118,6 +134,11 @@
     L.push("**Subject:** " + lesson.subject + ". **Course:** " + lesson.course + ". **Grade:** " + lesson.grade + ". **Unit:** " + lesson.unit + ". **Time:** " + lesson.time + ".");
     L.push("**MapMaker map:** [Open " + lesson.title + " in MapMaker](" + mapmakerUrl(site, lesson.map.webmapId) + ")");
     L.push("**Description:** " + md(lesson.summary));
+    if (lesson.subjects && lesson.subjects.length) L.push("**Subjects:** " + lesson.subjects.join(", ") + ".");
+    if (lesson.objectives && lesson.objectives.length) {
+      L.push("**Learning objectives (students will):**");
+      lesson.objectives.forEach(function (o) { L.push("- " + md(o)); });
+    }
     L.push("**Bookmarks in this map:** " + ((lesson.map.bookmarks || []).length ? lesson.map.bookmarks.join("; ") : "none") + ".");
     L.push("**Layers in this map (exact name: what students see; source):**");
     lesson.map.layers.forEach(function (l) {
@@ -272,6 +293,11 @@
       need(/^[A-Z][A-Z0-9]*[\s.]/.test(s.code || ""), "standards[" + (i + 1) + "]: code should start with the framework, such as C3, TX or FL, then a space.");
     });
     need(str(lesson.licence), "licence is missing.");
+    need(Array.isArray(lesson.subjects) && lesson.subjects.length > 0 && lesson.subjects.every(str), "subjects needs at least one subject.");
+    need(Array.isArray(lesson.objectives) && lesson.objectives.length >= 3 && lesson.objectives.length <= 5 && lesson.objectives.every(str), "objectives needs 3 to 5 lines (Students will…).");
+    need(Array.isArray(lesson.discussion) && lesson.discussion.length >= 2 && lesson.discussion.length <= 4 && lesson.discussion.every(str), "discussion needs 2 to 4 debrief questions.");
+    if (lesson.instructionalModels !== undefined) need(Array.isArray(lesson.instructionalModels) && lesson.instructionalModels.every(str), "instructionalModels should be a list of short phrases.");
+    (lesson.resources || []).forEach(function (r, i) { need(r && str(r.title) && /^https:\/\//.test(r.url || ""), "resources[" + (i + 1) + "] needs a title and an https:// url."); });
     var links = JSON.stringify(lesson).match(/\]\(([^)]+)\)/g) || [];
     links.forEach(function (m) { need(/^\]\(https:\/\//.test(m), "Links must start with https:// (found " + m.slice(2, -1) + ")."); });
     return errs;
@@ -279,5 +305,5 @@
 
   return { VERSION: VERSION, esc: esc, inline: inline, plain: plain, mapmakerUrl: mapmakerUrl, classroomShareUrl: classroomShareUrl, hubUrl: hubUrl,
     howToLinks: howToLinks, veraUrl: veraUrl, veraEntry: veraEntry, veraFile: veraFile, veraFileName: veraFileName, aiPrompt: aiPrompt, promptUrl: promptUrl,
-    unitList: unitList, unitIndex: unitIndex, sortStandards: sortStandards, standardPrefix: standardPrefix, standardLabel: standardLabel, check: check };
+    unitList: unitList, unitIndex: unitIndex, skills: skills, instructionalModels: instructionalModels, sortStandards: sortStandards, standardPrefix: standardPrefix, standardLabel: standardLabel, check: check };
 });
