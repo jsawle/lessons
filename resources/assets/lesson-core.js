@@ -1,4 +1,4 @@
-/* MapMaker resource pages: shared logic for the page, the Word builder and the checker.
+/* MapMaker resource pages: shared logic for the page, the Word builder, Vera's knowledge file, the AI prompt and the checker.
    Runs in the browser (window.MMR) and in Node (require). No dependencies. */
 (function (root, factory) {
   if (typeof module === "object" && module.exports) module.exports = factory();
@@ -6,7 +6,7 @@
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  var VERSION = { renderer: "1.6", format: "1.2", checker: "1.2", vera: "1.1" };
+  var VERSION = { renderer: "2.0", format: "1.3", checker: "1.3", vera: "1.2", prompt: "1.0" };
   var HEX32 = /^[0-9a-f]{32}$/i;
   var DATE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -78,6 +78,30 @@
     return site.vera.url + "?lesson=" + encodeURIComponent(lesson.id) + "&title=" + encodeURIComponent(lesson.title);
   }
 
+  /* The ordered unit list for a course (site.json units), and a lesson's place in it. */
+  function unitList(site, course) {
+    var u = (site && site.units) || {};
+    return Array.isArray(u[course]) ? u[course] : [];
+  }
+  function unitIndex(site, lesson) {
+    var i = unitList(site, lesson.course).indexOf(lesson.unit);
+    return i < 0 ? 999 : i;
+  }
+  /* Standards sorted by framework: national frameworks first (site.json standardsOrder), then states. */
+  function standardPrefix(code) { return String(code || "").split(/[\s.]/)[0].toUpperCase(); }
+  function sortStandards(site, standards) {
+    var order = ((site && site.standardsOrder) || {}).prefixes || [];
+    return (standards || []).slice().sort(function (a, b) {
+      var pa = standardPrefix(a.code), pb = standardPrefix(b.code), ia = order.indexOf(pa), ib = order.indexOf(pb);
+      if (ia < 0) ia = order.length; if (ib < 0) ib = order.length;
+      return ia - ib || pa.localeCompare(pb) || String(a.code).localeCompare(String(b.code));
+    });
+  }
+  function standardLabel(site, prefix) {
+    var l = ((site && site.standardsOrder) || {}).labels || {};
+    return l[prefix] || prefix;
+  }
+
   /* One lesson's entry in Vera's knowledge file. Built from the lesson file, so it never needs editing.
      Markdown links, because Vera's other knowledge files use them and Vera repeats links as written. */
   function veraEntry(site, lesson) {
@@ -93,10 +117,6 @@
     lesson.map.layers.forEach(function (l) {
       L.push("- " + l.name + (l.offAtStart ? " (off when the map opens)" : "") + ": " + md(l.shows).replace(/\.$/, "") + "; source: " + md(l.source) + ".");
     });
-    if (lesson.keyFacts && lesson.keyFacts.length) {
-      L.push("**Key facts:**");
-      lesson.keyFacts.forEach(function (f) { L.push("- " + md(f)); });
-    }
     var sup = lesson.studentSupport || {};
     if (sup.beforeYouStart) L.push("**What students read before they start:** " + md(sup.beforeYouStart.en));
     if (sup.readingTheMap) L.push("**How the student sheet explains the map's symbols:** " + md(sup.readingTheMap.en));
@@ -106,17 +126,24 @@
       L.push((i + 1) + ". " + md(q.title.en) + " " + md(q.student.en) + (q.fill ? " " + md(q.fill.en) : ""));
     });
     if (sup.reflection) L.push("**Closing reflection already in this lesson:** " + md(sup.reflection.en));
-    if (lesson.teacherNotes.misconceptions && lesson.teacherNotes.misconceptions.length) {
-      L.push("**Common misunderstandings:**");
-      lesson.teacherNotes.misconceptions.forEach(function (m) { L.push("- \"" + md(m.claim) + "\" " + md(m.response)); });
-    }
+    L.push("**Answers:** not in this file. The answers are on the lesson's teacher page, for teachers only; do not give answers to the questions above, and do not write student material that contains them.");
     L.push("**Key words:** " + lesson.teacherNotes.keyWords.join(", ") + ".");
     L.push("**Standards:** " + lesson.standards.map(function (s) { return s.code; }).join("; ") + ".");
     L.push("**How-to pages for the tools this lesson uses:** " + howToLinks(site, lesson).map(function (h) {
       return "[" + h.title + "](" + h.url + ")"; }).join("; ") + ".");
     L.push("**Languages:** student sheets in " + Object.keys(lesson.languages).map(function (k) { return (site.languageNamesInEnglish && site.languageNamesInEnglish[k]) || k; }).join(" and ") + ".");
-    L.push("**Lesson content version:** " + lesson.contentVersion + " (" + lesson.status + ", updated " + lesson.updated + ").");
+    L.push("**Lesson content version:** " + lesson.contentVersion + ", updated " + lesson.updated + ".");
     return L.join("\n");
+  }
+
+  /* The prompt a teacher can paste into their own AI tool: the rules from site.json, then the lesson's
+     entry (map, layers, pop-ups, bookmarks, questions; no answers), as plain text. */
+  function aiPrompt(site, lesson) {
+    var rules = ((site && site.aiPrompt) || {}).rules || [];
+    var entry = veraEntry(site, lesson).split("\n").map(function (line) {
+      return plain(line.replace(/^###\s*/, "Lesson: ").replace(/\*\*/g, ""));
+    });
+    return rules.concat(["", "--- The lesson ---", ""]).concat(entry).join("\n");
   }
 
   /* The whole knowledge file for Vera: a short header, then one entry per lesson. CRLF, like Vera's other files. */
@@ -125,7 +152,7 @@
       "# MapMaker lessons on the Support Hub (questions, layers and sources)",
       "Built " + builtOn + " from the lesson files by the MapMaker resource pages, Vera knowledge builder " + VERSION.vera + ". Do not edit by hand; edit the lesson files and rebuild.",
       "",
-      "How to use this file: each lesson below has its own MapMaker map. When a teacher names one of these lessons (by title or lesson ID) and asks for new or different questions, base every question only on the bookmarks, layers and pop-up content listed for that lesson, and use bookmark and layer names exactly as written. If a request needs information that lesson's map does not show, say so plainly instead of inventing it. Use only the links listed for that lesson.",
+      "How to use this file: each lesson below has its own MapMaker map. When a teacher names one of these lessons (by title or lesson ID) and asks for new or different questions, base every question only on the bookmarks, layers and pop-up content listed for that lesson, and use bookmark and layer names exactly as written. If a request needs information that lesson's map does not show, say so plainly instead of inventing it. Use only the links listed for that lesson. The answers to the lessons' questions are not in this file: do not give them, and do not write student material that contains them.",
       ""
     ];
     return head.concat(lessons.map(function (l) { return veraEntry(site, l) + "\n"; })).join("\n").replace(/\r?\n/g, "\r\n");
@@ -145,6 +172,8 @@
     if (!lesson || typeof lesson !== "object") return ["The file isn't a lesson (it should be one JSON object)."];
     var langs = Object.keys(lesson.languages || { en: {} });
     need(lesson.formatVersion === VERSION.format, "formatVersion should be \"" + VERSION.format + "\".");
+    need(lesson.planMonth === undefined, "planMonth is no longer used (format 1.3): lessons are arranged by unit. Remove it.");
+    need(lesson.keyFacts === undefined, "keyFacts is no longer used (format 1.3): put facts in the answer notes. Remove it.");
     need(/^[a-z0-9]+(-[a-z0-9]+)*$/.test(lesson.id || ""), "id should be lower case words joined by hyphens.");
     if (fileName) need(fileName === lesson.id + ".json", "The file name should be " + lesson.id + ".json.");
     need(/^\d+\.\d+\.\d+$/.test(lesson.contentVersion || ""), "contentVersion should look like 1.0.0.");
@@ -156,6 +185,15 @@
       need(str(lesson[k]), k + " is missing.");
     });
     need(langs.indexOf("en") >= 0, "languages must include en.");
+    var units = unitList(site, lesson.course);
+    need(units.length > 0, "site.json has no units list for the course \"" + lesson.course + "\".");
+    if (units.length) need(units.indexOf(lesson.unit) >= 0, "unit \"" + lesson.unit + "\" isn't in site.json units for " + lesson.course + ". Use one of: " + units.join("; ") + ".");
+    if (lesson.alsoFits !== undefined) {
+      need(Array.isArray(lesson.alsoFits), "alsoFits should be a list of units.");
+      (Array.isArray(lesson.alsoFits) ? lesson.alsoFits : []).forEach(function (u) {
+        need(units.indexOf(u) >= 0 && u !== lesson.unit, "alsoFits: \"" + u + "\" should be another unit from site.json units for " + lesson.course + ".");
+      });
+    }
     var map = lesson.map || {};
     need(HEX32.test(map.webmapId || ""), "map.webmapId should be a 32-character item ID.");
     need(Array.isArray(map.layers) && map.layers.length > 0, "map.layers needs at least one layer.");
@@ -184,7 +222,9 @@
       need(str(q.task), w + ": task (the teacher-facing version) is missing.");
       need(Array.isArray(q.tools) && q.tools.length > 0, w + ": list the MapMaker tools it uses.");
       (q.tools || []).forEach(function (t) { need(!!site.tools[t], w + ": unknown tool \"" + t + "\". Known tools: " + Object.keys(site.tools).join(", ") + "."); });
-      need(q.answer && (str(q.answer.text) || (q.answer.table && q.answer.table.rows)), w + ": answer notes are missing.");
+      var a = q.answer || {};
+      need(str(a.where) || str(a.accept) || str(a.text) || (a.table && a.table.rows), w + ": answer notes need at least one of where (where on the map to find it), accept (what to accept), text or table.");
+      need(str(a.where) || str(a.accept), w + ": answer notes should say where on the map the answer is found (where) or what to accept (accept), not only the answer itself.");
       if (q.answer && q.answer.table) {
         var cols = (q.answer.table.columns || []).length;
         (q.answer.table.rows || []).forEach(function (r, j) { need(r.length === cols, w + ": answer table row " + (j + 1) + " should have " + cols + " cells."); });
@@ -221,7 +261,10 @@
     need(Array.isArray(tn.keyWords) && tn.keyWords.length > 0, "teacherNotes.keyWords needs at least one word.");
     (tn.misconceptions || []).forEach(function (m, i) { need(str(m.claim) && str(m.response), "teacherNotes.misconceptions[" + (i + 1) + "] needs claim and response."); });
     need(Array.isArray(lesson.standards) && lesson.standards.length > 0, "standards needs at least one standard.");
-    (lesson.standards || []).forEach(function (s, i) { need(str(s.code) && str(s.text), "standards[" + (i + 1) + "] needs code and text."); });
+    (lesson.standards || []).forEach(function (s, i) {
+      need(str(s.code) && str(s.text), "standards[" + (i + 1) + "] needs code and text.");
+      need(/^[A-Z][A-Z0-9]*[\s.]/.test(s.code || ""), "standards[" + (i + 1) + "]: code should start with the framework, such as C3, TX or FL, then a space.");
+    });
     need(str(lesson.licence), "licence is missing.");
     var links = JSON.stringify(lesson).match(/\]\(([^)]+)\)/g) || [];
     links.forEach(function (m) { need(/^\]\(https:\/\//.test(m), "Links must start with https:// (found " + m.slice(2, -1) + ")."); });
@@ -229,5 +272,6 @@
   }
 
   return { VERSION: VERSION, esc: esc, inline: inline, plain: plain, mapmakerUrl: mapmakerUrl, classroomShareUrl: classroomShareUrl, hubUrl: hubUrl,
-    howToLinks: howToLinks, veraUrl: veraUrl, veraEntry: veraEntry, veraFile: veraFile, veraFileName: veraFileName, check: check };
+    howToLinks: howToLinks, veraUrl: veraUrl, veraEntry: veraEntry, veraFile: veraFile, veraFileName: veraFileName, aiPrompt: aiPrompt,
+    unitList: unitList, unitIndex: unitIndex, sortStandards: sortStandards, standardPrefix: standardPrefix, standardLabel: standardLabel, check: check };
 });

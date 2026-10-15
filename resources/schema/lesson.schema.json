@@ -1,18 +1,48 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://jsawle.github.io/lessons/resources/schema/lesson.schema.json",
-  "title": "MapMaker lesson file, format 1.2",
-  "description": "One file per lesson. The page, Word student sheets, how-to links and AI summary are made from it. Text fields allow **bold** and [link text](https://address) only.",
+  "title": "MapMaker lesson file, format 1.3",
+  "description": "One file per lesson. The lesson page, the teacher page, the Word student sheets and teacher notes, the how-to links, Vera's knowledge entry and the AI prompt are made from it. Text fields allow **bold** and [link text](https://address) only.",
   "type": "object",
-  "required": ["formatVersion", "id", "contentVersion", "status", "updated", "title", "summary", "subject", "course", "unit", "grade", "time", "studentLogin", "map", "inquiry", "teacherNotes", "standards", "languages", "licence"],
+  "required": [
+    "formatVersion",
+    "id",
+    "contentVersion",
+    "status",
+    "updated",
+    "title",
+    "summary",
+    "subject",
+    "course",
+    "unit",
+    "grade",
+    "time",
+    "studentLogin",
+    "map",
+    "inquiry",
+    "teacherNotes",
+    "standards",
+    "languages",
+    "licence"
+  ],
   "$defs": {
-    "text": { "type": "string", "minLength": 1 },
-    "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
     "byLang": {
       "type": "object",
       "description": "Text in each language listed under languages.",
-      "required": ["en"],
-      "additionalProperties": { "$ref": "#/$defs/text" }
+      "required": [
+        "en"
+      ],
+      "additionalProperties": {
+        "$ref": "#/$defs/text"
+      }
     },
     "tool": {
       "type": "string",
@@ -20,41 +50,137 @@
     }
   },
   "properties": {
-    "$schema": { "type": "string" },
-    "formatVersion": { "const": "1.2" },
-    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "Must match the file name." },
-    "contentVersion": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$", "description": "Bump on every change: patch for typos, minor for new or changed questions, major for a new map." },
-    "status": { "enum": ["draft", "reviewed", "published"] },
-    "updated": { "$ref": "#/$defs/date" },
+    "$schema": {
+      "type": "string"
+    },
+    "formatVersion": {
+      "const": "1.3"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Must match the file name."
+    },
+    "contentVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Bump on every change: patch for typos, minor for new or changed questions, major for a new map."
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "published"
+      ],
+      "description": "For the team's own tracking. Not shown on the pages."
+    },
+    "updated": {
+      "$ref": "#/$defs/date"
+    },
     "reviewed": {
       "oneOf": [
-        { "type": "null" },
-        { "type": "object", "required": ["by", "date"], "properties": { "by": { "$ref": "#/$defs/text" }, "date": { "$ref": "#/$defs/date" } } }
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "required": [
+            "by",
+            "date"
+          ],
+          "properties": {
+            "by": {
+              "$ref": "#/$defs/text"
+            },
+            "date": {
+              "$ref": "#/$defs/date"
+            }
+          }
+        }
       ]
     },
-    "title": { "$ref": "#/$defs/text" },
-    "sheetTitle": { "type": "object", "description": "Title on non-English sheets.", "additionalProperties": { "$ref": "#/$defs/text" } },
-    "summary": { "$ref": "#/$defs/text" },
-    "subject": { "$ref": "#/$defs/text", "description": "Should match a key in hub.subjectPaths in site.json." },
-    "course": { "$ref": "#/$defs/text", "description": "Should match a key in hub.coursePaths in site.json." },
-    "unit": { "$ref": "#/$defs/text" },
-    "grade": { "$ref": "#/$defs/text" },
-    "time": { "$ref": "#/$defs/text" },
-    "studentLogin": { "$ref": "#/$defs/text" },
-    "planMonth": { "type": "string" },
+    "title": {
+      "$ref": "#/$defs/text"
+    },
+    "sheetTitle": {
+      "type": "object",
+      "description": "Title on non-English sheets.",
+      "additionalProperties": {
+        "$ref": "#/$defs/text"
+      }
+    },
+    "summary": {
+      "$ref": "#/$defs/text"
+    },
+    "subject": {
+      "$ref": "#/$defs/text",
+      "description": "Should match a key in hub.subjectPaths in site.json."
+    },
+    "course": {
+      "$ref": "#/$defs/text",
+      "description": "Should match a key in hub.coursePaths in site.json."
+    },
+    "unit": {
+      "$ref": "#/$defs/text",
+      "description": "One of the units listed for the course in site.json (units). The Lessons page is grouped and ordered by that list."
+    },
+    "alsoFits": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/text"
+      },
+      "description": "Optional. Other units from the course's list that this lesson also serves."
+    },
+    "grade": {
+      "$ref": "#/$defs/text"
+    },
+    "time": {
+      "$ref": "#/$defs/text"
+    },
+    "studentLogin": {
+      "$ref": "#/$defs/text"
+    },
     "map": {
       "type": "object",
-      "required": ["webmapId", "layers"],
+      "required": [
+        "webmapId",
+        "layers"
+      ],
       "properties": {
-        "webmapId": { "type": "string", "pattern": "^[0-9a-fA-F]{32}$" },
-        "bookmarks": { "type": "array", "items": { "$ref": "#/$defs/text" }, "description": "Bookmark names exactly as in the map. Vera uses them, so list every one." },
-        "layers": {
-          "type": "array", "minItems": 1,
+        "webmapId": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{32}$"
+        },
+        "bookmarks": {
+          "type": "array",
           "items": {
-            "type": "object", "required": ["name", "shows", "source"],
+            "$ref": "#/$defs/text"
+          },
+          "description": "Bookmark names exactly as in the map. Vera uses them, so list every one."
+        },
+        "layers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "shows",
+              "source"
+            ],
             "properties": {
-              "name": { "$ref": "#/$defs/text" }, "shows": { "$ref": "#/$defs/text" }, "source": { "$ref": "#/$defs/text" },
-              "offAtStart": { "type": "boolean" }
+              "name": {
+                "$ref": "#/$defs/text"
+              },
+              "shows": {
+                "$ref": "#/$defs/text"
+              },
+              "source": {
+                "$ref": "#/$defs/text"
+              },
+              "offAtStart": {
+                "type": "boolean"
+              }
             }
           }
         }
@@ -63,55 +189,156 @@
     "knownIssues": {
       "type": "array",
       "items": {
-        "type": "object", "required": ["where", "note", "status", "date"],
+        "type": "object",
+        "required": [
+          "where",
+          "note",
+          "status",
+          "date"
+        ],
         "properties": {
-          "where": { "$ref": "#/$defs/text", "description": "Layer, question or sheet the issue affects." },
-          "note": { "$ref": "#/$defs/text" },
-          "status": { "enum": ["open", "fixed"] },
-          "date": { "$ref": "#/$defs/date" }
+          "where": {
+            "$ref": "#/$defs/text",
+            "description": "Layer, question or sheet the issue affects."
+          },
+          "note": {
+            "$ref": "#/$defs/text"
+          },
+          "status": {
+            "enum": [
+              "open",
+              "fixed"
+            ]
+          },
+          "date": {
+            "$ref": "#/$defs/date"
+          }
         }
       }
     },
     "inquiry": {
       "type": "object",
-      "required": ["compellingQuestion", "questions", "final"],
+      "required": [
+        "compellingQuestion",
+        "questions",
+        "final"
+      ],
       "properties": {
-        "compellingQuestion": { "$ref": "#/$defs/byLang" },
+        "compellingQuestion": {
+          "$ref": "#/$defs/byLang"
+        },
         "questions": {
-          "type": "array", "minItems": 1,
+          "type": "array",
+          "minItems": 1,
           "items": {
-            "type": "object", "required": ["id", "title", "task", "tools", "student", "answer"],
+            "type": "object",
+            "required": [
+              "id",
+              "title",
+              "task",
+              "tools",
+              "student",
+              "answer"
+            ],
             "properties": {
-              "id": { "type": "string", "pattern": "^q\\d+$" },
-              "title": { "$ref": "#/$defs/byLang" },
-              "task": { "$ref": "#/$defs/text", "description": "Teacher-facing description of the task." },
-              "tools": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/tool" } },
-              "student": { "$ref": "#/$defs/byLang" },
-              "fill": { "$ref": "#/$defs/byLang", "description": "Optional fill-in line. Use ________ for the blank." },
-              "lines": { "type": "integer", "minimum": 1, "maximum": 8, "description": "Optional. Writing lines under this question on the student sheet. Default 2 on a one-page sheet, 3 on a two-page sheet (a lesson with studentSupport)." },
+              "id": {
+                "type": "string",
+                "pattern": "^q\\d+$"
+              },
+              "title": {
+                "$ref": "#/$defs/byLang"
+              },
+              "task": {
+                "$ref": "#/$defs/text",
+                "description": "Teacher-facing description of the task."
+              },
+              "tools": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "$ref": "#/$defs/tool"
+                }
+              },
+              "student": {
+                "$ref": "#/$defs/byLang"
+              },
+              "fill": {
+                "$ref": "#/$defs/byLang",
+                "description": "Optional fill-in line. Use ________ for the blank."
+              },
+              "lines": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 8,
+                "description": "Optional. Writing lines under this question on the student sheet. Default 2 on a one-page sheet, 3 on a two-page sheet (a lesson with studentSupport)."
+              },
               "answer": {
                 "type": "object",
                 "properties": {
-                  "text": { "type": "string" },
+                  "where": {
+                    "type": "string",
+                    "description": "Where on the map a student finds it: the layer, bookmark, pop-up field or tool, and the value to expect. For example: Lexington and Concord pop-up, Dates field; Measure tool, Boston to Concord, about 16 miles (accept 15 to 17)."
+                  },
+                  "accept": {
+                    "type": "string",
+                    "description": "For reasoning questions: what a good answer includes, so a teacher can grade without a model answer."
+                  },
+                  "text": {
+                    "type": "string",
+                    "description": "Extra notes for the teacher, or the answer itself where a value is needed."
+                  },
                   "table": {
-                    "type": "object", "required": ["columns", "rows"],
+                    "type": "object",
+                    "required": [
+                      "columns",
+                      "rows"
+                    ],
                     "properties": {
-                      "caption": { "type": "string" },
-                      "columns": { "type": "array", "items": { "type": "string" } },
-                      "rows": { "type": "array", "items": { "type": "array", "items": { "type": "string" } } }
+                      "caption": {
+                        "type": "string"
+                      },
+                      "columns": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "rows": {
+                        "type": "array",
+                        "items": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      }
                     }
                   }
-                }
+                },
+                "description": "Teacher-only. Shown on the lesson's teacher page and in the teacher notes Word file, never on the lesson page, in Vera's file or in the AI prompt. Say where on the map the answer is found and what to accept; keep bare answer values for counts and tables."
               }
             }
           }
         },
         "final": {
-          "type": "object", "required": ["teacher", "student"],
+          "type": "object",
+          "required": [
+            "teacher",
+            "student"
+          ],
           "properties": {
-            "teacher": { "$ref": "#/$defs/text" },
-            "student": { "$ref": "#/$defs/byLang" },
-            "tools": { "type": "array", "items": { "$ref": "#/$defs/tool" } }
+            "teacher": {
+              "$ref": "#/$defs/text"
+            },
+            "student": {
+              "$ref": "#/$defs/byLang"
+            },
+            "tools": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/tool"
+              }
+            }
           }
         }
       }
@@ -120,32 +347,108 @@
       "type": "object",
       "description": "Optional. Extra help on the student sheet. A lesson with it gets a two-page sheet with section headings and more room to write.",
       "properties": {
-        "beforeYouStart": { "$ref": "#/$defs/byLang", "description": "Two or three sentences of context, so a student who missed the lesson can begin. Don't give away answers." },
-        "readingTheMap": { "$ref": "#/$defs/byLang", "description": "What the map's symbols mean, in plain words, checked against the web map." },
-        "tips": { "type": "array", "items": { "type": "string" }, "description": "Keys of tips in site.json sheetText.<language>.tips, such as popups." },
-        "reflection": { "$ref": "#/$defs/byLang", "description": "A closing question for students to look back on what the map showed them." }
+        "beforeYouStart": {
+          "$ref": "#/$defs/byLang",
+          "description": "Two or three sentences of context, so a student who missed the lesson can begin. Don't give away answers."
+        },
+        "readingTheMap": {
+          "$ref": "#/$defs/byLang",
+          "description": "What the map's symbols mean, in plain words, checked against the web map."
+        },
+        "tips": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Keys of tips in site.json sheetText.<language>.tips, such as popups."
+        },
+        "reflection": {
+          "$ref": "#/$defs/byLang",
+          "description": "A closing question for students to look back on what the map showed them."
+        }
       }
     },
     "teacherNotes": {
-      "type": "object", "required": ["beforeClass", "keyWords"],
+      "type": "object",
+      "required": [
+        "beforeClass",
+        "keyWords"
+      ],
       "properties": {
-        "beforeClass": { "$ref": "#/$defs/text" },
-        "misconceptions": { "type": "array", "items": { "type": "object", "required": ["claim", "response"], "properties": { "claim": { "$ref": "#/$defs/text" }, "response": { "$ref": "#/$defs/text" } } } },
-        "keyWords": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/text" } }
+        "beforeClass": {
+          "$ref": "#/$defs/text"
+        },
+        "misconceptions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "claim",
+              "response"
+            ],
+            "properties": {
+              "claim": {
+                "$ref": "#/$defs/text"
+              },
+              "response": {
+                "$ref": "#/$defs/text"
+              }
+            }
+          }
+        },
+        "keyWords": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/text"
+          }
+        }
       }
     },
     "standards": {
-      "type": "array", "minItems": 1,
-      "items": { "type": "object", "required": ["code", "text"], "properties": { "code": { "$ref": "#/$defs/text" }, "text": { "$ref": "#/$defs/text" } } }
-    },
-    "keyFacts": { "type": "array", "items": { "$ref": "#/$defs/text" }, "description": "Facts for the AI summary. Keep each one sourced." },
-    "languages": {
-      "type": "object", "required": ["en"],
-      "additionalProperties": {
-        "type": "object", "required": ["status"],
-        "properties": { "status": { "enum": ["draft", "final"] }, "note": { "type": "string" } }
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "code",
+          "text"
+        ],
+        "properties": {
+          "code": {
+            "$ref": "#/$defs/text"
+          },
+          "text": {
+            "$ref": "#/$defs/text"
+          }
+        }
       }
     },
-    "licence": { "$ref": "#/$defs/text" }
+    "languages": {
+      "type": "object",
+      "required": [
+        "en"
+      ],
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "status"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              "draft",
+              "final"
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "licence": {
+      "$ref": "#/$defs/text"
+    }
   }
 }

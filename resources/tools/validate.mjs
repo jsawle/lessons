@@ -44,12 +44,12 @@ for (const f of files) {
 // The versions table in site.json must match the code it describes.
 const parts = (site.app && site.app.parts) || {};
 const codeVersions = { "Page renderer": MMR.VERSION.renderer, "Lesson file format": MMR.VERSION.format, "Checker": MMR.VERSION.checker,
-  "Vera knowledge builder": MMR.VERSION.vera, "Word sheet builder": Sheet.VERSION, "Hub page builder": Hub.VERSION };
+  "Vera knowledge builder": MMR.VERSION.vera, "AI prompt builder": MMR.VERSION.prompt, "Word sheet builder": Sheet.VERSION, "Hub page builder": Hub.VERSION };
 for (const [k, v] of Object.entries(codeVersions)) if (parts[k] !== v) problems.push(`site.json app.parts["${k}"] is ${parts[k]} but the code says ${v}.`);
 
 // The Hub pages built from the lesson files must only use HTML that Hub keeps.
 if (good.length) {
-  const bundle = Hub.bundle(site, index.lessons.map((id) => good.find((l) => l.id === id)).filter(Boolean));
+  const bundle = Hub.bundle(site, index.lessons.map((id) => good.find((l) => l.id === id)).filter(Boolean), { sheetFileName: Sheet.fileName, teacherFileName: Sheet.teacherFileName });
   for (const p of Hub.checkBundle(bundle)) problems.push(`Hub: ${p}`);
 }
 report();

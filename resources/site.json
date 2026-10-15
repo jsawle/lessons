@@ -1,91 +1,234 @@
 {
-  "app": {
-    "name": "MapMaker resource pages (lab)",
-    "version": "0.10.0",
-    "parts": {
-      "Page renderer": "1.6",
-      "Word sheet builder": "1.2",
-      "Lesson file format": "1.2",
-      "Checker": "1.2",
-      "Vera knowledge builder": "1.1",
-      "Hub page builder": "1.6"
-    }
+ "app": {
+  "name": "MapMaker resource pages (lab)",
+  "version": "0.11.0",
+  "parts": {
+   "Page renderer": "2.0",
+   "Word sheet builder": "1.3",
+   "Lesson file format": "1.3",
+   "Checker": "1.3",
+   "Vera knowledge builder": "1.2",
+   "AI prompt builder": "1.0",
+   "Hub page builder": "2.0"
+  }
+ },
+ "hubDemo": {
+  "name": "MapMaker Lessons (demo)",
+  "siteId": "9c39add73ebf47068e1dac37f6353b8d",
+  "url": "https://mapmakerlessons-gis-4-schools.hub.arcgis.com",
+  "lessonsSlug": "lessons",
+  "lessonsTitle": "Lessons",
+  "lessonsIntro": "Lessons for Grade 8 US History, arranged by topic in the order most courses teach them. Each one pairs a MapMaker map with an inquiry, a Word student sheet in English and Spanish, and a separate teacher page with the answers.",
+  "distUrl": "https://jsawle.github.io/lessons/resources/dist",
+  "repoUrl": "https://github.com/jsawle/lessons",
+  "theme": {
+   "about": "Site colours the publishing notebook sets on the Hub site (Esri Calcite blue). Only these keys are changed.",
+   "header": {
+    "background": "#007AC2",
+    "text": "#FFFFFF"
+   },
+   "globalNav": {
+    "background": "#007AC2",
+    "text": "#FFFFFF"
+   },
+   "button": {
+    "background": "#007AC2",
+    "text": "#FFFFFF"
+   },
+   "body": {
+    "link": "#00619B"
+   }
+  }
+ },
+ "vera": {
+  "name": "Vera",
+  "url": "https://jsawle.github.io/Vera/vera_canvas_lab.html",
+  "note": "Vera's chat page. Lesson pages link to it with the lesson pre-filled; the embed appears on the Lessons page only."
+ },
+ "classroom": {
+  "about": "Share to Google Classroom button on each lesson page. It shares the lesson's MapMaker map, never the lesson page, which holds the answer notes. Follows Google's Classroom branding guidelines: approved wording, the official icon on the left (32 to 96 px, unaltered), Roboto Bold, a 20% black shade on the icon on hover, and the trademark notice in the page footer. The button is left out if icon is empty.",
+  "label": "Share to Google Classroom",
+  "shareUrl": "https://classroom.google.com/share",
+  "icon": "https://jsawle.github.io/lessons/resources/assets/brand/classroom-icon.png",
+  "iconSize": 32,
+  "font": "https://jsawle.github.io/lessons/resources/assets/fonts/roboto-latin-700-normal.woff2",
+  "notice": "Google Classroom is a trademark of Google LLC.",
+  "permissionsUrl": "https://www.google.com/permissions/"
+ },
+ "mapmaker": {
+  "label": "MapMaker",
+  "portalUrl": "https://mpmkr.maps.arcgis.com",
+  "appId": "0cd1cdee853c413a84bfe4b9a6931f0d"
+ },
+ "hub": {
+  "name": "MapMaker Educator Support Hub",
+  "url": "https://mapmaker-support-hub-mpmkr.hub.arcgis.com",
+  "nav": [
+   {
+    "label": "Home",
+    "path": "/"
+   },
+   {
+    "label": "Lessons",
+    "path": "/pages/lessons"
+   },
+   {
+    "label": "How To",
+    "path": "/pages/how-to"
+   },
+   {
+    "label": "About",
+    "path": "/pages/about-mapmaker"
+   },
+   {
+    "label": "More",
+    "path": "/pages/more"
+   }
+  ],
+  "feedbackPath": "/pages/feedback",
+  "subjectPaths": {
+   "World Cultures and Geography": "/pages/world-cultures-and-geography",
+   "History": "/pages/history",
+   "Earth Science": "/pages/earth-science",
+   "Life Science": "/pages/life-science"
   },
-  "hubDemo": {
-    "name": "MapMaker Lessons (demo)",
-    "siteId": "9c39add73ebf47068e1dac37f6353b8d",
-    "url": "https://mapmakerlessons-gis-4-schools.hub.arcgis.com",
-    "lessonsSlug": "lessons",
-    "lessonsTitle": "Lessons",
-    "lessonsIntro": "Example lessons for Grade 8 US History. Each one pairs a MapMaker map with an inquiry, a Word student sheet in English and Spanish, and teacher notes.",
-    "distUrl": "https://jsawle.github.io/lessons/resources/dist",
-    "repoUrl": "https://github.com/jsawle/lessons",
-    "theme": {
-      "about": "Site colours the publishing notebook sets on the Hub site (Esri Calcite blue). Only these keys are changed.",
-      "header": { "background": "#007AC2", "text": "#FFFFFF" },
-      "globalNav": { "background": "#007AC2", "text": "#FFFFFF" },
-      "button": { "background": "#007AC2", "text": "#FFFFFF" },
-      "body": { "link": "#00619B" }
-    }
+  "coursePaths": {
+   "US History": "/pages/us-history-ngl",
+   "World History": "/pages/world-history-ngl"
+  }
+ },
+ "tools": {
+  "bookmarks": {
+   "label": "Bookmarks",
+   "howTo": "navigating-mapmaker",
+   "howToTitle": "Navigating MapMaker"
   },
-  "vera": {
-    "name": "Vera",
-    "url": "https://jsawle.github.io/Vera/vera_canvas_lab.html"
+  "zoom": {
+   "label": "Zoom",
+   "howTo": "navigating-mapmaker",
+   "howToTitle": "Navigating MapMaker"
   },
-  "classroom": {
-    "about": "Share to Google Classroom button on each lesson page. It shares the lesson's MapMaker map, never the lesson page, which holds the answer notes. Follows Google's Classroom branding guidelines: approved wording, the official icon on the left (32 to 96 px, unaltered), Roboto Bold, a 20% black shade on the icon on hover, and the trademark notice in the page footer. The button is left out if icon is empty.",
-    "label": "Share to Google Classroom",
-    "shareUrl": "https://classroom.google.com/share",
-    "icon": "https://jsawle.github.io/lessons/resources/assets/brand/classroom-icon.png",
-    "iconSize": 32,
-    "font": "https://jsawle.github.io/lessons/resources/assets/fonts/roboto-latin-700-normal.woff2",
-    "notice": "Google Classroom is a trademark of Google LLC.",
-    "permissionsUrl": "https://www.google.com/permissions/"
+  "popups": {
+   "label": "Pop-ups",
+   "howTo": "explore-layers-and-data",
+   "howToTitle": "Explore Layers and Data"
   },
-  "mapmaker": {
-    "label": "MapMaker",
-    "portalUrl": "https://mpmkr.maps.arcgis.com",
-    "appId": "0cd1cdee853c413a84bfe4b9a6931f0d"
+  "layers": {
+   "label": "Map layers",
+   "howTo": "explore-layers-and-data",
+   "howToTitle": "Explore Layers and Data"
   },
-  "hub": {
-    "name": "MapMaker Educator Support Hub",
-    "url": "https://mapmaker-support-hub-mpmkr.hub.arcgis.com",
-    "nav": [
-      { "label": "Home", "path": "/" },
-      { "label": "Lessons", "path": "/pages/lessons" },
-      { "label": "How To", "path": "/pages/how-to" },
-      { "label": "About", "path": "/pages/about-mapmaker" },
-      { "label": "More", "path": "/pages/more" }
-    ],
-    "feedbackPath": "/pages/feedback",
-    "subjectPaths": {
-      "World Cultures and Geography": "/pages/world-cultures-and-geography",
-      "History": "/pages/history",
-      "Earth Science": "/pages/earth-science",
-      "Life Science": "/pages/life-science"
-    },
-    "coursePaths": {
-      "US History": "/pages/us-history-ngl",
-      "World History": "/pages/world-history-ngl"
-    }
+  "legend": {
+   "label": "Legend",
+   "howTo": "explore-layers-and-data",
+   "howToTitle": "Explore Layers and Data"
   },
-  "tools": {
-    "bookmarks": { "label": "Bookmarks", "howTo": "navigating-mapmaker", "howToTitle": "Navigating MapMaker" },
-    "zoom": { "label": "Zoom", "howTo": "navigating-mapmaker", "howToTitle": "Navigating MapMaker" },
-    "popups": { "label": "Pop-ups", "howTo": "explore-layers-and-data", "howToTitle": "Explore Layers and Data" },
-    "layers": { "label": "Map layers", "howTo": "explore-layers-and-data", "howToTitle": "Explore Layers and Data" },
-    "legend": { "label": "Legend", "howTo": "explore-layers-and-data", "howToTitle": "Explore Layers and Data" },
-    "measure": { "label": "Measure", "howTo": "measure-with-mapmaker", "howToTitle": "Measure with MapMaker" },
-    "sketch": { "label": "Sketch", "howTo": "sketch-on-a-map", "howToTitle": "Sketch on a Map" }
+  "measure": {
+   "label": "Measure",
+   "howTo": "measure-with-mapmaker",
+   "howToTitle": "Measure with MapMaker"
   },
-  "sheetText": {
-    "en": { "name": "Name", "date": "Date", "bigQuestion": "Big question:", "yourAnswer": "Your answer:", "openMap": "Open the map in MapMaker:", "subtitle": "Student sheet",
-      "beforeYouStart": "Before you start", "readingTheMap": "Reading the map", "questions": "Questions", "lookingBack": "Looking back", "tip": "Tip:",
-      "tips": { "popups": "If a pop-up says 1 of 2 (or more), more than one thing is at that spot. Use the arrows in the pop-up to see each one." } },
-    "es": { "name": "Nombre", "date": "Fecha", "bigQuestion": "Pregunta central:", "yourAnswer": "Tu respuesta:", "openMap": "Abre el mapa en MapMaker:", "subtitle": "Hoja del estudiante",
-      "beforeYouStart": "Antes de empezar", "readingTheMap": "Cómo leer el mapa", "questions": "Preguntas", "lookingBack": "Reflexión", "tip": "Consejo:",
-      "tips": { "popups": "Si una ventana emergente dice 1 de 2 (o más), hay más de un elemento en ese lugar. Usa las flechas de la ventana para ver cada uno." } }
+  "sketch": {
+   "label": "Sketch",
+   "howTo": "sketch-on-a-map",
+   "howToTitle": "Sketch on a Map"
+  }
+ },
+ "sheetText": {
+  "en": {
+   "name": "Name",
+   "date": "Date",
+   "bigQuestion": "Big question:",
+   "yourAnswer": "Your answer:",
+   "openMap": "Open the map in MapMaker:",
+   "subtitle": "Student sheet",
+   "beforeYouStart": "Before you start",
+   "readingTheMap": "Reading the map",
+   "questions": "Questions",
+   "lookingBack": "Looking back",
+   "tip": "Tip:",
+   "tips": {
+    "popups": "If a pop-up says 1 of 2 (or more), more than one thing is at that spot. Use the arrows in the pop-up to see each one."
+   },
+   "mapData": "Map data:",
+   "sheetUrl": "Map address:",
+   "teacherSubtitle": "Teacher notes",
+   "whereToFind": "Where to find it on the map:",
+   "accept": "Accept answers that:",
+   "key": "Answer key:"
   },
-  "languageNames": { "en": "English", "es": "Español" },
-  "languageNamesInEnglish": { "en": "English", "es": "Spanish" }
+  "es": {
+   "name": "Nombre",
+   "date": "Fecha",
+   "bigQuestion": "Pregunta central:",
+   "yourAnswer": "Tu respuesta:",
+   "openMap": "Abre el mapa en MapMaker:",
+   "subtitle": "Hoja del estudiante",
+   "beforeYouStart": "Antes de empezar",
+   "readingTheMap": "Cómo leer el mapa",
+   "questions": "Preguntas",
+   "lookingBack": "Reflexión",
+   "tip": "Consejo:",
+   "tips": {
+    "popups": "Si una ventana emergente dice 1 de 2 (o más), hay más de un elemento en ese lugar. Usa las flechas de la ventana para ver cada uno."
+   },
+   "mapData": "Datos del mapa:",
+   "sheetUrl": "Dirección del mapa:"
+  }
+ },
+ "languageNames": {
+  "en": "English",
+  "es": "Español"
+ },
+ "languageNamesInEnglish": {
+  "en": "English",
+  "es": "Spanish"
+ },
+ "units": {
+  "about": "Topics for the course, in the order most courses teach them. A lesson's unit must be one of these; the Lessons page is grouped and ordered by this list.",
+  "US History": [
+   "Native nations and first contact",
+   "Exploration and the thirteen colonies",
+   "Road to revolution and the Revolution",
+   "Confederation and the Constitution",
+   "The early republic",
+   "Sectional economies: industry, cities and immigration",
+   "Age of Jackson",
+   "Westward expansion and Manifest Destiny",
+   "Reform and the road to war",
+   "The Civil War",
+   "Reconstruction",
+   "After Reconstruction"
+  ]
+ },
+ "standardsOrder": {
+  "about": "Prefix order for the standards list: national frameworks first, then state examples in this order, then any other prefix alphabetically.",
+  "prefixes": [
+   "C3",
+   "NGS",
+   "CCSS",
+   "TX",
+   "FL",
+   "CA"
+  ],
+  "labels": {
+   "C3": "C3 Framework",
+   "NGS": "National Geography Standards",
+   "CCSS": "Common Core",
+   "TX": "Texas TEKS",
+   "FL": "Florida",
+   "CA": "California"
+  }
+ },
+ "aiPrompt": {
+  "about": "Prompt teachers can paste into the AI tool their school allows. The lesson's map, layers, bookmarks and questions are added after these rules, from the lesson file, so the prompt never names a layer the map doesn't have.",
+  "label": "Prompt for your own AI",
+  "rules": [
+   "You are helping a teacher make classroom questions for a National Geographic MapMaker lesson. The map, its layers, what each pop-up shows, its bookmarks and the questions already written are listed below.",
+   "Use only the layers, pop-up contents and bookmarks listed. Do not invent layers, tools, data or map features. If a question would need information this map does not show, say so instead of inventing it.",
+   "Every question must be answerable by a student who opens the map in MapMaker and uses it: clicking pop-ups, reading the legend, using bookmarks, measuring or turning layers on and off. Name the exact layer or bookmark a student should use.",
+   "Write for grade 8 (age 13 to 14), in short sentences. Do not include answers unless the teacher asks for them, and never write material for students that contains the answers.",
+   "MapMaker has these tools: Basemaps, Open map, Map layers (turn layers on and off), Add layer, Legend, Measure (miles and feet), Sketch, 2D/3D, Bookmarks and pop-ups. It has no time slider or filter unless listed below. A pop-up that says 1 of 2 means more than one feature is at that spot; use the arrows to see each one."
+  ]
+ }
 }
