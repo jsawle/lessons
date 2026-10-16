@@ -10,7 +10,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "2.6";
+  var VERSION = "2.7";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
@@ -101,16 +101,16 @@
     ".mml-card-title{display:block;font-weight:700;font-size:1.05rem;color:#00619B;text-decoration:underline}",
     ".mml-card-text{display:block;color:#4A4A4A;font-size:.95rem}",
     ".mml .mml-lessons{list-style:none;padding:0;margin:0 0 1.4em;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1em}",
-    ".mml-lessons>li{position:relative;height:17.5rem;overflow:hidden;border:1px solid #D4D4D4;border-top:4px solid #007AC2;border-radius:4px;padding:.9em 1.1em 2.6em;margin:0;background:#fff;transition:transform .2s ease,box-shadow .2s ease,border-top-width .2s ease}",
+    ".mml-lessons>li{display:flex;flex-direction:column;min-height:16rem;border:1px solid #D4D4D4;border-top:4px solid #007AC2;border-radius:4px;padding:.9em 1.1em .9em;margin:0;background:#fff;transition:transform .2s ease,box-shadow .2s ease,border-top-width .2s ease}",
     ".mml-lessons>li:hover,.mml-lessons>li:focus-within{transform:translateY(-4px);box-shadow:0 8px 22px rgba(0,0,0,.14);border-top-width:8px}",
     ".mml-lessons>li:hover h3 a,.mml-lessons>li:focus-within h3 a{color:#004874}",
     ".mml .mml-lessons h3{display:block;border:0;font-size:1.3rem;line-height:1.25;font-weight:800;margin:.1em 0 .35em;padding:0}",
     ".mml .mml-lessons h3 a{text-decoration:none}",
     ".mml .mml-lessons h3 a:hover,.mml .mml-lessons h3 a:focus-visible{text-decoration:underline}",
-    ".mml-lessons .mml-sum{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}",
-    ".mml-lessons .mml-tn{position:absolute;left:1.1em;right:1.1em;bottom:.8em;margin:0}",
+    ".mml-lessons .mml-sum{flex:1;margin-bottom:.9em}",
+    ".mml-lessons .mml-tn{margin:0;padding-top:.6em;border-top:1px solid #EAEAEA}",
     "@media (max-width:900px){.mml .mml-lessons{grid-template-columns:repeat(2,minmax(0,1fr))}}",
-    "@media (max-width:640px){.mml .mml-lessons{grid-template-columns:1fr}.mml-lessons>li{height:auto;padding-bottom:2.6em}}",
+    "@media (max-width:640px){.mml .mml-lessons{grid-template-columns:1fr}.mml-lessons>li{min-height:0}}",
     "@media (prefers-reduced-motion:reduce){.mml-lessons>li{transition:none}.mml-lessons>li:hover{transform:none}}",
     ".mml-foot{background:#004874;color:#fff;border-radius:4px;padding:20px 24px 16px;font-size:.92rem}",
     ".mml.mml-foot p{color:#fff}",

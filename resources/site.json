@@ -1,15 +1,15 @@
 {
  "app": {
   "name": "MapMaker resource pages (lab)",
-  "version": "0.12.1",
+  "version": "0.12.2",
   "parts": {
-   "Page renderer": "2.6",
+   "Page renderer": "2.7",
    "Word sheet builder": "1.4",
    "Lesson file format": "1.4",
    "Checker": "1.4",
    "Vera knowledge builder": "1.3",
    "AI prompt builder": "1.1",
-   "Hub page builder": "2.6"
+   "Hub page builder": "2.7"
   }
  },
  "hubDemo": {
