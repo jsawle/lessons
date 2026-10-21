@@ -37,7 +37,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** TX 8.4(C); TX 8.10(A); TX 8.10(C); FL SS.8.A.3.6; C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.6.0, updated 2026-10-21.
+**Lesson content version:** 0.6.1, updated 2026-10-21.
 
 ### Roads, Trails, and Rails West
 **Lesson ID:** roads-trails-and-rails-west
@@ -71,7 +71,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** TX 8.6(B); TX 8.6(C); TX 8.11(A); FL SS.8.A.4.1; C3 D2.Geo.7.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.5.0, updated 2026-10-21.
+**Lesson content version:** 0.5.1, updated 2026-10-21.
 
 ### US Slavery and Slave Trade, 1850
 **Lesson ID:** us-slavery-and-slave-trade-1850
@@ -107,7 +107,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** FL SS.8.A.5.2; TX 8.10(A); C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.6.0, updated 2026-10-21.
+**Lesson content version:** 0.6.1, updated 2026-10-21.
 
 ### Civil War Battlefields
 **Lesson ID:** civil-war-battlefields
@@ -143,7 +143,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** FL SS.8.A.5.4; TX 8.10(A); TX 8.10(C); C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.5.0, updated 2026-10-21.
+**Lesson content version:** 0.5.1, updated 2026-10-21.
 
 ### The Battle of Vicksburg
 **Lesson ID:** the-battle-of-vicksburg
@@ -176,7 +176,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** FL SS.8.A.5.1; TX 8.10(C); C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.5.0, updated 2026-10-21.
+**Lesson content version:** 0.5.1, updated 2026-10-21.
 
 ### We the People: Representation and Ratification, 1787–1791
 **Lesson ID:** we-the-people-1787-1791
