@@ -2,15 +2,15 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.4",
   "id": "civil-war-battlefields",
-  "contentVersion": "0.4.1",
+  "contentVersion": "0.4.2",
   "status": "draft",
-  "updated": "2026-10-15",
+  "updated": "2026-10-21",
   "reviewed": null,
   "title": "Civil War Battlefields",
   "sheetTitle": {
     "es": "Campos de batalla de la Guerra Civil"
   },
-  "summary": "See how the United States split in 1861, compare the railroads of the North and the South, and find where the war's battles were fought.",
+  "summary": "See how the United States was divided by 1863, compare the railroads of the North and the South, and find where the war's battles were fought.",
   "subject": "History",
   "course": "US History",
   "unit": "The Civil War",
@@ -84,8 +84,8 @@
   ],
   "inquiry": {
     "compellingQuestion": {
-      "en": "How did the geography of a divided nation shape the Civil War?",
-      "es": "¿Cómo influyó la geografía de una nación dividida en la Guerra Civil?"
+      "en": "How did the geography of a divided nation shape the Civil War, as the map shows the country in 1863?",
+      "es": "¿Cómo influyó la geografía de una nación dividida en la Guerra Civil, tal como el mapa muestra el país en 1863?"
     },
     "questions": [
       {
@@ -94,18 +94,18 @@
           "en": "A nation divided",
           "es": "Una nación dividida"
         },
-        "task": "Open the legend and match each state's shade in U.S. Civil War States and Territories (1863) to its group: which seceded before Fort Sumter, which after, and which slave states stayed in the Union? State names are labeled on the map.",
+        "task": "Use the legend for U.S. Civil War States and Territories (1863) to sort the states: which seceded before Fort Sumter, which after, and which slave states stayed in the Union? Then spot the state on this 1863 layer that did not exist in 1861 (West Virginia), as the way in to how the map's date matters.",
         "tools": [
           "legend",
           "zoom"
         ],
         "student": {
-          "en": "Open the legend and find the groups for U.S. Civil War States and Territories (1863). Match each state's shade to its group. Which states left the Union before the attack on Fort Sumter in April 1861? Which left after? Which slave states stayed in the Union?",
-          "es": "Abre la leyenda y busca los grupos de la capa U.S. Civil War States and Territories (1863) (estados y territorios de la Guerra Civil de EE. UU.). Relaciona el tono de cada estado con su grupo. ¿Qué estados dejaron la Unión antes del ataque al fuerte Sumter en abril de 1861? ¿Cuáles se fueron después? ¿Qué estados esclavistas se quedaron en la Unión?"
+          "en": "Open the legend and find the groups for U.S. Civil War States and Territories (1863). Match each state's shade to its group. Which states left the Union before the attack on Fort Sumter in April 1861? Which left after? Which slave states stayed in the Union? The layer shows the country in 1863: which state on it did not exist in 1861?",
+          "es": "Abre la leyenda y busca los grupos de la capa U.S. Civil War States and Territories (1863) (estados y territorios de la Guerra Civil de EE. UU.). Relaciona el tono de cada estado con su grupo. ¿Qué estados dejaron la Unión antes del ataque al fuerte Sumter en abril de 1861? ¿Cuáles se fueron después? ¿Qué estados esclavistas se quedaron en la Unión? La capa muestra el país en 1863: ¿qué estado del mapa no existía en 1861?"
         },
         "lines": 5,
         "answer": {
-          "where": "Legend for U.S. Civil War States and Territories (1863): the groups are Union Free State, Union slave state (border state), Slave state seceding before Fort Sumter, April 1861, Slave state seceding after Fort Sumter, April 1861, and Territories. State names are labels on the layer; zoom in if a label is hidden. Counts from the layer: 7 before, 4 after, 5 border states.",
+          "where": "Legend for U.S. Civil War States and Territories (1863): the groups are Union Free State, Union slave state (border state), Slave state seceding before Fort Sumter, April 1861, Slave state seceding after Fort Sumter, April 1861, and Territories. State names are labels on the layer; zoom in if a label is hidden. Counts from the layer: 7 before, 4 after, 5 border states. West Virginia (admitted June 20, 1863) is the state that did not exist in 1861; in 1861 its counties were part of Virginia, which seceded.",
           "table": {
             "caption": "States by legend group on the map, 1863",
             "columns": [
@@ -209,7 +209,7 @@
     }
   },
   "objectives": [
-    "Sort the states on the 1863 map into those that seceded before Fort Sumter, those that seceded after, and the slave states that stayed in the Union, using the legend.",
+    "Sort the states on the 1863 map into those that seceded before Fort Sumter, those that seceded after, and the slave states that stayed in the Union, using the legend, and notice that the layer shows 1863, so West Virginia appears as a Union state that did not exist in 1861.",
     "Locate Washington, D.C., identify the two states that border it, and explain from their legend shades why Maryland staying in the Union mattered.",
     "Compare the density of railroads north and south of the Boundary between Union and Confederacy and say why that difference mattered in a war.",
     "Find battlefields in Virginia, Maryland and Pennsylvania, read their names and sizes from the pop-ups, and identify which were fought in Union states.",

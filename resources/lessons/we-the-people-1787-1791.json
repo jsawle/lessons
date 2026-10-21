@@ -2,9 +2,9 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.4",
   "id": "we-the-people-1787-1791",
-  "contentVersion": "0.3.1",
+  "contentVersion": "0.3.2",
   "status": "draft",
-  "updated": "2026-10-15",
+  "updated": "2026-10-21",
   "reviewed": null,
   "title": "We the People: Representation and Ratification, 1787–1791",
   "sheetTitle": {
@@ -37,7 +37,7 @@
       {
         "name": "Population in 1790: free and enslaved",
         "shows": "A pie on each state: free people (blue) and enslaved people (orange-red) in the 1790 census, with bigger pies for more people. Each pop-up, titled with the state's name, gives the total, the number enslaved and the percentage, the number counted under the three-fifths clause, the state's House seats in 1793, its two senators, and the seats it would have had if enslaved people had been counted in full or not at all.",
-        "source": "1790 census figures as tabulated on Wikipedia, checked against the 1793 House seats; seats from the National Archives; ratio from the U.S. Census Bureau; state outlines from Natural Earth"
+        "source": "1790 census: U.S. Census Bureau, Return of the Whole Number of Persons (1791), checked against the 1793 House seats; seats: Apportionment Act of April 14, 1792 (National Archives); ratio: U.S. Census Bureau; state outlines: Natural Earth. The layer item's own credits still cite Wikipedia's tabulation; the figures were verified against the Census Bureau."
       },
       {
         "name": "House seats in 1793",

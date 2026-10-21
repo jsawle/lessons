@@ -2,9 +2,9 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.4",
   "id": "revolutionary-battles-1775-1776",
-  "contentVersion": "0.5.1",
+  "contentVersion": "0.5.2",
   "status": "draft",
-  "updated": "2026-10-15",
+  "updated": "2026-10-21",
   "reviewed": null,
   "title": "1775–1776 Revolutionary Battles",
   "sheetTitle": {
@@ -285,7 +285,7 @@
   "standards": [
     {
       "code": "TX 8.4(C)",
-      "text": "Explain the issues surrounding important events of the American Revolution, including declaring independence; fighting the battles of Lexington and Concord, Saratoga, and Yorktown; enduring the winter at Valley Forge; and signing the Treaty of Paris of 1783"
+      "text": "Explain the issues surrounding important events of the American Revolution, including declaring independence; fighting the battles of Lexington and Concord, Saratoga, and Yorktown; enduring the winter at Valley Forge; and signing the Treaty of Paris of 1783 (partial: this lesson covers the opening phase of the Revolution, 1775–1776)."
     },
     {
       "code": "TX 8.10(A)",

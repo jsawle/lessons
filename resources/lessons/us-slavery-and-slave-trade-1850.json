@@ -2,9 +2,9 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.4",
   "id": "us-slavery-and-slave-trade-1850",
-  "contentVersion": "0.4.1",
+  "contentVersion": "0.5.0",
   "status": "draft",
-  "updated": "2026-10-15",
+  "updated": "2026-10-21",
   "reviewed": null,
   "title": "US Slavery and Slave Trade, 1850",
   "sheetTitle": {
@@ -103,15 +103,15 @@
           "en": "Free states and slave states",
           "es": "Estados libres y estados esclavistas"
         },
-        "task": "Open the legend for US States and Territories 1850 and count the states in the Free states group and the Slave states group (click a state to read its name in the pop-up). Then click two states to read when each became free or slave. Where is the dividing line in the East?",
+        "task": "Use the legend for US States and Territories 1850 to tell the four groups apart (free, free by compromise, slave, slave by compromise), name a state in each, read two states' years from their pop-ups, and find the eastern line between free and slave states. The layer draws West Virginia separately and Missouri twice, so this question asks for groups and examples, not a count.",
         "tools": [
           "legend",
           "popups",
           "zoom"
         ],
         "student": {
-          "en": "Open the legend and find the four groups for US States and Territories 1850. Count the states shaded as Free states and as Slave states; click a state to read its name. Then click two states to read what year each became free or slave. Where is the line between free and slave states in the East?",
-          "es": "Abre la leyenda y busca los cuatro grupos de la capa US States and Territories 1850 (estados y territorios de EE. UU. en 1850). Cuenta los estados sombreados como Free states (estados libres) y como Slave states (estados esclavistas); haz clic en un estado para leer su nombre. Luego haz clic en dos estados para leer en qué año cada uno se volvió libre o esclavista. ¿Dónde está la línea entre estados libres y esclavistas en el Este?"
+          "en": "Open the legend and find the four groups for US States and Territories 1850. Which groups are free and which allow slavery? Click a state in each group to read its name, and click two states to read what year each became free or slave. Where is the line between free and slave states in the East?",
+          "es": "Abre la leyenda y busca los cuatro grupos de la capa US States and Territories 1850 (estados y territorios de EE. UU. en 1850). ¿Qué grupos son libres y cuáles permiten la esclavitud? Haz clic en un estado de cada grupo para leer su nombre, y en dos estados para leer en qué año cada uno se volvió libre o esclavista. ¿Dónde está la línea entre estados libres y esclavistas en el Este?"
         },
         "lines": 5,
         "answer": {
@@ -141,7 +141,8 @@
               ]
             ]
           },
-          "text": "Historically there were 15 free and 15 slave states in 1850 (Iowa and California free, Texas slave). The legend groups split them by how they became free or slave, so the counts students get depend on which groups they add together; the reasoning matters more than the number."
+          "text": "Historically there were 15 free and 15 slave states in 1850 (Iowa and California free, Texas slave). The legend groups split them by how they became free or slave, so the counts students get depend on which groups they add together; the reasoning matters more than the number.",
+          "accept": "One state correctly named for each of the four legend groups; two state years read from pop-ups; the eastern line described as the southern border of Pennsylvania and then the Ohio River. Do not mark on counts: the layer's groups make a count ambiguous."
         }
       },
       {
@@ -220,7 +221,7 @@
     }
   },
   "objectives": [
-    "Count the free and slave states on the 1850 map using the four legend groups, and locate the dividing line in the East.",
+    "Use the legend to tell free states and slave states apart, including those set by compromise, and locate the eastern line between them.",
     "Read the year each state became free or slave from its pop-up, and the year of the Missouri Compromise Line from its pop-up.",
     "Explain why Missouri, a slave state lying mostly north of the Missouri Compromise Line, was an exception.",
     "Trace the internal slave-trade routes from Virginia to the Gulf coast and the Underground Railroad routes north to the Great Lakes and Canada, naming states and towns from the map.",
@@ -266,7 +267,7 @@
     }
   },
   "teacherNotes": {
-    "beforeClass": "Only US 1850 Original Map is off when the map opens (the scanned source map, worth comparing with the traced layers). For question 3, students turn Underground Railroad Approximate Routes off so the slave-trade routes stand out.",
+    "beforeClass": "Only US 1850 Original Map is off when the map opens (the scanned source map, worth comparing with the traced layers). For question 3, students turn Underground Railroad Approximate Routes off so the slave-trade routes stand out. The states layer draws West Virginia (a state only from 1863) and draws Missouri twice, so question 1 asks for the legend groups and examples rather than a count.",
     "misconceptions": [
       {
         "claim": "Freedom seekers were safe once they reached a free state.",

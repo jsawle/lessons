@@ -2,9 +2,9 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.4",
   "id": "louisiana-purchase-1803-1806",
-  "contentVersion": "0.3.1",
+  "contentVersion": "0.4.0",
   "status": "draft",
-  "updated": "2026-10-15",
+  "updated": "2026-10-21",
   "reviewed": null,
   "title": "The Louisiana Purchase and the Corps of Discovery, 1803–1806",
   "sheetTitle": {
@@ -41,13 +41,13 @@
       },
       {
         "name": "Biomes",
-        "shows": "Today's biomes, shaded by type; each pop-up names the biome (first line), the realm and the ecoregion.",
+        "shows": "Today's biomes, shaded by type; each pop-up names the biome (first line), the realm and the ecoregion (a modern reference layer, not a historical reconstruction).",
         "source": "RESOLVE Ecoregions 2017, via Esri (MapMaker catalogue)",
         "offAtStart": true
       },
       {
         "name": "United States Watersheds",
-        "shows": "River basins outlined in brown, from the 22 largest regions (Hydrologic Unit Code 2s, such as Ohio Region and Missouri Region) down to small watersheds as you zoom in; each pop-up names the basin and lists the states it touches.",
+        "shows": "River basins outlined in brown, from the 22 largest regions (Hydrologic Unit Code 2s, such as Ohio Region and Missouri Region) down to small watersheds as you zoom in; each pop-up names the basin and lists the states it touches (a modern reference layer, not a historical reconstruction).",
         "source": "U.S. Geological Survey Watershed Boundary Dataset, via Esri (MapMaker catalogue)",
         "offAtStart": true
       },
@@ -66,8 +66,8 @@
   "knownIssues": [],
   "inquiry": {
     "compellingQuestion": {
-      "en": "What did the Louisiana Purchase add to the United States, and whose land was it?",
-      "es": "¿Qué le añadió la compra de Luisiana a Estados Unidos, y de quién era esa tierra?"
+      "en": "What did the Louisiana Purchase add to the United States, and why did the Mississippi River matter so much?",
+      "es": "¿Qué le añadió la compra de Luisiana a Estados Unidos, y por qué importaba tanto el río Misisipi?"
     },
     "questions": [
       {
@@ -171,10 +171,10 @@
       }
     ],
     "final": {
-      "teacher": "Students answer with evidence from at least two layers, and recognize that the map has no layer of the Native nations whose land this was: no pop-up names them. Accept answers that give the purchase's size and price from the pop-up, use the watersheds or trail as evidence of what the land offered (rivers, plains, a route west), and answer the 'whose land' half from the National Park Service figure in Before you start (more than 50 Tribal Nations met) with their own reasoning that the land was bought from France, not from the people living there. Some ways to do it: a paragraph; sketch pins for New Orleans, where control of the Mississippi mattered to western farmers, and for the places the Corps met Native nations, with notes (sketches are not saved, so students should screenshot or describe them); or a short talk using the map.",
+      "teacher": "Students answer with evidence from at least two layers. Accept answers that give the purchase's size and price from the pop-up and use the watersheds, rivers or trail as evidence of what the land offered (rivers to the Gulf, plains, a route west) and why New Orleans and the Mississippi mattered to western farmers. Some ways to do it: a paragraph; sketch pins for New Orleans and for two places on the trail, with notes (sketches are not saved, so students should screenshot or describe them); or a short talk using the map. The question of whose land this was is in Looking back: the map has no Native nations layer, so it is answered from Before you start (the Corps met more than 50 Tribal Nations) and reasoning, not from the map.",
       "student": {
-        "en": "Answer the big question using evidence from at least two layers. Remember that the map has no layer for the Native nations who already lived on this land; use what Before you start says about them. You can write a paragraph, sketch on the map, or both.",
-        "es": "Responde la pregunta central con evidencia de al menos dos capas. El mapa no tiene una capa de los pueblos indígenas que ya vivían allí; usa lo que dice Antes de empezar sobre ellos. Puedes escribir un párrafo, dibujar en el mapa o ambas cosas."
+        "en": "Answer the big question using evidence from at least two layers. You can write a paragraph, sketch on the map, or both.",
+        "es": "Responde la pregunta central con evidencia de al menos dos capas. Puedes escribir un párrafo, dibujar en el mapa o ambas cosas."
       },
       "tools": [
         "sketch"
@@ -223,8 +223,8 @@
       "popups"
     ],
     "reflection": {
-      "en": "What did the map show you about the Louisiana Purchase that you might not have noticed from reading alone?",
-      "es": "¿Qué te mostró el mapa sobre la compra de Luisiana que quizá no habrías notado solo con la lectura?"
+      "en": "The United States bought this land from France. Before you start says the Corps of Discovery met more than 50 Tribal Nations along the way. Whose land was it, and what does the map leave out?",
+      "es": "Estados Unidos compró esta tierra a Francia. Antes de empezar dice que el Cuerpo de Descubrimiento se encontró con más de 50 naciones tribales en el camino. ¿De quién era la tierra, y qué deja fuera el mapa?"
     }
   },
   "teacherNotes": {
