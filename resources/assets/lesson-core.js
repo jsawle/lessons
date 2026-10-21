@@ -6,7 +6,7 @@
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  var VERSION = { renderer: "2.7", format: "1.4", checker: "1.4", vera: "1.3", prompt: "1.1" };
+  var VERSION = { renderer: "2.8", format: "1.5", checker: "1.5", vera: "1.3", prompt: "1.1" };
   var HEX32 = /^[0-9a-f]{32}$/i;
   var DATE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -51,6 +51,11 @@
 
   function hubUrl(site, path) {
     return String(site.hub.url).replace(/\/+$/, "") + path;
+  }
+  /* Report-a-problem link that names the lesson, so a report says which lesson it is about. */
+  function feedbackUrl(site, lesson) {
+    var base = hubUrl(site, site.hub.feedbackPath), key = site.hub.feedbackQuery || "lesson";
+    return lesson ? base + (base.indexOf("?") < 0 ? "?" : "&") + encodeURIComponent(key) + "=" + encodeURIComponent(lesson.id) : base;
   }
 
   /* The How To pages a lesson needs, worked out from the tools its questions use. */
@@ -257,6 +262,15 @@
         (q.answer.table.rows || []).forEach(function (r, j) { need(r.length === cols, w + ": answer table row " + (j + 1) + " should have " + cols + " cells."); });
       }
     });
+    var cores = (inq.questions || []).filter(function (q) { return q.core === true; }).length;
+    need(cores === 1, "Exactly one question should have core: true (the one to use if there is only time for one); found " + cores + ".");
+    (inq.questions || []).forEach(function (q, i) {
+      var w = "Question " + (i + 1);
+      need(Number.isInteger(q.minutes) && q.minutes >= 5 && q.minutes <= 30, w + ": minutes should be a whole number from 5 to 30.");
+      need(Array.isArray(q.frontOfClass) && q.frontOfClass.length >= 2 && q.frontOfClass.every(str), w + ": frontOfClass needs at least two steps.");
+    });
+    var diff = lesson.differentiation || {};
+    need(str(diff.support) && str(diff.stretch), "differentiation needs support and stretch, one line each.");
     var fin = inq.final || {};
     need(str(fin.teacher), "inquiry.final.teacher is missing.");
     lang(fin.student, "inquiry.final.student", langs);
@@ -303,7 +317,7 @@
     return errs;
   }
 
-  return { VERSION: VERSION, esc: esc, inline: inline, plain: plain, mapmakerUrl: mapmakerUrl, classroomShareUrl: classroomShareUrl, hubUrl: hubUrl,
+  return { VERSION: VERSION, esc: esc, inline: inline, plain: plain, mapmakerUrl: mapmakerUrl, classroomShareUrl: classroomShareUrl, hubUrl: hubUrl, feedbackUrl: feedbackUrl,
     howToLinks: howToLinks, veraUrl: veraUrl, veraEntry: veraEntry, veraFile: veraFile, veraFileName: veraFileName, aiPrompt: aiPrompt, promptUrl: promptUrl,
     unitList: unitList, unitIndex: unitIndex, skills: skills, instructionalModels: instructionalModels, sortStandards: sortStandards, standardPrefix: standardPrefix, standardLabel: standardLabel, check: check };
 });

@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.4",
+  "formatVersion": "1.5",
   "id": "civil-war-battlefields",
-  "contentVersion": "0.4.2",
+  "contentVersion": "0.5.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -99,6 +99,16 @@
           "legend",
           "zoom"
         ],
+        "core": false,
+        "minutes": 15,
+        "frontOfClass": [
+          "Open the legend and show the five groups for U.S. Civil War States and Territories (1863).",
+          "Point to South Carolina and match its shade to its legend group.",
+          "Point to Virginia and match its shade.",
+          "Point to Kentucky and match its shade.",
+          "Ask: which states left before Fort Sumter, which after, and which slave states stayed in the Union?",
+          "Ask: the layer shows 1863; which state on it did not exist in 1861?"
+        ],
         "student": {
           "en": "Open the legend and find the groups for U.S. Civil War States and Territories (1863). Match each state's shade to its group. Which states left the Union before the attack on Fort Sumter in April 1861? Which left after? Which slave states stayed in the Union? The layer shows the country in 1863: which state on it did not exist in 1861?",
           "es": "Abre la leyenda y busca los grupos de la capa U.S. Civil War States and Territories (1863) (estados y territorios de la Guerra Civil de EE. UU.). Relaciona el tono de cada estado con su grupo. ¿Qué estados dejaron la Unión antes del ataque al fuerte Sumter en abril de 1861? ¿Cuáles se fueron después? ¿Qué estados esclavistas se quedaron en la Unión? La capa muestra el país en 1863: ¿qué estado del mapa no existía en 1861?"
@@ -145,6 +155,15 @@
           "zoom",
           "legend"
         ],
+        "core": false,
+        "minutes": 8,
+        "frontOfClass": [
+          "Zoom in to Washington, D.C., between Maryland and Virginia.",
+          "Point to the white dashed Boundary between Union and Confederacy running past the capital.",
+          "Open the legend and check Maryland's shade, then Virginia's.",
+          "Ask: which two states border the capital, and which side was each on?",
+          "Ask: what would have happened to Washington if Maryland had left the Union?"
+        ],
         "student": {
           "en": "Zoom in to Washington, D.C., on the east coast between Maryland and Virginia. Which two states border it? Check each one's shade in the legend. What would have happened to the capital if Maryland had left the Union?",
           "es": "Acércate a Washington D. C., en la costa este, entre Maryland y Virginia. ¿Qué dos estados lo rodean? Comprueba el tono de cada uno en la leyenda. ¿Qué le habría pasado a la capital si Maryland hubiera dejado la Unión?"
@@ -166,6 +185,16 @@
           "zoom",
           "legend"
         ],
+        "core": false,
+        "minutes": 10,
+        "frontOfClass": [
+          "In Map layers, turn off U.S. Civil War States and Territories (1863).",
+          "Point to the thin dark gray lines of Railroads 1826 to 1863 (static).",
+          "Follow the white dashed Boundary between Union and Confederacy from the Atlantic to the Mississippi.",
+          "Ask: which side has more railroad lines?",
+          "Ask: why would railroads matter in a war?",
+          "Turn U.S. Civil War States and Territories (1863) back on."
+        ],
         "student": {
           "en": "Compare the railroads (thin dark gray lines) north and south of the white dashed boundary between the Union and the Confederacy. In Map layers you can turn U.S. Civil War States and Territories (1863) off to see the lines better. Which side had more railroads? Why would railroads matter in a war?",
           "es": "Compara los ferrocarriles (líneas finas de color gris oscuro) al norte y al sur de la línea blanca discontinua que marca la frontera entre la Unión y la Confederación. En las capas del mapa (Map layers) puedes desactivar la capa U.S. Civil War States and Territories (1863) para ver mejor las líneas. ¿Qué lado tenía más ferrocarriles? ¿Por qué importaban los ferrocarriles en una guerra?"
@@ -186,6 +215,16 @@
           "zoom",
           "popups",
           "legend"
+        ],
+        "core": true,
+        "minutes": 15,
+        "frontOfClass": [
+          "Zoom to Virginia and point to the tan battlefield areas between Washington and Richmond.",
+          "Click one tan area and read the battle's name, acres and state.",
+          "Zoom to Maryland and Pennsylvania and click the tan area at Gettysburg.",
+          "Open the legend and check Pennsylvania's shade.",
+          "Ask: where were most battles fought?",
+          "Ask: which battles were fought in a Union state?"
         ],
         "student": {
           "en": "Zoom to Virginia, then to Maryland and Pennsylvania. Click the tan shaded areas of two battlefields to read their names. Where were most battles fought? Name a battle fought in a state the legend shows as a Union state.",
@@ -220,6 +259,10 @@
     "You compared railroad lines north and south of the boundary. What else, not shown on this map, would you want to know before deciding how big the Union's advantage really was?",
     "Antietam and Gettysburg are the biggest battlefield areas in Union states. Why might a Confederate army have crossed the boundary into Maryland and Pennsylvania, given what the map shows about the two sides?"
   ],
+  "differentiation": {
+    "support": "Do question 1 together from the front with the legend open beside the map, and write the five group names on the board with one state each.",
+    "stretch": "Click the largest diamonds in Civil War Battlefields to read their names and dates, and ask whether the biggest battles lie near the boundary, on railroads, or both."
+  },
   "resources": [
     {
       "title": "Civil War (teaching collection)",

@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.4",
+  "formatVersion": "1.5",
   "id": "war-of-1812-and-monroe-doctrine",
-  "contentVersion": "0.3.2",
+  "contentVersion": "0.4.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -100,6 +100,15 @@
           "popups",
           "legend"
         ],
+        "core": false,
+        "minutes": 10,
+        "frontOfClass": [
+          "Open The War of 1812 bookmark.",
+          "Open the legend: blue for an American victory, red for British, gray if inconclusive, and bigger diamonds for more casualties.",
+          "Click a diamond near the Great Lakes and read the battle name and State Name in the pop-up.",
+          "Click a diamond in each of the other clusters and read where it was fought.",
+          "Ask: in which three areas was most of the fighting?"
+        ],
         "student": {
           "en": "Open The War of 1812 bookmark and click some diamonds in each group. In which three areas was most of the fighting?",
           "es": "Abre el marcador The War of 1812 (La guerra de 1812) y haz clic en algunos rombos de cada grupo. ¿En qué tres zonas se combatió más?"
@@ -121,6 +130,16 @@
         "tools": [
           "popups",
           "zoom"
+        ],
+        "core": true,
+        "minutes": 15,
+        "frontOfClass": [
+          "Open The War of 1812 bookmark.",
+          "Click the biggest diamond and read Battle Dates, Battle Victor and Total Casualties in the pop-up.",
+          "Click the next two biggest diamonds and read the same three fields.",
+          "Ask: where and when was each battle fought, and who won?",
+          "Write on the board: Treaty of Ghent signed December 24, 1814.",
+          "Ask: which big battle came after the treaty was signed?"
         ],
         "student": {
           "en": "Click the three biggest diamonds. Where and when was each battle fought, and who won? The peace treaty was signed at Ghent, in Europe, on December 24, 1814. Which big battle came after it?",
@@ -186,6 +205,16 @@
           "layers",
           "popups"
         ],
+        "core": false,
+        "minutes": 12,
+        "frontOfClass": [
+          "Open The 1819 boundary bookmark.",
+          "In Map layers, turn on Land Spain gave up in 1819 and Adams–Onís Treaty line, 1819.",
+          "Click the green land and read the Notes in the pop-up.",
+          "Ask: what did the United States gain from Spain?",
+          "Click part 1 of the pink dashed line and read its description, then click the next parts going west.",
+          "Ask: which rivers and lines of latitude and longitude does the border follow?"
+        ],
         "student": {
           "en": "Open The 1819 boundary bookmark. Turn on Land Spain gave up in 1819 and Adams–Onís Treaty line, 1819, and click the green land and each part of the pink dashed line. What did the United States gain from Spain? Which rivers and lines of latitude and longitude does the new border follow?",
           "es": "Abre el marcador The 1819 boundary (La frontera de 1819). En las capas del mapa (Map layers), activa las capas Land Spain gave up in 1819 (tierra que España cedió en 1819) y Adams–Onís Treaty line, 1819 (línea del tratado Adams-Onís, 1819). Haz clic en la tierra verde y en cada tramo de la línea discontinua rosada. ¿Qué obtuvo Estados Unidos de España? ¿Qué ríos y qué líneas de latitud y longitud sigue la nueva frontera?"
@@ -208,6 +237,16 @@
           "bookmarks",
           "layers",
           "popups"
+        ],
+        "core": false,
+        "minutes": 12,
+        "frontOfClass": [
+          "Open the Latin America in 1825 bookmark.",
+          "In Map layers, turn on Latin American independence and US recognition.",
+          "Open the legend: blue circles recognized by 1824, orange diamonds recognized later.",
+          "Click a blue circle and read the US recognition date in the pop-up.",
+          "Write on the board: Monroe's message, December 2, 1823.",
+          "Ask: which nations had the United States recognized before that date, and why might Monroe have warned European powers to stay out?"
         ],
         "student": {
           "en": "Open the Latin America in 1825 bookmark and turn on Latin American independence and US recognition. Click the blue circles and read each recognition date in the pop-up: which nations had the United States recognized before President Monroe's message of December 2, 1823? (Blue means recognized by 1824, so check the date.) Why might Monroe have warned European powers to stay out of the Americas?",
@@ -284,6 +323,10 @@
     "The Battle of New Orleans was fought after the Treaty of Ghent was signed. Looking at where Ghent and New Orleans are, what does that gap tell you about how news travelled and how wars ended in 1815?",
     "Most Latin American nations had declared independence before Monroe's 1823 message, and the United States recognized several of them. Comparing the dates on the map, was the Monroe Doctrine leading events or following them?"
   ],
+  "differentiation": {
+    "support": "Do question 2 from the front, reading the three pop-up fields aloud, and keep the legend open on the board with the Treaty of Ghent date.",
+    "stretch": "Click the diamonds at Tippecanoe, Fort Mims and Horseshoe Bend, read who the leaders were, and explain why the legend's British label does not fit."
+  },
   "resources": [
     {
       "title": "War of 1812",

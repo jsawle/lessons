@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.4",
+  "formatVersion": "1.5",
   "id": "revolutionary-battles-1775-1776",
-  "contentVersion": "0.5.2",
+  "contentVersion": "0.6.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -88,6 +88,16 @@
           "legend",
           "measure"
         ],
+        "core": false,
+        "minutes": 10,
+        "frontOfClass": [
+          "Open the Massachusetts bookmark.",
+          "Click the diamond at Lexington and Concord and read the date line.",
+          "Open the legend and find which colour means an American victory.",
+          "Ask: who won, and how do you know from the map?",
+          "Click the Boston diamond and read its two dates.",
+          "Ask: how long did the siege of Boston last?"
+        ],
         "student": {
           "en": "Open the Massachusetts bookmark. Click the diamond at Lexington and Concord. When was it fought? Use the legend to find out who won. Then click the Boston diamond: how long did the siege of Boston last?",
           "es": "Abre el marcador Massachusetts. Haz clic en el rombo de Lexington and Concord. ¿Cuándo fue la batalla? Usa la leyenda para saber quién ganó. Luego haz clic en el rombo de Boston: ¿cuánto duró el sitio de Boston?"
@@ -112,6 +122,16 @@
           "zoom",
           "popups",
           "legend"
+        ],
+        "core": true,
+        "minutes": 15,
+        "frontOfClass": [
+          "Zoom out until all 21 diamonds show, from Quebec to South Carolina.",
+          "Click the Bunker Hill diamond and read the date line.",
+          "Click the Brooklyn diamond and read the date line.",
+          "Open the legend and check the colour of each of those two diamonds.",
+          "Ask: which colonies had battles in 1775, and which in 1776?",
+          "Ask: where did the fighting move to, and who was winning there?"
         ],
         "student": {
           "en": "Zoom out until you can see every diamond, from Quebec to South Carolina. Click each one and write its name under the year it was fought. Use the legend to mark who won. Which colonies had battles in 1775? Which in 1776? What changed?",
@@ -157,6 +177,16 @@
           "popups",
           "measure"
         ],
+        "core": false,
+        "minutes": 15,
+        "frontOfClass": [
+          "In Map layers, open Revolutionary War Battlefields and turn on Key Port Cities in the American Revolution 1775-1781.",
+          "Open the legend and show the larger symbol for a Major Port City and the smaller one for a Port.",
+          "Ask: Boston and Charleston are major ports; which other major ports lie between them?",
+          "Use Measure from New York to Philadelphia.",
+          "Use Measure from New York to Boston.",
+          "Ask: what could a navy based at New York reach?"
+        ],
         "student": {
           "en": "In Map layers, turn on Key Port Cities in the American Revolution 1775-1781 (it's inside Revolutionary War Battlefields). Use the legend to tell a Major Port City from a smaller Port. Boston and Charleston are major ports: which other major ports lie between them? The layer has no pop-ups, so use the coastline and the battle diamonds nearby to name them. Measure from New York to Philadelphia and from New York to Boston. Looking at the map, what could a navy based at New York reach?",
           "es": "En las capas del mapa (Map layers), activa Key Port Cities in the American Revolution 1775-1781 (ciudades portuarias clave; está dentro de Revolutionary War Battlefields). Usa la leyenda para distinguir un puerto principal (Major Port City) de un puerto menor (Port). Boston y Charleston son puertos principales: ¿qué otros puertos principales hay entre ellos? La capa no tiene ventanas emergentes, así que usa la costa y los rombos de batallas cercanos para nombrarlos. Mide de Nueva York a Filadelfia y de Nueva York a Boston. Mirando el mapa, ¿qué podía alcanzar una armada con base en Nueva York?"
@@ -184,6 +214,16 @@
           "popups",
           "legend",
           "measure"
+        ],
+        "core": false,
+        "minutes": 12,
+        "frontOfClass": [
+          "Zoom in on New York City until the numbered Turning Points circles appear.",
+          "Click circle 4 and read the Battle details text.",
+          "Click the diamonds for Fort Washington and Fort Lee and read their dates.",
+          "Click circle 5, then the Trenton diamond, and read its date.",
+          "Open the legend and check the colour of each diamond.",
+          "Ask: how did 1776 end for Washington's army?"
         ],
         "student": {
           "en": "Zoom in on New York City until the numbered circles appear, then follow circles 4 and 5. Click the diamonds for Fort Washington, Fort Lee and Trenton. When was each fought, and who won?",
@@ -222,6 +262,10 @@
     "The Key Port Cities layer has no pop-ups, so you had to work out the ports from the coastline and the battle diamonds. What other clues on the map helped, and what was missing?",
     "Nearly every 1776 battle around New York was a British victory, yet the year ends with Trenton. Using the distances you measured, why might that one small battle have mattered so much?"
   ],
+  "differentiation": {
+    "support": "Do question 1 together from the front and write the two diamond colours and what each means on the board before students start question 2.",
+    "stretch": "Find the 1763 Proclamation Line and ask whether any of the 21 battles were fought west of it, and what that says about where the war was being fought."
+  },
   "resources": [
     {
       "title": "MapMaker: American Revolution: 1775-1776 (New England/New York)",

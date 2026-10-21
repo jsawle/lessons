@@ -1,6 +1,6 @@
 # =====================================================================
 # PUBLISH MAPMAKER LESSONS TO THE HUB (demo)          publisher v1.3
-# MapMaker resource pages 0.11.0.
+# Reads whatever bundle GitHub serves (any resource pages version).
 #
 # Run in an ArcGIS Notebook, signed in as the account that owns the
 # site (GIS-4-Schools). Paste it all into one cell (or split it at the
@@ -20,7 +20,8 @@
 #      error, it waits and tries again; if it still can't download,
 #      it stops before changing anything on the Hub.
 #   4. Creates or updates two Hub Pages per lesson (the lesson page and
-#      its teacher page, /pages/<id>-teacher), plus a Lessons page.
+#      its answer page, /pages/<id>-teacher), plus the Lessons page and
+#      the How these lessons work page.
 #   5. Registers every page in the site's pages list. This is the step
 #      that makes /pages/<slug> addresses and menu links work.
 #   6. Sets the site's colours (header, menu bar, buttons, links) to the

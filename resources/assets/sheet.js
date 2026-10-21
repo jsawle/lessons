@@ -11,7 +11,7 @@
   else root.MMRSheet = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "1.4";
+  var VERSION = "1.5";
   /* Sheets with more question text than this get tighter writing lines, so every sheet stays on one page. */
   var LONG_SHEET_CHARS = 1040;
   /* The same for two-page sheets (lessons with studentSupport), counting the extra sections too. */
@@ -180,10 +180,14 @@
     (lesson.objectives || []).forEach(function (o) { kids.push(new D.Paragraph({ numbering: { reference: "b", level: 0 }, spacing: { after: 60 }, children: [run(o)] })); });
     kids.push(h2("Map skills"), p(MMR.skills(site, lesson).join(", ") + "."));
     kids.push(h2("Ways to run this lesson"), p(MMR.instructionalModels(site, lesson).join(" · ")));
-    if (teach.materials) kids.push(h2("Materials"), p(teach.materials));
     kids.push(h2("Before class"), new D.Paragraph({ spacing: { after: 100 }, children: [run("About this map: ", { bold: true }), run(tn.beforeClass)] }));
-    (teach.prep || []).forEach(function (o) { kids.push(new D.Paragraph({ numbering: { reference: "b", level: 0 }, spacing: { after: 60 }, children: [run(o)] })); });
-    if ((lesson.discussion || []).length) { kids.push(h2("Discussion questions")); lesson.discussion.forEach(function (q) { kids.push(new D.Paragraph({ numbering: { reference: "n", level: 0 }, spacing: { after: 60 }, children: [run(q)] })); }); }
+    if (teach.materials) kids.push(p(teach.materials, { style: "Subtle" }));
+    if ((lesson.discussion || []).length) { kids.push(h2("Discussion questions")); lesson.discussion.forEach(function (q, j) { kids.push(new D.Paragraph({ indent: { left: 540, hanging: 360 }, spacing: { after: 60 }, children: [run((j + 1) + ".\t" + MMR.plain(q))] })); }); }
+    if (lesson.differentiation) {
+      kids.push(h2("Support and stretch"));
+      kids.push(new D.Paragraph({ spacing: { after: 60 }, children: [run("Support: ", { bold: true }), run(lesson.differentiation.support)] }));
+      kids.push(new D.Paragraph({ spacing: { after: 100 }, children: [run("Stretch: ", { bold: true }), run(lesson.differentiation.stretch)] }));
+    }
     if ((lesson.resources || []).length) {
       kids.push(h2("Further reading"));
       lesson.resources.forEach(function (r) { kids.push(new D.Paragraph({ numbering: { reference: "b", level: 0 }, spacing: { after: 60 }, children: [new D.ExternalHyperlink({ link: r.url, children: [run(r.title, { color: "0A4FA8", underline: { type: D.UnderlineType.SINGLE } })] }), run(r.source ? " (" + r.source + ")" : "")] })); });
@@ -193,8 +197,12 @@
         children: [run(T.bigQuestion + " ", { bold: true }), run(inq.compellingQuestion.en)] }));
     inq.questions.forEach(function (q, i) {
       var a = q.answer || {};
-      kids.push(h3((i + 1) + ". " + MMR.plain(q.title.en)));
+      kids.push(h3((i + 1) + ". " + MMR.plain(q.title.en) + (q.core ? " (if you only do one)" : "") + (q.minutes ? ", about " + q.minutes + " minutes" : "")));
       kids.push(p(q.task, { style: "Subtle" }));
+      if ((q.frontOfClass || []).length) {
+        kids.push(labelled("From the front:", ""));
+        q.frontOfClass.forEach(function (st, j) { kids.push(new D.Paragraph({ indent: { left: 900, hanging: 360 }, spacing: { after: 40 }, children: [run((j + 1) + ".\t" + MMR.plain(st))] })); });
+      }
       if (a.where) kids.push(labelled(T.whereToFind || "Where to find it on the map:", a.where));
       if (a.accept) kids.push(labelled(T.accept || "Accept answers that:", a.accept));
       if (a.table) {

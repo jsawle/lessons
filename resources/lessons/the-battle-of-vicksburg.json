@@ -1,10 +1,10 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.4",
+  "formatVersion": "1.5",
   "id": "the-battle-of-vicksburg",
-  "contentVersion": "0.4.1",
+  "contentVersion": "0.5.0",
   "status": "draft",
-  "updated": "2026-10-15",
+  "updated": "2026-10-21",
   "reviewed": null,
   "title": "The Battle of Vicksburg",
   "sheetTitle": {
@@ -77,6 +77,15 @@
           "bookmarks",
           "zoom"
         ],
+        "core": false,
+        "minutes": 10,
+        "frontOfClass": [
+          "Open The Battle of Vicksburg bookmark.",
+          "Point to the yellow pin at Vicksburg on the bend of the Mississippi River.",
+          "Zoom in until the railroad line draws.",
+          "Follow the railroad east from Vicksburg to the Jackson label on the basemap.",
+          "Ask: why would both sides want Vicksburg?"
+        ],
         "student": {
           "en": "Open The Battle of Vicksburg bookmark. Vicksburg is the yellow pin on the Mississippi River. Zoom in until the railroads appear and follow the line east from Vicksburg. Find Jackson, Mississippi, on the basemap (the state capital, east of Vicksburg). Why would both sides want Vicksburg?",
           "es": "Abre el marcador The Battle of Vicksburg (la batalla de Vicksburg). Vicksburg es el alfiler amarillo junto al río Misisipi. Acércate hasta que aparezcan los ferrocarriles y sigue la línea hacia el este desde Vicksburg. Busca Jackson, Misisipi, en el mapa base (la capital del estado, al este de Vicksburg). ¿Por qué querrían Vicksburg ambos lados?"
@@ -96,6 +105,15 @@
         "tools": [
           "zoom",
           "measure"
+        ],
+        "core": true,
+        "minutes": 15,
+        "frontOfClass": [
+          "Open The Battle of Vicksburg bookmark.",
+          "Point to the dark pins in order: Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend, then Edwards.",
+          "Ask: which side of the river is each pin on?",
+          "Use Measure from Milliken's Bend to Bruinsburg Bend.",
+          "Ask: why did Grant march south down the far bank before crossing?"
         ],
         "student": {
           "en": "Find the dark pins for Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend and Edwards. Which side of the river is each on? Why did Grant march south before crossing the river?",
@@ -121,6 +139,15 @@
           "layers",
           "popups",
           "zoom"
+        ],
+        "core": false,
+        "minutes": 12,
+        "frontOfClass": [
+          "In Map layers, turn on Civil War Battlefields.",
+          "Click the diamond at Port Gibson, near Bruinsburg Bend, and read its date (use the arrows if it says 1 of 2).",
+          "Click the diamonds east toward Jackson, reading each date: Raymond, Jackson, Champion Hill, Big Black River Bridge.",
+          "Click the Vicksburg diamond and read its two dates.",
+          "Ask: in what order were the battles fought, and which way did Grant's army move?"
         ],
         "student": {
           "en": "In Map layers, turn on Civil War Battlefields. Click the diamonds between Bruinsburg Bend and Vicksburg, and east toward Jackson, and list the battles in order by date.",
@@ -176,6 +203,15 @@
           "layers",
           "popups"
         ],
+        "core": false,
+        "minutes": 12,
+        "frontOfClass": [
+          "Zoom out until the Mississippi River shows from Memphis to the Gulf of Mexico.",
+          "With Civil War Battlefields on, click the diamond at Port Hudson, in Louisiana south of Vicksburg, and read its dates.",
+          "Read the state names on the basemap on both sides of the river.",
+          "Ask: which states lie west of the river?",
+          "Ask: what could the Union control once Vicksburg and Port Hudson had both fallen?"
+        ],
         "student": {
           "en": "Zoom out until you can see the Mississippi River from Memphis to the Gulf of Mexico. Keep Civil War Battlefields on and click the diamond at Port Hudson, in Louisiana south of Vicksburg: when did it end? Read the state names on the basemap. Which states lie west of the river? What could the Union control once Vicksburg and Port Hudson had both fallen?",
           "es": "Aléjate hasta ver el río Misisipi desde Memphis hasta el golfo de México. Mantén activada la capa Civil War Battlefields y haz clic en el rombo de Port Hudson, en Luisiana, al sur de Vicksburg: ¿cuándo terminó? Lee los nombres de los estados en el mapa base. ¿Qué estados quedan al oeste del río? ¿Qué pudo controlar la Unión una vez que cayeron Vicksburg y Port Hudson?"
@@ -209,6 +245,10 @@
     "Between Port Gibson on May 1 and the start of the siege on May 18, the battles run east toward Jackson and then back west. Why might Grant have gone to Jackson first instead of straight to Vicksburg?",
     "Zoomed out, the river runs from Memphis to the Gulf with Louisiana, Arkansas and Texas on the far side. How does the map help explain why Vicksburg's surrender, and not just Gettysburg, was a turning point of July 1863?"
   ],
+  "differentiation": {
+    "support": "Do question 2 together from the front, listing the five pins in order on the board, before students measure the distance themselves.",
+    "stretch": "Measure Vicksburg to Port Hudson and Vicksburg to Memphis, and ask how much of the river the Confederacy still held in spring 1863."
+  },
   "resources": [
     {
       "title": "Defining Battles of the Civil War",

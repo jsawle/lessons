@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://jsawle.github.io/lessons/resources/schema/lesson.schema.json",
-  "title": "MapMaker lesson file, format 1.4",
+  "title": "MapMaker lesson file, format 1.5",
   "description": "One file per lesson. The lesson page, the teacher page, the Word student sheets and teacher notes, the how-to links, Vera's knowledge entry and the AI prompt are made from it. Text fields allow **bold** and [link text](https://address) only.",
   "type": "object",
   "required": [
@@ -26,7 +26,8 @@
     "licence",
     "subjects",
     "objectives",
-    "discussion"
+    "discussion",
+    "differentiation"
   ],
   "$defs": {
     "text": {
@@ -57,7 +58,7 @@
       "type": "string"
     },
     "formatVersion": {
-      "const": "1.4"
+      "const": "1.5"
     },
     "id": {
       "type": "string",
@@ -327,6 +328,23 @@
                   }
                 },
                 "description": "Teacher-only. Shown on the lesson's teacher page and in the teacher notes Word file, never on the lesson page, in Vera's file or in the AI prompt. Say where on the map the answer is found and what to accept; keep bare answer values for counts and tables."
+              },
+              "core": {
+                "type": "boolean",
+                "description": "True on exactly one question: the one to use if there is only time for one."
+              },
+              "minutes": {
+                "type": "integer",
+                "minimum": 5,
+                "maximum": 30,
+                "description": "About how long this question takes."
+              },
+              "frontOfClass": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/text"
+                },
+                "description": "Steps for teaching this question from the front: what to open, click or turn on, and what to ask. One action per line."
               }
             }
           }
@@ -371,6 +389,22 @@
         "$ref": "#/$defs/text"
       },
       "description": "Teacher-led discussion or debrief questions."
+    },
+    "differentiation": {
+      "type": "object",
+      "required": [
+        "support",
+        "stretch"
+      ],
+      "properties": {
+        "support": {
+          "$ref": "#/$defs/text"
+        },
+        "stretch": {
+          "$ref": "#/$defs/text"
+        }
+      },
+      "description": "One line each: how to support students who find it hard, and how to stretch students who finish."
     },
     "instructionalModels": {
       "type": "array",

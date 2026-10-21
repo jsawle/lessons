@@ -10,7 +10,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "2.7";
+  var VERSION = "2.8";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
@@ -87,6 +87,10 @@
     ".mml-qs>li::before{content:counter(mmlq);position:absolute;left:.9em;top:.85em;width:1.9em;height:1.9em;line-height:1.9em;text-align:center;border-radius:50%;background:#007AC2;color:#fff;font-weight:700}",
     ".mml-qs h3{margin:.1em 0 .3em}",
     ".mml-tools{font-size:.95rem}",
+    ".mml-core{background:#E8F2F9;color:#004874;border-color:#9CC9E8}",
+    ".mml-qs h3 .mml-chip{font-size:.75rem;vertical-align:middle;margin-left:.3em}",
+    ".mml .mml-steps{margin:.2em 0 .7em;padding-left:1.4em;font-size:.97rem}",
+    ".mml .mml-steps li{margin:0 0 .2em}",
     ".mml-sheet{border:1px solid #D4D4D4;border-radius:4px;padding:1.2em 1.4em .6em;max-width:46rem;box-shadow:0 1px 3px rgba(0,0,0,.06);background:#fff}",
     ".mml-sheet ol{padding-left:1.4em}",
     ".mml-sheet h4{font-size:1.05rem;line-height:1.3;font-weight:700;margin:1em 0 .3em;color:#141414}",
@@ -321,9 +325,11 @@
     // Inquiry (no answers here; they are on the teacher page)
     var inq = lesson.inquiry;
     add('<div class="mml"><h2>Inquiry</h2><div class="mml-cq"><span class="mml-k">Compelling question</span><p class="mml-q">' + t(inq.compellingQuestion.en) + "</p></div>" +
-      '<p class="mml-prose">Pick the questions that suit your class. Each one is answered from the map, lists the MapMaker tools it uses, and links to how-to videos. Answers and what to accept are linked under Teacher notes.</p><ol class="mml-qs">' +
+      '<p class="mml-prose">Pick the questions that suit your class: each one is answered from the map and says about how long it takes. The one marked <strong>If you only do one</strong> gets to the big question on its own in about 15 minutes. Under each question, <strong>From the front</strong> gives the exact clicks for teaching it on a projector. Answers and what to accept are linked under Teacher notes.</p><ol class="mml-qs">' +
       inq.questions.map(function (q) {
-        return "<li><h3>" + t(q.title.en) + "</h3><p>" + t(q.task) + '</p><p class="mml-tools"><span class="mml-muted">Tools:</span> ' + toolLinks(site, q.tools) + "</p></li>";
+        return "<li><h3>" + t(q.title.en) + (q.core ? ' <span class="mml-chip mml-core">If you only do one</span>' : "") + (q.minutes ? ' <span class="mml-chip">About ' + q.minutes + " minutes</span>" : "") + "</h3><p>" + t(q.task) + "</p>" +
+          ((q.frontOfClass || []).length ? '<p class="mml-k">From the front</p><ol class="mml-steps">' + q.frontOfClass.map(function (st) { return "<li>" + t(st) + "</li>"; }).join("") + "</ol>" : "") +
+          '<p class="mml-tools"><span class="mml-muted">Tools:</span> ' + toolLinks(site, q.tools) + "</p></li>";
       }).join("") + "</ol><h3>Answering the compelling question</h3><p class=\"mml-prose\">" + t(inq.final.teacher) + "</p>" +
       ((inq.final.tools || []).length ? '<p class="mml-tools"><span class="mml-muted">Tools:</span> ' + toolLinks(site, inq.final.tools) + "</p>" : "") + "</div>");
 
@@ -350,9 +356,9 @@
       "<h3>Learning objectives</h3><p>Students will:</p>" + ul(lesson.objectives || []) +
       "<h3>Map skills</h3>" + ul(MMR.skills(site, lesson), "mml-words") +
       "<h3>Ways to run this lesson</h3>" + ul(MMR.instructionalModels(site, lesson), "mml-words") +
-      (teach.materials ? '<h3>Materials</h3><p class="mml-prose">' + esc(teach.materials) + "</p>" : "") +
-      '<h3>Before class</h3><p class="mml-prose"><strong>About this map:</strong> ' + t(tn.beforeClass) + "</p>" + ((teach.prep || []).length ? ul(teach.prep) : "") +
+      '<h3>Before class</h3><p class="mml-prose"><strong>About this map:</strong> ' + t(tn.beforeClass) + '</p><p class="mml-prose mml-muted">Materials, ways to prepare and how every lesson works are on <a href="/pages/' + esc(hubHome(site).aboutSlug || "how-these-lessons-work") + '">How these lessons work</a>.</p>' +
       ((lesson.discussion || []).length ? "<h3>Discussion questions</h3><ol>" + lesson.discussion.map(function (q) { return "<li>" + t(q) + "</li>"; }).join("") + "</ol>" : "") +
+      (lesson.differentiation ? "<h3>Support and stretch</h3><ul><li><strong>Support:</strong> " + t(lesson.differentiation.support) + "</li><li><strong>Stretch:</strong> " + t(lesson.differentiation.stretch) + "</li></ul>" : "") +
       (tn.misconceptions && tn.misconceptions.length ? "<h3>Common misunderstandings</h3><ul>" + tn.misconceptions.map(function (m) {
         return "<li><strong>“" + t(m.claim) + "”</strong> " + t(m.response) + "</li>";
       }).join("") + "</ul>" : "") +
@@ -381,7 +387,7 @@
 
     // Report a problem
     add('<div class="mml"><h2>Report a problem</h2><p class="mml-prose">Found a mistake on the map, in the questions or on the student sheet? Tell the MapMaker team. We check every report and fix the map or the lesson.</p>' +
-      '<p class="mml-actions">' + ext(MMR.hubUrl(site, site.hub.feedbackPath), "Report a problem", "mml-btn") + "</p></div>");
+      '<p class="mml-actions">' + ext(MMR.feedbackUrl(site, lesson), "Report a problem", "mml-btn") + "</p></div>");
 
     add(footer(site, lesson));
     return { slug: slug, kind: "lesson", lessonId: lesson.id, title: lesson.title, summary: MMR.plain(lesson.summary),
@@ -445,13 +451,28 @@
     add('<div class="mml">' + body + "</div>");
     add('<div class="mml"><h2>In every lesson</h2><ul class="mml-prose"><li>A MapMaker map that opens straight from the page, with each layer’s source listed. No account or login is needed.</li>' +
       "<li>An inquiry with a compelling question and questions you can pick from, each answered from the map.</li><li>A Word student sheet in English and Spanish that you can edit, print or open in Google Docs.</li>" +
-      "<li>A separate teacher page, and a Word file, with where to find each answer on the map, what to accept, common misunderstandings, key words and standards.</li><li>Links to how-to videos, a link to Vera, and a prompt for your own AI tool.</li></ul></div>");
+      "<li>A separate answer page, and a Word file, with where to find each answer on the map and what to accept.</li><li>Links to how-to videos, a link to Vera, and a prompt for your own AI tool.</li></ul>" +
+      '<p class="mml-prose"><a href="/pages/' + esc(H.aboutSlug || "how-these-lessons-work") + '">How these lessons work</a>: materials, preparing, and ways to run a lesson.</p></div>');
     // Vera: one link, not an embed. Her home is the Support Hub; each lesson page links to her with the lesson pre-filled.
     var V = site.vera || {};
     if (V.url) add('<div class="mml"><h2>Make your own questions</h2><p class="mml-prose">Vera, the Support Hub’s AI assistant, has every lesson’s map, bookmarks, layers and questions, but not the answers. Name a lesson and ask for easier or harder questions, a short quiz, questions for your own state’s standards or questions in another language. Each lesson page also has a prompt you can paste into another AI tool.</p>' +
       '<p class="mml-actions">' + ext(V.url, "Ask Vera", "mml-btn") + '</p><p class="mml-prose mml-muted">Vera’s questions aren’t reviewed like these lessons. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem on the lesson page.</p></div>');
     add(footer(site, null));
     return { slug: slug, kind: "catalogue", title: H.lessonsTitle || "Lessons", summary: H.lessonsIntro || "", tags: ["MapMaker", "Lessons"], layout: { sections: S } };
+  }
+
+  /* ---------------- How these lessons work: one page for everything shared ---------------- */
+  function aboutPage(site) {
+    var H = hubHome(site), slug = H.aboutSlug || "how-these-lessons-work", teach = site.teaching || {}, S = [], n = 0;
+    function add(html) { S.push(section([mdCard(slug + ":" + n, html)])); n++; }
+    add("<style>" + CSS + "</style>" + '<div class="mml mml-hero"><p class="mml-crumbs"><a href="' + lessonsPath(site) + '">Lessons</a></p><h1>' + esc(H.aboutTitle || "How these lessons work") + '</h1><p class="mml-summary">What every MapMaker lesson includes, how to prepare, and ways to run one.</p></div>');
+    add('<div class="mml"><h2>What every lesson includes</h2><ul class="mml-prose">' + (teach.howTheyWork || []).map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div>");
+    add('<div class="mml"><h2>Ways to run a lesson</h2><ul class="mml-words">' + (teach.instructionalModels || []).map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" +
+      (teach.materials ? '<h2>Materials</h2><p class="mml-prose">' + esc(teach.materials) + "</p>" : "") +
+      '<h2>Preparing</h2><ul class="mml-prose">' + (teach.prep || []).map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div>");
+    add('<div class="mml"><h2>Help</h2><p class="mml-prose">Short how-to videos for every MapMaker tool are on the ' + ext(MMR.hubUrl(site, "/pages/how-to"), "MapMaker Educator Support Hub") + '. Each lesson page has a Report a problem button that tells us which lesson you mean.</p></div>');
+    add(footer(site, null));
+    return { slug: slug, kind: "about", title: H.aboutTitle || "How these lessons work", summary: "What every MapMaker lesson includes, how to prepare, and ways to run one.", tags: ["MapMaker", "Lessons"], layout: { sections: S } };
   }
 
   /* ---------------- Word items and the bundle ---------------- */
@@ -492,7 +513,7 @@
       builtOn: builtOn(lessons),
       app: { name: site.app.name, version: site.app.version, parts: site.app.parts },
       hub: { siteId: H.siteId, url: H.url, lessonsSlug: H.lessonsSlug || "lessons", theme: siteTheme(site) },
-      pages: [cataloguePage(site, lessons)].concat(lessons.map(function (l) { return lessonPage(site, l); })).concat(lessons.map(function (l) { return teacherPage(site, l); })),
+      pages: [cataloguePage(site, lessons), aboutPage(site)].concat(lessons.map(function (l) { return lessonPage(site, l); })).concat(lessons.map(function (l) { return teacherPage(site, l); })),
       sheets: sheets(site, lessons, dist, opts.sheetFileName || function (l, lang) { return l.id + "-student-sheet-" + lang + ".docx"; },
         opts.teacherFileName || function (l) { return l.id + "-teacher-notes-en.docx"; }),
       vera: { fileName: MMR.veraFileName(), url: dist.replace(/\/+$/, "") + "/" + MMR.veraFileName() }
@@ -606,7 +627,7 @@
     return errs;
   }
 
-  return { VERSION: VERSION, CSS: CSS, ALLOWED: ALLOWED, lessonPage: lessonPage, teacherPage: teacherPage, cataloguePage: cataloguePage, bundle: bundle, teacherSlug: teacherSlug,
+  return { VERSION: VERSION, CSS: CSS, ALLOWED: ALLOWED, lessonPage: lessonPage, teacherPage: teacherPage, cataloguePage: cataloguePage, aboutPage: aboutPage, bundle: bundle, teacherSlug: teacherSlug,
     checkPage: checkPage, checkBundle: checkBundle, contrast: contrast,
     sheetPlaceholder: sheetPlaceholder, protect: protect };
 });

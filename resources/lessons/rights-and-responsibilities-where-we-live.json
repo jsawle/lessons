@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.4",
+  "formatVersion": "1.5",
   "id": "rights-and-responsibilities-where-we-live",
-  "contentVersion": "0.3.2",
+  "contentVersion": "0.4.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -70,6 +70,16 @@
           "zoom",
           "popups"
         ],
+        "core": true,
+        "minutes": 15,
+        "frontOfClass": [
+          "Zoom to your town on the Topographic basemap until its name shows.",
+          "Point out the blue lines: the boundaries of congressional districts.",
+          "Click inside the district and read the pop-up.",
+          "Ask: who represents us in the House, which party do they belong to, and what is the district's number?",
+          "Zoom out until the whole state is on screen.",
+          "Ask: how many districts does our state have?"
+        ],
         "student": {
           "en": "Zoom to your town; the basemap has place names. The blue lines are the boundaries of congressional districts. Click inside your district: who represents it in the House of Representatives, which party do they belong to, and what is the district's number? Zoom out to see your whole state: how many districts does it have?",
           "es": "Acércate a tu pueblo o ciudad; el mapa base tiene nombres de lugares. Las líneas azules son los límites de los distritos del Congreso. Haz clic dentro de tu distrito: ¿quién lo representa en la Cámara de Representantes, a qué partido pertenece y qué número tiene el distrito? Aléjate para ver todo tu estado: ¿cuántos distritos tiene?"
@@ -91,6 +101,15 @@
           "zoom",
           "sketch"
         ],
+        "core": false,
+        "minutes": 12,
+        "frontOfClass": [
+          "Zoom in on the town until the basemap labels buildings.",
+          "Find one public building the basemap labels, such as a courthouse, city hall or library.",
+          "Open Sketch, put a pin on it and add a text label.",
+          "Ask: which right from the Bill of Rights do people use here?",
+          "Remind the class that sketches are not saved: finish today or take a screenshot."
+        ],
         "student": {
           "en": "Zoom in on your town until the basemap shows building names. Find four public places, such as a courthouse, city hall, a library, a place of worship, a polling place or a newspaper office. Use Sketch to put a pin on each one and write next to it a right from the Bill of Rights that people use there. Choose public places, not homes. Sketches are not saved, so finish in one lesson or take a screenshot.",
           "es": "Acércate a tu pueblo o ciudad hasta que el mapa base muestre nombres de edificios. Encuentra cuatro lugares públicos, como un tribunal, el ayuntamiento, una biblioteca, un lugar de culto, un centro de votación o la redacción de un periódico. Usa Sketch (dibujar) para colocar un marcador en cada uno y escribe junto a él un derecho de la Carta de Derechos que las personas ejercen allí. Elige lugares públicos, no viviendas. Los dibujos no se guardan, así que termina en una sola clase o toma una captura de pantalla."
@@ -111,6 +130,14 @@
         "tools": [
           "zoom",
           "sketch"
+        ],
+        "core": false,
+        "minutes": 10,
+        "frontOfClass": [
+          "Return to the courthouse or city hall pinned in question 2.",
+          "Add a Sketch pin and write next to it the responsibility people carry out there.",
+          "Ask: where else in town do people vote, serve on a jury or pay taxes?",
+          "Ask: which of these responsibilities are required by law, and which are voluntary?"
         ],
         "student": {
           "en": "Start at the courthouse or city hall you pinned. Add a pin for each place where people carry out a responsibility as citizens, such as voting, serving on a jury or paying taxes. Next to each pin write the responsibility. Which of these responsibilities are required by law, and which are voluntary?",
@@ -134,6 +161,16 @@
           "legend",
           "zoom",
           "popups"
+        ],
+        "core": false,
+        "minutes": 12,
+        "frontOfClass": [
+          "In Map layers, turn on National Register of Historic Places.",
+          "Zoom in near the school until the diamonds appear.",
+          "Open the legend and show the diamond colors for building, district and site.",
+          "Click the diamond nearest the school and read the address in the pop-up.",
+          "Match it to the basemap label, or open the pop-up's National Archive Information link for the name.",
+          "Ask: is it a public building, and which right or responsibility does it connect with?"
         ],
         "student": {
           "en": "In Map layers, turn on National Register of Historic Places. Zoom in until the diamonds appear, and click the two nearest your school. The pop-up gives the address; to find the name, look at the basemap label under the diamond or open the pop-up's National Archive Information link. Use the legend to tell a building from a district or a site. Is either a public building, such as a courthouse, post office, school or library? Which right or responsibility does it connect with?",
@@ -169,6 +206,10 @@
     "Your congressional district covers far more than your town. From the pop-up and the district outline, who else shares your representative, and how might their concerns differ from yours?",
     "The National Register diamonds near your school mark places someone decided were worth preserving. Judging from the map, what kinds of places were chosen, and what kinds seem to be missing?"
   ],
+  "differentiation": {
+    "support": "Zoom to the town from the front and do question 1 together, then give the class three public buildings from the basemap to start their pins.",
+    "stretch": "Click a neighboring district's pop-up and compare representatives and parties, or find a National Register place in another town and explain why it was listed."
+  },
   "resources": [
     {
       "title": "Citizenship",
