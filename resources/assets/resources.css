@@ -164,3 +164,9 @@ footer.foot thead th{background:#111;color:#ccc}
 /* 2.7: cards size to content; the grid keeps each row equal */
 .lesson-card{height:auto;min-height:16rem;display:flex;flex-direction:column}
 .lesson-card>p:nth-last-child(2){flex:1}
+
+/* 2.8: core question chip and front-of-class steps */
+.chip.core{background:#E8F2F9;color:#004874;border-color:#9CC9E8}
+.sq h3 .chip{font-size:.75rem;vertical-align:middle;margin-left:.3rem}
+.sq .label{font-size:.75rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-2);font-weight:700;margin:.4rem 0 .1rem}
+.sq .steps{margin:0 0 .5rem;padding-left:1.4rem;font-size:.97rem}

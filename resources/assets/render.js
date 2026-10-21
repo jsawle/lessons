@@ -1,4 +1,4 @@
-/* MapMaker resource pages (lab): page renderer v2.7 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
+/* MapMaker resource pages (lab): page renderer v2.8 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
    standards in the hero; Vera link and a copyable AI prompt). Draws a lesson page, its teacher page (?view=teacher) or the catalogue from JSON files. */
 (function () {
   "use strict";
@@ -146,7 +146,8 @@
     h.push('<div class="cq"><span class="label">Compelling question</span><p class="q">' + inline(inq.compellingQuestion.en) + "</p></div>");
     h.push('<p class="prose">Pick the questions that suit your class. Each one is answered from the map and lists the MapMaker tools it uses. Answers and what to accept are linked under Teacher notes.</p>');
     h.push('<ol class="sq">' + inq.questions.map(function (q) {
-      return "<li><h3>" + inline(q.title.en) + "</h3><p>" + inline(q.task) + "</p>" + toolTags(site, q.tools) + "</li>";
+      return "<li><h3>" + inline(q.title.en) + (q.core ? ' <span class="chip core">If you only do one</span>' : "") + (q.minutes ? ' <span class="chip">About ' + q.minutes + " minutes</span>" : "") + "</h3><p>" + inline(q.task) + "</p>" +
+        ((q.frontOfClass || []).length ? '<p class="label">From the front</p><ol class="steps">' + q.frontOfClass.map(function (st) { return "<li>" + inline(st) + "</li>"; }).join("") + "</ol>" : "") + toolTags(site, q.tools) + "</li>";
     }).join("") + "</ol>");
     h.push('<div class="prose"><h3>Answering the compelling question</h3><p>' + inline(inq.final.teacher) + "</p>" + toolTags(site, inq.final.tools) + "</div>");
     h.push("</section>");
@@ -176,6 +177,7 @@
       (teach.materials ? '<div class="prose"><h3>Materials</h3><p>' + esc(teach.materials) + "</p></div>" : "") +
       '<div class="prose"><h3>Before class</h3><p><strong>About this map:</strong> ' + inline(tn.beforeClass) + "</p>" + ((teach.prep || []).length ? "<ul>" + teach.prep.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") + "</div>" +
       ((lesson.discussion || []).length ? '<div class="prose"><h3>Discussion questions</h3><ol>' + lesson.discussion.map(function (q) { return "<li>" + inline(q) + "</li>"; }).join("") + "</ol></div>" : "") +
+      (lesson.differentiation ? '<div class="prose"><h3>Support and stretch</h3><ul><li><strong>Support:</strong> ' + inline(lesson.differentiation.support) + "</li><li><strong>Stretch:</strong> " + inline(lesson.differentiation.stretch) + "</li></ul></div>" : "") +
       (tn.misconceptions && tn.misconceptions.length ? '<h3>Common misunderstandings</h3><ul class="plain">' + tn.misconceptions.map(function (m) {
         return "<li><strong>\u201c" + inline(m.claim) + "\u201d</strong> " + inline(m.response) + "</li>";
       }).join("") + "</ul>" : "") +
@@ -201,7 +203,7 @@
 
     // Report a problem
     h.push('<section id="report" aria-labelledby="rp-h"><h2 id="rp-h">Report a problem</h2><p class="prose">Found a mistake on the map, in the questions or on the student sheet? Tell the MapMaker team. Confirmed problems are listed under Things to know about this map until they’re fixed.</p>' +
-      '<p><a class="btn" href="' + esc(MMR.hubUrl(site, site.hub.feedbackPath)) + '" target="_blank" rel="noopener">Report a problem' + newTab + "</a></p>" +
+      '<p><a class="btn" href="' + esc(MMR.feedbackUrl(site, lesson)) + '" target="_blank" rel="noopener">Report a problem' + newTab + "</a></p>" +
       '<p class="muted">In this mock-up the button opens the Support Hub’s Feedback page. On the Hub version, a Survey123 card on this page would send the lesson’s name with the report.</p></section>');
 
     h.push("</div></div>");

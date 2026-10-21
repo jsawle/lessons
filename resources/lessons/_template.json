@@ -1,6 +1,6 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.4",
+  "formatVersion": "1.5",
   "id": "copy-this-file-and-rename-it",
   "contentVersion": "0.1.0",
   "status": "draft",
@@ -68,7 +68,14 @@
           "where": "Which layer, bookmark, pop-up field or tool gives the answer, and the value to expect.",
           "accept": "For a reasoning question: what a good answer includes.",
           "text": "Extra teacher notes, if any."
-        }
+        },
+        "core": true,
+        "minutes": 10,
+        "frontOfClass": [
+          "Open the … bookmark.",
+          "Click … and read …",
+          "Ask: …"
+        ]
       }
     ],
     "final": {
@@ -91,6 +98,10 @@
     "A debrief question for the class.",
     "Another."
   ],
+  "differentiation": {
+    "support": "…",
+    "stretch": "…"
+  },
   "resources": [
     {
       "title": "A reading for teachers",

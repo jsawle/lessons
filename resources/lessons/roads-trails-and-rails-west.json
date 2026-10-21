@@ -1,10 +1,10 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.4",
+  "formatVersion": "1.5",
   "id": "roads-trails-and-rails-west",
-  "contentVersion": "0.4.1",
+  "contentVersion": "0.5.0",
   "status": "draft",
-  "updated": "2026-10-15",
+  "updated": "2026-10-21",
   "reviewed": null,
   "title": "Roads, Trails, and Rails West",
   "sheetTitle": {
@@ -86,6 +86,16 @@
           "popups",
           "legend"
         ],
+        "core": false,
+        "minutes": 10,
+        "frontOfClass": [
+          "Open the legend and show the seven trail colours.",
+          "Click the dotted Oregon trail line and read where it started and ended.",
+          "Click the Santa Fe trail and read where it started.",
+          "Click the Pony Express trail and read where it started.",
+          "Ask: in which state do most of the trails start?",
+          "Ask: looking at the map, why there?"
+        ],
         "student": {
           "en": "Click three of the dotted trail lines (the legend shows which color is which trail). From each pop-up, where did the trail start and end? In which state do most of the trails start?",
           "es": "Haz clic en tres de las líneas punteadas de los senderos (la leyenda muestra qué color corresponde a cada sendero). Según cada ventana emergente, ¿dónde empezaba y terminaba el sendero? ¿En qué estado empiezan la mayoría de los senderos?"
@@ -154,6 +164,16 @@
           "legend",
           "zoom"
         ],
+        "core": false,
+        "minutes": 12,
+        "frontOfClass": [
+          "Click the Oregon trail line and read its length and how many people used it.",
+          "Zoom in on Kansas City and find Independence, Missouri, on the basemap.",
+          "Use Measure in miles from Independence to Portland, Oregon.",
+          "Ask: how much longer is the trail than the straight line?",
+          "Trace the dotted Oregon line from Independence to Portland with the pointer.",
+          "Ask: why is the trail so much longer than a straight line?"
+        ],
         "student": {
           "en": "Click the Oregon Trail (find its color in the legend). How long was it, and how many people traveled it? Then use Measure for a straight line from Independence, Missouri (on the basemap, next to Kansas City), to Portland, Oregon. Why is the trail longer than a straight line?",
           "es": "Haz clic en el sendero de Oregón (busca su color en la leyenda). ¿Qué longitud tenía y cuántas personas lo recorrieron? Luego usa la herramienta de medir (Measure) para trazar una línea recta de Independence, Misuri (en el mapa base, junto a Kansas City), a Portland, Oregón. ¿Por qué el sendero es más largo que una línea recta?"
@@ -178,6 +198,15 @@
           "layers",
           "zoom"
         ],
+        "core": true,
+        "minutes": 15,
+        "frontOfClass": [
+          "In Map layers, turn on Indigenous Territories.",
+          "Zoom in until the nations' names appear along the Oregon trail.",
+          "Trace the Oregon trail from Independence to Portland, reading out the names it crosses.",
+          "Ask: was the land the trail crossed empty?",
+          "Ask: what might the trail have meant for the people who lived there?"
+        ],
         "student": {
           "en": "In Map layers, turn on Indigenous Territories. Zoom in until the nations' names appear, then follow one trail from one end to the other. Name two nations whose land it crossed. Was the land the trail crossed empty? What might the trail have meant for the people who lived there?",
           "es": "En las capas del mapa (Map layers), activa Indigenous Territories (territorios indígenas). Acércate hasta que aparezcan los nombres de las naciones y sigue un sendero de un extremo al otro. Nombra dos naciones cuyas tierras cruzaba. ¿Estaba vacía la tierra que cruzaba el sendero? ¿Qué pudo significar el sendero para las personas que vivían allí?"
@@ -198,6 +227,16 @@
           "layers",
           "popups",
           "legend"
+        ],
+        "core": false,
+        "minutes": 12,
+        "frontOfClass": [
+          "In Map layers, turn on Railroads.",
+          "Open the legend and find Transcontinental Railroad (Union Pacific) and Transcontinental Railroad (Central Pacific).",
+          "Trace the two thick lines from Omaha to Sacramento.",
+          "Ask: which dotted trails do they follow most closely?",
+          "Click a thin gray railroad line and read the year it was in operation by.",
+          "Ask: what happened to the wagon trails once the railroad opened?"
         ],
         "student": {
           "en": "In Map layers, turn on Railroads. Use the legend to find the Transcontinental Railroad (Union Pacific) and (Central Pacific) lines. Which trails do they follow most closely? Click a thin gray railroad line: when was it in operation by?",
@@ -232,6 +271,10 @@
     "With Indigenous Territories turned on, how did the map change for you? What might a trail have meant for the people whose lands it crossed, and whose story does the Trails West layer leave out?",
     "The Union Pacific and Central Pacific lines run close to the California and Mormon Pioneer trails. Why might the railroad builders have chosen the same route, and what happened to the trails once the railroad opened?"
   ],
+  "differentiation": {
+    "support": "Do question 1 together from the front, and write the seven trail names with their legend colours on the board so students can find each line.",
+    "stretch": "With Indigenous Territories and Railroads both on, ask whether the Union Pacific and Central Pacific line crosses the same nations' lands as the trails, and what that meant for those nations."
+  },
   "resources": [
     {
       "title": "Tracking Growth in the U.S.",

@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.4",
+  "formatVersion": "1.5",
   "id": "we-the-people-1787-1791",
-  "contentVersion": "0.3.2",
+  "contentVersion": "0.4.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -85,6 +85,16 @@
           "popups",
           "legend"
         ],
+        "core": false,
+        "minutes": 10,
+        "frontOfClass": [
+          "Open The states in 1790 bookmark.",
+          "Open the legend and point out blue for free people and orange-red for enslaved people.",
+          "Click the biggest pie and read the state's name and the 1790 census line of the pop-up.",
+          "Ask: which state had the most people?",
+          "Click a pie in the South and read the percentage enslaved in the first line of the pop-up.",
+          "Ask: in which states were more than a quarter of the people enslaved?"
+        ],
         "student": {
           "en": "Open The states in 1790 bookmark and click the pies. Which state had the most people? In which states were more than a quarter of the people enslaved? The first line of each pop-up gives the percentage.",
           "es": "Abre el marcador The states in 1790 (los estados en 1790) y haz clic en los gráficos circulares. ¿Qué estado tenía más habitantes? ¿En qué estados más de una cuarta parte de la población estaba esclavizada? La primera línea de cada ventana emergente da el porcentaje."
@@ -147,6 +157,16 @@
           "legend",
           "popups"
         ],
+        "core": true,
+        "minutes": 15,
+        "frontOfClass": [
+          "In Map layers, turn on House seats in 1793.",
+          "Open the legend and read the four seat classes, from palest to darkest blue.",
+          "Point to the labels: each gives the state's abbreviation and its seats.",
+          "Ask: which state had the most House seats, and which the fewest?",
+          "Click two states and read the senators line of the pop-up.",
+          "Ask: why are the House and the Senate counted differently?"
+        ],
         "student": {
           "en": "In Map layers, turn on House seats in 1793. Each label gives the state and its seats, and darker blue means more seats. Which state had the most seats in the House of Representatives, and which the fewest? Click two states: how many senators did each have? Why do you think the House and the Senate are counted differently?",
           "es": "En las capas del mapa (Map layers), activa House seats in 1793 (escaños en la Cámara en 1793). Cada etiqueta da el estado y sus escaños, y un azul más oscuro indica más escaños. ¿Qué estado tenía más escaños en la Cámara de Representantes y cuál tenía menos? Haz clic en dos estados: ¿cuántos senadores tenía cada uno? ¿Por qué crees que la Cámara y el Senado se cuentan de forma distinta?"
@@ -166,6 +186,15 @@
         "task": "Students click Virginia and South Carolina and read the last two lines of each pop-up, which give the seats each would have had if enslaved people had been counted in full or not at all, and compare them with the actual seats. Then they look for other states where the two numbers differ.",
         "tools": [
           "popups"
+        ],
+        "core": false,
+        "minutes": 12,
+        "frontOfClass": [
+          "Click Virginia's pie and read the last two lines of the pop-up.",
+          "Click South Carolina's pie and read the same two lines.",
+          "Ask: how many seats would each have had if enslaved people had been counted in full, or not at all?",
+          "Click two more states and compare those two lines with the actual seats.",
+          "Ask: which states gained seats by counting people who could not vote?"
         ],
         "student": {
           "en": "Under the three-fifths clause, three of every five enslaved people were counted when House seats were shared out. Click Virginia and South Carolina and read the last two lines of each pop-up: how many seats would each have had if enslaved people had been counted in full, or not at all? Click other states too: which ones gained seats by counting people who could not vote?",
@@ -245,6 +274,16 @@
           "layers",
           "legend",
           "popups"
+        ],
+        "core": false,
+        "minutes": 12,
+        "frontOfClass": [
+          "In Map layers, turn off Population in 1790 and House seats in 1793, and turn on Ratifying the Constitution.",
+          "Open the legend: blue for votes to ratify, orange-red for votes against.",
+          "Click a pie and read the first line of the pop-up, which gives the votes for and against.",
+          "Ask: which three votes were closest?",
+          "Zoom to North Carolina and click both of its pies.",
+          "Ask: why does North Carolina have two pies?"
         ],
         "student": {
           "en": "Turn off Population in 1790 and House seats in 1793, and turn on Ratifying the Constitution. Click the pies and read the first line of each pop-up, which gives the votes for and against. Which three votes were closest? North Carolina has two pies: click both and explain why.",
@@ -381,6 +420,10 @@
     "Compare the actual seats for Virginia and South Carolina with the two alternatives in their pop-ups. How many seats did the three-fifths clause move, and who in those states did that extra representation speak for?",
     "The closest ratification votes were in some of the biggest states, and North Carolina voted twice. What does the map suggest might have happened if one or two of those votes had gone the other way?"
   ],
+  "differentiation": {
+    "support": "Write the three layer names on the board and do question 2 together from the front, reading one pop-up aloud before pairs click their own states.",
+    "stretch": "Turn on House seats today (2020 apportionment) and compare each state's seats now with 1793: which states gained or lost most, and why?"
+  },
   "resources": [
     {
       "title": "Constitution of the United States: A History",

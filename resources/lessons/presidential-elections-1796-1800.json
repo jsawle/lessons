@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.4",
+  "formatVersion": "1.5",
   "id": "presidential-elections-1796-1800",
-  "contentVersion": "0.4.0",
+  "contentVersion": "0.5.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -66,6 +66,16 @@
           "popups",
           "legend"
         ],
+        "core": true,
+        "minutes": 15,
+        "frontOfClass": [
+          "Open The sixteen states bookmark.",
+          "Open the legend: orange for John Adams, blue for Thomas Jefferson.",
+          "Point out that bigger pies mean more electors.",
+          "Ask: which part of the country mostly voted for Adams, and which for Jefferson?",
+          "Click one two-color pie and read the 1796 votes line of the pop-up.",
+          "Ask: which states split their votes, and how?"
+        ],
         "student": {
           "en": "Open The sixteen states bookmark and use the legend to read the 1796 pies. Which part of the country mostly voted for Adams, and which for Jefferson? Click each two-color pie: which states split their votes, and how?",
           "es": "Abre el marcador The sixteen states (Los dieciséis estados) y usa la leyenda para leer los gráficos circulares de 1796. ¿Qué parte del país votó sobre todo por Adams y cuál por Jefferson? Haz clic en cada gráfico de dos colores: ¿qué estados dividieron sus votos, y cómo?"
@@ -89,15 +99,23 @@
           "popups",
           "legend"
         ],
+        "core": false,
+        "minutes": 10,
+        "frontOfClass": [
+          "In Map layers, turn off Election of 1796: electors' votes and turn on Election of 1800: electors' votes.",
+          "Ask: which states have two-color pies this time?",
+          "Click one of them and read the 1800 votes line of the pop-up.",
+          "Ask: how did its electors divide, and which state was the closest?"
+        ],
         "student": {
           "en": "In Map layers, turn off Election of 1796 and turn on Election of 1800. Which states have two-color pies this time? Click each one: how did its electors divide between Adams and Jefferson? Which state was the closest?",
           "es": "En las capas del mapa (Map layers), desactiva Election of 1796 (Elección de 1796) y activa Election of 1800 (Elección de 1800). ¿Qué estados tienen gráficos de dos colores esta vez? Haz clic en cada uno: ¿cómo se dividieron sus electores entre Adams y Jefferson? ¿Qué estado estuvo más reñido?"
         },
+        "lines": 3,
         "answer": {
           "where": "Election of 1800: electors' votes layer; two-color pies, pop-up 1800 votes line: Maryland (Jefferson 5, Adams 5), Pennsylvania (Jefferson 8, Adams 7), North Carolina (Jefferson 8, Adams 4). Closest: Maryland, an even split.",
           "text": "Totals, not on the map: Jefferson 73, Burr 73, Adams 65. Each elector cast two votes, so the pop-ups also list Burr and Charles C. Pinckney."
-        },
-        "lines": 3
+        }
       },
       {
         "id": "q3",
@@ -111,6 +129,16 @@
           "popups",
           "legend"
         ],
+        "core": false,
+        "minutes": 12,
+        "frontOfClass": [
+          "In Map layers, switch Election of 1796 off and Election of 1800 on, then back, so the class sees the change.",
+          "Ask: which state's whole pie changed from orange to blue?",
+          "Click that state's pie and read the number of electors in the pop-up title.",
+          "Switch the layers again and look at the two-color pies.",
+          "Ask: which states' pies changed their shares, and did any New England state change?",
+          "Ask: where was each party strong, and where did the two compete?"
+        ],
         "student": {
           "en": "Switch between Election of 1796 and Election of 1800 in Map layers (one on, one off). Which state's whole pie changed from orange to blue, and how many electors did it have? Which states' pies changed their shares? Did any New England state change? Using both maps, describe where each party was strong and where the two parties competed.",
           "es": "Alterna entre Election of 1796 y Election of 1800 en las capas del mapa (una activada, la otra desactivada). ¿Qué estado cambió todo su gráfico de naranja a azul, y cuántos electores tenía? ¿Qué estados cambiaron las proporciones de su gráfico? ¿Cambió algún estado de Nueva Inglaterra? Con los dos mapas, describe dónde era fuerte cada partido y dónde competían los dos partidos."
@@ -119,12 +147,12 @@
           "en": "Changed completely: ____________, with ____ electors.",
           "es": "Cambió por completo: ____________, con ____ electores."
         },
+        "lines": 4,
         "answer": {
           "where": "Election of 1796 and Election of 1800 layers, pop-up title (state and number of electors) and votes lines. New York, 12 electors: all Adams in 1796, all Jefferson in 1800. Shares changed: Maryland (Adams 7–4 to 5–5), Pennsylvania (Jefferson 14–1 to 8–7), North Carolina (Jefferson 11–1 to 8–4), Virginia (Jefferson 20–1 to 21–0). No New England state changed: Massachusetts, Connecticut, New Hampshire, Rhode Island and Vermont stayed all orange.",
           "accept": "Names New York as the only state that switched entirely; notes that the middle states (Maryland, Pennsylvania, North Carolina) were split in both elections; says the Federalists were strong in New England and the Democratic-Republicans in the South and West, with the middle states (and New York) deciding the result.",
           "text": "New York's 12 votes were more than the margin: without that switch Adams would have had 77 votes to Jefferson's 61 in 1800, instead of 65 to 73."
-        },
-        "lines": 4
+        }
       },
       {
         "id": "q4",
@@ -137,19 +165,29 @@
           "popups",
           "measure"
         ],
+        "core": false,
+        "minutes": 12,
+        "frontOfClass": [
+          "Zoom in on the two pink squares near the capital.",
+          "Click Marbury v. Madison (1803) and read the Why here part of the pop-up.",
+          "Click McCulloch v. Maryland (1819) and read its Why here part.",
+          "Ask: what happened in each place to bring the case to the Court?",
+          "Open Measure and click from one square to the other for the straight-line distance in miles.",
+          "Ask: why might both cases have come from so near the capital?"
+        ],
         "student": {
           "en": "Click the two pink squares: Marbury v. Madison (1803) and McCulloch v. Maryland (1819). In the Why here part of each pop-up, what happened in that place to bring the case to the Court? Use Measure to find the straight-line distance between the two squares. Why might both cases have come from so near the national capital?",
           "es": "Haz clic en los dos cuadrados rosados: Marbury v. Madison (1803) y McCulloch v. Maryland (1819). En la parte Why here (por qué aquí) de cada ventana emergente, ¿qué ocurrió en ese lugar para que el caso llegara a la Corte? Usa la herramienta de medir (Measure) para hallar la distancia en línea recta entre los dos cuadrados. ¿Por qué crees que los dos casos surgieron tan cerca de la capital nacional?"
+        },
+        "fill": {
+          "en": "Distance between the two cases: about ____ miles.",
+          "es": "Distancia entre los dos casos: unas ____ millas."
         },
         "lines": 3,
         "answer": {
           "where": "Landmark Supreme Court cases layer. Marbury v. Madison pop-up, Why here: William Marbury asked the Supreme Court in Washington for an order to get his commission. McCulloch v. Maryland pop-up, Why here: Maryland sued James McCulloch, cashier at the Baltimore branch of the Bank of the United States, to collect its tax on the bank. Measure tool, Baltimore square to Washington square: about 35 miles (accept 32 to 38).",
           "accept": "Any sensible link between the places and federal power: the Court and the federal government sat in Washington, so a dispute over a federal appointment began there; the Bank of the United States had a branch in nearby Baltimore, and Maryland's tax on it set state law against federal law.",
           "text": "The pop-ups also give the ruling and Why it matters: Marbury established judicial review (the pop-up quotes \"A Law repugnant to the Constitution is void\"); McCulloch held that Congress could charter the bank and that federal law is supreme over state law, so Maryland's tax was void. Marbury grew out of the change of party in 1801: Marbury was one of John Adams's last-minute appointments, and Jefferson's administration did not deliver his commission."
-        },
-        "fill": {
-          "en": "Distance between the two cases: about ____ miles.",
-          "es": "Distancia entre los dos casos: unas ____ millas."
         }
       }
     ],
@@ -176,6 +214,10 @@
     "In both elections a few states split their electors between the two candidates. Which states were they, and why might a state's electors not all vote the same way?",
     "Marbury v. Madison and McCulloch v. Maryland both arose within a short distance of the capital. Using the distance you measured, why might the earliest tests of federal power have come from so close to Washington?"
   ],
+  "differentiation": {
+    "support": "Do question 1 from the front with the legend open, and write the two candidates and their colors on the board before pairs click the split states.",
+    "stretch": "Using both election layers and the electors in each pop-up title, work out which states Adams would have needed to win in 1800, and what New York's switch was worth."
+  },
   "resources": [
     {
       "title": "Election of 1800 (DocsTeach activity)",
