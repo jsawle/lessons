@@ -1,6 +1,6 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.6",
+  "formatVersion": "1.7",
   "id": "copy-this-file-and-rename-it",
   "contentVersion": "0.1.0",
   "status": "draft",
@@ -119,6 +119,10 @@
       "source": "National Geographic Education"
     }
   ],
+  "assessment": {
+    "evidence": "What counts as strong map evidence in this lesson: name the layers, features, dates, numbers or distances a good answer draws on (one or two sentences, for teachers).",
+    "exemplar": "A model answer to the compelling question at the top level of the rubric, about 80 to 200 words, written the way a strong grade 8 student would, naming where on the map each piece of evidence comes from (the pop-up, the legend, a bookmark, Measure). No question marks. This is an answer: it never goes on the lesson page, the student sheet or to Vera."
+  },
   "studentSupport": {
     "beforeYouStart": {
       "en": "Optional. Two or three sentences of context, without giving away answers. Adding studentSupport makes a two-page student sheet.",

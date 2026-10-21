@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.6",
+  "formatVersion": "1.7",
   "id": "war-of-1812-and-monroe-doctrine",
-  "contentVersion": "0.5.0",
+  "contentVersion": "0.6.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -404,6 +404,10 @@
       "source": "National Archives"
     }
   ],
+  "assessment": {
+    "evidence": "Strong answers use the Battles of the War of 1812 pop-ups (Battle Victor, Total Casualties: Fort Erie 2,628; New Orleans, January 8, 1815, after the Treaty of Ghent of December 24, 1814), the Land Spain gave up in 1819 and Adams–Onís Treaty line pop-ups (East and West Florida; Sabine River, 100° W, 42° N) and the Latin American independence pop-ups (Mexico recognized December 12, 1822).",
+    "exemplar": "The War of 1812 did not change the United States' borders, but in the years after it the country fixed its boundary with Spain all the way to the Pacific and spoke for the new nations of Latin America, so by 1823 it was acting as the main power in the Americas. In the Battles of the War of 1812 layer, the biggest diamond is the Siege of Fort Erie in Ontario, with 2,628 casualties in the pop-up, and the legend shows blue American and red British victories on every front, from the Great Lakes to Chesapeake Bay and the Gulf Coast. The New Orleans pop-up gives January 8, 1815, after the Treaty of Ghent was signed on December 24, 1814, so it came after peace and the war ended without gains. At The 1819 boundary bookmark, the Land Spain gave up in 1819 pop-ups show East Florida and West Florida passing to the United States under the Adams-Onís Treaty, and the seven parts of the treaty line run from the Sabine River to 100° W and along 42° N to the Pacific. In the Latin American independence layer, the pop-ups show the United States recognized Mexico on December 12, 1822 and Chile on January 27, 1823, before Monroe's message of December 2, 1823, but Brazil only on May 26, 1824. So by 1823 the country had gone from fighting on its own borders to drawing a border to the Pacific and warning Europe away from the hemisphere, though Haiti, not recognized until 1862, shows the limit."
+  },
   "studentSupport": {
     "beforeYouStart": {
       "en": "In the early 1800s Britain and France were at war, and both seized American ships. British warships also forced sailors off American ships into the Royal Navy, and Britain supported Native nations resisting American settlement. In June 1812 the United States declared war on Britain.",

@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.6",
+  "formatVersion": "1.7",
   "id": "presidential-elections-1796-1800",
-  "contentVersion": "0.6.0",
+  "contentVersion": "0.7.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -291,6 +291,10 @@
       "source": "National Archives"
     }
   ],
+  "assessment": {
+    "evidence": "Strong answers use the pies and legend of the Election of 1796 and Election of 1800 layers (orange for Adams, blue for Jefferson) with numbers from the pop-up votes lines, such as New York's 12 electors switching from all Adams to all Jefferson, Maryland 7–4 then 5–5 and Pennsylvania 14–1 then 8–7, and the Why here parts of the Supreme Court pop-ups with a Measure distance of about 35 miles.",
+    "exemplar": "The first political parties divided the country by region: the Federalists held New England and the Democratic-Republicans held the South and the West, while the middle states were split and decided the result. In the Election of 1796 layer, the legend shows orange for John Adams and blue for Thomas Jefferson, and the pies for Massachusetts, Connecticut, New Hampshire, Rhode Island and Vermont are all orange, while Georgia, Kentucky, South Carolina and Tennessee are blue. The two-color pies are in the middle: the pop-up's 1796 votes line gives Maryland Adams 7, Jefferson 4, and Pennsylvania Jefferson 14, Adams 1. When I turned on the Election of 1800 layer, New York's whole pie changed from orange to blue, and its pop-up title shows 12 electors, more than the margin, so one state changed who won. Maryland's pop-up shows 5 to 5, the closest state, and Pennsylvania moved to 8 to 7, so the middle stayed contested while no New England state changed. The Landmark Supreme Court cases layer shows the divide went beyond elections: Why here says Marbury asked the Court in Washington for his commission and Maryland taxed the Bank's Baltimore branch, and Measure gives about 35 miles between the squares, so the first fights over federal power were next to the capital. The pattern held in both elections, but the parties only competed in a few states, so most states were not divided inside."
+  },
   "studentSupport": {
     "beforeYouStart": {
       "en": "George Washington belonged to no party, and in 1796, as he prepared to leave office, he warned Americans against parties. By then two had formed: the Federalists, led by John Adams and Alexander Hamilton, and the Democratic-Republicans, led by Thomas Jefferson and James Madison. Each elector cast two votes for president, and the runner-up became vice president.",

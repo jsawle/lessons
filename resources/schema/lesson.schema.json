@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://jsawle.github.io/lessons/resources/schema/lesson.schema.json",
-  "title": "MapMaker lesson file, format 1.6",
+  "title": "MapMaker lesson file, format 1.7",
   "description": "One file per lesson. The lesson page, the teacher page, the Word student sheets and teacher notes, the how-to links, Vera's knowledge entry and the AI prompt are made from it. Text fields allow **bold** and [link text](https://address) only.",
   "type": "object",
   "required": [
@@ -27,7 +27,8 @@
     "subjects",
     "objectives",
     "discussion",
-    "differentiation"
+    "differentiation",
+    "assessment"
   ],
   "$defs": {
     "text": {
@@ -58,7 +59,7 @@
       "type": "string"
     },
     "formatVersion": {
-      "const": "1.6"
+      "const": "1.7"
     },
     "id": {
       "type": "string",
@@ -473,6 +474,29 @@
         }
       },
       "description": "Further reading for teachers, National Geographic Education first where a resource exists."
+    },
+    "assessment": {
+      "type": "object",
+      "description": "Format 1.7. Assessing the answer to the compelling question, for teachers (English). The shared four-level rubric lives in site.json rubric; this block adds the lesson's own line about map evidence and a model answer. Never shown to students or to Vera.",
+      "required": [
+        "evidence",
+        "exemplar"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "evidence": {
+          "type": "string",
+          "minLength": 60,
+          "maxLength": 400,
+          "description": "One or two sentences: the layers, features, dates, numbers or distances a strong answer draws on in this lesson."
+        },
+        "exemplar": {
+          "type": "string",
+          "minLength": 400,
+          "maxLength": 1400,
+          "description": "A model answer at the top level of the rubric, about 80 to 200 words, written as a strong grade 8 student would, naming where on the map each piece of evidence comes from."
+        }
+      }
     },
     "studentSupport": {
       "type": "object",

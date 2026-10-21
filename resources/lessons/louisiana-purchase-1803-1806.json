@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.6",
+  "formatVersion": "1.7",
   "id": "louisiana-purchase-1803-1806",
-  "contentVersion": "0.6.0",
+  "contentVersion": "0.7.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -321,6 +321,10 @@
       "source": "National Archives"
     }
   ],
+  "assessment": {
+    "evidence": "Strong answers use the Louisiana Purchase 1803 pop-up Notes (530,000,000 acres, $15 million) against the legend's green land of 1783, the United States Watersheds pop-ups (Ohio Region, Missouri Region) traced on the basemap to the Mississippi and New Orleans, the Biomes pop-up (Temperate Grasslands, Savannas & Shrublands) and a Measure distance from Pittsburgh to the Pacific of about 2,200 miles.",
+    "exemplar": "The Louisiana Purchase roughly doubled the United States and gave it the rivers western farmers depended on, and the Mississippi mattered because those rivers all reached the sea through New Orleans. At The Louisiana Purchase bookmark, the legend shows the green land of 1783 and the yellow purchase, and the yellow area is about the same size as the green. The Louisiana Purchase 1803 pop-up Notes say it was 530,000,000 acres, bought from France in 1803 for $15 million. When I turned on United States Watersheds, the two big brown outlines had pop-ups named Ohio Region and Missouri Region, and following those rivers on the basemap, both join the Mississippi, which reaches the Gulf of Mexico at New Orleans. That is why the port mattered: whoever held New Orleans could stop or tax farmers' crops on the way to market. At the Up the Missouri bookmark the Biomes pop-up reads Temperate Grasslands, Savannas & Shrublands, and the campsite symbols sit on the riverbanks, so the new land was open plains the Corps crossed by river. Measure from Pittsburgh to the trail's end at the mouth of the Columbia River gives about 2,200 miles, less than half the trail's 4,900 miles. One limit is that the trail leaves the yellow purchase at the Rockies, so the Pacific coast was not part of what the United States bought, and the map has no layer for the Native nations who governed most of this land."
+  },
   "studentSupport": {
     "beforeYouStart": {
       "en": "In 1803 the United States bought France's claim to a huge area west of the Mississippi River. Native nations lived on and governed most of that land; the National Park Service says the expedition met more than 50 Tribal Nations. President Thomas Jefferson sent the Corps of Discovery, led by Meriwether Lewis and William Clark, to explore it and look for a water route to the Pacific Ocean. The expedition set out in 1803 and returned in 1806.",

@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.6",
+  "formatVersion": "1.7",
   "id": "us-slavery-and-slave-trade-1850",
-  "contentVersion": "0.7.0",
+  "contentVersion": "0.8.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -357,6 +357,10 @@
       "source": "National Park Service"
     }
   ],
+  "assessment": {
+    "evidence": "Strong answers use the four legend groups and state pop-up years from US States and Territories 1850 (Pennsylvania 1780, Virginia 1788), the line along the southern border of Pennsylvania and the Ohio River, the Missouri Compromise Line pop-up (Enacted 1820), the black Internal Routes of the US Slave Trade from Virginia to New Orleans, and the orange Underground Railroad routes north to Canada.",
+    "exemplar": "By 1850 slavery divided the United States into a free North and a slave South, with a line that every new state and every escape route had to cross. The legend for US States and Territories 1850 has four groups, and the pop-ups give each state's year: Pennsylvania 1780 in the Free states group and Virginia 1788 in the Slave states group. In the East the shade changes along the southern border of Pennsylvania and then the Ohio River, so a river marked the divide. The Missouri Compromise Line pop-up says Enacted 1820 and that Missouri was the exception because most of it lies north of the parallel, so the division was a deal, not a rule. With the Underground Railroad layer off, the black Internal Routes of the US Slave Trade start in Virginia and join up heading south and west to New Orleans, so enslaved people were moved from the Upper South to the Deep South for plantation labor. From the Illinois, Indiana, and Ohio bookmark, the orange Underground Railroad routes run north past Cleveland and Detroit to the black dots at Chatham and Toronto in Canada, because after the Fugitive Slave Act of 1850 free states were unsafe. One limit is that the layers were traced from a 1920 atlas, so the routes are approximate."
+  },
   "studentSupport": {
     "beforeYouStart": {
       "en": "By 1850, the Northern states had ended slavery or passed laws to end it, but in the South slavery was legal and growing. More than 3 million people were enslaved in the United States. Each time a new state joined the Union, Congress argued over whether slavery would be allowed there.",

@@ -11,7 +11,7 @@
   else root.MMRSheet = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "1.6";
+  var VERSION = "1.7";
   /* Sheets with more question text than this get tighter writing lines, so every sheet stays on one page. */
   var LONG_SHEET_CHARS = 1040;
   /* The same for two-page sheets (lessons with studentSupport), counting the extra sections too. */
@@ -169,7 +169,7 @@
       }
       return new D.Table({ width: { size: TEXT_WIDTH, type: D.WidthType.DXA }, columnWidths: widths,
         rows: [new D.TableRow({ tableHeader: true, children: columns.map(function (c, i) { return cell(c, i, true); }) })]
-          .concat(rows.map(function (r) { return new D.TableRow({ children: r.map(function (c, i) { return cell(c, i, false); }) }); })) });
+          .concat(rows.map(function (r) { return new D.TableRow({ cantSplit: true, children: r.map(function (c, i) { return cell(c, i, false); }) }); })) });
     }
     var mapUrl = MMR.mapmakerUrl(site, lesson.map.webmapId);
     var stds = MMR.sortStandards(site, lesson.standards);
@@ -220,6 +220,18 @@
       if (a.text) kids.push(labelled("Notes:", a.text));
     });
     kids.push(h3("Answering the compelling question"), p(inq.final.teacher));
+    var R = site.rubric, asm = lesson.assessment;
+    if (asm && R && R.criteria) {
+      kids.push(h2("Assessing the answer"),
+        p("One way to assess the answer to the compelling question: the rubric every lesson shares (four criteria, four levels), with this lesson's own line on what counts as map evidence, and a model answer at the top level. Use it as it is, adapt it, or use your own."),
+        labelled("Map evidence in this lesson:", asm.evidence));
+      kids.push(table(["Criterion"].concat(R.levels), R.criteria.map(function (c) { return [c.name].concat(c.descriptors.map(MMR.plain)); })));
+      kids.push(new D.Paragraph({ spacing: { after: 100 }, children: [run("")] }));
+      kids.push(h3("A model answer (level 4)"));
+      MMR.plain(asm.exemplar).split(/\n\n+/).forEach(function (x) {
+        kids.push(new D.Paragraph({ spacing: { after: 100 }, indent: { left: 360 }, border: { left: { style: D.BorderStyle.SINGLE, size: 24, color: "35AC46", space: 12 } }, children: [run(x)] }));
+      });
+    }
     if (tn.misconceptions && tn.misconceptions.length) {
       kids.push(h2("Common misunderstandings"));
       tn.misconceptions.forEach(function (m) {

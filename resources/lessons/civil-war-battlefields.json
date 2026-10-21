@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.6",
+  "formatVersion": "1.7",
   "id": "civil-war-battlefields",
-  "contentVersion": "0.6.0",
+  "contentVersion": "0.7.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -341,6 +341,10 @@
       "source": "National Park Service"
     }
   ],
+  "assessment": {
+    "evidence": "Strong answers use the five legend groups of U.S. Civil War States and Territories (1863), including the border states and West Virginia (June 20, 1863), the white dashed Boundary between Union and Confederacy past Washington, D.C., the density of Railroads 1826 to 1863 (static) either side of it, and names and acres from the Civil War Battlefield Boundary pop-ups (Gettysburg 73,551 acres).",
+    "exemplar": "The geography of a divided nation shaped the Civil War by putting the Union capital right on the front line, giving the North a much denser railroad network, and making Virginia the place where most of the fighting happened. Zoomed to Washington, D.C., the legend shows Maryland as a Union slave state, a border state, and Virginia as a slave state seceding after Fort Sumter, with the white dashed Boundary between Union and Confederacy running right past the capital, so if Maryland had left too, Washington would have been surrounded. With the States layer off, the thin dark gray lines of Railroads 1826 to 1863 (static) are clearly denser north of the boundary, between the Mississippi River and the Atlantic coast, so the Union could move soldiers, food and weapons faster and farther. The Civil War Battlefield Boundary pop-ups put far more tan areas in Virginia than in any other state, between Washington and Richmond, while in Union states they give Antietam in Maryland at 34,937 acres and Gettysburg in Pennsylvania at 73,551 acres. The pattern is that the battles cluster along the boundary between the two capitals, but the map shows 1863, so West Virginia appears as a Union state even though in 1861 it was part of Virginia."
+  },
   "studentSupport": {
     "beforeYouStart": {
       "en": "In November 1860, Abraham Lincoln was elected president. He opposed the spread of slavery into the western territories, and Southern slave states began to leave the Union to form the Confederate States of America. In April 1861, Confederate forces attacked Fort Sumter, a Union fort in South Carolina, and the Civil War began.",

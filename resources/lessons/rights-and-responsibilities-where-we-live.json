@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.6",
+  "formatVersion": "1.7",
   "id": "rights-and-responsibilities-where-we-live",
-  "contentVersion": "0.5.0",
+  "contentVersion": "0.6.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -299,6 +299,10 @@
       "source": "National Park Service"
     }
   ],
+  "assessment": {
+    "evidence": "Strong answers name places on the student's own map: the representative, party and district number from the Congressional districts (119th Congress) pop-up; public buildings the Topographic basemap labels at close zoom (courthouse, city hall, library, polling place) with the student's Sketch pins; and a National Register of Historic Places diamond identified by its pop-up address and legend type.",
+    "exemplar": "In my town, people use their rights and carry out their responsibilities mostly in a few public buildings near the center: the courthouse, the library and the school that serves as a polling place. When I zoomed in on the Topographic basemap until it labeled buildings, I put a Sketch pin on the county courthouse on Main Street, labeled with the right to a jury trial, because that is where trials happen and where people do jury service when called, which is required by law. My second pin is the public library two blocks away, labeled freedom of speech and the press, because anyone can read and share ideas there. My third pin is my school, our polling place, where people vote; voting is a right and a responsibility, but no federal law requires it. The Congressional districts pop-up named my representative, their party and our district number, and when I zoomed out the blue outline covered far more than my town, so my representative speaks for many other places too. With National Register of Historic Places on, the diamond nearest my school had a Main Street address in its pop-up and the legend showed it was a building; the basemap label said it was the old courthouse, so rights have been used in the same place for a long time. One limit is that the map only shows buildings, and some responsibilities, like obeying laws, happen everywhere."
+  },
   "studentSupport": {
     "beforeYouStart": {
       "en": "In 1791, ten amendments, known as the Bill of Rights, were added to the Constitution. They protect rights such as freedom of speech, religion and the press, the right to gather peacefully, and the right to a fair trial. Citizens also have responsibilities to their community and their country.",
