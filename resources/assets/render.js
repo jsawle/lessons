@@ -1,4 +1,4 @@
-/* MapMaker resource pages (lab): page renderer v2.8 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
+/* MapMaker resource pages (lab): page renderer v2.9 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
    standards in the hero; Vera link and a copyable AI prompt). Draws a lesson page, its teacher page (?view=teacher) or the catalogue from JSON files. */
 (function () {
   "use strict";
@@ -75,8 +75,9 @@
       (courseUrl ? '<li><a href="' + esc(courseUrl) + '">' + esc(lesson.course) + "</a></li>" : "<li>" + esc(lesson.course) + "</li>") +
       (teacherView ? '<li><a href="' + lessonHref + '">' + esc(lesson.title) + "</a></li>" : "<li>" + esc(lesson.unit) + "</li>") + "</ol></nav>");
     h.push('<h1 id="lesson-title">' + (teacherView ? "Answer notes: " : "") + esc(lesson.title) + "</h1>");
+    var pic = MMR.mapImage(site, lesson);
     if (teacherView) h.push('<p class="notice"><strong>For teachers.</strong> This page holds the answers and what to accept. With students, share the lesson page or the map, not this page.</p>');
-    else h.push('<p class="summary">' + inline(lesson.summary) + "</p>");
+    else h.push('<div class="herogrid"><div><p class="summary">' + inline(lesson.summary) + "</p></div>" + (pic ? '<a class="pic" href="' + esc(mmUrl) + '" target="_blank" rel="noopener"><img src="' + esc(pic.url) + '" alt="' + esc(pic.alt) + '" width="' + pic.width + '" height="' + pic.height + '"><span class="muted">' + (pic.own ? "The map as it opens." : "Map preview; open it in MapMaker to explore.") + newTab + "</span></a>" : "") + "</div>");
     h.push(facts(site, lesson));
     if (teacherView) {
       h.push('<div class="actions"><a class="btn primary" href="' + esc(mmUrl) + '" target="_blank" rel="noopener">' + mapIcon + "Open in MapMaker" + newTab + "</a>" +

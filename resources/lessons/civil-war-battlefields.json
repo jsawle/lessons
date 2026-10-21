@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.5",
   "id": "civil-war-battlefields",
-  "contentVersion": "0.5.0",
+  "contentVersion": "0.5.1",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -28,6 +28,11 @@
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "7a06e8e2818941f99a3d40bb32e08118",
+    "image": {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/7a06e8e2818941f99a3d40bb32e08118/info/thumbnail/ago_downloaded.png",
+      "alt": "Preview of the Civil War Battlefields map",
+      "preview": true
+    },
     "bookmarks": [],
     "layers": [
       {

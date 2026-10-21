@@ -6,7 +6,7 @@
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  var VERSION = { renderer: "2.8", format: "1.5", checker: "1.5", vera: "1.3", prompt: "1.1" };
+  var VERSION = { renderer: "2.9", format: "1.5", checker: "1.5", vera: "1.3", prompt: "1.1" };
   var HEX32 = /^[0-9a-f]{32}$/i;
   var DATE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -39,6 +39,14 @@
     var q = "appid=" + encodeURIComponent(mm.appId);
     if (HEX32.test(webmapId || "")) q += "&webmap=" + encodeURIComponent(webmapId);
     return base + "/apps/instant/atlas/index.html?" + q;
+  }
+
+  /* The picture of the map shown on the lesson page: map.image, an https URL with alt text. A screenshot of the
+     map as it opens is best; preview: true marks a stand-in such as the web map item's thumbnail. */
+  function mapImage(site, lesson) {
+    var img = (lesson.map && lesson.map.image) || null;
+    if (!img || !/^https:\/\//.test(img.url || "")) return null;
+    return { url: img.url, alt: img.alt || ("The " + lesson.title + " map in MapMaker"), width: img.width || (img.preview ? 600 : 1200), height: img.height || (img.preview ? 400 : 675), own: !img.preview };
   }
 
   /* Google's script-free Share to Classroom link. It carries only the address to share (the one parameter
@@ -229,6 +237,7 @@
     var map = lesson.map || {};
     need(HEX32.test(map.webmapId || ""), "map.webmapId should be a 32-character item ID.");
     need(Array.isArray(map.layers) && map.layers.length > 0, "map.layers needs at least one layer.");
+    if (map.image !== undefined) need(map.image && /^https:\/\//.test(map.image.url || "") && str(map.image.alt), "map.image needs an https url and alt text describing what the picture shows.");
     if (map.bookmarks !== undefined) need(Array.isArray(map.bookmarks) && map.bookmarks.every(str),
       "map.bookmarks should be a list of bookmark names, exactly as in the map.");
     (map.layers || []).forEach(function (l, i) {
@@ -317,7 +326,7 @@
     return errs;
   }
 
-  return { VERSION: VERSION, esc: esc, inline: inline, plain: plain, mapmakerUrl: mapmakerUrl, classroomShareUrl: classroomShareUrl, hubUrl: hubUrl, feedbackUrl: feedbackUrl,
+  return { VERSION: VERSION, esc: esc, inline: inline, plain: plain, mapmakerUrl: mapmakerUrl, mapImage: mapImage, classroomShareUrl: classroomShareUrl, hubUrl: hubUrl, feedbackUrl: feedbackUrl,
     howToLinks: howToLinks, veraUrl: veraUrl, veraEntry: veraEntry, veraFile: veraFile, veraFileName: veraFileName, aiPrompt: aiPrompt, promptUrl: promptUrl,
     unitList: unitList, unitIndex: unitIndex, skills: skills, instructionalModels: instructionalModels, sortStandards: sortStandards, standardPrefix: standardPrefix, standardLabel: standardLabel, check: check };
 });

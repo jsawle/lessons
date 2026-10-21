@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.5",
   "id": "the-battle-of-vicksburg",
-  "contentVersion": "0.5.0",
+  "contentVersion": "0.5.1",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -24,6 +24,11 @@
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "1ba8cd3fc75a49a497be1137fce4c032",
+    "image": {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/1ba8cd3fc75a49a497be1137fce4c032/info/thumbnail/thumbnail1702673296499.png",
+      "alt": "Preview of the The Battle of Vicksburg map",
+      "preview": true
+    },
     "bookmarks": [
       "The Battle of Vicksburg"
     ],
