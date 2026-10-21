@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.5",
+  "formatVersion": "1.6",
   "id": "roads-trails-and-rails-west",
-  "contentVersion": "0.5.1",
+  "contentVersion": "0.6.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -101,9 +101,23 @@
           "Ask: in which state do most of the trails start?",
           "Ask: looking at the map, why there?"
         ],
-        "student": {
-          "en": "Click three of the dotted trail lines (the legend shows which color is which trail). From each pop-up, where did the trail start and end? In which state do most of the trails start?",
-          "es": "Haz clic en tres de las líneas punteadas de los senderos (la leyenda muestra qué color corresponde a cada sendero). Según cada ventana emergente, ¿dónde empezaba y terminaba el sendero? ¿En qué estado empiezan la mayoría de los senderos?"
+        "steps": [
+          {
+            "en": "Open the legend to see which color is which trail.",
+            "es": "Abre la leyenda para ver qué color corresponde a cada sendero."
+          },
+          {
+            "en": "Click three of the dotted trail lines.",
+            "es": "Haz clic en tres de las líneas punteadas de los senderos."
+          },
+          {
+            "en": "Read in each pop-up where the trail started and ended.",
+            "es": "Lee en cada ventana emergente dónde empezaba y terminaba el sendero."
+          }
+        ],
+        "ask": {
+          "en": "Where did each trail start and end? In which state do most of the trails start?",
+          "es": "¿Dónde empezaba y terminaba cada sendero? ¿En qué estado empiezan la mayoría de los senderos?"
         },
         "lines": 4,
         "answer": {
@@ -179,9 +193,27 @@
           "Trace the dotted Oregon line from Independence to Portland with the pointer.",
           "Ask: why is the trail so much longer than a straight line?"
         ],
-        "student": {
-          "en": "Click the Oregon Trail (find its color in the legend). How long was it, and how many people traveled it? Then use Measure for a straight line from Independence, Missouri (on the basemap, next to Kansas City), to Portland, Oregon. Why is the trail longer than a straight line?",
-          "es": "Haz clic en el sendero de Oregón (busca su color en la leyenda). ¿Qué longitud tenía y cuántas personas lo recorrieron? Luego usa la herramienta de medir (Measure) para trazar una línea recta de Independence, Misuri (en el mapa base, junto a Kansas City), a Portland, Oregón. ¿Por qué el sendero es más largo que una línea recta?"
+        "steps": [
+          {
+            "en": "Find the Oregon Trail's color in the legend.",
+            "es": "Busca el color del sendero de Oregón en la leyenda."
+          },
+          {
+            "en": "Click the Oregon Trail and read its length and how many people traveled it.",
+            "es": "Haz clic en el sendero de Oregón y lee su longitud y cuántas personas lo recorrieron."
+          },
+          {
+            "en": "Find Independence, Missouri, on the basemap, next to Kansas City.",
+            "es": "Busca Independence, Misuri, en el mapa base, junto a Kansas City."
+          },
+          {
+            "en": "Use Measure for a straight line from Independence to Portland, Oregon.",
+            "es": "Usa la herramienta de medir (Measure) para trazar una línea recta de Independence a Portland, Oregón."
+          }
+        ],
+        "ask": {
+          "en": "How long was the Oregon Trail, and how many people traveled it? Why is the trail longer than a straight line?",
+          "es": "¿Qué longitud tenía el sendero de Oregón y cuántas personas lo recorrieron? ¿Por qué el sendero es más largo que una línea recta?"
         },
         "fill": {
           "en": "Measure the straight-line distance from Independence, Missouri, to Portland, Oregon: ________ miles",
@@ -212,9 +244,27 @@
           "Ask: was the land the trail crossed empty?",
           "Ask: what might the trail have meant for the people who lived there?"
         ],
-        "student": {
-          "en": "In Map layers, turn on Indigenous Territories. Zoom in until the nations' names appear, then follow one trail from one end to the other. Name two nations whose land it crossed. Was the land the trail crossed empty? What might the trail have meant for the people who lived there?",
-          "es": "En las capas del mapa (Map layers), activa Indigenous Territories (territorios indígenas). Acércate hasta que aparezcan los nombres de las naciones y sigue un sendero de un extremo al otro. Nombra dos naciones cuyas tierras cruzaba. ¿Estaba vacía la tierra que cruzaba el sendero? ¿Qué pudo significar el sendero para las personas que vivían allí?"
+        "steps": [
+          {
+            "en": "In Map layers, turn on Indigenous Territories.",
+            "es": "En las capas del mapa (Map layers), activa Indigenous Territories (territorios indígenas)."
+          },
+          {
+            "en": "Zoom in until the nations' names appear.",
+            "es": "Acércate hasta que aparezcan los nombres de las naciones."
+          },
+          {
+            "en": "Follow one trail from one end to the other.",
+            "es": "Sigue un sendero de un extremo al otro."
+          },
+          {
+            "en": "Find two nations whose land it crossed.",
+            "es": "Busca dos naciones cuyas tierras cruzaba."
+          }
+        ],
+        "ask": {
+          "en": "Which two nations' land did the trail cross? Was the land the trail crossed empty? What might the trail have meant for the people who lived there?",
+          "es": "¿Las tierras de qué dos naciones cruzaba el sendero? ¿Estaba vacía la tierra que cruzaba el sendero? ¿Qué pudo significar el sendero para las personas que vivían allí?"
         },
         "answer": {
           "where": "Indigenous Territories layer (off at start; names draw when zoomed in). Any trail runs through a continuous patchwork of shaded territories from Missouri to the coast; for example the Oregon Trail crosses lands labeled for the Kaw, Pawnee, Lakota, Cheyenne, Arapaho, Shoshone, Nez Perce and others. Accept any two names read from the map.",
@@ -243,9 +293,23 @@
           "Click a thin gray railroad line and read the year it was in operation by.",
           "Ask: what happened to the wagon trails once the railroad opened?"
         ],
-        "student": {
-          "en": "In Map layers, turn on Railroads. Use the legend to find the Transcontinental Railroad (Union Pacific) and (Central Pacific) lines. Which trails do they follow most closely? Click a thin gray railroad line: when was it in operation by?",
-          "es": "En las capas del mapa (Map layers), activa Railroads (ferrocarriles). Usa la leyenda para encontrar las líneas Transcontinental Railroad (Union Pacific) y (Central Pacific). ¿Qué senderos siguen más de cerca? Haz clic en una línea gris fina de ferrocarril: ¿desde cuándo funcionaba?"
+        "steps": [
+          {
+            "en": "In Map layers, turn on Railroads.",
+            "es": "En las capas del mapa (Map layers), activa Railroads (ferrocarriles)."
+          },
+          {
+            "en": "Use the legend to find the Transcontinental Railroad (Union Pacific) and (Central Pacific) lines.",
+            "es": "Usa la leyenda para encontrar las líneas Transcontinental Railroad (Union Pacific) y (Central Pacific)."
+          },
+          {
+            "en": "Click a thin gray railroad line and read when it was in operation by.",
+            "es": "Haz clic en una línea gris fina de ferrocarril y lee desde cuándo funcionaba."
+          }
+        ],
+        "ask": {
+          "en": "Which trails do the Transcontinental Railroad lines follow most closely? By when was the gray railroad line in operation?",
+          "es": "¿Qué senderos siguen más de cerca las líneas del Transcontinental Railroad? ¿Desde cuándo funcionaba la línea gris de ferrocarril?"
         },
         "answer": {
           "where": "Legend: Transcontinental Railroad (Union Pacific) and Transcontinental Railroad (Central Pacific) are thick colored lines running from Omaha across Nebraska, Wyoming, Utah and Nevada to Sacramento. Compare with the dotted California and Mormon Pioneer trails (and the Pony Express across Nevada). Railroads 1826 to 1911 pop-up: \"Railroad in operation by:\" followed by a year; any year the student reads is fine. The California Trail pop-up says the trail was used until 1869, when the transcontinental railroad was completed.",

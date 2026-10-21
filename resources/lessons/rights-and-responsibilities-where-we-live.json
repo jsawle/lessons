@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.5",
+  "formatVersion": "1.6",
   "id": "rights-and-responsibilities-where-we-live",
-  "contentVersion": "0.4.0",
+  "contentVersion": "0.5.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -80,9 +80,27 @@
           "Zoom out until the whole state is on screen.",
           "Ask: how many districts does our state have?"
         ],
-        "student": {
-          "en": "Zoom to your town; the basemap has place names. The blue lines are the boundaries of congressional districts. Click inside your district: who represents it in the House of Representatives, which party do they belong to, and what is the district's number? Zoom out to see your whole state: how many districts does it have?",
-          "es": "Acércate a tu pueblo o ciudad; el mapa base tiene nombres de lugares. Las líneas azules son los límites de los distritos del Congreso. Haz clic dentro de tu distrito: ¿quién lo representa en la Cámara de Representantes, a qué partido pertenece y qué número tiene el distrito? Aléjate para ver todo tu estado: ¿cuántos distritos tiene?"
+        "steps": [
+          {
+            "en": "Zoom to your town; the basemap has place names.",
+            "es": "Acércate a tu pueblo o ciudad; el mapa base tiene nombres de lugares."
+          },
+          {
+            "en": "Find the blue lines, which are the boundaries of congressional districts.",
+            "es": "Busca las líneas azules, que son los límites de los distritos del Congreso."
+          },
+          {
+            "en": "Click inside your district and read the pop-up.",
+            "es": "Haz clic dentro de tu distrito y lee la ventana emergente."
+          },
+          {
+            "en": "Zoom out to see your whole state.",
+            "es": "Aléjate para ver todo tu estado."
+          }
+        ],
+        "ask": {
+          "en": "Who represents your district in the House of Representatives, which party do they belong to, and what is the district's number? How many districts does your state have?",
+          "es": "¿Quién representa a tu distrito en la Cámara de Representantes, a qué partido pertenece y qué número tiene el distrito? ¿Cuántos distritos tiene tu estado?"
         },
         "lines": 3,
         "answer": {
@@ -110,9 +128,31 @@
           "Ask: which right from the Bill of Rights do people use here?",
           "Remind the class that sketches are not saved: finish today or take a screenshot."
         ],
-        "student": {
-          "en": "Zoom in on your town until the basemap shows building names. Find four public places, such as a courthouse, city hall, a library, a place of worship, a polling place or a newspaper office. Use Sketch to put a pin on each one and write next to it a right from the Bill of Rights that people use there. Choose public places, not homes. Sketches are not saved, so finish in one lesson or take a screenshot.",
-          "es": "Acércate a tu pueblo o ciudad hasta que el mapa base muestre nombres de edificios. Encuentra cuatro lugares públicos, como un tribunal, el ayuntamiento, una biblioteca, un lugar de culto, un centro de votación o la redacción de un periódico. Usa Sketch (dibujar) para colocar un marcador en cada uno y escribe junto a él un derecho de la Carta de Derechos que las personas ejercen allí. Elige lugares públicos, no viviendas. Los dibujos no se guardan, así que termina en una sola clase o toma una captura de pantalla."
+        "steps": [
+          {
+            "en": "Zoom in on your town until the basemap shows building names.",
+            "es": "Acércate a tu pueblo o ciudad hasta que el mapa base muestre nombres de edificios."
+          },
+          {
+            "en": "Find four public places, not homes: a courthouse, city hall, library, place of worship, polling place or newspaper office.",
+            "es": "Encuentra cuatro lugares públicos, no viviendas: un tribunal, el ayuntamiento, una biblioteca, un lugar de culto, un centro de votación o la redacción de un periódico."
+          },
+          {
+            "en": "Use Sketch to put a pin on each one.",
+            "es": "Usa Sketch (dibujar) para colocar un marcador en cada uno."
+          },
+          {
+            "en": "Next to each pin, write a right from the Bill of Rights that people use there.",
+            "es": "Junto a cada marcador, escribe un derecho de la Carta de Derechos que las personas ejercen allí."
+          },
+          {
+            "en": "Finish in one lesson or take a screenshot, because sketches are not saved.",
+            "es": "Termina en una sola clase o toma una captura de pantalla, porque los dibujos no se guardan."
+          }
+        ],
+        "ask": {
+          "en": "Which four places did you pin, and which right from the Bill of Rights do people use at each?",
+          "es": "¿Qué cuatro lugares marcaste y qué derecho de la Carta de Derechos ejercen las personas en cada uno?"
         },
         "lines": 4,
         "answer": {
@@ -139,9 +179,23 @@
           "Ask: where else in town do people vote, serve on a jury or pay taxes?",
           "Ask: which of these responsibilities are required by law, and which are voluntary?"
         ],
-        "student": {
-          "en": "Start at the courthouse or city hall you pinned. Add a pin for each place where people carry out a responsibility as citizens, such as voting, serving on a jury or paying taxes. Next to each pin write the responsibility. Which of these responsibilities are required by law, and which are voluntary?",
-          "es": "Empieza en el tribunal o el ayuntamiento que marcaste. Añade un marcador en cada lugar donde las personas cumplen una responsabilidad como ciudadanos, como votar, formar parte de un jurado o pagar impuestos. Junto a cada marcador escribe la responsabilidad. ¿Cuáles de estas responsabilidades exige la ley y cuáles son voluntarias?"
+        "steps": [
+          {
+            "en": "Start at the courthouse or city hall you pinned.",
+            "es": "Empieza en el tribunal o el ayuntamiento que marcaste."
+          },
+          {
+            "en": "Add a pin at each place where people carry out a citizen's responsibility: voting, jury service, paying taxes.",
+            "es": "Añade un marcador en cada lugar donde las personas cumplen una responsabilidad ciudadana: votar, formar parte de un jurado, pagar impuestos."
+          },
+          {
+            "en": "Next to each pin, write the responsibility.",
+            "es": "Junto a cada marcador, escribe la responsabilidad."
+          }
+        ],
+        "ask": {
+          "en": "Which of these responsibilities are required by law, and which are voluntary?",
+          "es": "¿Cuáles de estas responsabilidades exige la ley y cuáles son voluntarias?"
         },
         "lines": 3,
         "answer": {
@@ -172,9 +226,27 @@
           "Match it to the basemap label, or open the pop-up's National Archive Information link for the name.",
           "Ask: is it a public building, and which right or responsibility does it connect with?"
         ],
-        "student": {
-          "en": "In Map layers, turn on National Register of Historic Places. Zoom in until the diamonds appear, and click the two nearest your school. The pop-up gives the address; to find the name, look at the basemap label under the diamond or open the pop-up's National Archive Information link. Use the legend to tell a building from a district or a site. Is either a public building, such as a courthouse, post office, school or library? Which right or responsibility does it connect with?",
-          "es": "En las capas del mapa (Map layers), activa National Register of Historic Places (Registro Nacional de Lugares Históricos). Acércate hasta que aparezcan los rombos y haz clic en los dos más cercanos a tu escuela. La ventana emergente da la dirección; para saber el nombre, mira la etiqueta del mapa base bajo el rombo o abre el enlace National Archive Information de la ventana. Usa la leyenda para distinguir un edificio (building) de un distrito (district) o un sitio (site). ¿Alguno es un edificio público, como un tribunal, una oficina de correos, una escuela o una biblioteca? ¿Con qué derecho o responsabilidad se relaciona?"
+        "steps": [
+          {
+            "en": "In Map layers, turn on National Register of Historic Places.",
+            "es": "En las capas del mapa (Map layers), activa National Register of Historic Places (Registro Nacional de Lugares Históricos)."
+          },
+          {
+            "en": "Zoom in until the diamonds appear and click the two nearest your school; the pop-up gives the address.",
+            "es": "Acércate hasta que aparezcan los rombos y haz clic en los dos más cercanos a tu escuela; la ventana emergente da la dirección."
+          },
+          {
+            "en": "Read the name from the basemap label under the diamond or the pop-up's National Archive Information link.",
+            "es": "Lee el nombre en la etiqueta del mapa base bajo el rombo o en el enlace National Archive Information de la ventana."
+          },
+          {
+            "en": "Use the legend to tell a building from a district or a site.",
+            "es": "Usa la leyenda para distinguir un edificio (building) de un distrito (district) o un sitio (site)."
+          }
+        ],
+        "ask": {
+          "en": "Is either a public building, such as a courthouse, post office, school or library? Which right or responsibility does it connect with?",
+          "es": "¿Alguno es un edificio público, como un tribunal, una oficina de correos, una escuela o una biblioteca? ¿Con qué derecho o responsabilidad se relaciona?"
         },
         "lines": 3,
         "answer": {

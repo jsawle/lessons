@@ -1,4 +1,4 @@
-/* MapMaker resource pages (lab): page renderer v2.9 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
+/* MapMaker resource pages (lab): page renderer v3.0 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
    standards in the hero; Vera link and a copyable AI prompt). Draws a lesson page, its teacher page (?view=teacher) or the catalogue from JSON files. */
 (function () {
   "use strict";
@@ -250,7 +250,8 @@
       "<p><strong>" + esc(T.bigQuestion) + "</strong> " + inline(lesson.inquiry.compellingQuestion[lang]) + "</p>" +
       "<p><em>" + esc(T.openMap + " " + lesson.title) + "</em></p>" + supportTop(site, lesson, lang) + "<ol>" +
       lesson.inquiry.questions.map(function (q) {
-        return "<li><strong>" + inline(q.title[lang]) + "</strong> " + inline(q.student[lang]) + (q.fill ? " " + blank(q.fill[lang]) : "") + "</li>";
+        return "<li><strong>" + inline(q.title[lang]) + '</strong><p class="sheetlabel">' + esc(T.onTheMap || "On the map:") + '</p><ol class="sheetsteps">' + (q.steps || []).map(function (st) { return "<li>" + inline(st[lang]) + "</li>"; }).join("") + "</ol>" +
+          '<p><span class="sheetlabel">' + esc(T.answer || "Answer:") + "</span> " + inline(q.ask[lang]) + (q.fill ? " " + blank(q.fill[lang]) : "") + "</p></li>";
       }).join("") + "</ol><p><strong>" + esc(T.yourAnswer) + "</strong> " + inline(lesson.inquiry.final.student[lang]) + "</p>" +
       (S && S.reflection ? "<h4>" + esc(T.lookingBack) + "</h4><p>" + inline(S.reflection[lang]) + "</p>" : "") +
       (note ? '<p class="muted" lang="en">' + esc(note) + "</p>" : "") + "</article>";
@@ -321,7 +322,7 @@
         h.push('<section class="unit" data-course="' + esc(course) + '"><h2>' + esc(u) + (courses.length > 1 ? ' <span class="muted">(' + esc(course) + ")</span>" : "") + '</h2><div class="cards cards-3" style="padding-top:0">' + these.map(function (l) {
           return '<div class="card lesson-card"><h3><a href="lesson.html?id=' + encodeURIComponent(l.id) + '">' + esc(l.title) + "</a></h3><p>" +
             esc("Grade " + l.grade + " · " + l.time) + ((l.alsoFits || []).length ? " · also fits: " + esc(l.alsoFits.join("; ")) : "") + "</p><p>" + inline(l.summary) + "</p>" +
-            '<p><a href="lesson.html?id=' + encodeURIComponent(l.id) + '&view=teacher">Teacher notes and answers</a> · <a href="hub-preview.html?page=' + encodeURIComponent(l.id) + '">Hub version</a></p></div>';
+            '<p><a href="hub-preview.html?page=' + encodeURIComponent(l.id) + '">Hub version</a></p></div>';
         }).join("") + "</div></section>");
       });
     });

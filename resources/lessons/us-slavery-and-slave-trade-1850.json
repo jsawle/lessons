@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.5",
+  "formatVersion": "1.6",
   "id": "us-slavery-and-slave-trade-1850",
-  "contentVersion": "0.6.1",
+  "contentVersion": "0.7.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -124,9 +124,23 @@
           "Ask: which groups are free and which allow slavery?",
           "Ask: where in the East does the shade change from free to slave?"
         ],
-        "student": {
-          "en": "Open the legend and find the four groups for US States and Territories 1850. Which groups are free and which allow slavery? Click a state in each group to read its name, and click two states to read what year each became free or slave. Where is the line between free and slave states in the East?",
-          "es": "Abre la leyenda y busca los cuatro grupos de la capa US States and Territories 1850 (estados y territorios de EE. UU. en 1850). ¿Qué grupos son libres y cuáles permiten la esclavitud? Haz clic en un estado de cada grupo para leer su nombre, y en dos estados para leer en qué año cada uno se volvió libre o esclavista. ¿Dónde está la línea entre estados libres y esclavistas en el Este?"
+        "steps": [
+          {
+            "en": "Open the legend and find the four groups for US States and Territories 1850.",
+            "es": "Abre la leyenda y busca los cuatro grupos de la capa US States and Territories 1850 (estados y territorios de EE. UU. en 1850)."
+          },
+          {
+            "en": "Click a state in each group to read its name.",
+            "es": "Haz clic en un estado de cada grupo para leer su nombre."
+          },
+          {
+            "en": "Click two states to read what year each became free or slave.",
+            "es": "Haz clic en dos estados para leer en qué año cada uno se volvió libre o esclavista."
+          }
+        ],
+        "ask": {
+          "en": "Which groups are free and which allow slavery? Where is the line between free and slave states in the East?",
+          "es": "¿Qué grupos son libres y cuáles permiten la esclavitud? ¿Dónde está la línea entre estados libres y esclavistas en el Este?"
         },
         "lines": 5,
         "answer": {
@@ -181,9 +195,23 @@
           "Ask: which slave state lies mostly north of the line?",
           "Ask: why does that matter?"
         ],
-        "student": {
-          "en": "Find the Missouri Compromise Line (the gray dashed line) and click it to read its pop-up. What year was it enacted? Slavery was banned north of it in the Louisiana Territory. Which slave state lies mostly north of the line, and why does that matter?",
-          "es": "Busca la línea del Compromiso de Misuri (la línea gris discontinua) y haz clic en ella para leer su ventana emergente. ¿En qué año se aprobó? La esclavitud estaba prohibida al norte de ella en el territorio de Luisiana. ¿Qué estado esclavista está mayormente al norte de la línea, y por qué importa?"
+        "steps": [
+          {
+            "en": "Find the Missouri Compromise Line (the gray dashed line).",
+            "es": "Busca la línea del Compromiso de Misuri (la línea gris discontinua)."
+          },
+          {
+            "en": "Click it and read its pop-up.",
+            "es": "Haz clic en ella y lee su ventana emergente."
+          },
+          {
+            "en": "Find the slave state that lies mostly north of the line.",
+            "es": "Busca el estado esclavista que está mayormente al norte de la línea."
+          }
+        ],
+        "ask": {
+          "en": "What year was the Missouri Compromise enacted? Slavery was banned north of the line in the Louisiana Territory: which slave state lies mostly north of it, and why does that matter?",
+          "es": "¿En qué año se aprobó el Compromiso de Misuri? La esclavitud estaba prohibida al norte de la línea en el territorio de Luisiana: ¿qué estado esclavista está mayormente al norte de ella, y por qué importa?"
         },
         "answer": {
           "where": "Missouri Compromise Line pop-up: title Missouri Compromise Line (36°30′ North), year Enacted 1820, and a note that the line divided future slave and free states west of the Mississippi and that Missouri was the exception because most of it lies north of the parallel. On the map, Missouri (green, slave state shades) sits almost entirely north of the line.",
@@ -212,9 +240,27 @@
           "Ask: the lines have no arrows; from the pattern, which way were enslaved people forced to move?",
           "Ask: what else do you know that supports your answer?"
         ],
-        "student": {
-          "en": "In Map layers, turn off Underground Railroad Approximate Routes so the solid black lines of Internal Routes of the US Slave Trade stand out. Click the states where the lines begin and where they come together to read their names. Where do the lines reach the coast? The lines have no arrows: from the pattern and what you have learned, which way were enslaved people forced to move?",
-          "es": "En las capas del mapa (Map layers), desactiva Underground Railroad Approximate Routes (rutas aproximadas del Ferrocarril Subterráneo) para que resalten las líneas negras continuas de la capa Internal Routes of the US Slave Trade (rutas internas de la trata de esclavos). Haz clic en los estados donde empiezan las líneas y donde se juntan para leer sus nombres. ¿Dónde llegan las líneas a la costa? Las líneas no tienen flechas: según el patrón y lo que has aprendido, ¿en qué dirección fueron obligadas a moverse las personas esclavizadas?"
+        "steps": [
+          {
+            "en": "In Map layers, turn off Underground Railroad Approximate Routes so the solid black lines of Internal Routes of the US Slave Trade stand out.",
+            "es": "En las capas del mapa (Map layers), desactiva Underground Railroad Approximate Routes (rutas aproximadas del Ferrocarril Subterráneo) para que resalten las líneas negras continuas de la capa Internal Routes of the US Slave Trade (rutas internas de la trata de esclavos)."
+          },
+          {
+            "en": "Click the states where the lines begin and read their names.",
+            "es": "Haz clic en los estados donde empiezan las líneas y lee sus nombres."
+          },
+          {
+            "en": "Click the states where the lines come together and read their names.",
+            "es": "Haz clic en los estados donde se juntan las líneas y lee sus nombres."
+          },
+          {
+            "en": "Find where the lines reach the coast.",
+            "es": "Busca dónde llegan las líneas a la costa."
+          }
+        ],
+        "ask": {
+          "en": "Where do the lines reach the coast? The lines have no arrows: from the pattern and what you have learned, which way were enslaved people forced to move?",
+          "es": "¿Dónde llegan las líneas a la costa? Las líneas no tienen flechas: según el patrón y lo que has aprendido, ¿en qué dirección fueron obligadas a moverse las personas esclavizadas?"
         },
         "answer": {
           "where": "Internal Routes of the US Slave Trade, solid black lines (no pop-up). Reading them against the state pop-ups: several lines start in Virginia (one from near the Ohio border and one from Kentucky join them), one starts in North Carolina, and they run south and west to meet in central Alabama and at the Mississippi coast in Louisiana. They reach the coast at New Orleans and the Gulf (Louisiana, Alabama) and on the Atlantic off South Carolina.",
@@ -243,9 +289,23 @@
           "Ask: where do the routes lead?",
           "Ask: why do many keep going past the free states?"
         ],
-        "student": {
-          "en": "Open the Illinois, Indiana, and Ohio bookmark. Follow the orange Underground Railroad routes north from the Ohio River, and zoom in to read the names of the towns along them. Where do the routes lead? Why do you think many keep going past the free states?",
-          "es": "Abre el marcador Illinois, Indiana, and Ohio. Sigue hacia el norte, desde el río Ohio, las rutas anaranjadas del Ferrocarril Subterráneo, y acércate para leer los nombres de las ciudades a lo largo de ellas. ¿A dónde llevan las rutas? ¿Por qué crees que muchas siguen más allá de los estados libres?"
+        "steps": [
+          {
+            "en": "Open the Illinois, Indiana, and Ohio bookmark.",
+            "es": "Abre el marcador Illinois, Indiana, and Ohio."
+          },
+          {
+            "en": "Follow the orange Underground Railroad routes north from the Ohio River.",
+            "es": "Sigue hacia el norte, desde el río Ohio, las rutas anaranjadas del Ferrocarril Subterráneo."
+          },
+          {
+            "en": "Zoom in to read the names of the towns along them.",
+            "es": "Acércate para leer los nombres de las ciudades a lo largo de ellas."
+          }
+        ],
+        "ask": {
+          "en": "Where do the routes lead? Why do you think many keep going past the free states?",
+          "es": "¿A dónde llevan las rutas? ¿Por qué crees que muchas siguen más allá de los estados libres?"
         },
         "answer": {
           "where": "Illinois, Indiana, and Ohio bookmark; Underground Railroad Approximate Routes (orange lines) and Cities (orange dots in the US, black dots in Canada; labels draw when zoomed in). Routes run north across Ohio, Indiana and Illinois to Lake Erie and the Detroit River, at Cleveland, Ashtabula, Toledo and Detroit, and on to the black dots at Chatham and Toronto (Ontario) and Montreal (Quebec).",

@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.5",
+  "formatVersion": "1.6",
   "id": "louisiana-purchase-1803-1806",
-  "contentVersion": "0.5.0",
+  "contentVersion": "0.6.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -91,9 +91,23 @@
           "Click inside the yellow area and read the Notes in the pop-up.",
           "Ask: how much land was it, and what did it cost?"
         ],
-        "student": {
-          "en": "Open The Louisiana Purchase bookmark and use the legend. Compare the yellow Louisiana Purchase with the green land of the United States in 1783. About how much bigger did the country become? Click the Louisiana Purchase: how much land was it, and what did it cost?",
-          "es": "Abre el marcador The Louisiana Purchase (La compra de Luisiana) y usa la leyenda. Compara la compra de Luisiana, en amarillo, con el territorio de Estados Unidos en 1783, en verde. ¿Cuánto más grande se hizo el país, aproximadamente? Haz clic en la compra de Luisiana: ¿cuánta tierra era y cuánto costó?"
+        "steps": [
+          {
+            "en": "Open The Louisiana Purchase bookmark and use the legend.",
+            "es": "Abre el marcador The Louisiana Purchase (La compra de Luisiana) y usa la leyenda."
+          },
+          {
+            "en": "Compare the yellow Louisiana Purchase with the green land of the United States in 1783.",
+            "es": "Compara la compra de Luisiana, en amarillo, con el territorio de Estados Unidos en 1783, en verde."
+          },
+          {
+            "en": "Click the Louisiana Purchase and read its pop-up.",
+            "es": "Haz clic en la compra de Luisiana y lee su ventana emergente."
+          }
+        ],
+        "ask": {
+          "en": "About how much bigger did the country become? How much land was the Louisiana Purchase, and what did it cost?",
+          "es": "¿Cuánto más grande se hizo el país, aproximadamente? ¿Cuánta tierra era la compra de Luisiana y cuánto costó?"
         },
         "fill": {
           "en": "Size: about ____ million acres. Price: $____ million.",
@@ -127,9 +141,23 @@
           "Ask: which big river do they flow into, and which city sits near its mouth?",
           "Ask: why did control of New Orleans matter to farmers west of the Appalachians?"
         ],
-        "student": {
-          "en": "In Map layers, turn on United States Watersheds. Click inside the two large brown outlines along the Ohio River and the Missouri River. Which river regions are they? Zoom out and follow the rivers on the map: into which big river do they flow, and which city sits near its mouth? In 1800 farmers west of the Appalachians sent their crops to market by river. Why did control of New Orleans matter to them?",
-          "es": "En Map layers (capas del mapa), activa United States Watersheds (cuencas hidrográficas). Haz clic dentro de los dos grandes contornos marrones junto al río Ohio y al río Misuri. ¿Qué regiones fluviales son? Aleja el mapa y sigue los ríos: ¿en qué gran río desembocan y qué ciudad está cerca de su desembocadura? En 1800, los agricultores al oeste de los Apalaches enviaban sus cosechas al mercado por río. ¿Por qué les importaba controlar Nueva Orleans?"
+        "steps": [
+          {
+            "en": "In Map layers, turn on United States Watersheds.",
+            "es": "En Map layers (capas del mapa), activa United States Watersheds (cuencas hidrográficas)."
+          },
+          {
+            "en": "Click inside the two large brown outlines along the Ohio River and the Missouri River.",
+            "es": "Haz clic dentro de los dos grandes contornos marrones junto al río Ohio y al río Misuri."
+          },
+          {
+            "en": "Zoom out and follow the rivers on the map to where they end.",
+            "es": "Aleja el mapa y sigue los ríos hasta donde terminan."
+          }
+        ],
+        "ask": {
+          "en": "Which river regions are the two outlines? Into which big river do they flow, and which city sits near its mouth? In 1800 farmers west of the Appalachians sent their crops to market by river: why did control of New Orleans matter to them?",
+          "es": "¿Qué regiones fluviales son los dos contornos? ¿En qué gran río desembocan y qué ciudad está cerca de su desembocadura? En 1800, los agricultores al oeste de los Apalaches enviaban sus cosechas al mercado por río: ¿por qué les importaba controlar Nueva Orleans?"
         },
         "lines": 4,
         "answer": {
@@ -161,9 +189,31 @@
           "Ask: which biome covers the Great Plains?",
           "Ask: looking at where the campsites sit, why did the Corps travel along rivers?"
         ],
-        "student": {
-          "en": "Open the Up the Missouri bookmark and follow the trail line and the campsite symbols up the Missouri River. In Map layers, turn off United States Watersheds and turn on Biomes, then click the shading along the route. Which biome covers the Great Plains (the first line of the pop-up)? Look at where the campsites sit: why do you think the Corps traveled along rivers?",
-          "es": "Abre el marcador Up the Missouri (Río Misuri arriba) y sigue la línea de la ruta y los símbolos de los campamentos río arriba. En las capas del mapa, desactiva United States Watersheds, activa Biomes (Biomas) y haz clic en el sombreado a lo largo de la ruta. ¿Qué bioma cubre las Grandes Llanuras (la primera línea de la ventana emergente)? Fíjate en dónde están los campamentos: ¿por qué crees que el Cuerpo viajaba siguiendo los ríos?"
+        "steps": [
+          {
+            "en": "Open the Up the Missouri bookmark.",
+            "es": "Abre el marcador Up the Missouri (Río Misuri arriba)."
+          },
+          {
+            "en": "Follow the trail line and the campsite symbols up the Missouri River.",
+            "es": "Sigue la línea de la ruta y los símbolos de los campamentos río Misuri arriba."
+          },
+          {
+            "en": "In Map layers, turn off United States Watersheds and turn on Biomes.",
+            "es": "En las capas del mapa, desactiva United States Watersheds y activa Biomes (Biomas)."
+          },
+          {
+            "en": "Click the shading along the route and read the first line of the pop-up.",
+            "es": "Haz clic en el sombreado a lo largo de la ruta y lee la primera línea de la ventana emergente."
+          },
+          {
+            "en": "Look at where the campsites sit.",
+            "es": "Fíjate en dónde están los campamentos."
+          }
+        ],
+        "ask": {
+          "en": "Which biome covers the Great Plains? Why do you think the Corps traveled along rivers?",
+          "es": "¿Qué bioma cubre las Grandes Llanuras? ¿Por qué crees que el Cuerpo viajaba siguiendo los ríos?"
         },
         "lines": 3,
         "answer": {
@@ -194,9 +244,27 @@
           "Open Measure and click from the trail's eastern end at Pittsburgh to its western end on the Pacific coast.",
           "Ask: how does the straight-line distance compare with the trail's 4,900 miles?"
         ],
-        "student": {
-          "en": "Open the Across the Rockies to the Pacific bookmark. Where does the trail line leave the yellow Louisiana Purchase? Was the Pacific coast part of it? Zoom out and use Measure to find the straight-line distance from the trail's eastern end, at Pittsburgh, Pennsylvania (where the Ohio River begins), to its western end on the Pacific coast.",
-          "es": "Abre el marcador Across the Rockies to the Pacific (a través de las Rocosas hasta el Pacífico). ¿Dónde sale la línea de la ruta de la compra de Luisiana, en amarillo? ¿Formaba parte de ella la costa del Pacífico? Aleja el mapa y usa Measure (medir) para hallar la distancia en línea recta desde el extremo este de la ruta, en Pittsburgh, hasta su extremo oeste en el Pacífico."
+        "steps": [
+          {
+            "en": "Open the Across the Rockies to the Pacific bookmark.",
+            "es": "Abre el marcador Across the Rockies to the Pacific (a través de las Rocosas hasta el Pacífico)."
+          },
+          {
+            "en": "Find where the trail line leaves the yellow Louisiana Purchase.",
+            "es": "Busca dónde sale la línea de la ruta de la compra de Luisiana, en amarillo."
+          },
+          {
+            "en": "Zoom out and find the trail's eastern end at Pittsburgh, Pennsylvania, where the Ohio River begins.",
+            "es": "Aleja el mapa y busca el extremo este de la ruta, en Pittsburgh, Pensilvania, donde nace el río Ohio."
+          },
+          {
+            "en": "Use Measure for the straight-line distance from Pittsburgh to the trail's western end on the Pacific coast.",
+            "es": "Usa Measure (medir) para hallar la distancia en línea recta desde Pittsburgh hasta el extremo oeste de la ruta, en el Pacífico."
+          }
+        ],
+        "ask": {
+          "en": "Where does the trail line leave the Louisiana Purchase? Was the Pacific coast part of it? What is the straight-line distance from Pittsburgh to the Pacific end of the trail?",
+          "es": "¿Dónde sale la línea de la ruta de la compra de Luisiana? ¿Formaba parte de ella la costa del Pacífico? ¿Cuál es la distancia en línea recta desde Pittsburgh hasta el extremo de la ruta en el Pacífico?"
         },
         "fill": {
           "en": "Straight-line distance: ________ miles. The trail itself is about 4,900 miles long.",

@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.5",
+  "formatVersion": "1.6",
   "id": "war-of-1812-and-monroe-doctrine",
-  "contentVersion": "0.4.0",
+  "contentVersion": "0.5.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -109,9 +109,19 @@
           "Click a diamond in each of the other clusters and read where it was fought.",
           "Ask: in which three areas was most of the fighting?"
         ],
-        "student": {
-          "en": "Open The War of 1812 bookmark and click some diamonds in each group. In which three areas was most of the fighting?",
-          "es": "Abre el marcador The War of 1812 (La guerra de 1812) y haz clic en algunos rombos de cada grupo. ¿En qué tres zonas se combatió más?"
+        "steps": [
+          {
+            "en": "Open The War of 1812 bookmark.",
+            "es": "Abre el marcador The War of 1812 (La guerra de 1812)."
+          },
+          {
+            "en": "Click some diamonds in each group and read their pop-ups.",
+            "es": "Haz clic en algunos rombos de cada grupo y lee sus ventanas emergentes."
+          }
+        ],
+        "ask": {
+          "en": "In which three areas was most of the fighting?",
+          "es": "¿En qué tres zonas se combatió más?"
         },
         "lines": 3,
         "answer": {
@@ -141,9 +151,23 @@
           "Write on the board: Treaty of Ghent signed December 24, 1814.",
           "Ask: which big battle came after the treaty was signed?"
         ],
-        "student": {
-          "en": "Click the three biggest diamonds. Where and when was each battle fought, and who won? The peace treaty was signed at Ghent, in Europe, on December 24, 1814. Which big battle came after it?",
-          "es": "Haz clic en los tres rombos más grandes. ¿Dónde y cuándo se libró cada batalla, y quién ganó? El tratado de paz se firmó en Gante, en Europa, el 24 de diciembre de 1814. ¿Qué gran batalla fue posterior al tratado?"
+        "steps": [
+          {
+            "en": "Click the three biggest diamonds.",
+            "es": "Haz clic en los tres rombos más grandes."
+          },
+          {
+            "en": "Read where and when each battle was fought, and who won.",
+            "es": "Lee dónde y cuándo se libró cada batalla, y quién ganó."
+          },
+          {
+            "en": "Compare each battle's date with December 24, 1814, when the peace treaty was signed at Ghent.",
+            "es": "Compara la fecha de cada batalla con el 24 de diciembre de 1814, cuando se firmó el tratado de paz en Gante."
+          }
+        ],
+        "ask": {
+          "en": "Where and when was each battle fought, and who won? Which big battle came after the peace treaty?",
+          "es": "¿Dónde y cuándo se libró cada batalla, y quién ganó? ¿Qué gran batalla fue posterior al tratado de paz?"
         },
         "lines": 4,
         "answer": {
@@ -215,9 +239,27 @@
           "Click part 1 of the pink dashed line and read its description, then click the next parts going west.",
           "Ask: which rivers and lines of latitude and longitude does the border follow?"
         ],
-        "student": {
-          "en": "Open The 1819 boundary bookmark. Turn on Land Spain gave up in 1819 and Adams–Onís Treaty line, 1819, and click the green land and each part of the pink dashed line. What did the United States gain from Spain? Which rivers and lines of latitude and longitude does the new border follow?",
-          "es": "Abre el marcador The 1819 boundary (La frontera de 1819). En las capas del mapa (Map layers), activa las capas Land Spain gave up in 1819 (tierra que España cedió en 1819) y Adams–Onís Treaty line, 1819 (línea del tratado Adams-Onís, 1819). Haz clic en la tierra verde y en cada tramo de la línea discontinua rosada. ¿Qué obtuvo Estados Unidos de España? ¿Qué ríos y qué líneas de latitud y longitud sigue la nueva frontera?"
+        "steps": [
+          {
+            "en": "Open The 1819 boundary bookmark.",
+            "es": "Abre el marcador The 1819 boundary (La frontera de 1819)."
+          },
+          {
+            "en": "In Map layers, turn on Land Spain gave up in 1819 and Adams–Onís Treaty line, 1819.",
+            "es": "En las capas del mapa (Map layers), activa Land Spain gave up in 1819 (tierra que España cedió en 1819) y Adams–Onís Treaty line, 1819 (línea del tratado Adams-Onís, 1819)."
+          },
+          {
+            "en": "Click the green land and read its pop-up.",
+            "es": "Haz clic en la tierra verde y lee su ventana emergente."
+          },
+          {
+            "en": "Click each part of the pink dashed line and read its pop-up.",
+            "es": "Haz clic en cada tramo de la línea discontinua rosada y lee su ventana emergente."
+          }
+        ],
+        "ask": {
+          "en": "What did the United States gain from Spain? Which rivers and lines of latitude and longitude does the new border follow?",
+          "es": "¿Qué obtuvo Estados Unidos de España? ¿Qué ríos y qué líneas de latitud y longitud sigue la nueva frontera?"
         },
         "lines": 3,
         "answer": {
@@ -248,9 +290,27 @@
           "Write on the board: Monroe's message, December 2, 1823.",
           "Ask: which nations had the United States recognized before that date, and why might Monroe have warned European powers to stay out?"
         ],
-        "student": {
-          "en": "Open the Latin America in 1825 bookmark and turn on Latin American independence and US recognition. Click the blue circles and read each recognition date in the pop-up: which nations had the United States recognized before President Monroe's message of December 2, 1823? (Blue means recognized by 1824, so check the date.) Why might Monroe have warned European powers to stay out of the Americas?",
-          "es": "Abre el marcador Latin America in 1825 (América Latina en 1825) y activa la capa Latin American independence and US recognition (independencia latinoamericana y reconocimiento de Estados Unidos). Haz clic en los círculos azules y lee la fecha de reconocimiento en cada ventana emergente: ¿qué naciones había reconocido Estados Unidos antes del mensaje del presidente Monroe del 2 de diciembre de 1823? (El azul significa reconocida en 1824 o antes, así que comprueba la fecha.) ¿Por qué crees que Monroe advirtió a las potencias europeas que no intervinieran en América?"
+        "steps": [
+          {
+            "en": "Open the Latin America in 1825 bookmark.",
+            "es": "Abre el marcador Latin America in 1825 (América Latina en 1825)."
+          },
+          {
+            "en": "Turn on Latin American independence and US recognition.",
+            "es": "Activa la capa Latin American independence and US recognition (independencia latinoamericana y reconocimiento de Estados Unidos)."
+          },
+          {
+            "en": "Click the blue circles and read each recognition date in the pop-up.",
+            "es": "Haz clic en los círculos azules y lee la fecha de reconocimiento en cada ventana emergente."
+          },
+          {
+            "en": "Check each date against December 2, 1823 (blue only means recognized by 1824).",
+            "es": "Compara cada fecha con el 2 de diciembre de 1823 (el azul solo significa reconocida en 1824 o antes)."
+          }
+        ],
+        "ask": {
+          "en": "Which nations had the United States recognized before President Monroe's message of December 2, 1823? Why might Monroe have warned European powers to stay out of the Americas?",
+          "es": "¿Qué naciones había reconocido Estados Unidos antes del mensaje del presidente Monroe del 2 de diciembre de 1823? ¿Por qué crees que Monroe advirtió a las potencias europeas que no intervinieran en América?"
         },
         "lines": 4,
         "answer": {
