@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.5",
+  "formatVersion": "1.6",
   "id": "civil-war-battlefields",
-  "contentVersion": "0.5.1",
+  "contentVersion": "0.6.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -114,9 +114,23 @@
           "Ask: which states left before Fort Sumter, which after, and which slave states stayed in the Union?",
           "Ask: the layer shows 1863; which state on it did not exist in 1861?"
         ],
-        "student": {
-          "en": "Open the legend and find the groups for U.S. Civil War States and Territories (1863). Match each state's shade to its group. Which states left the Union before the attack on Fort Sumter in April 1861? Which left after? Which slave states stayed in the Union? The layer shows the country in 1863: which state on it did not exist in 1861?",
-          "es": "Abre la leyenda y busca los grupos de la capa U.S. Civil War States and Territories (1863) (estados y territorios de la Guerra Civil de EE. UU.). Relaciona el tono de cada estado con su grupo. ¿Qué estados dejaron la Unión antes del ataque al fuerte Sumter en abril de 1861? ¿Cuáles se fueron después? ¿Qué estados esclavistas se quedaron en la Unión? La capa muestra el país en 1863: ¿qué estado del mapa no existía en 1861?"
+        "steps": [
+          {
+            "en": "Open the legend and find the groups for U.S. Civil War States and Territories (1863).",
+            "es": "Abre la leyenda y busca los grupos de la capa U.S. Civil War States and Territories (1863) (estados y territorios de la Guerra Civil de EE. UU.)."
+          },
+          {
+            "en": "Match each state's shade to its group.",
+            "es": "Relaciona el tono de cada estado con su grupo."
+          },
+          {
+            "en": "Find the state on the map that did not exist in 1861 (the layer shows the country in 1863).",
+            "es": "Busca el estado del mapa que no existía en 1861 (la capa muestra el país en 1863)."
+          }
+        ],
+        "ask": {
+          "en": "Which states left the Union before the attack on Fort Sumter in April 1861? Which left after? Which slave states stayed in the Union? Which state on the map did not exist in 1861?",
+          "es": "¿Qué estados dejaron la Unión antes del ataque al fuerte Sumter en abril de 1861? ¿Cuáles se fueron después? ¿Qué estados esclavistas se quedaron en la Unión? ¿Qué estado del mapa no existía en 1861?"
         },
         "lines": 5,
         "answer": {
@@ -169,9 +183,23 @@
           "Ask: which two states border the capital, and which side was each on?",
           "Ask: what would have happened to Washington if Maryland had left the Union?"
         ],
-        "student": {
-          "en": "Zoom in to Washington, D.C., on the east coast between Maryland and Virginia. Which two states border it? Check each one's shade in the legend. What would have happened to the capital if Maryland had left the Union?",
-          "es": "Acércate a Washington D. C., en la costa este, entre Maryland y Virginia. ¿Qué dos estados lo rodean? Comprueba el tono de cada uno en la leyenda. ¿Qué le habría pasado a la capital si Maryland hubiera dejado la Unión?"
+        "steps": [
+          {
+            "en": "Zoom in to Washington, D.C., on the east coast between Maryland and Virginia.",
+            "es": "Acércate a Washington D. C., en la costa este, entre Maryland y Virginia."
+          },
+          {
+            "en": "Find the two states that border it.",
+            "es": "Busca los dos estados que lo rodean."
+          },
+          {
+            "en": "Check each one's shade in the legend.",
+            "es": "Comprueba el tono de cada uno en la leyenda."
+          }
+        ],
+        "ask": {
+          "en": "Which two states border Washington, D.C.? What would have happened to the capital if Maryland had left the Union?",
+          "es": "¿Qué dos estados rodean Washington D. C.? ¿Qué le habría pasado a la capital si Maryland hubiera dejado la Unión?"
         },
         "answer": {
           "where": "Zoom to the District of Columbia (a small unshaded area labeled on the States layer). Its neighbors are Maryland (legend: Union slave state, border state) and Virginia (legend: Slave state seceding after Fort Sumter). The white dashed Boundary between Union and Confederacy runs right past the capital.",
@@ -200,9 +228,23 @@
           "Ask: why would railroads matter in a war?",
           "Turn U.S. Civil War States and Territories (1863) back on."
         ],
-        "student": {
-          "en": "Compare the railroads (thin dark gray lines) north and south of the white dashed boundary between the Union and the Confederacy. In Map layers you can turn U.S. Civil War States and Territories (1863) off to see the lines better. Which side had more railroads? Why would railroads matter in a war?",
-          "es": "Compara los ferrocarriles (líneas finas de color gris oscuro) al norte y al sur de la línea blanca discontinua que marca la frontera entre la Unión y la Confederación. En las capas del mapa (Map layers) puedes desactivar la capa U.S. Civil War States and Territories (1863) para ver mejor las líneas. ¿Qué lado tenía más ferrocarriles? ¿Por qué importaban los ferrocarriles en una guerra?"
+        "steps": [
+          {
+            "en": "Find the white dashed boundary between the Union and the Confederacy.",
+            "es": "Busca la línea blanca discontinua que marca la frontera entre la Unión y la Confederación."
+          },
+          {
+            "en": "In Map layers, turn U.S. Civil War States and Territories (1863) off to see the railroad lines better.",
+            "es": "En las capas del mapa (Map layers), desactiva la capa U.S. Civil War States and Territories (1863) para ver mejor las líneas de ferrocarril."
+          },
+          {
+            "en": "Compare the railroads (thin dark gray lines) north and south of the boundary.",
+            "es": "Compara los ferrocarriles (líneas finas de color gris oscuro) al norte y al sur de la frontera."
+          }
+        ],
+        "ask": {
+          "en": "Which side had more railroads? Why would railroads matter in a war?",
+          "es": "¿Qué lado tenía más ferrocarriles? ¿Por qué importaban los ferrocarriles en una guerra?"
         },
         "answer": {
           "where": "Railroads 1826 to 1863 (static) layer and the Boundary between Union and Confederacy line (legend: white dashed). The lines are visibly denser north of the boundary, above all between the Mississippi River and the Atlantic coast. The map shows lines, not mileage.",
@@ -231,9 +273,23 @@
           "Ask: where were most battles fought?",
           "Ask: which battles were fought in a Union state?"
         ],
-        "student": {
-          "en": "Zoom to Virginia, then to Maryland and Pennsylvania. Click the tan shaded areas of two battlefields to read their names. Where were most battles fought? Name a battle fought in a state the legend shows as a Union state.",
-          "es": "Acércate a Virginia y luego a Maryland y Pensilvania. Haz clic en las zonas color canela de dos campos de batalla para leer sus nombres. ¿Dónde se libraron la mayoría de las batallas? Nombra una batalla librada en un estado que la leyenda muestre como estado de la Unión."
+        "steps": [
+          {
+            "en": "Zoom to Virginia, then to Maryland and Pennsylvania.",
+            "es": "Acércate a Virginia y luego a Maryland y Pensilvania."
+          },
+          {
+            "en": "Click the tan shaded areas of two battlefields and read their names.",
+            "es": "Haz clic en las zonas color canela de dos campos de batalla y lee sus nombres."
+          },
+          {
+            "en": "Use the legend to find a battlefield in a Union state.",
+            "es": "Usa la leyenda para encontrar un campo de batalla en un estado de la Unión."
+          }
+        ],
+        "ask": {
+          "en": "Where were most battles fought? Name a battle fought in a state the legend shows as a Union state.",
+          "es": "¿Dónde se libraron la mayoría de las batallas? Nombra una batalla librada en un estado que la leyenda muestre como estado de la Unión."
         },
         "answer": {
           "where": "Civil War Battlefield Boundary pop-ups: the title is the battle name; Battlefield Acres and State Name (two-letter code) are listed below. Most tan areas are in Virginia (the layer has far more in VA than in any other state). Union states by the legend: Maryland (border state) has Antietam (34,937 acres), South Mountain, Monocacy, Boonsboro, Williamsport, Hancock and Folck's Mill; Pennsylvania (Union free state) has Gettysburg (73,551 acres) and Hanover. If a pop-up says 1 of 2, a core area sits under the boundary; use the arrows.",

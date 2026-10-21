@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.5",
+  "formatVersion": "1.6",
   "id": "the-battle-of-vicksburg",
-  "contentVersion": "0.5.1",
+  "contentVersion": "0.6.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -91,9 +91,27 @@
           "Follow the railroad east from Vicksburg to the Jackson label on the basemap.",
           "Ask: why would both sides want Vicksburg?"
         ],
-        "student": {
-          "en": "Open The Battle of Vicksburg bookmark. Vicksburg is the yellow pin on the Mississippi River. Zoom in until the railroads appear and follow the line east from Vicksburg. Find Jackson, Mississippi, on the basemap (the state capital, east of Vicksburg). Why would both sides want Vicksburg?",
-          "es": "Abre el marcador The Battle of Vicksburg (la batalla de Vicksburg). Vicksburg es el alfiler amarillo junto al río Misisipi. Acércate hasta que aparezcan los ferrocarriles y sigue la línea hacia el este desde Vicksburg. Busca Jackson, Misisipi, en el mapa base (la capital del estado, al este de Vicksburg). ¿Por qué querrían Vicksburg ambos lados?"
+        "steps": [
+          {
+            "en": "Open The Battle of Vicksburg bookmark.",
+            "es": "Abre el marcador The Battle of Vicksburg (la batalla de Vicksburg)."
+          },
+          {
+            "en": "Find Vicksburg, the yellow pin on the Mississippi River.",
+            "es": "Busca Vicksburg, el alfiler amarillo junto al río Misisipi."
+          },
+          {
+            "en": "Zoom in until the railroads appear and follow the line east from Vicksburg.",
+            "es": "Acércate hasta que aparezcan los ferrocarriles y sigue la línea hacia el este desde Vicksburg."
+          },
+          {
+            "en": "Find Jackson, Mississippi, on the basemap (the state capital, east of Vicksburg).",
+            "es": "Busca Jackson, Misisipi, en el mapa base (la capital del estado, al este de Vicksburg)."
+          }
+        ],
+        "ask": {
+          "en": "Why would both sides want Vicksburg?",
+          "es": "¿Por qué querrían Vicksburg ambos lados?"
         },
         "answer": {
           "where": "The Battle of Vicksburg bookmark; yellow pin at Vicksburg on a bend of the Mississippi; Railroads 1826 to 1911 layer, which draws when zoomed in to about 1:1,500,000 or closer; Jackson is a label on the Modern Antique basemap about 40 miles east.",
@@ -120,9 +138,23 @@
           "Use Measure from Milliken's Bend to Bruinsburg Bend.",
           "Ask: why did Grant march south down the far bank before crossing?"
         ],
-        "student": {
-          "en": "Find the dark pins for Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend and Edwards. Which side of the river is each on? Why did Grant march south before crossing the river?",
-          "es": "Busca los alfileres oscuros de Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend y Edwards. ¿De qué lado del río está cada lugar? ¿Por qué marchó Grant hacia el sur antes de cruzar el río?"
+        "steps": [
+          {
+            "en": "Find the dark pins for Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend and Edwards.",
+            "es": "Busca los alfileres oscuros de Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend y Edwards."
+          },
+          {
+            "en": "Check which side of the river each pin is on.",
+            "es": "Comprueba de qué lado del río está cada alfiler."
+          },
+          {
+            "en": "Use Measure for the distance from Milliken's Bend to Bruinsburg Bend.",
+            "es": "Usa la herramienta de medir (Measure) para la distancia de Milliken's Bend a Bruinsburg Bend."
+          }
+        ],
+        "ask": {
+          "en": "Which side of the river is each place on? Why did Grant march south before crossing the river?",
+          "es": "¿De qué lado del río está cada lugar? ¿Por qué marchó Grant hacia el sur antes de cruzar el río?"
         },
         "fill": {
           "en": "Measure the distance from Milliken's Bend to Bruinsburg Bend: ________ miles",
@@ -154,9 +186,23 @@
           "Click the Vicksburg diamond and read its two dates.",
           "Ask: in what order were the battles fought, and which way did Grant's army move?"
         ],
-        "student": {
-          "en": "In Map layers, turn on Civil War Battlefields. Click the diamonds between Bruinsburg Bend and Vicksburg, and east toward Jackson, and list the battles in order by date.",
-          "es": "En las capas del mapa (Map layers), activa Civil War Battlefields (campos de batalla de la Guerra Civil). Haz clic en los rombos entre Bruinsburg Bend y Vicksburg, y hacia el este en dirección a Jackson, y ordena las batallas por fecha."
+        "steps": [
+          {
+            "en": "In Map layers, turn on Civil War Battlefields.",
+            "es": "En las capas del mapa (Map layers), activa Civil War Battlefields (campos de batalla de la Guerra Civil)."
+          },
+          {
+            "en": "Click the diamonds between Bruinsburg Bend and Vicksburg and read their dates.",
+            "es": "Haz clic en los rombos entre Bruinsburg Bend y Vicksburg y lee sus fechas."
+          },
+          {
+            "en": "Click the diamonds east toward Jackson and read their dates.",
+            "es": "Haz clic en los rombos hacia el este, en dirección a Jackson, y lee sus fechas."
+          }
+        ],
+        "ask": {
+          "en": "Which battles were fought between Bruinsburg Bend, Vicksburg and Jackson? List them in order by date.",
+          "es": "¿Qué batallas se libraron entre Bruinsburg Bend, Vicksburg y Jackson? Ordénalas por fecha."
         },
         "lines": 5,
         "answer": {
@@ -217,9 +263,27 @@
           "Ask: which states lie west of the river?",
           "Ask: what could the Union control once Vicksburg and Port Hudson had both fallen?"
         ],
-        "student": {
-          "en": "Zoom out until you can see the Mississippi River from Memphis to the Gulf of Mexico. Keep Civil War Battlefields on and click the diamond at Port Hudson, in Louisiana south of Vicksburg: when did it end? Read the state names on the basemap. Which states lie west of the river? What could the Union control once Vicksburg and Port Hudson had both fallen?",
-          "es": "Aléjate hasta ver el río Misisipi desde Memphis hasta el golfo de México. Mantén activada la capa Civil War Battlefields y haz clic en el rombo de Port Hudson, en Luisiana, al sur de Vicksburg: ¿cuándo terminó? Lee los nombres de los estados en el mapa base. ¿Qué estados quedan al oeste del río? ¿Qué pudo controlar la Unión una vez que cayeron Vicksburg y Port Hudson?"
+        "steps": [
+          {
+            "en": "Zoom out until you can see the Mississippi River from Memphis to the Gulf of Mexico.",
+            "es": "Aléjate hasta ver el río Misisipi desde Memphis hasta el golfo de México."
+          },
+          {
+            "en": "Keep Civil War Battlefields on and click the diamond at Port Hudson, in Louisiana south of Vicksburg.",
+            "es": "Mantén activada la capa Civil War Battlefields y haz clic en el rombo de Port Hudson, en Luisiana, al sur de Vicksburg."
+          },
+          {
+            "en": "Read when the siege of Port Hudson ended.",
+            "es": "Lee cuándo terminó el sitio de Port Hudson."
+          },
+          {
+            "en": "Read the state names on the basemap.",
+            "es": "Lee los nombres de los estados en el mapa base."
+          }
+        ],
+        "ask": {
+          "en": "When did Port Hudson end? Which states lie west of the river? What could the Union control once Vicksburg and Port Hudson had both fallen?",
+          "es": "¿Cuándo terminó Port Hudson? ¿Qué estados quedan al oeste del río? ¿Qué pudo controlar la Unión una vez que cayeron Vicksburg y Port Hudson?"
         },
         "answer": {
           "where": "Civil War Battlefields pop-up for Port Hudson: May 21, 1863 – July 9, 1863. Vicksburg pop-up: May 18, 1863 – July 4, 1863. Basemap state labels west of the river: Louisiana (most of it), Arkansas, Texas (and Missouri further north, Union side).",

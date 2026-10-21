@@ -11,7 +11,7 @@
   else root.MMRSheet = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "1.5";
+  var VERSION = "1.6";
   /* Sheets with more question text than this get tighter writing lines, so every sheet stays on one page. */
   var LONG_SHEET_CHARS = 1040;
   /* The same for two-page sheets (lessons with studentSupport), counting the extra sections too. */
@@ -60,7 +60,7 @@
       return out;
     }
     var textChars = lesson.inquiry.questions.reduce(function (n, q) {
-      return n + MMR.plain(q.title[lang]).length + MMR.plain(q.student[lang]).length + (q.fill ? MMR.plain(q.fill[lang]).length : 0);
+      return n + MMR.plain(q.title[lang]).length + (q.steps || []).reduce(function (m, st) { return m + MMR.plain(st[lang]).length + 40; }, 0) + MMR.plain(q.ask[lang]).length + (q.fill ? MMR.plain(q.fill[lang]).length : 0);
     }, MMR.plain(lesson.inquiry.final.student[lang]).length + MMR.plain(lesson.inquiry.compellingQuestion[lang]).length);
     /* A lesson with studentSupport (Before you start, Reading the map, tips, a closing reflection) gets a two-page
        sheet with section headings and more room to write; the rest keep the one-page sheet. */
@@ -72,11 +72,12 @@
     if (S) textChars += credits.length / 2;   // the credits are set smaller
     /* Writing lines stay about 7 mm apart, which a 13-year-old can write on. A long two-page sheet keeps the line
        height and gives each question one line fewer instead, so the sheet still ends on page two. */
-    var longTwo = !!S && textChars > LONG_TWO_PAGE_CHARS, veryLong = !!S && textChars > LONG_TWO_PAGE_CHARS + 600, extraLong = !!S && textChars > LONG_TWO_PAGE_CHARS + 900;
-    var lineGap = S ? (extraLong ? 90 : veryLong ? 100 : longTwo ? 130 : 150) : (textChars > LONG_SHEET_CHARS ? 120 : 170);
+    var longTwo = !!S && textChars > LONG_TWO_PAGE_CHARS, veryLong = !!S && textChars > LONG_TWO_PAGE_CHARS + 600, extraLong = !!S && textChars > LONG_TWO_PAGE_CHARS + 900,
+      fullest = !!S && textChars > LONG_TWO_PAGE_CHARS + 1500;   // mostly the Spanish sheets, whose steps run longer
+    var lineGap = S ? (extraLong ? 80 : veryLong ? 100 : longTwo ? 130 : 150) : (textChars > LONG_SHEET_CHARS ? 120 : 170);
     var lineHeight = veryLong ? 240 : longTwo ? 260 : 300;
-    function nLines(n) { return longTwo ? Math.max(2, n - 1) : n; }
-    function h2(text) { return new D.Paragraph({ heading: D.HeadingLevel.HEADING_2, children: [run(text)] }); }
+    function nLines(n) { return fullest ? Math.max(2, n - 2) : longTwo ? Math.max(2, n - 1) : n; }
+    function h2(text) { return new D.Paragraph({ heading: D.HeadingLevel.HEADING_2, spacing: extraLong ? { before: 80, after: 20 } : undefined, children: [run(text)] }); }
     function lines(n) {
       var out = [];
       // On a two-page sheet, a question's writing lines stay on the same page as the question.
@@ -91,10 +92,10 @@
       new D.Paragraph({ heading: D.HeadingLevel.HEADING_1, children: [run(title)] }),
       new D.Paragraph({ style: "Subtle", children: [run(T.subtitle)] }),
       // Name and Date: the line to write on is an underlined tab, not a run of underscores.
-      new D.Paragraph({ spacing: { before: S ? 120 : 200, after: S ? 120 : 200 },
+      new D.Paragraph({ spacing: { before: S ? (extraLong ? 60 : 120) : 200, after: S ? (extraLong ? 60 : 120) : 200 },
         tabStops: [{ type: D.TabStopType.LEFT, position: 5000, leader: D.LeaderType.UNDERSCORE }, { type: D.TabStopType.LEFT, position: 5600 }, { type: D.TabStopType.LEFT, position: 9400, leader: D.LeaderType.UNDERSCORE }],
         children: [run(T.name + ":"), run("\t\t" + T.date + ":"), run("\t")] }),
-      new D.Paragraph({ shading: { type: D.ShadingType.CLEAR, fill: "E5EDF5" }, spacing: { after: 120 },
+      new D.Paragraph({ shading: { type: D.ShadingType.CLEAR, fill: "E5EDF5" }, spacing: { after: extraLong ? 80 : 120 },
         children: [run(T.bigQuestion + " ", { bold: true }), run(lesson.inquiry.compellingQuestion[lang])] }),
       new D.Paragraph({ spacing: { after: 40 }, children: [run(T.openMap + " ", { italics: true }),
         new D.ExternalHyperlink({ link: mapUrl,
@@ -112,19 +113,25 @@
       kids.push(h2(T.questions));
     }
     lesson.inquiry.questions.forEach(function (q) {
-      kids.push(new D.Paragraph({ numbering: { reference: "qs", level: 0 }, spacing: { before: 160 }, keepNext: !!S,
-        children: [run(titleWithPause(q.title[lang]), { bold: true }), run(q.student[lang])] }));
-      if (q.fill) kids.push(new D.Paragraph({ indent: { left: 360 }, spacing: { before: 120 }, keepNext: !!S, children: withBlanks(q.fill[lang]) }));
+      kids.push(new D.Paragraph({ numbering: { reference: "qs", level: 0 }, spacing: { before: extraLong ? 100 : 160, after: 20 }, keepNext: true,
+        children: [run(MMR.plain(q.title[lang]), { bold: true })] }));
+      kids.push(new D.Paragraph({ indent: { left: 360 }, spacing: { after: 0 }, keepNext: true, children: [run(T.onTheMap || "On the map:", { bold: true, color: "00619B" })] }));
+      (q.steps || []).forEach(function (st, j) {
+        // The map steps are set a point smaller and tighter than the question, so the sheet reads as "do this, then answer this".
+        kids.push(new D.Paragraph({ indent: { left: 720, hanging: 300 }, spacing: { after: 0, line: extraLong ? 230 : 252 }, keepNext: true, children: [run((j + 1) + ".\t" + MMR.plain(st[lang]), { size: 22 })] }));
+      });
+      kids.push(new D.Paragraph({ indent: { left: 360 }, spacing: { before: extraLong ? 40 : 60 }, keepNext: !!S, children: [run((T.answer || "Answer:") + " ", { bold: true, color: "00619B" }), run(q.ask[lang])] }));
+      if (q.fill) kids.push(new D.Paragraph({ indent: { left: 360 }, spacing: { before: 60 }, keepNext: !!S, children: withBlanks(q.fill[lang]) }));
       kids.push.apply(kids, lines(nLines(q.lines || (S ? 3 : 2))));
     });
-    kids.push(new D.Paragraph({ spacing: { before: 320 }, keepNext: !!S, children: [run(T.yourAnswer + " ", { bold: true }), run(lesson.inquiry.final.student[lang])] }));
+    kids.push(new D.Paragraph({ spacing: { before: extraLong ? 160 : 320 }, keepNext: !!S, children: [run(T.yourAnswer + " ", { bold: true }), run(lesson.inquiry.final.student[lang])] }));
     kids.push.apply(kids, lines(S ? nLines(4) : 3));
     if (S && S.reflection) {
       kids.push(h2(T.lookingBack), new D.Paragraph({ keepNext: true, children: [run(S.reflection[lang])] }));
       kids.push.apply(kids, lines(extraLong ? 1 : 2));
     }
 
-    if (S) kids.push(new D.Paragraph({ style: "Credits", spacing: { before: 120 }, children: [run(credits)] }));
+    if (S) kids.push(new D.Paragraph({ style: "Credits", spacing: { before: extraLong ? 60 : 120, line: extraLong ? 190 : 240 }, children: [run(credits, extraLong ? { size: 16 } : {})] }));
     return new D.Document({
       creator: "MapMaker resource pages", title: title + " (" + T.subtitle + ")",
       description: T.subtitle + ", " + lesson.contentVersion,

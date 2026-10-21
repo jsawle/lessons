@@ -10,7 +10,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "2.9";
+  var VERSION = "3.0";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
@@ -100,6 +100,9 @@
     ".mml-sheet ol{padding-left:1.4em}",
     ".mml-sheet h4{font-size:1.05rem;line-height:1.3;font-weight:700;margin:1em 0 .3em;color:#141414}",
     ".mml-sheet .mml-tip{background:#F3F3F3;border-radius:4px;padding:.5em .75em}",
+    ".mml-sheet .mml-sheetlabel{display:inline;font-weight:700;color:#00619B;margin:0}",
+    ".mml-sheet .mml-sheetsteps{margin:.1em 0 .4em;padding-left:1.4em}",
+    ".mml-sheet .mml-sheetsteps li{margin:0}",
     ".mml-blank{display:inline-block;min-width:6em;border-bottom:1px solid #4A4A4A}",
     ".mml .mml-words{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.45em}",
     ".mml-words li{border:1px solid #D4D4D4;border-radius:4px;padding:.1em .6em;font-weight:600;margin:0}",
@@ -116,8 +119,7 @@
     ".mml .mml-lessons h3{display:block;border:0;font-size:1.3rem;line-height:1.25;font-weight:800;margin:.1em 0 .35em;padding:0}",
     ".mml .mml-lessons h3 a{text-decoration:none}",
     ".mml .mml-lessons h3 a:hover,.mml .mml-lessons h3 a:focus-visible{text-decoration:underline}",
-    ".mml-lessons .mml-sum{flex:1;margin-bottom:.9em}",
-    ".mml-lessons .mml-tn{margin:0;padding-top:.6em;border-top:1px solid #EAEAEA}",
+    ".mml-lessons .mml-sum{flex:1;margin-bottom:.4em}",
     "@media (max-width:900px){.mml .mml-lessons{grid-template-columns:repeat(2,minmax(0,1fr))}}",
     "@media (max-width:640px){.mml .mml-lessons{grid-template-columns:1fr}.mml-lessons>li{min-height:0}}",
     "@media (prefers-reduced-motion:reduce){.mml-lessons>li{transition:none}.mml-lessons>li:hover{transform:none}}",
@@ -285,7 +287,8 @@
       "<p><strong>" + esc(T.bigQuestion) + "</strong> " + t(lesson.inquiry.compellingQuestion[lang]) + "</p>" +
       "<p><em>" + esc(T.openMap + " " + lesson.title) + "</em></p>" + supportTop(site, lesson, lang) + "<ol>" +
       lesson.inquiry.questions.map(function (q) {
-        return "<li><strong>" + t(q.title[lang]) + "</strong> " + t(q.student[lang]) + (q.fill ? " " + blanks(q.fill[lang]) : "") + "</li>";
+        return "<li><strong>" + t(q.title[lang]) + '</strong><p class="mml-sheetlabel">' + esc(T.onTheMap || "On the map:") + '</p><ol class="mml-sheetsteps">' + (q.steps || []).map(function (st) { return "<li>" + t(st[lang]) + "</li>"; }).join("") + "</ol>" +
+          '<p><span class="mml-sheetlabel">' + esc(T.answer || "Answer:") + "</span> " + t(q.ask[lang]) + (q.fill ? " " + blanks(q.fill[lang]) : "") + "</p></li>";
       }).join("") + "</ol><p><strong>" + esc(T.yourAnswer) + "</strong> " + t(lesson.inquiry.final.student[lang]) + "</p>" +
       (S && S.reflection ? "<h4>" + esc(T.lookingBack) + "</h4><p>" + t(S.reflection[lang]) + "</p>" : "") + "</div>";
   }
@@ -446,7 +449,7 @@
       groups.forEach(function (u) {
         body += '<h2 class="mml-unit">' + esc(u) + '</h2><ul class="mml-lessons">' + inCourse.filter(function (l) { return l.unit === u; }).map(function (l) {
           return '<li><h3><a href="/pages/' + esc(l.id) + '">' + esc(l.title) + "</a></h3>" +
-            '<p class="mml-muted">Grade ' + esc(l.grade) + " · " + esc(l.time) + ((l.alsoFits || []).length ? " · also fits: " + l.alsoFits.map(esc).join("; ") : "") + '</p><p class="mml-sum">' + t(l.summary) + '</p><p class="mml-muted mml-tn">For teachers: <a href="/pages/' + esc(teacherSlug(l)) + '">notes and answers</a></p></li>';
+            '<p class="mml-muted">Grade ' + esc(l.grade) + " · " + esc(l.time) + ((l.alsoFits || []).length ? " · also fits: " + l.alsoFits.map(esc).join("; ") : "") + '</p><p class="mml-sum">' + t(l.summary) + '</p></li>';
         }).join("") + "</ul>";
       });
       var other = inCourse.filter(function (l) { return units.indexOf(l.unit) < 0; });

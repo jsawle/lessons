@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://jsawle.github.io/lessons/resources/schema/lesson.schema.json",
-  "title": "MapMaker lesson file, format 1.5",
+  "title": "MapMaker lesson file, format 1.6",
   "description": "One file per lesson. The lesson page, the teacher page, the Word student sheets and teacher notes, the how-to links, Vera's knowledge entry and the AI prompt are made from it. Text fields allow **bold** and [link text](https://address) only.",
   "type": "object",
   "required": [
@@ -58,7 +58,7 @@
       "type": "string"
     },
     "formatVersion": {
-      "const": "1.5"
+      "const": "1.6"
     },
     "id": {
       "type": "string",
@@ -276,8 +276,9 @@
               "title",
               "task",
               "tools",
-              "student",
-              "answer"
+              "steps",
+              "answer",
+              "ask"
             ],
             "properties": {
               "id": {
@@ -298,8 +299,18 @@
                   "$ref": "#/$defs/tool"
                 }
               },
-              "student": {
-                "$ref": "#/$defs/byLang"
+              "steps": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 5,
+                "items": {
+                  "$ref": "#/$defs/byLang"
+                },
+                "description": "What the student does on the map, one action per step, in order: open, click, turn on, zoom, measure, read. No questions here."
+              },
+              "ask": {
+                "$ref": "#/$defs/byLang",
+                "description": "The question(s) the student answers in writing, after the steps."
               },
               "fill": {
                 "$ref": "#/$defs/byLang",

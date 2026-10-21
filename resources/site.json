@@ -1,15 +1,15 @@
 {
  "app": {
   "name": "MapMaker resource pages (lab)",
-  "version": "0.13.1",
+  "version": "0.14.0",
   "parts": {
-   "Page renderer": "2.9",
-   "Word sheet builder": "1.5",
-   "Lesson file format": "1.5",
-   "Checker": "1.5",
-   "Vera knowledge builder": "1.3",
+   "Page renderer": "3.0",
+   "Word sheet builder": "1.6",
+   "Lesson file format": "1.6",
+   "Checker": "1.6",
+   "Vera knowledge builder": "1.4",
    "AI prompt builder": "1.1",
-   "Hub page builder": "2.9"
+   "Hub page builder": "3.0"
   }
  },
  "hubDemo": {
@@ -165,7 +165,9 @@
    "teacherSubtitle": "Teacher notes",
    "whereToFind": "Where to find it on the map:",
    "accept": "Accept answers that:",
-   "key": "Answer key:"
+   "key": "Answer key:",
+   "onTheMap": "On the map:",
+   "answer": "Answer:"
   },
   "es": {
    "name": "Nombre",
@@ -183,7 +185,9 @@
     "popups": "Si una ventana emergente dice 1 de 2 (o más), hay más de un elemento en ese lugar. Usa las flechas de la ventana para ver cada uno."
    },
    "mapData": "Datos del mapa:",
-   "sheetUrl": "Dirección del mapa:"
+   "sheetUrl": "Dirección del mapa:",
+   "onTheMap": "En el mapa:",
+   "answer": "Responde:"
   }
  },
  "languageNames": {

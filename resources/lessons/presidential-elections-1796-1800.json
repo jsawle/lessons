@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.5",
+  "formatVersion": "1.6",
   "id": "presidential-elections-1796-1800",
-  "contentVersion": "0.5.0",
+  "contentVersion": "0.6.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -76,9 +76,23 @@
           "Click one two-color pie and read the 1796 votes line of the pop-up.",
           "Ask: which states split their votes, and how?"
         ],
-        "student": {
-          "en": "Open The sixteen states bookmark and use the legend to read the 1796 pies. Which part of the country mostly voted for Adams, and which for Jefferson? Click each two-color pie: which states split their votes, and how?",
-          "es": "Abre el marcador The sixteen states (Los dieciséis estados) y usa la leyenda para leer los gráficos circulares de 1796. ¿Qué parte del país votó sobre todo por Adams y cuál por Jefferson? Haz clic en cada gráfico de dos colores: ¿qué estados dividieron sus votos, y cómo?"
+        "steps": [
+          {
+            "en": "Open The sixteen states bookmark.",
+            "es": "Abre el marcador The sixteen states (Los dieciséis estados)."
+          },
+          {
+            "en": "Use the legend to read the 1796 pies.",
+            "es": "Usa la leyenda para leer los gráficos circulares de 1796."
+          },
+          {
+            "en": "Click each two-color pie and read its pop-up.",
+            "es": "Haz clic en cada gráfico de dos colores y lee su ventana emergente."
+          }
+        ],
+        "ask": {
+          "en": "Which part of the country mostly voted for Adams, and which for Jefferson? Which states split their votes, and how?",
+          "es": "¿Qué parte del país votó sobre todo por Adams y cuál por Jefferson? ¿Qué estados dividieron sus votos, y cómo?"
         },
         "lines": 3,
         "answer": {
@@ -107,9 +121,23 @@
           "Click one of them and read the 1800 votes line of the pop-up.",
           "Ask: how did its electors divide, and which state was the closest?"
         ],
-        "student": {
-          "en": "In Map layers, turn off Election of 1796 and turn on Election of 1800. Which states have two-color pies this time? Click each one: how did its electors divide between Adams and Jefferson? Which state was the closest?",
-          "es": "En las capas del mapa (Map layers), desactiva Election of 1796 (Elección de 1796) y activa Election of 1800 (Elección de 1800). ¿Qué estados tienen gráficos de dos colores esta vez? Haz clic en cada uno: ¿cómo se dividieron sus electores entre Adams y Jefferson? ¿Qué estado estuvo más reñido?"
+        "steps": [
+          {
+            "en": "In Map layers, turn off Election of 1796 and turn on Election of 1800.",
+            "es": "En las capas del mapa (Map layers), desactiva Election of 1796 (Elección de 1796) y activa Election of 1800 (Elección de 1800)."
+          },
+          {
+            "en": "Find the two-color pies.",
+            "es": "Busca los gráficos de dos colores."
+          },
+          {
+            "en": "Click each one and read how its electors divided.",
+            "es": "Haz clic en cada uno y lee cómo se dividieron sus electores."
+          }
+        ],
+        "ask": {
+          "en": "Which states have two-color pies this time? How did each one's electors divide between Adams and Jefferson? Which state was the closest?",
+          "es": "¿Qué estados tienen gráficos de dos colores esta vez? ¿Cómo se dividieron los electores de cada uno entre Adams y Jefferson? ¿Qué estado estuvo más reñido?"
         },
         "lines": 3,
         "answer": {
@@ -139,9 +167,23 @@
           "Ask: which states' pies changed their shares, and did any New England state change?",
           "Ask: where was each party strong, and where did the two compete?"
         ],
-        "student": {
-          "en": "Switch between Election of 1796 and Election of 1800 in Map layers (one on, one off). Which state's whole pie changed from orange to blue, and how many electors did it have? Which states' pies changed their shares? Did any New England state change? Using both maps, describe where each party was strong and where the two parties competed.",
-          "es": "Alterna entre Election of 1796 y Election of 1800 en las capas del mapa (una activada, la otra desactivada). ¿Qué estado cambió todo su gráfico de naranja a azul, y cuántos electores tenía? ¿Qué estados cambiaron las proporciones de su gráfico? ¿Cambió algún estado de Nueva Inglaterra? Con los dos mapas, describe dónde era fuerte cada partido y dónde competían los dos partidos."
+        "steps": [
+          {
+            "en": "In Map layers, switch between Election of 1796 and Election of 1800 (one on, one off).",
+            "es": "En las capas del mapa, alterna entre Election of 1796 y Election of 1800 (una activada, la otra desactivada)."
+          },
+          {
+            "en": "Find the state whose whole pie changed from orange to blue, and click it to read its electors.",
+            "es": "Busca el estado cuyo gráfico entero cambió de naranja a azul y haz clic en él para leer sus electores."
+          },
+          {
+            "en": "Find the states whose pies changed their shares, and check New England.",
+            "es": "Busca los estados cuyos gráficos cambiaron sus proporciones y fíjate en Nueva Inglaterra."
+          }
+        ],
+        "ask": {
+          "en": "Which state's whole pie changed from orange to blue, and how many electors did it have? Which states' pies changed their shares, and did any New England state change? Using both maps, where was each party strong and where did the two parties compete?",
+          "es": "¿Qué estado cambió todo su gráfico de naranja a azul, y cuántos electores tenía? ¿Qué estados cambiaron las proporciones de su gráfico, y cambió algún estado de Nueva Inglaterra? Con los dos mapas, ¿dónde era fuerte cada partido y dónde competían los dos partidos?"
         },
         "fill": {
           "en": "Changed completely: ____________, with ____ electors.",
@@ -175,9 +217,23 @@
           "Open Measure and click from one square to the other for the straight-line distance in miles.",
           "Ask: why might both cases have come from so near the capital?"
         ],
-        "student": {
-          "en": "Click the two pink squares: Marbury v. Madison (1803) and McCulloch v. Maryland (1819). In the Why here part of each pop-up, what happened in that place to bring the case to the Court? Use Measure to find the straight-line distance between the two squares. Why might both cases have come from so near the national capital?",
-          "es": "Haz clic en los dos cuadrados rosados: Marbury v. Madison (1803) y McCulloch v. Maryland (1819). En la parte Why here (por qué aquí) de cada ventana emergente, ¿qué ocurrió en ese lugar para que el caso llegara a la Corte? Usa la herramienta de medir (Measure) para hallar la distancia en línea recta entre los dos cuadrados. ¿Por qué crees que los dos casos surgieron tan cerca de la capital nacional?"
+        "steps": [
+          {
+            "en": "Click the two pink squares: Marbury v. Madison (1803) and McCulloch v. Maryland (1819).",
+            "es": "Haz clic en los dos cuadrados rosados: Marbury v. Madison (1803) y McCulloch v. Maryland (1819)."
+          },
+          {
+            "en": "Read the Why here part of each pop-up.",
+            "es": "Lee la parte Why here (por qué aquí) de cada ventana emergente."
+          },
+          {
+            "en": "Use Measure to find the straight-line distance between the two squares.",
+            "es": "Usa la herramienta de medir (Measure) para hallar la distancia en línea recta entre los dos cuadrados."
+          }
+        ],
+        "ask": {
+          "en": "What happened in each place to bring the case to the Court? How far apart are the two squares? Why might both cases have come from so near the national capital?",
+          "es": "¿Qué ocurrió en cada lugar para que el caso llegara a la Corte? ¿A qué distancia están los dos cuadrados? ¿Por qué crees que los dos casos surgieron tan cerca de la capital nacional?"
         },
         "fill": {
           "en": "Distance between the two cases: about ____ miles.",

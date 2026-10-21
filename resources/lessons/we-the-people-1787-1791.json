@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.5",
+  "formatVersion": "1.6",
   "id": "we-the-people-1787-1791",
-  "contentVersion": "0.4.0",
+  "contentVersion": "0.5.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -37,7 +37,7 @@
       {
         "name": "Population in 1790: free and enslaved",
         "shows": "A pie on each state: free people (blue) and enslaved people (orange-red) in the 1790 census, with bigger pies for more people. Each pop-up, titled with the state's name, gives the total, the number enslaved and the percentage, the number counted under the three-fifths clause, the state's House seats in 1793, its two senators, and the seats it would have had if enslaved people had been counted in full or not at all.",
-        "source": "1790 census: U.S. Census Bureau, Return of the Whole Number of Persons (1791), checked against the 1793 House seats; seats: Apportionment Act of April 14, 1792 (National Archives); ratio: U.S. Census Bureau; state outlines: Natural Earth. The layer item's own credits still cite Wikipedia's tabulation; the figures were verified against the Census Bureau."
+        "source": "U.S. Census Bureau, 1790 census and apportionment ratio; Apportionment Act of April 14, 1792 (National Archives); state outlines from Natural Earth"
       },
       {
         "name": "House seats in 1793",
@@ -65,6 +65,12 @@
       "status": "open",
       "where": "Ratifying the Constitution, North Carolina (1788) pie and pop-up",
       "note": "Sources disagree on this vote, not a map error. The layer follows its own source, the Center for the Study of the American Constitution's Documentary History of the Ratification: 2 August 1788, 83 for and 184 against. [NCpedia](https://www.ncpedia.org/government/convention-1788) gives 1 August 1788 and 184 to 84. Either way the substance holds: the Hillsborough convention neither ratified nor rejected the Constitution until amendments were considered, as the pop-up's note says."
+    },
+    {
+      "date": "2026-10-21",
+      "status": "open",
+      "where": "Population in 1790: free and enslaved (layer item credits)",
+      "note": "The layer item's own credits still cite Wikipedia's tabulation. The figures were verified against the Census Bureau's Return of the Whole Number of Persons (1791) and the 1793 House seats; the item credits should name those sources instead."
     }
   ],
   "inquiry": {
@@ -95,9 +101,23 @@
           "Click a pie in the South and read the percentage enslaved in the first line of the pop-up.",
           "Ask: in which states were more than a quarter of the people enslaved?"
         ],
-        "student": {
-          "en": "Open The states in 1790 bookmark and click the pies. Which state had the most people? In which states were more than a quarter of the people enslaved? The first line of each pop-up gives the percentage.",
-          "es": "Abre el marcador The states in 1790 (los estados en 1790) y haz clic en los gráficos circulares. ¿Qué estado tenía más habitantes? ¿En qué estados más de una cuarta parte de la población estaba esclavizada? La primera línea de cada ventana emergente da el porcentaje."
+        "steps": [
+          {
+            "en": "Open The states in 1790 bookmark.",
+            "es": "Abre el marcador The states in 1790 (los estados en 1790)."
+          },
+          {
+            "en": "Click the pies and read each pop-up.",
+            "es": "Haz clic en los gráficos circulares y lee cada ventana emergente."
+          },
+          {
+            "en": "Read the first line of each pop-up, which gives the percentage enslaved.",
+            "es": "Lee la primera línea de cada ventana emergente, que da el porcentaje de personas esclavizadas."
+          }
+        ],
+        "ask": {
+          "en": "Which state had the most people? In which states were more than a quarter of the people enslaved?",
+          "es": "¿Qué estado tenía más habitantes? ¿En qué estados más de una cuarta parte de la población estaba esclavizada?"
         },
         "lines": 3,
         "answer": {
@@ -167,9 +187,23 @@
           "Click two states and read the senators line of the pop-up.",
           "Ask: why are the House and the Senate counted differently?"
         ],
-        "student": {
-          "en": "In Map layers, turn on House seats in 1793. Each label gives the state and its seats, and darker blue means more seats. Which state had the most seats in the House of Representatives, and which the fewest? Click two states: how many senators did each have? Why do you think the House and the Senate are counted differently?",
-          "es": "En las capas del mapa (Map layers), activa House seats in 1793 (escaños en la Cámara en 1793). Cada etiqueta da el estado y sus escaños, y un azul más oscuro indica más escaños. ¿Qué estado tenía más escaños en la Cámara de Representantes y cuál tenía menos? Haz clic en dos estados: ¿cuántos senadores tenía cada uno? ¿Por qué crees que la Cámara y el Senado se cuentan de forma distinta?"
+        "steps": [
+          {
+            "en": "In Map layers, turn on House seats in 1793.",
+            "es": "En las capas del mapa (Map layers), activa House seats in 1793 (escaños en la Cámara en 1793)."
+          },
+          {
+            "en": "Read the labels: each gives the state and its seats, and darker blue means more seats.",
+            "es": "Lee las etiquetas: cada una da el estado y sus escaños, y un azul más oscuro indica más escaños."
+          },
+          {
+            "en": "Click two states and read how many senators each had.",
+            "es": "Haz clic en dos estados y lee cuántos senadores tenía cada uno."
+          }
+        ],
+        "ask": {
+          "en": "Which state had the most seats in the House of Representatives, and which the fewest? How many senators did each of your two states have? Why do you think the House and the Senate are counted differently?",
+          "es": "¿Qué estado tenía más escaños en la Cámara de Representantes y cuál tenía menos? ¿Cuántos senadores tenía cada uno de tus dos estados? ¿Por qué crees que la Cámara y el Senado se cuentan de forma distinta?"
         },
         "lines": 4,
         "answer": {
@@ -196,9 +230,23 @@
           "Click two more states and compare those two lines with the actual seats.",
           "Ask: which states gained seats by counting people who could not vote?"
         ],
-        "student": {
-          "en": "Under the three-fifths clause, three of every five enslaved people were counted when House seats were shared out. Click Virginia and South Carolina and read the last two lines of each pop-up: how many seats would each have had if enslaved people had been counted in full, or not at all? Click other states too: which ones gained seats by counting people who could not vote?",
-          "es": "Según la cláusula de los tres quintos, se contaban tres de cada cinco personas esclavizadas al repartir los escaños de la Cámara. Haz clic en Virginia y en Carolina del Sur y lee las dos últimas líneas de cada ventana emergente: ¿cuántos escaños habría tenido cada uno si se hubiera contado a todas las personas esclavizadas, o a ninguna? Haz clic también en otros estados: ¿cuáles ganaron escaños al contar a personas que no podían votar?"
+        "steps": [
+          {
+            "en": "Click Virginia and South Carolina.",
+            "es": "Haz clic en Virginia y en Carolina del Sur."
+          },
+          {
+            "en": "Read the last two lines of each pop-up: seats with enslaved people counted in full, or not at all.",
+            "es": "Lee las dos últimas líneas de cada ventana emergente: los escaños si se contara a todas las personas esclavizadas, o a ninguna."
+          },
+          {
+            "en": "Click other states and read the same two lines.",
+            "es": "Haz clic en otros estados y lee las mismas dos líneas."
+          }
+        ],
+        "ask": {
+          "en": "Under the three-fifths clause, three of every five enslaved people were counted when House seats were shared out. How many seats would Virginia and South Carolina each have had if enslaved people had been counted in full, or not at all? Which states gained seats by counting people who could not vote?",
+          "es": "Según la cláusula de los tres quintos, se contaban tres de cada cinco personas esclavizadas al repartir los escaños de la Cámara. ¿Cuántos escaños habrían tenido Virginia y Carolina del Sur si se hubiera contado a todas las personas esclavizadas, o a ninguna? ¿Qué estados ganaron escaños al contar a personas que no podían votar?"
         },
         "fill": {
           "en": "Virginia: ____ seats with the three-fifths clause; ____ if enslaved people were not counted.",
@@ -285,9 +333,27 @@
           "Zoom to North Carolina and click both of its pies.",
           "Ask: why does North Carolina have two pies?"
         ],
-        "student": {
-          "en": "Turn off Population in 1790 and House seats in 1793, and turn on Ratifying the Constitution. Click the pies and read the first line of each pop-up, which gives the votes for and against. Which three votes were closest? North Carolina has two pies: click both and explain why.",
-          "es": "Desactiva Population in 1790 y House seats in 1793, y activa Ratifying the Constitution (la ratificación de la Constitución). Haz clic en los gráficos y lee la primera línea de cada ventana emergente, que da los votos a favor y en contra. ¿Qué tres votaciones fueron las más reñidas? Carolina del Norte tiene dos gráficos: haz clic en ambos y explica por qué."
+        "steps": [
+          {
+            "en": "In Map layers, turn off Population in 1790 and House seats in 1793.",
+            "es": "En Map layers, desactiva Population in 1790 y House seats in 1793."
+          },
+          {
+            "en": "Turn on Ratifying the Constitution.",
+            "es": "Activa Ratifying the Constitution (la ratificación de la Constitución)."
+          },
+          {
+            "en": "Click the pies and read the first line of each pop-up: the votes for and against.",
+            "es": "Haz clic en los gráficos y lee la primera línea de cada ventana emergente: los votos a favor y en contra."
+          },
+          {
+            "en": "Find North Carolina and click both of its pies.",
+            "es": "Busca Carolina del Norte y haz clic en sus dos gráficos."
+          }
+        ],
+        "ask": {
+          "en": "Which three votes were closest? Why does North Carolina have two pies?",
+          "es": "¿Qué tres votaciones fueron las más reñidas? ¿Por qué Carolina del Norte tiene dos gráficos?"
         },
         "lines": 3,
         "answer": {

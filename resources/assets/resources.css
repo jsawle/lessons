@@ -176,3 +176,8 @@ footer.foot thead th{background:#111;color:#ccc}
 .pic img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#fff}
 .pic{text-decoration:none;font-size:.85rem}
 @media (max-width:760px){.herogrid{grid-template-columns:1fr}.pic{max-width:22rem}}
+
+/* 3.0: sheet preview with map steps and the question */
+.sheet .sheetlabel{display:inline;font-weight:700;color:var(--link);margin:0}
+.sheet .sheetsteps{margin:.1rem 0 .4rem;padding-left:1.4rem}
+.sheet .sheetsteps li{margin:0}

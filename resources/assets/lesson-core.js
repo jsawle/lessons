@@ -6,7 +6,7 @@
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  var VERSION = { renderer: "2.9", format: "1.5", checker: "1.5", vera: "1.3", prompt: "1.1" };
+  var VERSION = { renderer: "3.0", format: "1.6", checker: "1.6", vera: "1.4", prompt: "1.1" };
   var HEX32 = /^[0-9a-f]{32}$/i;
   var DATE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -163,7 +163,7 @@
     L.push("**Compelling question:** " + md(lesson.inquiry.compellingQuestion.en));
     L.push("**Questions already in this lesson:**");
     lesson.inquiry.questions.forEach(function (q, i) {
-      L.push((i + 1) + ". " + md(q.title.en) + " " + md(q.student.en) + (q.fill ? " " + md(q.fill.en) : ""));
+      L.push((i + 1) + ". " + md(q.title.en) + " On the map: " + (q.steps || []).map(function (st) { return md(st.en); }).join(" ") + " Answer: " + md(q.ask.en) + (q.fill ? " " + md(q.fill.en) : ""));
     });
     if (sup.reflection) L.push("**Closing reflection already in this lesson:** " + md(sup.reflection.en));
     L.push("**Answers:** not in this file. The answers are on the lesson's teacher page, for teachers only; do not give answers to the questions above, and do not write student material that contains them.");
@@ -257,7 +257,13 @@
       need(/^q\d+$/.test(q.id || ""), w + ": id should be q1, q2 and so on.");
       need(!ids[q.id], w + ": id " + q.id + " is used twice."); ids[q.id] = true;
       lang(q.title, w + " title", langs);
-      lang(q.student, w + " student text", langs);
+      need(q.student === undefined, w + ": student is replaced by steps and ask (format 1.6).");
+      need(Array.isArray(q.steps) && q.steps.length >= 2 && q.steps.length <= 5, w + ": steps needs 2 to 5 actions on the map.");
+      (Array.isArray(q.steps) ? q.steps : []).forEach(function (st, j) {
+        lang(st, w + " step " + (j + 1), langs);
+        langs.forEach(function (lg) { if (st && str(st[lg])) need(st[lg].indexOf("?") < 0, w + " step " + (j + 1) + " (" + lg + "): steps are actions, not questions; put questions in ask."); });
+      });
+      lang(q.ask, w + " ask (the questions to answer)", langs);
       if (q.fill) lang(q.fill, w + " fill-in line", langs);
       if (q.lines !== undefined) need(Number.isInteger(q.lines) && q.lines >= 1 && q.lines <= 8, w + ": lines (writing lines on the sheet) should be a whole number from 1 to 8.");
       need(str(q.task), w + ": task (the teacher-facing version) is missing.");

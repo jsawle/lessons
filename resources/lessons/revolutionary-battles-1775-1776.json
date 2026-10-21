@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.5",
+  "formatVersion": "1.6",
   "id": "revolutionary-battles-1775-1776",
-  "contentVersion": "0.6.1",
+  "contentVersion": "0.7.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -103,9 +103,31 @@
           "Click the Boston diamond and read its two dates.",
           "Ask: how long did the siege of Boston last?"
         ],
-        "student": {
-          "en": "Open the Massachusetts bookmark. Click the diamond at Lexington and Concord. When was it fought? Use the legend to find out who won. Then click the Boston diamond: how long did the siege of Boston last?",
-          "es": "Abre el marcador Massachusetts. Haz clic en el rombo de Lexington and Concord. ¿Cuándo fue la batalla? Usa la leyenda para saber quién ganó. Luego haz clic en el rombo de Boston: ¿cuánto duró el sitio de Boston?"
+        "steps": [
+          {
+            "en": "Open the Massachusetts bookmark.",
+            "es": "Abre el marcador Massachusetts."
+          },
+          {
+            "en": "Click the diamond at Lexington and Concord and read its dates.",
+            "es": "Haz clic en el rombo de Lexington and Concord y lee sus fechas."
+          },
+          {
+            "en": "Open the legend and check which color shows who won.",
+            "es": "Abre la leyenda y comprueba qué color muestra quién ganó."
+          },
+          {
+            "en": "Click the Boston diamond and read its dates.",
+            "es": "Haz clic en el rombo de Boston y lee sus fechas."
+          },
+          {
+            "en": "Use Measure for the straight-line distance from Boston to Concord.",
+            "es": "Usa la herramienta de medir (Measure) para la distancia en línea recta de Boston a Concord."
+          }
+        ],
+        "ask": {
+          "en": "When was Lexington and Concord fought, and who won? How long did the siege of Boston last?",
+          "es": "¿Cuándo fue la batalla de Lexington and Concord y quién ganó? ¿Cuánto duró el sitio de Boston?"
         },
         "fill": {
           "en": "Measure the straight-line distance from Boston to Concord: ________ miles",
@@ -138,9 +160,23 @@
           "Ask: which colonies had battles in 1775, and which in 1776?",
           "Ask: where did the fighting move to, and who was winning there?"
         ],
-        "student": {
-          "en": "Zoom out until you can see every diamond, from Quebec to South Carolina. Click each one and write its name under the year it was fought. Use the legend to mark who won. Which colonies had battles in 1775? Which in 1776? What changed?",
-          "es": "Aléjate hasta ver todos los rombos, desde Quebec hasta Carolina del Sur. Haz clic en cada uno y escribe su nombre bajo el año en que se combatió. Usa la leyenda para marcar quién ganó. ¿Qué colonias tuvieron batallas en 1775? ¿Y en 1776? ¿Qué cambió?"
+        "steps": [
+          {
+            "en": "Zoom out until you can see every diamond, from Quebec to South Carolina.",
+            "es": "Aléjate hasta ver todos los rombos, desde Quebec hasta Carolina del Sur."
+          },
+          {
+            "en": "Click each diamond and write its name under the year it was fought.",
+            "es": "Haz clic en cada rombo y escribe su nombre bajo el año en que se combatió."
+          },
+          {
+            "en": "Use the legend to mark who won each battle.",
+            "es": "Usa la leyenda para marcar quién ganó cada batalla."
+          }
+        ],
+        "ask": {
+          "en": "Which colonies had battles in 1775? Which in 1776? What changed?",
+          "es": "¿Qué colonias tuvieron batallas en 1775? ¿Y en 1776? ¿Qué cambió?"
         },
         "lines": 5,
         "answer": {
@@ -192,9 +228,31 @@
           "Use Measure from New York to Boston.",
           "Ask: what could a navy based at New York reach?"
         ],
-        "student": {
-          "en": "In Map layers, turn on Key Port Cities in the American Revolution 1775-1781 (it's inside Revolutionary War Battlefields). Use the legend to tell a Major Port City from a smaller Port. Boston and Charleston are major ports: which other major ports lie between them? The layer has no pop-ups, so use the coastline and the battle diamonds nearby to name them. Measure from New York to Philadelphia and from New York to Boston. Looking at the map, what could a navy based at New York reach?",
-          "es": "En las capas del mapa (Map layers), activa Key Port Cities in the American Revolution 1775-1781 (ciudades portuarias clave; está dentro de Revolutionary War Battlefields). Usa la leyenda para distinguir un puerto principal (Major Port City) de un puerto menor (Port). Boston y Charleston son puertos principales: ¿qué otros puertos principales hay entre ellos? La capa no tiene ventanas emergentes, así que usa la costa y los rombos de batallas cercanos para nombrarlos. Mide de Nueva York a Filadelfia y de Nueva York a Boston. Mirando el mapa, ¿qué podía alcanzar una armada con base en Nueva York?"
+        "steps": [
+          {
+            "en": "In Map layers, turn on Key Port Cities in the American Revolution 1775-1781 (inside Revolutionary War Battlefields).",
+            "es": "En las capas del mapa (Map layers), activa Key Port Cities in the American Revolution 1775-1781 (ciudades portuarias clave; está dentro de Revolutionary War Battlefields)."
+          },
+          {
+            "en": "Use the legend to tell a Major Port City from a smaller Port.",
+            "es": "Usa la leyenda para distinguir un puerto principal (Major Port City) de un puerto menor (Port)."
+          },
+          {
+            "en": "Find the major ports between Boston and Charleston.",
+            "es": "Busca los puertos principales entre Boston y Charleston."
+          },
+          {
+            "en": "The layer has no pop-ups, so use the coastline and the battle diamonds nearby to name them.",
+            "es": "La capa no tiene ventanas emergentes, así que usa la costa y los rombos de batallas cercanos para nombrarlos."
+          },
+          {
+            "en": "Use Measure from New York to Philadelphia and from New York to Boston.",
+            "es": "Usa la herramienta de medir (Measure) de Nueva York a Filadelfia y de Nueva York a Boston."
+          }
+        ],
+        "ask": {
+          "en": "Boston and Charleston are major ports: which other major ports lie between them? Looking at the map, what could a navy based at New York reach?",
+          "es": "Boston y Charleston son puertos principales: ¿qué otros puertos principales hay entre ellos? Mirando el mapa, ¿qué podía alcanzar una armada con base en Nueva York?"
         },
         "fill": {
           "en": "New York to Philadelphia: ________ miles. New York to Boston: ________ miles",
@@ -230,9 +288,31 @@
           "Open the legend and check the colour of each diamond.",
           "Ask: how did 1776 end for Washington's army?"
         ],
-        "student": {
-          "en": "Zoom in on New York City until the numbered circles appear, then follow circles 4 and 5. Click the diamonds for Fort Washington, Fort Lee and Trenton. When was each fought, and who won?",
-          "es": "Acércate a la ciudad de Nueva York hasta que aparezcan los círculos numerados y sigue los círculos 4 y 5. Haz clic en los rombos de Fort Washington, Fort Lee y Trenton. ¿Cuándo se combatió cada batalla y quién ganó?"
+        "steps": [
+          {
+            "en": "Zoom in on New York City until the numbered circles appear.",
+            "es": "Acércate a la ciudad de Nueva York hasta que aparezcan los círculos numerados."
+          },
+          {
+            "en": "Follow circles 4 and 5.",
+            "es": "Sigue los círculos 4 y 5."
+          },
+          {
+            "en": "Click the diamonds for Fort Washington, Fort Lee and Trenton.",
+            "es": "Haz clic en los rombos de Fort Washington, Fort Lee y Trenton."
+          },
+          {
+            "en": "Read each one's dates, and use the legend to see who won.",
+            "es": "Lee las fechas de cada uno y usa la leyenda para ver quién ganó."
+          },
+          {
+            "en": "Use Measure for the distance from New York City to Trenton.",
+            "es": "Usa la herramienta de medir (Measure) para la distancia de la ciudad de Nueva York a Trenton."
+          }
+        ],
+        "ask": {
+          "en": "When was each battle fought, and who won?",
+          "es": "¿Cuándo se combatió cada batalla y quién ganó?"
         },
         "fill": {
           "en": "Measure the distance from New York City to Trenton: ________ miles",
