@@ -2,15 +2,15 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.4",
   "id": "presidential-elections-1796-1800",
-  "contentVersion": "0.3.1",
+  "contentVersion": "0.4.0",
   "status": "draft",
-  "updated": "2026-10-15",
+  "updated": "2026-10-21",
   "reviewed": null,
-  "title": "Presidential Elections, 1796 and 1800",
+  "title": "Political Parties and Federal Power, 1796–1819",
   "sheetTitle": {
-    "es": "Elecciones presidenciales de 1796 y 1800"
+    "es": "Partidos políticos y poder federal, 1796–1819"
   },
-  "summary": "Compare how each state's electors voted in 1796 and 1800, see which states changed sides, and find two Supreme Court cases that shaped the new government.",
+  "summary": "Compare how each state's electors voted in 1796 and 1800, see which states changed sides, and find two Supreme Court cases that shaped the new government. The elections of 1796 and 1800 show the first party divide; two Supreme Court cases, in 1803 and 1819, show how the new federal government's power was tested.",
   "subject": "History",
   "course": "US History",
   "unit": "The early republic",

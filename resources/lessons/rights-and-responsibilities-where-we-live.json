@@ -2,9 +2,9 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.4",
   "id": "rights-and-responsibilities-where-we-live",
-  "contentVersion": "0.3.1",
+  "contentVersion": "0.3.2",
   "status": "draft",
-  "updated": "2026-10-15",
+  "updated": "2026-10-21",
   "reviewed": null,
   "title": "Rights and Responsibilities Where We Live",
   "sheetTitle": {
@@ -34,7 +34,7 @@
     "layers": [
       {
         "name": "Congressional districts (119th Congress)",
-        "shows": "District boundaries for the 119th Congress (2025–2027) as blue outlines. Each pop-up reads \"[Representative Name] ([Party]) represents [State] Congressional District [number]\".",
+        "shows": "District boundaries for the 119th Congress (2025–2027) as blue outlines, current as of the layer's last update (see its item page); representatives change at elections and in special elections. Each pop-up reads \"[Representative Name] ([Party]) represents [State] Congressional District [number]\".",
         "source": "Esri; U.S. Census Bureau; Clerk of the U.S. House of Representatives (MapMaker catalogue)"
       },
       {
@@ -204,7 +204,7 @@
     }
   },
   "teacherNotes": {
-    "beforeClass": "Before class, zoom to your own town and check the basemap labels its public buildings at close zoom. National Register of Historic Places is off when the map opens; its pop-ups give an address but not a name. Students sketch on the map, so remind them sketches are not saved: finish in one session or take a screenshot.",
+    "beforeClass": "Before class, zoom to your own town and check the basemap labels its public buildings at close zoom. National Register of Historic Places is off when the map opens; its pop-ups give an address but not a name. Students sketch on the map, so remind them sketches are not saved: finish in one session or take a screenshot. Congressional districts and representatives change: check the layer's date before class. Students pin public places only, never homes.",
     "misconceptions": [
       {
         "claim": "The Bill of Rights lists all of a citizen's rights.",

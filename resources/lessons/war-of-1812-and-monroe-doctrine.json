@@ -2,9 +2,9 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.4",
   "id": "war-of-1812-and-monroe-doctrine",
-  "contentVersion": "0.3.1",
+  "contentVersion": "0.3.2",
   "status": "draft",
-  "updated": "2026-10-15",
+  "updated": "2026-10-21",
   "reviewed": null,
   "title": "The War of 1812 and the Monroe Doctrine, 1807–1823",
   "sheetTitle": {
@@ -57,7 +57,7 @@
       },
       {
         "name": "Battles of the War of 1812",
-        "shows": "52 battles from 1811 to 1815 as diamonds: blue for an American victory, red for a British victory, gray if inconclusive; bigger diamonds mean more casualties. Each pop-up gives the dates, the victor, total casualties, a casualties chart and a short account. The layer calls every opponent of the United States British, including the Red Stick Creeks.",
+        "shows": "52 battles from 1811 to 1815 as diamonds: blue for an American victory, red for a British victory, gray if inconclusive; bigger diamonds mean more casualties. Each pop-up gives the dates, the victor, total casualties, a casualties chart, the leaders on each side and a short account. The legend labels every opponent of the United States as British, but some battles were fought against Native nations: Tippecanoe (the Shawnee-led confederacy), Fort Mims and Horseshoe Bend (Red Stick Creeks). The pop-up's leaders and story say who fought.",
         "source": "American Battlefield Trust (War of 1812 Battles map)"
       },
       {
@@ -68,7 +68,20 @@
       }
     ]
   },
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "where": "Battles of the War of 1812",
+      "note": "The Victor field's labels are American Side Victory and British Side Victory for every battle, so Fort Mims shows as a British victory and Horseshoe Bend as a victory over the British; both were fought against Red Stick Creek forces, and Tippecanoe against the Shawnee-led confederacy. Raised with the MapMaker team: relabel as Side A / Side B or add an opponent field.",
+      "status": "open",
+      "date": "2026-10-21"
+    },
+    {
+      "where": "Latin American independence and US recognition",
+      "note": "The legend groups recognition as by 1824 or later, while question 4 asks about recognition before December 2, 1823; Brazil and Central America (1824) fall in the blue group. The pop-up date settles it. A three-way grouping (before the message, after it, later) would be clearer.",
+      "status": "open",
+      "date": "2026-10-21"
+    }
+  ],
   "inquiry": {
     "compellingQuestion": {
       "en": "How did the War of 1812 and the years after it change the United States' place in North and South America?",
@@ -158,7 +171,7 @@
             ]
           },
           "accept": "The three battles with the most casualties, each with place, date and result from the pop-up; New Orleans (January 8, 1815) identified as the battle fought after the Treaty of Ghent.",
-          "text": "Fort Erie, New Orleans and Lundy's Lane are the three largest; news of the peace hadn't crossed the Atlantic before New Orleans. Horseshoe Bend was fought against the Red Stick Creeks, not the British, though the layer calls the other side British."
+          "text": "Fort Erie, New Orleans and Lundy's Lane are the three largest; news of the peace hadn't crossed the Atlantic before New Orleans. Horseshoe Bend (fourth largest) was fought against the Red Stick Creeks, not the British: the legend's British label is the layer's simplification, and the pop-up names Menawa as the opposing leader."
         }
       },
       {
@@ -197,8 +210,8 @@
           "popups"
         ],
         "student": {
-          "en": "Open the Latin America in 1825 bookmark and turn on Latin American independence and US recognition. Click the blue circles: which nations had the United States recognized before President Monroe's message of December 2, 1823? Why might Monroe have warned European powers to stay out of the Americas?",
-          "es": "Abre el marcador Latin America in 1825 (América Latina en 1825) y activa la capa Latin American independence and US recognition (independencia latinoamericana y reconocimiento de Estados Unidos). Haz clic en los círculos azules: ¿qué naciones había reconocido Estados Unidos antes del mensaje del presidente Monroe del 2 de diciembre de 1823? ¿Por qué crees que Monroe advirtió a las potencias europeas que no intervinieran en América?"
+          "en": "Open the Latin America in 1825 bookmark and turn on Latin American independence and US recognition. Click the blue circles and read each recognition date in the pop-up: which nations had the United States recognized before President Monroe's message of December 2, 1823? (Blue means recognized by 1824, so check the date.) Why might Monroe have warned European powers to stay out of the Americas?",
+          "es": "Abre el marcador Latin America in 1825 (América Latina en 1825) y activa la capa Latin American independence and US recognition (independencia latinoamericana y reconocimiento de Estados Unidos). Haz clic en los círculos azules y lee la fecha de reconocimiento en cada ventana emergente: ¿qué naciones había reconocido Estados Unidos antes del mensaje del presidente Monroe del 2 de diciembre de 1823? (El azul significa reconocida en 1824 o antes, así que comprueba la fecha.) ¿Por qué crees que Monroe advirtió a las potencias europeas que no intervinieran en América?"
         },
         "lines": 4,
         "answer": {
@@ -294,8 +307,8 @@
       "es": "A comienzos del siglo XIX, Gran Bretaña y Francia estaban en guerra, y ambas se apoderaban de barcos estadounidenses. Además, los buques de guerra británicos obligaban a marineros de barcos estadounidenses a servir en la Marina Real, y Gran Bretaña apoyaba a los pueblos indígenas que se resistían a los asentamientos estadounidenses. En junio de 1812, Estados Unidos le declaró la guerra a Gran Bretaña."
     },
     "readingTheMap": {
-      "en": "The map has no place names: click a feature to see its name. Pink shading shows the United States in 1800. Diamonds mark battles; use the legend: blue for an American victory, red for a British victory, gray if neither side won; bigger diamonds mean more casualties. Each battle pop-up gives the dates, the victor and the casualties. Tan shading shows battlefield land. Three layers are off when the map opens: the land Spain gave up in 1819 (green), the treaty line (pink dashes, in seven parts) and the Latin American nations, shown as blue circles if the United States recognized them by 1824 and orange diamonds if later.",
-      "es": "El mapa no tiene nombres de lugares: haz clic en un elemento para ver su nombre. El sombreado rosado muestra Estados Unidos en 1800. Los rombos marcan las batallas; usa la leyenda: azul si ganaron los estadounidenses, rojo si ganaron los británicos y gris si ningún bando ganó; los rombos más grandes indican más bajas. La ventana emergente de cada batalla da las fechas, el vencedor y las bajas. El sombreado color canela muestra el terreno de los campos de batalla. Tres capas están desactivadas al abrir el mapa: la tierra que España cedió en 1819 (verde), la línea del tratado (rayas rosadas, en siete tramos) y las naciones latinoamericanas, que aparecen como círculos azules si Estados Unidos las reconoció en 1824 o antes y como rombos naranjas si fue más tarde."
+      "en": "The map has no place names: click a feature to see its name. Pink shading shows the United States in 1800. Diamonds mark battles; use the legend: blue for an American victory, red for a British victory, gray if neither side won; bigger diamonds mean more casualties. The legend says British for every opponent, but some battles were fought against Native nations: the pop-up's leaders and story tell you who fought. Each battle pop-up gives the dates, the victor and the casualties. Tan shading shows battlefield land. Three layers are off when the map opens: the land Spain gave up in 1819 (green), the treaty line (pink dashes, in seven parts) and the Latin American nations, shown as blue circles if the United States recognized them by 1824 and orange diamonds if later; the pop-up gives the exact date.",
+      "es": "El mapa no tiene nombres de lugares: haz clic en un elemento para ver su nombre. El sombreado rosado muestra Estados Unidos en 1800. Los rombos marcan las batallas; usa la leyenda: azul si ganaron los estadounidenses, rojo si ganaron los británicos y gris si ningún bando ganó; los rombos más grandes indican más bajas. La leyenda dice británicos para todos los adversarios, pero algunas batallas se libraron contra naciones indígenas: los líderes y el relato de la ventana emergente dicen quién combatió. La ventana emergente de cada batalla da las fechas, el vencedor y las bajas. El sombreado color canela muestra el terreno de los campos de batalla. Tres capas están desactivadas al abrir el mapa: la tierra que España cedió en 1819 (verde), la línea del tratado (rayas rosadas, en siete tramos) y las naciones latinoamericanas, que aparecen como círculos azules si Estados Unidos las reconoció en 1824 o antes y como rombos naranjas si fue más tarde; la ventana emergente da la fecha exacta."
     },
     "tips": [
       "popups"
