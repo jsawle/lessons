@@ -1,15 +1,15 @@
 {
  "app": {
   "name": "MapMaker resource pages (lab)",
-  "version": "0.15.0",
+  "version": "0.15.1",
   "parts": {
-   "Page renderer": "3.1",
+   "Page renderer": "3.2",
    "Word sheet builder": "1.7",
    "Lesson file format": "1.7",
    "Checker": "1.7",
    "Vera knowledge builder": "1.4",
    "AI prompt builder": "1.1",
-   "Hub page builder": "3.1"
+   "Hub page builder": "3.2"
   }
  },
  "hubDemo": {
@@ -260,7 +260,7 @@
    "Encourage students to look for patterns and make observations, not just to find the right answers.",
    "Layers the questions don't use are there for further study."
   ],
-  "materials": "The lesson includes the MapMaker map, a two-page Word student sheet in English and Spanish, and these teacher notes. Print the sheet or share it digitally; it opens in Word and Google Docs. Share the map with the Google Classroom button or by pasting its link, and attach the sheet separately. No account or login is needed. Sketches on the map are not saved between sessions.",
+  "materials": "The lesson includes the MapMaker map, a two-page Word student sheet in English and Spanish, and these teacher notes. Print the sheet, or download it and upload it to Google Drive to edit it in Google Docs (it also opens in Word). The Google Classroom button shares the map, not the sheet; to assign the sheet, attach your Drive copy in Classroom with Make a copy for each student, or paste the map link and attach the sheet yourself. No account or login is needed. Sketches on the map are not saved between sessions.",
   "howTheyWork": [
    "Each lesson is one MapMaker map and a set of questions that students answer by using the map: opening bookmarks, clicking pop-ups, reading the legend, turning layers on and off and measuring. The questions can't be answered from a textbook alone.",
    "Students need no account or login. Open in MapMaker opens the map straight from the lesson page; the Share to Google Classroom button shares the map link with a class.",

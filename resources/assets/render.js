@@ -1,4 +1,4 @@
-/* MapMaker resource pages (lab): page renderer v3.1 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
+/* MapMaker resource pages (lab): page renderer v3.2 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
    standards in the hero; Vera link and a copyable AI prompt). Draws a lesson page, its teacher page (?view=teacher) or the catalogue from JSON files. */
 (function () {
   "use strict";
@@ -166,13 +166,13 @@
 
     // Student activity
     h.push('<section id="student-activity" aria-labelledby="sa-h"><h2 id="sa-h">Student activity</h2>');
-    h.push('<p class="prose">This is what students see on the Word sheet. Download it to edit it, print it, or open it in Google Docs. Students need no account or login.</p>');
+    h.push('<p class="prose">This is what students see on the Word sheet. To edit it, download it and upload it to Google Drive (it opens in Google Docs) or open it in Word. Students need no account or login.</p>');
     h.push('<div class="sheet-tools">' + (langs.length > 1 ? '<div class="toggle" role="group" aria-label="Sheet language">' + langs.map(function (l, i) {
       return '<button type="button" data-lang="' + l + '" aria-pressed="' + (i === 0) + '">' + esc(site.languageNames[l]) + "</button>";
     }).join("") + "</div>" : "") + langs.map(function (l) {
       return '<button type="button" class="btn" data-download="' + l + '">Download Word (' + esc(site.languageNames[l]) + ")</button>";
     }).join("") + '<p class="status-msg" id="dl-status" role="status" aria-live="polite"></p></div>');
-    if (gc) h.push('<p class="muted">The Share to Google Classroom button at the top of the page shares the MapMaker map with a class. It doesn’t include the Word sheet, which can be attached in Classroom.</p>');
+    if (gc) h.push('<p class="muted">The Share to Google Classroom button at the top of the page shares the MapMaker map with a class, not the sheet. To assign the sheet, attach your Drive copy in Classroom and choose Make a copy for each student.</p>');
     langs.forEach(function (l, i) { h.push(sheetPreview(site, lesson, l, i > 0)); });
     h.push("</section>");
 

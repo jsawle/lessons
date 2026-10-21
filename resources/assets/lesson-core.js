@@ -6,7 +6,7 @@
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  var VERSION = { renderer: "3.1", format: "1.7", checker: "1.7", vera: "1.4", prompt: "1.1" };
+  var VERSION = { renderer: "3.2", format: "1.7", checker: "1.7", vera: "1.4", prompt: "1.1" };
   var HEX32 = /^[0-9a-f]{32}$/i;
   var DATE = /^\d{4}-\d{2}-\d{2}$/;
 
