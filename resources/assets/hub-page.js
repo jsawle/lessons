@@ -10,7 +10,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "3.1";
+  var VERSION = "3.2";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
@@ -363,11 +363,11 @@
     add('<div class="mml">' + anchor(slug, "standards") + "<h2>Standards</h2>" + standardsTable(site, lesson) + "</div>");
 
     // Student activity (the one place with the Classroom button, next to the sheet it goes with)
-    add('<div class="mml">' + anchor(slug, "student-activity") + '<h2>Student activity</h2><p class="mml-prose">This is what students see on the Word sheet. Download it to edit it, print it, or open it in Google Docs. Students need no account or login.</p>' +
+    add('<div class="mml">' + anchor(slug, "student-activity") + '<h2>Student activity</h2><p class="mml-prose">This is what students see on the Word sheet. To edit it, download it and upload it to Google Drive (it opens in Google Docs) or open it in Word. Students need no account or login.</p>' +
       '<p class="mml-actions">' + langs.map(function (l) {
         return '<a class="mml-btn" href="' + sheetPlaceholder(lesson.id, l) + '"' + (l !== "en" ? ' lang="' + l + '"' : "") + ">Download Word (" + esc(langName(site, l)) + ")</a>";
       }).join(" ") + "</p>" +
-      (gc ? '<p class="mml-muted">The Share to Google Classroom button at the top of the page shares the MapMaker map with a class. It doesn’t include the Word sheet, which can be attached in Classroom.</p>' : "") +
+      (gc ? '<p class="mml-muted">The Share to Google Classroom button at the top of the page shares the MapMaker map with a class, not the sheet. To assign the sheet, attach your Drive copy in Classroom and choose Make a copy for each student.</p>' : "") +
       sheetPreview(site, lesson, "en") +
       langs.filter(function (l) { return l !== "en" && lesson.languages[l].note; }).map(function (l) {
         return '<p class="mml-muted">' + esc(langName(site, l)) + ": " + esc(lesson.languages[l].note) + "</p>";
