@@ -6,7 +6,7 @@
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  var VERSION = { renderer: "3.0", format: "1.6", checker: "1.6", vera: "1.4", prompt: "1.1" };
+  var VERSION = { renderer: "3.1", format: "1.7", checker: "1.7", vera: "1.4", prompt: "1.1" };
   var HEX32 = /^[0-9a-f]{32}$/i;
   var DATE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -327,6 +327,15 @@
     need(Array.isArray(lesson.discussion) && lesson.discussion.length >= 2 && lesson.discussion.length <= 4 && lesson.discussion.every(str), "discussion needs 2 to 4 debrief questions.");
     if (lesson.instructionalModels !== undefined) need(Array.isArray(lesson.instructionalModels) && lesson.instructionalModels.every(str), "instructionalModels should be a list of short phrases.");
     (lesson.resources || []).forEach(function (r, i) { need(r && str(r.title) && /^https:\/\//.test(r.url || ""), "resources[" + (i + 1) + "] needs a title and an https:// url."); });
+    // Format 1.7: assessment of the answer to the compelling question (teacher-facing, English): what counts as map
+    // evidence in this lesson, and a model answer at the top level of the shared rubric in site.json.
+    var asm = lesson.assessment;
+    need(asm && typeof asm === "object", "assessment is missing (format 1.7: evidence and exemplar).");
+    if (asm) {
+      need(str(asm.evidence) && asm.evidence.length >= 60 && asm.evidence.length <= 400, "assessment.evidence should be one or two sentences (60 to 400 characters) naming the layers, features, dates or numbers a strong answer uses.");
+      need(str(asm.exemplar) && asm.exemplar.length >= 400 && asm.exemplar.length <= 1400, "assessment.exemplar should be a model answer of about 80 to 200 words (400 to 1400 characters).");
+      need(!/\?/.test(asm.exemplar || ""), "assessment.exemplar should answer, not ask: no question marks.");
+    }
     var links = JSON.stringify(lesson).match(/\]\(([^)]+)\)/g) || [];
     links.forEach(function (m) { need(/^\]\(https:\/\//.test(m), "Links must start with https:// (found " + m.slice(2, -1) + ")."); });
     return errs;

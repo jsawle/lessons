@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.6",
+  "formatVersion": "1.7",
   "id": "revolutionary-battles-1775-1776",
-  "contentVersion": "0.7.0",
+  "contentVersion": "0.8.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -368,6 +368,10 @@
       "source": "National Park Service"
     }
   ],
+  "assessment": {
+    "evidence": "Strong answers use dates and victors from the Revolutionary War Battles pop-ups and legend (Lexington and Concord, April 19, 1775, blue = American Victory; Fort Washington, November 16, 1776, red = British Victory; Trenton, December 26, 1776), the Major Port City symbol in the Key Port Cities legend, the Turning Points circles, and a Measure distance such as New York to Boston (about 190 miles).",
+    "exemplar": "The fighting moved from Boston to New York and then across New Jersey because the British went after the big port in the middle of the coast, which could cut New England off from the rest of the colonies, and the Americans fell back before striking at Trenton. On the Massachusetts bookmark, the Lexington and Concord pop-up gives April 19, 1775, and the legend shows its blue diamond means an American Victory; the Boston pop-up runs from April 19, 1775 to March 17, 1776, about 11 months. With Key Port Cities on, the legend's larger symbol marks New York as a Major Port City, and Measure gives about 190 miles to Boston and about 80 miles to Philadelphia, so a navy there could reach the other big ports. The pop-up dates put 13 battles in 1776, and red diamonds at Brooklyn, Fort Washington on November 16, 1776 and Fort Lee on November 20, 1776 show the British winning nearly all of them, until Trenton, December 26, 1776, with a blue diamond, about 52 miles from New York City by Measure. The pattern is that the fighting followed the coast and its ports, but my claim only covers 1775 and 1776, where the map ends."
+  },
   "studentSupport": {
     "beforeYouStart": {
       "en": "British soldiers marched out of Boston to seize weapons that colonists had stored at Concord. The fighting that followed started the American Revolution. For the next two years, the British army and navy and the new Continental Army, led by George Washington, fought over the colonies' cities, rivers and harbors.",

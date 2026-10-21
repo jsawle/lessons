@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.6",
+  "formatVersion": "1.7",
   "id": "roads-trails-and-rails-west",
-  "contentVersion": "0.6.0",
+  "contentVersion": "0.7.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -361,6 +361,10 @@
       "source": "Library of Congress"
     }
   ],
+  "assessment": {
+    "evidence": "Strong answers use the Trails West pop-ups (the Oregon Trail's about 2,000 miles and 300,000 to 400,000 people, 1840 to 1860; the California Trail used until 1869), Measure from Independence to Portland (about 1,500 miles), nations named on the Indigenous Territories layer, and the legend's Transcontinental Railroad (Union Pacific) and (Central Pacific) lines beside the dotted trails.",
+    "exemplar": "Trails and then railroads turned the West into a route for hundreds of thousands of settlers heading to Oregon, California and Utah, at the cost of the Indigenous nations whose lands the routes crossed. In the Trails West layer, the Oregon Trail pop-up says the trail was about 2,000 miles long and 300,000 to 400,000 people used it between 1840 and 1860, starting from Independence, Missouri. Measure from Independence to Portland, Oregon, gives about 1,500 miles, so the dotted line is about 500 miles longer because it follows rivers like the Platte and the Snake for water and grass. With the Indigenous Territories layer on and zoomed in, the Oregon Trail runs through lands labeled for the Pawnee, Lakota, Cheyenne and Shoshone, so the land was not empty, and those wagons and animals meant lost grass and hunting grounds. With Railroads on, the legend's Transcontinental Railroad (Union Pacific) and (Central Pacific) lines run from Omaha to Sacramento beside the California and Mormon Pioneer trails, and the California Trail pop-up says it was used until 1869, when the railroad was completed. The change over time is that the railroad replaced the wagon trails but kept the same route, so the same nations faced the pressure again."
+  },
   "studentSupport": {
     "beforeYouStart": {
       "en": "In the 1800s, hundreds of thousands of people from the eastern United States went west in wagons, looking for farmland, gold or a place to practice their religion freely. A journey along one of the trails could take months. Later in the century, railroads were built across the West.",

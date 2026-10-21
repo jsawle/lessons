@@ -181,3 +181,8 @@ footer.foot thead th{background:#111;color:#ccc}
 .sheet .sheetlabel{display:inline;font-weight:700;color:var(--link);margin:0}
 .sheet .sheetsteps{margin:.1rem 0 .4rem;padding-left:1.4rem}
 .sheet .sheetsteps li{margin:0}
+/* v3.1: rubric table and model answer in the teacher view */
+.tablewrap{overflow-x:auto;margin:0 0 1em}
+.tablewrap th[scope="row"]{text-align:left;white-space:nowrap;vertical-align:top}
+.tablewrap td{vertical-align:top;font-size:.92rem}
+.exemplar{border:1px solid var(--line,#D4D4D4);border-left:8px solid #35AC46;border-radius:4px;padding:.4em 1.2em;margin:0 0 1em;background:#fff}

@@ -10,7 +10,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "3.0";
+  var VERSION = "3.1";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
@@ -86,6 +86,7 @@
     ".mml thead th{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:#4A4A4A;background:#F3F3F3}",
     ".mml tr:last-child th,.mml tr:last-child td{border-bottom:0}",
     ".mml-cq{border:1px solid #D4D4D4;border-left:8px solid #007AC2;border-radius:4px;padding:1em 1.2em;margin:0 0 1em;background:#fff}",
+    ".mml-exemplar{border:1px solid #D4D4D4;border-left:8px solid #35AC46;border-radius:4px;padding:.6em 1.2em;margin:0 0 1em;background:#fff}",
     ".mml-cq .mml-q{font-size:1.3rem;font-weight:700;line-height:1.35;margin:.2em 0 0}",
     ".mml .mml-qs{list-style:none;padding:0;margin:0 0 1em;counter-reset:mmlq}",
     ".mml-qs>li{counter-increment:mmlq;position:relative;border:1px solid #D4D4D4;border-radius:4px;padding:.85em 1.1em .5em 3.4em;margin:0 0 .9em}",
@@ -207,6 +208,22 @@
           return '<td><span class="mml-ph">' + esc(columns[j]) + ": </span>" + c + "</td>";
         }).join("") + "</tr>";
       }).join("") + "</tbody></table></div>";
+  }
+  /* The shared rubric (site.json rubric) as a table: one row per criterion, one column per level. The first column is a
+     row header so a screen reader says the criterion with each cell. */
+  function rubricTable(site) {
+    var R = site.rubric || {}, levels = R.levels || [];
+    if (!R.criteria || !levels.length) return "";
+    return table("Rubric", ["Criterion"].concat(levels), R.criteria.map(function (c) {
+      return [esc(c.name)].concat(c.descriptors.map(function (d) { return t(d); }));
+    }), true);
+  }
+  function assessmentSection(site, lesson) {
+    var a = lesson.assessment;
+    if (!a) return "";
+    return '<div class="mml"><h2>Assessing the answer</h2><p class="mml-prose">One way to assess the answer to the compelling question: the rubric every lesson shares (four criteria, four levels), with this lesson\'s own line on what counts as map evidence, and a model answer at the top level. Use it as it is, adapt it, or use your own.</p>' +
+      '<p class="mml-prose"><span class="mml-k">Map evidence in this lesson</span>' + t(a.evidence) + "</p>" + rubricTable(site) +
+      '<h3>A model answer (level 4)</h3><div class="mml-exemplar">' + t(a.exemplar).split(/\n\n+/).map(function (x) { return '<p class="mml-prose">' + x + "</p>"; }).join("") + "</div></div>";
   }
   /* An in-page anchor. Ids start with the page's slug, because Hub can scroll to a same-named id when a
      link moves between pages (Esri bug BUG-000178430; the workaround is ids unique across pages). */
@@ -375,7 +392,7 @@
       ((lesson.resources || []).length ? "<h3>Further reading</h3><ul>" + lesson.resources.map(function (r) {
         return "<li>" + ext(r.url, esc(r.title)) + (r.source ? ' <span class="mml-muted">(' + esc(r.source) + ")</span>" : "") + "</li>";
       }).join("") + "</ul>" : "") +
-      '<h3>Answers</h3><p class="mml-prose">Where to find each answer on the map and what to accept are kept off this page, so it can be shared with students: <a href="/pages/' + esc(teacherSlug(lesson)) + '">answer notes</a> (web page) or <a href="' + sheetPlaceholder(lesson.id, "teacher") + '">Download Word (teacher notes)</a>.</p></div>');
+      '<h3>Answers</h3><p class="mml-prose">Where to find each answer on the map and what to accept are kept off this page, so it can be shared with students: <a href="/pages/' + esc(teacherSlug(lesson)) + '">answer notes</a> (web page) or <a href="' + sheetPlaceholder(lesson.id, "teacher") + '">Download Word (teacher notes)</a>.' + (lesson.assessment ? " The answer page also has a rubric for the answer to the compelling question and a model answer." : "") + "</p></div>");
 
     // How-to videos
     add('<div class="mml"><h2>How-to videos</h2><p class="mml-prose">Short videos on the MapMaker Educator Support Hub for the tools this lesson uses.</p><ul class="mml-cards">' +
@@ -424,6 +441,7 @@
     add('<div class="mml"><h2>Answer notes</h2><div class="mml-cq"><span class="mml-k">Compelling question</span><p class="mml-q">' + t(inq.compellingQuestion.en) + "</p></div>" +
       inq.questions.map(function (q, i) { return answerBlock(site, q, i); }).join("") +
       '<h3>Answering the compelling question</h3><p class="mml-prose">' + t(inq.final.teacher) + "</p></div>");
+    if (lesson.assessment) add(assessmentSection(site, lesson));
     add('<div class="mml"><h2>Standards</h2>' + standardsTable(site, lesson) + "</div>");
     add(footer(site, Object.assign({}, lesson, { kindOfPage: "teacher" })));
     return { slug: slug, kind: "teacher", lessonId: lesson.id, title: "Answer notes: " + lesson.title, summary: "Where to find each answer on the map and what to accept, for the MapMaker lesson " + MMR.plain(lesson.title) + ". For teachers.",
@@ -479,6 +497,7 @@
     add('<div class="mml"><h2>Ways to run a lesson</h2><ul class="mml-words">' + (teach.instructionalModels || []).map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" +
       (teach.materials ? '<h2>Materials</h2><p class="mml-prose">' + esc(teach.materials) + "</p>" : "") +
       '<h2>Preparing</h2><ul class="mml-prose">' + (teach.prep || []).map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div>");
+    if (site.rubric && site.rubric.criteria) add('<div class="mml"><h2>Assessing the answer to the big question</h2><p class="mml-prose">Every lesson ends with students answering the compelling question with evidence from the map. This rubric is one way to assess that answer; each lesson\'s answer page adds a line on what counts as map evidence for that map, and a model answer. Use it as it is, adapt it, or use your own.</p>' + rubricTable(site) + "</div>");
     add('<div class="mml"><h2>Help</h2><p class="mml-prose">Short how-to videos for every MapMaker tool are on the ' + ext(MMR.hubUrl(site, "/pages/how-to"), "MapMaker Educator Support Hub") + '. Each lesson page has a Report a problem button that tells us which lesson you mean.</p></div>');
     add(footer(site, null));
     return { slug: slug, kind: "about", title: H.aboutTitle || "How these lessons work", summary: "What every MapMaker lesson includes, how to prepare, and ways to run one.", tags: ["MapMaker", "Lessons"], layout: { sections: S } };

@@ -1,4 +1,4 @@
-/* MapMaker resource pages (lab): page renderer v3.0 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
+/* MapMaker resource pages (lab): page renderer v3.1 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
    standards in the hero; Vera link and a copyable AI prompt). Draws a lesson page, its teacher page (?view=teacher) or the catalogue from JSON files. */
 (function () {
   "use strict";
@@ -103,6 +103,14 @@
           return "<div><dt>" + (i + 1) + ". " + inline(q.title.en) + "</dt><dd>" + body + "</dd></div>";
         }).join("") + "</dl>" +
         '<div class="prose"><h3>Answering the compelling question</h3><p>' + inline(inq.final.teacher) + "</p></div></section>");
+      if (lesson.assessment && site.rubric && site.rubric.criteria) {
+        var R = site.rubric;
+        h.push('<section id="assess" aria-labelledby="as-h"><h2 id="as-h">Assessing the answer</h2><p class="prose">One way to assess the answer to the compelling question: the rubric every lesson shares (four criteria, four levels), with this lesson’s own line on what counts as map evidence, and a model answer at the top level. Use it as it is, adapt it, or use your own.</p>' +
+          '<p class="prose"><strong>Map evidence in this lesson:</strong> ' + inline(lesson.assessment.evidence) + "</p>" +
+          '<div class="tablewrap"><table><caption>Rubric</caption><thead><tr><th scope="col">Criterion</th>' + R.levels.map(function (l) { return '<th scope="col">' + esc(l) + "</th>"; }).join("") + "</tr></thead><tbody>" +
+          R.criteria.map(function (c) { return '<tr><th scope="row">' + esc(c.name) + "</th>" + c.descriptors.map(function (d) { return "<td>" + inline(d) + "</td>"; }).join("") + "</tr>"; }).join("") + "</tbody></table></div>" +
+          '<h3>A model answer (level 4)</h3><div class="prose exemplar">' + inline(lesson.assessment.exemplar).split(/\n\n+/).map(function (x) { return "<p>" + x + "</p>"; }).join("") + "</div></section>");
+      }
       h.push('<section id="misunderstandings" aria-labelledby="mu-h"><h2 id="mu-h">Common misunderstandings</h2>' + (tn.misconceptions && tn.misconceptions.length ? '<ul class="plain">' + tn.misconceptions.map(function (m) {
         return "<li><strong>“" + inline(m.claim) + "”</strong> " + inline(m.response) + "</li>";
       }).join("") + "</ul>" : "<p>None listed.</p>") + "</section>");

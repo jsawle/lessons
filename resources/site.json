@@ -1,15 +1,15 @@
 {
  "app": {
   "name": "MapMaker resource pages (lab)",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "parts": {
-   "Page renderer": "3.0",
-   "Word sheet builder": "1.6",
-   "Lesson file format": "1.6",
-   "Checker": "1.6",
+   "Page renderer": "3.1",
+   "Word sheet builder": "1.7",
+   "Lesson file format": "1.7",
+   "Checker": "1.7",
    "Vera knowledge builder": "1.4",
    "AI prompt builder": "1.1",
-   "Hub page builder": "3.0"
+   "Hub page builder": "3.1"
   }
  },
  "hubDemo": {
@@ -269,6 +269,57 @@
    "Where to find each answer on the map, and what to accept, are on a separate answer page and in the Word teacher notes, so the lesson page can be shared with students.",
    "Sketches on the map are not saved between sessions. Students who sketch should finish in one session or take a screenshot.",
    "Vera, the Support Hub's AI assistant, knows every lesson's map, layers and questions but not the answers. Each lesson page also has a prompt to paste into another AI tool, which lists the map's layers so the tool doesn't invent any."
+  ]
+ },
+ "rubric": {
+  "about": "Shared rubric for the answer to each lesson's compelling question. Four criteria, four levels; a lesson adds its own line about what counts as map evidence (lesson assessment.evidence). Shown on How these lessons work, each answer page and the Word teacher notes. Teachers can use it as it is, adapt it or ignore it.",
+  "levels": [
+   "1 Beginning",
+   "2 Developing",
+   "3 Secure",
+   "4 Strong"
+  ],
+  "criteria": [
+   {
+    "id": "claim",
+    "name": "Claim",
+    "descriptors": [
+     "No clear answer to the big question, or restates the question.",
+     "Gives an answer, but it is vague or only partly about the big question.",
+     "Gives a clear answer to the big question.",
+     "Gives a clear answer and says how far it holds (for example, where or when it does not)."
+    ]
+   },
+   {
+    "id": "evidence",
+    "name": "Map evidence",
+    "descriptors": [
+     "No evidence from the map, or evidence that is not on the map.",
+     "One piece of evidence from the map, or evidence that is not specific (no names, dates or numbers).",
+     "Specific evidence from at least two layers or places on the map: named features, dates, numbers or distances read from pop-ups, the legend or Measure.",
+     "Specific evidence from at least two layers or places, chosen to fit the claim, with the layer or feature named so a reader could find it."
+    ]
+   },
+   {
+    "id": "reasoning",
+    "name": "Geographic reasoning",
+    "descriptors": [
+     "Lists facts without connecting them to the answer.",
+     "Connects some evidence to the answer, but the link is not explained.",
+     "Explains how the evidence supports the answer, including where things happened and why there.",
+     "Explains where and why, and notes a pattern, a change over time or a connection between layers."
+    ]
+   },
+   {
+    "id": "accuracy",
+    "name": "Accuracy",
+    "descriptors": [
+     "Several facts do not match the map.",
+     "Mostly matches the map, with one or two mistakes.",
+     "Dates, places, winners, numbers and distances match the map.",
+     "Everything matches the map, and the answer says where on the map it came from."
+    ]
+   }
   ]
  },
  "licence": "The National Geographic Society and Esri make this content available under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence, except as noted. The licence excludes the National Geographic and Esri logos (the words National Geographic with the yellow border logo, and the Esri globe and letters) and any images included in the content. The logos and images may not be removed, altered or changed."

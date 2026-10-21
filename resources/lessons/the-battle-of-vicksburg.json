@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.6",
+  "formatVersion": "1.7",
   "id": "the-battle-of-vicksburg",
-  "contentVersion": "0.6.0",
+  "contentVersion": "0.7.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -335,6 +335,10 @@
       "source": "National Park Service"
     }
   ],
+  "assessment": {
+    "evidence": "Strong answers use the yellow Vicksburg pin on the Mississippi and the railroad east to the Jackson basemap label, the dark Key Places pins in order (Milliken's Bend to Edwards) with Measure from Milliken's Bend to Bruinsburg Bend (about 33 miles), and dates from the Civil War Battlefields pop-ups (Port Gibson, May 1, 1863; Vicksburg, May 18, 1863 – July 4, 1863; Port Hudson, to July 9, 1863).",
+    "exemplar": "The Union needed Vicksburg because it controlled the Mississippi River and a railroad into the Confederacy, and Grant took it by marching around the city to attack from the east. On The Battle of Vicksburg bookmark the yellow pin sits on a bend of the Mississippi, and zoomed in, the Railroads 1826 to 1911 line runs east to the Jackson label on the basemap, so it was a river stronghold and a rail junction. The dark Key Places pins show Grant's route: Milliken's Bend, New Carthage and Hard Times on the Louisiana bank, then Bruinsburg Bend and Edwards on the east side. By Measure, Milliken's Bend to Bruinsburg Bend is about 33 miles, so Grant crossed well south instead of attacking straight across. With Civil War Battlefields on, the pop-up dates run from Port Gibson, May 1, 1863, through Raymond, Jackson and Champion Hill to Big Black River Bridge, May 17, and the Vicksburg pop-up gives May 18, 1863 – July 4, 1863, a siege of about six weeks. Zoomed out, the Port Hudson pop-up ends July 9, 1863, and the basemap shows Louisiana, Arkansas and Texas west of the river, so the Union held the whole river and those states were cut off. One limit is that the railroad layer includes lines built after the war."
+  },
   "studentSupport": {
     "beforeYouStart": {
       "en": "In 1862, Union forces captured New Orleans and Memphis, two cities on the Mississippi River. Between the two, the Confederates still held part of the river, including the city of Vicksburg, Mississippi. In spring 1863, Union General Ulysses S. Grant set out to capture it.",

@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.6",
+  "formatVersion": "1.7",
   "id": "we-the-people-1787-1791",
-  "contentVersion": "0.5.0",
+  "contentVersion": "0.6.0",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -507,6 +507,10 @@
       "source": "U.S. Census Bureau"
     }
   ],
+  "assessment": {
+    "evidence": "Strong answers use the House seats in 1793 labels, legend and pop-ups (Virginia VA: 19, Delaware DE: 1, and 2 senators for every state), the three-fifths lines of a pop-up (Virginia 19 seats, 22 if counted in full, 13 if not counted), and the vote line of the Ratifying the Constitution pop-ups (Rhode Island 34–32 on May 29, 1790; New York 30–27; Massachusetts 187–168).",
+    "exemplar": "The Constitution balanced large and small states by giving each state House seats by population but the same two senators, and it came very close to being rejected in some of the biggest states. In the House seats in 1793 layer, the label and the darkest legend class show Virginia with 19 seats, the most, while the palest class shows Delaware with only 1, yet the pop-up for each says plus 2 senators, like every state. That suited the large states in the House and protected the small ones in the Senate. The Virginia pop-up also shows the three-fifths clause at work: 19 seats, but only 13 if enslaved people had not been counted, so slaveholding states gained seats for people who could not vote. In the Ratifying the Constitution layer, the vote line of the pop-ups shows how close it was: Rhode Island 34 to 32 on May 29, 1790, New York 30 to 27 on July 26, 1788, and Massachusetts 187 to 168 on February 6, 1788. North Carolina even has two pies, because its first convention at Hillsborough in 1788 did not ratify and a second one did in November 1789. The pattern is that a small state like Delaware ratified first and unanimously, 30 to 0 on December 7, 1787, while the closest votes came in big states, so the balance held, but only just."
+  },
   "studentSupport": {
     "beforeYouStart": {
       "en": "In 1787, delegates from twelve states met in Philadelphia and wrote the Constitution. Large and small states disagreed about how many votes each should have in Congress. The Constitution would take effect only when nine states had ratified it, each at a special convention.",
