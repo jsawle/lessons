@@ -1,5 +1,5 @@
 # MapMaker lessons on the Support Hub (questions, layers and sources)
-Built 2026-10-15 from the lesson files by the MapMaker resource pages, Vera knowledge builder 1.3. Do not edit by hand; edit the lesson files and rebuild.
+Built 2026-10-21 from the lesson files by the MapMaker resource pages, Vera knowledge builder 1.3. Do not edit by hand; edit the lesson files and rebuild.
 
 How to use this file: each lesson below has its own MapMaker map. When a teacher names one of these lessons (by title or lesson ID) and asks for new or different questions, base every question only on the bookmarks, layers and pop-up content listed for that lesson, and use bookmark and layer names exactly as written. If a request needs information that lesson's map does not show, say so plainly instead of inventing it. Use only the links listed for that lesson. The answers to the lessons' questions are not in this file: do not give them, and do not write student material that contains them.
 
@@ -37,7 +37,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** TX 8.4(C); TX 8.10(A); TX 8.10(C); FL SS.8.A.3.6; C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.5.1, updated 2026-10-15.
+**Lesson content version:** 0.5.2, updated 2026-10-21.
 
 ### Roads, Trails, and Rails West
 **Lesson ID:** roads-trails-and-rails-west
@@ -80,7 +80,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Description:** Compare free and slave states in 1850, follow the routes of the internal slave trade south, and trace the Underground Railroad north to freedom.
 **Subjects:** US History, Geography, Civics, Social Studies.
 **Learning objectives (students will):**
-- Count the free and slave states on the 1850 map using the four legend groups, and locate the dividing line in the East.
+- Use the legend to tell free states and slave states apart, including those set by compromise, and locate the eastern line between them.
 - Read the year each state became free or slave from its pop-up, and the year of the Missouri Compromise Line from its pop-up.
 - Explain why Missouri, a slave state lying mostly north of the Missouri Compromise Line, was an exception.
 - Trace the internal slave-trade routes from Virginia to the Gulf coast and the Underground Railroad routes north to the Great Lakes and Canada, naming states and towns from the map.
@@ -97,7 +97,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **How the student sheet explains the map's symbols:** States and territories are shaded brown if they were free and green if they allowed slavery; the paler shades mean free, or slave, because of a compromise. Open the legend to see the four groups. Click a state to read its name and year in the pop-up. A gray dashed line marks the Missouri Compromise Line; click it for its pop-up. Solid black lines are internal routes of the slave trade. They have no arrows. Dashed and dotted lines in the same layer show sea routes and the voyages of two ships, the Amistad and the Creole. Orange lines are approximate Underground Railroad routes. Zoom in to see the towns along them: orange dots in the United States, black dots in Canada.
 **Compelling question:** How did slavery divide the United States by 1850?
 **Questions already in this lesson:**
-1. Free states and slave states Open the legend and find the four groups for US States and Territories 1850. Count the states shaded as Free states and as Slave states; click a state to read its name. Then click two states to read what year each became free or slave. Where is the line between free and slave states in the East?
+1. Free states and slave states Open the legend and find the four groups for US States and Territories 1850. Which groups are free and which allow slavery? Click a state in each group to read its name, and click two states to read what year each became free or slave. Where is the line between free and slave states in the East?
 2. The Missouri Compromise Find the Missouri Compromise Line (the gray dashed line) and click it to read its pop-up. What year was it enacted? Slavery was banned north of it in the Louisiana Territory. Which slave state lies mostly north of the line, and why does that matter?
 3. The internal slave trade In Map layers, turn off Underground Railroad Approximate Routes so the solid black lines of Internal Routes of the US Slave Trade stand out. Click the states where the lines begin and where they come together to read their names. Where do the lines reach the coast? The lines have no arrows: from the pattern and what you have learned, which way were enslaved people forced to move?
 4. Routes to freedom Open the Illinois, Indiana, and Ohio bookmark. Follow the orange Underground Railroad routes north from the Ohio River, and zoom in to read the names of the towns along them. Where do the routes lead? Why do you think many keep going past the free states?
@@ -107,16 +107,16 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** FL SS.8.A.5.2; TX 8.10(A); C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.4.1, updated 2026-10-15.
+**Lesson content version:** 0.5.0, updated 2026-10-21.
 
 ### Civil War Battlefields
 **Lesson ID:** civil-war-battlefields
 **Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The Civil War. **Time:** 45 minutes, or 10–15 per question.
 **MapMaker map:** [Open Civil War Battlefields in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=7a06e8e2818941f99a3d40bb32e08118)
-**Description:** See how the United States split in 1861, compare the railroads of the North and the South, and find where the war's battles were fought.
+**Description:** See how the United States was divided by 1863, compare the railroads of the North and the South, and find where the war's battles were fought.
 **Subjects:** US History, Geography, Civics, Economics.
 **Learning objectives (students will):**
-- Sort the states on the 1863 map into those that seceded before Fort Sumter, those that seceded after, and the slave states that stayed in the Union, using the legend.
+- Sort the states on the 1863 map into those that seceded before Fort Sumter, those that seceded after, and the slave states that stayed in the Union, using the legend, and notice that the layer shows 1863, so West Virginia appears as a Union state that did not exist in 1861.
 - Locate Washington, D.C., identify the two states that border it, and explain from their legend shades why Maryland staying in the Union mattered.
 - Compare the density of railroads north and south of the Boundary between Union and Confederacy and say why that difference mattered in a war.
 - Find battlefields in Virginia, Maryland and Pennsylvania, read their names and sizes from the pop-ups, and identify which were fought in Union states.
@@ -131,9 +131,9 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 - Civil War Battlefields: Battle locations as diamonds colored by result (Union victory, Confederate victory, Inconclusive) and sized by casualties; gray circles are battles with no result recorded (Other). Each pop-up gives the battle's name and dates and a picture; it does not give the result. The diamonds disappear when you zoom in very close; source: American Battlefield Trust.
 **What students read before they start:** In November 1860, Abraham Lincoln was elected president. He opposed the spread of slavery into the western territories, and Southern slave states began to leave the Union to form the Confederate States of America. In April 1861, Confederate forces attacked Fort Sumter, a Union fort in South Carolina, and the Civil War began.
 **How the student sheet explains the map's symbols:** States are shaded by side in 1863: shades of blue for the Union and shades of brown for the Confederacy; open the legend to see which shade means which group. State names are written on the map. A white dashed line marks the boundary between the two sides. Thin dark gray lines are railroads built by 1863. Diamonds mark battles, colored by who won: use the legend to read the result, because a battle's pop-up gives its name and dates but not the result. White diamonds are Inconclusive and gray circles are Other. Bigger diamonds mean more soldiers were killed, wounded, captured or missing. Tan shaded areas show the land each battlefield covered, and areas with diagonal stripes show where the fighting was heaviest.
-**Compelling question:** How did the geography of a divided nation shape the Civil War?
+**Compelling question:** How did the geography of a divided nation shape the Civil War, as the map shows the country in 1863?
 **Questions already in this lesson:**
-1. A nation divided Open the legend and find the groups for U.S. Civil War States and Territories (1863). Match each state's shade to its group. Which states left the Union before the attack on Fort Sumter in April 1861? Which left after? Which slave states stayed in the Union?
+1. A nation divided Open the legend and find the groups for U.S. Civil War States and Territories (1863). Match each state's shade to its group. Which states left the Union before the attack on Fort Sumter in April 1861? Which left after? Which slave states stayed in the Union? The layer shows the country in 1863: which state on it did not exist in 1861?
 2. The border states Zoom in to Washington, D.C., on the east coast between Maryland and Virginia. Which two states border it? Check each one's shade in the legend. What would have happened to the capital if Maryland had left the Union?
 3. Railroads, North and South Compare the railroads (thin dark gray lines) north and south of the white dashed boundary between the Union and the Confederacy. In Map layers you can turn U.S. Civil War States and Territories (1863) off to see the lines better. Which side had more railroads? Why would railroads matter in a war?
 4. Where were the battles? Zoom to Virginia, then to Maryland and Pennsylvania. Click the tan shaded areas of two battlefields to read their names. Where were most battles fought? Name a battle fought in a state the legend shows as a Union state.
@@ -143,7 +143,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** FL SS.8.A.5.4; TX 8.10(A); TX 8.10(C); C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.4.1, updated 2026-10-15.
+**Lesson content version:** 0.4.2, updated 2026-10-21.
 
 ### The Battle of Vicksburg
 **Lesson ID:** the-battle-of-vicksburg
@@ -192,7 +192,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 - Use population and seat figures from at least two states as evidence for how the three-fifths clause shifted power in the House.
 **Bookmarks in this map:** The states in 1790; New England and New York; The South.
 **Layers in this map (exact name: what students see; source):**
-- Population in 1790: free and enslaved: A pie on each state: free people (blue) and enslaved people (orange-red) in the 1790 census, with bigger pies for more people. Each pop-up, titled with the state's name, gives the total, the number enslaved and the percentage, the number counted under the three-fifths clause, the state's House seats in 1793, its two senators, and the seats it would have had if enslaved people had been counted in full or not at all; source: 1790 census figures as tabulated on Wikipedia, checked against the 1793 House seats; seats from the National Archives; ratio from the U.S. Census Bureau; state outlines from Natural Earth.
+- Population in 1790: free and enslaved: A pie on each state: free people (blue) and enslaved people (orange-red) in the 1790 census, with bigger pies for more people. Each pop-up, titled with the state's name, gives the total, the number enslaved and the percentage, the number counted under the three-fifths clause, the state's House seats in 1793, its two senators, and the seats it would have had if enslaved people had been counted in full or not at all; source: 1790 census: U.S. Census Bureau, Return of the Whole Number of Persons (1791), checked against the 1793 House seats; seats: Apportionment Act of April 14, 1792 (National Archives); ratio: U.S. Census Bureau; state outlines: Natural Earth. The layer item's own credits still cite Wikipedia's tabulation; the figures were verified against the Census Bureau..
 - House seats in 1793 (off when the map opens): States shaded from pale to dark blue by their House seats under the apportionment act of 14 April 1792 (legend: 1 to 2, 4 to 6, 7 to 10, 13 to 19 seats), labeled with the state's abbreviation and seats. Same pop-up as the population layer; source: National Archives.
 - House seats today (2020 apportionment) (off when the map opens): Each state's House seats after the 2020 census; source: U.S. Census Bureau (MapMaker catalogue).
 - Ratifying the Constitution, 1787–1791 (off when the map opens): A pie where each state's ratifying convention met: votes to ratify (blue) and against (orange-red), with bigger pies for more delegates. Labels give the state and the order it ratified (DE 1 to VT 14). Each pop-up gives the result, date and vote, where the convention met, and a note. North Carolina has two pies: its first convention, at Hillsborough in 1788 (label NC (1788)), did not ratify; source: Center for the Study of the American Constitution, University of Wisconsin–Madison (votes, dates and meeting places).
@@ -210,7 +210,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** TX 8.4(D); TX 8.17(A); FL SS.8.A.3.10; FL SS.8.A.3.11; C3 D2.Civ.5.6-8; C3 D2.Geo.2.6-8.
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.3.1, updated 2026-10-15.
+**Lesson content version:** 0.3.2, updated 2026-10-21.
 
 ### Rights and Responsibilities Where We Live
 **Lesson ID:** rights-and-responsibilities-where-we-live
@@ -226,7 +226,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 - Use the places they pinned as evidence to explain where in their community rights and responsibilities are exercised.
 **Bookmarks in this map:** The United States.
 **Layers in this map (exact name: what students see; source):**
-- Congressional districts (119th Congress): District boundaries for the 119th Congress (2025–2027) as blue outlines. Each pop-up reads "[Representative Name] ([Party]) represents [State] Congressional District [number]"; source: Esri; U.S. Census Bureau; Clerk of the U.S. House of Representatives (MapMaker catalogue).
+- Congressional districts (119th Congress): District boundaries for the 119th Congress (2025–2027) as blue outlines, current as of the layer's last update (see its item page); representatives change at elections and in special elections. Each pop-up reads "[Representative Name] ([Party]) represents [State] Congressional District [number]"; source: Esri; U.S. Census Bureau; Clerk of the U.S. House of Representatives (MapMaker catalogue).
 - National Register of Historic Places (off when the map opens): Places on the National Register as diamonds colored by type: building, structure, district, site or object. They appear when you zoom in. Each pop-up gives the address, city, county and state, and a link to the National Archives record, but not the place's name; read the name from the basemap label or the National Archives record; source: National Park Service (MapMaker catalogue).
 **What students read before they start:** In 1791, ten amendments, known as the Bill of Rights, were added to the Constitution. They protect rights such as freedom of speech, religion and the press, the right to gather peacefully, and the right to a fair trial. Citizens also have responsibilities to their community and their country.
 **How the student sheet explains the map's symbols:** The Topographic basemap has place names, and labels public buildings when you zoom in close. Blue lines are the boundaries of congressional districts for the 119th Congress (2025–2027); click inside one to see who represents it. National Register of Historic Places is off when the map opens: turn it on in Map layers and zoom in to see its diamonds, colored by type of place (see the legend). Its pop-ups give an address but not a name. Put your pins on public places, not homes. Sketches are not saved when you close the map.
@@ -242,13 +242,13 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** TX 8.19(B); TX 8.19(C); FL SS.8.CG.2.5; C3 D2.Civ.2.6-8; C3 D2.Civ.8.6-8; C3 D2.Geo.1.6-8.
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.3.1, updated 2026-10-15.
+**Lesson content version:** 0.3.2, updated 2026-10-21.
 
-### Presidential Elections, 1796 and 1800
+### Political Parties and Federal Power, 1796–1819
 **Lesson ID:** presidential-elections-1796-1800
 **Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The early republic. **Time:** 45 minutes, or 10–15 per question.
-**MapMaker map:** [Open Presidential Elections, 1796 and 1800 in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=6173219d9cd84812bcd4fed859b2c182)
-**Description:** Compare how each state's electors voted in 1796 and 1800, see which states changed sides, and find two Supreme Court cases that shaped the new government.
+**MapMaker map:** [Open Political Parties and Federal Power, 1796–1819 in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=6173219d9cd84812bcd4fed859b2c182)
+**Description:** Compare how each state's electors voted in 1796 and 1800, see which states changed sides, and find two Supreme Court cases that shaped the new government. The elections of 1796 and 1800 show the first party divide; two Supreme Court cases, in 1803 and 1819, show how the new federal government's power was tested.
 **Subjects:** US History, Government, Civics, Geography.
 **Learning objectives (students will):**
 - Use the pies and legend of the Election of 1796 layer to describe which regions voted mostly for Adams and which for Jefferson, and click the split states for their numbers.
@@ -275,7 +275,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** TX 8.5(D); TX 8.18(A); TX 8.18(B); FL SS.8.A.3.13; FL SS.8.A.3.14; C3 D2.Civ.4.6-8.
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.3.1, updated 2026-10-15.
+**Lesson content version:** 0.4.0, updated 2026-10-21.
 
 ### The Louisiana Purchase and the Corps of Discovery, 1803–1806
 **Lesson ID:** louisiana-purchase-1803-1806
@@ -292,25 +292,25 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Bookmarks in this map:** The Louisiana Purchase; Up the Missouri; Across the Rockies to the Pacific.
 **Layers in this map (exact name: what students see; source):**
 - Territorial acquisitions to 1803: The land Britain gave up in 1783 (green) and the Louisiana Purchase of 1803 (yellow). Edges of the purchase that were settled later are in other colors or stripes: with Britain in 1818, and with Texas in 1845 and the Mexican Cession in 1848. Each pop-up gives a short note; source: MapMaker catalogue (US territorial acquisitions).
-- Biomes (off when the map opens): Today's biomes, shaded by type; each pop-up names the biome (first line), the realm and the ecoregion; source: RESOLVE Ecoregions 2017, via Esri (MapMaker catalogue).
-- United States Watersheds (off when the map opens): River basins outlined in brown, from the 22 largest regions (Hydrologic Unit Code 2s, such as Ohio Region and Missouri Region) down to small watersheds as you zoom in; each pop-up names the basin and lists the states it touches; source: U.S. Geological Survey Watershed Boundary Dataset, via Esri (MapMaker catalogue).
+- Biomes (off when the map opens): Today's biomes, shaded by type; each pop-up names the biome (first line), the realm and the ecoregion (a modern reference layer, not a historical reconstruction); source: RESOLVE Ecoregions 2017, via Esri (MapMaker catalogue).
+- United States Watersheds (off when the map opens): River basins outlined in brown, from the 22 largest regions (Hydrologic Unit Code 2s, such as Ohio Region and Missouri Region) down to small watersheds as you zoom in; each pop-up names the basin and lists the states it touches (a modern reference layer, not a historical reconstruction); source: U.S. Geological Survey Watershed Boundary Dataset, via Esri (MapMaker catalogue).
 - Lewis and Clark National Historic Trail: The National Park Service's line of the expedition's route, about 4,900 miles from Pittsburgh to the mouth of the Columbia River. No pop-up: the line has no information to click; source: National Park Service, Lewis and Clark National Historic Trail.
 - Lewis and Clark campsites (approximate): Approximate places where the Corps of Discovery camped, 1803–1806. No pop-up: the symbols have no information to click; source: National Park Service, from Robert Bergantino, Montana Bureau of Mines and Geology.
 **What students read before they start:** In 1803 the United States bought France's claim to a huge area west of the Mississippi River. Native nations lived on and governed most of that land; the National Park Service says the expedition met more than 50 Tribal Nations. President Thomas Jefferson sent the Corps of Discovery, led by Meriwether Lewis and William Clark, to explore it and look for a water route to the Pacific Ocean. The expedition set out in 1803 and returned in 1806.
 **How the student sheet explains the map's symbols:** The map has no place names: click an area to see its name. Use the legend: green is the land Britain gave up to the United States in 1783; yellow is the Louisiana Purchase of 1803. Edges of the purchase settled later have other colors or stripes. A purple line follows the Lewis and Clark National Historic Trail, and small symbols mark the Corps' approximate campsites; the line and the symbols have no pop-ups. United States Watersheds and Biomes are off when the map opens and show today's landscape. Watersheds shows larger regions when you zoom out and smaller ones when you zoom in.
-**Compelling question:** What did the Louisiana Purchase add to the United States, and whose land was it?
+**Compelling question:** What did the Louisiana Purchase add to the United States, and why did the Mississippi River matter so much?
 **Questions already in this lesson:**
 1. A bigger country Open The Louisiana Purchase bookmark and use the legend. Compare the yellow Louisiana Purchase with the green land of the United States in 1783. About how much bigger did the country become? Click the Louisiana Purchase: how much land was it, and what did it cost? Size: about ____ million acres. Price: $____ million.
 2. Why New Orleans? In Map layers, turn on United States Watersheds. Click inside the two large brown outlines along the Ohio River and the Missouri River. Which river regions are they? Zoom out and follow the rivers on the map: into which big river do they flow, and which city sits near its mouth? In 1800 farmers west of the Appalachians sent their crops to market by river. Why did control of New Orleans matter to them?
 3. Up the Missouri Open the Up the Missouri bookmark and follow the trail line and the campsite symbols up the Missouri River. In Map layers, turn off United States Watersheds and turn on Biomes, then click the shading along the route. Which biome covers the Great Plains (the first line of the pop-up)? Look at where the campsites sit: why do you think the Corps traveled along rivers?
 4. Across the Rockies Open the Across the Rockies to the Pacific bookmark. Where does the trail line leave the yellow Louisiana Purchase? Was the Pacific coast part of it? Zoom out and use Measure to find the straight-line distance from the trail's eastern end, at Pittsburgh, Pennsylvania (where the Ohio River begins), to its western end on the Pacific coast. Straight-line distance: ________ miles. The trail itself is about 4,900 miles long.
-**Closing reflection already in this lesson:** What did the map show you about the Louisiana Purchase that you might not have noticed from reading alone?
+**Closing reflection already in this lesson:** The United States bought this land from France. Before you start says the Corps of Discovery met more than 50 Tribal Nations along the way. Whose land was it, and what does the map leave out?
 **Answers:** not in this file. The answers are on the lesson's teacher page, for teachers only; do not give answers to the questions above, and do not write student material that contains them.
 **Key words:** Louisiana Purchase, Corps of Discovery, expedition, watershed, river basin, biome, Continental Divide, Tribal Nation.
 **Standards:** TX 8.6(B); TX 8.10(A); TX 8.10(C); FL SS.8.A.3.14; FL SS.8.G.1.2; C3 D2.Geo.2.6-8.
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.3.1, updated 2026-10-15.
+**Lesson content version:** 0.4.0, updated 2026-10-21.
 
 ### The War of 1812 and the Monroe Doctrine, 1807–1823
 **Lesson ID:** war-of-1812-and-monroe-doctrine
@@ -330,20 +330,20 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 - Land Spain gave up in 1819 (off when the map opens): Land Spain gave up in the Adams–Onís Treaty, including East and West Florida (green). Each pop-up gives a short note; source: MapMaker catalogue (US territorial acquisitions).
 - Battlefield Boundaries: War of 1812: The land each battlefield covered (tan) and its core area (lighter tan). Each pop-up gives the battle and its size in acres; source: National Park Service, American Battlefield Protection Program.
 - Adams–Onís Treaty line, 1819 (off when the map opens): The 1819 boundary with Spain as a pink dashed line in seven parts, drawn from the treaty's description and approximate. Each pop-up describes its part; source: Treaty text from the Avalon Project, Yale Law School; drawn on Natural Earth rivers.
-- Battles of the War of 1812: 52 battles from 1811 to 1815 as diamonds: blue for an American victory, red for a British victory, gray if inconclusive; bigger diamonds mean more casualties. Each pop-up gives the dates, the victor, total casualties, a casualties chart and a short account. The layer calls every opponent of the United States British, including the Red Stick Creeks; source: American Battlefield Trust (War of 1812 Battles map).
+- Battles of the War of 1812: 52 battles from 1811 to 1815 as diamonds: blue for an American victory, red for a British victory, gray if inconclusive; bigger diamonds mean more casualties. Each pop-up gives the dates, the victor, total casualties, a casualties chart, the leaders on each side and a short account. The legend labels every opponent of the United States as British, but some battles were fought against Native nations: Tippecanoe (the Shawnee-led confederacy), Fort Mims and Horseshoe Bend (Red Stick Creeks). The pop-up's leaders and story say who fought; source: American Battlefield Trust (War of 1812 Battles map).
 - Latin American independence and US recognition (off when the map opens): Ten Latin American nations, labeled with the year of independence: blue circles if the United States recognized them by 1824, orange diamonds if it recognized them later (1826 to 1862). Each pop-up gives the capital, today's countries, independence and recognition; source: Office of the Historian, U.S. Department of State; Library of Congress country studies.
 **What students read before they start:** In the early 1800s Britain and France were at war, and both seized American ships. British warships also forced sailors off American ships into the Royal Navy, and Britain supported Native nations resisting American settlement. In June 1812 the United States declared war on Britain.
-**How the student sheet explains the map's symbols:** The map has no place names: click a feature to see its name. Pink shading shows the United States in 1800. Diamonds mark battles; use the legend: blue for an American victory, red for a British victory, gray if neither side won; bigger diamonds mean more casualties. Each battle pop-up gives the dates, the victor and the casualties. Tan shading shows battlefield land. Three layers are off when the map opens: the land Spain gave up in 1819 (green), the treaty line (pink dashes, in seven parts) and the Latin American nations, shown as blue circles if the United States recognized them by 1824 and orange diamonds if later.
+**How the student sheet explains the map's symbols:** The map has no place names: click a feature to see its name. Pink shading shows the United States in 1800. Diamonds mark battles; use the legend: blue for an American victory, red for a British victory, gray if neither side won; bigger diamonds mean more casualties. The legend says British for every opponent, but some battles were fought against Native nations: the pop-up's leaders and story tell you who fought. Each battle pop-up gives the dates, the victor and the casualties. Tan shading shows battlefield land. Three layers are off when the map opens: the land Spain gave up in 1819 (green), the treaty line (pink dashes, in seven parts) and the Latin American nations, shown as blue circles if the United States recognized them by 1824 and orange diamonds if later; the pop-up gives the exact date.
 **Compelling question:** How did the War of 1812 and the years after it change the United States' place in North and South America?
 **Questions already in this lesson:**
 1. Where was the war fought? Open The War of 1812 bookmark and click some diamonds in each group. In which three areas was most of the fighting?
 2. The biggest battles Click the three biggest diamonds. Where and when was each battle fought, and who won? The peace treaty was signed at Ghent, in Europe, on December 24, 1814. Which big battle came after it?
 3. Florida and a new border Open The 1819 boundary bookmark. Turn on Land Spain gave up in 1819 and Adams–Onís Treaty line, 1819, and click the green land and each part of the pink dashed line. What did the United States gain from Spain? Which rivers and lines of latitude and longitude does the new border follow?
-4. New nations and the Monroe Doctrine Open the Latin America in 1825 bookmark and turn on Latin American independence and US recognition. Click the blue circles: which nations had the United States recognized before President Monroe's message of December 2, 1823? Why might Monroe have warned European powers to stay out of the Americas?
+4. New nations and the Monroe Doctrine Open the Latin America in 1825 bookmark and turn on Latin American independence and US recognition. Click the blue circles and read each recognition date in the pop-up: which nations had the United States recognized before President Monroe's message of December 2, 1823? (Blue means recognized by 1824, so check the date.) Why might Monroe have warned European powers to stay out of the Americas?
 **Closing reflection already in this lesson:** What did the map show you about the War of 1812 and its results that you might not have noticed from reading alone?
 **Answers:** not in this file. The answers are on the lesson's teacher page, for teachers only; do not give answers to the questions above, and do not write student material that contains them.
 **Key words:** impressment, blockade, Treaty of Ghent, cession, boundary, recognition, Monroe Doctrine, independence.
 **Standards:** TX 8.5(E); TX 8.5(F); FL SS.8.A.4.1; C3 D2.His.1.6-8; C3 D2.Geo.2.6-8.
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.3.1, updated 2026-10-15.
+**Lesson content version:** 0.3.2, updated 2026-10-21.
