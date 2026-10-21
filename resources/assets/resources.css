@@ -170,3 +170,9 @@ footer.foot thead th{background:#111;color:#ccc}
 .sq h3 .chip{font-size:.75rem;vertical-align:middle;margin-left:.3rem}
 .sq .label{font-size:.75rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-2);font-weight:700;margin:.4rem 0 .1rem}
 .sq .steps{margin:0 0 .5rem;padding-left:1.4rem;font-size:.97rem}
+
+/* 2.9: map picture in the hero */
+.herogrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(16rem,22rem);gap:1rem 2rem;align-items:start}
+.pic img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#fff}
+.pic{text-decoration:none;font-size:.85rem}
+@media (max-width:760px){.herogrid{grid-template-columns:1fr}.pic{max-width:22rem}}

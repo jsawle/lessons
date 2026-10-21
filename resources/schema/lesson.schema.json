@@ -195,6 +195,33 @@
               }
             }
           }
+        },
+        "image": {
+          "type": "object",
+          "required": [
+            "url",
+            "alt"
+          ],
+          "properties": {
+            "url": {
+              "type": "string",
+              "pattern": "^https://"
+            },
+            "alt": {
+              "$ref": "#/$defs/text"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "preview": {
+              "type": "boolean",
+              "description": "True when the picture is a stand-in (the item thumbnail) rather than a screenshot of the map as it opens."
+            }
+          },
+          "description": "Optional picture of the map: an https URL with alt text. Best is a screenshot of the map as it opens, about 1200 x 675, in resources/assets/screenshots on GitHub Pages; preview: true marks a stand-in such as the web map item's thumbnail."
         }
       }
     },

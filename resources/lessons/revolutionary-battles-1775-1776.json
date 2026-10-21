@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.5",
   "id": "revolutionary-battles-1775-1776",
-  "contentVersion": "0.6.0",
+  "contentVersion": "0.6.1",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -24,6 +24,11 @@
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "bda07736a1b9425ea19fdde282088bd6",
+    "image": {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/bda07736a1b9425ea19fdde282088bd6/info/thumbnail/thumbnail1787773552250.png",
+      "alt": "Preview of the 1775–1776 Revolutionary Battles map",
+      "preview": true
+    },
     "bookmarks": [
       "Massachusetts"
     ],

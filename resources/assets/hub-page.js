@@ -10,7 +10,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "2.8";
+  var VERSION = "2.9";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
@@ -50,6 +50,11 @@
     ".mml-hero{background:#F3F3F3;border-top:4px solid #007AC2;border-radius:4px;padding:26px 24px 18px}",
     ".mml-crumbs{font-size:.95rem;color:#4A4A4A}",
     ".mml-summary{font-size:1.15rem;max-width:46rem}",
+    ".mml-herogrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(16rem,22rem);gap:1.2em 2em;align-items:start}",
+    ".mml-pic img{display:block;width:100%;height:auto;border:1px solid #D4D4D4;border-radius:4px;background:#fff}",
+    ".mml .mml-piclink{display:block;text-decoration:none}",
+    ".mml-pic p{font-size:.85rem;margin:.3em 0 0}",
+    "@media (max-width:760px){.mml-herogrid{grid-template-columns:1fr}.mml-pic{max-width:22rem}}",
     ".mml .mml-facts{list-style:none;padding:0;margin:.4em 0 1em;display:flex;flex-wrap:wrap;gap:.4em 1.8em}",
     ".mml-facts li{display:flex;flex-direction:column;margin:0}",
     ".mml-k{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.07em;color:#4A4A4A;font-weight:700}",
@@ -308,12 +313,13 @@
     var mm = MMR.mapmakerUrl(site, lesson.map.webmapId);
     function add(html) { S.push(section([mdCard(slug + ":" + n, html)])); n++; }
 
-    // Hero: what the lesson is, its standards, and the four things a teacher does with it.
-    var gc = classroomButton(site, mm);
+    // Hero: what the lesson is, its standards, the things a teacher does with it, and a picture of the map.
+    var gc = classroomButton(site, mm), pic = MMR.mapImage(site, lesson);
     add("<style>" + CSS + classroomCss(site) + "</style>" + '<div class="mml mml-hero"><p class="mml-crumbs"><a href="' + lessonsPath(site) + '">Lessons</a> › ' + esc(lesson.course) + " › " + esc(lesson.unit) + "</p>" +
-      "<h1>" + esc(lesson.title) + '</h1><p class="mml-summary">' + t(lesson.summary) + "</p>" + factsList(site, lesson) +
+      "<h1>" + esc(lesson.title) + '</h1><div class="mml-herogrid"><div><p class="mml-summary">' + t(lesson.summary) + "</p>" + factsList(site, lesson) +
       '<p class="mml-actions">' + ext(mm, "Open in MapMaker", "mml-btn mml-primary") + " " + (gc ? gc + " " : "") +
-      jump(slug, "student-activity", "Student sheet") + " " + jump(slug, "teacher-notes", "Teacher notes") + "</p></div>");
+      jump(slug, "student-activity", "Student sheet") + " " + jump(slug, "teacher-notes", "Teacher notes") + "</p></div>" +
+      (pic ? '<div class="mml-pic">' + ext(mm, '<img src="' + esc(pic.url) + '" alt="' + esc(pic.alt) + '" width="' + pic.width + '" height="' + pic.height + '">', "mml-piclink") + '<p class="mml-muted">' + (pic.own ? "The map as it opens." : "Map preview; open it in MapMaker to explore.") + "</p></div>" : "") + "</div></div>");
 
     // About this map (the team's known-issues notes stay in the lesson file and the lab mock-up, not here)
     add('<div class="mml"><h2>About this map</h2><p class="mml-prose">Each layer names its source, so you can check where the information comes from.</p>' +

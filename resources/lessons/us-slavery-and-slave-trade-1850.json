@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.5",
   "id": "us-slavery-and-slave-trade-1850",
-  "contentVersion": "0.6.0",
+  "contentVersion": "0.6.1",
   "status": "draft",
   "updated": "2026-10-21",
   "reviewed": null,
@@ -28,6 +28,11 @@
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "819f60a5a3344d958d24f505849abaaa",
+    "image": {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/819f60a5a3344d958d24f505849abaaa/info/thumbnail/ago_downloaded.png",
+      "alt": "Preview of the US Slavery and Slave Trade, 1850 map",
+      "preview": true
+    },
     "bookmarks": [
       "Illinois, Indiana, and Ohio"
     ],
