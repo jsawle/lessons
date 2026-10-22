@@ -1,0 +1,196 @@
+{
+  "persona": "T1",
+  "lessons": {
+    "revolutionary-battles-1775-1776": {
+      "findings": [
+        {
+          "where": "Lesson page, Inquiry, question 2 'Where was the fighting in 1775, and where in 1776?' (the If you only do one question), and the same steps on the student sheet",
+          "what": "Students zoom out to the whole coast and click all 21 diamonds. At that zoom the Boston group (Lexington and Concord, Boston, Bunker Hill, Gloucester), the New York group (Brooklyn, Pell's Point, White Plains, Fort Washington, Fort Lee) and Sullivan's Island/Breach Inlet probably sit on top of each other on a Chromebook screen. Each pop-up also has a picture and a short account to read. 21 pop-ups in 15 minutes is tight for 13-year-olds.",
+          "why": "This is the question he would choose if he is short of time. If kids misclick, get '1 of 3' pop-ups or stop to read every story, it runs well past 15 minutes and he loses the end of the period.",
+          "severity": "slows it down",
+          "suggestion": "Tell students to work zoomed in (the Massachusetts bookmark, plus new New York and The South bookmarks) instead of at whole-coast zoom. Split the 21 battles between partners (1775 vs 1776, or north vs south) and say 'read the date line only' for this question.",
+          "needsLiveMap": true,
+          "quote": "Zoom out until all 21 diamonds show, from Quebec to South Carolina."
+        },
+        {
+          "where": "Student sheet (Word), question 2, the 'On the map' steps and the answer space",
+          "what": "Students are told to write each of the 21 battles under its year and mark the winner, but the sheet has no table or columns for this. There is one prompt ('Which colonies had battles in 1775? Which in 1776? What changed?') and one writing line on a two-page sheet.",
+          "why": "Kids will write a messy list in the margins, or skip the sorting and go straight to 'what changed'. Then he has nothing consistent to check across five sections.",
+          "severity": "slows it down",
+          "suggestion": "Add a small table with columns 1775 and 1776, and battle, colony and winner (A or B) under each. Or print the 21 battle names as a checklist with boxes to tick for year and winner. Students sort faster and he can grade at a glance.",
+          "needsLiveMap": false,
+          "quote": "Click each diamond and write its name under the year it was fought."
+        },
+        {
+          "where": "Lesson page, 'From the front' steps for question 1 (Where did the war begin?) and question 4 (How did 1776 end?), compared with the student sheet steps",
+          "what": "The student sheet asks students to measure Boston to Concord (Q1) and New York City to Trenton (Q4), but neither front-of-class script includes a Measure step. The script first shows Measure in Q3. New York City has no marker of its own, so students don't know where to start measuring.",
+          "why": "Neither he nor his students have used ArcGIS. Measure is the tool most likely to cause 25 raised hands, and the click-by-click script he relies on leaves it out the first time it is needed.",
+          "severity": "slows it down",
+          "suggestion": "Add to the Q1 front script: 'Open Measure, choose miles, click the Boston diamond, then the Lexington and Concord diamond, read the distance.' In Q4, name the start point, e.g. 'from the Brooklyn diamond to the Trenton diamond'.",
+          "needsLiveMap": false,
+          "quote": "Use Measure for the distance from New York City to Trenton."
+        },
+        {
+          "where": "Lesson page and student sheet, question 3 'Why New York?'",
+          "what": "The Key Port Cities layer is nested inside the Revolutionary War Battlefields group, has no pop-ups and no labels, and covers ports from New England to the Caribbean and Britain. Students must name unlabeled dots from the coastline. Philadelphia has no battle diamond next to it, and the answer notes admit Norfolk is 'the hardest to name'. How hard this is depends on whether the basemap shows city names.",
+          "why": "Kids who are weak at maps will guess or wait for a neighbor, and Q3 is where the 'why' of the big question lives. He would end up telling the class the answer from the front.",
+          "severity": "slows it down",
+          "suggestion": "Give the port layer labels or a pop-up with the port's name, or add a 'Port cities' bookmark. Move the layer out of the Battlefields group, or at least name the group in the legend so students find it.",
+          "needsLiveMap": true,
+          "quote": "The layer has no pop-ups, so use the coastline and the battle diamonds nearby to name them."
+        },
+        {
+          "where": "Lesson page, Inquiry: the question marked If you only do one (question 2)",
+          "what": "The page says the marked question 'gets to the big question on its own', but Q2 only shows where and when the fighting was. The big question asks why it moved. The evidence for why (ports, New York's position, distances) is in Q3 and Q4.",
+          "why": "On a short day he would run only this question and then ask the big question. Students could describe the move but not explain it, so most would land at 2 on the rubric's reasoning row.",
+          "severity": "slows it down",
+          "suggestion": "Either make Q3 the 'only do one', or add one step to Q2: turn on Key Port Cities and note which battle clusters sit at a major port.",
+          "needsLiveMap": false,
+          "quote": "Where was the fighting in 1775, and where in 1776? If you only do one"
+        },
+        {
+          "where": "Student sheet and lesson page, question 4 'How did 1776 end?', first two steps",
+          "what": "'Follow circles 4 and 5' doesn't say what to do: click, read or trace. The circles show only when zoomed in. Circle 5 (Washington Strikes Back) is presumably near Trenton, which may be off screen once students zoom in on New York City.",
+          "why": "Vague verbs mean hands up. He would have to stop the class and demo the step.",
+          "severity": "minor",
+          "suggestion": "Write: 'Click circle 4 and read the story. Drag the map south-west to Trenton and click circle 5.'",
+          "needsLiveMap": true,
+          "quote": "Follow circles 4 and 5."
+        },
+        {
+          "where": "Answer page and Word teacher notes, Assessing the answer, 'A model answer (level 4)'",
+          "what": "The only model answer is about 230 words with around ten dates and three measured distances. There is no level 3 example and no short checklist.",
+          "why": "He will grade about 150 of these, written in the last few minutes of a period. A model this dense doesn't help him or his students calibrate what a good 8th-grade answer looks like.",
+          "severity": "minor",
+          "suggestion": "Add a 4 to 5 sentence level 3 sample and a one-line checklist students can see: claim + two map facts (named) + why there.",
+          "needsLiveMap": false,
+          "quote": "the British went after the big port in the middle of the coast"
+        }
+      ],
+      "worksWell": [
+        "The 'From the front' click-by-click scripts let him teach it off the projector without knowing ArcGIS.",
+        "The answer key gives the 21 battles by year and winner, and every distance has an accept range (e.g. 15 to 17 miles), so he can grade five sections fast.",
+        "The Bunker Hill misunderstanding (British 'win' with twice the casualties) is a ready-made discussion hook a textbook map doesn't give him."
+      ]
+    },
+    "we-the-people-1787-1791": {
+      "findings": [
+        {
+          "where": "Student sheet, 'Reading the map' and question 3 'The three-fifths clause', steps 1 and 3; also question 4 (finding Rhode Island, New York, Massachusetts)",
+          "what": "The map has no place names. Q3 says 'Click Virginia and South Carolina' with no bookmark step, and Q4 needs Rhode Island, which is a small pie in a crowded north-east corner. The map has The South and New England and New York bookmarks, but no question uses them.",
+          "why": "Plenty of his 8th graders can't find South Carolina on a blank map. They will click pies at random until a title matches, and that eats the 12 minutes.",
+          "severity": "slows it down",
+          "suggestion": "Add 'Open The South bookmark' to Q3 and 'Open New England and New York' to Q4. Or tell students to keep House seats in 1793 on during Q3 so its abbreviation labels (VA: 19) show where each state is.",
+          "needsLiveMap": true,
+          "quote": "Click Virginia and South Carolina."
+        },
+        {
+          "where": "Student sheet, question 3 answer prompt and fill-in, compared with the answer page's 'Accept answers that' for question 3",
+          "what": "The question asks what Virginia and South Carolina would have had if enslaved people were counted in full or not at all (22/13 and 7/4). The fill-in asks only for Virginia's seats with the clause and not counted (19 and 13). The answer notes accept 'Virginia 19 and 13, South Carolina 6 and 4'. Three different targets.",
+          "why": "Students will write different numbers, and he won't know whether '22' is right or wrong. Grading becomes inconsistent across five sections.",
+          "severity": "slows it down",
+          "suggestion": "Replace the fill-in with a small table, State | Seats with the clause | If counted in full | If not counted, with rows for Virginia, South Carolina and two blank rows. It then matches the answer key table.",
+          "needsLiveMap": false,
+          "quote": "How many seats would Virginia and South Carolina each have had if enslaved people had been counted in full"
+        },
+        {
+          "where": "Lesson page, Inquiry: question 2 'Seats in Congress', marked If you only do one, compared with the compelling question",
+          "what": "The 'only do one' question covers large vs small states. Nothing in it touches ratification, so the second half of the big question can't be answered from it.",
+          "why": "On a short day students would leave half the big question blank or make it up, and the rubric's Claim row marks them down for that.",
+          "severity": "slows it down",
+          "suggestion": "Say plainly that Q2 covers the first half only, and offer a 25-minute pair (Q2 + Q4). Or split the big question so the 15-minute version asks only the first half.",
+          "needsLiveMap": false,
+          "quote": "and how close did it come to being rejected?"
+        },
+        {
+          "where": "Lesson page, compelling question and Teacher notes, Learning objectives (fifth objective)",
+          "what": "Two of the four questions (Q1, Q3) and the fifth learning objective are about slavery and the three-fifths clause, but the big question asks only about large vs small states and ratification. A student can reach Strong without mentioning the three-fifths clause.",
+          "why": "Students won't see why Q1 and Q3 matter to the final answer. When he grades, the lesson's most important point may be missing from answers that still score high.",
+          "severity": "minor",
+          "suggestion": "Reword the big question, e.g. 'Who gained power from the Constitution's compromises, and how close did it come to being rejected?'",
+          "needsLiveMap": false,
+          "quote": "Use population and seat figures from at least two states as evidence for how the three-fifths clause shifted power"
+        },
+        {
+          "where": "Lesson page and answer page, 'Answering the compelling question'; Standards list (TX 8.17(A))",
+          "what": "The sketch-pin option needs a quote from each of Madison, Hamilton, Henry and Mason. The materials supply none of those quotes, and the student sheet doesn't mention this option. The page still lists TX 8.17(A) (Federalist and Anti-Federalist arguments), and this optional task is the only place it is touched. I can't tell whether the ratification pop-up 'note' names any of them.",
+          "why": "If he picks this option, he has to find four primary-source quotes himself the night before, which breaks the 10-minute prep. If he is in Texas, the standards claim is thin.",
+          "severity": "minor",
+          "suggestion": "Put four short quotes (one per person) in the teacher notes, with where to pin each (e.g. the Virginia convention pie for Henry, Madison and Mason; New York for Hamilton). Or drop TX 8.17(A).",
+          "needsLiveMap": true,
+          "quote": "sketch pins for James Madison, Alexander Hamilton, Patrick Henry and George Mason, each with a quote"
+        },
+        {
+          "where": "Lesson page, top of page under the four buttons",
+          "what": "There is no map preview image. The Revolutionary Battles page has one.",
+          "why": "In a two-minute look he can't see what students will be looking at (pies, shaded states) without opening the map.",
+          "severity": "minor",
+          "suggestion": "Add a preview image showing the population pies and the House seats shading.",
+          "needsLiveMap": false,
+          "quote": "See how House seats were shared out after the 1790 census"
+        },
+        {
+          "where": "Teacher notes, Before class, 'About this map'",
+          "what": "It says students turn on House seats today 'as the questions ask', but no question does. Only the Stretch task uses it.",
+          "why": "During prep he would hunt through the questions for where it's used.",
+          "severity": "minor",
+          "suggestion": "Change to: 'House seats today is used only in the Stretch task.'",
+          "needsLiveMap": false,
+          "quote": "students turn on House seats in 1793, House seats today and Ratifying the Constitution as the questions ask"
+        }
+      ],
+      "worksWell": [
+        "The pop-up's three seat numbers for Virginia (19 with the clause, 22 in full, 13 not counted) make the three-fifths clause concrete in a way a textbook paragraph doesn't.",
+        "The full ratification table (DE 1 to VT 14, with votes and dates) makes Q4 quick to check, and the notes say to accept either 'closest by share' or 'closest by gap'.",
+        "The misunderstanding note (the clause gave slaveholding states seats, not enslaved people a voice) gives him accurate wording for a sensitive point."
+      ]
+    }
+  },
+  "acrossLessons": [
+    {
+      "where": "Both lesson pages, header 'Time' and the minutes on each question",
+      "what": "The header says 45 minutes, but the question times add up to 52 (Battles: 10+15+15+12) and 49 (We the People: 10+15+12+12). Neither total includes writing the answer to the big question, the reflection, or the first-time learning of bookmarks, legend, layers and Measure. There is no one-period plan.",
+      "why": "He has 50 minutes, minus a few for Chromebooks and attendance. If he runs it as written, the big-question answer (the graded part) never happens.",
+      "severity": "slows it down",
+      "suggestion": "State the real total (about 65 to 70 minutes for everything) and add a 50-minute plan to each lesson. Battles: Q1 from the front 8, Q2 in pairs 15, Q4 12, big question as a 3-sentence exit ticket 10, Q3 for day 2. We the People: Q2 from the front 10, Q3 12, Q4 12, exit ticket 10.",
+      "needsLiveMap": false,
+      "quote": "45 minutes, or 10–15 per question"
+    },
+    {
+      "where": "Both lesson pages, Teacher notes sections (Discussion questions, Common misunderstandings) and the Teacher notes and answer-note links; How these lessons work page",
+      "what": "The About page says answers are kept off the lesson page 'so the lesson page can be shared with students'. But the lesson page's Teacher notes section gives answers outright: Virginia 19 vs 13 seats, Rhode Island 34 to 32 and New York 30 to 27, Moores Creek and Sullivan's Island as 1776 American wins, Bunker Hill as a British win. It also links straight to the answer page and the teacher-notes Word file.",
+      "why": "If he follows the advice and posts the lesson page in Classroom, students can copy the Q2, Q3 and Q4 answers without opening the map, and the grades mean nothing.",
+      "severity": "slows it down",
+      "suggestion": "Move Discussion questions, Common misunderstandings and the answer links off the student-shareable page, or make a student version of the page with only the map button, the sheet and the inquiry.",
+      "needsLiveMap": false,
+      "quote": "Virginia's pop-up shows 19 seats under the clause, against 13 if enslaved people had not been counted."
+    },
+    {
+      "where": "Both student sheets (Word), 'Your answer' box",
+      "what": "The sheet offers 'sketch on the map' as a way to answer the big question. Only the teacher pages say sketches are not saved. Students are never told to take a screenshot.",
+      "why": "Kids who sketch will close the tab and lose everything, and he has nothing to collect or grade in Classroom.",
+      "severity": "slows it down",
+      "suggestion": "Add to the sheet: 'Sketches are not saved. Take a screenshot (Ctrl + Show windows) and attach it in Classroom.' Or drop the sketch option from the student sheet.",
+      "needsLiveMap": false,
+      "quote": "You can write a paragraph, sketch on the map, or both."
+    },
+    {
+      "where": "Both lesson pages, Share to Google Classroom button and 'Student activity' section",
+      "what": "The Classroom button posts only the map. To assign the sheet he has to download the Word file, upload it to Drive, check the formatting in Docs and attach it with 'Make a copy'. If he picks 2 of the 4 questions, he also has to edit the doc. On a printed sheet, 'Open the map' is just a title with no URL or QR code.",
+      "why": "This is most of his 10 minutes of prep, and a printed copy doesn't get students to the map without the Classroom post.",
+      "severity": "slows it down",
+      "suggestion": "Give a Google Docs 'make a copy' link for each sheet (ideally also a version per question), have the Classroom button attach the sheet with the map, and print a short URL or QR code next to 'Open the map'.",
+      "needsLiveMap": false,
+      "quote": "shares the map with a class, not the sheet"
+    },
+    {
+      "where": "Bottom of every page (About this page), and the Student activity section ('Español' note)",
+      "what": "Every page ends with a 9-row version table (Page renderer, Checker, Assistant knowledge builder, ...) and builder instructions. The Spanish sheet is labelled a draft awaiting review.",
+      "why": "It reads as an unfinished beta product. The 'draft' label makes him unsure he can hand the Spanish sheet to an ELL student or send it home.",
+      "severity": "minor",
+      "suggestion": "Keep only 'Lesson version 0.8.1' in a small footer and move the build details elsewhere. Get the Spanish reviewed, or reword the note to 'Translated; tell us if anything reads wrong'.",
+      "needsLiveMap": false,
+      "quote": "Edit the file, not this page; the page is rebuilt from it."
+    }
+  ]
+}

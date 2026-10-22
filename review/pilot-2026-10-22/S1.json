@@ -1,0 +1,258 @@
+{
+  "persona": "S1",
+  "lessons": {
+    "revolutionary-battles-1775-1776": {
+      "findings": [
+        {
+          "where": "Questions, 'Where was the fighting in 1775, and where in 1776?' (question 2), steps 2 and 3",
+          "what": "There are about 21 diamonds. I click maybe 5 or 6, write a few names on the one line and stop. The sheet has no 1775 or 1776 column, so I don't know where 'under the year' is. The siege of Boston runs from 1775 into 1776, so which year does it go under? Step 3 says 'mark who won', but mark it how, and where?",
+          "why": "This one question could take Jordan 15 minutes or more. He runs out of time before the big question, which is the point of the lesson.",
+          "severity": "stops the lesson",
+          "suggestion": "Add a small table with two columns, 1775 and 1776, and 4 empty rows in each. New steps: '2. Click 4 diamonds from 1775 and 4 from 1776. Write each battle's name in the right column. If a battle went on into the next year, use the year it started. 3. Next to each name, write A if the Americans won or B if the British won. Check the Legend.'",
+          "needsLiveMap": false,
+          "quote": "Click each diamond and write its name under the year it was fought."
+        },
+        {
+          "where": "Questions, 'Why New York?' (question 3), steps 3 to 5",
+          "what": "The port symbols have no names and no pop-ups. I don't know where Charleston or Philadelphia are. 'Use the coastline' doesn't give me a name, so I'd guess or write 'the big dot near New York'. Then step 5 wants me to measure to Philadelphia, and I can't find it.",
+          "why": "The answer and two of the measurements depend on naming ports Jordan has no way to identify.",
+          "severity": "stops the lesson",
+          "suggestion": "Give the names on the sheet: 'The major ports on this map are: ______ (list them). Match each big port symbol to a name.' Replace step 4 with: 'Philadelphia is southwest of New York, on a river. Charleston is far to the south, in South Carolina.' If one of the basemaps shows city names, add: 'Change the Basemap to one that shows city names.'",
+          "needsLiveMap": true,
+          "quote": "The layer has no pop-ups, so use the coastline and the battle diamonds nearby to name them."
+        },
+        {
+          "where": "Questions, 'Where was the fighting in 1775, and where in 1776?' (question 2), Answer",
+          "what": "The steps get me battle names, but the question asks for colonies. The battle pop-ups don't say which colony a battle is in. Is Quebec a colony? I'd write today's state names if the map shows them, or skip it. 'What changed?' is too open, so I don't know what kind of answer they want.",
+          "why": "The steps don't collect what the question asks for, so Jordan has to guess or leave it blank.",
+          "severity": "slows it down",
+          "suggestion": "Add a step: '4. To see which colony a battle is in, click the land next to the diamond. Or, if the pop-up says 1 of 2, use the arrows.' Change the question to: 'Name two colonies with battles in 1775 and two with battles in 1776. Did the fighting move north, move south, or stay in one place?'",
+          "needsLiveMap": true,
+          "quote": "Which colonies had battles in 1775? Which in 1776? What changed?"
+        },
+        {
+          "where": "Questions, 'Where did the war begin?' (question 1), steps 2 and 4 and the Answer",
+          "what": "The diamonds have no names on the map, so I click around to find Lexington and Concord and 'the Boston diamond'. If I click a different battle near Boston, I copy the wrong dates. Then 'How long did the siege last?' means working out the months between two dates in my head.",
+          "why": "Wrong dates here carry into the answer. The date maths is a hidden extra step.",
+          "severity": "slows it down",
+          "suggestion": "Step 4: 'Click the diamond in Boston. Check that the pop-up title says Siege of Boston. If it doesn't, try the next diamond or use the arrows.' Answer: 'The siege of Boston started on ________ and ended on ________. That is about ____ months.'",
+          "needsLiveMap": true,
+          "quote": "Click the Boston diamond and read its dates."
+        },
+        {
+          "where": "Questions, 'How did 1776 end?' (question 4), step 2",
+          "what": "Does 'follow' mean click them? Draw a line? Once I'm zoomed in on New York, circle 5 (Trenton) is probably off the screen in New Jersey. I'd click circle 4 and move on.",
+          "why": "Circle 5 is the end of the story the big question asks about, and Jordan may never find it.",
+          "severity": "slows it down",
+          "suggestion": "'2. Click circle 4 and read it. Then drag the map down and to the left (southwest) into New Jersey until you see circle 5. Click it and read it.'",
+          "needsLiveMap": true,
+          "quote": "Follow circles 4 and 5."
+        },
+        {
+          "where": "Questions, 'Where did the war begin?' (question 1), step 5 (first time Measure is used)",
+          "what": "The sheet never says how Measure works. I click once on Boston and nothing finishes, or I end up on area instead of distance. I'd guess a number.",
+          "why": "The sheet asks for 5 distances, so if Jordan can't use Measure, all 5 blanks are guesses.",
+          "severity": "slows it down",
+          "suggestion": "Add one how-to line the first time: 'How to measure: open Measure, choose the distance tool, and make sure it says miles. Click once on Boston, then double-click on Concord to finish. Write down the miles.' (Match the button names to the app.)",
+          "needsLiveMap": true,
+          "quote": "Use Measure for the straight-line distance from Boston to Concord."
+        },
+        {
+          "where": "Questions, 'Why New York?' (question 3), Answer, second part",
+          "what": "'A navy based at New York' is too abstract for me. I'd write 'the ocean' because I don't know what 'reach' should look like.",
+          "why": "This is the link to the big question (why New York), and Jordan can't make it.",
+          "severity": "slows it down",
+          "suggestion": "'Ships could sail from New York along the coast and up the rivers. Name two cities or forts that ships from New York could get to.'",
+          "needsLiveMap": false,
+          "quote": "Looking at the map, what could a navy based at New York reach?"
+        },
+        {
+          "where": "Questions, 'Why New York?' (question 3), step 1",
+          "what": "The layer name is long, and '(inside Revolutionary War Battlefields)' means I have to open another layer to find it. I scroll the layer list, don't see it, and put my hand up.",
+          "why": "This step gets Jordan stuck before the question even starts.",
+          "severity": "slows it down",
+          "suggestion": "'1. Open Map layers. Click the arrow next to Revolutionary War Battlefields. Turn on Key Port Cities.'",
+          "needsLiveMap": true,
+          "quote": "turn on Key Port Cities in the American Revolution 1775-1781 (inside Revolutionary War Battlefields)."
+        }
+      ],
+      "worksWell": [
+        "The measure blanks already say 'miles' and have a clear gap, so I know exactly what goes there.",
+        "The steps are short, numbered and start with a doing word (Open, Click, Zoom). Question 1 starts with a bookmark, so I land in the right place.",
+        "The '1 of 2' tip saves me from missing the second pop-up."
+      ],
+      "hardWords": [
+        "seize",
+        "colonists",
+        "Continental Army",
+        "siege",
+        "legend",
+        "core (where the fighting was heaviest)",
+        "turning points",
+        "harbors / major port city",
+        "a navy based at",
+        "evidence"
+      ],
+      "minutesEstimate": 65
+    },
+    "we-the-people-1787-1791": {
+      "findings": [
+        {
+          "where": "Questions, 'The three-fifths clause' (question 3), Answer and the Virginia fill-in line",
+          "what": "The question wants four numbers: Virginia and South Carolina, each 'counted in full' and 'not at all'. The blank only has Virginia, though, and asks for 'seats with the three-fifths clause', which isn't one of the last two lines I was told to read. There's no blank for South Carolina or for 'in full'. I'd fill in two numbers, maybe wrong ones, and stop.",
+          "why": "This is the main maths of the lesson. Because the question and the blank don't match, Jordan doesn't know what to write.",
+          "severity": "stops the lesson",
+          "suggestion": "Use a table that matches the question. Columns: State | House seats in 1793 (three-fifths) | If enslaved people counted in full | If enslaved people not counted. Two rows, Virginia and South Carolina. Change step 2 to: 'Read three lines of the pop-up: House seats in 1793 (this is the three-fifths number), and the last two lines.'",
+          "needsLiveMap": false,
+          "quote": "seats with the three-fifths clause"
+        },
+        {
+          "where": "Questions, 'The three-fifths clause' (question 3), step 1",
+          "what": "The map has no place names, and I'm not sure where Virginia or South Carolina are. I'd click pies until a title says Virginia, which could take a while. If I notice the 'VA' and 'SC' labels from the House seats layer I might guess, but the sheet doesn't tell me to look for them.",
+          "why": "Every number in this question depends on finding these two states first.",
+          "severity": "slows it down",
+          "suggestion": "'1. Open The South bookmark. Find the labels VA (Virginia) and SC (South Carolina) and click on those states.' (The House seats layer is still on from question 2.)",
+          "needsLiveMap": true,
+          "quote": "Click Virginia and South Carolina."
+        },
+        {
+          "where": "Questions, 'How close was ratification?' (question 4), Answer",
+          "what": "On a map, 'closest' sounds like 'nearest to each other'. Even if I get that it means the vote, I have to subtract for about 14 pies and remember every result. There's nowhere to write them down.",
+          "why": "The word is easy to misread, and doing the sums in his head is where Jordan gives up.",
+          "severity": "slows it down",
+          "suggestion": "'Which three states had the closest votes (the smallest gap between votes for and against)? For each pie, take the votes against away from the votes for.' Add a table: State | For | Against | Gap, with 5 rows.",
+          "needsLiveMap": false,
+          "quote": "Which three votes were closest?"
+        },
+        {
+          "where": "Questions, 'Who lived where in 1790?' (question 1), steps 2 and 3 and the Answer",
+          "what": "That's about 15 pies, and each pop-up is full of numbers. 'More than a quarter' means I have to turn it into 25% myself. By the last pie I've forgotten which ones were over. The sheet doesn't remind me that the biggest pie has the most people (that's buried in the top paragraph).",
+          "why": "This is slow and the answer is easy to get wrong, all in the first question.",
+          "severity": "slows it down",
+          "suggestion": "Answer: 'Which state had the most people? (Hint: the biggest pie.) Which states had more than 25% (a quarter) of people enslaved?' Add to step 3: 'If the percentage is more than 25%, write the state here: ____________.'",
+          "needsLiveMap": false,
+          "quote": "In which states were more than a quarter of the people enslaved?"
+        },
+        {
+          "where": "Questions, 'Seats in Congress' (question 2), Answer, last part",
+          "what": "The sheet never says Congress has two parts, or that one counts people while the other gives every state the same number. Both my states show 2 senators, but I don't know why that matters. I'd write 'I don't know'.",
+          "why": "This is the 'balance large and small states' half of the big question, and Jordan has no way in.",
+          "severity": "slows it down",
+          "suggestion": "Add to Before you start: 'Congress has two parts. In the House of Representatives, states with more people get more seats. In the Senate, every state gets 2 senators.' Change the question to: 'Why do you think one part counts people, but the other gives every state the same number?'",
+          "needsLiveMap": false,
+          "quote": "Why do you think the House and the Senate are counted differently?"
+        },
+        {
+          "where": "Questions, 'The three-fifths clause' (question 3), Answer, last part",
+          "what": "I wouldn't connect 'people who could not vote' to enslaved people. 'Gained' compared to what? I'd skip it.",
+          "why": "This is the key idea of the clause, and the wording hides it.",
+          "severity": "slows it down",
+          "suggestion": "'Which states got more House seats because enslaved people were partly counted? (Look for states where the House seats number is bigger than the not-counted number.)'",
+          "needsLiveMap": false,
+          "quote": "Which states gained seats by counting people who could not vote?"
+        },
+        {
+          "where": "Questions, 'Seats in Congress' (question 2), step 1",
+          "what": "There's 'House seats in 1793' and also 'House seats today (2020 apportionment)'. I click the first 'House seats' I see. If that's today's layer, I write California or Texas and my answer is for the wrong year.",
+          "why": "The answer comes out wrong, and nothing on the sheet warns him.",
+          "severity": "slows it down",
+          "suggestion": "'1. In Map layers, turn on House seats in 1793. (Not House seats today.)'",
+          "needsLiveMap": true,
+          "quote": "In Map layers, turn on House seats in 1793."
+        },
+        {
+          "where": "Questions, 'Who lived where in 1790?' (question 1) step 3, and 'How close was ratification?' (question 4) step 3",
+          "what": "The sheet says the first line gives the percentage enslaved, and in question 4 that it gives the vote. From the map description, the pop-up may list the total, or the result ('ratified'), first. If so, I'd copy the wrong number. I can't tell without the live map.",
+          "why": "Jordan trusts the sheet exactly, so a wrong line number means a wrong answer.",
+          "severity": "minor",
+          "suggestion": "Name the line by what it says, not where it is: 'Find the line that gives the percent enslaved.' and 'Find the line with the vote (__ for, __ against).'",
+          "needsLiveMap": true,
+          "quote": "Read the first line of each pop-up, which gives the percentage enslaved."
+        }
+      ],
+      "worksWell": [
+        "The top paragraph warns me there are no place names and that I can click to see a name. Without that I'd be totally lost.",
+        "Question 4 tells me exactly which layers to turn off and on, so the map isn't cluttered.",
+        "'Find North Carolina and click both of its pies' is clear, and 'Why does it have two pies?' is a question I can actually answer."
+      ],
+      "hardWords": [
+        "delegates",
+        "ratified / ratification",
+        "convention",
+        "pies (pie charts)",
+        "abbreviation",
+        "House of Representatives / Senate",
+        "three-fifths clause",
+        "counted in full, or not at all",
+        "shared out",
+        "more than a quarter"
+      ],
+      "minutesEstimate": 60
+    }
+  },
+  "acrossLessons": [
+    {
+      "where": "Both sheets, 'Reading the map' section",
+      "what": "It's one long paragraph packed with what every symbol means. I skip it. Later steps say 'use the legend' or depend on the stripes, the pies or the numbered circles, and I never read what those meant. On We the People, the Maine and West Virginia sentence just confused me.",
+      "why": "Jordan gives up on long instructions, so the information he needs most is the part he skips.",
+      "severity": "slows it down",
+      "suggestion": "Turn it into 4 or 5 short bullets, one per symbol, e.g. 'Diamond = a battle. Its color shows who won (open Legend).' / 'Big pie = more people. Blue = free. Orange-red = enslaved.' Move the Maine and West Virginia note into the question where it's needed, or cut it.",
+      "needsLiveMap": false,
+      "quote": "Diamonds mark battles. A battle's pop-up gives its name, dates and story, but not the winner in words"
+    },
+    {
+      "where": "Both sheets, every 'Answer' with one writing line (e.g. Battles question 1; We the People question 2, which asks 4 things)",
+      "what": "Two to four questions share one line. I answer the first one and stop. I can't tell how much to write.",
+      "why": "Jordan leaves out half of each answer without realizing it.",
+      "severity": "slows it down",
+      "suggestion": "Give each part its own line, labeled a, b, c, or a sentence starter, e.g. 'a) Lexington and Concord was fought on ______. ______ won.  b) The siege of Boston lasted ______.'",
+      "needsLiveMap": false,
+      "quote": "Answer: When was Lexington and Concord fought, and who won? How long did the siege of Boston last?"
+    },
+    {
+      "where": "Both sheets, 'Your answer' (big question)",
+      "what": "I'd pick 'sketch on the map' to avoid writing. But when I close the tab my sketch is gone, and the teacher never sees it. I'm also not sure what counts as 'evidence from two places' or 'two layers'.",
+      "why": "Jordan could hand in nothing for the main task.",
+      "severity": "slows it down",
+      "suggestion": "'Answer the big question in 3 or 4 sentences. Name two places on the map (or two layers) and say what each one shows. If you sketch on the map, take a screenshot and hand it in.'",
+      "needsLiveMap": false,
+      "quote": "You can write a paragraph, sketch on the map, or both."
+    },
+    {
+      "where": "Both sheets, length overall",
+      "what": "I estimate 65 minutes for Battles and 60 for We the People. The big question comes last, so I never reach it in a 45 to 50 minute class.",
+      "why": "Jordan does the clicking and misses the thinking.",
+      "severity": "stops the lesson",
+      "suggestion": "Mark one question per sheet as 'If you have time', or cut the 'click every diamond / every pie' steps down to a set number (e.g. 'Click 4 pies').",
+      "needsLiveMap": false,
+      "quote": "Click the pies and read each pop-up."
+    },
+    {
+      "where": "Both sheets, question headings",
+      "what": "The questions have no numbers. If my teacher says 'do question 3', I can't find it. If '(numbered)' really prints after each heading, I'd think it's an instruction.",
+      "why": "Small thing, but it costs time and gets Jordan lost on the page.",
+      "severity": "minor",
+      "suggestion": "'Question 1: Where did the war begin?' Remove '(numbered)' if it shows on the printed sheet.",
+      "needsLiveMap": false,
+      "quote": "Where did the war begin? (numbered)"
+    },
+    {
+      "where": "Both sheets, 'Looking back'",
+      "what": "'From reading alone' — reading what? We didn't read anything else in this lesson. I'd write 'it was a map'.",
+      "why": "This is a weak finish because the question needs a comparison Jordan doesn't have.",
+      "severity": "minor",
+      "suggestion": "'What is one thing the map showed you that you wouldn't get from just reading a list of dates or numbers?'",
+      "needsLiveMap": false,
+      "quote": "that you might not have noticed from reading alone?"
+    },
+    {
+      "where": "Both sheets, 'Open the map' line",
+      "what": "In this text version there's only the map's title, with no link or short web address. If the printed sheet is the same, I don't know how to open it and I wait for the teacher.",
+      "why": "This is the first step, and if it fails Jordan can't start at all.",
+      "severity": "minor",
+      "suggestion": "Add a short link or QR code next to the title: 'Open the map: [short link]'.",
+      "needsLiveMap": false,
+      "quote": "Open the map: 1775–1776 Revolutionary Battles"
+    }
+  ]
+}

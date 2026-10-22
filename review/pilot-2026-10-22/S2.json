@@ -1,0 +1,211 @@
+{
+  "persona": "S2",
+  "lessons": {
+    "revolutionary-battles-1775-1776": {
+      "findings": [
+        {
+          "where": "¿Por qué Nueva York?, steps 3, 4 and 5",
+          "what": "The port symbols have no names and no pop-ups. I can tell big ports from small ones, but I can't tell which city each one is. I could only name the ones that have a battle diamond nearby (Boston, New York, maybe Charleston). For the others I would guess. For step 5 I don't know where to click for Philadelphia, because there is no battle diamond there.",
+          "why": "The answer to '¿qué otros puertos principales hay entre ellos?' becomes a guess, and I can't start the New York to Philadelphia measurement. If the basemap shows English city names it might be OK, but the sheet doesn't tell me to look there.",
+          "severity": "stops the lesson",
+          "suggestion": "Give a word bank with the port names in the layer, or tell me to read the basemap's city names. Example: 'Los nombres de las ciudades aparecen en el mapa base (en inglés): Philadelphia = Filadelfia.' For step 5, tell me where Philadelphia is, e.g. 'Filadelfia está en el río Delaware, al suroeste de Trenton.'",
+          "needsLiveMap": true,
+          "quote": "usa la costa y los rombos de batallas cercanos para nombrarlos"
+        },
+        {
+          "where": "¿Dónde se combatió en 1775 y dónde se combatió en 1776?, steps 2 and 3",
+          "what": "It tells me to write each name 'bajo el año', but there is no table with a 1775 column and a 1776 column, only one line. There are 21 battles. 'Marcar quién ganó' doesn't say how: a letter, a colour, a tick?",
+          "why": "I would spend a long time working out where to write, and I'd copy 21 long English names onto a single line.",
+          "severity": "slows it down",
+          "suggestion": "Add a two-column table (1775 | 1776) with a 'Ganó' box after each name. Example: 'Escribe cada nombre en la columna de su año y pon A (American Victory) o B (British Victory) al lado.'",
+          "needsLiveMap": false,
+          "quote": "Haz clic en cada rombo y escribe su nombre bajo el año en que se combatió."
+        },
+        {
+          "where": "¿Por qué Nueva York?, step 1",
+          "what": "The layer name is long and in English, and the sheet says it is 'dentro de' another layer. It doesn't say I have to open that group (an arrow or '>' next to it) to see the layer. I might turn on Revolutionary War Battlefields and think I'm done. Also, the map description doesn't show it as a group, so I can't tell whether it really is one.",
+          "why": "If I can't find the layer, the whole Nueva York section stops.",
+          "severity": "slows it down",
+          "suggestion": "'En Map layers, abre el grupo Revolutionary War Battlefields (haz clic en la flecha) y activa Key Port Cities...' If it isn't a group, delete 'está dentro de...'.",
+          "needsLiveMap": true,
+          "quote": "está dentro de Revolutionary War Battlefields"
+        },
+        {
+          "where": "¿Dónde comenzó la guerra?, step 4 and Responde",
+          "what": "Step 4 says 'el rombo de Boston', but the question says 'el sitio de Boston'. I read 'sitio' as 'lugar', so I understood 'how long did the place of Boston last?', which makes no sense. The pop-up probably says 'Siege of Boston', and I don't know the word 'siege'. There might also be more than one diamond near Boston (Bunker Hill?), so I'm not sure which one is 'el de Boston'.",
+          "why": "I could click the wrong diamond or not understand that the question is about how long the battle lasted.",
+          "severity": "slows it down",
+          "suggestion": "'Haz clic en el rombo Siege of Boston (el sitio o asedio de Boston: el ejército rodeó la ciudad) y lee sus fechas.' Responde: '¿Cuánto duró el sitio (asedio) de Boston?'",
+          "needsLiveMap": true,
+          "quote": "¿Cuánto duró el sitio de Boston?"
+        },
+        {
+          "where": "¿Dónde comenzó la guerra?, step 1",
+          "what": "'Marcador' makes me think of a marker pen or a score. I don't connect it with the tool on the side, which says 'Bookmarks' in English. Other steps put the English in brackets (Map layers, Measure), but this one doesn't.",
+          "why": "It's the very first step. If I can't do it, I start the lesson confused.",
+          "severity": "slows it down",
+          "suggestion": "'Abre el marcador (Bookmarks) Massachusetts.'",
+          "needsLiveMap": false,
+          "quote": "Abre el marcador Massachusetts."
+        },
+        {
+          "where": "¿Dónde se combatió en 1775 y dónde se combatió en 1776?, Responde",
+          "what": "It asks which colonies had battles, but the battle pop-up doesn't name the colony. The sheet doesn't tell me to click the colony area (Thirteen British Colonies) to see its name. Quebec has a diamond, but it isn't one of the 13 colonies, and I don't know whether to count it.",
+          "why": "I'd be guessing which colony each diamond is in, or I'd put 'Quebec' as a colony.",
+          "severity": "slows it down",
+          "suggestion": "Add a step: 'Haz clic en el área de color alrededor del rombo para ver el nombre de la colonia (capa Thirteen British Colonies); si dice 1 de 2, usa las flechas.' And: 'Quebec no era una de las trece colonias.'",
+          "needsLiveMap": true,
+          "quote": "¿Qué colonias tuvieron batallas en 1775? ¿Y en 1776? ¿Qué cambió?"
+        },
+        {
+          "where": "¿Cómo terminó 1776?, step 2",
+          "what": "'Sigue los círculos 4 y 5': follow them how? With my eyes, by clicking them, by drawing a line? It also doesn't say what circles 4 and 5 are, and I don't know if I can see 5 (Trenton) while zoomed in on New York.",
+          "why": "I'd skip this step or make up what to do.",
+          "severity": "slows it down",
+          "suggestion": "'Haz clic en los círculos 4 y 5 y lee el nombre, el año y quién ganó (victor). Si no ves el 5, aléjate un poco hacia Trenton.'",
+          "needsLiveMap": true,
+          "quote": "Sigue los círculos 4 y 5."
+        },
+        {
+          "where": "¿Dónde comenzó la guerra?, step 5",
+          "what": "It doesn't explain how to use Measure (where to click to start and how to finish). The 'Lexington and Concord' diamond is a single point, and I don't know if it is at Lexington or at Concord, so I don't know where to stop measuring.",
+          "why": "My number could be quite different from my classmates' numbers.",
+          "severity": "minor",
+          "suggestion": "'En Measure, elige Distancia, haz clic en Boston y doble clic en Concord (el rombo de Lexington and Concord está en ___).'",
+          "needsLiveMap": true,
+          "quote": "Usa la herramienta de medir (Measure) para la distancia en línea recta de Boston a Concord."
+        }
+      ],
+      "worksWell": [
+        "The battle names stay in English (Lexington and Concord, Fort Washington, Trenton), so I can match them to the pop-up titles straight away.",
+        "'Cómo leer el mapa' warns me that the pop-up doesn't say who won and that I have to look at the colour in the legend. Without that I would have searched the English text for the winner.",
+        "The steps only ask for names, dates and colours, not for reading the long English stories in the pop-ups."
+      ],
+      "englishOnMap": [
+        "Bookmarks",
+        "Siege (Siege of Boston)",
+        "Key Port Cities in the American Revolution 1775-1781",
+        "Revolutionary War Battlefields",
+        "Major Port City",
+        "Turning Points",
+        "victor",
+        "1763 Proclamation Line",
+        "Sketch",
+        "Basemaps"
+      ]
+    },
+    "we-the-people-1787-1791": {
+      "findings": [
+        {
+          "where": "La cláusula de los tres quintos, steps 2 and 3 and the Virginia line",
+          "what": "Step 2 tells me to read the last two lines (seats if all enslaved people were counted, or none). But the blank asks for seats 'con la cláusula de los tres quintos', which isn't in those two lines. It's the actual 1793 seats, higher up in the pop-up. I might copy the 'counted under the three-fifths clause' number, which is a population figure, into the seats blank. There's no blank for 'all counted', and none for South Carolina even though the question asks about it.",
+          "why": "The steps and the blanks don't match, so I'd get the most important number of the lesson wrong.",
+          "severity": "slows it down",
+          "suggestion": "Use three blanks per state, matching the pop-up: 'Virginia: ___ escaños en 1793 (con los tres quintos); ___ si se contaba a todas; ___ si no se contaba a ninguna.' Add the same line for 'Carolina del Sur'. In step 2, add: 'Los escaños reales están en la línea House seats in 1793.'",
+          "needsLiveMap": true,
+          "quote": "escaños con la cláusula de los tres quintos;"
+        },
+        {
+          "where": "¿Qué tan reñida fue la ratificación?, Responde",
+          "what": "'Más reñidas' doesn't say how to compare. If I subtract the votes, a small state like New York or Rhode Island comes out closer than Massachusetts, and two states could tie. If I look at the pie, closest to half blue and half red, the order changes. I'd pick one method without knowing if it's the one the teacher wants.",
+          "why": "Different students get different 'right' answers, and I don't know which to write.",
+          "severity": "slows it down",
+          "suggestion": "Say how to measure it: 'Las más reñidas son las que tienen el gráfico más cerca de mitad azul y mitad rojo anaranjado' or 'la menor diferencia entre votos a favor y en contra (resta)'.",
+          "needsLiveMap": true,
+          "quote": "¿Qué tres votaciones fueron las más reñidas?"
+        },
+        {
+          "where": "La cláusula de los tres quintos, step 1 (also ¿Qué tan reñida...?, step 4)",
+          "what": "The map has no place names, and the sheet says to click Virginia and South Carolina (and later North Carolina). I'd have to click state after state until the title says 'Virginia'. The 'The South' bookmark would help, but the sheet doesn't mention it. The labels are abbreviations (VA, SC, NC), and not all of them are familiar to me.",
+          "why": "I lose time hunting for states, and I could confuse North and South Carolina.",
+          "severity": "slows it down",
+          "suggestion": "'Abre el marcador (Bookmarks) The South (el Sur). Virginia es VA y Carolina del Sur es SC (South Carolina).' In step 4 of ratification: 'Carolina del Norte = North Carolina, etiquetas NC (1788) y NC.'",
+          "needsLiveMap": false,
+          "quote": "Haz clic en Virginia y en Carolina del Sur."
+        },
+        {
+          "where": "Escaños en el Congreso, steps 1 and 2",
+          "what": "The sheet doesn't tell me to turn off the population layer, so the blue pies sit on top of states that are also shaded blue. I can't tell which blue is 'free people' and which is 'more seats', and the pies might cover the labels (VA 19...). Step 2 says the label 'da el estado', but it's only an abbreviation.",
+          "why": "I'd read the shading wrong or fail to see the labels.",
+          "severity": "slows it down",
+          "suggestion": "Add a step: 'Desactiva Population in 1790 para ver mejor los colores y las etiquetas.' Change step 2 to: 'cada una da la abreviatura del estado (por ejemplo, VA = Virginia) y sus escaños.'",
+          "needsLiveMap": true,
+          "quote": "un azul más oscuro indica más escaños"
+        },
+        {
+          "where": "¿Quién vivía dónde en 1790?, step 1",
+          "what": "Same as in the other lesson: 'marcador' doesn't make me think of the 'Bookmarks' button. And the bookmark name 'The states in 1790' is in English inside a Spanish sentence, so it's hard to tell where the name ends.",
+          "why": "It's the first step of the lesson.",
+          "severity": "slows it down",
+          "suggestion": "'Abre el marcador (Bookmarks) llamado The states in 1790 (los estados en 1790).'",
+          "needsLiveMap": false,
+          "quote": "Abre el marcador The states in 1790 (los estados en 1790)."
+        },
+        {
+          "where": "¿Quién vivía dónde en 1790?, step 3; La cláusula..., step 2; ¿Qué tan reñida...?, step 3",
+          "what": "The sheet sends me to 'la primera línea' or 'las dos últimas líneas' of the pop-up, but the pop-up is in English and I can't be sure the order matches. For ratification, the first line could be the result ('Ratified') instead of the vote. I don't know words like 'enslaved', 'apportionment' or 'counted in full'.",
+          "why": "If the line order changes, I read the wrong number, and I can't check using the English.",
+          "severity": "slows it down",
+          "suggestion": "Quote the English label from the pop-up instead of the line number: 'Busca la línea que empieza con Enslaved (esclavizadas)...', 'Busca Vote (votación): a favor - en contra'.",
+          "needsLiveMap": true,
+          "quote": "Lee las dos últimas líneas de cada ventana emergente"
+        },
+        {
+          "where": "Escaños en el Congreso, step 1; Cómo leer el mapa",
+          "what": "In Map layers there are two layers that start with 'House seats': 'House seats in 1793' and 'House seats today (2020 apportionment)'. The sheet says three layers are off but only explains two. I might turn on 'today' by mistake and write today's seats.",
+          "why": "My answers would come out with modern numbers, not 1793 ones.",
+          "severity": "minor",
+          "suggestion": "'Activa House seats in 1793 (no House seats today, que es la de hoy).' And in Cómo leer: 'House seats today muestra los escaños actuales; no la necesitas para estas preguntas.'",
+          "needsLiveMap": false,
+          "quote": "Tres capas están desactivadas al abrir el mapa."
+        },
+        {
+          "where": "Escaños en el Congreso, Responde; La cláusula..., Virginia line",
+          "what": "Some of the Spanish sounds odd. 'La Cámara y el Senado se cuentan' sounds like people counting the Chamber. 'Si no se contaba' sounds like 'when they used to not count them', not 'if they hadn't been counted'. 'Escaños' is a word I hardly use.",
+          "why": "I understand it, but I have to read it twice.",
+          "severity": "minor",
+          "suggestion": "'¿Por qué crees que los escaños de la Cámara y del Senado se reparten de forma distinta?' / '___ si no se hubiera contado a ninguna persona esclavizada.' The first time: 'escaños (asientos, seats)'.",
+          "needsLiveMap": false,
+          "quote": "¿Por qué crees que la Cámara y el Senado se cuentan de forma distinta?"
+        }
+      ],
+      "worksWell": [
+        "'Cómo leer el mapa' warns me that there are no place names and that the name is in the pop-up title, so I don't go looking for labels that don't exist.",
+        "The English layer names come with the Spanish in brackets (House seats in 1793 (escaños en la Cámara en 1793)), which makes them easy to find in Map layers.",
+        "In ratification, step 1 tells me to turn off the other two layers before turning on the new one, so the pies don't overlap."
+      ],
+      "englishOnMap": [
+        "enslaved",
+        "three-fifths clause",
+        "apportionment",
+        "counted in full",
+        "House seats",
+        "Ratified / did not ratify",
+        "convention",
+        "New England (bookmark)",
+        "The South (bookmark)",
+        "NC, SC, DE, NH, CT (abbreviations)"
+      ]
+    }
+  },
+  "acrossLessons": [
+    {
+      "what": "'Marcador' never comes with '(Bookmarks)', while 'Map layers' and 'Measure' do get the English in brackets. It's the first step of both lessons.",
+      "why": "Sofía doesn't connect 'marcador' with the English button and gets stuck at the start.",
+      "severity": "slows it down",
+      "suggestion": "Always write 'el marcador (Bookmarks) ...', the same way as for Map layers and Measure."
+    },
+    {
+      "what": "The sheets translate place names (Carolina del Sur, Carolina del Norte, Nueva York, Filadelfia), but the map shows them in English or as abbreviations (South Carolina, NC, Philadelphia). The battle names, though, stay in English.",
+      "why": "She has to translate back to English to find the place, and that's harder on a map with no labels.",
+      "severity": "minor",
+      "suggestion": "The first time each place appears, give both: 'Carolina del Sur (South Carolina, SC)', 'Filadelfia (Philadelphia)'."
+    },
+    {
+      "what": "'Tu respuesta' says 'dibujar en el mapa', but it doesn't name the tool (Sketch) or say how the teacher will see the drawing.",
+      "why": "She doesn't know which button to use or whether her drawing counts if she closes the map.",
+      "severity": "minor",
+      "suggestion": "'Puedes dibujar en el mapa con la herramienta Sketch (dibujo) y hacer una captura de pantalla.' Or whatever submission method the teacher uses."
+    }
+  ]
+}

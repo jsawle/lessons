@@ -1,0 +1,214 @@
+{
+  "persona": "T4",
+  "lessons": {
+    "revolutionary-battles-1775-1776": {
+      "findings": [
+        {
+          "where": "Spanish student sheet: Cómo leer el mapa, and question 1 step 3 (same need in question 2 step 3 and question 4 step 4)",
+          "what": "Every question asks students to read the winner from the legend, but the Spanish sheet never gives the legend's English labels (American Victory, British Victory) or what they mean. The same sheet does gloss the Key Port Cities legend terms, so the battle legend is the odd one out.",
+          "why": "Who won is part of three of the four answers. A newcomer reading the English legend has to guess which label is which side, so she gets the same question at every table, and the winner is what the answer key checks.",
+          "severity": "slows it down",
+          "suggestion": "Q1 step 3: 'Abre la leyenda y busca qué color significa American Victory (victoria estadounidense) y cuál British Victory (victoria británica).' In Cómo leer el mapa: '...el color del rombo muestra al ganador: en la leyenda, American Victory = victoria estadounidense y British Victory = victoria británica.'",
+          "needsLiveMap": false,
+          "quote": "Abre la leyenda y comprueba qué color muestra quién ganó."
+        },
+        {
+          "where": "Spanish and English student sheets: question 2 (¿Dónde se combatió en 1775 y dónde se combatió en 1776?), steps 1-3 and Responde",
+          "what": "The answer asks which colonies had battles each year, but no step says how to find the colony. The answer page says it comes from the Thirteen British Colonies layer or the pop-up's account, and the sheet mentions neither. Students also sort 21 battles by year and winner with one writing line and no table.",
+          "why": "Without a colony step, her English learners will try to dig the colony out of the English story text in 21 pop-ups, which is the heaviest reading on the map. This is the 'if you only do one' question, so it is the one she is most likely to use.",
+          "severity": "slows it down",
+          "suggestion": "Add step 4 (Spanish): 'Haz clic en la colonia donde está cada rombo para ver su nombre (capa Thirteen British Colonies). Si la ventana dice 1 of 2, usa las flechas.' English: 'Click the colony around each diamond to see its name (Thirteen British Colonies layer).' Replace the writing line with a two-column box, 1775 | 1776, where students write 'batalla – colonia – A o B' (A = American Victory, B = British Victory).",
+          "needsLiveMap": true,
+          "quote": "¿Qué colonias tuvieron batallas en 1775? ¿Y en 1776? ¿Qué cambió?"
+        },
+        {
+          "where": "Spanish student sheet: question 4 (¿Cómo terminó 1776?), step 2",
+          "what": "'Sigue los círculos 4 y 5' does not say what to do. In Spanish, 'seguir' a circle reads as 'go after it' or 'keep going'. The English 'Follow circles 4 and 5' has the same gap; the teacher steps say to click circle 4 and read the Battle details text.",
+          "why": "Students reading in Spanish will skip the step or ask for help. The circles are the only thing on the sheet that ties Fort Washington, Fort Lee and Trenton into one story.",
+          "severity": "slows it down",
+          "suggestion": "'Haz clic en los círculos 4 y 5 y lee el título de cada ventana emergente (está en inglés).' English: 'Click circles 4 and 5 and read the title of each pop-up.'",
+          "needsLiveMap": false,
+          "quote": "Sigue los círculos 4 y 5."
+        },
+        {
+          "where": "Spanish student sheet: question 4 Responde; question 2 heading and step 2",
+          "what": "'Se combatió' is used for 'was fought'. In Spanish a battle is 'librada', not 'combatida', so these lines read as translated.",
+          "why": "She would correct this before handing it out, and students copy the question's wording into their answers.",
+          "severity": "minor",
+          "suggestion": "Q4: '¿Cuándo se libró cada batalla y quién ganó?' Q2 step 2: '...escribe su nombre bajo el año en que se libró.' Q2 heading: '¿Dónde hubo combates en 1775 y dónde en 1776?'",
+          "needsLiveMap": false,
+          "quote": "¿Cuándo se combatió cada batalla y quién ganó?"
+        },
+        {
+          "where": "Spanish student sheet: question 1 step 5, question 3 step 5, question 4 step 5",
+          "what": "The Measure steps have no verb for the measuring: 'Usa la herramienta de medir (Measure) para la distancia...'. Question 3 says 'Usa la herramienta de medir (Measure) de Nueva York a Filadelfia', which means using the tool from New York to Philadelphia.",
+          "why": "These lines are ungrammatical and appear in three of the four questions, so she has three fixes to make on every copy.",
+          "severity": "minor",
+          "suggestion": "Q1: 'Con la herramienta Measure (medir), mide la distancia en línea recta de Boston a Concord.' Q3: 'Con la herramienta Measure, mide la distancia de Nueva York a Filadelfia y de Nueva York a Boston.' Q4: 'Con la herramienta Measure, mide la distancia de la ciudad de Nueva York a Trenton.'",
+          "needsLiveMap": false,
+          "quote": "Usa la herramienta de medir (Measure) para la distancia en línea recta de Boston a Concord."
+        },
+        {
+          "where": "Spanish student sheet: question 1 step 2 and Responde; place names throughout (Nueva York, Nueva Jersey, Carolina del Sur, Filadelfia)",
+          "what": "Place names are translated (Nueva Jersey, Carolina del Sur, Filadelfia), but the pop-ups and colony names on the map are in English, and the sheet never pairs the two. 'Lexington and Concord' is left in English, with 'and' in the middle of a Spanish sentence.",
+          "why": "A newcomer looking for 'Carolina del Sur' or 'Filadelfia' has to work out the English name alone, and 'la batalla de Lexington and Concord' reads oddly to a Spanish reader.",
+          "severity": "minor",
+          "suggestion": "Pair the names on first mention: 'Carolina del Sur (South Carolina)', 'Nueva Jersey (New Jersey)', 'Filadelfia (Philadelphia)'. Q1: '¿Cuándo fue la batalla de Lexington y Concord (Lexington and Concord en el mapa) y quién ganó?'",
+          "needsLiveMap": true,
+          "quote": "¿Cuándo fue la batalla de Lexington and Concord y quién ganó?"
+        },
+        {
+          "where": "Spanish student sheet: question 3 (¿Por qué Nueva York?), Responde",
+          "what": "'¿Qué podía alcanzar una armada...?' is ambiguous because 'alcanzar' also means 'achieve', so the question can read as 'what could a navy achieve'.",
+          "why": "The question wants places a navy could reach. A grade 8 reader may write about goals instead and miss the geography.",
+          "severity": "minor",
+          "suggestion": "'Mirando el mapa, ¿a qué lugares podía llegar una armada con base en Nueva York?'",
+          "needsLiveMap": false,
+          "quote": "¿qué podía alcanzar una armada con base en Nueva York?"
+        },
+        {
+          "where": "Spanish student sheet: Pregunta central (top of page 1)",
+          "what": "'Pasaron ... a través de Nueva Jersey' is a word-for-word version of 'move ... across New Jersey'. It is understandable but stiff.",
+          "why": "Students answer this sentence at the end and quote it back, so a natural version helps them write a clear claim.",
+          "severity": "minor",
+          "suggestion": "'Pregunta central: ¿Por qué los combates se trasladaron de Boston a Nueva York y luego cruzaron Nueva Jersey en 1775–1776?'",
+          "needsLiveMap": false,
+          "quote": "los combates pasaron de Boston a Nueva York, y luego a través de Nueva Jersey"
+        }
+      ],
+      "worksWell": [
+        "Question 3 step 1 gives the exact English layer name, the group it sits in and a Spanish gloss, and pairs the legend terms (puerto principal = Major Port City), so students can match the sheet to the layer list.",
+        "The Spanish sheet mirrors the English one exactly: the same questions, step numbers, blanks in millas and 0.8.1 footer. She can teach both groups from the front by step number.",
+        "Most of the Spanish is natural and right for grade 8: tú commands throughout, standard ArcGIS terms (ventana emergente, marcador, leyenda, capas) and 'sitio de Boston' for siege."
+      ]
+    },
+    "we-the-people-1787-1791": {
+      "findings": [
+        {
+          "where": "Spanish student sheet: question 3 (La cláusula de los tres quintos), step 2 and the fill-in line",
+          "what": "The pop-up lines students need are in English ('That gave … House seats in 1793', 'If enslaved people had been counted in full', 'If they had not been counted at all'). The Spanish step paraphrases them without the English wording, and the fill-in uses a label ('escaños con la cláusula de los tres quintos') that matches no pop-up line. The question asks for six numbers, but the frame has blanks for only two, both for Virginia.",
+          "why": "Matching a Spanish paraphrase to English 'if' sentences is the hardest step on this sheet for her English learners, and it is the heart of the lesson. A table would let them answer with numbers and less writing.",
+          "severity": "slows it down",
+          "suggestion": "Step 2: 'Lee las dos últimas líneas de cada ventana emergente: la línea If enslaved people had been counted in full (si se hubiera contado a todas las personas esclavizadas) y la línea If they had not been counted at all (si no se hubiera contado a ninguna). La línea That gave … House seats in 1793 da los escaños que tuvo de verdad.' Replace the fill-in with a table: Estado | Escaños reales (That gave…) | Contando a todas (in full) | Sin contar a ninguna (not at all), with rows for Virginia, Carolina del Sur and otro estado ___.",
+          "needsLiveMap": false,
+          "quote": "los escaños si se contara a todas las personas esclavizadas, o a ninguna."
+        },
+        {
+          "where": "Spanish student sheet: question 4 (¿Qué tan reñida fue la ratificación?), step 3",
+          "what": "The pop-up vote line reads 'Ratified on …: … for, … against', and the first North Carolina pop-up is titled 'Did not ratify (first convention)'. 'For' and 'against' are not cognates, and the sheet doesn't translate them.",
+          "why": "A newcomer can find the two numbers but can't tell which is which. Both the 'closest vote' question and the North Carolina question then fail on two small words.",
+          "severity": "slows it down",
+          "suggestion": "'Haz clic en los gráficos y lee la primera línea de cada ventana emergente: Ratified on … (ratificada el …): … for (a favor), … against (en contra). Una ventana de Carolina del Norte dice Did not ratify (no ratificó).'",
+          "needsLiveMap": false,
+          "quote": "lee la primera línea de cada ventana emergente: los votos a favor y en contra."
+        },
+        {
+          "where": "Spanish student sheet: question 3 step 1 and question 4 step 4",
+          "what": "The map has no place names, so students find states through English pop-up titles or the English postal abbreviations in the labels (VA: 19, SC, NC (1788), NC 12). The Spanish sheet says only 'Virginia', 'Carolina del Sur' and 'Carolina del Norte', and doesn't point to The South bookmark.",
+          "why": "A recently arrived student who doesn't know US geography has to click around reading English titles, and 'Carolina del Norte' doesn't obviously become 'NC'. Questions 3 and 4 can be done on their own, so the House seats labels may not even be on.",
+          "severity": "slows it down",
+          "suggestion": "Q3 step 1: 'Abre el marcador The South (el Sur) y haz clic en Virginia (VA) y en Carolina del Sur (South Carolina, SC).' Q4 step 4: 'Busca Carolina del Norte (North Carolina; etiquetas NC (1788) y NC 12) y haz clic en sus dos gráficos.'",
+          "needsLiveMap": true,
+          "quote": "Busca Carolina del Norte y haz clic en sus dos gráficos."
+        },
+        {
+          "where": "Lesson page and teacher notes: Answering the compelling question",
+          "what": "One option asks students to make sketch pins for Madison, Hamilton, Henry and Mason, each with a quote, but no quotes are supplied, and none are on the map or the sheets. Federalist and Anti-Federalist are listed as key words but appear nowhere on the student sheets.",
+          "why": "To use this option with her English learners, she would have to find 18th-century English quotes, simplify them and translate them herself. Without that work, the option is out of reach for a quarter of the class.",
+          "severity": "slows it down",
+          "suggestion": "Add one short quote per person to the teacher notes, each with a plain-English version, a Spanish version and a note of whether he was a Federalist or an Anti-Federalist. Or drop 'each with a quote' from the option.",
+          "needsLiveMap": false,
+          "quote": "sketch pins for James Madison, Alexander Hamilton, Patrick Henry and George Mason, each with a quote"
+        },
+        {
+          "where": "Spanish student sheet: question 3, fill-in line (and step 2)",
+          "what": "The 'what if' is in the wrong tense: the fill-in has 'si no se contaba a las personas esclavizadas' (indicative) and step 2 has 'si se contara', while the Responde line correctly uses 'si se hubiera contado'.",
+          "why": "The question is about a 'what if' in the past. The indicative reads like a description of what actually happened, which muddles the comparison between the real seats and the two alternatives.",
+          "severity": "minor",
+          "suggestion": "'Virginia: ___ escaños con la cláusula de los tres quintos; ___ si no se hubiera contado a las personas esclavizadas.' Use 'si se hubiera contado' in step 2 as well (see the step 2 wording above).",
+          "needsLiveMap": false,
+          "quote": "si no se contaba a las personas esclavizadas."
+        },
+        {
+          "where": "Spanish and English student sheets: question 1 (¿Quién vivía dónde en 1790?), heading and Responde",
+          "what": "The question asks for states where 'more than a quarter' of the people were enslaved, but the pop-up gives a percentage. The heading '¿Quién vivía dónde en 1790?' is a word-for-word copy of the English.",
+          "why": "Students have to turn 'a quarter' into 25% themselves, an extra step for English learners who are also catching up on math vocabulary, and it has nothing to do with the history.",
+          "severity": "minor",
+          "suggestion": "'¿En qué estados más de una cuarta parte de la población (más del 25 %) estaba esclavizada?' English: 'more than a quarter (more than 25%)'. Heading: '¿Dónde vivía la gente en 1790?'",
+          "needsLiveMap": false,
+          "quote": "¿En qué estados más de una cuarta parte de la población estaba esclavizada?"
+        },
+        {
+          "where": "Spanish student sheet: Pregunta central (top of page 1)",
+          "what": "'Equilibró ... a los estados grandes y pequeños' sounds as if the Constitution balanced the states themselves. The Spanish needs 'los intereses de' or similar.",
+          "why": "Students write their final claim in answer to this question, and stiff wording in the question tends to produce stiff answers.",
+          "severity": "minor",
+          "suggestion": "'¿Cómo equilibró la Constitución los intereses de los estados grandes y los pequeños, y qué tan cerca estuvo de ser rechazada?'",
+          "needsLiveMap": false,
+          "quote": "¿Cómo equilibró la Constitución a los estados grandes y pequeños"
+        },
+        {
+          "where": "Spanish student sheet: question 2 (Escaños en el Congreso), Responde",
+          "what": "'Se cuentan de forma distinta' is vague: senators aren't 'counted', seats are shared out. The English 'counted differently' has the same problem.",
+          "why": "Students may write about counting votes instead of population-based versus equal seats, and miss the Great Compromise that the answer page looks for.",
+          "severity": "minor",
+          "suggestion": "'¿Por qué crees que los escaños de la Cámara y los del Senado se reparten de forma distinta?' English: 'Why do you think seats in the House and the Senate are shared out differently?'",
+          "needsLiveMap": false,
+          "quote": "¿Por qué crees que la Cámara y el Senado se cuentan de forma distinta?"
+        }
+      ],
+      "worksWell": [
+        "'Nosotros, el pueblo' matches the usual Spanish wording of the Preamble, and 'reñida' is exactly the right word for a close vote.",
+        "The three-fifths explanation in the question 3 Responde line is clear, plain Spanish: 'se contaban tres de cada cinco personas esclavizadas al repartir los escaños de la Cámara.'",
+        "Bookmark and layer names are given in English with a Spanish gloss, for example 'The states in 1790 (los estados en 1790)' and 'House seats in 1793 (escaños en la Cámara en 1793)'. 'Personas esclavizadas' matches the English 'enslaved people'."
+      ]
+    }
+  },
+  "acrossLessons": [
+    {
+      "where": "Both lesson pages: Student activity, the note under the student sheet preview",
+      "what": "The page says the Spanish sheet is a draft that still needs review by a native speaker. Read line by line, the Spanish is mostly sound, but each lesson has several translated-sounding or wrong lines (listed under each lesson).",
+      "why": "She can't hand the sheets out without proofreading each one herself, which across ten lessons is real prep time. Colleagues who don't read Spanish can't check them at all.",
+      "severity": "slows it down",
+      "suggestion": "Have both sheets reviewed by a bilingual US social-studies teacher, then replace the note with the review date. Until then, add a line inviting Spanish corrections through Report a problem.",
+      "needsLiveMap": false,
+      "quote": "Spanish draft for review by a native speaker."
+    },
+    {
+      "where": "Both Spanish student sheets: Cómo leer el mapa, the Consejo line and the Abre el mapa line",
+      "what": "The Spanish sheet never tells students that the map is in English. It translates the pop-up counter as '1 de 2' but keeps the tool names in English (Map layers, Measure), and it gives the map title only in Spanish ('Batallas de la Revolución, 1775–1776'), although the map opens with its English title.",
+      "why": "Students using the Spanish sheet look for words that may not be on screen. In an English interface they will see '1 of 2'; if the app follows a Spanish browser, the tools may not be called Map layers and Measure. Either way, one of the two won't match the sheet.",
+      "severity": "slows it down",
+      "suggestion": "Add to Cómo leer el mapa: 'El mapa está en inglés: los nombres de las capas, la leyenda y las ventanas emergentes aparecen en inglés.' Consejo: 'Si una ventana emergente dice 1 of 2 (1 de 2) o más, hay más de un elemento en ese lugar.' Map line: 'Abre el mapa: 1775–1776 Revolutionary Battles (Batallas de la Revolución, 1775–1776)'. Then open the app on a device set to Spanish and pair each tool name with what the app actually shows.",
+      "needsLiveMap": true,
+      "quote": "Si una ventana emergente dice 1 de 2 (o más)"
+    },
+    {
+      "where": "Teacher notes and lesson pages: Key words (both lessons); both student sheets",
+      "what": "The key words exist only as an English list in the teacher notes. Neither student sheet includes them, there are no Spanish equivalents, and several never appear on the sheets at all (militia, Loyalist, campaign, retreat; census, Great Compromise, Federalist, Anti-Federalist).",
+      "why": "Most of these words are Spanish cognates, which makes them the easiest support she could give. As things stand she has to build the glossary herself, and words the sheet never uses are hard for students to practise.",
+      "severity": "slows it down",
+      "suggestion": "Add a small Key words / Palabras clave box to both sheets. Revolutionary Battles: siege = sitio, militia = milicia, Continental Army = Ejército Continental, Loyalist = leal a la Corona (lealista), harbor = puerto, campaign = campaña, retreat = retirada. We the People: ratify = ratificar, convention = convención, census = censo, apportionment = reparto de escaños, Great Compromise = Gran Compromiso, three-fifths clause = cláusula de los tres quintos, Federalist = federalista, Anti-Federalist = antifederalista. Use the unused words in a question or drop them from the list. One option to add under Support: 'Preview the key words and their Spanish cognates before opening the map.'",
+      "needsLiveMap": false,
+      "quote": "siege, militia, Continental Army, Loyalist, harbor, campaign, retreat"
+    },
+    {
+      "where": "Both student sheets, Spanish and English: Cómo leer el mapa / Reading the map",
+      "what": "All the map symbols are packed into one long paragraph: six kinds of symbol in Revolutionary Battles, and three layers plus colors and labels in We the People.",
+      "why": "English learners, like students who skip long instructions, can't easily find one symbol again in the middle of a task. A short key they can glance back at is quicker than rereading a block of text.",
+      "severity": "slows it down",
+      "suggestion": "Make it a list. Revolutionary Battles: '• Rombo = batalla. Su color muestra quién ganó (mira la leyenda). • Zona gris = campo de batalla. Zona con rayas = donde la lucha fue más intensa. • Círculo blanco con número = momento decisivo (acércate para verlo). • Key Port Cities: sin ventanas emergentes; la leyenda distingue un puerto principal de uno menor.' Do the same in English and for We the People.",
+      "needsLiveMap": false,
+      "quote": "Los rombos marcan las batallas."
+    },
+    {
+      "where": "Both student sheets: Tu respuesta / Your answer",
+      "what": "The big-question answer asks for evidence from two places or layers, but gives one writing line and no sentence starter. The rubric rewards naming the layer or feature so a reader could find it, and the sheet doesn't show students how to do that.",
+      "why": "Her English learners can usually find the evidence but stall when they have to turn a claim and evidence into sentences. A frame gets them writing and points them at what the rubric scores.",
+      "severity": "slows it down",
+      "suggestion": "Add an optional frame in both languages. Revolutionary Battles: 'Los combates pasaron de ___ a ___ porque ___. En la capa ___, ___ muestra que ___. También, ___ muestra que ___.' We the People: 'La Constitución equilibró los intereses de los estados grandes y pequeños con ___. En la capa ___, veo que ___. La ratificación casi fracasó porque ___.'",
+      "needsLiveMap": false,
+      "quote": "Responde la pregunta central con evidencia de al menos dos lugares del mapa."
+    }
+  ]
+}

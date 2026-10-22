@@ -1,0 +1,196 @@
+{
+  "persona": "T3",
+  "lessons": {
+    "revolutionary-battles-1775-1776": {
+      "findings": [
+        {
+          "where": "Lesson page, Inquiry, 'Where was the fighting in 1775, and where in 1776?' (If you only do one), From the front; Student sheet question 2, step 2 and Answer line",
+          "what": "The sheet asks students to click all 21 diamonds and sort them by year and winner. The From the front steps click only Bunker Hill and Brooklyn, so students following on paper see 2 of the 21 pop-ups. The sheet also gives one writing line for both lists.",
+          "why": "This is the question he would pick for a short period, and with the class following the projector on paper, students cannot build the lists. Reading all 21 date lines from the front will not fit in 15 minutes.",
+          "severity": "stops the lesson",
+          "suggestion": "Add a 21-row grid with Battle, Year and Winner columns (or a two-column 1775 / 1776 box) to page 2. Give a projector route: click the diamonds in order down the coast while pairs record, or give each pair two or three battles and pool the lists on the board.",
+          "needsLiveMap": false,
+          "quote": "Click each diamond and write its name under the year it was fought."
+        },
+        {
+          "where": "Lesson page, Inquiry, 'Where was the fighting in 1775, and where in 1776?', From the front step 5; Student sheet question 2, Answer",
+          "what": "Students must say which colonies had battles each year, but the battle pop-ups do not name the colony. The answer page says the colony comes from the Thirteen British Colonies layer or the pop-up's account, and no front step clicks a colony.",
+          "why": "Zoomed out from Quebec to South Carolina, students at their desks cannot tell from the projected screen which side of a colony border a diamond is on. He would have to click colony areas as well, which adds minutes.",
+          "severity": "slows it down",
+          "suggestion": "Add a front step to click the colony under each cluster of diamonds, or turn on colony labels, or add the colony name to each battle pop-up.",
+          "needsLiveMap": true,
+          "quote": "Ask: which colonies had battles in 1775, and which in 1776?"
+        },
+        {
+          "where": "Lesson page, Inquiry, From the front lists for 'Where did the war begin?' and 'How did 1776 end?' (also in the Teacher notes Word)",
+          "what": "Both questions list Measure under Tools, and the sheet has blanks for the miles from Boston to Concord and from New York City to Trenton. Neither From the front list has a Measure step.",
+          "why": "If he teaches from the printed click list, he gets to the end with two blank lines on every sheet and has to work out the measurement live in front of the class.",
+          "severity": "slows it down",
+          "suggestion": "Add 'Use Measure from Boston to Concord' as a front step in question 1 and 'Use Measure from New York City to Trenton' in question 4, as question 3 already does.",
+          "needsLiveMap": false,
+          "quote": "Use Measure for the straight-line distance from Boston to Concord."
+        },
+        {
+          "where": "Lesson page, Inquiry, From the front step 1 of 'Where was the fighting...' and of 'How did 1776 end?'; About this map, Bookmarks",
+          "what": "The map has only one bookmark, Massachusetts. The other views need hand zooming: out until all 21 diamonds show, and in on New York until the Turning Points circles appear.",
+          "why": "Hunting on the projector for the zoom level where the circles appear wastes minutes while 30 students watch. On phones it is harder still.",
+          "severity": "slows it down",
+          "suggestion": "Add bookmarks such as 'All battles 1775–1776' and 'New York and New Jersey 1776' (set at a scale where the circles show), and use them in the front steps and on the sheet.",
+          "needsLiveMap": true,
+          "quote": "Zoom in on New York City until the numbered Turning Points circles appear."
+        },
+        {
+          "where": "Lesson page, Inquiry, 'Why New York?'; Student sheet question 3, steps 3–4",
+          "what": "Key Port Cities has no pop-ups and no labels, so students must name the major ports from the coastline and the nearest battle diamonds. The answer page itself says Norfolk is hard to name without labels.",
+          "why": "Students reading a projected map from their seats have to guess which symbols are larger and which city an unlabeled dot on the coast is. Paper students cannot zoom in.",
+          "severity": "slows it down",
+          "suggestion": "Label the ports in the layer, or add front steps that point to each larger symbol in turn and name the battle diamond next to it (Brooklyn, Great Bridge), so the class can write down the city.",
+          "needsLiveMap": true,
+          "quote": "The layer has no pop-ups, so use the coastline and the battle diamonds nearby to name them."
+        },
+        {
+          "where": "Student sheet, Reading the map; Lesson page, the legend step in each question's From the front",
+          "what": "Each battle's winner is shown only by the diamond's colour (blue or red). The pop-ups do not say who won, and the printed sheet has no legend.",
+          "why": "On a faded classroom projector, small blue and red diamonds can be hard to tell apart from the back of the room, and colour-blind students cannot use them. Students on paper have only the projector to go on.",
+          "severity": "slows it down",
+          "suggestion": "Keep the Support idea of writing the two colours on the board, and add a front step to say each winner aloud. Consider different shapes, or a label, for American and British victories.",
+          "needsLiveMap": true,
+          "quote": "the diamond's color shows the winner, so use the legend."
+        }
+      ],
+      "worksWell": [
+        "Each question's From the front gives the exact clicks and is repeated in the Teacher notes Word, so he can print it and hold it while running the projector.",
+        "No account or login: any cart Chromebook or a student's phone opens the map without password resets.",
+        "Measure answers come with ranges (accept 15 to 17 miles), so rough clicks on a projector or phone still count."
+      ]
+    },
+    "we-the-people-1787-1791": {
+      "findings": [
+        {
+          "where": "Lesson page, Inquiry, From the front for 'Who lived where in 1790?' and 'The three-fifths clause'; Student sheet questions 1 and 3",
+          "what": "The answers need every state's pop-up: five states are above a quarter enslaved, and seven states gained seats. The front steps click only the biggest pie and one southern pie for question 1, and Virginia, South Carolina and 'two more states' for question 3.",
+          "why": "Students on paper learn only what the projector shows. If his two extra states are not North Carolina and Maryland, they cannot write the answers the key expects.",
+          "severity": "stops the lesson",
+          "suggestion": "Add a state table to page 2 (State, people, % enslaved, seats 1793, if counted in full, if not counted). Add a front step to click every pie from north to south while pairs fill it in, so one table serves questions 1 and 3.",
+          "needsLiveMap": false,
+          "quote": "Click a pie in the South and read the percentage enslaved in the first line of the pop-up."
+        },
+        {
+          "where": "Lesson page, Inquiry, 'How close was ratification?', From the front step 3; Student sheet question 4",
+          "what": "To find the three closest votes, students have to read all 15 vote lines, but the front steps click one pie and then North Carolina's two.",
+          "why": "Paper students cannot compare votes they never saw, and clicking 15 pies one at a time on the projector uses up much of the 12 minutes.",
+          "severity": "stops the lesson",
+          "suggestion": "Print a vote table on the sheet with the 15 labels already filled in (DE 1 to VT 14, plus NC (1788)) and For, Against and Gap columns. Add a front step to click each pie in label order while pairs record the votes.",
+          "needsLiveMap": false,
+          "quote": "Click a pie and read the first line of the pop-up, which gives the votes for and against."
+        },
+        {
+          "where": "Student sheet, Reading the map; Lesson page, Teacher notes, Before class",
+          "what": "The map has no place names, and a state can only be identified by clicking it. Only the House seats in 1793 and ratification layers have labels.",
+          "why": "When he projects the map, the class cannot tell which pie is Virginia until he clicks it. Students on phones who are told to 'Click Virginia and South Carolina' must already know where those states are on a map with no labels.",
+          "severity": "slows it down",
+          "suggestion": "Label the population pies with state abbreviations, as House seats in 1793 does, or print a small labelled outline map of the 1790 states on the sheet.",
+          "needsLiveMap": false,
+          "quote": "The map has no place names: click a pie or a state to see its name"
+        },
+        {
+          "where": "Student sheet, question 3 'The three-fifths clause', step 2 and the Virginia fill-in line",
+          "what": "Step 2 says to read the last two lines (counted in full, not counted at all), but the fill-in asks for Virginia's seats under the three-fifths clause, which is on a different line ('That gave … House seats in 1793'). The question also asks about South Carolina and the full count, but the sheet has no blanks for them.",
+          "why": "Pairs copying from the projector are likely to put the full-count figure (22) in the three-fifths blank, and he loses time sorting it out.",
+          "severity": "slows it down",
+          "suggestion": "Point step 2 at the 'That gave … House seats in 1793' line as well, and replace the fill-in with a small grid: Virginia and South Carolina by three-fifths, in full and not counted.",
+          "needsLiveMap": false,
+          "quote": "Read the last two lines of each pop-up: seats with enslaved people counted in full, or not at all."
+        },
+        {
+          "where": "Lesson page, Inquiry, 'Seats in Congress' (If you only do one), From the front steps 2–4",
+          "what": "Students read the labels (abbreviation and seats) to find the states with the most and fewest seats. The fewest is Delaware with 1 seat, among the crowded small north-eastern states, and the front steps do not zoom in or use a bookmark.",
+          "why": "With the whole country on a projector, small-state labels may overlap or drop out, so students at the back cannot read DE: 1 or tell RI from CT.",
+          "severity": "slows it down",
+          "suggestion": "Add a front step to zoom to the Delaware–New Jersey area (or open New England and New York) and read the small states' labels aloud. Consider adding a Mid-Atlantic bookmark.",
+          "needsLiveMap": true,
+          "quote": "Point to the labels: each gives the state's abbreviation and its seats."
+        },
+        {
+          "where": "Lesson page, Inquiry, 'How close was ratification?', From the front step 5; Student sheet question 4, step 4",
+          "what": "The step says to zoom to North Carolina by hand, although the map has a bookmark called The South.",
+          "why": "On the projector a bookmark is quicker and more reliable than zooming, and the two North Carolina pies (Hillsborough and Fayetteville) may need a close view to tell apart.",
+          "severity": "minor",
+          "suggestion": "Make the step 'Open The South bookmark' (if it shows both North Carolina pies clearly), and say the same on the sheet.",
+          "needsLiveMap": true,
+          "quote": "Zoom to North Carolina and click both of its pies."
+        },
+        {
+          "where": "Lesson page, Inquiry, Answering the compelling question",
+          "what": "One option is sketch pins for Madison, Hamilton, Henry and Mason, each with a quote. No quotes are on the map, the sheet or in the teacher notes.",
+          "why": "His students would need a device and a web search to find quotes, and sketches are lost on a shared cart, so this option can't be done on paper.",
+          "severity": "minor",
+          "suggestion": "Give four short quotes in the teacher notes that he can print or read aloud, or drop this option.",
+          "needsLiveMap": false,
+          "quote": "sketch pins for James Madison, Alexander Hamilton, Patrick Henry and George Mason, each with a quote"
+        },
+        {
+          "where": "Lesson page, Teacher notes, Before class (also in the Teacher notes Word)",
+          "what": "It says students turn on House seats today when the questions ask, but no question uses that layer. It appears only in the Stretch task.",
+          "why": "While planning which layers to switch on in a 45-minute period, he may spend time looking for a question that is not there.",
+          "severity": "minor",
+          "suggestion": "Say 'House seats today is for the Stretch task only'.",
+          "needsLiveMap": false,
+          "quote": "students turn on House seats in 1793, House seats today and Ratifying the Constitution as the questions ask"
+        }
+      ],
+      "worksWell": [
+        "Question 2 (If you only do one) can be answered from the projected labels (abbreviation and seats), so paper students can do it from the screen.",
+        "The ratification labels (DE 1 to VT 14) name each state on screen, so the class can follow without the teacher clicking every pie.",
+        "The Support line (do question 2 from the front, read one pop-up aloud, then pairs click their own states) fits pairs sharing devices."
+      ]
+    }
+  },
+  "acrossLessons": [
+    {
+      "where": "Student sheet (Word, English and Spanish), page 1 under the big question, both lessons; Teacher notes Word, Map address",
+      "what": "The sheet says 'Open the map:' followed by the map's name as a link. On paper it is just a title, with no web address or QR code. The only address is in the teacher notes, as a long arcgis.com link with appid and webmap codes.",
+      "why": "Students on cart Chromebooks or their own phones cannot get to the map from the paper sheet. Typing that link eats into the start of a 45-minute period, and Google Classroom only helps students who have it on that device.",
+      "severity": "stops the lesson",
+      "suggestion": "Print a short link and a QR code next to 'Open the map' on the sheet and in the teacher notes.",
+      "needsLiveMap": false,
+      "quote": "Open the map: 1775–1776 Revolutionary Battles"
+    },
+    {
+      "where": "How these lessons work, 'What every lesson includes' and 'Preparing'; every Student sheet question's 'On the map:' steps",
+      "what": "Every question on both sheets needs the live map, and nothing says what to do if arcgis.com, the Hub page or pop-up images are blocked or slow. Preparing says to click through the map, but not to test it on a student device on the school network. The We the People page has no map preview image at all.",
+      "why": "Under district filtering, if the map is blocked or slow on the day he has nothing to project, and students cannot start the sheets.",
+      "severity": "stops the lesson",
+      "suggestion": "Add a Preparing bullet: test the link on a student Chromebook and a phone on the school network the day before. Offer a printable backup: snapshots of the map at each bookmark, plus the pop-up facts the questions use.",
+      "needsLiveMap": false,
+      "quote": "The questions can't be answered from a textbook alone."
+    },
+    {
+      "where": "Lessons catalogue and the Time line in each lesson page header; the times on each Inquiry question",
+      "what": "The question times add up to 52 minutes for Revolutionary Battles (10, 15, 15, 12) and 49 minutes for We the People (10, 15, 12, 12), before the big-question answer and the reflection. Both lessons are labelled 45 minutes.",
+      "why": "His 45 minutes also have to cover handing out the cart and waiting for Chromebooks to wake and load the map. Realistically he gets two questions and a written answer, and the page does not say which two to pair.",
+      "severity": "slows it down",
+      "suggestion": "Add a 45-minute plan line to each lesson, for example: set-up 5, question 1 from the front 10, the If you only do one question in pairs 15, big question on paper 10, the rest as an extension.",
+      "needsLiveMap": false,
+      "quote": "45 minutes, or 10–15 per question"
+    },
+    {
+      "where": "How these lessons work, 'Ways to run a lesson'; each lesson page, Teacher notes, 'Ways to run this lesson'",
+      "what": "The four ways are only labels, with no description. None covers his situation: too few devices, a mix of Chromebooks and phones, pairs sharing a screen, or a class following the projector on paper.",
+      "why": "Each time, he has to work out the pairing, who clicks, and how students on paper record what they see.",
+      "severity": "slows it down",
+      "suggestion": "Describe each way in two or three lines and add a 'Few devices' way: one device per pair or group, the teacher projects and clicks, pairs record on paper, and the features are split among the pairs.",
+      "needsLiveMap": false,
+      "quote": "Front-of-class demonstration"
+    },
+    {
+      "where": "Student sheet, 'Your answer' line, both lessons; How these lessons work, note that sketches are not saved",
+      "what": "The final answer offers sketching on the map, but sketches are not saved and need a screenshot, and the sheet has no outline map to draw on.",
+      "why": "On shared cart Chromebooks a screenshot stays on a device the next class uses, and paper students cannot sketch at all, so this option does not suit his room.",
+      "severity": "minor",
+      "suggestion": "Make the paragraph the default on the sheet, and add a small printed outline map (the east coast for 1775–1776, the 1790 states) so students can draw a route or mark states by hand.",
+      "needsLiveMap": false,
+      "quote": "You can write a paragraph, sketch on the map, or both."
+    }
+  ]
+}
