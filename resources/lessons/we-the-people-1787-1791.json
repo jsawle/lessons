@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.9",
   "id": "we-the-people-1787-1791",
-  "contentVersion": "0.6.1",
+  "contentVersion": "0.7.0",
   "status": "draft",
   "updated": "2026-10-22",
   "reviewed": null,
@@ -225,11 +225,11 @@
         "core": false,
         "minutes": 12,
         "frontOfClass": [
-          "Click Virginia's pie and read the last two lines of the pop-up.",
-          "Click South Carolina's pie and read the same two lines.",
+          "Click Virginia's pie and read its seats in 1793, then the last two lines of the pop-up.",
+          "Click South Carolina's pie and read the same three numbers.",
           "Ask: how many seats would each have had if enslaved people had been counted in full, or not at all?",
-          "Click two more states and compare those two lines with the actual seats.",
-          "Ask: which states gained seats by counting people who could not vote?"
+          "Click two more states and compare the same three numbers.",
+          "Ask: which states gained seats by counting enslaved people, who could not vote?"
         ],
         "steps": [
           {
@@ -237,26 +237,26 @@
             "es": "Haz clic en Virginia y en Carolina del Sur."
           },
           {
-            "en": "Read the last two lines of each pop-up: seats with enslaved people counted in full, or not at all.",
-            "es": "Lee las dos últimas líneas de cada ventana emergente: los escaños si se contara a todas las personas esclavizadas, o a ninguna."
+            "en": "Read the seats in 1793 in each pop-up, then the last two lines: the seats if enslaved people had been counted in full, or not at all.",
+            "es": "Lee los escaños de 1793 en cada ventana emergente y luego las dos últimas líneas: los escaños si se hubiera contado a todas las personas esclavizadas, o a ninguna."
           },
           {
-            "en": "Click other states and read the same two lines.",
-            "es": "Haz clic en otros estados y lee las mismas dos líneas."
+            "en": "Click other states and compare the same three numbers.",
+            "es": "Haz clic en otros estados y compara los mismos tres números."
           }
         ],
         "ask": {
-          "en": "Under the three-fifths clause, three of every five enslaved people were counted when House seats were shared out. How many seats would Virginia and South Carolina each have had if enslaved people had been counted in full, or not at all? Which states gained seats by counting people who could not vote?",
-          "es": "Según la cláusula de los tres quintos, se contaban tres de cada cinco personas esclavizadas al repartir los escaños de la Cámara. ¿Cuántos escaños habrían tenido Virginia y Carolina del Sur si se hubiera contado a todas las personas esclavizadas, o a ninguna? ¿Qué estados ganaron escaños al contar a personas que no podían votar?"
+          "en": "Under the three-fifths clause, three of every five enslaved people were counted when House seats were shared out. How many seats did Virginia and South Carolina each have under the clause, and how many would each have had if enslaved people had been counted in full, or not at all? Which states gained seats by counting enslaved people, who could not vote?",
+          "es": "Según la cláusula de los tres quintos, se contaban tres de cada cinco personas esclavizadas al repartir los escaños de la Cámara. ¿Cuántos escaños tuvieron Virginia y Carolina del Sur con la cláusula, y cuántos habría tenido cada uno si se hubiera contado a todas las personas esclavizadas, o a ninguna? ¿Qué estados ganaron escaños al contar a personas esclavizadas, que no podían votar?"
         },
         "fill": {
-          "en": "Virginia: ____ seats with the three-fifths clause; ____ if enslaved people were not counted.",
-          "es": "Virginia: ____ escaños con la cláusula de los tres quintos; ____ si no se contaba a las personas esclavizadas."
+          "en": "Virginia: ____ seats with the three-fifths clause; ____ if counted in full; ____ if not counted at all.",
+          "es": "Virginia: ____ escaños con la cláusula de los tres quintos; ____ si se hubiera contado a todas; ____ si no se hubiera contado a ninguna."
         },
         "lines": 3,
         "answer": {
           "where": "Population in 1790 or House seats in 1793 pop-up, the lines \"That gave … House seats in 1793\", \"If enslaved people had been counted in full\" and \"If they had not been counted at all\". Virginia: 19, 22, 13. South Carolina: 6, 7, 4. Seven states show a higher seat count under the clause than with no count, listed below.",
-          "accept": "A good answer gives Virginia 19 and 13 (fill-in) and South Carolina 6 and 4, names at least Virginia, North Carolina, Maryland and South Carolina as states that gained seats, and says that enslaved people were counted for seats but could not vote, so the gain went to the slaveholding states. The seven states gained 15 seats in all (105 instead of 90), Virginia alone 6.",
+          "accept": "A good answer gives Virginia 19, 22 and 13 (fill-in) and South Carolina 6, 7 and 4, names at least Virginia, North Carolina, Maryland and South Carolina as states that gained seats, and says that enslaved people were counted for seats but could not vote, so the gain went to the slaveholding states. The seven states gained 15 seats in all (105 instead of 90), Virginia alone 6.",
           "table": {
             "caption": "States whose House seats changed with the three-fifths clause, from the pop-ups",
             "columns": [
@@ -391,7 +391,7 @@
                 "GA 4",
                 "Georgia",
                 "26–0",
-                "December 31, 1787"
+                "December 31, 1787 (deeds of ratification adopted January 2, 1788; accept either)"
               ],
               [
                 "CT 5",
@@ -485,7 +485,7 @@
   "discussion": [
     "Virginia had the most people and the most House seats but the same two senators as Delaware. Looking at the pies and the seat labels, which states had most to gain from each half of that bargain?",
     "Compare the actual seats for Virginia and South Carolina with the two alternatives in their pop-ups. How many seats did the three-fifths clause move, and who in those states did that extra representation speak for?",
-    "The closest ratification votes were in some of the biggest states, and North Carolina voted twice. What does the map suggest might have happened if one or two of those votes had gone the other way?"
+    "Some ratification votes were very close, and North Carolina voted twice. What does the map suggest might have happened if one or two of those votes had gone the other way?"
   ],
   "differentiation": {
     "support": "Write the three layer names on the board and do question 2 together from the front, reading one pop-up aloud before pairs click their own states.",
@@ -510,12 +510,12 @@
   ],
   "assessment": {
     "evidence": "Strong answers use the House seats in 1793 labels, legend and pop-ups (Virginia VA: 19, Delaware DE: 1, and 2 senators for every state), the three-fifths lines of a pop-up (Virginia 19 seats, 22 if counted in full, 13 if not counted), and the vote line of the Ratifying the Constitution pop-ups (Rhode Island 34–32 on May 29, 1790; New York 30–27; Massachusetts 187–168).",
-    "exemplar": "The Constitution balanced large and small states by giving each state House seats by population but the same two senators, and it came very close to being rejected in some of the biggest states. In the House seats in 1793 layer, the label and the darkest legend class show Virginia with 19 seats, the most, while the palest class shows Delaware with only 1, yet the pop-up for each says plus 2 senators, like every state. That suited the large states in the House and protected the small ones in the Senate. The Virginia pop-up also shows the three-fifths clause at work: 19 seats, but only 13 if enslaved people had not been counted, so slaveholding states gained seats for people who could not vote. In the Ratifying the Constitution layer, the vote line of the pop-ups shows how close it was: Rhode Island 34 to 32 on May 29, 1790, New York 30 to 27 on July 26, 1788, and Massachusetts 187 to 168 on February 6, 1788. North Carolina even has two pies, because its first convention at Hillsborough in 1788 did not ratify and a second one did in November 1789. The pattern is that a small state like Delaware ratified first and unanimously, 30 to 0 on December 7, 1787, while the closest votes came in big states, so the balance held, but only just."
+    "exemplar": "The Constitution balanced large and small states by giving each state House seats by population but the same two senators, and it came very close to being rejected in small Rhode Island and in big New York and Massachusetts. In the House seats in 1793 layer, the label and the darkest legend class show Virginia with 19 seats, the most, while the palest class shows Delaware with only 1, yet the pop-up for each says plus 2 senators, like every state. That suited the large states in the House and protected the small ones in the Senate. The Virginia pop-up also shows the three-fifths clause at work: 19 seats, but only 13 if enslaved people had not been counted, so slaveholding states gained seats for enslaved people, who could not vote. In the Ratifying the Constitution layer, the vote line of the pop-ups shows how close it was: Rhode Island 34 to 32 on May 29, 1790, New York 30 to 27 on July 26, 1788, and Massachusetts 187 to 168 on February 6, 1788. North Carolina even has two pies, because its first convention at Hillsborough in 1788 did not ratify and a second one did in November 1789. The pattern is that a small state like Delaware ratified first and unanimously, 30 to 0 on December 7, 1787, while the closest votes came in the smallest state, Rhode Island, and in two of the biggest, New York and Massachusetts, so the balance held, but only just."
   },
   "studentSupport": {
     "beforeYouStart": {
-      "en": "In 1787, delegates from twelve states met in Philadelphia and wrote the Constitution. Large and small states disagreed about how many votes each should have in Congress. The Constitution would take effect only when nine states had ratified it, each at a special convention.",
-      "es": "En 1787, delegados de doce estados se reunieron en Filadelfia y redactaron la Constitución. Los estados grandes y los pequeños no estaban de acuerdo sobre cuántos votos debía tener cada uno en el Congreso. La Constitución solo entraría en vigor cuando nueve estados la ratificaran, cada uno en una convención especial."
+      "en": "In 1787, delegates from twelve states met in Philadelphia and wrote the Constitution. Large and small states disagreed about how many votes each should have in Congress. They settled it with the Great Compromise, and with the Three-Fifths Compromise on how enslaved people were counted. The Constitution would take effect only when nine states had ratified it, each at a special convention.",
+      "es": "En 1787, delegados de doce estados se reunieron en Filadelfia y redactaron la Constitución. Los estados grandes y los pequeños no estaban de acuerdo sobre cuántos votos debía tener cada uno en el Congreso. Lo resolvieron con el Gran Compromiso y con el Compromiso de los Tres Quintos, que decidió cómo se contaba a las personas esclavizadas. La Constitución solo entraría en vigor cuando nueve estados la ratificaran, cada uno en una convención especial."
     },
     "readingTheMap": {
       "en": "The map has no place names: click a pie or a state to see its name in the pop-up title. Pies on the states show the people in 1790: blue for free, orange-red for enslaved, and bigger pies for more people. Three layers are off when the map opens. In House seats in 1793, darker blue means more seats, and each label gives the state's abbreviation and seats. In Ratifying the Constitution, each pie sits where a state's convention met: blue for votes to ratify, orange-red for votes against, and labels give the order each state ratified. Maine is shown within Massachusetts and West Virginia within Virginia.",
@@ -530,7 +530,7 @@
     }
   },
   "teacherNotes": {
-    "beforeClass": "When the map opens, only the 1790 population layer is on; students turn on House seats in 1793, House seats today and Ratifying the Constitution as the questions ask. The basemap has no place names, so students click a state to see its name.",
+    "beforeClass": "When the map opens, only the 1790 population layer is on; students turn on House seats in 1793 and Ratifying the Constitution as the questions ask, and House seats today for the stretch. The basemap has no place names, so students click a state to see its name.",
     "misconceptions": [
       {
         "claim": "The three-fifths clause gave enslaved people a share of representation.",
