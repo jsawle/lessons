@@ -1,0 +1,678 @@
+{
+ "tool": "Map pictures 1.0",
+ "width": 1200,
+ "height": 675,
+ "lessons": {
+  "revolutionary-battles-1775-1776": {
+   "webmapId": "bda07736a1b9425ea19fdde282088bd6",
+   "file": "revolutionary-battles-1775-1776.jpg",
+   "state": "ready",
+   "title": "1775-1776 Revolutionary Battles",
+   "layers": [
+    {
+     "title": "World Hillshade",
+     "type": "tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Environment Base Minus Populated Places",
+     "type": "vector-tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Modern Antique (no Labels)",
+     "type": "vector-tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Environment Surface Water and Label",
+     "type": "vector-tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "1763 Proclamation Line",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Thirteen British Colonies",
+     "type": "group",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Colony Area",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Colony Boundary",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Revolutionary War Battlefields",
+     "type": "group",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Revolutionary War Battlefield Boundary",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Revolutionary War Core Areas",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Revolutionary War Battles",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Key Port Cities in the American Revolution 1775-1781",
+     "type": "feature",
+     "visible": false,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Turning Points",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    }
+   ],
+   "consoleErrors": []
+  },
+  "roads-trails-and-rails-west": {
+   "webmapId": "3ec83a9d66454ade8aead0a64872d931",
+   "file": "roads-trails-and-rails-west.jpg",
+   "state": "ready",
+   "title": "Roads, Trails, and Rails West",
+   "layers": [
+    {
+     "title": "World Hillshade",
+     "type": "tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Modern Antique",
+     "type": "vector-tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Indigenous Territories",
+     "type": "feature",
+     "visible": false,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Railroads",
+     "type": "group",
+     "visible": false,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Transcontinental Railroads completed by 1911",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Railroads 1826 to 1911",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Trails West",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    }
+   ],
+   "consoleErrors": []
+  },
+  "us-slavery-and-slave-trade-1850": {
+   "webmapId": "819f60a5a3344d958d24f505849abaaa",
+   "file": "us-slavery-and-slave-trade-1850.jpg",
+   "state": "ready",
+   "title": "US Slavery and Slave Trade, 1850",
+   "layers": [
+    {
+     "title": "USA Contiguous Albers Equal Area Conic Basemap",
+     "type": "vector-tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "USAMajorRivers_Project",
+     "type": "tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "US 1850 Original Map",
+     "type": "tile",
+     "visible": false,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "United States, 1850",
+     "type": "group",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "US States and Territories 1850",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Internal Routes of the US Slave Trade",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Underground Railroad Approximate Routes",
+     "type": "group",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Underground Railroad Approximate Routes",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Cities",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Missouri Compromise Line",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    }
+   ],
+   "consoleErrors": []
+  },
+  "civil-war-battlefields": {
+   "webmapId": "7a06e8e2818941f99a3d40bb32e08118",
+   "file": "civil-war-battlefields.jpg",
+   "state": "ready",
+   "title": "Civil War Battlefields",
+   "layers": [
+    {
+     "title": "World Hillshade",
+     "type": "tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Copy of Modern Antique no Labels",
+     "type": "vector-tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "U.S. Civil War States and Territories (1863)",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "United States Battlefield Boundaries",
+     "type": "group",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Civil War Battlefield Boundary",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Civil War Core Areas",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Boundary between Union and Confederacy",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Railroads 1826 to 1863 (static)",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Civil War Battlefields",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    }
+   ],
+   "consoleErrors": []
+  },
+  "the-battle-of-vicksburg": {
+   "webmapId": "1ba8cd3fc75a49a497be1137fce4c032",
+   "file": "the-battle-of-vicksburg.jpg",
+   "state": "ready",
+   "title": "The Battle of Vicksburg",
+   "layers": [
+    {
+     "title": "World Hillshade",
+     "type": "tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Modern Antique",
+     "type": "vector-tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Railroads 1826 to 1911",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Civil War Battlefields",
+     "type": "feature",
+     "visible": false,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Key Places in the Union March to Vicksburg",
+     "type": "map-notes",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    }
+   ],
+   "consoleErrors": []
+  },
+  "we-the-people-1787-1791": {
+   "webmapId": "eba1ea7488624f3c88ef094167ed03ca",
+   "file": "we-the-people-1787-1791.jpg",
+   "state": "ready",
+   "title": "We the People: Representation and Ratification, 1787–1791",
+   "layers": [
+    {
+     "title": "World Hillshade",
+     "type": "tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Copy of Modern Antique no Labels",
+     "type": "vector-tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Population in 1790: free and enslaved",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "House seats in 1793",
+     "type": "feature",
+     "visible": false,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "House seats today (2020 apportionment)",
+     "type": "feature",
+     "visible": false,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Ratifying the Constitution, 1787–1791",
+     "type": "feature",
+     "visible": false,
+     "loadStatus": "loaded",
+     "error": null
+    }
+   ],
+   "consoleErrors": []
+  },
+  "rights-and-responsibilities-where-we-live": {
+   "webmapId": "59467ac7d7c64542acaa6a3e9c19ebf4",
+   "file": "rights-and-responsibilities-where-we-live.jpg",
+   "state": "ready",
+   "title": "Rights and Responsibilities Where We Live",
+   "layers": [
+    {
+     "title": "World_Hillshade",
+     "type": "tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "World Topographic Map",
+     "type": "vector-tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Congressional districts (119th Congress)",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "National Register of Historic Places",
+     "type": "feature",
+     "visible": false,
+     "loadStatus": "loaded",
+     "error": null
+    }
+   ],
+   "consoleErrors": []
+  },
+  "presidential-elections-1796-1800": {
+   "webmapId": "6173219d9cd84812bcd4fed859b2c182",
+   "file": "presidential-elections-1796-1800.jpg",
+   "state": "ready",
+   "title": "Presidential Elections, 1796 and 1800",
+   "layers": [
+    {
+     "title": "World Hillshade",
+     "type": "tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Copy of Modern Antique no Labels",
+     "type": "vector-tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Election of 1796: electors' votes",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Election of 1800: electors' votes",
+     "type": "feature",
+     "visible": false,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Landmark Supreme Court cases, 1803 and 1819",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    }
+   ],
+   "consoleErrors": []
+  },
+  "louisiana-purchase-1803-1806": {
+   "webmapId": "f8af7269e5c14e69b060d6184d04ff85",
+   "file": "louisiana-purchase-1803-1806.jpg",
+   "state": "ready",
+   "title": "The Louisiana Purchase and the Corps of Discovery, 1803–1806",
+   "layers": [
+    {
+     "title": "World Hillshade",
+     "type": "tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Copy of Modern Antique no Labels",
+     "type": "vector-tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Territorial acquisitions to 1803",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Biomes",
+     "type": "feature",
+     "visible": false,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "United States Watersheds",
+     "type": "group",
+     "visible": false,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Hydrologic Unit Code 12s",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Hydrologic Unit Code 10s",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Hydrologic Unit Code 8s",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Hydrologic Unit Code 6s",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Hydrologic Unit Code 4s",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Hydrologic Unit Code 2s",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Lewis and Clark National Historic Trail",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Lewis and Clark campsites (approximate)",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    }
+   ],
+   "consoleErrors": []
+  },
+  "war-of-1812-and-monroe-doctrine": {
+   "webmapId": "fad1cdb9d5704401a4e05c34f7ee693c",
+   "file": "war-of-1812-and-monroe-doctrine.jpg",
+   "state": "ready",
+   "title": "The War of 1812 and the Monroe Doctrine, 1807–1823",
+   "layers": [
+    {
+     "title": "World Hillshade",
+     "type": "tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Copy of Modern Antique no Labels",
+     "type": "vector-tile",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Historic National Boundaries: 1800",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Land Spain gave up in 1819",
+     "type": "feature",
+     "visible": false,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Battlefield Boundaries: War of 1812",
+     "type": "group",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Battlefield Boundary",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Core Areas",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Adams–Onís Treaty line, 1819",
+     "type": "feature",
+     "visible": false,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Battles of the War of 1812",
+     "type": "feature",
+     "visible": true,
+     "loadStatus": "loaded",
+     "error": null
+    },
+    {
+     "title": "Latin American independence and US recognition",
+     "type": "feature",
+     "visible": false,
+     "loadStatus": "loaded",
+     "error": null
+    }
+   ],
+   "consoleErrors": []
+  }
+ }
+}
