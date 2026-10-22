@@ -1,10 +1,10 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.8",
+  "formatVersion": "1.9",
   "id": "we-the-people-1787-1791",
-  "contentVersion": "0.6.0",
+  "contentVersion": "0.6.1",
   "status": "draft",
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "reviewed": null,
   "title": "We the People: Representation and Ratification, 1787–1791",
   "sheetTitle": {
@@ -28,6 +28,7 @@
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "eba1ea7488624f3c88ef094167ed03ca",
+    "about": "This map looks at the new nation from 1787 to 1791. Pies on each state show its free and enslaved people in the 1790 census. Three more layers, off when the map opens, show the House seats each state was given in 1793, the seats each state has today, and each state's vote to ratify the Constitution, placed where its convention met. Together they set representation alongside population, and show how each state's ratification vote went.",
     "bookmarks": [
       "The states in 1790",
       "New England and New York",

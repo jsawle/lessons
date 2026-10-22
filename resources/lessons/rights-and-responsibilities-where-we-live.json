@@ -1,10 +1,10 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.8",
+  "formatVersion": "1.9",
   "id": "rights-and-responsibilities-where-we-live",
-  "contentVersion": "0.6.0",
+  "contentVersion": "0.6.1",
   "status": "draft",
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "reviewed": null,
   "title": "Rights and Responsibilities Where We Live",
   "sheetTitle": {
@@ -28,6 +28,7 @@
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "59467ac7d7c64542acaa6a3e9c19ebf4",
+    "about": "This map is a starting point for mapping your own community. It shows the boundaries of congressional districts for the 119th Congress (2025–2027), with the district's representative (as of the layer's last update) in its pop-up, on a topographic basemap that, in most towns, labels public buildings when you zoom in close. A layer of places on the National Register of Historic Places, off when the map opens, adds historic buildings, structures and sites. Pins can be added with the Sketch tool; sketches are not saved between sessions.",
     "bookmarks": [
       "The United States"
     ],

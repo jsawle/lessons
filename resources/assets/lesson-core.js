@@ -8,7 +8,7 @@
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  var VERSION = { renderer: "3.4", format: "1.8", checker: "1.8", knowledge: "1.6", prompt: "1.2" };
+  var VERSION = { renderer: "3.5", format: "1.9", checker: "1.9", knowledge: "1.6", prompt: "1.2" };
   var HEX32 = /^[0-9a-f]{32}$/i;
   var DATE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -309,6 +309,9 @@
     var map = lesson.map || {};
     need(HEX32.test(map.webmapId || ""), "map.webmapId should be a 32-character item ID.");
     need(Array.isArray(map.layers) && map.layers.length > 0, "map.layers needs at least one layer.");
+    // Format 1.9: an overview of the whole map, shown first under About this map on the lesson page (no answers: the page can be shared with students).
+    need(str(map.about) && map.about.length >= 150 && map.about.length <= 700, "map.about should be two to four sentences (150 to 700 characters) about the map as a whole: what it covers, its main layers and how it opens.");
+    if (str(map.about)) need(map.about.indexOf("?") < 0, "map.about describes the map: no questions.");
     if (map.image !== undefined) need(map.image && /^https:\/\//.test(map.image.url || "") && str(map.image.alt), "map.image needs an https url and alt text describing what the picture shows.");
     if (map.bookmarks !== undefined) need(Array.isArray(map.bookmarks) && map.bookmarks.every(str),
       "map.bookmarks should be a list of bookmark names, exactly as in the map.");

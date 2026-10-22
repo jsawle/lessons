@@ -1,10 +1,10 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.8",
+  "formatVersion": "1.9",
   "id": "us-slavery-and-slave-trade-1850",
-  "contentVersion": "0.8.0",
+  "contentVersion": "0.8.1",
   "status": "draft",
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "reviewed": null,
   "title": "US Slavery and Slave Trade, 1850",
   "sheetTitle": {
@@ -28,6 +28,7 @@
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "819f60a5a3344d958d24f505849abaaa",
+    "about": "This map shows the United States in 1850: free and slave states and territories, the Missouri Compromise Line, the internal routes of the slave trade, and approximate Underground Railroad routes, with the towns along them. Most layers are traced from a map in Harper's Atlas of American History (1920); the Underground Railroad routes are an early-1900s interpretation. A scan of that source map is included, off when the map opens, so the traced layers can be compared with the original.",
     "image": {
       "url": "https://www.arcgis.com/sharing/rest/content/items/819f60a5a3344d958d24f505849abaaa/info/thumbnail/ago_downloaded.png",
       "alt": "Preview of the US Slavery and Slave Trade, 1850 map",

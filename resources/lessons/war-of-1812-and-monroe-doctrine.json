@@ -1,10 +1,10 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.8",
+  "formatVersion": "1.9",
   "id": "war-of-1812-and-monroe-doctrine",
-  "contentVersion": "0.6.0",
+  "contentVersion": "0.6.1",
   "status": "draft",
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "reviewed": null,
   "title": "The War of 1812 and the Monroe Doctrine, 1807–1823",
   "sheetTitle": {
@@ -27,6 +27,7 @@
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "fad1cdb9d5704401a4e05c34f7ee693c",
+    "about": "This map spans North and South America. It shows national borders in 1800, with the United States shaded pink, and 52 battles from 1811 to 1815, most from the War of 1812 itself, with battlefield land. Three layers, off when the map opens, add the land Spain gave up in 1819, the Adams–Onís Treaty line, and ten Latin American nations labeled with the year each became independent, with symbols showing whether the United States recognized them by 1824 or later.",
     "bookmarks": [
       "The War of 1812",
       "The 1819 boundary",
