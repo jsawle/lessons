@@ -1,4 +1,4 @@
-/* Lesson resource pages: Word builder v1.8 (student sheets and teacher notes).
+/* Lesson resource pages: Word builder v1.9 (student sheets and teacher notes).
    Builds one language's student sheet, or the teacher notes, from a lesson file. Works in the browser
    (pass window.docx) and in Node (pass require("docx")), so the downloaded file and the file uploaded
    to ArcGIS Online always match the page.
@@ -6,13 +6,15 @@
    address printed under the link for students on paper, 9 pt minimum text, the document language set
    once as the default, one definition of each heading style, a pause after each question title,
    Spanish chrome strings from site.json, no draft markings, and the teacher notes document.
-   1.8: the document's creator and the licence come from the lessons settings file. */
+   1.8: the document's creator and the licence come from the lessons settings file.
+   1.9: the student sheet has no printed map address and no map data credits (the credits are on the lesson page and
+   in the teacher notes); the map is reached through the link, or the link the teacher shares. */
 (function (root, factory) {
   if (typeof module === "object" && module.exports) module.exports = factory(require("./lesson-core.js"));
   else root.MMRSheet = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "1.8";
+  var VERSION = "1.9";
   /* Sheets with more question text than this get tighter writing lines, so every sheet stays on one page. */
   var LONG_SHEET_CHARS = 1040;
   /* The same for two-page sheets (lessons with studentSupport), counting the extra sections too. */
@@ -68,9 +70,6 @@
     var S = lesson.studentSupport || null;
     if (S) textChars += ["beforeYouStart", "readingTheMap", "reflection"].reduce(function (n, k) { return n + (S[k] ? MMR.plain(S[k][lang]).length : 0); }, 0) +
       (S.tips || []).reduce(function (n, k) { return n + String((T.tips || {})[k] || "").length; }, 0);
-    var credits = (T.mapData || "Map data:") + " " + lesson.map.layers.map(function (l) { return MMR.plain(l.source).replace(/ \(https:[^)]*\)/g, ""); })
-      .filter(function (v, i, a) { return a.indexOf(v) === i; }).join("; ") + ".";
-    if (S) textChars += credits.length / 2;   // the credits are set smaller
     /* Writing lines stay about 7 mm apart, which a 13-year-old can write on. A long two-page sheet keeps the line
        height and gives each question one line fewer instead, so the sheet still ends on page two. */
     var longTwo = !!S && textChars > LONG_TWO_PAGE_CHARS, veryLong = !!S && textChars > LONG_TWO_PAGE_CHARS + 600, extraLong = !!S && textChars > LONG_TWO_PAGE_CHARS + 900,
@@ -98,11 +97,9 @@
         children: [run(T.name + ":"), run("\t\t" + T.date + ":"), run("\t")] }),
       new D.Paragraph({ shading: { type: D.ShadingType.CLEAR, fill: "E5EDF5" }, spacing: { after: extraLong ? 80 : 120 },
         children: [run(T.bigQuestion + " ", { bold: true }), run(lesson.inquiry.compellingQuestion[lang])] }),
-      new D.Paragraph({ spacing: { after: 40 }, children: [run(T.openMap + " ", { italics: true }),
+      new D.Paragraph({ spacing: { after: 160 }, children: [run(T.openMap + " ", { italics: true }),
         new D.ExternalHyperlink({ link: mapUrl,
-          children: [run(title, { italics: true, color: "0A4FA8", underline: { type: D.UnderlineType.SINGLE } })] })] }),
-      // The address in print, for students working from paper.
-      new D.Paragraph({ style: "Credits", spacing: { after: 160 }, children: [run((T.sheetUrl || "Map address:") + " " + mapUrl)] })
+          children: [run(title, { italics: true, color: "0A4FA8", underline: { type: D.UnderlineType.SINGLE } })] })] })
     ];
     if (S) {
       if (S.beforeYouStart) kids.push(h2(T.beforeYouStart), new D.Paragraph({ spacing: { after: 80 }, children: [run(S.beforeYouStart[lang])] }));
@@ -132,7 +129,6 @@
       kids.push.apply(kids, lines(extraLong ? 1 : 2));
     }
 
-    if (S) kids.push(new D.Paragraph({ style: "Credits", spacing: { before: extraLong ? 60 : 120, line: extraLong ? 190 : 240 }, children: [run(credits, extraLong ? { size: 16 } : {})] }));
     return new D.Document({
       creator: MMR.names(site).pages || "Lesson resource pages", title: title + " (" + T.subtitle + ")",
       description: T.subtitle + ", " + lesson.contentVersion,
@@ -142,9 +138,9 @@
       sections: [{
         // Two-page sheets have a one-line footer, so their top and bottom margins can be a little smaller (0.625 in).
         properties: { page: { size: PAGE, margin: { top: S ? 900 : 1080, bottom: S ? 900 : 1080, left: 1080, right: 1080, footer: 500 } } },
-        // A two-page sheet carries the map credits once, at the end, and a one-line footer on each page.
+        // A one-line footer on each page: the sheet's title and the lesson's content version.
         footers: { default: new D.Footer({ children: [new D.Paragraph({ style: "Credits",
-          children: [run(title + ", " + lesson.contentVersion + "." + (S ? "" : " " + credits))] })] }) },
+          children: [run(title + ", " + lesson.contentVersion + ".")] })] }) },
         children: kids
       }]
     });

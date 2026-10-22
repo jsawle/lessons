@@ -1,10 +1,10 @@
 {
  "app": {
   "name": "{pages} (lab)",
-  "version": "0.18.0",
+  "version": "0.19.0",
   "parts": {
    "Page renderer": "3.5",
-   "Word sheet builder": "1.8",
+   "Word sheet builder": "1.9",
    "Lesson file format": "1.9",
    "Checker": "1.9",
    "Assistant knowledge builder": "1.6",
@@ -87,7 +87,6 @@
     "popups": "Si una ventana emergente dice 1 de 2 (o más), hay más de un elemento en ese lugar. Usa las flechas de la ventana para ver cada uno."
    },
    "mapData": "Datos del mapa:",
-   "sheetUrl": "Dirección del mapa:",
    "onTheMap": "En el mapa:",
    "answer": "Responde:"
   }
