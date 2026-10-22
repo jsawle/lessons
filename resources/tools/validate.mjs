@@ -3,7 +3,7 @@
 // and checks the versions table matches the code. Exits 1 if anything is wrong.
 // Each lessons settings file (resources/<name>-lessons.json) is checked merged over site.json; --lessons <name> checks one.
 // Run from the repo root:  node resources/tools/validate.mjs [--lessons <name>]
-import { readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { createRequire } from "node:module";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -42,6 +42,13 @@ const lessons = [];
 for (const f of files) {
   const lesson = readJSON("lessons/" + f);
   if (lesson) { checked++; lessons.push([f, lesson]); }
+}
+
+// A map picture served from this repository's GitHub Pages site must be in the repository.
+const PAGES = "https://jsawle.github.io/lessons/";
+for (const [f, lesson] of lessons) {
+  const url = (lesson.map && lesson.map.image && lesson.map.image.url) || "";
+  if (url.startsWith(PAGES) && !existsSync(join(root, "..", url.slice(PAGES.length)))) problems.push(`lessons/${f}: map.image ${url} is not in the repository (take it with the Map pictures workflow).`);
 }
 
 for (const name of names) {

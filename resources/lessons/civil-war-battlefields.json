@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.9",
   "id": "civil-war-battlefields",
-  "contentVersion": "0.7.1",
+  "contentVersion": "0.7.2",
   "status": "draft",
   "updated": "2026-10-22",
   "reviewed": null,
@@ -30,9 +30,10 @@
     "webmapId": "7a06e8e2818941f99a3d40bb32e08118",
     "about": "This map shows the United States as it stood in 1863, divided between the Union and the Confederacy, with the boundary between the two sides and the railroads built by then. Civil War battles appear as diamonds sized by casualties, and two battlefield layers show the land each battle covered and where the fighting was heaviest. Together they set the two sides' territory and railroads alongside the places where the fighting happened.",
     "image": {
-      "url": "https://www.arcgis.com/sharing/rest/content/items/7a06e8e2818941f99a3d40bb32e08118/info/thumbnail/ago_downloaded.png",
-      "alt": "Preview of the Civil War Battlefields map",
-      "preview": true
+      "url": "https://jsawle.github.io/lessons/resources/assets/screenshots/civil-war-battlefields.jpg",
+      "alt": "North America with the states and territories of 1863 shaded in blues and browns or left pale, each labeled with its name, and the battles as diamonds of different sizes.",
+      "width": 1200,
+      "height": 675
     },
     "bookmarks": [],
     "layers": [

@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.9",
   "id": "louisiana-purchase-1803-1806",
-  "contentVersion": "0.7.1",
+  "contentVersion": "0.7.2",
   "status": "draft",
   "updated": "2026-10-22",
   "reviewed": null,
@@ -29,6 +29,12 @@
   "map": {
     "webmapId": "f8af7269e5c14e69b060d6184d04ff85",
     "about": "This map sets the Louisiana Purchase of 1803 beside the land the United States already held, and follows the Corps of Discovery's route, about 4,900 miles from Pittsburgh to the mouth of the Columbia River, with its approximate campsites. Two layers, off when the map opens, show today's biomes and river basins along the route (modern reference data, not a historical reconstruction).",
+    "image": {
+      "url": "https://jsawle.github.io/lessons/resources/assets/screenshots/louisiana-purchase-1803-1806.jpg",
+      "alt": "The land from the Pacific coast to Pennsylvania: the land Britain gave up in 1783 shaded green, the Louisiana Purchase shaded yellow with other colors and stripes along its edges, and the Lewis and Clark route as a line of orange-red dots.",
+      "width": 1200,
+      "height": 675
+    },
     "bookmarks": [
       "The Louisiana Purchase",
       "Up the Missouri",

@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.9",
   "id": "roads-trails-and-rails-west",
-  "contentVersion": "0.7.1",
+  "contentVersion": "0.7.2",
   "status": "draft",
   "updated": "2026-10-22",
   "reviewed": null,
@@ -30,9 +30,10 @@
     "webmapId": "3ec83a9d66454ade8aead0a64872d931",
     "about": "This map shows the main routes west in the 1800s: seven overland trails, including the Oregon, California and Santa Fe Trails and the Pony Express. Two railroad layers, off when the map opens, show every line built from 1826 to 1911 and the five transcontinental lines completed by 1911, so the trails can be compared with the railroads. A layer of approximate Indigenous territories from a community-made map, also off at first, can be compared with the trails and railroads.",
     "image": {
-      "url": "https://www.arcgis.com/sharing/rest/content/items/3ec83a9d66454ade8aead0a64872d931/info/thumbnail/ago_downloaded.png",
-      "alt": "Preview of the Roads, Trails, and Rails West map",
-      "preview": true
+      "url": "https://jsawle.github.io/lessons/resources/assets/screenshots/roads-trails-and-rails-west.jpg",
+      "alt": "North America on an antique-style basemap, with the trails west drawn as dotted lines, each in its own color, across the western United States.",
+      "width": 1200,
+      "height": 675
     },
     "bookmarks": [],
     "layers": [

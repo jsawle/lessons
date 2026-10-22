@@ -11,7 +11,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "3.5";
+  var VERSION = "3.6";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
@@ -340,7 +340,7 @@
       "<h1>" + esc(lesson.title) + '</h1><div class="mml-herogrid"><div><p class="mml-summary">' + t(lesson.summary) + "</p>" + factsList(site, lesson) +
       '<p class="mml-actions">' + ext(mm, esc(N.openInApp), "mml-btn mml-primary") + " " + (gc ? gc + " " : "") +
       jump(slug, "student-activity", "Student sheet") + " " + jump(slug, "teacher-notes", "Teacher notes") + "</p></div>" +
-      (pic ? '<div class="mml-pic">' + ext(mm, '<img src="' + esc(pic.url) + '" alt="' + esc(pic.alt) + '" width="' + pic.width + '" height="' + pic.height + '">', "mml-piclink") + '<p class="mml-muted">' + (pic.own ? "The map as it opens." : "Map preview; open it" + esc(N.inApp) + " to explore.") + "</p></div>" : "") + "</div></div>");
+      (pic ? '<div class="mml-pic">' + ext(mm, '<span class="mml-sr">' + esc(N.openInApp) + ': </span><img src="' + esc(pic.url) + '" alt="' + esc(pic.alt) + '" width="' + pic.width + '" height="' + pic.height + '">', "mml-piclink") + '<p class="mml-muted">' + (pic.own ? "The map as it opens." : "Map preview; open it" + esc(N.inApp) + " to explore.") + "</p></div>" : "") + "</div></div>");
 
     // Inquiry (no answers here; they are on the teacher page)
     var inq = lesson.inquiry;
