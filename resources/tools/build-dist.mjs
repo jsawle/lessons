@@ -1,12 +1,14 @@
 #!/usr/bin/env node
-// Builds everything the Hub publishing notebook and Vera need, from the lesson files, into resources/dist:
+// Builds everything the Hub publishing notebook and the AI assistant need, from the lesson files, into resources/dist:
 //   hub-bundle.json             Hub page layouts (Lessons page, lesson pages, teacher pages) and the list of Word items
 //   sheets/<id>-student-sheet-<lang>.docx   the Word student sheets (same builder as the page's download buttons)
 //   sheets/<id>-teacher-notes-en.docx       the Word teacher notes (answers; linked from the teacher page only)
-//   vera_mapmaker_lessons.txt   Vera's knowledge file
+//   the assistant's knowledge file (assistant.knowledgeFile in the lessons settings; none if there is no assistant)
 //   publish_to_hub.ipynb        the publishing notebook, made from tools/publish_to_hub.py (upload it to ArcGIS Notebooks)
+// Settings: site.json merged with <name>-lessons.json. Without --lessons the default in site.json is built into
+// resources/dist; with --lessons <name> for another one, into resources/dist/<name>.
 // Only lesson files that pass the checker are included. GitHub runs this on every change and commits the result.
-// Run from the repo root:  npm install --no-save docx@9.7.1   then   node resources/tools/build-dist.mjs
+// Run from the repo root:  npm install --no-save docx@9.7.1   then   node resources/tools/build-dist.mjs [--lessons <name>]
 import { mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import { dirname, join } from "node:path";
@@ -21,8 +23,14 @@ const MMR = require(join(root, "assets/lesson-core.js"));
 const Sheet = require(join(root, "assets/sheet.js"));
 const Hub = require(join(root, "assets/hub-page.js"));
 
-const out = join(root, "dist");
-const site = JSON.parse(readFileSync(join(root, "site.json"), "utf8"));
+const base = JSON.parse(readFileSync(join(root, "site.json"), "utf8"));
+const at = process.argv.indexOf("--lessons");
+const name = at > 1 ? process.argv[at + 1] : MMR.defaultLessons(base);
+if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(name || "")) { console.error("--lessons needs a name: lower-case words joined by hyphens."); process.exit(1); }
+const site = MMR.mergeSite(base, JSON.parse(readFileSync(join(root, MMR.lessonsFileName(name)), "utf8")), name);
+const unfilled = MMR.unfilled(site);
+if (unfilled.length) { console.error("Names in braces with nothing to fill them (add them to names in " + MMR.lessonsFileName(name) + "):\n  - " + unfilled.join("\n  - ")); process.exit(1); }
+const out = name === MMR.defaultLessons(base) ? join(root, "dist") : join(root, "dist", name);
 const ids = JSON.parse(readFileSync(join(root, "lessons/index.json"), "utf8")).lessons;
 
 const lessons = [];
@@ -50,7 +58,8 @@ const bundle = Hub.bundle(site, lessons, { sheetFileName: Sheet.fileName, teache
 const pageProblems = Hub.checkBundle(bundle);
 if (pageProblems.length) { console.error("Hub pages have problems:\n  - " + pageProblems.join("\n  - ")); process.exit(1); }
 writeFileSync(join(out, "hub-bundle.json"), JSON.stringify(bundle, null, 1) + "\n");
-writeFileSync(join(out, MMR.veraFileName()), MMR.veraFile(site, lessons, bundle.builtOn), "utf8");
+const kf = MMR.assistantFileName(site);
+if (kf) writeFileSync(join(out, kf), MMR.assistantFile(site, lessons, bundle.builtOn), "utf8");
 
 // The notebook: the script's opening comment becomes a text cell, each "# %% CELL" block a code cell.
 const py = readFileSync(join(root, "tools/publish_to_hub.py"), "utf8");
@@ -66,5 +75,5 @@ const nb = {
 };
 writeFileSync(join(out, "publish_to_hub.ipynb"), JSON.stringify(nb, null, 1) + "\n");
 
-console.log(`Built resources/dist: ${bundle.pages.length} Hub pages, ${bundle.sheets.length} Word files (student sheets and teacher notes), Vera's knowledge file and the publishing notebook, from ${lessons.length} lesson files.`);
+console.log(`Built ${out.slice(root.length - "resources".length)} (${MMR.lessonsFileName(name)}): ${bundle.pages.length} Hub pages, ${bundle.sheets.length} Word files (student sheets and teacher notes), ${kf ? kf + ", " : ""}and the publishing notebook, from ${lessons.length} lesson files.`);
 process.exit(failed ? 1 : 0);

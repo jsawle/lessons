@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // Checks every lesson file with the same checker the page uses, checks the Hub pages built from them,
 // and checks the versions table matches the code. Exits 1 if anything is wrong.
-// Run from the repo root:  node resources/tools/validate.mjs
+// Each lessons settings file (resources/<name>-lessons.json) is checked merged over site.json; --lessons <name> checks one.
+// Run from the repo root:  node resources/tools/validate.mjs [--lessons <name>]
 import { readFileSync, readdirSync } from "node:fs";
 import { createRequire } from "node:module";
 import { dirname, join } from "node:path";
@@ -20,38 +21,56 @@ function readJSON(rel) {
   catch (e) { problems.push(`${rel}: ${e.code === "ENOENT" ? "file not found" : "not valid JSON: " + e.message}`); return null; }
 }
 
-const site = readJSON("site.json");
+const base = readJSON("site.json");
 const index = readJSON("lessons/index.json");
-if (!site || !index) { report(); }
+if (!base || !index) { report(); }
+
+// The lessons settings files, merged over site.json one at a time.
+const NAME = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+const all = readdirSync(root).filter((f) => /-lessons\.json$/.test(f)).map((f) => f.replace(/-lessons\.json$/, "")).filter((n) => NAME.test(n));
+const def = MMR.defaultLessons(base);
+if (!all.includes(def)) problems.push(`site.json lessonSettings.default is "${def}", but ${MMR.lessonsFileName(def)} doesn't exist.`);
+const at = process.argv.indexOf("--lessons");
+const names = at > 1 ? [process.argv[at + 1]] : all;
 
 const files = readdirSync(join(root, "lessons")).filter((f) => f.endsWith(".json") && f !== "index.json" && !f.startsWith("_"));
 const listed = new Set(index.lessons);
 for (const f of files) if (!listed.has(f.replace(/\.json$/, ""))) problems.push(`lessons/${f}: not listed in lessons/index.json, so it won't appear in the catalogue.`);
 for (const id of index.lessons) if (!files.includes(id + ".json")) problems.push(`lessons/index.json lists "${id}" but lessons/${id}.json doesn't exist.`);
 
-const good = [];
+const lessons = [];
 for (const f of files) {
   const lesson = readJSON("lessons/" + f);
-  if (!lesson) continue;
-  checked++;
-  const found = MMR.check(site, lesson, f);
-  for (const p of found) problems.push(`lessons/${f}: ${p}`);
-  if (!found.length && listed.has(lesson.id)) good.push(lesson);
-  if (lesson.subject && !site.hub.subjectPaths[lesson.subject]) problems.push(`lessons/${f}: subject "${lesson.subject}" has no Hub page in site.json (hub.subjectPaths).`);
-  if (lesson.course && !site.hub.coursePaths[lesson.course]) problems.push(`lessons/${f}: course "${lesson.course}" has no Hub page in site.json (hub.coursePaths).`);
+  if (lesson) { checked++; lessons.push([f, lesson]); }
+}
+
+for (const name of names) {
+  const file = MMR.lessonsFileName(name), tag = names.length > 1 ? `[${file}] ` : "";
+  const own = readJSON(file);
+  if (!own) continue;
+  const site = MMR.mergeSite(base, own, name);
+  for (const u of MMR.unfilled(site)) problems.push(`${tag}${u} has nothing to fill it in: add it to names in ${file}.`);
+  const good = [];
+  for (const [f, lesson] of lessons) {
+    const found = MMR.check(site, lesson, f);
+    for (const p of found) problems.push(`${tag}lessons/${f}: ${p}`);
+    if (!found.length && listed.has(lesson.id)) good.push(lesson);
+    const hub = site.hub || {};
+    if (lesson.subject && !(hub.subjectPaths || {})[lesson.subject]) problems.push(`${tag}lessons/${f}: subject "${lesson.subject}" has no Hub page in ${file} (hub.subjectPaths).`);
+    if (lesson.course && !(hub.coursePaths || {})[lesson.course]) problems.push(`${tag}lessons/${f}: course "${lesson.course}" has no Hub page in ${file} (hub.coursePaths).`);
+  }
+  // The Hub pages built from the lesson files must only use HTML that Hub keeps.
+  if (good.length) {
+    const bundle = Hub.bundle(site, index.lessons.map((id) => good.find((l) => l.id === id)).filter(Boolean), { sheetFileName: Sheet.fileName, teacherFileName: Sheet.teacherFileName });
+    for (const p of Hub.checkBundle(bundle)) problems.push(`${tag}Hub: ${p}`);
+  }
 }
 
 // The versions table in site.json must match the code it describes.
-const parts = (site.app && site.app.parts) || {};
+const parts = (base.app && base.app.parts) || {};
 const codeVersions = { "Page renderer": MMR.VERSION.renderer, "Lesson file format": MMR.VERSION.format, "Checker": MMR.VERSION.checker,
-  "Vera knowledge builder": MMR.VERSION.vera, "AI prompt builder": MMR.VERSION.prompt, "Word sheet builder": Sheet.VERSION, "Hub page builder": Hub.VERSION };
+  "Assistant knowledge builder": MMR.VERSION.knowledge, "AI prompt builder": MMR.VERSION.prompt, "Word sheet builder": Sheet.VERSION, "Hub page builder": Hub.VERSION };
 for (const [k, v] of Object.entries(codeVersions)) if (parts[k] !== v) problems.push(`site.json app.parts["${k}"] is ${parts[k]} but the code says ${v}.`);
-
-// The Hub pages built from the lesson files must only use HTML that Hub keeps.
-if (good.length) {
-  const bundle = Hub.bundle(site, index.lessons.map((id) => good.find((l) => l.id === id)).filter(Boolean), { sheetFileName: Sheet.fileName, teacherFileName: Sheet.teacherFileName });
-  for (const p of Hub.checkBundle(bundle)) problems.push(`Hub: ${p}`);
-}
 report();
 
 function report() {
@@ -60,6 +79,6 @@ function report() {
     for (const p of problems) console.error("  - " + p);
     process.exit(1);
   }
-  console.log(`All ${checked} lesson file${checked === 1 ? "" : "s"} passed.`);
+  console.log(`All ${checked} lesson file${checked === 1 ? "" : "s"} passed (lessons settings: ${names.join(", ")}).`);
   process.exit(0);
 }

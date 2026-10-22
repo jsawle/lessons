@@ -1,0 +1,136 @@
+{
+ "about": "Settings for the MapMaker lessons: the Atlas app they open in, the Hub they are published to, the AI assistant, the Google Classroom button, the licence and the product names. The pages and tools merge this file over the shared settings in site.json, and put the names in place of {app}, {appFull} and the other names in braces in site.json.",
+ "names": {
+  "app": "MapMaker",
+  "appFull": "National Geographic MapMaker",
+  "hubShort": "Support Hub",
+  "team": "the MapMaker team",
+  "pages": "MapMaker resource pages",
+  "measureUnits": "miles and feet"
+ },
+ "atlas": {
+  "about": "The Atlas app the lessons open in.",
+  "portalUrl": "https://mpmkr.maps.arcgis.com",
+  "appId": "0cd1cdee853c413a84bfe4b9a6931f0d"
+ },
+ "hub": {
+  "name": "MapMaker Educator Support Hub",
+  "url": "https://mapmaker-support-hub-mpmkr.hub.arcgis.com",
+  "nav": [
+   {
+    "label": "Home",
+    "path": "/"
+   },
+   {
+    "label": "Lessons",
+    "path": "/pages/lessons"
+   },
+   {
+    "label": "How To",
+    "path": "/pages/how-to"
+   },
+   {
+    "label": "About",
+    "path": "/pages/about-mapmaker"
+   },
+   {
+    "label": "More",
+    "path": "/pages/more"
+   }
+  ],
+  "feedbackPath": "/pages/feedback",
+  "subjectPaths": {
+   "World Cultures and Geography": "/pages/world-cultures-and-geography",
+   "History": "/pages/history",
+   "Earth Science": "/pages/earth-science",
+   "Life Science": "/pages/life-science"
+  },
+  "coursePaths": {
+   "US History": "/pages/us-history-ngl",
+   "World History": "/pages/world-history-ngl"
+  },
+  "feedbackQuery": "lesson"
+ },
+ "hubDemo": {
+  "name": "MapMaker Lessons (demo)",
+  "siteId": "9c39add73ebf47068e1dac37f6353b8d",
+  "url": "https://mapmakerlessons-gis-4-schools.hub.arcgis.com",
+  "lessonsSlug": "lessons",
+  "lessonsTitle": "MapMaker lessons: Grade 8 US History",
+  "lessonsIntro": "Ten lessons that teach Grade 8 US History with National Geographic MapMaker maps, arranged by topic in the order most courses teach them. Each one pairs a map with an inquiry, a Word student sheet in English and Spanish, and a separate teacher page with the answers.",
+  "distUrl": "https://jsawle.github.io/lessons/resources/dist",
+  "repoUrl": "https://github.com/jsawle/lessons",
+  "theme": {
+   "about": "Site colours the publishing notebook sets on the Hub site (Esri Calcite blue). Only these keys are changed.",
+   "header": {
+    "background": "#007AC2",
+    "text": "#FFFFFF"
+   },
+   "globalNav": {
+    "background": "#007AC2",
+    "text": "#FFFFFF"
+   },
+   "button": {
+    "background": "#007AC2",
+    "text": "#FFFFFF"
+   },
+   "body": {
+    "link": "#00619B"
+   }
+  },
+  "aboutSlug": "how-these-lessons-work",
+  "aboutTitle": "How these lessons work"
+ },
+ "assistant": {
+  "name": "Vera",
+  "url": "https://jsawle.github.io/Vera/vera_canvas_lab.html",
+  "note": "Vera's chat page. The Lessons page has an Ask Vera button; lesson pages link to it with the lesson pre-filled. No embeds.",
+  "about": "Vera, the Support Hub’s AI assistant",
+  "object": "her",
+  "knowledgeFile": "vera_mapmaker_lessons.txt",
+  "knowledgeTitle": "MapMaker lessons on the Support Hub (questions, layers and sources)",
+  "uploadNote": "Upload it in Copilot Studio under Knowledge, wait for it to finish indexing, then delete the old copy.",
+  "howItWorks": "Vera, the Support Hub's AI assistant, knows every lesson's map, layers and questions but not the answers. Each lesson page also has a prompt to paste into another AI tool, which lists the map's layers so the tool doesn't invent any."
+ },
+ "classroom": {
+  "about": "Share to Google Classroom button on each lesson page. It shares the lesson's MapMaker map, never the lesson page, which holds the answer notes. Follows Google's Classroom branding guidelines: approved wording, the official icon on the left (32 to 96 px, unaltered), Roboto Bold, a 20% black shade on the icon on hover, and the trademark notice in the page footer. The button is left out if icon is empty.",
+  "label": "Share to Google Classroom",
+  "shareUrl": "https://classroom.google.com/share",
+  "icon": "https://jsawle.github.io/lessons/resources/assets/brand/classroom-icon.png",
+  "iconSize": 32,
+  "font": "https://jsawle.github.io/lessons/resources/assets/fonts/roboto-latin-700-normal.woff2",
+  "notice": "Google Classroom is a trademark of Google LLC.",
+  "permissionsUrl": "https://www.google.com/permissions/"
+ },
+ "tools": {
+  "bookmarks": {
+   "howTo": "navigating-mapmaker",
+   "howToTitle": "Navigating MapMaker"
+  },
+  "zoom": {
+   "howTo": "navigating-mapmaker",
+   "howToTitle": "Navigating MapMaker"
+  },
+  "popups": {
+   "howTo": "explore-layers-and-data",
+   "howToTitle": "Explore Layers and Data"
+  },
+  "layers": {
+   "howTo": "explore-layers-and-data",
+   "howToTitle": "Explore Layers and Data"
+  },
+  "legend": {
+   "howTo": "explore-layers-and-data",
+   "howToTitle": "Explore Layers and Data"
+  },
+  "measure": {
+   "howTo": "measure-with-mapmaker",
+   "howToTitle": "Measure with MapMaker"
+  },
+  "sketch": {
+   "howTo": "sketch-on-a-map",
+   "howToTitle": "Sketch on a Map"
+  }
+ },
+ "licence": "The National Geographic Society and Esri make this content available under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence, except as noted. The licence excludes the National Geographic and Esri logos (the words National Geographic with the yellow border logo, and the Esri globe and letters) and any images included in the content. The logos and images may not be removed, altered or changed."
+}
