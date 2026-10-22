@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.9",
   "id": "revolutionary-battles-1775-1776",
-  "contentVersion": "0.8.1",
+  "contentVersion": "0.9.0",
   "status": "draft",
   "updated": "2026-10-22",
   "reviewed": null,
@@ -56,8 +56,8 @@
       },
       {
         "name": "1763 Proclamation Line",
-        "shows": "The line west of which King George III barred colonial settlement",
-        "source": "National Geographic Society and Virginia Geographic Alliance, from the Historical Atlas of the United States (1988)"
+        "shows": "The line west of which King George III barred colonial settlement and land purchases, reserving the land beyond it for American Indian nations",
+        "source": "National Geographic Society and Virginia Geographic Alliance, from the Historical Atlas of the United States (1988); the reservation is in the Proclamation's text ([Avalon Project, Yale Law School](https://avalon.law.yale.edu/18th_century/proc1763.asp))"
       },
       {
         "name": "Key Port Cities in the American Revolution 1775-1781",
@@ -102,7 +102,8 @@
           "Open the legend and find which colour means an American victory.",
           "Ask: who won, and how do you know from the map?",
           "Click the Boston diamond and read its two dates.",
-          "Ask: how long did the siege of Boston last?"
+          "Ask: how long did the siege of Boston last?",
+          "Use Measure for the straight-line distance from Boston to Concord."
         ],
         "steps": [
           {
@@ -167,12 +168,12 @@
             "es": "Aléjate hasta ver todos los rombos, desde Quebec hasta Carolina del Sur."
           },
           {
-            "en": "Click each diamond and write its name under the year it was fought.",
-            "es": "Haz clic en cada rombo y escribe su nombre bajo el año en que se combatió."
+            "en": "Click the diamonds and read each one's date line to see its year.",
+            "es": "Haz clic en los rombos y lee la línea de la fecha de cada uno para saber su año."
           },
           {
-            "en": "Use the legend to mark who won each battle.",
-            "es": "Usa la leyenda para marcar quién ganó cada batalla."
+            "en": "Click the colony under each group of diamonds to read its name, and use the legend to see who won.",
+            "es": "Haz clic en la colonia que está debajo de cada grupo de rombos para leer su nombre, y usa la leyenda para ver quién ganó."
           }
         ],
         "ask": {
@@ -182,7 +183,7 @@
         "lines": 5,
         "answer": {
           "where": "Revolutionary War Battles layer, zoomed out to the whole east coast: 21 diamonds. Each pop-up's date line gives the year; the diamond color and the legend give the winner. The colony comes from the Thirteen British Colonies layer or the pop-up's account.",
-          "accept": "A good answer lists most of the 21 battles under the right year (8 in 1775, 13 in 1776), names Massachusetts, New York, Virginia and Quebec for 1775 and adds North Carolina, South Carolina, New Jersey and Rhode Island for 1776, and says that the fighting began around Boston and then spread along the coast, with most battles from August 1776 in New York and New Jersey, where the British won nearly all of them.",
+          "accept": "A good answer names Massachusetts, New York and Virginia, and Quebec (a British province, not one of the thirteen colonies), for 1775 and adds North Carolina, South Carolina, New Jersey and Rhode Island for 1776, and says that the fighting began around Boston and then spread along the coast, with most battles from August 1776 in New York and New Jersey, where the British won nearly all of them.",
           "table": {
             "caption": "Battles on the map by year and winner (from the pop-up dates and the legend)",
             "columns": [
@@ -262,7 +263,7 @@
         "lines": 4,
         "answer": {
           "where": "Key Port Cities layer, legend: larger symbol = Major Port City, smaller = Port. Five major ports: Boston, New York, Philadelphia, Norfolk and Charleston, so the three between Boston and Charleston are New York, Philadelphia and Norfolk. The layer has no pop-ups or labels: New York sits by the Brooklyn diamond, Norfolk by the Great Bridge diamond, and Philadelphia is up the Delaware River south-west of Trenton. Measure tool: New York to Philadelphia about 80 miles (accept 75 to 85); New York to Boston about 190 miles (accept 180 to 200).",
-          "accept": "A good answer names at least New York and Philadelphia, gives both distances within range, and says that New York is in the middle of the coast, a day or two's sail from Boston, Philadelphia and the Chesapeake, with a deep harbor and the Hudson River leading north, so a navy there could reach the other big ports and cut New England off from the rest of the colonies.",
+          "accept": "A good answer names at least New York and Philadelphia, gives both distances within range, and uses the map to say that New York is a major port in the middle of the coast, about 80 miles from Philadelphia and 190 from Boston by Measure, so a navy based there could reach the other big ports and cut New England off from the colonies to the south.",
           "text": "Accept Norfolk if a student works it out; it is the hardest to name without labels. Background for teachers: [Battle of Brooklyn, American Battlefield Trust](https://www.battlefields.org/learn/revolutionary-war/battles/brooklyn)."
         }
       },
@@ -287,6 +288,7 @@
           "Click the diamonds for Fort Washington and Fort Lee and read their dates.",
           "Click circle 5, then the Trenton diamond, and read its date.",
           "Open the legend and check the colour of each diamond.",
+          "Use Measure for the distance from New York City to Trenton.",
           "Ask: how did 1776 end for Washington's army?"
         ],
         "steps": [
