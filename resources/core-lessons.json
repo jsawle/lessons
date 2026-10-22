@@ -52,7 +52,7 @@
   "feedbackQuery": "lesson"
  },
  "hubDemo": {
-  "name": "Lessons",
+  "name": "Atlas Based Lessons",
   "siteId": "9c39add73ebf47068e1dac37f6353b8d",
   "url": "https://lessons-gis-4-schools.hub.arcgis.com",
   "lessonsSlug": "lessons",

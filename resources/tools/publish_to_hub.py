@@ -70,7 +70,7 @@ assert isinstance(sdata, dict) and "values" in sdata, "[ERR] The site's data doe
 SITE_URL = (site.url or ("https://" + sdata["values"].get("defaultHostname", ""))).rstrip("/")
 
 os.makedirs(BACKUP_DIR, exist_ok=True)
-stamp = datetime.datetime.utcnow().strftime("%Y%m%d-%H%M%S")
+stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d-%H%M%S")
 BACKUP_PATH = os.path.join(BACKUP_DIR, f"site_{SITE_ID}_{stamp}.json")
 with open(BACKUP_PATH, "w") as f:
     json.dump(sdata, f, indent=2)
@@ -167,7 +167,7 @@ def fetch(url, what):
 
 bundle = fetch(BUNDLE_URL, "hub-bundle.json").json()
 assert bundle.get("format") == "mml-hub-bundle/1", f"[ERR] Unexpected bundle format: {bundle.get('format')}"
-print(f"[ok] Bundle built {bundle['builtOn']}, MapMaker resource pages {bundle['app']['version']}")
+print(f"[ok] Bundle built {bundle['builtOn']}, {bundle['app']['name']} {bundle['app']['version']}")
 for name, ver in bundle["app"]["parts"].items():
     print(f"       {name}: {ver}")
 print(f"[ok] {len(bundle['pages'])} pages, {len(bundle['sheets'])} Word sheets")
@@ -337,7 +337,7 @@ if DRY_RUN:
     print("\n[skip] DRY_RUN is True, so nothing was written.")
     print("       If the plan above looks right, set DRY_RUN = False at the top and run it again.")
 else:
-    now = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S.000Z")
+    now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
     work = tempfile.mkdtemp()
     sheet_urls, written = {}, []
 
