@@ -22,7 +22,7 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to the page</a>
-<aside class="lab" aria-label="About this preview"><strong>Hub page preview.</strong> Each block below is one Hub card (text, or Vera in an embed card), built from the same layout the publishing notebook sends to Hub. On Hub, the site's own header and footer replace the bar below, which shows the header colours the notebook sets. <a href="./">Lab mock-up</a></aside>
+<aside class="lab" aria-label="About this preview"><strong>Hub page preview.</strong> Each block below is one Hub card (text, or the AI prompt in an embed card), built from the same layout the publishing notebook sends to Hub. On Hub, the site's own header and footer replace the bar below, which shows the header colours the notebook sets. <a href="./">Lab mock-up</a></aside>
 <header class="hubbar" aria-label="Site header (simulated)">
   <a class="name" id="site-name" href="hub-preview.html?page=lessons">MapMaker Lessons</a>
   <nav aria-label="Site"><ul><li><a href="hub-preview.html?page=lessons">Lessons</a></li></ul></nav>
@@ -38,6 +38,9 @@
   MMR.loadSite(getJSON, location.search).then(function (site) {
     var siteName = String((site.hubDemo && site.hubDemo.name) || "").replace(/ \(demo\)$/, "");
     if (siteName) document.getElementById("site-name").textContent = siteName;
+    // Links between preview pages keep ?lessons=<name>.
+    var ls = site.lessonSettings && site.lessonSettings.current !== site.lessonSettings.default ? "&lessons=" + encodeURIComponent(site.lessonSettings.current) : "";
+    [].forEach.call(document.querySelectorAll(".hubbar a"), function (a) { a.setAttribute("href", "hub-preview.html?page=lessons" + ls); });
     return getJSON("lessons/index.json").then(function (idx) {
       return Promise.all(idx.lessons.map(function (id) { return getJSON("lessons/" + id + ".json"); }));
     }).then(function (lessons) {
@@ -63,7 +66,7 @@
             }
             return c.settings.markdown
               .replace(/\{\{SHEET:([^}]+)\}\}/g, function (_, k) { return sheets[k] || "#"; })
-              .replace(/href="\/pages\/([a-z0-9-]+)"/g, 'href="hub-preview.html?page=$1"');
+              .replace(/href="\/pages\/([a-z0-9-]+)"/g, 'href="hub-preview.html?page=$1' + ls + '"');
           }).join("");
         }).join("") + "</div>";
       }).join("");

@@ -1,0 +1,125 @@
+{
+ "about": "Settings for the lessons without a product brand: published to the demo Hub site. The maps open in the Atlas app from www.arcgis.com. No AI assistant: each lesson page has the prompt for a teacher's own AI tool. How-to videos and Report a problem link to the MapMaker Educator Support Hub, which covers the app the maps open in.",
+ "names": {
+  "app": "",
+  "appFull": "",
+  "hubShort": "Support Hub",
+  "team": "us",
+  "pages": "Lesson resource pages",
+  "measureUnits": "miles and feet"
+ },
+ "atlas": {
+  "about": "The Atlas app the lessons open in, from www.arcgis.com.",
+  "portalUrl": "https://www.arcgis.com",
+  "appId": "0cd1cdee853c413a84bfe4b9a6931f0d"
+ },
+ "hub": {
+  "name": "MapMaker Educator Support Hub",
+  "url": "https://mapmaker-support-hub-mpmkr.hub.arcgis.com",
+  "nav": [
+   {
+    "label": "Home",
+    "path": "/"
+   },
+   {
+    "label": "Lessons",
+    "path": "/pages/lessons"
+   },
+   {
+    "label": "How To",
+    "path": "/pages/how-to"
+   },
+   {
+    "label": "About",
+    "path": "/pages/about-mapmaker"
+   },
+   {
+    "label": "More",
+    "path": "/pages/more"
+   }
+  ],
+  "feedbackPath": "/pages/feedback",
+  "subjectPaths": {
+   "World Cultures and Geography": "/pages/world-cultures-and-geography",
+   "History": "/pages/history",
+   "Earth Science": "/pages/earth-science",
+   "Life Science": "/pages/life-science"
+  },
+  "coursePaths": {
+   "US History": "/pages/us-history-ngl",
+   "World History": "/pages/world-history-ngl"
+  },
+  "feedbackQuery": "lesson"
+ },
+ "hubDemo": {
+  "name": "Lessons (demo)",
+  "siteId": "9c39add73ebf47068e1dac37f6353b8d",
+  "url": "https://mapmakerlessons-gis-4-schools.hub.arcgis.com",
+  "lessonsSlug": "lessons",
+  "lessonsTitle": "Lessons: Grade 8 US History",
+  "lessonsIntro": "Ten lessons that teach Grade 8 US History with maps, arranged by topic in the order most courses teach them. Each one pairs a map with an inquiry, a Word student sheet in English and Spanish, and a separate teacher page with the answers.",
+  "distUrl": "https://jsawle.github.io/lessons/resources/dist",
+  "repoUrl": "https://github.com/jsawle/lessons",
+  "theme": {
+   "about": "Site colours the publishing notebook sets on the Hub site (Esri Calcite blue). Only these keys are changed.",
+   "header": {
+    "background": "#007AC2",
+    "text": "#FFFFFF"
+   },
+   "globalNav": {
+    "background": "#007AC2",
+    "text": "#FFFFFF"
+   },
+   "button": {
+    "background": "#007AC2",
+    "text": "#FFFFFF"
+   },
+   "body": {
+    "link": "#00619B"
+   }
+  },
+  "aboutSlug": "how-these-lessons-work",
+  "aboutTitle": "How these lessons work"
+ },
+ "classroom": {
+  "about": "Share to Google Classroom button on each lesson page. It shares the lesson's map, never the lesson page, which holds the answer notes. Follows Google's Classroom branding guidelines: approved wording, the official icon on the left (32 to 96 px, unaltered), Roboto Bold, a 20% black shade on the icon on hover, and the trademark notice in the page footer. The button is left out if icon is empty.",
+  "label": "Share to Google Classroom",
+  "shareUrl": "https://classroom.google.com/share",
+  "icon": "https://jsawle.github.io/lessons/resources/assets/brand/classroom-icon.png",
+  "iconSize": 32,
+  "font": "https://jsawle.github.io/lessons/resources/assets/fonts/roboto-latin-700-normal.woff2",
+  "notice": "Google Classroom is a trademark of Google LLC.",
+  "permissionsUrl": "https://www.google.com/permissions/"
+ },
+ "tools": {
+  "bookmarks": {
+   "howTo": "navigating-mapmaker",
+   "howToTitle": "Navigating MapMaker"
+  },
+  "zoom": {
+   "howTo": "navigating-mapmaker",
+   "howToTitle": "Navigating MapMaker"
+  },
+  "popups": {
+   "howTo": "explore-layers-and-data",
+   "howToTitle": "Explore Layers and Data"
+  },
+  "layers": {
+   "howTo": "explore-layers-and-data",
+   "howToTitle": "Explore Layers and Data"
+  },
+  "legend": {
+   "howTo": "explore-layers-and-data",
+   "howToTitle": "Explore Layers and Data"
+  },
+  "measure": {
+   "howTo": "measure-with-mapmaker",
+   "howToTitle": "Measure with MapMaker"
+  },
+  "sketch": {
+   "howTo": "sketch-on-a-map",
+   "howToTitle": "Sketch on a Map"
+  }
+ },
+ "licence": "Esri makes this content available under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence, except as noted. The licence excludes the Esri logo (the Esri globe and letters) and any images included in the content. The logo and images may not be removed, altered or changed."
+}

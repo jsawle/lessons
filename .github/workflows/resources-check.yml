@@ -1,7 +1,7 @@
 name: Check and build lesson files
 
 # On every change to the lesson pages: check every lesson file and the Hub pages built from them,
-# then build resources/dist (Hub bundle, Word sheets, Vera's knowledge file).
+# then build resources/dist (Hub bundle, Word sheets, knowledge file) for every lessons settings file.
 # On main, the built files are committed back so GitHub Pages serves them to the publishing notebook.
 
 on:
@@ -32,10 +32,10 @@ jobs:
           node-version: 22
       - name: Check every lesson file and its Hub page
         run: node resources/tools/validate.mjs
-      - name: Build Hub bundle, Word sheets and Vera's knowledge file
+      - name: Build Hub bundles, Word sheets and knowledge files (every lessons settings file)
         run: |
           npm install --no-save docx@9.7.1
-          node resources/tools/build-dist.mjs
+          node resources/tools/build-dist.mjs --all
       - name: Keep the built files as a download
         uses: actions/upload-artifact@v4
         with:

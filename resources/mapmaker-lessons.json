@@ -1,5 +1,5 @@
 {
- "about": "Settings for the MapMaker lessons: the Atlas app they open in, the Hub they are published to, the AI assistant, the Google Classroom button, the licence and the product names. The pages and tools merge this file over the shared settings in site.json, and put the names in place of {app}, {appFull} and the other names in braces in site.json.",
+ "about": "Settings for the MapMaker lessons: the Atlas app they open in, the Hub they are published to, the AI assistant, the Google Classroom button, the licence and the product names. The pages and tools merge this file over the shared settings in site.json, and put the names in place of {app}, {appFull} and the other names in braces in site.json. Not published to a Hub site at the moment; built into resources/dist/mapmaker (which also holds Vera's knowledge file).",
  "names": {
   "app": "MapMaker",
   "appFull": "National Geographic MapMaker",
@@ -52,13 +52,13 @@
   "feedbackQuery": "lesson"
  },
  "hubDemo": {
-  "name": "MapMaker Lessons (demo)",
-  "siteId": "9c39add73ebf47068e1dac37f6353b8d",
-  "url": "https://mapmakerlessons-gis-4-schools.hub.arcgis.com",
+  "name": "MapMaker Lessons",
+  "siteId": "",
+  "url": "",
   "lessonsSlug": "lessons",
   "lessonsTitle": "MapMaker lessons: Grade 8 US History",
   "lessonsIntro": "Ten lessons that teach Grade 8 US History with National Geographic MapMaker maps, arranged by topic in the order most courses teach them. Each one pairs a map with an inquiry, a Word student sheet in English and Spanish, and a separate teacher page with the answers.",
-  "distUrl": "https://jsawle.github.io/lessons/resources/dist",
+  "distUrl": "https://jsawle.github.io/lessons/resources/dist/mapmaker",
   "repoUrl": "https://github.com/jsawle/lessons",
   "theme": {
    "about": "Site colours the publishing notebook sets on the Hub site (Esri Calcite blue). Only these keys are changed.",
