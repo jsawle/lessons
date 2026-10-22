@@ -38,7 +38,7 @@
 
 
 # %% CELL 0 — Settings
-SITE_ID    = "9c39add73ebf47068e1dac37f6353b8d"   # MapMaker Lessons, mapmakerlessons-gis-4-schools.hub.arcgis.com
+SITE_ID    = "9c39add73ebf47068e1dac37f6353b8d"   # the demo Lessons site (hubDemo in core-lessons.json)
 BUNDLE_URL = "https://jsawle.github.io/lessons/resources/dist/hub-bundle.json"
 DRY_RUN    = True          # set to False when the plan looks right, then run again
 SHARE_WITH = "everyone"    # "everyone" (public) or "org"

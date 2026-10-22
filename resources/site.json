@@ -1,20 +1,20 @@
 {
  "app": {
   "name": "{pages} (lab)",
-  "version": "0.16.0",
+  "version": "0.17.0",
   "parts": {
-   "Page renderer": "3.3",
+   "Page renderer": "3.4",
    "Word sheet builder": "1.8",
    "Lesson file format": "1.8",
    "Checker": "1.8",
-   "Assistant knowledge builder": "1.5",
-   "AI prompt builder": "1.1",
-   "Hub page builder": "3.3"
+   "Assistant knowledge builder": "1.6",
+   "AI prompt builder": "1.2",
+   "Hub page builder": "3.4"
   }
  },
  "lessonSettings": {
-  "about": "Everything specific to one Atlas app and its Hub lives in <name>-lessons.json next to this file and is merged over these shared settings. Pages use the one named in default unless the address has ?lessons=<name>; the build and the checker take --lessons <name>.",
-  "default": "mapmaker"
+  "about": "Everything specific to one Atlas app and its Hub lives in <name>-lessons.json next to this file and is merged over these shared settings. The default is built into resources/dist, which the publishing notebook reads; every other one is built into resources/dist/<name>. Pages use the default unless the address has ?lessons=<name>; the build and the checker take --lessons <name> (or --all).",
+  "default": "core"
  },
  "tools": {
   "bookmarks": {
@@ -52,7 +52,7 @@
    "date": "Date",
    "bigQuestion": "Big question:",
    "yourAnswer": "Your answer:",
-   "openMap": "Open the map in {app}:",
+   "openMap": "Open the map{inApp}:",
    "subtitle": "Student sheet",
    "beforeYouStart": "Before you start",
    "readingTheMap": "Reading the map",
@@ -76,7 +76,7 @@
    "date": "Fecha",
    "bigQuestion": "Pregunta central:",
    "yourAnswer": "Tu respuesta:",
-   "openMap": "Abre el mapa en {app}:",
+   "openMap": "Abre el mapa{inAppEs}:",
    "subtitle": "Hoja del estudiante",
    "beforeYouStart": "Antes de empezar",
    "readingTheMap": "Cómo leer el mapa",
@@ -141,11 +141,11 @@
   "label": "Prompt for your own AI",
   "pageUrl": "https://jsawle.github.io/lessons/resources/prompt.html",
   "rules": [
-   "You are helping a teacher make classroom questions for a {appFull} lesson. The map, its layers, what each pop-up shows, its bookmarks and the questions already written are listed below.",
+   "You are helping a teacher make classroom questions for a {lessonKind} lesson. The map, its layers, what each pop-up shows, its bookmarks and the questions already written are listed below.",
    "Use only the layers, pop-up contents and bookmarks listed. Do not invent layers, tools, data or map features. If a question would need information this map does not show, say so instead of inventing it.",
-   "Every question must be answerable by a student who opens the map in {app} and uses it: clicking pop-ups, reading the legend, using bookmarks, measuring or turning layers on and off. Name the exact layer or bookmark a student should use.",
+   "Every question must be answerable by a student who opens the map{inApp} and uses it: clicking pop-ups, reading the legend, using bookmarks, measuring or turning layers on and off. Name the exact layer or bookmark a student should use.",
    "Write for grade 8 (age 13 to 14), in short sentences. Do not include answers unless the teacher asks for them, and never write material for students that contains the answers.",
-   "{app} has these tools: Basemaps, Open map, Map layers (turn layers on and off), Add layer, Legend, Measure ({measureUnits}), Sketch, 2D/3D, Bookmarks and pop-ups. It has no time slider or filter unless listed below. A pop-up that says 1 of 2 means more than one feature is at that spot; use the arrows to see each one."
+   "{theApp} has these tools: Basemaps, Open map, Map layers (turn layers on and off), Add layer, Legend, Measure ({measureUnits}), Sketch, 2D/3D, Bookmarks and pop-ups. It has no time slider or filter unless listed below. A pop-up that says 1 of 2 means more than one feature is at that spot; use the arrows to see each one."
   ]
  },
  "teaching": {
@@ -162,10 +162,10 @@
    "Encourage students to look for patterns and make observations, not just to find the right answers.",
    "Layers the questions don't use are there for further study."
   ],
-  "materials": "The lesson includes the {app} map, a two-page Word student sheet in English and Spanish, and these teacher notes. Print the sheet, or download it and upload it to Google Drive to edit it in Google Docs (it also opens in Word). The Google Classroom button shares the map, not the sheet; to assign the sheet, attach your Drive copy in Classroom with Make a copy for each student, or paste the map link and attach the sheet yourself. No account or login is needed. Sketches on the map are not saved between sessions.",
+  "materials": "The lesson includes the {appMap}, a two-page Word student sheet in English and Spanish, and these teacher notes. Print the sheet, or download it and upload it to Google Drive to edit it in Google Docs (it also opens in Word). The Google Classroom button shares the map, not the sheet; to assign the sheet, attach your Drive copy in Classroom with Make a copy for each student, or paste the map link and attach the sheet yourself. No account or login is needed. Sketches on the map are not saved between sessions.",
   "howTheyWork": [
-   "Each lesson is one {app} map and a set of questions that students answer by using the map: opening bookmarks, clicking pop-ups, reading the legend, turning layers on and off and measuring. The questions can't be answered from a textbook alone.",
-   "Students need no account or login. Open in {app} opens the map straight from the lesson page; the Share to Google Classroom button shares the map link with a class.",
+   "Each lesson is one {appMap} and a set of questions that students answer by using the map: opening bookmarks, clicking pop-ups, reading the legend, turning layers on and off and measuring. The questions can't be answered from a textbook alone.",
+   "Students need no account or login. {openInApp} opens the map straight from the lesson page; the Share to Google Classroom button shares the map link with a class.",
    "The Word student sheet (English and Spanish) is two pages: a big question, some background, help reading the map, the questions with space to write, and a closing reflection. Print it or share it digitally; it opens in Word and Google Docs.",
    "Each lesson page lists the questions with the exact steps for the front of the class, marks one question as the one to use if you only have 15 minutes, and gives ideas for support and stretch.",
    "Where to find each answer on the map, and what to accept, are on a separate answer page and in the Word teacher notes, so the lesson page can be shared with students.",

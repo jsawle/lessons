@@ -1,10 +1,13 @@
-/* Lesson resource pages (lab): page renderer v3.3 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
+/* Lesson resource pages (lab): page renderer v3.4 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
    standards in the hero; an AI assistant link and a copyable AI prompt). Draws a lesson page, its teacher page (?view=teacher) or the catalogue
    from JSON files. Settings: site.json merged with the lessons settings file (?lessons=<name>, or the default in site.json). */
 (function () {
   "use strict";
   var MMR = window.MMR, esc = MMR.esc, inline = MMR.inline;
   var $ = function (id) { return document.getElementById(id); };
+  /* Links between the lab pages keep ?lessons=<name>, so the whole visit uses the same lessons settings. */
+  var LS = (function () { var v = new URLSearchParams(location.search).get("lessons"); return v && /^[a-z0-9]+(-[a-z0-9]+)*$/.test(v) ? v : ""; })();
+  function keep(href) { return LS ? href + (href.indexOf("?") < 0 ? "?" : "&") + "lessons=" + encodeURIComponent(LS) : href; }
 
   function getJSON(url) {
     return fetch(url, { cache: "no-cache" }).then(function (r) {
@@ -54,8 +57,8 @@
     var teacherView = view === "teacher";
     document.title = (teacherView ? "Teacher notes: " : "") + lesson.title + " – " + site.hub.name + " (lab)";
     var hubLink = $("hub-link");
-    if (hubLink) hubLink.href = "hub-preview.html?page=" + encodeURIComponent(lesson.id + (teacherView ? "-teacher" : ""));
-    var mmUrl = MMR.atlasUrl(site, lesson.map.webmapId), app = MMR.appName(site), N = MMR.names(site);
+    if (hubLink) hubLink.href = keep("hub-preview.html?page=" + encodeURIComponent(lesson.id + (teacherView ? "-teacher" : "")));
+    var mmUrl = MMR.atlasUrl(site, lesson.map.webmapId), N = MMR.names(site), app = N.app;
     // Share to Google Classroom shares the map, never a page. Left out if switched off. One button, in Student activity.
     var gcShare = MMR.classroomShareUrl(site, mmUrl), gcSet = site.classroom || {};
     var gc = gcShare ? '<a class="btn gc" href="' + esc(gcShare) + '" target="_blank" rel="noopener"><img src="' + esc(gcSet.icon) + '" alt="" width="32" height="32">' +
@@ -66,7 +69,7 @@
     var howTo = MMR.howToLinks(site, lesson);
     var mapIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg>';
     var newTab = '<span class="sr-only"> (opens in a new tab)</span>';
-    var teacherHref = "lesson.html?id=" + encodeURIComponent(lesson.id) + "&view=teacher", lessonHref = "lesson.html?id=" + encodeURIComponent(lesson.id);
+    var teacherHref = keep("lesson.html?id=" + encodeURIComponent(lesson.id) + "&view=teacher"), lessonHref = keep("lesson.html?id=" + encodeURIComponent(lesson.id));
     var inq = lesson.inquiry, tn = lesson.teacherNotes;
     var h = [];
 
@@ -78,10 +81,10 @@
     h.push('<h1 id="lesson-title">' + (teacherView ? "Answer notes: " : "") + esc(lesson.title) + "</h1>");
     var pic = MMR.mapImage(site, lesson);
     if (teacherView) h.push('<p class="notice"><strong>For teachers.</strong> This page holds the answers and what to accept. With students, share the lesson page or the map, not this page.</p>');
-    else h.push('<div class="herogrid"><div><p class="summary">' + inline(lesson.summary) + "</p></div>" + (pic ? '<a class="pic" href="' + esc(mmUrl) + '" target="_blank" rel="noopener"><img src="' + esc(pic.url) + '" alt="' + esc(pic.alt) + '" width="' + pic.width + '" height="' + pic.height + '"><span class="muted">' + (pic.own ? "The map as it opens." : "Map preview; open it in " + esc(app) + " to explore.") + newTab + "</span></a>" : "") + "</div>");
+    else h.push('<div class="herogrid"><div><p class="summary">' + inline(lesson.summary) + "</p></div>" + (pic ? '<a class="pic" href="' + esc(mmUrl) + '" target="_blank" rel="noopener"><img src="' + esc(pic.url) + '" alt="' + esc(pic.alt) + '" width="' + pic.width + '" height="' + pic.height + '"><span class="muted">' + (pic.own ? "The map as it opens." : "Map preview; open it" + esc(N.inApp) + " to explore.") + newTab + "</span></a>" : "") + "</div>");
     h.push(facts(site, lesson));
     if (teacherView) {
-      h.push('<div class="actions"><a class="btn primary" href="' + esc(mmUrl) + '" target="_blank" rel="noopener">' + mapIcon + "Open in " + esc(app) + newTab + "</a>" +
+      h.push('<div class="actions"><a class="btn primary" href="' + esc(mmUrl) + '" target="_blank" rel="noopener">' + mapIcon + esc(N.openInApp) + newTab + "</a>" +
         '<a class="btn" href="' + lessonHref + '">Lesson page</a><button type="button" class="btn" data-download="teacher">Download Word (teacher notes)</button></div><p class="status-msg" id="dl-status" role="status" aria-live="polite"></p>');
     } else {
     }
@@ -126,10 +129,10 @@
     }
 
     h.push('<div class="wrap"><div class="cards">' +
-      card(mmUrl, app + " map", "Open the map students use, with its layers and bookmarks. No login needed.", true) +
+      card(mmUrl, app ? app + " map" : "The map", "Open the map students use, with its layers and bookmarks. No login needed.", true) +
       card("#student-activity", "Student activity", "Questions to work through on the map. Word download in " + langs.map(function (l) { return site.languageNames[l]; }).join(" and ") + ".") +
 
-      card("#how-to", "How-to videos", "Short videos for the " + app + " tools this lesson uses.") +
+      card("#how-to", "How-to videos", "Short videos for the " + N.appTools + " this lesson uses.") +
       "</div></div>");
 
     h.push('<div class="wrap layout"><nav class="toc" aria-labelledby="toc-h"><h2 id="toc-h">On this page</h2><ol>' +
@@ -154,7 +157,7 @@
     // Inquiry
     h.push('<section id="inquiry" aria-labelledby="inquiry-h"><h2 id="inquiry-h">Inquiry</h2>');
     h.push('<div class="cq"><span class="label">Compelling question</span><p class="q">' + inline(inq.compellingQuestion.en) + "</p></div>");
-    h.push('<p class="prose">Pick the questions that suit your class. Each one is answered from the map and lists the ' + esc(app) + ' tools it uses. Answers and what to accept are linked under Teacher notes.</p>');
+    h.push('<p class="prose">Pick the questions that suit your class. Each one is answered from the map and lists the ' + esc(N.appTools) + ' it uses. Answers and what to accept are linked under Teacher notes.</p>');
     h.push('<ol class="sq">' + inq.questions.map(function (q) {
       return "<li><h3>" + inline(q.title.en) + (q.core ? ' <span class="chip core">If you only do one</span>' : "") + (q.minutes ? ' <span class="chip">About ' + q.minutes + " minutes</span>" : "") + "</h3><p>" + inline(q.task) + "</p>" +
         ((q.frontOfClass || []).length ? '<p class="label">From the front</p><ol class="steps">' + q.frontOfClass.map(function (st) { return "<li>" + inline(st) + "</li>"; }).join("") + "</ol>" : "") + toolTags(site, q.tools) + "</li>";
@@ -173,7 +176,7 @@
     }).join("") + "</div>" : "") + langs.map(function (l) {
       return '<button type="button" class="btn" data-download="' + l + '">Download Word (' + esc(site.languageNames[l]) + ")</button>";
     }).join("") + '<p class="status-msg" id="dl-status" role="status" aria-live="polite"></p></div>');
-    if (gc) h.push('<p class="muted">The Share to Google Classroom button at the top of the page shares the ' + esc(app) + ' map with a class, not the sheet. To assign the sheet, attach your Drive copy in Classroom and choose Make a copy for each student.</p>');
+    if (gc) h.push('<p class="muted">The Share to Google Classroom button at the top of the page shares the ' + esc(N.appMap) + ' with a class, not the sheet. To assign the sheet, attach your Drive copy in Classroom and choose Make a copy for each student.</p>');
     langs.forEach(function (l, i) { h.push(sheetPreview(site, lesson, l, i > 0)); });
     h.push("</section>");
 
@@ -206,7 +209,7 @@
     h.push('<section id="own" aria-labelledby="own-h"><h2 id="own-h">Make your own questions</h2>' +
       (vUrl ? "<h3>Ask " + esc(A.name) + '</h3><div class="prose"><p>' + esc(A.about || A.name) + ", has this lesson’s map, bookmarks, layers and questions, but not the answers. Open " + esc(A.object || "it") + " with this lesson already named, then ask for easier or harder questions, a short quiz, questions for your own state’s standards, or questions in another language.</p></div>" +
         '<p><a class="btn" href="' + esc(vUrl) + '" target="_blank" rel="noopener">Ask ' + esc(A.name) + " about this lesson" + newTab + "</a></p>" : "") +
-      "<h3>" + esc(ai.label || "Prompt for your own AI") + '</h3><div class="prose"><p>If your school uses a different AI tool, copy the prompt and paste it in, then add what you want. It lists this map’s layers, pop-ups and bookmarks and tells the tool not to invent any, so its questions stay answerable in ' + esc(app) + ".</p></div>" +
+      "<h3>" + esc(ai.label || "Prompt for your own AI") + '</h3><div class="prose"><p>If your school uses a different AI tool, copy the prompt and paste it in, then add what you want. It lists this map’s layers, pop-ups and bookmarks and tells the tool not to invent any, so its questions stay answerable ' + (app ? "in " + esc(app) : "on the map") + ".</p></div>" +
       '<div class="sheet-tools"><button type="button" class="btn" id="copy-prompt">Copy the prompt</button><p class="status-msg" id="copy-status" role="status" aria-live="polite"></p></div>' +
       '<pre class="prompt" id="prompt-text" tabindex="0" aria-label="Prompt for your own AI">' + esc(MMR.aiPrompt(site, lesson)) + "</pre>" +
       '<p class="muted">Questions from ' + (vUrl ? esc(A.name) + " or another AI tool" : "an AI tool") + ' aren’t reviewed like this lesson. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem.</p></section>');
@@ -234,7 +237,7 @@
   }
 
   function toolTags(site, tools) {
-    return '<ul class="tools" aria-label="' + esc(MMR.appName(site)) + ' tools used">' + (tools || []).map(function (k) {
+    return '<ul class="tools" aria-label="' + esc(MMR.appName(site) || "Map") + ' tools used">' + (tools || []).map(function (k) {
       var t = site.tools[k];
       return '<li><a href="' + esc(MMR.hubUrl(site, "/pages/" + t.howTo)) + '" target="_blank" rel="noopener" title="How-to: ' + esc(t.howToTitle) + '">' + esc(t.label) +
         '<span class="sr-only">, how-to video: ' + esc(t.howToTitle) + ' (opens in a new tab)</span></a></li>';
@@ -331,14 +334,14 @@
       groups.forEach(function (u) {
         var these = u === "Other" ? other : inCourse.filter(function (l) { return l.unit === u; });
         h.push('<section class="unit" data-course="' + esc(course) + '"><h2>' + esc(u) + (courses.length > 1 ? ' <span class="muted">(' + esc(course) + ")</span>" : "") + '</h2><div class="cards cards-3" style="padding-top:0">' + these.map(function (l) {
-          return '<div class="card lesson-card"><h3><a href="lesson.html?id=' + encodeURIComponent(l.id) + '">' + esc(l.title) + "</a></h3><p>" +
+          return '<div class="card lesson-card"><h3><a href="' + esc(keep("lesson.html?id=" + encodeURIComponent(l.id))) + '">' + esc(l.title) + "</a></h3><p>" +
             esc("Grade " + l.grade + " · " + l.time) + ((l.alsoFits || []).length ? " · also fits: " + esc(l.alsoFits.join("; ")) : "") + "</p><p>" + inline(l.summary) + "</p>" +
-            '<p><a href="hub-preview.html?page=' + encodeURIComponent(l.id) + '">Hub version</a></p></div>';
+            '<p><a href="' + esc(keep("hub-preview.html?page=" + encodeURIComponent(l.id))) + '">Hub version</a></p></div>';
         }).join("") + "</div></section>");
       });
     });
     h.push("</div>");
-    h.push('<p><a href="hub-preview.html?page=' + encodeURIComponent((site.hubDemo && site.hubDemo.lessonsSlug) || "lessons") + '">See these lessons as Hub pages (preview)</a></p>');
+    h.push('<p><a href="' + esc(keep("hub-preview.html?page=" + encodeURIComponent((site.hubDemo && site.hubDemo.lessonsSlug) || "lessons"))) + '">See these lessons as Hub pages (preview)</a></p>');
     if (A && kf) h.push('<section class="team" aria-labelledby="team-h"><h2 id="team-h">For ' + esc(N.team || "the team") + '</h2><p class="prose">' + esc(A.name) + '’s knowledge file is made from every lesson file that passes the checker (' + ready.length + " of " + lessons.length + '). It holds the questions, layers and bookmarks but not the answers. ' + esc(A.uploadNote || "") + '</p>' +
       '<div class="sheet-tools"><button type="button" class="btn" id="vera-file">Download ' + esc(A.name) + ' knowledge file</button><p class="status-msg" id="vera-status" role="status" aria-live="polite"></p></div></section>');
     h.push("</div>");
@@ -376,7 +379,7 @@
     }
     var params = new URLSearchParams(location.search), id = params.get("id") || "", view = params.get("view") || "";
     if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(id)) {
-      $("main").innerHTML = '<div class="wrap" style="padding-block:2rem;display:grid;gap:.75rem"><h1>No lesson chosen</h1><p><a href="./">See all lessons</a></p></div>';
+      $("main").innerHTML = '<div class="wrap" style="padding-block:2rem;display:grid;gap:.75rem"><h1>No lesson chosen</h1><p><a href="' + esc(keep("./")) + '">See all lessons</a></p></div>';
       return;
     }
     return getJSON("lessons/" + id + ".json").then(function (lesson) {
@@ -387,6 +390,6 @@
     });
   }).catch(function (e) {
     $("main").innerHTML = '<div class="wrap" style="padding-block:2rem;display:grid;gap:.75rem"><h1>This page couldn’t load</h1><p>' + esc(e.message) +
-      '</p><p><a href="./">See all lessons</a></p></div>';
+      '</p><p><a href="' + esc(keep("./")) + '">See all lessons</a></p></div>';
   });
 })();

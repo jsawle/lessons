@@ -8,7 +8,7 @@
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  var VERSION = { renderer: "3.3", format: "1.8", checker: "1.8", knowledge: "1.5", prompt: "1.1" };
+  var VERSION = { renderer: "3.4", format: "1.8", checker: "1.8", knowledge: "1.6", prompt: "1.2" };
   var HEX32 = /^[0-9a-f]{32}$/i;
   var DATE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -54,8 +54,19 @@
   }
   function defaultLessons(base) { return ((base && base.lessonSettings) || {}).default || "mapmaker"; }
   function lessonsFileName(name) { return name + "-lessons.json"; }
+  /* Phrases built from the app's name, so the shared wording reads naturally with or without one ("Open in MapMaker" or
+     "Open map"). A lessons settings file can set any of them itself in names. */
+  function phrases(n) {
+    var app = n.app || "", out = {
+      inApp: app ? " in " + app : "", inAppEs: app ? " en " + app : "", appMap: app ? app + " map" : "map",
+      openInApp: app ? "Open in " + app : "Open map", theApp: app || "The map app", lessonKind: n.appFull || app || "map-based",
+      appLesson: app ? app + " lesson" : "lesson", appTools: app ? app + " tools" : "map tools"
+    };
+    Object.keys(n).forEach(function (k) { out[k] = n[k]; });
+    return out;
+  }
   function mergeSite(base, lessons, name) {
-    var m = merge(base, lessons), names = isObj(m.names) ? m.names : {};
+    var m = merge(base, lessons), names = phrases(isObj(m.names) ? m.names : {});
     var out = fill(m, names);
     out.names = names;
     out.lessonSettings = merge(out.lessonSettings || {}, { current: name || defaultLessons(base) });
@@ -81,7 +92,7 @@
     return out;
   }
   function names(site) { return (site && site.names) || {}; }
-  function appName(site) { return names(site).app || "the map app"; }
+  function appName(site) { return names(site).app || ""; }
   /* "A MapMaker map", "An Atlas map". */
   function aOrAn(word) { return /^[aeiou]/i.test(String(word || "")) ? "An " + word : "A " + word; }
   /* The licence statement: a lesson's own licence when it has one (it differs), otherwise the lessons settings'. */
@@ -102,7 +113,7 @@
   function mapImage(site, lesson) {
     var img = (lesson.map && lesson.map.image) || null;
     if (!img || !/^https:\/\//.test(img.url || "")) return null;
-    return { url: img.url, alt: img.alt || ("The " + lesson.title + " map in " + appName(site)), width: img.width || (img.preview ? 600 : 1200), height: img.height || (img.preview ? 400 : 675), own: !img.preview };
+    return { url: img.url, alt: img.alt || ("The " + lesson.title + " map" + (names(site).inApp || "")), width: img.width || (img.preview ? 600 : 1200), height: img.height || (img.preview ? 400 : 675), own: !img.preview };
   }
 
   /* Google's script-free Share to Classroom link. It carries only the address to share (the one parameter
@@ -203,7 +214,8 @@
     L.push("### " + lesson.title);
     L.push("**Lesson ID:** " + lesson.id);
     L.push("**Subject:** " + lesson.subject + ". **Course:** " + lesson.course + ". **Grade:** " + lesson.grade + ". **Unit:** " + lesson.unit + ". **Time:** " + lesson.time + ".");
-    L.push("**" + appName(site) + " map:** [Open " + lesson.title + " in " + appName(site) + "](" + atlasUrl(site, lesson.map.webmapId) + ")");
+    var N = names(site), mapLabel = N.appMap || "map";
+    L.push("**" + mapLabel.charAt(0).toUpperCase() + mapLabel.slice(1) + ":** [Open " + lesson.title + (N.inApp || "") + "](" + atlasUrl(site, lesson.map.webmapId) + ")");
     L.push("**Description:** " + md(lesson.summary));
     if (lesson.subjects && lesson.subjects.length) L.push("**Subjects:** " + lesson.subjects.join(", ") + ".");
     if (lesson.objectives && lesson.objectives.length) {
@@ -251,7 +263,7 @@
       "# " + (a.knowledgeTitle || "Lessons (questions, layers and sources)"),
       "Built " + builtOn + " from the lesson files by the " + (names(site).pages || "lesson resource pages") + ", " + (a.name || "assistant") + " knowledge builder " + VERSION.knowledge + ". Do not edit by hand; edit the lesson files and rebuild.",
       "",
-      "How to use this file: each lesson below has its own " + appName(site) + " map. When a teacher names one of these lessons (by title or lesson ID) and asks for new or different questions, base every question only on the bookmarks, layers and pop-up content listed for that lesson, and use bookmark and layer names exactly as written. If a request needs information that lesson's map does not show, say so plainly instead of inventing it. Use only the links listed for that lesson. The answers to the lessons' questions are not in this file: do not give them, and do not write student material that contains them.",
+      "How to use this file: each lesson below has its own " + (names(site).appMap || "map") + ". When a teacher names one of these lessons (by title or lesson ID) and asks for new or different questions, base every question only on the bookmarks, layers and pop-up content listed for that lesson, and use bookmark and layer names exactly as written. If a request needs information that lesson's map does not show, say so plainly instead of inventing it. Use only the links listed for that lesson. The answers to the lessons' questions are not in this file: do not give them, and do not write student material that contains them.",
       ""
     ];
     return head.concat(lessons.map(function (l) { return lessonEntry(site, l) + "\n"; })).join("\n").replace(/\r?\n/g, "\r\n");
