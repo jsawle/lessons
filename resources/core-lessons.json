@@ -52,9 +52,9 @@
   "feedbackQuery": "lesson"
  },
  "hubDemo": {
-  "name": "Lessons (demo)",
+  "name": "Lessons",
   "siteId": "9c39add73ebf47068e1dac37f6353b8d",
-  "url": "https://mapmakerlessons-gis-4-schools.hub.arcgis.com",
+  "url": "https://lessons-gis-4-schools.hub.arcgis.com",
   "lessonsSlug": "lessons",
   "lessonsTitle": "Lessons: Grade 8 US History",
   "lessonsIntro": "Ten lessons that teach Grade 8 US History with maps, arranged by topic in the order most courses teach them. Each one pairs a map with an inquiry, a Word student sheet in English and Spanish, and a separate teacher page with the answers.",

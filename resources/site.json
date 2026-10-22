@@ -1,7 +1,7 @@
 {
  "app": {
   "name": "{pages} (lab)",
-  "version": "0.17.0",
+  "version": "0.17.1",
   "parts": {
    "Page renderer": "3.4",
    "Word sheet builder": "1.8",
