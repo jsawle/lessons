@@ -1,10 +1,10 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.8",
+  "formatVersion": "1.9",
   "id": "the-battle-of-vicksburg",
-  "contentVersion": "0.7.0",
+  "contentVersion": "0.7.1",
   "status": "draft",
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "reviewed": null,
   "title": "The Battle of Vicksburg",
   "sheetTitle": {
@@ -24,6 +24,7 @@
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "1ba8cd3fc75a49a497be1137fce4c032",
+    "about": "This map is set on the Mississippi River around Vicksburg in spring 1863. Five dark pins, labeled on the map, mark places on Grant's route, and a yellow pin marks Vicksburg. A railroad layer shows the lines in the region when you zoom in (it includes lines built after the war). The Civil War Battlefields layer, off when the map opens, adds Civil War battles, including those around Vicksburg.",
     "image": {
       "url": "https://www.arcgis.com/sharing/rest/content/items/1ba8cd3fc75a49a497be1137fce4c032/info/thumbnail/thumbnail1702673296499.png",
       "alt": "Preview of the The Battle of Vicksburg map",
