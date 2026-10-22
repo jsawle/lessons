@@ -1,4 +1,4 @@
-/* Lesson resource pages (lab): page renderer v3.4 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
+/* Lesson resource pages (lab): page renderer v3.5 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
    standards in the hero; an AI assistant link and a copyable AI prompt). Draws a lesson page, its teacher page (?view=teacher) or the catalogue
    from JSON files. Settings: site.json merged with the lessons settings file (?lessons=<name>, or the default in site.json). */
 (function () {
@@ -136,23 +136,9 @@
       "</div></div>");
 
     h.push('<div class="wrap layout"><nav class="toc" aria-labelledby="toc-h"><h2 id="toc-h">On this page</h2><ol>' +
-      [["about", "About this map"], ["inquiry", "Inquiry"], ["standards", "Standards"], ["student-activity", "Student activity"], ["teacher-notes", "Teacher notes"],
+      [["inquiry", "Inquiry"], ["standards", "Standards"], ["student-activity", "Student activity"], ["teacher-notes", "Teacher notes"], ["about", "About this map"],
        ["how-to", "How-to videos"], ["own", "Make your own questions"], ["report", "Report a problem"]]
         .map(function (t) { return '<li><a href="#' + t[0] + '">' + t[1] + "</a></li>"; }).join("") + '</ol></nav><div class="content">');
-
-    // About this map
-    h.push('<section id="about" aria-labelledby="about-h"><h2 id="about-h">About this map</h2>');
-    h.push('<p class="prose">Each layer names its source, so you can check where the information comes from.</p>');
-    h.push('<div class="table-wrap" tabindex="0" role="region" aria-label="Map layers and sources"><table><caption class="sr-only">Map layers and sources</caption><thead><tr><th scope="col">Layer</th><th scope="col">What it shows</th><th scope="col">Source</th></tr></thead><tbody>' +
-      lesson.map.layers.map(function (l) {
-        return '<tr><th scope="row">' + esc(l.name) + (l.offAtStart ? ' <span class="muted">(off at start)</span>' : "") + "</th><td>" + inline(l.shows) + "</td><td>" + inline(l.source) + "</td></tr>";
-      }).join("") + "</tbody></table></div>");
-    h.push("<p><strong>Bookmarks:</strong> " + ((lesson.map.bookmarks || []).length ? lesson.map.bookmarks.map(esc).join("; ") : "none") + ".</p>");
-    var issues = lesson.knownIssues || [];
-    h.push('<div class="issues"><h3>Things to know about this map</h3>' + (issues.length ? "<ul>" + issues.map(function (k) {
-      return '<li><span class="chip ' + esc(k.status) + '">' + (k.status === "fixed" ? "Fixed " : "Open ") + esc(k.date) + "</span> <strong>" + esc(k.where) + ":</strong> " + inline(k.note) + "</li>";
-    }).join("") + "</ul>" : "<p>Nothing to report.</p>") + "</div>");
-    h.push("</section>");
 
     // Inquiry
     h.push('<section id="inquiry" aria-labelledby="inquiry-h"><h2 id="inquiry-h">Inquiry</h2>');
@@ -197,6 +183,21 @@
       '<h3>Key words</h3><ul class="vocab">' + tn.keyWords.map(function (k) { return "<li>" + esc(k) + "</li>"; }).join("") + "</ul>" +
       ((lesson.resources || []).length ? '<div class="prose"><h3>Further reading</h3><ul>' + lesson.resources.map(function (r) { return '<li><a href="' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(r.title) + newTab + "</a>" + (r.source ? ' <span class="muted">(' + esc(r.source) + ")</span>" : "") + "</li>"; }).join("") + "</ul></div>" : "") +
       '<div class="prose"><h3>Answers</h3><p>Where to find each answer on the map and what to accept are kept off this page, so it can be shared with students: <a href="' + teacherHref + '">answer notes</a> (web page) or <button type="button" class="btn" data-download="teacher">Download Word (teacher notes)</button></p></div></section>');
+
+    // About this map: an overview of the whole map (map.about), then each layer and its source; after the teacher notes.
+    h.push('<section id="about" aria-labelledby="about-h"><h2 id="about-h">About this map</h2>' + (lesson.map.about ? '<p class="prose">' + inline(lesson.map.about) + "</p>" : ""));
+    h.push('<p class="prose">Each layer names its source, so you can check where the information comes from.</p>');
+    h.push('<div class="table-wrap" tabindex="0" role="region" aria-label="Map layers and sources"><table><caption class="sr-only">Map layers and sources</caption><thead><tr><th scope="col">Layer</th><th scope="col">What it shows</th><th scope="col">Source</th></tr></thead><tbody>' +
+      lesson.map.layers.map(function (l) {
+        return '<tr><th scope="row">' + esc(l.name) + (l.offAtStart ? ' <span class="muted">(off at start)</span>' : "") + "</th><td>" + inline(l.shows) + "</td><td>" + inline(l.source) + "</td></tr>";
+      }).join("") + "</tbody></table></div>");
+    h.push("<p><strong>Bookmarks:</strong> " + ((lesson.map.bookmarks || []).length ? lesson.map.bookmarks.map(esc).join("; ") : "none") + ".</p>");
+    var issues = lesson.knownIssues || [];
+    h.push('<div class="issues"><h3>Things to know about this map</h3>' + (issues.length ? "<ul>" + issues.map(function (k) {
+      return '<li><span class="chip ' + esc(k.status) + '">' + (k.status === "fixed" ? "Fixed " : "Open ") + esc(k.date) + "</span> <strong>" + esc(k.where) + ":</strong> " + inline(k.note) + "</li>";
+    }).join("") + "</ul>" : "<p>Nothing to report.</p>") + "</div>");
+    h.push("</section>");
+
 
     // How-to
     h.push('<section id="how-to" aria-labelledby="ht-h"><h2 id="ht-h">How-to videos</h2><p class="prose">Videos on the ' + esc(N.hubShort || site.hub.name) + ' for the tools this lesson uses.</p><div class="howto">' +

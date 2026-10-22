@@ -1,4 +1,4 @@
-/* Lesson resource pages: Hub page builder v3.4 (a teacher page per lesson that holds the answers; no answers, status,
+/* Lesson resource pages: Hub page builder v3.5 (a teacher page per lesson that holds the answers; no answers, status,
    months or known-issue notes on the lesson page; lessons grouped by unit; standards in the hero; an AI assistant link
    (when the lessons settings name one) and the AI prompt in a frame card with a copy button on each lesson page, with an
    Ask button on the Lessons page; one Share to Google Classroom button, in the hero). Product names, the app, the Hub,
@@ -11,7 +11,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "3.4";
+  var VERSION = "3.5";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
@@ -342,13 +342,6 @@
       jump(slug, "student-activity", "Student sheet") + " " + jump(slug, "teacher-notes", "Teacher notes") + "</p></div>" +
       (pic ? '<div class="mml-pic">' + ext(mm, '<img src="' + esc(pic.url) + '" alt="' + esc(pic.alt) + '" width="' + pic.width + '" height="' + pic.height + '">', "mml-piclink") + '<p class="mml-muted">' + (pic.own ? "The map as it opens." : "Map preview; open it" + esc(N.inApp) + " to explore.") + "</p></div>" : "") + "</div></div>");
 
-    // About this map (the team's known-issues notes stay in the lesson file and the lab mock-up, not here)
-    add('<div class="mml"><h2>About this map</h2><p class="mml-prose">Each layer names its source, so you can check where the information comes from.</p>' +
-      table("Map layers and sources", ["Layer", "What it shows", "Source"], lesson.map.layers.map(function (l) {
-        return [esc(l.name) + (l.offAtStart ? ' <span class="mml-muted">(off when the map opens)</span>' : ""), t(l.shows), t(l.source)];
-      }), true) +
-      "<p><strong>Bookmarks:</strong> " + ((lesson.map.bookmarks || []).length ? lesson.map.bookmarks.map(esc).join("; ") : "none") + ".</p></div>");
-
     // Inquiry (no answers here; they are on the teacher page)
     var inq = lesson.inquiry;
     add('<div class="mml"><h2>Inquiry</h2><div class="mml-cq"><span class="mml-k">Compelling question</span><p class="mml-q">' + t(inq.compellingQuestion.en) + "</p></div>" +
@@ -394,6 +387,15 @@
         return "<li>" + ext(r.url, esc(r.title)) + (r.source ? ' <span class="mml-muted">(' + esc(r.source) + ")</span>" : "") + "</li>";
       }).join("") + "</ul>" : "") +
       '<h3>Answers</h3><p class="mml-prose">Where to find each answer on the map and what to accept are kept off this page, so it can be shared with students: <a href="/pages/' + esc(teacherSlug(lesson)) + '">answer notes</a> (web page) or <a href="' + sheetPlaceholder(lesson.id, "teacher") + '">Download Word (teacher notes)</a>.' + (lesson.assessment ? " The answer page also has a rubric for the answer to the compelling question and a model answer." : "") + "</p></div>");
+
+    // About this map: an overview of the whole map (map.about), then each layer and its source. After the teacher notes,
+    // so the inquiry comes first. (The team's known-issues notes stay in the lesson file and the lab mock-up, not here.)
+    add('<div class="mml">' + anchor(slug, "about-this-map") + '<h2>About this map</h2>' + (lesson.map.about ? '<p class="mml-prose">' + t(lesson.map.about) + "</p>" : "") + '<p class="mml-prose">Each layer names its source, so you can check where the information comes from.</p>' +
+      table("Map layers and sources", ["Layer", "What it shows", "Source"], lesson.map.layers.map(function (l) {
+        return [esc(l.name) + (l.offAtStart ? ' <span class="mml-muted">(off when the map opens)</span>' : ""), t(l.shows), t(l.source)];
+      }), true) +
+      "<p><strong>Bookmarks:</strong> " + ((lesson.map.bookmarks || []).length ? lesson.map.bookmarks.map(esc).join("; ") : "none") + ".</p></div>");
+
 
     // How-to videos
     add('<div class="mml"><h2>How-to videos</h2><p class="mml-prose">Short videos on the ' + esc(site.hub.name) + ' for the tools this lesson uses.</p><ul class="mml-cards">' +

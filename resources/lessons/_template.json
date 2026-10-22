@@ -1,6 +1,6 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.8",
+  "formatVersion": "1.9",
   "id": "copy-this-file-and-rename-it",
   "contentVersion": "0.1.0",
   "status": "draft",
@@ -26,6 +26,7 @@
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "00000000000000000000000000000000",
+    "about": "Two to four sentences about the map as a whole: the place and period it covers, its main layers and which are off when it opens. No answers: the lesson page can be shared with students.",
     "bookmarks": [
       "Bookmark name exactly as in the map"
     ],

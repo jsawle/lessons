@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://jsawle.github.io/lessons/resources/schema/lesson.schema.json",
-  "title": "Lesson file, format 1.8",
+  "title": "Lesson file, format 1.9",
   "description": "One file per lesson. The lesson page, the teacher page, the Word student sheets and teacher notes, the how-to links, the AI assistant's knowledge entry and the AI prompt are made from it. The Atlas app, Hub, assistant, licence and product names come from the lessons settings file (<name>-lessons.json), not from the lesson. Text fields allow **bold** and [link text](https://address) only.",
   "type": "object",
   "required": [
@@ -58,7 +58,7 @@
       "type": "string"
     },
     "formatVersion": {
-      "const": "1.8"
+      "const": "1.9"
     },
     "id": {
       "type": "string",
@@ -156,12 +156,19 @@
       "type": "object",
       "required": [
         "webmapId",
+        "about",
         "layers"
       ],
       "properties": {
         "webmapId": {
           "type": "string",
           "pattern": "^[0-9a-fA-F]{32}$"
+        },
+        "about": {
+          "$ref": "#/$defs/text",
+          "minLength": 150,
+          "maxLength": 700,
+          "description": "Two to four sentences about the map as a whole: the place and period it covers, its main layers and which are off when it opens. Shown first under About this map on the lesson page, which can be shared with students, so no answers and no questions."
         },
         "bookmarks": {
           "type": "array",
