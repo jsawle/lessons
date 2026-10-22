@@ -1,0 +1,206 @@
+{
+  "persona": "T5",
+  "lessons": {
+    "revolutionary-battles-1775-1776": {
+      "findings": [
+        {
+          "where": "Lesson page, Standards table, row TX 8.4(C) (same row in answer page and Word teacher notes)",
+          "what": "8.4(C) is tagged and marked 'partial', but declaring independence, the first event 8.4(C) names and one that falls inside 1775-1776, appears nowhere: not on the map, the sheet, the turning points or the answer key. Lexington and Concord is covered only as a date, a winner and a distance. The 'issues surrounding' it (why the British marched, what it led to) get one background sentence.",
+          "why": "8.4(C) is a STAAR readiness standard. If she logs this lesson against 8.4(C) in her district scope and sequence, a reviewer will ask where independence is in a lesson whose dates run through July 1776.",
+          "severity": "slows it down",
+          "suggestion": "Add the Declaration (Philadelphia, July 4, 1776) as a turning point or a line in Before you start, with one question placing it between the British leaving Boston (March) and the landing at Brooklyn (August). Otherwise, narrow the label to 'partial: Lexington and Concord only'.",
+          "needsLiveMap": false,
+          "quote": "partial: this lesson covers the opening phase of the Revolution, 1775–1776",
+          "evidence": "TEKS §113.20(b)(4)(C) (adopted 2022): 'explain the issues surrounding important events of the American Revolution, including declaring independence; fighting the battles of Lexington and Concord, Saratoga, and Yorktown...' https://www.classace.io/standards/teks/113-20-b-4 ; readiness designation in TEA Grade 8 Eligible TEKS (rev. Jan 2024) https://tea.texas.gov/sites/default/files/AssessCurr_SS_Grade08_2019.PDF"
+        },
+        {
+          "where": "Answer page and Word teacher notes, Q3 'Why New York?', Accept answers that; and the level-4 model answer",
+          "what": "The 'why' of the big question is answered with facts the map does not show: a deep harbor, the Hudson leading north, 'a day or two's sail', and a British aim to cut off New England. Nothing in the materials says why the fighting left Boston (the British evacuation in March 1776). Students only see the date the siege ended. Turning Points circles 1-3 might cover this, but the teacher materials don't give their text.",
+          "why": "Level 1 of her rubric is 'evidence that is not on the map'. A student who sticks to the map can't reach the accepted answer, so marking against the model answer is hard to defend to a parent who asks why their child lost points.",
+          "severity": "slows it down",
+          "suggestion": "Put the facts on the map: a Boston turning-point note on the evacuation after cannon were placed on Dorchester Heights, and a Hudson River note. Or limit the accept list to what the map shows: New York's central position, the measured distances and the major ports within reach.",
+          "needsLiveMap": true,
+          "quote": "with a deep harbor and the Hudson River leading north",
+          "evidence": ""
+        },
+        {
+          "where": "About this map, layer table row '1763 Proclamation Line'; Teacher notes, Support and stretch (Stretch)",
+          "what": "The Proclamation Line is described only as the line where the King 'barred colonial settlement'. It never says the land west of it was reserved for American Indian nations. The stretch asks whether any battle was west of the line 'and what that says about where the war was being fought'. With only these 21 battles, students will conclude the war was all on the coast. In 1776, though, Cherokee towns and the Carolina, Virginia and Georgia frontier were at war.",
+          "why": "Native nations are otherwise absent from this lesson. A reviewer checking for balance will see the one Native-related layer described only from the Crown's side, and a stretch question that leads to an incomplete answer.",
+          "severity": "slows it down",
+          "suggestion": "Add 'land west of it was reserved for American Indian nations' to the layer description and the sheet. Reword the stretch: 'The map shows 21 battles. What fighting west of the line might be missing?' Add a sourced teacher note on the 1776 Cherokee War, for example from NPS.",
+          "needsLiveMap": false,
+          "quote": "The line west of which King George III barred colonial settlement",
+          "evidence": "Proclamation of 1763 sits in the same knowledge statement, TEKS §113.20(b)(4)(A), https://www.classace.io/standards/teks/113-20-b-4. The 1776 Cherokee War is her own subject knowledge and was not web-checked, because the brief allowed web checks of the TEKS only."
+        },
+        {
+          "where": "Student sheet, Reading the map; legend (American Victory / British Victory); Key words list",
+          "what": "Every battle is coloured either American or British victory. 'Loyalist' is a key word but is never used. Some battles on the map, Moores Creek Bridge for one, were Patriot militia against Loyalist militia, with no British regulars.",
+          "why": "Students will record Moores Creek as a defeat of the British army, and the key word is left with nothing to attach to. A student or parent who knows the battle can catch the error.",
+          "severity": "minor",
+          "suggestion": "Add one line to Reading the map: 'Some colonists, called Loyalists, fought for the King. At Moores Creek Bridge, Patriots fought Loyalists.' Or name the legend classes 'Patriot victory' and 'British or Loyalist victory'.",
+          "needsLiveMap": true,
+          "quote": "as listed in the legend (American Victory or British Victory)",
+          "evidence": "Her own subject knowledge; not web-checked (the brief limited web checks to the TEKS). The pop-up account may already mention Loyalists."
+        },
+        {
+          "where": "Q2 'Where was the fighting in 1775, and where in 1776?' (marked If you only do one); answer page, Accept answers that",
+          "what": "In about 15 minutes, students click all 21 diamonds, list each under its year, mark each winner and then name the colonies. The accept line counts Quebec among the places 'for 1775' alongside the colonies.",
+          "why": "Twenty-one pop-ups plus writing takes most 8th graders longer than 15 minutes, and this is the question she'd pick when short of time. Listing Quebec with the colonies muddles the Thirteen Colonies, which her students are tested on.",
+          "severity": "minor",
+          "suggestion": "Split the 21 battles among pairs or rows, or give a half-filled table. Word the key as 'Massachusetts, New York, Virginia, and the British province of Quebec'.",
+          "needsLiveMap": false,
+          "quote": "names Massachusetts, New York, Virginia and Quebec for 1775",
+          "evidence": ""
+        }
+      ],
+      "worksWell": [
+        "The lesson really teaches 8.10(C), not just tags it: ports, harbors, rivers and measured distances make students reason about waterways and transportation in the 1776 campaign.",
+        "8.4(C) is honestly marked partial, and the TEKS wording quoted for 8.4(C), 8.10(A) and 8.10(C) matches current §113.20.",
+        "The Bunker Hill misunderstanding (a British 'win' with twice the casualties) is a good historical-thinking hook, and every layer names a checkable source (NPS ABPP boundaries, American Battlefield Trust)."
+      ]
+    },
+    "we-the-people-1787-1791": {
+      "findings": [
+        {
+          "where": "Lesson page Standards (TX 8.17(A)); Answering the compelling question; Key words",
+          "what": "No question, map layer or sheet text gives a Federalist or Anti-Federalist argument, and nothing deals with civil discourse. The only link is an optional sketch-pin task that asks students to add a quote from each of Madison, Hamilton, Henry and Mason, with no quotes or sources supplied. 'Federalist' and 'Anti-Federalist' appear only in the key-word list.",
+          "why": "8.17(A) is a STAAR readiness standard. Logging this lesson against it would not survive a district check. Sending 8th graders to find quotes invites the misattributed Henry and Hamilton quotes that circulate online and from AI tools, which is the kind of thing that turns into a complaint.",
+          "severity": "slows it down",
+          "suggestion": "Either drop 8.17(A) from the tags, or add a short sourced excerpt set: for example, Federalist No. 10 or 51 against Henry's June 1788 speech to the Virginia convention, from the National Archives or Library of Congress. Tie it to the close Virginia and New York votes, and add one question on how the debate was conducted.",
+          "needsLiveMap": false,
+          "quote": "sketch pins for James Madison, Alexander Hamilton, Patrick Henry and George Mason, each with a quote",
+          "evidence": "TEKS §113.20(b)(17)(A): 'analyze the arguments of the Federalists and Anti-Federalists, including those of Alexander Hamilton, Patrick Henry, James Madison, and George Mason, and explain how their debates exemplify civil discourse' https://www.classace.io/standards/teks/113-20-b-17 and https://education.texashistory.unt.edu/teks/ss/8/17/A/ ; readiness standard per https://tea.texas.gov/sites/default/files/AssessCurr_SS_Grade08_2019.PDF"
+        },
+        {
+          "where": "Student sheet Q3 'The three-fifths clause' (Answer); Before you start; teacher notes Common misunderstandings and Discussion question 2",
+          "what": "The clause is paraphrased, but the Constitution's own words (Article I, Section 2) are never quoted. The lesson leaves out that the same clause also applied to direct taxes. That is what made it a compromise: some delegates wanted enslaved people counted for seats, others only for taxes. Discussion question 2 asks whom the extra seats 'spoke for' but gives no sourced answer.",
+          "why": "This is the passage most likely to draw a complaint. Her defence is always 'here is the primary source, and here are both sides of the convention debate'. As written, the lesson shows only the effect (seats gained), which a reviewer could call one-sided, and students can't explain why it is called a compromise.",
+          "severity": "slows it down",
+          "suggestion": "Quote the clause in Before you start ('...adding to the whole Number of free Persons... three fifths of all other Persons'). Add one sentence saying it set both House seats and direct taxes, link the National Archives transcript, and give a short sourced teacher answer for Discussion question 2.",
+          "needsLiveMap": false,
+          "quote": "three of every five enslaved people were counted when House seats were shared out",
+          "evidence": "TEKS §113.20(b)(4)(D) names the 'Three-Fifths Compromise' https://www.classace.io/standards/teks/113-20-b-4. The clause's wording and its tax half come from her own knowledge of Art. I, Sec. 2 and were not web-checked (TEKS-only brief)."
+        },
+        {
+          "where": "Student sheet Q3 Answer; lesson page From the front, step 5",
+          "what": "Students are asked which states gained seats by counting people who could not vote. In 1790, women, children and many free men also could not vote, and every state counted them. The real point is that enslaved people were counted while held as property with no rights at all.",
+          "why": "A sharp student or a parent can show that the question is inaccurate as worded. That weakens an otherwise careful treatment of the most sensitive topic in the lesson.",
+          "severity": "slows it down",
+          "suggestion": "Reword it: 'Which states gained seats by counting enslaved people, who had no vote and no say in who represented them?' Change the matching line in Common misunderstandings.",
+          "needsLiveMap": false,
+          "quote": "Which states gained seats by counting people who could not vote?",
+          "evidence": ""
+        },
+        {
+          "where": "Student sheet, Before you start, Q2 'Seats in Congress' and Q3 Answer prompts",
+          "what": "The student sheet never uses the TEKS and STAAR terms 'Great Compromise' or 'Three-Fifths Compromise'; it says 'three-fifths clause'. Yet the answer key expects students to explain the Great Compromise 'in its own words'.",
+          "why": "8.4(D) is a readiness standard, and STAAR items use those exact names. Students need to connect what they see on the map to the terms they'll be tested on, so she would have to add them herself.",
+          "severity": "slows it down",
+          "suggestion": "Name both in Before you start, for example 'the Great Compromise...' and 'the Three-Fifths Compromise, written into the Constitution as the three-fifths clause...', and use the terms in the Q2 and Q3 answer prompts.",
+          "needsLiveMap": false,
+          "quote": "explains the Great Compromise in its own words",
+          "evidence": "TEKS §113.20(b)(4)(D) 'analyze the issues of the Constitutional Convention of 1787, including the Great Compromise and the Three-Fifths Compromise' https://www.classace.io/standards/teks/113-20-b-4 ; readiness per https://tea.texas.gov/sites/default/files/AssessCurr_SS_Grade08_2019.PDF"
+        },
+        {
+          "where": "Answer page and teacher notes, A model answer (level 4); Discussion question 3",
+          "what": "The model answer says the closest votes came in big states, but the closest vote on the map is Rhode Island (34-32), the smallest state. Rhode Island's vote (May 1790) and North Carolina's second (Nov 1789) also came after the Constitution was already in effect, so they don't show how close it came to being rejected. The close votes that mattered were Massachusetts, New Hampshire (the ninth state), Virginia and New York.",
+          "why": "A level-4 model containing a claim the map contradicts is hard to grade against, and a student who argues 'Rhode Island is small' would be right. She needs the anchor answer to hold up.",
+          "severity": "slows it down",
+          "suggestion": "Rewrite the model answer: before the Constitution took effect, the close votes were MA, NH, VA and NY; Rhode Island's 34-32 came in 1790, after the new government was running. Add a stretch: 'Does a close vote after June 1788 show the Constitution nearly failed?'",
+          "needsLiveMap": false,
+          "quote": "the closest votes came in big states, so the balance held, but only just",
+          "evidence": "The lesson's own answer key (RI 34-32, May 29, 1790; NH ninth state, June 21, 1788)."
+        },
+        {
+          "where": "Q1 'Who lived where in 1790?'; Population in 1790 layer description",
+          "what": "The title suggests the pies show everyone living in each state. The 1790 census followed the Constitution's 'excluding Indians not taxed' and left out American Indian nations, and the map never says so.",
+          "why": "For balance she needs to say who is missing from the count. Otherwise the map silently leaves out Native people, which a reviewer or a Native family could fairly point out.",
+          "severity": "minor",
+          "suggestion": "Add to Reading the map: 'The census did not count American Indians living in their own nations.' Consider retitling Q1 'Who was counted in 1790?'",
+          "needsLiveMap": false,
+          "quote": "Who lived where in 1790?",
+          "evidence": "Her own knowledge of Art. I, Sec. 2; not web-checked (TEKS-only brief)."
+        },
+        {
+          "where": "Student sheet Q3, On the map steps 1-2 vs the fill-in line",
+          "what": "Students are told to read 'the last two lines' of the pop-up, but the fill-in asks for Virginia's seats 'with the three-fifths clause', which is on a different line ('That gave ... House seats in 1793'). The steps also don't say how to find Virginia and South Carolina on a map with no place names, and The South bookmark isn't mentioned.",
+          "why": "Students will put 22 or 13 in the wrong blank, and she'll lose class time steering them around an unlabeled map.",
+          "severity": "minor",
+          "suggestion": "Make step 1 'Open The South bookmark' and step 2 'Read the House seats line and the last two lines of the pop-up'.",
+          "needsLiveMap": true,
+          "quote": "Read the last two lines of each pop-up",
+          "evidence": ""
+        },
+        {
+          "where": "Teacher notes and answer page, Q4 answer key, row GA 4",
+          "what": "Georgia's ratification is dated December 31, 1787. Most textbooks give January 2, 1788: the convention voted on December 31 and signed on January 2.",
+          "why": "Students who check their textbook will find a different date. She'd want the key to accept both before marking anyone down.",
+          "severity": "minor",
+          "suggestion": "Add 'accept January 2, 1788', as the key already does for North Carolina's first vote ('Sources differ...').",
+          "needsLiveMap": false,
+          "quote": "GA 4 | Georgia | 26–0 | December 31, 1787",
+          "evidence": "Her own subject knowledge; not web-checked (TEKS-only brief)."
+        }
+      ],
+      "worksWell": [
+        "8.4(D) is taught squarely with real numbers. Re-doing the seat arithmetic at one seat per 33,000 confirms Virginia 19/22/13, South Carolina 6/7/4 and the 15-seat total, figures she can defend line by line.",
+        "The language is factual, not editorial: 'enslaved people' throughout, and the misunderstanding note ('gave slaveholding states more seats, not enslaved people a voice') states the effect without moralizing.",
+        "It is open about sources: North Carolina's first vote is flagged 'Sources differ... accept the pop-up's figures', and the votes are credited to the Center for the Study of the American Constitution."
+      ]
+    }
+  },
+  "acrossLessons": [
+    {
+      "where": "Both lesson pages, Teacher notes > Common misunderstandings (and Discussion questions), on the page described as shareable with students",
+      "what": "The How these lessons work page says answers are kept off the lesson page so it can be shared with students. The lesson pages' Common misunderstandings still give answers: Virginia 19 vs 13 seats, Rhode Island 34-32 and New York 30-27, North Carolina's first convention. In Revolutionary Battles they give 'seven colonies and in Quebec', and Moores Creek and Sullivan's Island as American wins.",
+      "why": "If she shares the page, as the lessons invite, students can copy the fill-ins and the closest-votes answer, and the grades stop meaning anything.",
+      "severity": "slows it down",
+      "suggestion": "Move Common misunderstandings, and any discussion prompts that carry answers, to the answer page, or remove the numbers from the lesson-page version.",
+      "needsLiveMap": false,
+      "quote": "Virginia's pop-up shows 19 seats under the clause, against 13",
+      "evidence": ""
+    },
+    {
+      "where": "About this map tables: Revolutionary War Battles ('a picture and a short account'), Turning Points ('Battle_details'), Ratifying the Constitution ('a note')",
+      "what": "Apart from a few titles and numbers, the narrative text and pictures students read in pop-ups do not appear in the teacher notes or answer pages. The Turning Points text is credited to two named people (2026) with no affiliation or link, and circles 1-3 aren't identified anywhere.",
+      "why": "Her district reviews materials after complaints. She has to read every sentence students will read and be able to say who wrote it. Clicking through 21 battles, 5 turning points and 15 ratification pies to vet them costs planning time, and an unaffiliated 2026 author line is hard to cite to a reviewer.",
+      "severity": "slows it down",
+      "suggestion": "Add an appendix to each Word teacher-notes file with the full pop-up text and image credits for every feature, and give the Turning Points authors' affiliation or a link.",
+      "needsLiveMap": true,
+      "quote": "a short account (the Battle_details field) and the victor",
+      "evidence": ""
+    },
+    {
+      "where": "Standards tables on both lesson pages, answer pages and teacher notes",
+      "what": "The codes are given as 'TX 8.4(C)' and so on, with no TEKS version. They match the current §113.20 (adopted 2022, in classrooms since 2024-25). The SBOE adopted new social studies TEKS on June 26, 2026. From 2032-33, grade 8 becomes a 'Texas & US Capstone' (about 80% Texas), and these codes will no longer apply.",
+      "why": "Her district scope and sequence cites a specific TEKS version. An unlabeled code invites 'which TEKS?' from a reviewer, and the alignment will quietly go out of date.",
+      "severity": "minor",
+      "suggestion": "Label the codes 'TEKS §113.20 (adopted 2022, implemented 2024-25)' and note a review before 2032-33.",
+      "needsLiveMap": false,
+      "quote": "TX 8.10(A) | Framework: Texas TEKS",
+      "evidence": "https://tea.texas.gov/about-tea/laws-and-rules/texas-administrative-code/19-tac-chapter-113 (§113.20 'Adopted 2022'); https://tea.texas.gov/educators/subject-areas/social-studies/social-studies ('Implemented in the 2024-2025 School Year'); https://tea2.tea.texas.gov/educators/superintendents/literary-works-and-social-studies-teks-k-12-published-august-20-2026.pdf (grades 7-8 from 2032-33; grade 8 'Texas & US Capstone'); https://sboe.texas.gov/state-board-of-education/sboe-news/texas-state-board-of-education-adopts-new-social-studies-standards-and-required-literature-reading-list (adopted June 26, 2026)"
+    },
+    {
+      "where": "Standards tables, both lessons",
+      "what": "Neither lesson tags the 8.29 social studies skills it actually teaches: interpreting maps and data (8.29(C)), a claim supported by evidence (8.29(E), which is exactly the compelling-question answer), and questions about patterns on maps (8.29(H)).",
+      "why": "These are the TEKS she can most honestly log these lessons against, and they would strengthen the alignment where the content tags (8.4(C), 8.17(A)) are thin.",
+      "severity": "minor",
+      "suggestion": "Add TX 8.29(C), 8.29(E) and 8.29(H) with their wording.",
+      "needsLiveMap": false,
+      "quote": "Students answer with evidence from at least two places on the map.",
+      "evidence": "TEKS §113.20(b)(29)(C) 'organize and interpret information from ... maps'; (E) 'formulate and communicate ... a claim supported by evidence and reasoning'; (H) 'pose and answer questions about geographic distributions and patterns shown on maps' https://www.classace.io/standards/teks/113-20-b-29"
+    },
+    {
+      "where": "Lesson pages, Student activity ('Español' note); Spanish Word student sheets",
+      "what": "The lesson page says the Spanish sheet is a draft awaiting review by a native speaker, but the Spanish Word file itself carries no such label.",
+      "why": "She can't give an unreviewed translation to emergent bilingual students or their families while her district reviews materials, and once downloaded the file looks final.",
+      "severity": "minor",
+      "suggestion": "Hold back the Spanish download until it has been reviewed, or put 'Borrador' in the Spanish file's footer until then.",
+      "needsLiveMap": false,
+      "quote": "Spanish draft for review by a native speaker.",
+      "evidence": ""
+    }
+  ],
+  "teksChecked": "Current: 19 TAC §113.20 Social Studies, Grade 8, Adopted 2022, in classrooms from 2024-25 (TEA Chapter 113 contents https://tea.texas.gov/about-tea/laws-and-rules/texas-administrative-code/19-tac-chapter-113 and TEA social studies page https://tea.texas.gov/educators/subject-areas/social-studies/social-studies). This session could not reach the TEA PDF of Subchapter B (ch113b.pdf), so the standard wording was checked on pages that cite TAC §113.20: classace.io (b)(4), (b)(10)(C), (b)(17), (b)(29) and the UNT Portal to Texas History page for 8.17(A). It was also checked against TEA's Grade 8 Eligible TEKS for STAAR (rev. Jan 2024; readiness/supporting labels) https://tea.texas.gov/sites/default/files/AssessCurr_SS_Grade08_2019.PDF. The wording quoted in the lessons for 8.4(C), 8.4(D), 8.10(C) and 8.17(A), including 'civil discourse', matches. 8.10(A) matches the Jan 2024 TEA text; its 2022 wording was not separately confirmed. Revised standards: the SBOE adopted new social studies TEKS on June 26, 2026, and TEA's Aug 20, 2026 letter sets grades 7-8 to start in 2032-33, with grade 8 becoming 'Texas & US Capstone' https://tea2.tea.texas.gov/educators/superintendents/literary-works-and-social-studies-teks-k-12-published-august-20-2026.pdf"
+}

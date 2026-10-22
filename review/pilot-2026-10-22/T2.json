@@ -1,0 +1,205 @@
+{
+  "persona": "T2",
+  "lessons": {
+    "revolutionary-battles-1775-1776": {
+      "findings": [
+        {
+          "where": "Lesson page > Inquiry > 'Where was the fighting in 1775, and where in 1776?' (If you only do one) > From the front step 1; student sheet Q2 steps 1-2",
+          "what": "Students zoom out far enough to see Quebec and South Carolina at once, then click all 21 diamonds. At that scale the Boston group (4 diamonds) and the New York/New Jersey group (7 within about 70 miles) will probably overlap, so students can't tell whether they can see 21, and can't click each one without zooming back in. Reading, sorting and checking the colour of 21 pop-ups in 15 minutes leaves about 40 seconds each.",
+          "why": "This is the question she'd pick when short on time. It's also the one most likely to leave half the class lost, zoomed to the wrong place, or still clicking when the bell goes.",
+          "severity": "slows it down",
+          "suggestion": "Say what to do when diamonds overlap: zoom in on Boston, then New York, then the South. Add New York and South bookmarks and print the 21 battle names on the sheet as a checklist, or split the regions between pairs and pool the results.",
+          "needsLiveMap": true,
+          "quote": "Zoom out until all 21 diamonds show, from Quebec to South Carolina."
+        },
+        {
+          "where": "Lesson page > 'Where did the war begin?' and 'How did 1776 end?' > From the front (both lists), compared with the last step of student sheet Q1 and Q4",
+          "what": "The student sheet ends both questions with a Measure step and a blank for miles, but neither From the front list includes Measure. Q3's From the front does use Measure, but nowhere does a step say where the tool is, how to choose miles or how to finish a line.",
+          "why": "She follows the front script word for word because she's unsure of the tech. She'll reach the end with students' miles boxes still blank, and her first go with Measure will be live in front of the class.",
+          "severity": "slows it down",
+          "suggestion": "Add 'Use Measure from Boston to Concord' to Q1's From the front and 'Use Measure from New York City to Trenton' to Q4's. At its first use, add a one-line Measure how-to (open the tool, choose miles, click the start, double-click the end) and link the Measure video.",
+          "needsLiveMap": false,
+          "quote": "Use Measure for the straight-line distance from Boston to Concord."
+        },
+        {
+          "where": "Answer page > Q1 and Q4 > Where to find it on the map (Measure distances); student sheet Q1 and Q4",
+          "what": "Students measure 'Boston to Concord' and 'New York City to Trenton'. The map has one 'Lexington and Concord' diamond and no New York City diamond, and the notes don't say which points to click. If that diamond sits at Lexington, Boston to it is roughly 11 miles, outside 15 to 17. Fort Washington (northern Manhattan) to Trenton is roughly 60 miles, outside 48 to 56.",
+          "why": "If half the class gets 11 miles and half gets 16, she won't know whether to mark one group wrong. She also can't answer 'where do I click?' with confidence.",
+          "severity": "slows it down",
+          "suggestion": "Name both end points in the steps and in the notes, e.g. 'from the Boston diamond to the Lexington and Concord diamond' and 'from the Brooklyn diamond to the Trenton diamond'. Set each accept range for those points.",
+          "needsLiveMap": true,
+          "quote": "Measure tool, Boston to Concord: about 16 miles (accept 15 to 17)."
+        },
+        {
+          "where": "Answer page > Q2 > Answer key table (same table in the Word teacher notes)",
+          "what": "The headers say 8 battles in 1775 and 13 in 1776. The names listed only reach 7 and 12 if 'Fort Ticonderoga and Crown Point' and 'Sullivan's Island and Breach Inlet' are one diamond each, as 'Lexington and Concord' is. The siege of Boston ran from April 1775 to March 1776. It is listed under 1775, with no note on whether to accept 1776 or both years.",
+          "why": "She checks each student's list against the key. If her own count doesn't reach 21, she can't tell whether a student missed a diamond. 'Which year does Boston go in?' is a question she will get during the lesson.",
+          "severity": "slows it down",
+          "suggestion": "List each diamond as the map titles it, one per line, so the counts visibly add up to 8, 13 and 21. Add a note: 'Boston (siege): accept 1775, or both years if the student gives the start and end dates.'",
+          "needsLiveMap": true,
+          "quote": "1775 (8 battles)"
+        },
+        {
+          "where": "Lesson page > 'How did 1776 end?' > From the front step 1; student sheet Q4 step 1; About this map > Bookmarks",
+          "what": "Massachusetts is the only bookmark. For Q4, students zoom in on New York until the Turning Points circles appear, but no zoom level is given. Circle 5 and Trenton are about 50 miles away, so they may be off screen at that zoom and need panning, which the steps don't mention.",
+          "why": "Getting lost on the map is exactly what she fears. Thirty students zooming freely on Chromebooks will end up in different places, and she has no one-click way to bring them all back.",
+          "severity": "slows it down",
+          "suggestion": "Add a 'New York and New Jersey, 1776' bookmark that shows circles 4 and 5 and the Fort Washington, Fort Lee and Trenton diamonds, and make step 1 'Open the New York and New Jersey bookmark'.",
+          "needsLiveMap": true,
+          "quote": "Zoom in on New York City until the numbered Turning Points circles appear."
+        },
+        {
+          "where": "Student sheet (Word) > Q2 'Where was the fighting in 1775, and where in 1776?' > Answer",
+          "what": "The step tells students to write each battle's name under its year and mark the winner. The sheet gives one writing line, with no 1775 and 1776 columns and no room for 21 names.",
+          "why": "Students will ask where to write, and she'll have to improvise a table on the board or on scrap paper in the middle of the lesson.",
+          "severity": "slows it down",
+          "suggestion": "Add a two-column 1775 / 1776 table with a winner column (or American/British tick boxes) for 21 rows, and keep the 'What changed?' line below it.",
+          "needsLiveMap": false,
+          "quote": "Click each diamond and write its name under the year it was fought."
+        },
+        {
+          "where": "Lesson page > 'Where did the war begin?' > From the front steps 2 and 5",
+          "what": "At the Massachusetts bookmark, the Lexington and Concord, Boston, Bunker Hill and Gloucester diamonds are all close together; Boston and Bunker Hill are about a mile apart. The steps don't say where each diamond is on screen or whether the diamonds are labelled.",
+          "why": "On the projector she may click Bunker Hill instead of Boston, read the wrong dates aloud, and not know why students' answers differ.",
+          "severity": "minor",
+          "suggestion": "Add a location cue to each click (e.g. 'the diamond furthest inland, west of Boston'). Tell students to use the 1 of 2 arrows if Boston and Bunker Hill share a pop-up.",
+          "needsLiveMap": true,
+          "quote": "Click the diamond at Lexington and Concord and read the date line."
+        },
+        {
+          "where": "Lesson page > 'Why New York?' > From the front step 1; answer page > Q3 > Where to find it on the map",
+          "what": "'Open Revolutionary War Battlefields' could mean expanding a group or switching on the battlefield layer of the same name. About this map lists Revolutionary War Battlefields as a layer, not a group. The ports layer also covers the Caribbean and Britain and has no labels, yet the notes say there are five major ports.",
+          "why": "Students who toggle the wrong item lose the battlefield shading. A student who zooms out and counts the major ports in the Caribbean or Britain will get a different answer from her key.",
+          "severity": "minor",
+          "suggestion": "Write 'click the arrow next to Revolutionary War Battlefields to expand it, then turn on Key Port Cities', and say 'between Boston and Charleston, on the American coast only'. Check the count of five major ports against the live layer.",
+          "needsLiveMap": true,
+          "quote": "In Map layers, open Revolutionary War Battlefields and turn on Key Port Cities in the American Revolution 1775-1781."
+        }
+      ],
+      "worksWell": [
+        "The 'Reading the map' paragraph warns up front that pop-ups don't state the winner and that the ports layer has no pop-ups. Those are the two things students are most likely to ask her.",
+        "Distances come with accept ranges (e.g. 15 to 17 miles), and the Q2 key lists every battle by year, winner and colony, so marking the fill-ins is quick.",
+        "Common misunderstandings give her a map-based reply ready for live questions, e.g. Bunker Hill is shown as a British win although its pop-up gives the British twice the casualties."
+      ]
+    },
+    "we-the-people-1787-1791": {
+      "findings": [
+        {
+          "where": "Student sheet Q3 'The three-fifths clause' > Answer and fill-in line; answer page Q3 > Accept answers that",
+          "what": "The question asks how many seats Virginia and South Carolina would have had if enslaved people were counted in full or not at all. The fill-in covers Virginia only, and asks for seats under the clause and with no count. The accept line wants 19 and 13 (Virginia) and 6 and 4 (South Carolina), and never mentions the in-full figures (22 and 7).",
+          "why": "A student who writes 'Virginia 22 in full, 13 not at all' has answered the question as asked but doesn't match the accept line, and she won't know whether to mark it right.",
+          "severity": "slows it down",
+          "suggestion": "Give a small fill-in table: rows for Virginia and South Carolina, columns for actual seats, counted in full and not counted. Make the accept line match it (19, 22, 13; 6, 7, 4).",
+          "needsLiveMap": false,
+          "quote": "A good answer gives Virginia 19 and 13 (fill-in) and South Carolina 6 and 4"
+        },
+        {
+          "where": "Lesson page and answer page > Answering the compelling question; student sheet > Your answer",
+          "what": "One suggested way to answer is a set of sketch pins for Madison, Hamilton, Henry and Mason, each with a quote, but no layer on the map has these people or any quotes. The rubric wouldn't count quotes as map evidence, and sketches aren't saved.",
+          "why": "If she picks this option, students will ask where to find the quotes and she'll need sources she hasn't prepared. The rubric then marks those answers low on map evidence. She also has no guidance on how students get a Chromebook screenshot to her.",
+          "severity": "slows it down",
+          "suggestion": "Either supply the four quotes, with a source and where to pin each (e.g. at that state's convention pie), or drop this option. Add one line on taking a Chromebook screenshot and attaching it in Classroom.",
+          "needsLiveMap": false,
+          "quote": "sketch pins for James Madison, Alexander Hamilton, Patrick Henry and George Mason, each with a quote"
+        },
+        {
+          "where": "Student sheet Q1 step 3, Q3 step 2, Q4 step 3; lesson page From the front for Q1, Q2 (step 5), Q3 and Q4; answer page Q2 ('Pop-up, third line')",
+          "what": "The steps point to pop-up content by line number: first line, third line, last two lines. In a narrow Chromebook pop-up a long line wraps, so the third line on screen may not be the third line the notes mean.",
+          "why": "Students will read the wrong numbers, and from the front she can't see their screens to tell why.",
+          "severity": "slows it down",
+          "suggestion": "Point to each line by its opening words, as the answer page already does in places (e.g. 'the line that starts If enslaved people had been counted in full').",
+          "needsLiveMap": true,
+          "quote": "Read the last two lines of each pop-up"
+        },
+        {
+          "where": "Student sheet Q3 step 1 and Q4 step 4; About this map > Bookmarks",
+          "what": "The basemap has no place names, and only House seats in 1793 has state labels. Q3 just says 'Click Virginia and South Carolina' and Q4 says 'Find North Carolina'. The New England and New York and The South bookmarks exist, but no step uses them.",
+          "why": "If she skips Q2 (the questions are pick-and-choose), the House seats labels never go on. Eighth graders on an unlabelled map will click around to find South Carolina, or ask her.",
+          "severity": "slows it down",
+          "suggestion": "Start Q3 with 'Open The South bookmark' and say that the House seats in 1793 labels name the states. Use the same bookmark for Q4's North Carolina step.",
+          "needsLiveMap": false,
+          "quote": "The map has no place names: click a pie or a state to see its name"
+        },
+        {
+          "where": "Lesson page > 'How close was ratification?' > From the front step 4; student sheet Q4 Answer",
+          "what": "'Closest' isn't defined for students. By the gap in votes, Virginia and New Hampshire (10 each) come ahead of Massachusetts (19), which gives a tie for third. The answer notes accept either reading, but the From the front steps don't prompt her to set the rule before students start.",
+          "why": "Students will ask her 'closest how?' during the lesson, and different groups will report different sets of three.",
+          "severity": "minor",
+          "suggestion": "Add a From the front step: 'Decide with the class whether closest means the gap in votes or the share of the vote', and say on the sheet which to use.",
+          "needsLiveMap": false,
+          "quote": "Ask: which three votes were closest?"
+        },
+        {
+          "where": "Lesson page > 'Seats in Congress' > From the front step 1; student sheet Q2 step 1",
+          "what": "Students turn on House seats in 1793 but leave Population in 1790 on. The blue and orange-red pies then sit on blue-shaded states and may cover the seat labels. Every click also brings up a 1 of 2 pop-up, because both layers share the same pop-up.",
+          "why": "On the projector, the labels she's told to point to may be hard to read, and students may think the 1 of 2 means something is wrong.",
+          "severity": "minor",
+          "suggestion": "Either add 'turn off Population in 1790' to Q2, or add a line saying the pies can stay on and that 1 of 2 here is the same pop-up twice.",
+          "needsLiveMap": true,
+          "quote": "In Map layers, turn on House seats in 1793."
+        },
+        {
+          "where": "Lesson page > Teacher notes > Before class (same text in the Word teacher notes)",
+          "what": "It says students turn on House seats today 'as the questions ask', but no question uses that layer; only the Stretch does.",
+          "why": "Preparing the night before, she'll look for the question that uses this layer and wonder whether she's missing a page.",
+          "severity": "minor",
+          "suggestion": "Change it to 'House seats in 1793 and Ratifying the Constitution as the questions ask; House seats today is for the Stretch'.",
+          "needsLiveMap": false,
+          "quote": "students turn on House seats in 1793, House seats today and Ratifying the Constitution as the questions ask"
+        }
+      ],
+      "worksWell": [
+        "The answer keys are full tables taken from the pop-ups (every ratification vote, every state whose seats changed under three-fifths), so she can check whichever states a student picked.",
+        "The notes settle the likely live disputes in advance: closest by share or by gap, Kentucky counted separately, and 'Sources differ ... accept the pop-up's figures'.",
+        "Q4's From the front says exactly which layers to turn off first, so the ratification pies don't stack on the population pies on the projector."
+      ]
+    }
+  },
+  "acrossLessons": [
+    {
+      "where": "How these lessons work > What every lesson includes (bullet 5); both lesson pages > Teacher notes > Common misunderstandings and Discussion questions",
+      "what": "The about page says the answers are kept off the lesson page so it can be shared with students. Yet the lesson pages' teacher notes give answers away: Virginia's 19 seats against 13, Rhode Island 34 to 32 and New York 30 to 27, two senators for every state. In the battles lesson they give battles in seven colonies and Quebec, and the American wins at Moores Creek Bridge and Sullivan's Island.",
+      "why": "If she posts the lesson page in Classroom, as she's told she can, students can copy the Q2 to Q4 answers without opening the map, and her marking means nothing.",
+      "severity": "slows it down",
+      "suggestion": "Move Common misunderstandings and Discussion questions to the answer page, or tell teachers to share only the map link and the sheet.",
+      "needsLiveMap": false,
+      "quote": "Virginia's pop-up shows 19 seats under the clause, against 13 if enslaved people had not been counted."
+    },
+    {
+      "where": "How these lessons work > Preparing; both lesson pages (no troubleshooting section)",
+      "what": "Preparing says to open the map and click through it, but not to test it on a Chromebook signed in as a student (school filters can block arcgis.com). There's no plan B if the map won't load, and no general rule for when a pop-up doesn't match the answer notes. Report a problem is for after class, and only We the People Q4 says 'accept the pop-up's figures'.",
+      "why": "The map not loading and the map not matching the sheet are her two biggest worries. Nothing in the materials tells her what to do when either happens mid-lesson.",
+      "severity": "stops the lesson",
+      "suggestion": "Add an 'If something goes wrong' box to every lesson page with four points. Test on a student Chromebook the day before. If student devices fail, run the lesson from the front on your own device. If a pop-up differs from the notes, accept what the map shows and use Report a problem. Offer a printable PDF of the key pop-ups as an offline backup.",
+      "needsLiveMap": false,
+      "quote": "Open the map and click through the bookmarks and pop-ups."
+    },
+    {
+      "where": "Both lesson pages > header Time and the time on each Inquiry question; Lessons catalogue",
+      "what": "Each lesson is billed as 45 minutes, but the question times add up to 52 minutes for the battles lesson (10+15+15+12) and 49 for We the People (10+15+12+12). That is before the compelling-question answer and the reflection, which have no time given. Neither lesson gives a sample plan for one period.",
+      "why": "In a 50-minute period, with Chromebook start-up and a new tool, she needs to know which questions fit. Otherwise she'll plan all four and run out of time before the big question.",
+      "severity": "slows it down",
+      "suggestion": "Add one or two sample 50-minute plans per lesson, e.g. Q1 from the front 8 min, Q2 in pairs 15, Q3 12, big-question answer 10, 5 to spare. Give a time for answering the compelling question.",
+      "needsLiveMap": false,
+      "quote": "45 minutes, or 10–15 per question"
+    },
+    {
+      "where": "Both lesson pages > Inquiry intro; battles Q2 and We the People Q2 (each marked If you only do one)",
+      "what": "The intro says the marked question gets to the big question on its own. Battles Q2 shows where the fighting moved but not why; the ports reasoning is in Q3. We the People Q2 covers large and small states but not how close ratification came, which is Q4. Both model answers draw on all four questions.",
+      "why": "On a short day she'll do only that question, then ask the big question and get half an answer. The model answer uses evidence her students never saw.",
+      "severity": "slows it down",
+      "suggestion": "Either add one closing Ask to each only-one question that covers the missing half (e.g. 'Turn on Key Port Cities: what is at New York?'; 'Click Rhode Island's ratification pie'), or give a short model answer for the only-one route.",
+      "needsLiveMap": false,
+      "quote": "gets to the big question on its own in about 15 minutes"
+    },
+    {
+      "where": "Both answer pages > 'Accept answers that'; battles answer page Q1 and Q4 (no accept line)",
+      "what": "The accept lines describe a top answer, not the minimum to accept, and some expect facts the map may not show: 'a day or two's sail', 'deep harbor' and 'the Hudson River' in battles Q3, and 'after Congress had proposed the Bill of Rights' in We the People Q4. Battles Q1 and Q4 have no accept line at all; for example, is 'almost a year' fine for the siege of Boston?",
+      "why": "She needs to know what earns full credit and what earns part. Without that she'll either mark students down for things the map couldn't tell them or second-guess every paper.",
+      "severity": "slows it down",
+      "suggestion": "Split each accept line into 'Must include (from the map)' and 'Strong answers also'. Add accept lines for battles Q1 (siege: 10 to 11 months, or 'almost a year') and Q4, and mark outside-knowledge points as optional.",
+      "needsLiveMap": true,
+      "quote": "a day or two's sail from Boston, Philadelphia and the Chesapeake, with a deep harbor"
+    }
+  ]
+}
