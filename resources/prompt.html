@@ -7,7 +7,7 @@
 <meta name="robots" content="noindex">
 <!-- MapMaker resource pages: prompt page v1.0. Shows one lesson's prompt for a teacher's own AI tool, with a copy
      button, so the Hub lesson page can embed it in a frame card instead of printing the whole prompt.
-     Open as prompt.html?id=<lesson id>. Built from site.json and the lesson file with lesson-core.js, so the
+     Open as prompt.html?id=<lesson id>. Built from site.json, the lessons settings file (?lessons=<name>, or the default) and the lesson file with lesson-core.js, so the
      prompt matches Vera's knowledge entry and never names a layer the map doesn't have. -->
 <style>
   :root{--brand:#007AC2;--brand-hover:#00619B;--brand-press:#004874;--ink:#141414;--ink-2:#4A4A4A;--line:#D4D4D4;--paper:#fff;--paper-2:#F3F3F3}
@@ -45,7 +45,7 @@
     return fetch(url, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(url + " could not be loaded (" + r.status + ")."); return r.json(); });
   }
   if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(id)) { say("No lesson chosen.", true); return; }
-  Promise.all([getJSON("site.json"), getJSON("lessons/" + id + ".json")]).then(function (r) {
+  Promise.all([MMR.loadSite(getJSON, location.search), getJSON("lessons/" + id + ".json")]).then(function (r) {
     var site = r[0], lesson = r[1];
     document.title = "Prompt for your own AI: " + lesson.title;
     ta.value = MMR.aiPrompt(site, lesson);

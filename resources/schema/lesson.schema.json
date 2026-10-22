@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://jsawle.github.io/lessons/resources/schema/lesson.schema.json",
-  "title": "MapMaker lesson file, format 1.7",
-  "description": "One file per lesson. The lesson page, the teacher page, the Word student sheets and teacher notes, the how-to links, Vera's knowledge entry and the AI prompt are made from it. Text fields allow **bold** and [link text](https://address) only.",
+  "title": "Lesson file, format 1.8",
+  "description": "One file per lesson. The lesson page, the teacher page, the Word student sheets and teacher notes, the how-to links, the AI assistant's knowledge entry and the AI prompt are made from it. The Atlas app, Hub, assistant, licence and product names come from the lessons settings file (<name>-lessons.json), not from the lesson. Text fields allow **bold** and [link text](https://address) only.",
   "type": "object",
   "required": [
     "formatVersion",
@@ -23,7 +23,6 @@
     "teacherNotes",
     "standards",
     "languages",
-    "licence",
     "subjects",
     "objectives",
     "discussion",
@@ -59,7 +58,7 @@
       "type": "string"
     },
     "formatVersion": {
-      "const": "1.7"
+      "const": "1.8"
     },
     "id": {
       "type": "string",
@@ -603,7 +602,8 @@
       }
     },
     "licence": {
-      "$ref": "#/$defs/text"
+      "$ref": "#/$defs/text",
+      "description": "Only when this lesson's licence differs from the one in the lessons settings file. Leave it out otherwise."
     }
   }
 }

@@ -35,7 +35,9 @@
   "use strict";
   function getJSON(u) { return fetch(u, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(u + " (" + r.status + ")"); return r.json(); }); }
   var main = document.getElementById("main");
-  getJSON("site.json").then(function (site) {
+  MMR.loadSite(getJSON, location.search).then(function (site) {
+    var siteName = String((site.hubDemo && site.hubDemo.name) || "").replace(/ \(demo\)$/, "");
+    if (siteName) document.getElementById("site-name").textContent = siteName;
     return getJSON("lessons/index.json").then(function (idx) {
       return Promise.all(idx.lessons.map(function (id) { return getJSON("lessons/" + id + ".json"); }));
     }).then(function (lessons) {

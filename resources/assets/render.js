@@ -1,5 +1,6 @@
-/* MapMaker resource pages (lab): page renderer v3.2 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
-   standards in the hero; Vera link and a copyable AI prompt). Draws a lesson page, its teacher page (?view=teacher) or the catalogue from JSON files. */
+/* Lesson resource pages (lab): page renderer v3.3 (teacher view with the answers, no answers on the lesson view; lessons grouped by unit;
+   standards in the hero; an AI assistant link and a copyable AI prompt). Draws a lesson page, its teacher page (?view=teacher) or the catalogue
+   from JSON files. Settings: site.json merged with the lessons settings file (?lessons=<name>, or the default in site.json). */
 (function () {
   "use strict";
   var MMR = window.MMR, esc = MMR.esc, inline = MMR.inline;
@@ -18,7 +19,7 @@
   function header(site) {
     var hub = site.hub;
     $("site-header").innerHTML = '<div class="wrap"><a class="name" href="' + esc(hub.url) + '">' + esc(hub.name) + '</a>' +
-      '<nav aria-label="Support Hub"><ul>' + hub.nav.map(function (n) {
+      '<nav aria-label="' + esc(MMR.names(site).hubShort || hub.name) + '"><ul>' + hub.nav.map(function (n) {
         return '<li><a href="' + esc(MMR.hubUrl(site, n.path)) + '">' + esc(n.label) + '</a></li>';
       }).join("") + '</ul></nav></div>';
   }
@@ -41,7 +42,7 @@
   function standardsTable(site, lesson) {
     return '<div class="table-wrap" tabindex="0" role="region" aria-label="Standards table"><table><caption class="sr-only">Standards this lesson supports</caption><thead><tr><th scope="col">Code</th><th scope="col">Framework</th><th scope="col">Standard</th></tr></thead><tbody>' +
       MMR.sortStandards(site, lesson.standards).map(function (st) { return '<tr><th scope="row" style="white-space:nowrap"><code>' + esc(st.code) + "</code></th><td>" + esc(MMR.standardLabel(site, MMR.standardPrefix(st.code))) + "</td><td>" + inline(st.text) + "</td></tr>"; }).join("") +
-      '</tbody></table></div><p class="muted">National frameworks first, then state examples. For your own state’s standards, ask Vera or use the prompt under Make your own questions.</p>';
+      '</tbody></table></div><p class="muted">National frameworks first, then state examples. For your own state’s standards, ' + (MMR.assistant(site) ? "ask " + esc(MMR.assistant(site).name) + " or " : "") + 'use the prompt under Make your own questions.</p>';
   }
   function facts(site, lesson) {
     return '<dl class="facts"><div><dt>Grade</dt><dd>' + esc(lesson.grade) + "</dd></div><div><dt>Time</dt><dd>" + esc(lesson.time) +
@@ -54,7 +55,7 @@
     document.title = (teacherView ? "Teacher notes: " : "") + lesson.title + " – " + site.hub.name + " (lab)";
     var hubLink = $("hub-link");
     if (hubLink) hubLink.href = "hub-preview.html?page=" + encodeURIComponent(lesson.id + (teacherView ? "-teacher" : ""));
-    var mmUrl = MMR.mapmakerUrl(site, lesson.map.webmapId);
+    var mmUrl = MMR.atlasUrl(site, lesson.map.webmapId), app = MMR.appName(site), N = MMR.names(site);
     // Share to Google Classroom shares the map, never a page. Left out if switched off. One button, in Student activity.
     var gcShare = MMR.classroomShareUrl(site, mmUrl), gcSet = site.classroom || {};
     var gc = gcShare ? '<a class="btn gc" href="' + esc(gcShare) + '" target="_blank" rel="noopener"><img src="' + esc(gcSet.icon) + '" alt="" width="32" height="32">' +
@@ -77,10 +78,10 @@
     h.push('<h1 id="lesson-title">' + (teacherView ? "Answer notes: " : "") + esc(lesson.title) + "</h1>");
     var pic = MMR.mapImage(site, lesson);
     if (teacherView) h.push('<p class="notice"><strong>For teachers.</strong> This page holds the answers and what to accept. With students, share the lesson page or the map, not this page.</p>');
-    else h.push('<div class="herogrid"><div><p class="summary">' + inline(lesson.summary) + "</p></div>" + (pic ? '<a class="pic" href="' + esc(mmUrl) + '" target="_blank" rel="noopener"><img src="' + esc(pic.url) + '" alt="' + esc(pic.alt) + '" width="' + pic.width + '" height="' + pic.height + '"><span class="muted">' + (pic.own ? "The map as it opens." : "Map preview; open it in MapMaker to explore.") + newTab + "</span></a>" : "") + "</div>");
+    else h.push('<div class="herogrid"><div><p class="summary">' + inline(lesson.summary) + "</p></div>" + (pic ? '<a class="pic" href="' + esc(mmUrl) + '" target="_blank" rel="noopener"><img src="' + esc(pic.url) + '" alt="' + esc(pic.alt) + '" width="' + pic.width + '" height="' + pic.height + '"><span class="muted">' + (pic.own ? "The map as it opens." : "Map preview; open it in " + esc(app) + " to explore.") + newTab + "</span></a>" : "") + "</div>");
     h.push(facts(site, lesson));
     if (teacherView) {
-      h.push('<div class="actions"><a class="btn primary" href="' + esc(mmUrl) + '" target="_blank" rel="noopener">' + mapIcon + "Open in MapMaker" + newTab + "</a>" +
+      h.push('<div class="actions"><a class="btn primary" href="' + esc(mmUrl) + '" target="_blank" rel="noopener">' + mapIcon + "Open in " + esc(app) + newTab + "</a>" +
         '<a class="btn" href="' + lessonHref + '">Lesson page</a><button type="button" class="btn" data-download="teacher">Download Word (teacher notes)</button></div><p class="status-msg" id="dl-status" role="status" aria-live="polite"></p>');
     } else {
     }
@@ -118,17 +119,17 @@
       h.push('<section id="standards" aria-labelledby="std-h"><h2 id="std-h">Standards</h2>' + standardsTable(site, lesson) + "</section>");
       h.push("</div></div>");
       $("main").innerHTML = h.join("");
-      $("foot").innerHTML = '<div class="wrap"><p>' + inline(lesson.licence) + '</p><h2 style="font-size:1rem">About this page</h2>' + versionsTable(site, lesson) +
+      $("foot").innerHTML = '<div class="wrap"><p>' + inline(MMR.licence(site, lesson)) + '</p><h2 style="font-size:1rem">About this page</h2>' + versionsTable(site, lesson) +
         "<p>Lesson file: <code>resources/lessons/" + esc(lesson.id) + ".json</code></p></div>";
       wireLesson(site, lesson);
       return;
     }
 
     h.push('<div class="wrap"><div class="cards">' +
-      card(mmUrl, "MapMaker map", "Open the map students use, with its layers and bookmarks. No login needed.", true) +
+      card(mmUrl, app + " map", "Open the map students use, with its layers and bookmarks. No login needed.", true) +
       card("#student-activity", "Student activity", "Questions to work through on the map. Word download in " + langs.map(function (l) { return site.languageNames[l]; }).join(" and ") + ".") +
 
-      card("#how-to", "How-to videos", "Short videos for the MapMaker tools this lesson uses.") +
+      card("#how-to", "How-to videos", "Short videos for the " + app + " tools this lesson uses.") +
       "</div></div>");
 
     h.push('<div class="wrap layout"><nav class="toc" aria-labelledby="toc-h"><h2 id="toc-h">On this page</h2><ol>' +
@@ -153,7 +154,7 @@
     // Inquiry
     h.push('<section id="inquiry" aria-labelledby="inquiry-h"><h2 id="inquiry-h">Inquiry</h2>');
     h.push('<div class="cq"><span class="label">Compelling question</span><p class="q">' + inline(inq.compellingQuestion.en) + "</p></div>");
-    h.push('<p class="prose">Pick the questions that suit your class. Each one is answered from the map and lists the MapMaker tools it uses. Answers and what to accept are linked under Teacher notes.</p>');
+    h.push('<p class="prose">Pick the questions that suit your class. Each one is answered from the map and lists the ' + esc(app) + ' tools it uses. Answers and what to accept are linked under Teacher notes.</p>');
     h.push('<ol class="sq">' + inq.questions.map(function (q) {
       return "<li><h3>" + inline(q.title.en) + (q.core ? ' <span class="chip core">If you only do one</span>' : "") + (q.minutes ? ' <span class="chip">About ' + q.minutes + " minutes</span>" : "") + "</h3><p>" + inline(q.task) + "</p>" +
         ((q.frontOfClass || []).length ? '<p class="label">From the front</p><ol class="steps">' + q.frontOfClass.map(function (st) { return "<li>" + inline(st) + "</li>"; }).join("") + "</ol>" : "") + toolTags(site, q.tools) + "</li>";
@@ -172,7 +173,7 @@
     }).join("") + "</div>" : "") + langs.map(function (l) {
       return '<button type="button" class="btn" data-download="' + l + '">Download Word (' + esc(site.languageNames[l]) + ")</button>";
     }).join("") + '<p class="status-msg" id="dl-status" role="status" aria-live="polite"></p></div>');
-    if (gc) h.push('<p class="muted">The Share to Google Classroom button at the top of the page shares the MapMaker map with a class, not the sheet. To assign the sheet, attach your Drive copy in Classroom and choose Make a copy for each student.</p>');
+    if (gc) h.push('<p class="muted">The Share to Google Classroom button at the top of the page shares the ' + esc(app) + ' map with a class, not the sheet. To assign the sheet, attach your Drive copy in Classroom and choose Make a copy for each student.</p>');
     langs.forEach(function (l, i) { h.push(sheetPreview(site, lesson, l, i > 0)); });
     h.push("</section>");
 
@@ -195,30 +196,30 @@
       '<div class="prose"><h3>Answers</h3><p>Where to find each answer on the map and what to accept are kept off this page, so it can be shared with students: <a href="' + teacherHref + '">answer notes</a> (web page) or <button type="button" class="btn" data-download="teacher">Download Word (teacher notes)</button></p></div></section>');
 
     // How-to
-    h.push('<section id="how-to" aria-labelledby="ht-h"><h2 id="ht-h">How-to videos</h2><p class="prose">Videos on the Support Hub for the tools this lesson uses.</p><div class="howto">' +
+    h.push('<section id="how-to" aria-labelledby="ht-h"><h2 id="ht-h">How-to videos</h2><p class="prose">Videos on the ' + esc(N.hubShort || site.hub.name) + ' for the tools this lesson uses.</p><div class="howto">' +
       howTo.map(function (x) {
         return '<a class="card" href="' + esc(x.url) + '" target="_blank" rel="noopener"><h3>' + esc(x.title) + newTab + "</h3><p>For: " + esc(x.covers.join(", ")) + "</p></a>";
       }).join("") + "</div></section>");
 
-    // Make your own questions: a Vera link and a copyable prompt for the teacher's own AI tool
-    var vUrl = MMR.veraUrl(site, lesson), ai = site.aiPrompt || {};
+    // Make your own questions: an AI assistant link (if any) and a copyable prompt for the teacher's own AI tool
+    var A = MMR.assistant(site), vUrl = MMR.assistantUrl(site, lesson), ai = site.aiPrompt || {};
     h.push('<section id="own" aria-labelledby="own-h"><h2 id="own-h">Make your own questions</h2>' +
-      (vUrl ? '<h3>Ask Vera</h3><div class="prose"><p>Vera, the Support Hub’s AI assistant, has this lesson’s map, bookmarks, layers and questions, but not the answers. Open her with this lesson already named, then ask for easier or harder questions, a short quiz, questions for your own state’s standards, or questions in another language.</p></div>' +
-        '<p><a class="btn" href="' + esc(vUrl) + '" target="_blank" rel="noopener">Ask Vera about this lesson' + newTab + "</a></p>" : "") +
-      "<h3>" + esc(ai.label || "Prompt for your own AI") + '</h3><div class="prose"><p>If your school uses a different AI tool, copy the prompt and paste it in, then add what you want. It lists this map’s layers, pop-ups and bookmarks and tells the tool not to invent any, so its questions stay answerable in MapMaker.</p></div>' +
+      (vUrl ? "<h3>Ask " + esc(A.name) + '</h3><div class="prose"><p>' + esc(A.about || A.name) + ", has this lesson’s map, bookmarks, layers and questions, but not the answers. Open " + esc(A.object || "it") + " with this lesson already named, then ask for easier or harder questions, a short quiz, questions for your own state’s standards, or questions in another language.</p></div>" +
+        '<p><a class="btn" href="' + esc(vUrl) + '" target="_blank" rel="noopener">Ask ' + esc(A.name) + " about this lesson" + newTab + "</a></p>" : "") +
+      "<h3>" + esc(ai.label || "Prompt for your own AI") + '</h3><div class="prose"><p>If your school uses a different AI tool, copy the prompt and paste it in, then add what you want. It lists this map’s layers, pop-ups and bookmarks and tells the tool not to invent any, so its questions stay answerable in ' + esc(app) + ".</p></div>" +
       '<div class="sheet-tools"><button type="button" class="btn" id="copy-prompt">Copy the prompt</button><p class="status-msg" id="copy-status" role="status" aria-live="polite"></p></div>' +
       '<pre class="prompt" id="prompt-text" tabindex="0" aria-label="Prompt for your own AI">' + esc(MMR.aiPrompt(site, lesson)) + "</pre>" +
-      '<p class="muted">Questions from Vera or another AI tool aren’t reviewed like this lesson. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem.</p></section>');
+      '<p class="muted">Questions from ' + (vUrl ? esc(A.name) + " or another AI tool" : "an AI tool") + ' aren’t reviewed like this lesson. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem.</p></section>');
 
     // Report a problem
-    h.push('<section id="report" aria-labelledby="rp-h"><h2 id="rp-h">Report a problem</h2><p class="prose">Found a mistake on the map, in the questions or on the student sheet? Tell the MapMaker team. Confirmed problems are listed under Things to know about this map until they’re fixed.</p>' +
+    h.push('<section id="report" aria-labelledby="rp-h"><h2 id="rp-h">Report a problem</h2><p class="prose">Found a mistake on the map, in the questions or on the student sheet? Tell ' + esc(N.team || "us") + '. Confirmed problems are listed under Things to know about this map until they’re fixed.</p>' +
       '<p><a class="btn" href="' + esc(MMR.feedbackUrl(site, lesson)) + '" target="_blank" rel="noopener">Report a problem' + newTab + "</a></p>" +
-      '<p class="muted">In this mock-up the button opens the Support Hub’s Feedback page. On the Hub version, a Survey123 card on this page would send the lesson’s name with the report.</p></section>');
+      '<p class="muted">In this mock-up the button opens the ' + esc(N.hubShort || site.hub.name) + '’s Feedback page. On the Hub version, a Survey123 card on this page would send the lesson’s name with the report.</p></section>');
 
     h.push("</div></div>");
     $("main").innerHTML = h.join("");
 
-    $("foot").innerHTML = '<div class="wrap"><p>' + inline(site.licence || lesson.licence) + " Map data: credited to each source in About this map.</p>" +
+    $("foot").innerHTML = '<div class="wrap"><p>' + inline(MMR.licence(site, lesson)) + " Map data: credited to each source in About this map.</p>" +
       (gc ? "<p>" + esc(gcSet.notice || "Google Classroom is a trademark of Google LLC.") + ' Use of this trademark is subject to <a href="' +
         esc(gcSet.permissionsUrl || "https://www.google.com/permissions/") + '" target="_blank" rel="noopener">Google Brand Permissions<span class="sr-only"> (opens in a new tab)</span></a>.</p>' : "") +
       '<h2 style="font-size:1rem">About this page</h2>' + versionsTable(site, lesson) +
@@ -233,7 +234,7 @@
   }
 
   function toolTags(site, tools) {
-    return '<ul class="tools" aria-label="MapMaker tools used">' + (tools || []).map(function (k) {
+    return '<ul class="tools" aria-label="' + esc(MMR.appName(site)) + ' tools used">' + (tools || []).map(function (k) {
       var t = site.tools[k];
       return '<li><a href="' + esc(MMR.hubUrl(site, "/pages/" + t.howTo)) + '" target="_blank" rel="noopener" title="How-to: ' + esc(t.howToTitle) + '">' + esc(t.label) +
         '<span class="sr-only">, how-to video: ' + esc(t.howToTitle) + ' (opens in a new tab)</span></a></li>';
@@ -315,7 +316,9 @@
       return a.course.localeCompare(b.course) || MMR.unitIndex(site, a) - MMR.unitIndex(site, b) || a.title.localeCompare(b.title);
     });
     var courses = lessons.map(function (l) { return l.course; }).filter(function (v, i, a) { return a.indexOf(v) === i; });
-    var h = ['<div class="hero"><div class="wrap"><h1>Lessons</h1><p class="summary">Lessons by topic, in the order most courses teach them. Each one is drawn from one file in <code>resources/lessons</code>: its page, teacher page, Word files, Vera entry and AI prompt update together. No account or login is needed.</p></div></div>'];
+    var A = MMR.assistant(site), N = MMR.names(site), kf = MMR.assistantFileName(site);
+    document.title = "Lessons – " + site.app.name;
+    var h = ['<div class="hero"><div class="wrap"><h1>Lessons</h1><p class="summary">Lessons by topic, in the order most courses teach them. Each one is drawn from one file in <code>resources/lessons</code>: its page, teacher page, Word files, ' + (A ? esc(A.name) + " entry " : "") + 'and AI prompt update together. No account or login is needed.</p></div></div>'];
     h.push('<div class="wrap" style="padding-block:1.5rem 4rem;display:grid;gap:1rem">');
     if (courses.length > 1) h.push('<p><label for="course">Course </label><select id="course"><option value="">All courses</option>' +
       courses.map(function (c) { return "<option>" + esc(c) + "</option>"; }).join("") + "</select></p>");
@@ -336,13 +339,13 @@
     });
     h.push("</div>");
     h.push('<p><a href="hub-preview.html?page=' + encodeURIComponent((site.hubDemo && site.hubDemo.lessonsSlug) || "lessons") + '">See these lessons as Hub pages (preview)</a></p>');
-    h.push('<section class="team" aria-labelledby="team-h"><h2 id="team-h">For the MapMaker team</h2><p class="prose">Vera’s knowledge file is made from every lesson file that passes the checker (' + ready.length + " of " + lessons.length + '). It holds the questions, layers and bookmarks but not the answers. Upload it in Copilot Studio under Knowledge, wait for it to finish indexing, then delete the old copy.</p>' +
-      '<div class="sheet-tools"><button type="button" class="btn" id="vera-file">Download Vera knowledge file</button><p class="status-msg" id="vera-status" role="status" aria-live="polite"></p></div></section>');
+    if (A && kf) h.push('<section class="team" aria-labelledby="team-h"><h2 id="team-h">For ' + esc(N.team || "the team") + '</h2><p class="prose">' + esc(A.name) + '’s knowledge file is made from every lesson file that passes the checker (' + ready.length + " of " + lessons.length + '). It holds the questions, layers and bookmarks but not the answers. ' + esc(A.uploadNote || "") + '</p>' +
+      '<div class="sheet-tools"><button type="button" class="btn" id="vera-file">Download ' + esc(A.name) + ' knowledge file</button><p class="status-msg" id="vera-status" role="status" aria-live="polite"></p></div></section>');
     h.push("</div>");
     $("main").innerHTML = h.join("");
-    $("vera-file").addEventListener("click", function () {
-      var blob = new Blob([MMR.veraFile(site, ready, new Date().toISOString().slice(0, 10))], { type: "text/plain;charset=utf-8" });
-      var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = MMR.veraFileName();
+    if ($("vera-file")) $("vera-file").addEventListener("click", function () {
+      var blob = new Blob([MMR.assistantFile(site, ready, new Date().toISOString().slice(0, 10))], { type: "text/plain;charset=utf-8" });
+      var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = kf;
       document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 2000);
       $("vera-status").textContent = "Downloaded " + a.download + " with " + ready.length + " lesson" + (ready.length === 1 ? "" : "s") + ".";
     });
@@ -355,7 +358,7 @@
 
   /* ---------------- Start ---------------- */
   var isCatalogue = document.body.getAttribute("data-page") === "catalogue";
-  getJSON("site.json").then(function (site) {
+  MMR.loadSite(getJSON, location.search).then(function (site) {
     header(site);
     if (isCatalogue) {
       return getJSON("lessons/index.json").then(function (idx) {

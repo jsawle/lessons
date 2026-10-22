@@ -1,6 +1,6 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.7",
+  "formatVersion": "1.8",
   "id": "roads-trails-and-rails-west",
   "contentVersion": "0.7.0",
   "status": "draft",
@@ -441,6 +441,5 @@
       "status": "draft",
       "note": "Spanish draft for review by a native speaker. Layer names stay in English, as they appear in MapMaker."
     }
-  },
-  "licence": "The National Geographic Society and Esri make this content available under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence, except as noted. The licence excludes the National Geographic and Esri logos (the words National Geographic with the yellow border logo, and the Esri globe and letters) and any images included in the content. The logos and images may not be removed, altered or changed."
+  }
 }

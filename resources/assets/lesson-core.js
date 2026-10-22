@@ -1,12 +1,14 @@
-/* MapMaker resource pages: shared logic for the page, the Word builder, Vera's knowledge file, the AI prompt and the checker.
-   Runs in the browser (window.MMR) and in Node (require). No dependencies. */
+/* Lesson resource pages: shared logic for the page, the Word builder, the AI assistant's knowledge file, the AI prompt and the checker.
+   Runs in the browser (window.MMR) and in Node (require). No dependencies.
+   Settings come from two files: site.json (shared wording, units, tools, rubric) and <name>-lessons.json (the Atlas app,
+   Hub, assistant, licence and product names for one set of lessons), merged by mergeSite. */
 (function (root, factory) {
   if (typeof module === "object" && module.exports) module.exports = factory();
   else root.MMR = factory();
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  var VERSION = { renderer: "3.2", format: "1.7", checker: "1.7", vera: "1.4", prompt: "1.1" };
+  var VERSION = { renderer: "3.3", format: "1.8", checker: "1.8", knowledge: "1.5", prompt: "1.1" };
   var HEX32 = /^[0-9a-f]{32}$/i;
   var DATE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -32,8 +34,62 @@
       .replace(/\[([^\]]+)\]\((https:\/\/[^\s)]+)\)/g, "$1 ($2)");
   }
 
-  function mapmakerUrl(site, webmapId) {
-    var mm = (site && site.mapmaker) || {};
+  /* ---------------- Settings: site.json plus <name>-lessons.json ---------------- */
+  var NAME = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+  function isObj(v) { return !!v && typeof v === "object" && !Array.isArray(v); }
+  /* Objects merge key by key; anything else (text, numbers, lists) in the lessons file replaces the shared value. */
+  function merge(a, b) {
+    var out = {};
+    Object.keys(a || {}).forEach(function (k) { out[k] = a[k]; });
+    Object.keys(b || {}).forEach(function (k) { out[k] = isObj(out[k]) && isObj(b[k]) ? merge(out[k], b[k]) : b[k]; });
+    return out;
+  }
+  /* Puts the product names in place of {app}, {appFull} and so on. Unknown names in braces are left as they are,
+     so the checker can report them. Returns a copy; the inputs are not changed. */
+  function fill(v, names) {
+    if (typeof v === "string") return v.replace(/\{([A-Za-z][A-Za-z0-9]*)\}/g, function (m, k) { return Object.prototype.hasOwnProperty.call(names, k) ? names[k] : m; });
+    if (Array.isArray(v)) return v.map(function (x) { return fill(x, names); });
+    if (isObj(v)) { var o = {}; Object.keys(v).forEach(function (k) { o[k] = fill(v[k], names); }); return o; }
+    return v;
+  }
+  function defaultLessons(base) { return ((base && base.lessonSettings) || {}).default || "mapmaker"; }
+  function lessonsFileName(name) { return name + "-lessons.json"; }
+  function mergeSite(base, lessons, name) {
+    var m = merge(base, lessons), names = isObj(m.names) ? m.names : {};
+    var out = fill(m, names);
+    out.names = names;
+    out.lessonSettings = merge(out.lessonSettings || {}, { current: name || defaultLessons(base) });
+    return out;
+  }
+  /* For the pages: loads site.json and the lessons file named by ?lessons=<name> (or the default) and merges them. */
+  function loadSite(getJSON, search) {
+    return getJSON("site.json").then(function (base) {
+      var asked = typeof URLSearchParams === "function" ? new URLSearchParams(search || "").get("lessons") : null;
+      var name = asked || defaultLessons(base);
+      if (!NAME.test(name)) throw new Error("?lessons= should be lower-case words joined by hyphens.");
+      return getJSON(lessonsFileName(name)).then(function (lessons) { return mergeSite(base, lessons, name); });
+    });
+  }
+  /* Names in braces that no settings file filled in (a typo, or a name the lessons file doesn't give). */
+  function unfilled(site) {
+    var out = [];
+    (function walk(v, path) {
+      if (typeof v === "string") (v.match(/\{[A-Za-z][A-Za-z0-9]*\}/g) || []).forEach(function (m) { out.push(path + ": " + m); });
+      else if (Array.isArray(v)) v.forEach(function (x, i) { walk(x, path + "[" + i + "]"); });
+      else if (isObj(v)) Object.keys(v).forEach(function (k) { if (k !== "names") walk(v[k], path ? path + "." + k : k); });
+    })(site, "");
+    return out;
+  }
+  function names(site) { return (site && site.names) || {}; }
+  function appName(site) { return names(site).app || "the map app"; }
+  /* "A MapMaker map", "An Atlas map". */
+  function aOrAn(word) { return /^[aeiou]/i.test(String(word || "")) ? "An " + word : "A " + word; }
+  /* The licence statement: a lesson's own licence when it has one (it differs), otherwise the lessons settings'. */
+  function licence(site, lesson) { return (lesson && lesson.licence) || (site && site.licence) || ""; }
+  function assistant(site) { var a = site && site.assistant; return a && a.name ? a : null; }
+
+  function atlasUrl(site, webmapId) {
+    var mm = (site && site.atlas) || {};
     if (!HEX32.test(mm.appId || "")) return null;
     var base = String(mm.portalUrl || "https://www.arcgis.com").replace(/\/+$/, "");
     var q = "appid=" + encodeURIComponent(mm.appId);
@@ -46,11 +102,11 @@
   function mapImage(site, lesson) {
     var img = (lesson.map && lesson.map.image) || null;
     if (!img || !/^https:\/\//.test(img.url || "")) return null;
-    return { url: img.url, alt: img.alt || ("The " + lesson.title + " map in MapMaker"), width: img.width || (img.preview ? 600 : 1200), height: img.height || (img.preview ? 400 : 675), own: !img.preview };
+    return { url: img.url, alt: img.alt || ("The " + lesson.title + " map in " + appName(site)), width: img.width || (img.preview ? 600 : 1200), height: img.height || (img.preview ? 400 : 675), own: !img.preview };
   }
 
   /* Google's script-free Share to Classroom link. It carries only the address to share (the one parameter
-     Google documents for this form), so it shares the MapMaker map. Null if the button is switched off. */
+     Google documents for this form), so it shares the lesson's map. Null if the button is switched off. */
   function classroomShareUrl(site, url) {
     var c = (site && site.classroom) || {};
     if (!/^https:\/\//.test(c.shareUrl || "") || !/^https:\/\//.test(c.icon || "") || !/^https:\/\//.test(url || "")) return null;
@@ -101,17 +157,19 @@
     return (lesson.instructionalModels && lesson.instructionalModels.length) ? lesson.instructionalModels : (((site.teaching || {}).instructionalModels) || []);
   }
 
-  /* Vera's link for a lesson: opens the Vera chat page with the lesson named in the message box. */
-  function veraUrl(site, lesson) {
-    if (!site.vera || !site.vera.url) return null;
-    return site.vera.url + "?lesson=" + encodeURIComponent(lesson.id) + "&title=" + encodeURIComponent(lesson.title);
+  /* The AI assistant's link for a lesson: opens its chat page with the lesson named in the message box. */
+  function assistantUrl(site, lesson) {
+    var a = assistant(site);
+    if (!a || !a.url) return null;
+    return a.url + "?lesson=" + encodeURIComponent(lesson.id) + "&title=" + encodeURIComponent(lesson.title);
   }
 
   /* The prompt page for a lesson (prompt.html on GitHub Pages), which the Hub page embeds in a frame card. */
   function promptUrl(site, lesson) {
     var u = ((site && site.aiPrompt) || {}).pageUrl;
     if (!/^https:\/\//.test(u || "")) return null;
-    return u + "?id=" + encodeURIComponent(lesson.id);
+    var ls = (site && site.lessonSettings) || {};
+    return u + "?id=" + encodeURIComponent(lesson.id) + (ls.current && ls.current !== ls.default ? "&lessons=" + encodeURIComponent(ls.current) : "");
   }
   /* The ordered unit list for a course (site.json units), and a lesson's place in it. */
   function unitList(site, course) {
@@ -137,15 +195,15 @@
     return l[prefix] || prefix;
   }
 
-  /* One lesson's entry in Vera's knowledge file. Built from the lesson file, so it never needs editing.
-     Markdown links, because Vera's other knowledge files use them and Vera repeats links as written. */
-  function veraEntry(site, lesson) {
+  /* One lesson's entry in the AI assistant's knowledge file (and the AI prompt). Built from the lesson file, so it never
+     needs editing. Markdown links, because Vera's other knowledge files use them and Vera repeats links as written. */
+  function lessonEntry(site, lesson) {
     function md(text) { return String(text).replace(/\s+/g, " ").trim(); }
     var L = [];
     L.push("### " + lesson.title);
     L.push("**Lesson ID:** " + lesson.id);
     L.push("**Subject:** " + lesson.subject + ". **Course:** " + lesson.course + ". **Grade:** " + lesson.grade + ". **Unit:** " + lesson.unit + ". **Time:** " + lesson.time + ".");
-    L.push("**MapMaker map:** [Open " + lesson.title + " in MapMaker](" + mapmakerUrl(site, lesson.map.webmapId) + ")");
+    L.push("**" + appName(site) + " map:** [Open " + lesson.title + " in " + appName(site) + "](" + atlasUrl(site, lesson.map.webmapId) + ")");
     L.push("**Description:** " + md(lesson.summary));
     if (lesson.subjects && lesson.subjects.length) L.push("**Subjects:** " + lesson.subjects.join(", ") + ".");
     if (lesson.objectives && lesson.objectives.length) {
@@ -180,25 +238,27 @@
      entry (map, layers, pop-ups, bookmarks, questions; no answers), as plain text. */
   function aiPrompt(site, lesson) {
     var rules = ((site && site.aiPrompt) || {}).rules || [];
-    var entry = veraEntry(site, lesson).split("\n").map(function (line) {
+    var entry = lessonEntry(site, lesson).split("\n").map(function (line) {
       return plain(line.replace(/^###\s*/, "Lesson: ").replace(/\*\*/g, ""));
     });
     return rules.concat(["", "--- The lesson ---", ""]).concat(entry).join("\n");
   }
 
-  /* The whole knowledge file for Vera: a short header, then one entry per lesson. CRLF, like Vera's other files. */
-  function veraFile(site, lessons, builtOn) {
+  /* The whole knowledge file for the AI assistant: a short header, then one entry per lesson. CRLF, like Vera's other files. */
+  function assistantFile(site, lessons, builtOn) {
+    var a = assistant(site) || {};
     var head = [
-      "# MapMaker lessons on the Support Hub (questions, layers and sources)",
-      "Built " + builtOn + " from the lesson files by the MapMaker resource pages, Vera knowledge builder " + VERSION.vera + ". Do not edit by hand; edit the lesson files and rebuild.",
+      "# " + (a.knowledgeTitle || "Lessons (questions, layers and sources)"),
+      "Built " + builtOn + " from the lesson files by the " + (names(site).pages || "lesson resource pages") + ", " + (a.name || "assistant") + " knowledge builder " + VERSION.knowledge + ". Do not edit by hand; edit the lesson files and rebuild.",
       "",
-      "How to use this file: each lesson below has its own MapMaker map. When a teacher names one of these lessons (by title or lesson ID) and asks for new or different questions, base every question only on the bookmarks, layers and pop-up content listed for that lesson, and use bookmark and layer names exactly as written. If a request needs information that lesson's map does not show, say so plainly instead of inventing it. Use only the links listed for that lesson. The answers to the lessons' questions are not in this file: do not give them, and do not write student material that contains them.",
+      "How to use this file: each lesson below has its own " + appName(site) + " map. When a teacher names one of these lessons (by title or lesson ID) and asks for new or different questions, base every question only on the bookmarks, layers and pop-up content listed for that lesson, and use bookmark and layer names exactly as written. If a request needs information that lesson's map does not show, say so plainly instead of inventing it. Use only the links listed for that lesson. The answers to the lessons' questions are not in this file: do not give them, and do not write student material that contains them.",
       ""
     ];
-    return head.concat(lessons.map(function (l) { return veraEntry(site, l) + "\n"; })).join("\n").replace(/\r?\n/g, "\r\n");
+    return head.concat(lessons.map(function (l) { return lessonEntry(site, l) + "\n"; })).join("\n").replace(/\r?\n/g, "\r\n");
   }
 
-  function veraFileName() { return "vera_mapmaker_lessons.txt"; }
+  /* The knowledge file's name, or null when these lessons have no AI assistant. */
+  function assistantFileName(site) { var a = assistant(site); return a ? (a.knowledgeFile || "assistant_lessons.txt") : null; }
 
   /* One checker for the page and for the command line. Returns plain-English problems. */
   function check(site, lesson, fileName) {
@@ -267,7 +327,7 @@
       if (q.fill) lang(q.fill, w + " fill-in line", langs);
       if (q.lines !== undefined) need(Number.isInteger(q.lines) && q.lines >= 1 && q.lines <= 8, w + ": lines (writing lines on the sheet) should be a whole number from 1 to 8.");
       need(str(q.task), w + ": task (the teacher-facing version) is missing.");
-      need(Array.isArray(q.tools) && q.tools.length > 0, w + ": list the MapMaker tools it uses.");
+      need(Array.isArray(q.tools) && q.tools.length > 0, w + ": list the map tools it uses.");
       (q.tools || []).forEach(function (t) { need(!!site.tools[t], w + ": unknown tool \"" + t + "\". Known tools: " + Object.keys(site.tools).join(", ") + "."); });
       var a = q.answer || {};
       need(str(a.where) || str(a.accept) || str(a.text) || (a.table && a.table.rows), w + ": answer notes need at least one of where (where on the map to find it), accept (what to accept), text or table.");
@@ -321,7 +381,9 @@
       need(str(s.code) && str(s.text), "standards[" + (i + 1) + "] needs code and text.");
       need(/^[A-Z][A-Z0-9]*[\s.]/.test(s.code || ""), "standards[" + (i + 1) + "]: code should start with the framework, such as C3, TX or FL, then a space.");
     });
-    need(str(lesson.licence), "licence is missing.");
+    // Format 1.8: the licence lives in the lessons settings file. A lesson sets its own only when it differs.
+    if (lesson.licence !== undefined) need(str(lesson.licence), "licence, if given, should be the lesson's own licence statement (leave it out to use the lessons settings).");
+    need(str(licence(site, lesson)), "No licence: set licence in the lessons settings file.");
     need(Array.isArray(lesson.subjects) && lesson.subjects.length > 0 && lesson.subjects.every(str), "subjects needs at least one subject.");
     need(Array.isArray(lesson.objectives) && lesson.objectives.length >= 3 && lesson.objectives.length <= 5 && lesson.objectives.every(str), "objectives needs 3 to 5 lines (Students will…).");
     need(Array.isArray(lesson.discussion) && lesson.discussion.length >= 2 && lesson.discussion.length <= 4 && lesson.discussion.every(str), "discussion needs 2 to 4 debrief questions.");
@@ -341,7 +403,9 @@
     return errs;
   }
 
-  return { VERSION: VERSION, esc: esc, inline: inline, plain: plain, mapmakerUrl: mapmakerUrl, mapImage: mapImage, classroomShareUrl: classroomShareUrl, hubUrl: hubUrl, feedbackUrl: feedbackUrl,
-    howToLinks: howToLinks, veraUrl: veraUrl, veraEntry: veraEntry, veraFile: veraFile, veraFileName: veraFileName, aiPrompt: aiPrompt, promptUrl: promptUrl,
+  return { VERSION: VERSION, esc: esc, inline: inline, plain: plain, atlasUrl: atlasUrl, mapImage: mapImage, classroomShareUrl: classroomShareUrl, hubUrl: hubUrl, feedbackUrl: feedbackUrl,
+    mergeSite: mergeSite, loadSite: loadSite, defaultLessons: defaultLessons, lessonsFileName: lessonsFileName, unfilled: unfilled,
+    names: names, appName: appName, aOrAn: aOrAn, licence: licence, assistant: assistant,
+    howToLinks: howToLinks, assistantUrl: assistantUrl, lessonEntry: lessonEntry, assistantFile: assistantFile, assistantFileName: assistantFileName, aiPrompt: aiPrompt, promptUrl: promptUrl,
     unitList: unitList, unitIndex: unitIndex, skills: skills, instructionalModels: instructionalModels, sortStandards: sortStandards, standardPrefix: standardPrefix, standardLabel: standardLabel, check: check };
 });

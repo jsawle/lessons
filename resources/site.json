@@ -1,146 +1,48 @@
 {
  "app": {
-  "name": "MapMaker resource pages (lab)",
-  "version": "0.15.1",
+  "name": "{pages} (lab)",
+  "version": "0.16.0",
   "parts": {
-   "Page renderer": "3.2",
-   "Word sheet builder": "1.7",
-   "Lesson file format": "1.7",
-   "Checker": "1.7",
-   "Vera knowledge builder": "1.4",
+   "Page renderer": "3.3",
+   "Word sheet builder": "1.8",
+   "Lesson file format": "1.8",
+   "Checker": "1.8",
+   "Assistant knowledge builder": "1.5",
    "AI prompt builder": "1.1",
-   "Hub page builder": "3.2"
+   "Hub page builder": "3.3"
   }
  },
- "hubDemo": {
-  "name": "MapMaker Lessons (demo)",
-  "siteId": "9c39add73ebf47068e1dac37f6353b8d",
-  "url": "https://mapmakerlessons-gis-4-schools.hub.arcgis.com",
-  "lessonsSlug": "lessons",
-  "lessonsTitle": "MapMaker lessons: Grade 8 US History",
-  "lessonsIntro": "Ten lessons that teach Grade 8 US History with National Geographic MapMaker maps, arranged by topic in the order most courses teach them. Each one pairs a map with an inquiry, a Word student sheet in English and Spanish, and a separate teacher page with the answers.",
-  "distUrl": "https://jsawle.github.io/lessons/resources/dist",
-  "repoUrl": "https://github.com/jsawle/lessons",
-  "theme": {
-   "about": "Site colours the publishing notebook sets on the Hub site (Esri Calcite blue). Only these keys are changed.",
-   "header": {
-    "background": "#007AC2",
-    "text": "#FFFFFF"
-   },
-   "globalNav": {
-    "background": "#007AC2",
-    "text": "#FFFFFF"
-   },
-   "button": {
-    "background": "#007AC2",
-    "text": "#FFFFFF"
-   },
-   "body": {
-    "link": "#00619B"
-   }
-  },
-  "aboutSlug": "how-these-lessons-work",
-  "aboutTitle": "How these lessons work"
- },
- "vera": {
-  "name": "Vera",
-  "url": "https://jsawle.github.io/Vera/vera_canvas_lab.html",
-  "note": "Vera's chat page. The Lessons page has an Ask Vera button; lesson pages link to it with the lesson pre-filled. No embeds."
- },
- "classroom": {
-  "about": "Share to Google Classroom button on each lesson page. It shares the lesson's MapMaker map, never the lesson page, which holds the answer notes. Follows Google's Classroom branding guidelines: approved wording, the official icon on the left (32 to 96 px, unaltered), Roboto Bold, a 20% black shade on the icon on hover, and the trademark notice in the page footer. The button is left out if icon is empty.",
-  "label": "Share to Google Classroom",
-  "shareUrl": "https://classroom.google.com/share",
-  "icon": "https://jsawle.github.io/lessons/resources/assets/brand/classroom-icon.png",
-  "iconSize": 32,
-  "font": "https://jsawle.github.io/lessons/resources/assets/fonts/roboto-latin-700-normal.woff2",
-  "notice": "Google Classroom is a trademark of Google LLC.",
-  "permissionsUrl": "https://www.google.com/permissions/"
- },
- "mapmaker": {
-  "label": "MapMaker",
-  "portalUrl": "https://mpmkr.maps.arcgis.com",
-  "appId": "0cd1cdee853c413a84bfe4b9a6931f0d"
- },
- "hub": {
-  "name": "MapMaker Educator Support Hub",
-  "url": "https://mapmaker-support-hub-mpmkr.hub.arcgis.com",
-  "nav": [
-   {
-    "label": "Home",
-    "path": "/"
-   },
-   {
-    "label": "Lessons",
-    "path": "/pages/lessons"
-   },
-   {
-    "label": "How To",
-    "path": "/pages/how-to"
-   },
-   {
-    "label": "About",
-    "path": "/pages/about-mapmaker"
-   },
-   {
-    "label": "More",
-    "path": "/pages/more"
-   }
-  ],
-  "feedbackPath": "/pages/feedback",
-  "subjectPaths": {
-   "World Cultures and Geography": "/pages/world-cultures-and-geography",
-   "History": "/pages/history",
-   "Earth Science": "/pages/earth-science",
-   "Life Science": "/pages/life-science"
-  },
-  "coursePaths": {
-   "US History": "/pages/us-history-ngl",
-   "World History": "/pages/world-history-ngl"
-  },
-  "feedbackQuery": "lesson"
+ "lessonSettings": {
+  "about": "Everything specific to one Atlas app and its Hub lives in <name>-lessons.json next to this file and is merged over these shared settings. Pages use the one named in default unless the address has ?lessons=<name>; the build and the checker take --lessons <name>.",
+  "default": "mapmaker"
  },
  "tools": {
   "bookmarks": {
    "label": "Bookmarks",
-   "howTo": "navigating-mapmaker",
-   "howToTitle": "Navigating MapMaker",
    "skill": "Using bookmarks to find places"
   },
   "zoom": {
    "label": "Zoom",
-   "howTo": "navigating-mapmaker",
-   "howToTitle": "Navigating MapMaker",
    "skill": "Navigating a map"
   },
   "popups": {
    "label": "Pop-ups",
-   "howTo": "explore-layers-and-data",
-   "howToTitle": "Explore Layers and Data",
    "skill": "Reading pop-ups"
   },
   "layers": {
    "label": "Map layers",
-   "howTo": "explore-layers-and-data",
-   "howToTitle": "Explore Layers and Data",
    "skill": "Turning map layers on and off"
   },
   "legend": {
    "label": "Legend",
-   "howTo": "explore-layers-and-data",
-   "howToTitle": "Explore Layers and Data",
    "skill": "Using a map legend"
   },
   "measure": {
    "label": "Measure",
-   "howTo": "measure-with-mapmaker",
-   "howToTitle": "Measure with MapMaker",
    "skill": "Measuring distances on a map"
   },
   "sketch": {
    "label": "Sketch",
-   "howTo": "sketch-on-a-map",
-   "howToTitle": "Sketch on a Map",
    "skill": "Sketching on a map"
   }
  },
@@ -150,7 +52,7 @@
    "date": "Date",
    "bigQuestion": "Big question:",
    "yourAnswer": "Your answer:",
-   "openMap": "Open the map in MapMaker:",
+   "openMap": "Open the map in {app}:",
    "subtitle": "Student sheet",
    "beforeYouStart": "Before you start",
    "readingTheMap": "Reading the map",
@@ -174,7 +76,7 @@
    "date": "Fecha",
    "bigQuestion": "Pregunta central:",
    "yourAnswer": "Tu respuesta:",
-   "openMap": "Abre el mapa en MapMaker:",
+   "openMap": "Abre el mapa en {app}:",
    "subtitle": "Hoja del estudiante",
    "beforeYouStart": "Antes de empezar",
    "readingTheMap": "Cómo leer el mapa",
@@ -239,15 +141,15 @@
   "label": "Prompt for your own AI",
   "pageUrl": "https://jsawle.github.io/lessons/resources/prompt.html",
   "rules": [
-   "You are helping a teacher make classroom questions for a National Geographic MapMaker lesson. The map, its layers, what each pop-up shows, its bookmarks and the questions already written are listed below.",
+   "You are helping a teacher make classroom questions for a {appFull} lesson. The map, its layers, what each pop-up shows, its bookmarks and the questions already written are listed below.",
    "Use only the layers, pop-up contents and bookmarks listed. Do not invent layers, tools, data or map features. If a question would need information this map does not show, say so instead of inventing it.",
-   "Every question must be answerable by a student who opens the map in MapMaker and uses it: clicking pop-ups, reading the legend, using bookmarks, measuring or turning layers on and off. Name the exact layer or bookmark a student should use.",
+   "Every question must be answerable by a student who opens the map in {app} and uses it: clicking pop-ups, reading the legend, using bookmarks, measuring or turning layers on and off. Name the exact layer or bookmark a student should use.",
    "Write for grade 8 (age 13 to 14), in short sentences. Do not include answers unless the teacher asks for them, and never write material for students that contains the answers.",
-   "MapMaker has these tools: Basemaps, Open map, Map layers (turn layers on and off), Add layer, Legend, Measure (miles and feet), Sketch, 2D/3D, Bookmarks and pop-ups. It has no time slider or filter unless listed below. A pop-up that says 1 of 2 means more than one feature is at that spot; use the arrows to see each one."
+   "{app} has these tools: Basemaps, Open map, Map layers (turn layers on and off), Add layer, Legend, Measure ({measureUnits}), Sketch, 2D/3D, Bookmarks and pop-ups. It has no time slider or filter unless listed below. A pop-up that says 1 of 2 means more than one feature is at that spot; use the arrows to see each one."
   ]
  },
  "teaching": {
-  "about": "Standing teacher-guide text shared by every lesson. A lesson can give its own instructionalModels list.",
+  "about": "Standing teacher-guide text shared by every lesson. A lesson can give its own instructionalModels list. The last line of What every lesson includes comes from assistant.howItWorks in the lessons settings file, or promptOnly when there is no assistant.",
   "instructionalModels": [
    "Front-of-class demonstration",
    "1:1 devices",
@@ -260,16 +162,16 @@
    "Encourage students to look for patterns and make observations, not just to find the right answers.",
    "Layers the questions don't use are there for further study."
   ],
-  "materials": "The lesson includes the MapMaker map, a two-page Word student sheet in English and Spanish, and these teacher notes. Print the sheet, or download it and upload it to Google Drive to edit it in Google Docs (it also opens in Word). The Google Classroom button shares the map, not the sheet; to assign the sheet, attach your Drive copy in Classroom with Make a copy for each student, or paste the map link and attach the sheet yourself. No account or login is needed. Sketches on the map are not saved between sessions.",
+  "materials": "The lesson includes the {app} map, a two-page Word student sheet in English and Spanish, and these teacher notes. Print the sheet, or download it and upload it to Google Drive to edit it in Google Docs (it also opens in Word). The Google Classroom button shares the map, not the sheet; to assign the sheet, attach your Drive copy in Classroom with Make a copy for each student, or paste the map link and attach the sheet yourself. No account or login is needed. Sketches on the map are not saved between sessions.",
   "howTheyWork": [
-   "Each lesson is one MapMaker map and a set of questions that students answer by using the map: opening bookmarks, clicking pop-ups, reading the legend, turning layers on and off and measuring. The questions can't be answered from a textbook alone.",
-   "Students need no account or login. Open in MapMaker opens the map straight from the lesson page; the Share to Google Classroom button shares the map link with a class.",
+   "Each lesson is one {app} map and a set of questions that students answer by using the map: opening bookmarks, clicking pop-ups, reading the legend, turning layers on and off and measuring. The questions can't be answered from a textbook alone.",
+   "Students need no account or login. Open in {app} opens the map straight from the lesson page; the Share to Google Classroom button shares the map link with a class.",
    "The Word student sheet (English and Spanish) is two pages: a big question, some background, help reading the map, the questions with space to write, and a closing reflection. Print it or share it digitally; it opens in Word and Google Docs.",
    "Each lesson page lists the questions with the exact steps for the front of the class, marks one question as the one to use if you only have 15 minutes, and gives ideas for support and stretch.",
    "Where to find each answer on the map, and what to accept, are on a separate answer page and in the Word teacher notes, so the lesson page can be shared with students.",
-   "Sketches on the map are not saved between sessions. Students who sketch should finish in one session or take a screenshot.",
-   "Vera, the Support Hub's AI assistant, knows every lesson's map, layers and questions but not the answers. Each lesson page also has a prompt to paste into another AI tool, which lists the map's layers so the tool doesn't invent any."
-  ]
+   "Sketches on the map are not saved between sessions. Students who sketch should finish in one session or take a screenshot."
+  ],
+  "promptOnly": "Each lesson page has a prompt to paste into an AI tool, which lists the map's layers so the tool doesn't invent any."
  },
  "rubric": {
   "about": "Shared rubric for the answer to each lesson's compelling question. Four criteria, four levels; a lesson adds its own line about what counts as map evidence (lesson assessment.evidence). Shown on How these lessons work, each answer page and the Word teacher notes. Teachers can use it as it is, adapt it or ignore it.",
@@ -321,6 +223,5 @@
     ]
    }
   ]
- },
- "licence": "The National Geographic Society and Esri make this content available under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence, except as noted. The licence excludes the National Geographic and Esri logos (the words National Geographic with the yellow border logo, and the Esri globe and letters) and any images included in the content. The logos and images may not be removed, altered or changed."
+ }
 }

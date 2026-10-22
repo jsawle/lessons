@@ -1,17 +1,18 @@
-/* MapMaker resource pages: Word builder v1.3 (student sheets and teacher notes).
+/* Lesson resource pages: Word builder v1.8 (student sheets and teacher notes).
    Builds one language's student sheet, or the teacher notes, from a lesson file. Works in the browser
    (pass window.docx) and in Node (pass require("docx")), so the downloaded file and the file uploaded
    to ArcGIS Online always match the page.
    1.3: no underscore runs (Name and Date use an underlined tab, blanks are underlined spaces), the map
    address printed under the link for students on paper, 9 pt minimum text, the document language set
    once as the default, one definition of each heading style, a pause after each question title,
-   Spanish chrome strings from site.json, no draft markings, and the teacher notes document. */
+   Spanish chrome strings from site.json, no draft markings, and the teacher notes document.
+   1.8: the document's creator and the licence come from the lessons settings file. */
 (function (root, factory) {
   if (typeof module === "object" && module.exports) module.exports = factory(require("./lesson-core.js"));
   else root.MMRSheet = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "1.7";
+  var VERSION = "1.8";
   /* Sheets with more question text than this get tighter writing lines, so every sheet stays on one page. */
   var LONG_SHEET_CHARS = 1040;
   /* The same for two-page sheets (lessons with studentSupport), counting the extra sections too. */
@@ -87,7 +88,7 @@
       return out;
     }
     var title = lang === "en" ? lesson.title : (lesson.sheetTitle && lesson.sheetTitle[lang]) || lesson.title;
-    var mapUrl = MMR.mapmakerUrl(site, lesson.map.webmapId);
+    var mapUrl = MMR.atlasUrl(site, lesson.map.webmapId);
     var kids = [
       new D.Paragraph({ heading: D.HeadingLevel.HEADING_1, children: [run(title)] }),
       new D.Paragraph({ style: "Subtle", children: [run(T.subtitle)] }),
@@ -133,7 +134,7 @@
 
     if (S) kids.push(new D.Paragraph({ style: "Credits", spacing: { before: extraLong ? 60 : 120, line: extraLong ? 190 : 240 }, children: [run(credits, extraLong ? { size: 16 } : {})] }));
     return new D.Document({
-      creator: "MapMaker resource pages", title: title + " (" + T.subtitle + ")",
+      creator: MMR.names(site).pages || "Lesson resource pages", title: title + " (" + T.subtitle + ")",
       description: T.subtitle + ", " + lesson.contentVersion,
       styles: docStyles(tag),
       numbering: { config: [{ reference: "qs", levels: [{ level: 0, format: D.LevelFormat.DECIMAL, text: "%1.",
@@ -171,7 +172,7 @@
         rows: [new D.TableRow({ tableHeader: true, children: columns.map(function (c, i) { return cell(c, i, true); }) })]
           .concat(rows.map(function (r) { return new D.TableRow({ cantSplit: true, children: r.map(function (c, i) { return cell(c, i, false); }) }); })) });
     }
-    var mapUrl = MMR.mapmakerUrl(site, lesson.map.webmapId);
+    var mapUrl = MMR.atlasUrl(site, lesson.map.webmapId);
     var stds = MMR.sortStandards(site, lesson.standards);
     var kids = [
       new D.Paragraph({ heading: D.HeadingLevel.HEADING_1, children: [run("Teacher notes: " + lesson.title)] }),
@@ -245,9 +246,9 @@
     var credits = (T.mapData || "Map data:") + " " + lesson.map.layers.map(function (l) { return MMR.plain(l.source).replace(/ \(https:[^)]*\)/g, ""); })
       .filter(function (v, i, a) { return a.indexOf(v) === i; }).join("; ") + ".";
     kids.push(new D.Paragraph({ style: "Credits", spacing: { before: 360 }, children: [run(credits)] }));
-    kids.push(new D.Paragraph({ style: "Credits", spacing: { before: 120 }, children: [run(site.licence || lesson.licence || "")] }));
+    kids.push(new D.Paragraph({ style: "Credits", spacing: { before: 120 }, children: [run(MMR.licence(site, lesson))] }));
     return new D.Document({
-      creator: "MapMaker resource pages", title: "Teacher notes: " + lesson.title,
+      creator: MMR.names(site).pages || "Lesson resource pages", title: "Teacher notes: " + lesson.title,
       description: "Teacher notes, " + lesson.contentVersion,
       styles: docStyles(LANG_TAG.en),
       numbering: { config: [{ reference: "b", levels: [{ level: 0, format: D.LevelFormat.BULLET, text: "•",
