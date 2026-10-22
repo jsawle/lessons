@@ -1,0 +1,61 @@
+name: Map pictures
+
+# Takes a picture of each lesson's web map at its opening view (resources/tools/map-screenshots.mjs) and commits the
+# pictures and report.json to resources/assets/screenshots on the branch it ran on. Run it from the Actions tab
+# (optionally naming lesson ids), or by pushing to a branch named map-shots or map-shots/...
+
+on:
+  workflow_dispatch:
+    inputs:
+      lessons:
+        description: "Lesson ids, separated by spaces (leave empty for every lesson)"
+        required: false
+        default: ""
+  push:
+    branches:
+      - "map-shots"
+      - "map-shots/**"
+    paths:
+      - "resources/tools/map-shot.html"
+      - "resources/tools/map-screenshots.mjs"
+      - ".github/workflows/map-screenshots.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: map-pictures-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  pictures:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install a headless browser
+        run: |
+          npm install --no-save playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Take the map pictures
+        run: node resources/tools/map-screenshots.mjs ${{ github.event.inputs.lessons }}
+      - name: Keep the pictures as a download
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: map-pictures
+          path: resources/assets/screenshots
+      - name: Commit the pictures
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add resources/assets/screenshots
+          if git diff --cached --quiet; then
+            echo "No new pictures."
+          else
+            git commit -m "Update map pictures [skip ci]"
+            git push
+          fi

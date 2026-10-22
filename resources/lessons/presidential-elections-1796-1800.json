@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.9",
   "id": "presidential-elections-1796-1800",
-  "contentVersion": "0.7.1",
+  "contentVersion": "0.7.2",
   "status": "draft",
   "updated": "2026-10-22",
   "reviewed": null,
@@ -26,6 +26,12 @@
   "map": {
     "webmapId": "6173219d9cd84812bcd4fed859b2c182",
     "about": "This map compares the elections of 1796 and 1800 state by state: a pie on each of the sixteen states shows how its electors voted in the contests between John Adams (Federalist) and Thomas Jefferson (Democratic-Republican). The 1800 layer is off when the map opens, because the two sets of pies overlap. Two pink squares mark landmark Supreme Court cases that tested the new federal government's power: Marbury v. Madison (1803) in Washington, D.C., and McCulloch v. Maryland (1819) in Baltimore.",
+    "image": {
+      "url": "https://jsawle.github.io/lessons/resources/assets/screenshots/presidential-elections-1796-1800.jpg",
+      "alt": "The eastern United States in 1796, each state with a pie of electors' votes in orange and blue (bigger pies for more electors), and two pink squares, one labeled Marbury v. Madison (1803).",
+      "width": 1200,
+      "height": 675
+    },
     "bookmarks": [
       "The sixteen states"
     ],

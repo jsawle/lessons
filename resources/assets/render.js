@@ -81,7 +81,7 @@
     h.push('<h1 id="lesson-title">' + (teacherView ? "Answer notes: " : "") + esc(lesson.title) + "</h1>");
     var pic = MMR.mapImage(site, lesson);
     if (teacherView) h.push('<p class="notice"><strong>For teachers.</strong> This page holds the answers and what to accept. With students, share the lesson page or the map, not this page.</p>');
-    else h.push('<div class="herogrid"><div><p class="summary">' + inline(lesson.summary) + "</p></div>" + (pic ? '<a class="pic" href="' + esc(mmUrl) + '" target="_blank" rel="noopener"><img src="' + esc(pic.url) + '" alt="' + esc(pic.alt) + '" width="' + pic.width + '" height="' + pic.height + '"><span class="muted">' + (pic.own ? "The map as it opens." : "Map preview; open it" + esc(N.inApp) + " to explore.") + newTab + "</span></a>" : "") + "</div>");
+    else h.push('<div class="herogrid"><div><p class="summary">' + inline(lesson.summary) + "</p></div>" + (pic ? '<a class="pic" href="' + esc(mmUrl) + '" target="_blank" rel="noopener"><span class="sr-only">' + esc(N.openInApp) + ': </span><img src="' + esc(pic.url) + '" alt="' + esc(pic.alt) + '" width="' + pic.width + '" height="' + pic.height + '"><span class="muted">' + (pic.own ? "The map as it opens." : "Map preview; open it" + esc(N.inApp) + " to explore.") + newTab + "</span></a>" : "") + "</div>");
     h.push(facts(site, lesson));
     if (teacherView) {
       h.push('<div class="actions"><a class="btn primary" href="' + esc(mmUrl) + '" target="_blank" rel="noopener">' + mapIcon + esc(N.openInApp) + newTab + "</a>" +

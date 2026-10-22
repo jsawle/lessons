@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.9",
   "id": "revolutionary-battles-1775-1776",
-  "contentVersion": "0.9.0",
+  "contentVersion": "0.9.1",
   "status": "draft",
   "updated": "2026-10-22",
   "reviewed": null,
@@ -26,9 +26,10 @@
     "webmapId": "bda07736a1b9425ea19fdde282088bd6",
     "about": "This map follows the first two years of the American Revolution, 1775 and 1776. It shows 21 battles from those years and the land their battlefields covered, against the colony borders of 1763 and the 1763 Proclamation Line. Five numbered turning points, which appear when you zoom in, mark the order of events from Lexington and Concord to Trenton. A layer of port cities, off when the map opens, adds the ports that supplied armies and moved troops.",
     "image": {
-      "url": "https://www.arcgis.com/sharing/rest/content/items/bda07736a1b9425ea19fdde282088bd6/info/thumbnail/thumbnail1787773552250.png",
-      "alt": "Preview of the 1775–1776 Revolutionary Battles map",
-      "preview": true
+      "url": "https://jsawle.github.io/lessons/resources/assets/screenshots/revolutionary-battles-1775-1776.jpg",
+      "alt": "The colonies from Virginia north to the St. Lawrence River, with colony borders as thin gray lines, a thick gray line inland, and the battles as small red and blue diamonds.",
+      "width": 1200,
+      "height": 675
     },
     "bookmarks": [
       "Massachusetts"
