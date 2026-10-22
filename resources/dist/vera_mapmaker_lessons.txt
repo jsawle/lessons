@@ -1,5 +1,5 @@
 # MapMaker lessons on the Support Hub (questions, layers and sources)
-Built 2026-10-21 from the lesson files by the MapMaker resource pages, Vera knowledge builder 1.4. Do not edit by hand; edit the lesson files and rebuild.
+Built 2026-10-21 from the lesson files by the MapMaker resource pages, Vera knowledge builder 1.5. Do not edit by hand; edit the lesson files and rebuild.
 
 How to use this file: each lesson below has its own MapMaker map. When a teacher names one of these lessons (by title or lesson ID) and asks for new or different questions, base every question only on the bookmarks, layers and pop-up content listed for that lesson, and use bookmark and layer names exactly as written. If a request needs information that lesson's map does not show, say so plainly instead of inventing it. Use only the links listed for that lesson. The answers to the lessons' questions are not in this file: do not give them, and do not write student material that contains them.
 
