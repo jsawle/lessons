@@ -1,5 +1,5 @@
 {
- "tool": "Map audit 1.1",
+ "tool": "Map audit 1.2",
  "lesson": "civil-war-battlefields",
  "webmapId": "7a06e8e2818941f99a3d40bb32e08118",
  "item": {
@@ -25,7 +25,7 @@
   "licenseInfo": "<p><img style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; height:auto; max-width:100%;' src='https://downloads.esri.com/blogs/arcgisonline/esrilogo_new.png' /><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'>This work is licensed under the Esri Master License Agreement.</span><br />&nbsp;</p><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><a style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' href='https://goto.arcgis.com/termsofuse/viewsummary' rel='nofollow ugc noopener noreferrer'><strong>View Summary</strong></a>&nbsp;|&nbsp;<a style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' href='https://goto.arcgis.com/termsofuse/viewtermsofuse' rel='nofollow ugc noopener noreferrer'><strong>View Terms of Use</strong></a></div>",
   "created": 1755123203000,
   "modified": 1792159522000,
-  "numViews": 1820,
+  "numViews": 1821,
   "thumbnail": "thumbnail/ago_downloaded.png",
   "contentStatus": null,
   "extent": [
@@ -68,7 +68,7 @@
    "xmax": -7435867.124804132,
    "ymax": 6644946.590185421
   },
-  "scale": 20292045
+  "scale": 23419824
  },
  "bookmarks": [],
  "applicationProperties": null,
@@ -78,6 +78,7 @@
    "title": "U.S. Civil War States and Territories (1863)",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": 1,
    "itemId": "ebc87bfc30a24e2883edfe79b207d211",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Archive_8/FeatureServer/0",
@@ -135,8 +136,7 @@
      "Shape__Length",
      "SHAPE_AREA",
      "SHAPE_LEN",
-     "STATENAM",
-     "Status"
+     "STATENAM"
     ],
     "elements": [
      "fields"
@@ -435,16 +435,18 @@
      "nameField": null,
      "geometryCompared": "area and length"
     },
-    "seconds": 0.1
+    "seconds": 0.0
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": true
+   "rendererColourOnly": true,
+   "popupNamesClass": true
   },
   {
    "path": "United States Battlefield Boundaries",
    "title": "United States Battlefield Boundaries",
    "layerType": "GroupLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": null,
    "url": null,
@@ -457,13 +459,15 @@
    "listMode": null,
    "definitionExpression": null,
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "United States Battlefield Boundaries / Civil War Battlefield Boundary",
    "title": "Civil War Battlefield Boundary",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "8b2e2d492c124d1cacba0599d20639ae",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/0",
@@ -543,7 +547,7 @@
     "licenseInfo": "<p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The </span><a target='_blank' href='https://www.nps.gov/subjects/gisandmapping/data-disclaimers.htm' rel='nofollow ugc noopener noreferrer'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>National Park Service</span></a><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'> shall not be held liable for improper or incorrect use of the cultural resource data described and/or contained herein. These data and related graphics are not legal documents and are not intended to be used as such, nor do they replace the need for consultation with appropriate state/tribal/federal historic preservation offices.</span></p><p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The information contained in these data is dynamic and may change over time. The data are not better than the original sources from which they were derived. It is the responsibility of the data user to use the data appropriately and consistently within the limitations of geospatial data in general and these data in particular, as expressed in feature-level metadata. The related graphics are intended to aid the data user in acquiring relevant data; it is not appropriate to use the related graphics as data.​​​​​​​</span></p><p style='background-color:white; line-height:normal; margin:0in 2.25pt 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>Cultural resource data sets may contain sensitive information that has been redacted or withheld from general use.&nbsp; These data require express permission from National Park Service programs, parks, or regional offices to access or use. Any unauthorized use of sensitive cultural resource data, disclosure, or distribution of that data, is prohibited unless specifically provided under the Archaeological Resources Protection Act of 1979, 16. U.S.C. 470hh, as amended, and National Park Service and Related Programs, 54&nbsp;U.S.C. 300101 (formerly known as the National Historic Preservation Act, 16 U.S.C. 470-1).</span></p><p style='background-color:white; line-height:normal; margin:0in .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The National Park Service gives no warranty, expressed or implied, as to the accuracy, reliability, or completeness of these data, which may have been generated over many years, using multiple creation methods as well as collection procedures. It is strongly recommended that these data be directly acquired from an NPS server and not indirectly through other sources, which may have changed the data in some way. Although these data have been processed successfully on a computer system at the National Park Service, no warranty expressed or implied is made regarding the utility of the data on another system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. This disclaimer applies both to individual use of the data and aggregate use with other data.</span></p>",
     "created": 1778620484000,
     "modified": 1783536706000,
-    "numViews": 14506,
+    "numViews": 14507,
     "thumbnail": "thumbnail/thumbnail1781189229611.png",
     "contentStatus": null,
     "extent": [
@@ -664,16 +668,18 @@
      "nameField": "NAME",
      "geometryCompared": "area and length"
     },
-    "seconds": 0.2
+    "seconds": 0.0
    },
    "drawsAtOpening": false,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "United States Battlefield Boundaries / Civil War Core Areas",
    "title": "Civil War Core Areas",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "8b2e2d492c124d1cacba0599d20639ae",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/1",
@@ -738,7 +744,7 @@
     "licenseInfo": "<p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The </span><a target='_blank' href='https://www.nps.gov/subjects/gisandmapping/data-disclaimers.htm' rel='nofollow ugc noopener noreferrer'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>National Park Service</span></a><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'> shall not be held liable for improper or incorrect use of the cultural resource data described and/or contained herein. These data and related graphics are not legal documents and are not intended to be used as such, nor do they replace the need for consultation with appropriate state/tribal/federal historic preservation offices.</span></p><p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The information contained in these data is dynamic and may change over time. The data are not better than the original sources from which they were derived. It is the responsibility of the data user to use the data appropriately and consistently within the limitations of geospatial data in general and these data in particular, as expressed in feature-level metadata. The related graphics are intended to aid the data user in acquiring relevant data; it is not appropriate to use the related graphics as data.​​​​​​​</span></p><p style='background-color:white; line-height:normal; margin:0in 2.25pt 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>Cultural resource data sets may contain sensitive information that has been redacted or withheld from general use.&nbsp; These data require express permission from National Park Service programs, parks, or regional offices to access or use. Any unauthorized use of sensitive cultural resource data, disclosure, or distribution of that data, is prohibited unless specifically provided under the Archaeological Resources Protection Act of 1979, 16. U.S.C. 470hh, as amended, and National Park Service and Related Programs, 54&nbsp;U.S.C. 300101 (formerly known as the National Historic Preservation Act, 16 U.S.C. 470-1).</span></p><p style='background-color:white; line-height:normal; margin:0in .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The National Park Service gives no warranty, expressed or implied, as to the accuracy, reliability, or completeness of these data, which may have been generated over many years, using multiple creation methods as well as collection procedures. It is strongly recommended that these data be directly acquired from an NPS server and not indirectly through other sources, which may have changed the data in some way. Although these data have been processed successfully on a computer system at the National Park Service, no warranty expressed or implied is made regarding the utility of the data on another system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. This disclaimer applies both to individual use of the data and aggregate use with other data.</span></p>",
     "created": 1778620484000,
     "modified": 1783536706000,
-    "numViews": 14506,
+    "numViews": 14507,
     "thumbnail": "thumbnail/thumbnail1781189229611.png",
     "contentStatus": null,
     "extent": [
@@ -854,16 +860,18 @@
      "nameField": "NAME",
      "geometryCompared": "area and length"
     },
-    "seconds": 0.2
+    "seconds": 0.0
    },
    "drawsAtOpening": false,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Boundary between Union and Confederacy",
    "title": "Boundary between Union and Confederacy",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "35d06a0be8944c848584b7f398df6760",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/US_Civil_War___Boundary_between_Union_and_Confederacy_(1)/FeatureServer/0",
@@ -1076,16 +1084,18 @@
      "nameField": null,
      "geometryCompared": "area and length"
     },
-    "seconds": 0.1
+    "seconds": 0.0
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Railroads 1826 to 1863 (static)",
    "title": "Railroads 1826 to 1863 (static)",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "300106342f0f456381bac735c7962572",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Railroads_1826_to_1911_static/FeatureServer/0",
@@ -1355,13 +1365,15 @@
     "count": 16137
    },
    "drawsAtOpening": false,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Civil War Battlefields",
    "title": "Civil War Battlefields",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "538d28b7c91b476ba19f3f64f1e5d8d5",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Civil War Battlefields (time-enabled)/FeatureServer/0",
@@ -1747,24 +1759,21 @@
      "nameField": "Battle",
      "geometryCompared": "geometry"
     },
-    "seconds": 0.3
+    "seconds": 0.0
    },
-   "drawsAtOpening": false,
-   "rendererColourOnly": true
+   "drawsAtOpening": true,
+   "rendererColourOnly": true,
+   "popupNamesClass": false
   }
  ],
  "findings": [
   {
    "where": "layer U.S. Civil War States and Territories (1863)",
-   "what": "pop-up shows field names as labels: GISJOIN, GISJOIN2, ICPSRST, NHGISST, Shape__Area, Shape__Length"
-  },
-  {
-   "where": "layer U.S. Civil War States and Territories (1863)",
-   "what": "symbols differ by colour only (WCAG 1.4.1 if a question depends on telling them apart)"
+   "what": "categories differ by colour only and the pop-up doesn't name them (WCAG 1.4.1 if a question depends on them)"
   },
   {
    "where": "layer United States Battlefield Boundaries / Civil War Battlefield Boundary",
-   "what": "on at the start but doesn't draw at the opening scale"
+   "what": "on at the start but only draws when zoomed in"
   },
   {
    "where": "layer United States Battlefield Boundaries / Civil War Battlefield Boundary",
@@ -1772,19 +1781,19 @@
   },
   {
    "where": "layer United States Battlefield Boundaries / Civil War Core Areas",
-   "what": "on at the start but doesn't draw at the opening scale"
+   "what": "on at the start but only draws when zoomed in"
   },
   {
    "where": "layer Boundary between Union and Confederacy",
-   "what": "pop-up shows field names as labels: Shape__Length"
+   "what": "pop-up lists raw field names: Shape__Length"
   },
   {
    "where": "layer Railroads 1826 to 1863 (static)",
-   "what": "pop-up shows field names as labels: Shape__Length"
+   "what": "pop-up lists raw field names: Shape__Length"
   },
   {
    "where": "layer Railroads 1826 to 1863 (static)",
-   "what": "on at the start but doesn't draw at the opening scale"
+   "what": "on at the start but only draws when zoomed in"
   },
   {
    "where": "layer Civil War Battlefields",
@@ -1796,11 +1805,7 @@
   },
   {
    "where": "layer Civil War Battlefields",
-   "what": "symbols differ by colour only (WCAG 1.4.1 if a question depends on telling them apart)"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "on at the start but doesn't draw at the opening scale"
+   "what": "categories differ by colour only and the pop-up doesn't name them (WCAG 1.4.1 if a question depends on them)"
   },
   {
    "where": "layer Civil War Battlefields",

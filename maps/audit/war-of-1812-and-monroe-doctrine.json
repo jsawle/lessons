@@ -1,5 +1,5 @@
 {
- "tool": "Map audit 1.1",
+ "tool": "Map audit 1.2",
  "lesson": "war-of-1812-and-monroe-doctrine",
  "webmapId": "fad1cdb9d5704401a4e05c34f7ee693c",
  "item": {
@@ -22,7 +22,7 @@
   "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
   "created": 1791982440000,
   "modified": 1791988692000,
-  "numViews": 18,
+  "numViews": 0,
   "thumbnail": null,
   "contentStatus": null,
   "extent": [
@@ -65,7 +65,7 @@
     "latestWkid": 3857
    }
   },
-  "scale": 24893492
+  "scale": 31091861
  },
  "bookmarks": [
   "The War of 1812",
@@ -79,6 +79,7 @@
    "title": "Historic National Boundaries: 1800",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "e1fae733490742c5832a0c92bf7ef29d",
    "url": "https://services.arcgis.com/8df8p0NlLFEShl0r/arcgis/rest/services/Historic_National_Boundaries_NEW/FeatureServer/7",
@@ -165,7 +166,7 @@
     "licenseInfo": "<span><span style='font-size: 14.6667px; font-family: Arial; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;'>Data may be freely downloaded for research, study, or teaching, but must be cited appropriately. Re-release of the data, or incorporation of the data into a commercial product, is allowed only with explicit permission. Contact U-Spatial at </span><a href='mailto:uspatial@umn.edu' style='text-decoration:none;' rel='nofollow ugc'><span style='font-size: 14.6667px; font-family: Arial; color: rgb(17, 85, 204); text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;'>uspatial@umn.edu</span></a><span style='font-size: 14.6667px; font-family: Arial; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;'> or visit our website at </span><a href='http://www.uspatial.umn.edu' style='text-decoration:none;' rel='nofollow ugc'><span style='font-size: 14.6667px; font-family: Arial; color: rgb(17, 85, 204); text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;'>www.uspatial.umn.edu</span></a><span style='font-size: 14.6667px; font-family: Arial; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;'> for more information.</span></span>",
     "created": 1695933661000,
     "modified": 1718384420000,
-    "numViews": 4213,
+    "numViews": 4214,
     "thumbnail": "thumbnail/thumbnail1716298853482.png",
     "contentStatus": null,
     "extent": [
@@ -245,16 +246,18 @@
      "nameField": "NAME",
      "geometryCompared": "geometry"
     },
-    "seconds": 1.9
+    "seconds": 2.0
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": true
   },
   {
    "path": "Land Spain gave up in 1819",
    "title": "Land Spain gave up in 1819",
    "layerType": "ArcGISFeatureLayer",
    "visible": false,
+   "onAtStart": false,
    "opacity": 0.6,
    "itemId": "2f560d7a635342b18f78e40955903589",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/US_Terr_Acq/FeatureServer/0",
@@ -387,7 +390,7 @@
     "licenseInfo": "<p>This map is in the <a target='_blank' href='https://creativecommons.org/public-domain/' rel='nofollow ugc noopener noreferrer'>public domain</a>.&nbsp;</p>",
     "created": 1751058091000,
     "modified": 1784060280000,
-    "numViews": 8106,
+    "numViews": 8107,
     "thumbnail": "thumbnail/thumbnail1751488959579.png",
     "contentStatus": null,
     "extent": [
@@ -502,16 +505,18 @@
      "nameField": "NAME",
      "geometryCompared": "geometry"
     },
-    "seconds": 0.4
+    "seconds": 0.1
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Battlefield Boundaries: War of 1812",
    "title": "Battlefield Boundaries: War of 1812",
    "layerType": "GroupLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": null,
    "url": null,
@@ -524,13 +529,15 @@
    "listMode": null,
    "definitionExpression": null,
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Battlefield Boundaries: War of 1812 / Battlefield Boundary",
    "title": "Battlefield Boundary",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "8b2e2d492c124d1cacba0599d20639ae",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/8",
@@ -610,7 +617,7 @@
     "licenseInfo": "<p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The </span><a target='_blank' href='https://www.nps.gov/subjects/gisandmapping/data-disclaimers.htm' rel='nofollow ugc noopener noreferrer'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>National Park Service</span></a><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'> shall not be held liable for improper or incorrect use of the cultural resource data described and/or contained herein. These data and related graphics are not legal documents and are not intended to be used as such, nor do they replace the need for consultation with appropriate state/tribal/federal historic preservation offices.</span></p><p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The information contained in these data is dynamic and may change over time. The data are not better than the original sources from which they were derived. It is the responsibility of the data user to use the data appropriately and consistently within the limitations of geospatial data in general and these data in particular, as expressed in feature-level metadata. The related graphics are intended to aid the data user in acquiring relevant data; it is not appropriate to use the related graphics as data.​​​​​​​</span></p><p style='background-color:white; line-height:normal; margin:0in 2.25pt 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>Cultural resource data sets may contain sensitive information that has been redacted or withheld from general use.&nbsp; These data require express permission from National Park Service programs, parks, or regional offices to access or use. Any unauthorized use of sensitive cultural resource data, disclosure, or distribution of that data, is prohibited unless specifically provided under the Archaeological Resources Protection Act of 1979, 16. U.S.C. 470hh, as amended, and National Park Service and Related Programs, 54&nbsp;U.S.C. 300101 (formerly known as the National Historic Preservation Act, 16 U.S.C. 470-1).</span></p><p style='background-color:white; line-height:normal; margin:0in .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The National Park Service gives no warranty, expressed or implied, as to the accuracy, reliability, or completeness of these data, which may have been generated over many years, using multiple creation methods as well as collection procedures. It is strongly recommended that these data be directly acquired from an NPS server and not indirectly through other sources, which may have changed the data in some way. Although these data have been processed successfully on a computer system at the National Park Service, no warranty expressed or implied is made regarding the utility of the data on another system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. This disclaimer applies both to individual use of the data and aggregate use with other data.</span></p>",
     "created": 1778620484000,
     "modified": 1783536706000,
-    "numViews": 14507,
+    "numViews": 0,
     "thumbnail": "thumbnail/thumbnail1781189229611.png",
     "contentStatus": null,
     "extent": [
@@ -739,16 +746,18 @@
      "nameField": "NAME",
      "geometryCompared": "area and length"
     },
-    "seconds": 0.1
+    "seconds": 0.0
    },
    "drawsAtOpening": false,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Battlefield Boundaries: War of 1812 / Core Areas",
    "title": "Core Areas",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "8b2e2d492c124d1cacba0599d20639ae",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/9",
@@ -828,7 +837,7 @@
     "licenseInfo": "<p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The </span><a target='_blank' href='https://www.nps.gov/subjects/gisandmapping/data-disclaimers.htm' rel='nofollow ugc noopener noreferrer'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>National Park Service</span></a><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'> shall not be held liable for improper or incorrect use of the cultural resource data described and/or contained herein. These data and related graphics are not legal documents and are not intended to be used as such, nor do they replace the need for consultation with appropriate state/tribal/federal historic preservation offices.</span></p><p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The information contained in these data is dynamic and may change over time. The data are not better than the original sources from which they were derived. It is the responsibility of the data user to use the data appropriately and consistently within the limitations of geospatial data in general and these data in particular, as expressed in feature-level metadata. The related graphics are intended to aid the data user in acquiring relevant data; it is not appropriate to use the related graphics as data.​​​​​​​</span></p><p style='background-color:white; line-height:normal; margin:0in 2.25pt 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>Cultural resource data sets may contain sensitive information that has been redacted or withheld from general use.&nbsp; These data require express permission from National Park Service programs, parks, or regional offices to access or use. Any unauthorized use of sensitive cultural resource data, disclosure, or distribution of that data, is prohibited unless specifically provided under the Archaeological Resources Protection Act of 1979, 16. U.S.C. 470hh, as amended, and National Park Service and Related Programs, 54&nbsp;U.S.C. 300101 (formerly known as the National Historic Preservation Act, 16 U.S.C. 470-1).</span></p><p style='background-color:white; line-height:normal; margin:0in .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The National Park Service gives no warranty, expressed or implied, as to the accuracy, reliability, or completeness of these data, which may have been generated over many years, using multiple creation methods as well as collection procedures. It is strongly recommended that these data be directly acquired from an NPS server and not indirectly through other sources, which may have changed the data in some way. Although these data have been processed successfully on a computer system at the National Park Service, no warranty expressed or implied is made regarding the utility of the data on another system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. This disclaimer applies both to individual use of the data and aggregate use with other data.</span></p>",
     "created": 1778620484000,
     "modified": 1783536706000,
-    "numViews": 14507,
+    "numViews": 0,
     "thumbnail": "thumbnail/thumbnail1781189229611.png",
     "contentStatus": null,
     "extent": [
@@ -949,16 +958,18 @@
      "nameField": "NAME",
      "geometryCompared": "area and length"
     },
-    "seconds": 0.1
+    "seconds": 0.0
    },
    "drawsAtOpening": false,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Adams–Onís Treaty line, 1819",
    "title": "Adams–Onís Treaty line, 1819",
    "layerType": "ArcGISFeatureLayer",
    "visible": false,
+   "onAtStart": false,
    "opacity": 1,
    "itemId": "dc51cf9ed75b4cef8301e6615356affb",
    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Adams_Onis_Line_1819/FeatureServer/0",
@@ -1023,7 +1034,7 @@
     "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
     "created": 1791982392000,
     "modified": 1791988643000,
-    "numViews": 62,
+    "numViews": 65,
     "thumbnail": "thumbnail/ago_downloaded.png",
     "contentStatus": null,
     "extent": [
@@ -1121,13 +1132,15 @@
     "seconds": 0.3
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Battles of the War of 1812",
    "title": "Battles of the War of 1812",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "d84a0d3a85b344cfaaa660f4068c5c33",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Battles_of_the_War_of_1812/FeatureServer/0",
@@ -1265,7 +1278,7 @@
     "licenseInfo": "<p>Copyright <a target='_blank' href='https://www.battlefields.org/?ms=googlepaid&amp;ms=googlepaid' rel='nofollow ugc noopener noreferrer'>American Battlefield Trust</a></p>",
     "created": 1755104094000,
     "modified": 1785524487000,
-    "numViews": 1640,
+    "numViews": 0,
     "thumbnail": "thumbnail/thumbnail1783649533304.png",
     "contentStatus": null,
     "extent": [
@@ -1466,16 +1479,18 @@
      "nameField": "Battle",
      "geometryCompared": "geometry"
     },
-    "seconds": 0.2
+    "seconds": 0.0
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": true
+   "rendererColourOnly": true,
+   "popupNamesClass": true
   },
   {
    "path": "Latin American independence and US recognition",
    "title": "Latin American independence and US recognition",
    "layerType": "ArcGISFeatureLayer",
    "visible": false,
+   "onAtStart": false,
    "opacity": 1,
    "itemId": "0781ec0ab08242288662526afdcf5630",
    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_LatAm_Independence_Recognition/FeatureServer/0",
@@ -1585,7 +1600,7 @@
     "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
     "created": 1791982374000,
     "modified": 1791988632000,
-    "numViews": 56,
+    "numViews": 59,
     "thumbnail": null,
     "contentStatus": null,
     "extent": [
@@ -1714,7 +1729,8 @@
     "seconds": 0.2
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   }
  ],
  "findings": [
@@ -1732,7 +1748,7 @@
   },
   {
    "where": "layer Battlefield Boundaries: War of 1812 / Battlefield Boundary",
-   "what": "on at the start but doesn't draw at the opening scale"
+   "what": "on at the start but only draws when zoomed in"
   },
   {
    "where": "layer Battlefield Boundaries: War of 1812 / Battlefield Boundary",
@@ -1748,15 +1764,11 @@
   },
   {
    "where": "layer Battlefield Boundaries: War of 1812 / Core Areas",
-   "what": "on at the start but doesn't draw at the opening scale"
+   "what": "on at the start but only draws when zoomed in"
   },
   {
    "where": "layer Battlefield Boundaries: War of 1812 / Core Areas",
    "what": "two features at the same place: Benedict and Benedict"
-  },
-  {
-   "where": "layer Battles of the War of 1812",
-   "what": "symbols differ by colour only (WCAG 1.4.1 if a question depends on telling them apart)"
   }
  ]
 }

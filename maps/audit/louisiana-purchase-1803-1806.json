@@ -1,5 +1,5 @@
 {
- "tool": "Map audit 1.1",
+ "tool": "Map audit 1.2",
  "lesson": "louisiana-purchase-1803-1806",
  "webmapId": "f8af7269e5c14e69b060d6184d04ff85",
  "item": {
@@ -65,7 +65,7 @@
     "latestWkid": 3857
    }
   },
-  "scale": 13673890
+  "scale": 17902653
  },
  "bookmarks": [
   "The Louisiana Purchase",
@@ -79,6 +79,7 @@
    "title": "Territorial acquisitions to 1803",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": 0.6,
    "itemId": "2f560d7a635342b18f78e40955903589",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/US_Terr_Acq/FeatureServer/0",
@@ -244,7 +245,7 @@
     "licenseInfo": "<p>This map is in the <a target='_blank' href='https://creativecommons.org/public-domain/' rel='nofollow ugc noopener noreferrer'>public domain</a>.&nbsp;</p>",
     "created": 1751058091000,
     "modified": 1784060280000,
-    "numViews": 8105,
+    "numViews": 8106,
     "thumbnail": "thumbnail/thumbnail1751488959579.png",
     "contentStatus": null,
     "extent": [
@@ -343,16 +344,18 @@
      "nameField": "NAME",
      "geometryCompared": "geometry"
     },
-    "seconds": 1.0
+    "seconds": 0.3
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Biomes",
    "title": "Biomes",
    "layerType": "ArcGISFeatureLayer",
    "visible": false,
+   "onAtStart": false,
    "opacity": null,
    "itemId": "0fccc890adc74032acc60ff7a66005f7",
    "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/Resolve_Ecoregions/FeatureServer/0",
@@ -1302,16 +1305,18 @@
      "nameField": "ECO_NAME",
      "geometryCompared": "area and length"
     },
-    "seconds": 0.4
+    "seconds": 0.0
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": true
+   "rendererColourOnly": true,
+   "popupNamesClass": true
   },
   {
    "path": "United States Watersheds",
    "title": "United States Watersheds",
    "layerType": "GroupLayer",
    "visible": false,
+   "onAtStart": false,
    "opacity": null,
    "itemId": "3a3278a1bdd445e892d2f987151b5f8b",
    "url": null,
@@ -1346,7 +1351,7 @@
     "licenseInfo": "<img src='https://downloads.esri.com/blogs/arcgisonline/esrilogo_new.png' style='max-width:100%; height:auto; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;' /><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'> This work is licensed under the Esri Master License Agreement.</span><br /><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><a href='https://goto.arcgis.com/termsofuse/viewsummary' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Summary</b></a> | <b><a href='https://goto.arcgis.com/termsofuse/viewtermsofuse' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'>View Terms of Use</a></b></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><br /></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font color='#b22222'>Important Note:</font> This item is in <a href='https://goto.arcgis.com/termsofuse/beta' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'>beta</a> and is not intended for use in production applications.</div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><div style='font-family:inherit;'><br /></div></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font face='Avenir Next W01, Avenir Next W00, Avenir Next, Avenir, Helvetica Neue, sans-serif'>For more information on the core products of HydroSHEDS v1 please refer to the </font><a href='https://data.hydrosheds.org/file/technical-documentation/HydroSHEDS_TechDoc_v1_4.pdf' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'>HydroSHEDS Technical Documentation</a><font face='Avenir Next W01, Avenir Next W00, Avenir Next, Avenir, Helvetica Neue, sans-serif'>.</font><br /></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font face='Avenir Next W01, Avenir Next W00, Avenir Next, Avenir, Helvetica Neue, sans-serif'><br /></font></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'>Alignment of boundaries is a presentation of the feature provided by our data vendors and does not imply endorsement by Esri or any governing authority.</div>",
     "created": 1721936027000,
     "modified": 1722456018000,
-    "numViews": 8001,
+    "numViews": 8002,
     "thumbnail": "thumbnail/thumbnail1722456016626.png",
     "contentStatus": null,
     "extent": [
@@ -1362,13 +1367,15 @@
     "descriptionChars": 4091
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "United States Watersheds / Hydrologic Unit Code 12s",
    "title": "Hydrologic Unit Code 12s",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": false,
    "opacity": null,
    "itemId": "6dbd59a36a4343e99bcbf88a996ecaf8",
    "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/Watershed_Boundary_Dataset_HUC_12s/FeatureServer/0",
@@ -1435,7 +1442,7 @@
     "licenseInfo": "<img src='https://downloads.esri.com/blogs/arcgisonline/esrilogo_new.png' style='max-width:100%; height:auto; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;' /><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'> This work is licensed under the Esri Master License Agreement.</span><br /><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><a href='https://goto.arcgis.com/termsofuse/viewsummary' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Summary</b></a> | <b><a href='https://goto.arcgis.com/termsofuse/viewtermsofuse' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'>View Terms of Use</a></b></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><br /></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font color='#b22222'>Important Note:</font> This item is in <a href='https://goto.arcgis.com/termsofuse/beta' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'>beta</a> and is not intended for use in production applications.</div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><div style='font-family:inherit;'><br /></div></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font face='Avenir Next W01, Avenir Next W00, Avenir Next, Avenir, Helvetica Neue, sans-serif'>For more information on the core products of HydroSHEDS v1 please refer to the </font><a href='https://data.hydrosheds.org/file/technical-documentation/HydroSHEDS_TechDoc_v1_4.pdf' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'>HydroSHEDS Technical Documentation</a><font face='Avenir Next W01, Avenir Next W00, Avenir Next, Avenir, Helvetica Neue, sans-serif'>.</font><br /></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font face='Avenir Next W01, Avenir Next W00, Avenir Next, Avenir, Helvetica Neue, sans-serif'><br /></font></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'>Alignment of boundaries is a presentation of the feature provided by our data vendors and does not imply endorsement by Esri or any governing authority.</div>",
     "created": 1721935785000,
     "modified": 1735661420000,
-    "numViews": 17305,
+    "numViews": 17308,
     "thumbnail": "thumbnail/thumbnail1722455913421.png",
     "contentStatus": null,
     "extent": [
@@ -1552,13 +1559,15 @@
     "count": 103068
    },
    "drawsAtOpening": false,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "United States Watersheds / Hydrologic Unit Code 10s",
    "title": "Hydrologic Unit Code 10s",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": false,
    "opacity": null,
    "itemId": "73db830a5c97409fb9af17b52cc2e0c8",
    "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/Watershed_Boundary_Dataset_HUC_10s/FeatureServer/0",
@@ -1625,7 +1634,7 @@
     "licenseInfo": "<img src='https://downloads.esri.com/blogs/arcgisonline/esrilogo_new.png' style='max-width:100%; height:auto; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;' /><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'> This work is licensed under the Esri Master License Agreement.</span><br /><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><a href='https://goto.arcgis.com/termsofuse/viewsummary' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Summary</b></a> | <b><a href='https://goto.arcgis.com/termsofuse/viewtermsofuse' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'>View Terms of Use</a></b></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><br /></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font color='#b22222'>Important Note:</font> This item is in <a href='https://goto.arcgis.com/termsofuse/beta' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'>beta</a> and is not intended for use in production applications.</div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><div style='font-family:inherit;'><br /></div></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font face='Avenir Next W01, Avenir Next W00, Avenir Next, Avenir, Helvetica Neue, sans-serif'>For more information on the core products of HydroSHEDS v1 please refer to the </font><a href='https://data.hydrosheds.org/file/technical-documentation/HydroSHEDS_TechDoc_v1_4.pdf' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'>HydroSHEDS Technical Documentation</a><font face='Avenir Next W01, Avenir Next W00, Avenir Next, Avenir, Helvetica Neue, sans-serif'>.</font><br /></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font face='Avenir Next W01, Avenir Next W00, Avenir Next, Avenir, Helvetica Neue, sans-serif'><br /></font></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'>Alignment of boundaries is a presentation of the feature provided by our data vendors and does not imply endorsement by Esri or any governing authority.</div>",
     "created": 1721935795000,
     "modified": 1735661456000,
-    "numViews": 17285,
+    "numViews": 17288,
     "thumbnail": "thumbnail/thumbnail1722455905209.png",
     "contentStatus": null,
     "extent": [
@@ -1724,13 +1733,15 @@
     "count": 18911
    },
    "drawsAtOpening": false,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "United States Watersheds / Hydrologic Unit Code 8s",
    "title": "Hydrologic Unit Code 8s",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": false,
    "opacity": null,
    "itemId": "bc9785b675a8414d9aab738bd5fad831",
    "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/Watershed_Boundary_Dataset_HUC_8s/FeatureServer/0",
@@ -1798,7 +1809,7 @@
     "licenseInfo": "<img src='https://downloads.esri.com/blogs/arcgisonline/esrilogo_new.png' style='max-width:100%; height:auto; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;' /><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'> This work is licensed under the Esri Master License Agreement.</span><br /><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><a href='https://goto.arcgis.com/termsofuse/viewsummary' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Summary</b></a> | <b><a href='https://goto.arcgis.com/termsofuse/viewtermsofuse' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'>View Terms of Use</a></b></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><br /></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font color='#b22222'>Important Note:</font> This item is in <a href='https://goto.arcgis.com/termsofuse/beta' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'>beta</a> and is not intended for use in production applications.</div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><div style='font-family:inherit;'><br /></div></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font face='Avenir Next W01, Avenir Next W00, Avenir Next, Avenir, Helvetica Neue, sans-serif'>For more information on the core products of HydroSHEDS v1 please refer to the </font><a href='https://data.hydrosheds.org/file/technical-documentation/HydroSHEDS_TechDoc_v1_4.pdf' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'>HydroSHEDS Technical Documentation</a><font face='Avenir Next W01, Avenir Next W00, Avenir Next, Avenir, Helvetica Neue, sans-serif'>.</font><br /></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font face='Avenir Next W01, Avenir Next W00, Avenir Next, Avenir, Helvetica Neue, sans-serif'><br /></font></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'>Alignment of boundaries is a presentation of the feature provided by our data vendors and does not imply endorsement by Esri or any governing authority.</div>",
     "created": 1721935940000,
     "modified": 1735661472000,
-    "numViews": 17192,
+    "numViews": 17195,
     "thumbnail": "thumbnail/thumbnail1722455891629.png",
     "contentStatus": null,
     "extent": [
@@ -1902,16 +1913,18 @@
      "nameField": "name",
      "geometryCompared": "attributes only"
     },
-    "seconds": 0.6
+    "seconds": 0.1
    },
    "drawsAtOpening": false,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "United States Watersheds / Hydrologic Unit Code 6s",
    "title": "Hydrologic Unit Code 6s",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": false,
    "opacity": null,
    "itemId": "a7b8ed672cf243f8aa8400446e705ef6",
    "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/Watershed_Boundary_Dataset_HUC_6s/FeatureServer/0",
@@ -2083,16 +2096,18 @@
      "nameField": "name",
      "geometryCompared": "attributes only"
     },
-    "seconds": 0.2
+    "seconds": 0.0
    },
    "drawsAtOpening": false,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "United States Watersheds / Hydrologic Unit Code 4s",
    "title": "Hydrologic Unit Code 4s",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": false,
    "opacity": null,
    "itemId": "e8cca1af149e481bb3055399541af2c3",
    "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/Watershed_Boundary_Dataset_HUC_4s/FeatureServer/0",
@@ -2160,7 +2175,7 @@
     "licenseInfo": "<img src='https://downloads.esri.com/blogs/arcgisonline/esrilogo_new.png' style='max-width:100%; height:auto; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;' /><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'> This work is licensed under the Esri Master License Agreement.</span><br /><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><a href='https://goto.arcgis.com/termsofuse/viewsummary' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Summary</b></a> | <b><a href='https://goto.arcgis.com/termsofuse/viewtermsofuse' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'>View Terms of Use</a></b></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><br /></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font color='#b22222'>Important Note:</font> This item is in <a href='https://goto.arcgis.com/termsofuse/beta' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'>beta</a> and is not intended for use in production applications.</div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><div style='font-family:inherit;'><br /></div></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font face='Avenir Next W01, Avenir Next W00, Avenir Next, Avenir, Helvetica Neue, sans-serif'>For more information on the core products of HydroSHEDS v1 please refer to the </font><a href='https://data.hydrosheds.org/file/technical-documentation/HydroSHEDS_TechDoc_v1_4.pdf' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'>HydroSHEDS Technical Documentation</a><font face='Avenir Next W01, Avenir Next W00, Avenir Next, Avenir, Helvetica Neue, sans-serif'>.</font><br /></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font face='Avenir Next W01, Avenir Next W00, Avenir Next, Avenir, Helvetica Neue, sans-serif'><br /></font></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'>Alignment of boundaries is a presentation of the feature provided by our data vendors and does not imply endorsement by Esri or any governing authority.</div>",
     "created": 1721935973000,
     "modified": 1735661390000,
-    "numViews": 17180,
+    "numViews": 17183,
     "thumbnail": "thumbnail/thumbnail1722455837651.png",
     "contentStatus": null,
     "extent": [
@@ -2264,16 +2279,18 @@
      "nameField": "name",
      "geometryCompared": "geometry"
     },
-    "seconds": 177.3
+    "seconds": 933.5
    },
    "drawsAtOpening": false,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "United States Watersheds / Hydrologic Unit Code 2s",
    "title": "Hydrologic Unit Code 2s",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": false,
    "opacity": null,
    "itemId": "52efdcecb6b94c58aaec246c38ae038d",
    "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/Watershed_Boundary_Dataset_HUC_2s/FeatureServer/0",
@@ -2341,7 +2358,7 @@
     "licenseInfo": "<img src='https://downloads.esri.com/blogs/arcgisonline/esrilogo_new.png' style='max-width:100%; height:auto; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;' /><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'> This work is licensed under the Esri Master License Agreement.</span><br /><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><a href='https://goto.arcgis.com/termsofuse/viewsummary' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Summary</b></a> | <b><a href='https://goto.arcgis.com/termsofuse/viewtermsofuse' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'>View Terms of Use</a></b></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><br /></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font color='#b22222'>Important Note:</font> This item is in <a href='https://goto.arcgis.com/termsofuse/beta' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'>beta</a> and is not intended for use in production applications.</div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><div style='font-family:inherit;'><br /></div></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font face='Avenir Next W01, Avenir Next W00, Avenir Next, Avenir, Helvetica Neue, sans-serif'>For more information on the core products of HydroSHEDS v1 please refer to the </font><a href='https://data.hydrosheds.org/file/technical-documentation/HydroSHEDS_TechDoc_v1_4.pdf' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'>HydroSHEDS Technical Documentation</a><font face='Avenir Next W01, Avenir Next W00, Avenir Next, Avenir, Helvetica Neue, sans-serif'>.</font><br /></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font face='Avenir Next W01, Avenir Next W00, Avenir Next, Avenir, Helvetica Neue, sans-serif'><br /></font></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'>Alignment of boundaries is a presentation of the feature provided by our data vendors and does not imply endorsement by Esri or any governing authority.</div>",
     "created": 1721936001000,
     "modified": 1735661368000,
-    "numViews": 17228,
+    "numViews": 0,
     "thumbnail": "thumbnail/thumbnail1722455826715.png",
     "contentStatus": null,
     "extent": [
@@ -2445,16 +2462,18 @@
      "nameField": "name",
      "geometryCompared": "geometry"
     },
-    "seconds": 167.2
+    "seconds": 10.2
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Lewis and Clark National Historic Trail",
    "title": "Lewis and Clark National Historic Trail",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": 1,
    "itemId": "862abcecaa114974845b9ebe5bfa6e2f",
    "url": "https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/Lewis_and_Clark_National_Historic_Trail_Congressionally_Designated_Route/FeatureServer/0",
@@ -2492,7 +2511,7 @@
     "licenseInfo": "<div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><p>The National Park Service shall not be held liable for\nimproper or incorrect use of the data described and/or contained herein. These\ndata and related graphics (i.e. GIF or JPG format files) are not legal\ndocuments and are not intended to be used as such. The information contained in\nthese data is dynamic and may change over time. The data are not better than\nthe original sources from which they were derived. It is the responsibility of\nthe data user to use the data appropriately and consistent within the limitations\nof geospatial data in general and these data in particular. The related\ngraphics are intended to aid the data user in acquiring relevant data; it is\nnot appropriate to use the related graphics as data. The National Park Service\ngives no warranty, expressed or implied, as to the accuracy, reliability, or\ncompleteness of these data. It is strongly recommended that these data are\ndirectly acquired from an NPS server and not indirectly through other sources\nwhich may have changed the data in some way. Although these data have been\nprocessed successfully on computer systems at the National Park Service, no\nwarranty expressed or implied is made regarding the utility of the data on\nother systems for general or scientific purposes, nor shall the act of distribution\nconstitute any such warranty. This disclaimer applies both to individual use of\nthe data and aggregate use with other data.</p></div>",
     "created": 1557933457000,
     "modified": 1750260363000,
-    "numViews": 185656,
+    "numViews": 185659,
     "thumbnail": "thumbnail/thumbnail1557934826943.png",
     "contentStatus": null,
     "extent": [
@@ -2620,13 +2639,15 @@
     "seconds": 0.1
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Lewis and Clark campsites (approximate)",
    "title": "Lewis and Clark campsites (approximate)",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": 1,
    "itemId": "7ca55da564964e1092a36850b699da60",
    "url": "https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/Lewis_and_Clark_Campsites_Bergantino/FeatureServer/0",
@@ -2667,7 +2688,7 @@
     "licenseInfo": "<div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><p>The National Park Service shall not be held liable for\nimproper or incorrect use of the data described and/or contained herein. These\ndata and related graphics (i.e. GIF or JPG format files) are not legal\ndocuments and are not intended to be used as such. The information contained in\nthese data is dynamic and may change over time. The data are not better than\nthe original sources from which they were derived. It is the responsibility of\nthe data user to use the data appropriately and consistent within the limitations\nof geospatial data in general and these data in particular. The related\ngraphics are intended to aid the data user in acquiring relevant data; it is\nnot appropriate to use the related graphics as data. The National Park Service\ngives no warranty, expressed or implied, as to the accuracy, reliability, or\ncompleteness of these data. It is strongly recommended that these data are\ndirectly acquired from an NPS server and not indirectly through other sources\nwhich may have changed the data in some way. Although these data have been\nprocessed successfully on computer systems at the National Park Service, no\nwarranty expressed or implied is made regarding the utility of the data on\nother systems for general or scientific purposes, nor shall the act of distribution\nconstitute any such warranty. This disclaimer applies both to individual use of\nthe data and aggregate use with other data.</p></div>",
     "created": 1618230046000,
     "modified": 1750260127000,
-    "numViews": 4153,
+    "numViews": 4156,
     "thumbnail": "thumbnail/ago_downloaded.png",
     "contentStatus": null,
     "extent": [
@@ -2907,41 +2928,18 @@
     "seconds": 0.2
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   }
  ],
  "findings": [
   {
-   "where": "layer Biomes",
-   "what": "symbols differ by colour only (WCAG 1.4.1 if a question depends on telling them apart)"
-  },
-  {
-   "where": "layer United States Watersheds / Hydrologic Unit Code 12s",
-   "what": "on at the start but doesn't draw at the opening scale"
-  },
-  {
-   "where": "layer United States Watersheds / Hydrologic Unit Code 10s",
-   "what": "on at the start but doesn't draw at the opening scale"
-  },
-  {
-   "where": "layer United States Watersheds / Hydrologic Unit Code 8s",
-   "what": "on at the start but doesn't draw at the opening scale"
-  },
-  {
-   "where": "layer United States Watersheds / Hydrologic Unit Code 6s",
-   "what": "on at the start but doesn't draw at the opening scale"
-  },
-  {
-   "where": "layer United States Watersheds / Hydrologic Unit Code 4s",
-   "what": "on at the start but doesn't draw at the opening scale"
-  },
-  {
    "where": "layer Lewis and Clark National Historic Trail",
-   "what": "no pop-up set in the map or its layer item, so the default list of every field shows"
+   "what": "no pop-up set in the map or its layer item (most apps then show nothing on a click; check in the Atlas app)"
   },
   {
    "where": "layer Lewis and Clark campsites (approximate)",
-   "what": "no pop-up set in the map or its layer item, so the default list of every field shows"
+   "what": "no pop-up set in the map or its layer item (most apps then show nothing on a click; check in the Atlas app)"
   },
   {
    "where": "layer Lewis and Clark campsites (approximate)",

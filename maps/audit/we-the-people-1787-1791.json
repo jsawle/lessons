@@ -1,5 +1,5 @@
 {
- "tool": "Map audit 1.1",
+ "tool": "Map audit 1.2",
  "lesson": "we-the-people-1787-1791",
  "webmapId": "eba1ea7488624f3c88ef094167ed03ca",
  "item": {
@@ -65,7 +65,7 @@
     "latestWkid": 3857
    }
   },
-  "scale": 9115927
+  "scale": 14921682
  },
  "bookmarks": [
   "The states in 1790",
@@ -79,6 +79,7 @@
    "title": "Population in 1790: free and enslaved",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": 1,
    "itemId": "43ae0255f8ed46d5973871603f5956dd",
    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
@@ -306,16 +307,18 @@
      "nameField": "State",
      "geometryCompared": "area and length"
     },
-    "seconds": 0.4
+    "seconds": 0.2
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "House seats in 1793",
    "title": "House seats in 1793",
    "layerType": "ArcGISFeatureLayer",
    "visible": false,
+   "onAtStart": false,
    "opacity": 1,
    "itemId": "43ae0255f8ed46d5973871603f5956dd",
    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
@@ -642,13 +645,15 @@
     "seconds": 0.0
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": true
+   "rendererColourOnly": true,
+   "popupNamesClass": true
   },
   {
    "path": "House seats today (2020 apportionment)",
    "title": "House seats today (2020 apportionment)",
    "layerType": "ArcGISFeatureLayer",
    "visible": false,
+   "onAtStart": false,
    "opacity": 1,
    "itemId": "0b851ea28ac3470e9f882678470c4f83",
    "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/2020_Census_State_Apportionment/FeatureServer/0",
@@ -1029,16 +1034,18 @@
      "nameField": "NAME",
      "geometryCompared": "area and length"
     },
-    "seconds": 0.1
+    "seconds": 0.0
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": true
+   "rendererColourOnly": true,
+   "popupNamesClass": true
   },
   {
    "path": "Ratifying the Constitution, 1787–1791",
    "title": "Ratifying the Constitution, 1787–1791",
    "layerType": "ArcGISFeatureLayer",
    "visible": false,
+   "onAtStart": false,
    "opacity": 1,
    "itemId": "bf397ebfe5054286809672ca62e11174",
    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Ratification_1787_1791/FeatureServer/0",
@@ -1256,20 +1263,12 @@
      "nameField": "State",
      "geometryCompared": "geometry"
     },
-    "seconds": 0.3
+    "seconds": 0.2
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   }
  ],
- "findings": [
-  {
-   "where": "layer House seats in 1793",
-   "what": "symbols differ by colour only (WCAG 1.4.1 if a question depends on telling them apart)"
-  },
-  {
-   "where": "layer House seats today (2020 apportionment)",
-   "what": "symbols differ by colour only (WCAG 1.4.1 if a question depends on telling them apart)"
-  }
- ]
+ "findings": []
 }

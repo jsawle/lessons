@@ -1,5 +1,5 @@
 {
- "tool": "Map audit 1.1",
+ "tool": "Map audit 1.2",
  "lesson": "us-slavery-and-slave-trade-1850",
  "webmapId": "819f60a5a3344d958d24f505849abaaa",
  "item": {
@@ -69,7 +69,7 @@
    "xmax": 2136352.177436016,
    "ymax": 2230731.056658968
   },
-  "scale": 13697762
+  "scale": 20215968
  },
  "bookmarks": [
   "Illinois, Indiana, and Ohio",
@@ -82,6 +82,7 @@
    "title": "US 1850 Original Map",
    "layerType": "ArcGISTiledMapServiceLayer",
    "visible": false,
+   "onAtStart": false,
    "opacity": null,
    "itemId": "a3cdd4cbc0f6452a8fff1b3b2718eba0",
    "url": "https://tiles.arcgis.com/tiles/iFGeGXTAJXnjq0YN/arcgis/rest/services/US_1850_Original_Map_Albers/MapServer",
@@ -137,13 +138,15 @@
     "maxScale": 1949392.9941243534
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "United States, 1850",
    "title": "United States, 1850",
    "layerType": "GroupLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": null,
    "url": null,
@@ -156,13 +159,15 @@
    "listMode": null,
    "definitionExpression": null,
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "United States, 1850 / US States and Territories 1850",
    "title": "US States and Territories 1850",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "37a9e358f0794a6da03b6ee2f4c0f24a",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/USStatesandTerritories_1850_Albers_version/FeatureServer/1",
@@ -884,13 +889,15 @@
     "seconds": 0.1
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": true
   },
   {
    "path": "United States, 1850 / Internal Routes of the US Slave Trade",
    "title": "Internal Routes of the US Slave Trade",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "37a9e358f0794a6da03b6ee2f4c0f24a",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/USStatesandTerritories_1850_Albers_version/FeatureServer/0",
@@ -918,7 +925,6 @@
     "fieldLabelsAreNames": [
      "OBJECTID",
      "InLine_FID",
-     "Type",
      "Shape__Length"
     ],
     "elements": [
@@ -1131,13 +1137,15 @@
     "seconds": 0.1
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": true
   },
   {
    "path": "Underground Railroad Approximate Routes",
    "title": "Underground Railroad Approximate Routes",
    "layerType": "GroupLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": null,
    "url": null,
@@ -1150,13 +1158,15 @@
    "listMode": null,
    "definitionExpression": null,
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Underground Railroad Approximate Routes / Underground Railroad Approximate Routes",
    "title": "Underground Railroad Approximate Routes",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "d8a604eef63e469189db303419718b5c",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Underground_Railroad_Approximate_Routes_Albers/FeatureServer/1",
@@ -1304,13 +1314,15 @@
     "seconds": 0.1
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Underground Railroad Approximate Routes / Cities",
    "title": "Cities",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "d8a604eef63e469189db303419718b5c",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Underground_Railroad_Approximate_Routes_Albers/FeatureServer/0",
@@ -1336,10 +1348,7 @@
      }
     ],
     "fieldLabelsAreNames": [
-     "OBJECTID",
-     "Name",
-     "State",
-     "Country"
+     "OBJECTID"
     ],
     "elements": [
      "fields"
@@ -1525,13 +1534,15 @@
     "seconds": 0.1
    },
    "drawsAtOpening": false,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": true
   },
   {
    "path": "Missouri Compromise Line",
    "title": "Missouri Compromise Line",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "d68c728f32c4479b9bcd15a67db78b20",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/MissouriCompromiseLine_Albers/FeatureServer/0",
@@ -1687,25 +1698,14 @@
     "seconds": 0.1
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   }
  ],
  "findings": [
   {
-   "where": "layer United States, 1850 / Internal Routes of the US Slave Trade",
-   "what": "pop-up shows field names as labels: OBJECTID, InLine_FID, Type, Shape__Length"
-  },
-  {
-   "where": "layer Underground Railroad Approximate Routes / Underground Railroad Approximate Routes",
-   "what": "pop-up shows field names as labels: OBJECTID, InLine_FID, Shape__Length"
-  },
-  {
    "where": "layer Underground Railroad Approximate Routes / Cities",
-   "what": "pop-up shows field names as labels: OBJECTID, Name, State, Country"
-  },
-  {
-   "where": "layer Underground Railroad Approximate Routes / Cities",
-   "what": "on at the start but doesn't draw at the opening scale"
+   "what": "on at the start but only draws when zoomed in"
   }
  ]
 }

@@ -1,5 +1,5 @@
 {
- "tool": "Map audit 1.1",
+ "tool": "Map audit 1.2",
  "lesson": "rights-and-responsibilities-where-we-live",
  "webmapId": "59467ac7d7c64542acaa6a3e9c19ebf4",
  "item": {
@@ -77,6 +77,7 @@
    "title": "Congressional districts (119th Congress)",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": 1,
    "itemId": "930f9f68739f48bab91e500711c80dc4",
    "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/USA_119th_Congressional_Districts/FeatureServer/0",
@@ -348,16 +349,18 @@
      "nameField": "NAME",
      "geometryCompared": "area and length"
     },
-    "seconds": 0.2
+    "seconds": 0.0
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "National Register of Historic Places",
    "title": "National Register of Historic Places",
    "layerType": "ArcGISFeatureLayer",
    "visible": false,
+   "onAtStart": false,
    "opacity": 1,
    "itemId": "818d5ef9168b420cb3fee99f7aef7760",
    "url": "https://services2.arcgis.com/FiaPA4ga0iQKduv3/arcgis/rest/services/nrhp_points_v1/FeatureServer/0",
@@ -555,7 +558,7 @@
     "licenseInfo": "<font size='4' style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><img src='https://licensebuttons.net/l/by/3.0/88x31.png' style='max-width:100%; height:auto;' /> This work is licensed under a Creative Commons by Attribution (CC BY 4.0) license. See Credits and Map for Attribution.</font><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='4'><br /></font><div><font size='4'><a href='https://creativecommons.org/licenses/by/4.0' style='color:rgb(0, 121, 193); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View License Deed</b></a> | <a href='https://creativecommons.org/licenses/by/4.0/legalcode' style='color:rgb(0, 121, 193); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Legal Code</b></a></font></div></div>",
     "created": 1684164701000,
     "modified": 1741172836000,
-    "numViews": 40283,
+    "numViews": 40285,
     "thumbnail": "thumbnail/thumbnail1684975390173.png",
     "contentStatus": null,
     "extent": [
@@ -829,13 +832,9 @@
     "count": 74636
    },
    "drawsAtOpening": false,
-   "rendererColourOnly": true
+   "rendererColourOnly": true,
+   "popupNamesClass": true
   }
  ],
- "findings": [
-  {
-   "where": "layer National Register of Historic Places",
-   "what": "symbols differ by colour only (WCAG 1.4.1 if a question depends on telling them apart)"
-  }
- ]
+ "findings": []
 }

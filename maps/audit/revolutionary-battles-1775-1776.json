@@ -1,5 +1,5 @@
 {
- "tool": "Map audit 1.1",
+ "tool": "Map audit 1.2",
  "lesson": "revolutionary-battles-1775-1776",
  "webmapId": "bda07736a1b9425ea19fdde282088bd6",
  "item": {
@@ -25,7 +25,7 @@
   "licenseInfo": "<p><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:large;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Copyright&nbsp;</span></span><a style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:large; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration:none; text-indent:0px; text-transform:none; word-spacing:0px;' target='_blank' href='https://www.nationalgeographic.org/terms-of-service/' rel='nofollow ugc noopener noreferrer'>National Geographic Society</a></p>",
   "created": 1779490715000,
   "modified": 1787773554000,
-  "numViews": 2543,
+  "numViews": 2544,
   "thumbnail": "thumbnail/thumbnail1787773552250.png",
   "contentStatus": null,
   "extent": [
@@ -80,7 +80,7 @@
    "xmax": -7004866.926966378,
    "ymax": 5987007.827848646
   },
-  "scale": 5469762
+  "scale": 8751618
  },
  "bookmarks": [
   "Massachusetts",
@@ -93,6 +93,7 @@
    "title": "1763 Proclamation Line",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": 0.5,
    "itemId": "6fd5fb24db79436e9b57f3b35a618802",
    "url": "https://services3.arcgis.com/AdYB7LvDmN7hzWUb/arcgis/rest/services/Proclamation_of_1763/FeatureServer/1",
@@ -122,10 +123,7 @@
      }
     ],
     "fieldLabelsAreNames": [
-     "OBJECTID",
-     "Definition",
-     "Source",
-     "Symbology"
+     "OBJECTID"
     ],
     "elements": [
      "fields"
@@ -177,7 +175,7 @@
     "licenseInfo": "<p><span style='background-color:rgb(255,255,255); color:rgb(76,76,76); font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:18px;'><span style='box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5 !important; margin:0px; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Copyright&nbsp;</span></span><a style='background-color:rgb(255, 255, 255); box-sizing:border-box; color:rgb(0, 97, 155); font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:large; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5 !important; margin:0px; text-align:start; text-decoration-color:initial !important; text-decoration-line:none; text-decoration-style:initial !important; text-indent:0px; text-transform:none; word-spacing:0px;' target='_blank' href='https://www.nationalgeographic.org/terms-of-service/' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>National Geographic Society</span></a><span style='font-size:18px;'> and Virginia Geographic Alliance.</span></p>",
     "created": 1778774380000,
     "modified": 1783541283000,
-    "numViews": 42224,
+    "numViews": 42225,
     "thumbnail": "thumbnail/thumbnail1783541282170.png",
     "contentStatus": null,
     "extent": [
@@ -282,16 +280,18 @@
      "nameField": null,
      "geometryCompared": "area and length"
     },
-    "seconds": 0.2
+    "seconds": 0.5
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Thirteen British Colonies",
    "title": "Thirteen British Colonies",
    "layerType": "GroupLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": 1,
    "itemId": "af8a9da86f1c4d6184b4aece52b2f616",
    "url": null,
@@ -344,13 +344,15 @@
     "descriptionChars": 723
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Thirteen British Colonies / Colony Area",
    "title": "Colony Area",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": 0.5,
    "itemId": "a0567d6b35994693be300199872b3364",
    "url": "https://services3.arcgis.com/AdYB7LvDmN7hzWUb/arcgis/rest/services/ThirteenColonies_poly/FeatureServer/22",
@@ -375,9 +377,7 @@
       "label": "Colony"
      }
     ],
-    "fieldLabelsAreNames": [
-     "Colony"
-    ],
+    "fieldLabelsAreNames": [],
     "elements": [
      "fields"
     ],
@@ -444,7 +444,7 @@
     "licenseInfo": "<p><span style='background-color:rgb(255,255,255); color:rgb(76,76,76); font-family:inherit; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5 !important; margin:0px; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Copyright&nbsp;</span></span><a style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:large; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5 !important; margin:0px; text-align:start; text-decoration-color:initial !important; text-decoration-line:none; text-decoration-style:initial !important; text-indent:0px; text-transform:none; word-spacing:0px;' target='_blank' href='https://www.nationalgeographic.org/terms-of-service/' rel='nofollow ugc noopener noreferrer'><span style='font-family:inherit; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'>National Geographic Society</span></span></a><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'> and Virginia Geographic Alliance.</span></span></p>",
     "created": 1780944666000,
     "modified": 1782336597000,
-    "numViews": 7923,
+    "numViews": 7924,
     "thumbnail": "thumbnail/thumbnail1781637908644.png",
     "contentStatus": null,
     "extent": [
@@ -530,16 +530,18 @@
      "nameField": null,
      "geometryCompared": "area and length"
     },
-    "seconds": 0.2
+    "seconds": 0.1
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Thirteen British Colonies / Colony Boundary",
    "title": "Colony Boundary",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "550be06e55c04167b21ca5e24823e1a1",
    "url": "https://services3.arcgis.com/AdYB7LvDmN7hzWUb/arcgis/rest/services/ThirteenColonies_line/FeatureServer/19",
@@ -570,8 +572,7 @@
     ],
     "fieldLabelsAreNames": [
      "LEFT_FID",
-     "RIGHT_FID",
-     "Symbol"
+     "RIGHT_FID"
     ],
     "elements": [
      "fields"
@@ -651,7 +652,7 @@
     "licenseInfo": "<p><span style='background-color:rgb(255,255,255); color:rgb(76,76,76); font-family:inherit; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5 !important; margin:0px; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Copyright&nbsp;</span></span><a style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:large; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5 !important; margin:0px; text-align:start; text-decoration-color:initial !important; text-decoration-line:none; text-decoration-style:initial !important; text-indent:0px; text-transform:none; word-spacing:0px;' target='_blank' href='https://www.nationalgeographic.org/terms-of-service/' rel='nofollow ugc noopener noreferrer'><span style='font-family:inherit; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'>National Geographic Society</span></span></a><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'> and Virginia Geographic Alliance.</span></span></p>",
     "created": 1780944660000,
     "modified": 1782336544000,
-    "numViews": 7930,
+    "numViews": 7931,
     "thumbnail": "thumbnail/thumbnail1781637593306.png",
     "contentStatus": null,
     "extent": [
@@ -832,16 +833,18 @@
      "nameField": null,
      "geometryCompared": "area and length"
     },
-    "seconds": 0.2
+    "seconds": 0.1
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": true
   },
   {
    "path": "Revolutionary War Battlefields",
    "title": "Revolutionary War Battlefields",
    "layerType": "GroupLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": null,
    "url": null,
@@ -854,13 +857,15 @@
    "listMode": null,
    "definitionExpression": null,
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Revolutionary War Battlefields / Revolutionary War Battlefield Boundary",
    "title": "Revolutionary War Battlefield Boundary",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "8b2e2d492c124d1cacba0599d20639ae",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/7",
@@ -939,7 +944,7 @@
     "licenseInfo": "<p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The </span><a target='_blank' href='https://www.nps.gov/subjects/gisandmapping/data-disclaimers.htm' rel='nofollow ugc noopener noreferrer'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>National Park Service</span></a><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'> shall not be held liable for improper or incorrect use of the cultural resource data described and/or contained herein. These data and related graphics are not legal documents and are not intended to be used as such, nor do they replace the need for consultation with appropriate state/tribal/federal historic preservation offices.</span></p><p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The information contained in these data is dynamic and may change over time. The data are not better than the original sources from which they were derived. It is the responsibility of the data user to use the data appropriately and consistently within the limitations of geospatial data in general and these data in particular, as expressed in feature-level metadata. The related graphics are intended to aid the data user in acquiring relevant data; it is not appropriate to use the related graphics as data.​​​​​​​</span></p><p style='background-color:white; line-height:normal; margin:0in 2.25pt 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>Cultural resource data sets may contain sensitive information that has been redacted or withheld from general use.&nbsp; These data require express permission from National Park Service programs, parks, or regional offices to access or use. Any unauthorized use of sensitive cultural resource data, disclosure, or distribution of that data, is prohibited unless specifically provided under the Archaeological Resources Protection Act of 1979, 16. U.S.C. 470hh, as amended, and National Park Service and Related Programs, 54&nbsp;U.S.C. 300101 (formerly known as the National Historic Preservation Act, 16 U.S.C. 470-1).</span></p><p style='background-color:white; line-height:normal; margin:0in .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The National Park Service gives no warranty, expressed or implied, as to the accuracy, reliability, or completeness of these data, which may have been generated over many years, using multiple creation methods as well as collection procedures. It is strongly recommended that these data be directly acquired from an NPS server and not indirectly through other sources, which may have changed the data in some way. Although these data have been processed successfully on a computer system at the National Park Service, no warranty expressed or implied is made regarding the utility of the data on another system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. This disclaimer applies both to individual use of the data and aggregate use with other data.</span></p>",
     "created": 1778620484000,
     "modified": 1783536706000,
-    "numViews": 14506,
+    "numViews": 14507,
     "thumbnail": "thumbnail/thumbnail1781189229611.png",
     "contentStatus": null,
     "extent": [
@@ -1055,16 +1060,18 @@
      "nameField": "NAME",
      "geometryCompared": "area and length"
     },
-    "seconds": 0.2
+    "seconds": 0.0
    },
    "drawsAtOpening": false,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Revolutionary War Battlefields / Revolutionary War Core Areas",
    "title": "Revolutionary War Core Areas",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "8b2e2d492c124d1cacba0599d20639ae",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/10",
@@ -1128,7 +1135,7 @@
     "licenseInfo": "<p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The </span><a target='_blank' href='https://www.nps.gov/subjects/gisandmapping/data-disclaimers.htm' rel='nofollow ugc noopener noreferrer'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>National Park Service</span></a><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'> shall not be held liable for improper or incorrect use of the cultural resource data described and/or contained herein. These data and related graphics are not legal documents and are not intended to be used as such, nor do they replace the need for consultation with appropriate state/tribal/federal historic preservation offices.</span></p><p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The information contained in these data is dynamic and may change over time. The data are not better than the original sources from which they were derived. It is the responsibility of the data user to use the data appropriately and consistently within the limitations of geospatial data in general and these data in particular, as expressed in feature-level metadata. The related graphics are intended to aid the data user in acquiring relevant data; it is not appropriate to use the related graphics as data.​​​​​​​</span></p><p style='background-color:white; line-height:normal; margin:0in 2.25pt 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>Cultural resource data sets may contain sensitive information that has been redacted or withheld from general use.&nbsp; These data require express permission from National Park Service programs, parks, or regional offices to access or use. Any unauthorized use of sensitive cultural resource data, disclosure, or distribution of that data, is prohibited unless specifically provided under the Archaeological Resources Protection Act of 1979, 16. U.S.C. 470hh, as amended, and National Park Service and Related Programs, 54&nbsp;U.S.C. 300101 (formerly known as the National Historic Preservation Act, 16 U.S.C. 470-1).</span></p><p style='background-color:white; line-height:normal; margin:0in .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The National Park Service gives no warranty, expressed or implied, as to the accuracy, reliability, or completeness of these data, which may have been generated over many years, using multiple creation methods as well as collection procedures. It is strongly recommended that these data be directly acquired from an NPS server and not indirectly through other sources, which may have changed the data in some way. Although these data have been processed successfully on a computer system at the National Park Service, no warranty expressed or implied is made regarding the utility of the data on another system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. This disclaimer applies both to individual use of the data and aggregate use with other data.</span></p>",
     "created": 1778620484000,
     "modified": 1783536706000,
-    "numViews": 14506,
+    "numViews": 14507,
     "thumbnail": "thumbnail/thumbnail1781189229611.png",
     "contentStatus": null,
     "extent": [
@@ -1247,13 +1254,15 @@
     "seconds": 0.1
    },
    "drawsAtOpening": false,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Revolutionary War Battles",
    "title": "Revolutionary War Battles",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "fb2bcd7497aa41ac8c5f58c89e9c523e",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Revolutionary_War_Battles_copy_edits/FeatureServer/0",
@@ -1405,7 +1414,7 @@
     "licenseInfo": "<p>Copyright <a target='_blank' href='https://www.battlefields.org/?ms=googlepaid&amp;ms=googlepaid' rel='nofollow ugc noopener noreferrer'>American Battlefield Trust</a></p>",
     "created": 1761330884000,
     "modified": 1783646453000,
-    "numViews": 8481,
+    "numViews": 8482,
     "thumbnail": "thumbnail/thumbnail1761333501415.png",
     "contentStatus": null,
     "extent": [
@@ -1580,16 +1589,18 @@
      "nameField": "Battle",
      "geometryCompared": "geometry"
     },
-    "seconds": 0.1
+    "seconds": 0.0
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": true
+   "rendererColourOnly": true,
+   "popupNamesClass": false
   },
   {
    "path": "Key Port Cities in the American Revolution 1775-1781",
    "title": "Key Port Cities in the American Revolution 1775-1781",
    "layerType": "ArcGISFeatureLayer",
    "visible": false,
+   "onAtStart": false,
    "opacity": null,
    "itemId": "0f26eb607f6d409aade772a4a1a4771c",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/ports_with_coordinates/FeatureServer/0",
@@ -1739,16 +1750,18 @@
      "nameField": null,
      "geometryCompared": "geometry"
     },
-    "seconds": 0.1
+    "seconds": 0.2
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   },
   {
    "path": "Turning Points",
    "title": "Turning Points",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": "60bd29a8eb34401ab70682c7bb272743",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Battle_Detailsv2_75_76/FeatureServer/0",
@@ -1825,7 +1838,7 @@
     "licenseInfo": "<p>Layer created by Chris Bunin and Peter Trentacoste&nbsp;</p><p>Permission to use for educational purposes under <a target='_blank' href='https://creativecommons.org/licenses/by-nc/4.0/deed.en' rel='nofollow ugc noopener noreferrer'>CC BY-NC 4.0</a></p>",
     "created": 1780693357000,
     "modified": 1783549577000,
-    "numViews": 2406,
+    "numViews": 2408,
     "thumbnail": "thumbnail/thumbnail1783548092313.png",
     "contentStatus": null,
     "extent": [
@@ -1959,24 +1972,17 @@
      "nameField": "Battle",
      "geometryCompared": "geometry"
     },
-    "seconds": 0.2
+    "seconds": 0.0
    },
    "drawsAtOpening": false,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   }
  ],
  "findings": [
   {
-   "where": "layer 1763 Proclamation Line",
-   "what": "pop-up shows field names as labels: OBJECTID, Definition, Source, Symbology"
-  },
-  {
-   "where": "layer Thirteen British Colonies / Colony Area",
-   "what": "pop-up shows field names as labels: Colony"
-  },
-  {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "pop-up shows field names as labels: LEFT_FID, RIGHT_FID, Symbol"
+   "what": "pop-up lists raw field names: LEFT_FID, RIGHT_FID"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
@@ -2056,11 +2062,11 @@
   },
   {
    "where": "layer Revolutionary War Battlefields / Revolutionary War Battlefield Boundary",
-   "what": "on at the start but doesn't draw at the opening scale"
+   "what": "on at the start but only draws when zoomed in"
   },
   {
    "where": "layer Revolutionary War Battlefields / Revolutionary War Core Areas",
-   "what": "on at the start but doesn't draw at the opening scale"
+   "what": "on at the start but only draws when zoomed in"
   },
   {
    "where": "layer Revolutionary War Battles",
@@ -2072,11 +2078,11 @@
   },
   {
    "where": "layer Revolutionary War Battles",
-   "what": "symbols differ by colour only (WCAG 1.4.1 if a question depends on telling them apart)"
+   "what": "categories differ by colour only and the pop-up doesn't name them (WCAG 1.4.1 if a question depends on them)"
   },
   {
    "where": "layer Turning Points",
-   "what": "on at the start but doesn't draw at the opening scale"
+   "what": "on at the start but only draws when zoomed in"
   },
   {
    "where": "layer Turning Points",

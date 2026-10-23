@@ -1,5 +1,5 @@
 {
- "tool": "Map audit 1.1",
+ "tool": "Map audit 1.2",
  "lesson": "the-battle-of-vicksburg",
  "webmapId": "1ba8cd3fc75a49a497be1137fce4c032",
  "item": {
@@ -72,7 +72,7 @@
    "xmax": -10056524.906155564,
    "ymax": 3850233.2403649716
   },
-  "scale": 396750
+  "scale": 693350
  },
  "bookmarks": [
   "The Battle of Vicksburg"
@@ -84,6 +84,7 @@
    "title": "Railroads 1826 to 1911",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": 0.62,
    "itemId": "694a76f1ebe241088e3ed39fb494a8e2",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/RR1826_1911Modified103123/FeatureServer/0",
@@ -270,7 +271,7 @@
     "licenseInfo": "<img src='https://downloads.esri.com/blogs/arcgisonline/esrilogo_new.png' style='max-width:100%; height:auto; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;' /><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'> This work is licensed under the Esri Master License Agreement.</span><br /><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><a href='https://goto.arcgis.com/termsofuse/viewsummary' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Summary</b></a> | <a href='https://goto.arcgis.com/termsofuse/viewtermsofuse' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Terms of Use</b></a></div>",
     "created": 1699327124000,
     "modified": 1784236546000,
-    "numViews": 73980,
+    "numViews": 73981,
     "thumbnail": "thumbnail/thumbnail1701814445828.png",
     "contentStatus": null,
     "extent": [
@@ -480,13 +481,15 @@
     "count": 76849
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": true
+   "rendererColourOnly": true,
+   "popupNamesClass": true
   },
   {
    "path": "Civil War Battlefields",
    "title": "Civil War Battlefields",
    "layerType": "ArcGISFeatureLayer",
    "visible": false,
+   "onAtStart": false,
    "opacity": null,
    "itemId": "5aa6dbd38e2946ecac382c3090584ff8",
    "url": "https://services.arcgis.com/nzS0F0zdNLvs7nc8/arcgis/rest/services/Civil_War_Battlefields/FeatureServer/2",
@@ -631,7 +634,7 @@
     "licenseInfo": "<p>Copyright <a target='_blank' href='https://www.battlefields.org/?ms=googlepaid&amp;ms=googlepaid' rel='nofollow ugc noopener noreferrer'>American Battlefield Trust</a></p>",
     "created": 1695921973000,
     "modified": 1784922483000,
-    "numViews": 100664,
+    "numViews": 100665,
     "thumbnail": "thumbnail/thumbnail1695929250206.png",
     "contentStatus": "deprecated",
     "extent": [
@@ -848,16 +851,18 @@
      "nameField": "Battle",
      "geometryCompared": "geometry"
     },
-    "seconds": 0.3
+    "seconds": 0.2
    },
    "drawsAtOpening": true,
-   "rendererColourOnly": true
+   "rendererColourOnly": true,
+   "popupNamesClass": false
   },
   {
    "path": "Key Places in the Union March to Vicksburg",
    "title": "Key Places in the Union March to Vicksburg",
    "layerType": "ArcGISFeatureLayer",
    "visible": true,
+   "onAtStart": true,
    "opacity": null,
    "itemId": null,
    "url": null,
@@ -1035,17 +1040,14 @@
     }
    ],
    "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "rendererColourOnly": false,
+   "popupNamesClass": false
   }
  ],
  "findings": [
   {
    "where": "layer Railroads 1826 to 1911",
-   "what": "pop-up shows field names as labels: FID, Shape__Length"
-  },
-  {
-   "where": "layer Railroads 1826 to 1911",
-   "what": "symbols differ by colour only (WCAG 1.4.1 if a question depends on telling them apart)"
+   "what": "pop-up lists raw field names: FID, Shape__Length"
   },
   {
    "where": "layer Civil War Battlefields",
@@ -1057,7 +1059,7 @@
   },
   {
    "where": "layer Civil War Battlefields",
-   "what": "symbols differ by colour only (WCAG 1.4.1 if a question depends on telling them apart)"
+   "what": "categories differ by colour only and the pop-up doesn't name them (WCAG 1.4.1 if a question depends on them)"
   },
   {
    "where": "layer Civil War Battlefields",
@@ -1093,7 +1095,7 @@
   },
   {
    "where": "layer Key Places in the Union March to Vicksburg",
-   "what": "no pop-up set in the map or its layer item, so the default list of every field shows"
+   "what": "no pop-up set in the map or its layer item (most apps then show nothing on a click; check in the Atlas app)"
   }
  ]
 }
