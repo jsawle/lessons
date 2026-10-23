@@ -1,6 +1,6 @@
 {
- "tool": "Map fixes 1.0",
- "read": "2026-10-23T11:12:00Z",
+ "tool": "Map fixes 1.1",
+ "read": "2026-10-23T16:41:06Z",
  "org": "HNLEA4GfnbCFQZGa",
  "orgLabel": "GIS-4-Schools sandbox",
  "fixes": [
@@ -80,8 +80,8 @@
    }
   },
   {
-   "id": "A6",
-   "what": "War of 1812: legend and pop-up say 'US victory' and 'Victory for British or Native forces'.",
+   "id": "A6+B14+C7",
+   "what": "War of 1812: legend and pop-up say 'US victory' and 'Victory for British or Native forces'; the pop-up says where; casualty sizes from '< 10'.",
    "kind": "webmap-layer",
    "webmap": "fad1cdb9d5704401a4e05c34f7ee693c",
    "layerId": "mm36ab25878c1b",
@@ -165,7 +165,7 @@
         {
          "type": "sizeInfo",
          "field": "Total_Casualties",
-         "maxDataValue": 2628,
+         "maxDataValue": 2500,
          "maxSize": {
           "type": "sizeInfo",
           "valueExpression": "$view.scale",
@@ -188,7 +188,7 @@
            }
           ]
          },
-         "minDataValue": 0,
+         "minDataValue": 10,
          "minSize": {
           "type": "sizeInfo",
           "valueExpression": "$view.scale",
@@ -218,7 +218,7 @@
         {
          "classes": [
           {
-           "label": "American Victory",
+           "label": "US victory",
            "symbol": {
             "type": "esriSMS",
             "color": [
@@ -251,7 +251,7 @@
            ]
           },
           {
-           "label": "British Victory",
+           "label": "Victory for British or Native forces",
            "symbol": {
             "type": "esriSMS",
             "color": [
@@ -415,7 +415,7 @@
      "popupElements": [
       {
        "type": "text",
-       "text": "<p style='text-align:center;'><span style='font-size:14px;'><span>{Dates}</span>&nbsp;</span></p><p style='text-align:center;'><span style='color:{expression/expr0}; font-size:18px;'><span>{expression/result}</span></span><span style='font-size:18px;'>&nbsp;</span></p><p style='text-align:center;'>Total Casualties: <span>{Total_Casualties}</span>&nbsp;<br /><span style='color:#120808; font-size:12px;'>____________________________________________________</span></p><p><span>{Narrative}</span>&nbsp;</p>"
+       "text": "<p style='text-align:center;'><span style='font-size:14px;'><span>{Dates}</span>&nbsp;</span></p><p style='text-align:center;'><span style='font-size:14px;'>Where: {State} (today's name)</span></p><p style='text-align:center;'><span style='color:{expression/expr0}; font-size:18px;'><span>{expression/result}</span></span><span style='font-size:18px;'>&nbsp;</span></p><p style='text-align:center;'>Total Casualties: <span>{Total_Casualties}</span>&nbsp;<br /><span style='color:#120808; font-size:12px;'>____________________________________________________</span></p><p><span>{Narrative}</span>&nbsp;</p>"
       },
       {
        "type": "media",
@@ -451,7 +451,7 @@
        "title": ""
       }
      ],
-     "description": "<p style='text-align:center;'><span style='font-size:14px;'><span>{Dates}</span>&nbsp;</span></p><p style='text-align:center;'><span style='color:{expression/expr0}; font-size:18px;'><span>{expression/result}</span></span><span style='font-size:18px;'>&nbsp;</span></p><p style='text-align:center;'>Total Casualties: <span>{Total_Casualties}</span>&nbsp;<br /><span style='color:#120808; font-size:12px;'>____________________________________________________</span></p><p><span>{Narrative}</span>&nbsp;</p>",
+     "description": "<p style='text-align:center;'><span style='font-size:14px;'><span>{Dates}</span>&nbsp;</span></p><p style='text-align:center;'><span style='font-size:14px;'>Where: {State} (today's name)</span></p><p style='text-align:center;'><span style='color:{expression/expr0}; font-size:18px;'><span>{expression/result}</span></span><span style='font-size:18px;'>&nbsp;</span></p><p style='text-align:center;'>Total Casualties: <span>{Total_Casualties}</span>&nbsp;<br /><span style='color:#120808; font-size:12px;'>____________________________________________________</span></p><p><span>{Narrative}</span>&nbsp;</p>",
      "mediaInfos": [
       {
        "altText": "",
@@ -856,6 +856,1322 @@
    "field": "Source",
    "from": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://en.wikipedia.org/wiki/1790_United_States_census",
    "to": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://www.census.gov/library/publications/1793/dec/number-of-persons.html"
+  },
+  {
+   "id": "A10",
+   "what": "War of 1812: recognition dates read as dates (December 12, 1822), the same in every time zone.",
+   "kind": "webmap-layer",
+   "webmap": "fad1cdb9d5704401a4e05c34f7ee693c",
+   "layerId": "mm05a7cfc6d77e",
+   "layerTitle": "Latin American independence and US recognition",
+   "before": "b7186d92ea9203b8b04533a1f15394c48570d447",
+   "set": {
+    "popupInfo": {
+     "title": "{Name}",
+     "popupElements": [
+      {
+       "type": "text",
+       "text": "<p>Capital: {Capital}. Today: {Today}.</p><p><b>Independence:</b> {Independence}.</p><p><b>Recognized by the United States:</b> {expression/recognized}. {HowRecognized}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source: Office of the Historian, U.S. Department of State</a></p>"
+      }
+     ],
+     "fieldInfos": [],
+     "showAttachments": false,
+     "expressionInfos": [
+      {
+       "name": "recognized",
+       "title": "Recognized by the United States",
+       "returnType": "string",
+       "expression": "Text(ChangeTimeZone($feature.USRecognized, 'UTC'), 'MMMM D, Y')"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "B11",
+   "what": "War of 1812: Latin American labels sit under their own symbols.",
+   "kind": "webmap-layer",
+   "webmap": "fad1cdb9d5704401a4e05c34f7ee693c",
+   "layerId": "mm05a7cfc6d77e",
+   "layerTitle": "Latin American independence and US recognition",
+   "before": "2814a14c67dbfad661785294372b9b1ad6ad2b65",
+   "set": {
+    "layerDefinition": {
+     "drawingInfo": {
+      "renderer": {
+       "type": "uniqueValue",
+       "field1": "Recognition",
+       "defaultSymbol": {
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "color": [
+         170,
+         170,
+         170,
+         255
+        ],
+        "size": 10,
+        "angle": 0,
+        "xoffset": 0,
+        "yoffset": 0,
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSSolid",
+         "color": [
+          255,
+          255,
+          255,
+          255
+         ],
+         "width": 1.2
+        }
+       },
+       "defaultLabel": "Other",
+       "uniqueValueInfos": [
+        {
+         "value": "Recognized by 1824",
+         "label": "Recognized by the United States by 1824",
+         "symbol": {
+          "type": "esriSMS",
+          "style": "esriSMSCircle",
+          "color": [
+           0,
+           114,
+           178,
+           255
+          ],
+          "size": 12,
+          "angle": 0,
+          "xoffset": 0,
+          "yoffset": 0,
+          "outline": {
+           "type": "esriSLS",
+           "style": "esriSLSSolid",
+           "color": [
+            255,
+            255,
+            255,
+            255
+           ],
+           "width": 1.2
+          }
+         }
+        },
+        {
+         "value": "Recognized later (1826 to 1862)",
+         "label": "Recognized later (1826 to 1862)",
+         "symbol": {
+          "type": "esriSMS",
+          "style": "esriSMSDiamond",
+          "color": [
+           230,
+           159,
+           0,
+           255
+          ],
+          "size": 13,
+          "angle": 0,
+          "xoffset": 0,
+          "yoffset": 0,
+          "outline": {
+           "type": "esriSLS",
+           "style": "esriSLSSolid",
+           "color": [
+            40,
+            40,
+            40,
+            255
+           ],
+           "width": 1
+          }
+         }
+        }
+       ]
+      },
+      "labelingInfo": [
+       {
+        "labelExpressionInfo": {
+         "expression": "$feature.Label"
+        },
+        "labelPlacement": "esriServerPointLabelPlacementBelowCenter",
+        "symbol": {
+         "type": "esriTS",
+         "color": [
+          40,
+          40,
+          40,
+          255
+         ],
+         "haloColor": [
+          255,
+          255,
+          255,
+          255
+         ],
+         "haloSize": 1.5,
+         "font": {
+          "family": "Noto Sans",
+          "size": 9,
+          "weight": "bold"
+         },
+         "horizontalAlignment": "center",
+         "verticalAlignment": "baseline"
+        },
+        "minScale": 0,
+        "maxScale": 0,
+        "repeatLabel": false,
+        "deconflictionStrategy": "none"
+       }
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "B10",
+   "what": "War of 1812: The 1819 boundary bookmark shows Florida and the whole treaty line.",
+   "kind": "webmap-key",
+   "webmap": "fad1cdb9d5704401a4e05c34f7ee693c",
+   "key": "bookmarks",
+   "before": "6754f0c96081a928571127c268930a7757ed6fc4",
+   "set": [
+    {
+     "name": "The War of 1812",
+     "extent": {
+      "xmin": -10241393.2,
+      "ymin": 3375646,
+      "xmax": -7347086.4,
+      "ymax": 6040565.2,
+      "spatialReference": {
+       "wkid": 102100,
+       "latestWkid": 3857
+      }
+     }
+    },
+    {
+     "name": "The 1819 boundary",
+     "extent": {
+      "xmin": -14150000.0,
+      "ymin": 2000000.0,
+      "xmax": -6550000.0,
+      "ymax": 7000000.0,
+      "spatialReference": {
+       "wkid": 102100,
+       "latestWkid": 3857
+      }
+     }
+    },
+    {
+     "name": "Latin America in 1825",
+     "extent": {
+      "xmin": -13135699.9,
+      "ymin": -5160979.4,
+      "xmax": -3339584.7,
+      "ymax": 3763310.6,
+      "spatialReference": {
+       "wkid": 102100,
+       "latestWkid": 3857
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "B5",
+   "what": "We the People (Population in 1790: free and enslaved): percentage enslaved to one decimal place.",
+   "kind": "webmap-layer",
+   "webmap": "eba1ea7488624f3c88ef094167ed03ca",
+   "layerId": "mm6b9a7ac6967e",
+   "layerTitle": "Population in 1790: free and enslaved",
+   "before": "8add7efc26f427de46c3aeec0ab1baff33dd075b",
+   "set": {
+    "popupInfo": {
+     "title": "{State} in 1790",
+     "popupElements": [
+      {
+       "type": "text",
+       "text": "<p>1790 census: {Total1790} people, {Enslaved1790} of them enslaved ({PctEnslaved}%).</p><p>Counted for the House under the three-fifths clause: {Counted}. That gave {State} {HouseSeats} House seats in 1793 (one for every 33,000 people), plus {Senators} senators, like every state.</p><p>If enslaved people had been counted in full: {SeatsIfAll} seats. If they had not been counted at all: {SeatsIfNone} seats.</p><p>{Note}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Seats: National Archives</a> · <a href='https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html' target='_blank' rel='nofollow ugc noopener noreferrer'>Ratio: U.S. Census Bureau</a></p>"
+      }
+     ],
+     "fieldInfos": [
+      {
+       "fieldName": "Total1790",
+       "visible": true,
+       "format": {
+        "places": 0,
+        "digitSeparator": true
+       }
+      },
+      {
+       "fieldName": "Enslaved1790",
+       "visible": true,
+       "format": {
+        "places": 0,
+        "digitSeparator": true
+       }
+      },
+      {
+       "fieldName": "Free1790",
+       "visible": true,
+       "format": {
+        "places": 0,
+        "digitSeparator": true
+       }
+      },
+      {
+       "fieldName": "Counted",
+       "visible": true,
+       "format": {
+        "places": 0,
+        "digitSeparator": true
+       }
+      },
+      {
+       "fieldName": "PctEnslaved",
+       "label": "Percent enslaved",
+       "visible": false,
+       "format": {
+        "places": 1,
+        "digitSeparator": true
+       }
+      }
+     ],
+     "showAttachments": false
+    }
+   }
+  },
+  {
+   "id": "B5",
+   "what": "We the People (House seats in 1793): percentage enslaved to one decimal place.",
+   "kind": "webmap-layer",
+   "webmap": "eba1ea7488624f3c88ef094167ed03ca",
+   "layerId": "mm83d026356022",
+   "layerTitle": "House seats in 1793",
+   "before": "8add7efc26f427de46c3aeec0ab1baff33dd075b",
+   "set": {
+    "popupInfo": {
+     "title": "{State} in 1790",
+     "popupElements": [
+      {
+       "type": "text",
+       "text": "<p>1790 census: {Total1790} people, {Enslaved1790} of them enslaved ({PctEnslaved}%).</p><p>Counted for the House under the three-fifths clause: {Counted}. That gave {State} {HouseSeats} House seats in 1793 (one for every 33,000 people), plus {Senators} senators, like every state.</p><p>If enslaved people had been counted in full: {SeatsIfAll} seats. If they had not been counted at all: {SeatsIfNone} seats.</p><p>{Note}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Seats: National Archives</a> · <a href='https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html' target='_blank' rel='nofollow ugc noopener noreferrer'>Ratio: U.S. Census Bureau</a></p>"
+      }
+     ],
+     "fieldInfos": [
+      {
+       "fieldName": "Total1790",
+       "visible": true,
+       "format": {
+        "places": 0,
+        "digitSeparator": true
+       }
+      },
+      {
+       "fieldName": "Enslaved1790",
+       "visible": true,
+       "format": {
+        "places": 0,
+        "digitSeparator": true
+       }
+      },
+      {
+       "fieldName": "Free1790",
+       "visible": true,
+       "format": {
+        "places": 0,
+        "digitSeparator": true
+       }
+      },
+      {
+       "fieldName": "Counted",
+       "visible": true,
+       "format": {
+        "places": 0,
+        "digitSeparator": true
+       }
+      },
+      {
+       "fieldName": "PctEnslaved",
+       "label": "Percent enslaved",
+       "visible": false,
+       "format": {
+        "places": 1,
+        "digitSeparator": true
+       }
+      }
+     ],
+     "showAttachments": false
+    }
+   }
+  },
+  {
+   "id": "C8",
+   "what": "We the People: population legend headed 'People in 1790'.",
+   "kind": "webmap-layer",
+   "webmap": "eba1ea7488624f3c88ef094167ed03ca",
+   "layerId": "mm6b9a7ac6967e",
+   "layerTitle": "Population in 1790: free and enslaved",
+   "before": "b73e43232b070c25a697d7343b9e6557b357c1b5",
+   "set": {
+    "layerDefinition": {
+     "drawingInfo": {
+      "renderer": {
+       "type": "pieChart",
+       "attributes": [
+        {
+         "field": "Free1790",
+         "label": "Free people",
+         "color": [
+          86,
+          180,
+          233,
+          255
+         ]
+        },
+        {
+         "field": "Enslaved1790",
+         "label": "Enslaved people",
+         "color": [
+          213,
+          94,
+          0,
+          255
+         ]
+        }
+       ],
+       "defaultColor": [
+        170,
+        170,
+        170,
+        255
+       ],
+       "defaultLabel": "Other",
+       "holePercentage": 0,
+       "othersCategory": {
+        "color": [
+         170,
+         170,
+         170,
+         255
+        ],
+        "label": "Other",
+        "threshold": 0
+       },
+       "outline": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         255,
+         255,
+         255,
+         255
+        ],
+        "width": 1
+       },
+       "size": 16,
+       "visualVariables": [
+        {
+         "type": "sizeInfo",
+         "field": "Total1790",
+         "minDataValue": 59094,
+         "maxDataValue": 747610,
+         "minSize": 16,
+         "maxSize": 46,
+         "legendOptions": {
+          "title": "People in 1790"
+         }
+        }
+       ],
+       "backgroundFillSymbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         250,
+         248,
+         240,
+         150
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSSolid",
+         "color": [
+          90,
+          90,
+          90,
+          255
+         ],
+         "width": 0.8
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "B7+C8",
+   "what": "We the People: every state's House seats label shows; legend headed 'Seats in the House'.",
+   "kind": "webmap-layer",
+   "webmap": "eba1ea7488624f3c88ef094167ed03ca",
+   "layerId": "mm83d026356022",
+   "layerTitle": "House seats in 1793",
+   "before": "af9bdd859cd1302129cba8371d2c99733af061ee",
+   "set": {
+    "layerDefinition": {
+     "drawingInfo": {
+      "renderer": {
+       "type": "classBreaks",
+       "field": "HouseSeats",
+       "minValue": 1,
+       "classBreakInfos": [
+        {
+         "classMaxValue": 2,
+         "label": "1 to 2 seats",
+         "symbol": {
+          "type": "esriSFS",
+          "style": "esriSFSSolid",
+          "color": [
+           239,
+           243,
+           255,
+           220
+          ],
+          "outline": {
+           "type": "esriSLS",
+           "style": "esriSLSSolid",
+           "color": [
+            90,
+            90,
+            90,
+            255
+           ],
+           "width": 0.8
+          }
+         }
+        },
+        {
+         "classMaxValue": 6,
+         "label": "4 to 6 seats",
+         "symbol": {
+          "type": "esriSFS",
+          "style": "esriSFSSolid",
+          "color": [
+           189,
+           215,
+           231,
+           220
+          ],
+          "outline": {
+           "type": "esriSLS",
+           "style": "esriSLSSolid",
+           "color": [
+            90,
+            90,
+            90,
+            255
+           ],
+           "width": 0.8
+          }
+         }
+        },
+        {
+         "classMaxValue": 10,
+         "label": "7 to 10 seats",
+         "symbol": {
+          "type": "esriSFS",
+          "style": "esriSFSSolid",
+          "color": [
+           107,
+           174,
+           214,
+           220
+          ],
+          "outline": {
+           "type": "esriSLS",
+           "style": "esriSLSSolid",
+           "color": [
+            90,
+            90,
+            90,
+            255
+           ],
+           "width": 0.8
+          }
+         }
+        },
+        {
+         "classMaxValue": 19,
+         "label": "13 to 19 seats",
+         "symbol": {
+          "type": "esriSFS",
+          "style": "esriSFSSolid",
+          "color": [
+           33,
+           113,
+           181,
+           220
+          ],
+          "outline": {
+           "type": "esriSLS",
+           "style": "esriSLSSolid",
+           "color": [
+            90,
+            90,
+            90,
+            255
+           ],
+           "width": 0.8
+          }
+         }
+        }
+       ],
+       "legendOptions": {
+        "title": "Seats in the House"
+       }
+      },
+      "labelingInfo": [
+       {
+        "labelExpressionInfo": {
+         "expression": "$feature.Abbr + ': ' + $feature.HouseSeats"
+        },
+        "labelPlacement": "esriServerPolygonPlacementAlwaysHorizontal",
+        "symbol": {
+         "type": "esriTS",
+         "color": [
+          40,
+          40,
+          40,
+          255
+         ],
+         "haloColor": [
+          255,
+          255,
+          255,
+          255
+         ],
+         "haloSize": 1.5,
+         "font": {
+          "family": "Noto Sans",
+          "size": 10,
+          "weight": "bold"
+         },
+         "horizontalAlignment": "center",
+         "verticalAlignment": "baseline"
+        },
+        "minScale": 0,
+        "maxScale": 0,
+        "repeatLabel": false,
+        "deconflictionStrategy": "none"
+       }
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "A10",
+   "what": "We the People: ratification dates read as dates (November 21, 1789), the same in every time zone.",
+   "kind": "webmap-layer",
+   "webmap": "eba1ea7488624f3c88ef094167ed03ca",
+   "layerId": "mm191e6133b8da",
+   "layerTitle": "Ratifying the Constitution, 1787–1791",
+   "before": "b713051e4ba65ecc0a0cd57be6e595c30c1a973f",
+   "set": {
+    "popupInfo": {
+     "title": "{State}: {Status}",
+     "popupElements": [
+      {
+       "type": "text",
+       "text": "<p><b>{Result}</b> on {expression/votedate}: {Yes} for, {No} against.</p><p>The convention met {Meeting}.</p><p>{Note}</p><p>Sources: <a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>votes and dates</a> and <a href='{PlacesURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>meeting places</a>, Center for the Study of the American Constitution</p>"
+      }
+     ],
+     "fieldInfos": [],
+     "showAttachments": false,
+     "expressionInfos": [
+      {
+       "name": "votedate",
+       "title": "Date of the vote",
+       "returnType": "string",
+       "expression": "Text(ChangeTimeZone($feature.VoteDate, 'UTC'), 'MMMM D, Y')"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "B6+C8",
+   "what": "We the People: ratification labels under their own pies; legend headed 'Delegates voting'.",
+   "kind": "webmap-layer",
+   "webmap": "eba1ea7488624f3c88ef094167ed03ca",
+   "layerId": "mm191e6133b8da",
+   "layerTitle": "Ratifying the Constitution, 1787–1791",
+   "before": "72212912a32880d8955fb816b8a49af8b196b629",
+   "set": {
+    "layerDefinition": {
+     "drawingInfo": {
+      "renderer": {
+       "type": "pieChart",
+       "attributes": [
+        {
+         "field": "Yes",
+         "label": "Voted to ratify",
+         "color": [
+          0,
+          114,
+          178,
+          255
+         ]
+        },
+        {
+         "field": "No",
+         "label": "Voted against",
+         "color": [
+          213,
+          94,
+          0,
+          255
+         ]
+        }
+       ],
+       "defaultColor": [
+        170,
+        170,
+        170,
+        255
+       ],
+       "defaultLabel": "Other",
+       "holePercentage": 0,
+       "othersCategory": {
+        "color": [
+         170,
+         170,
+         170,
+         255
+        ],
+        "label": "Other",
+        "threshold": 0
+       },
+       "outline": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         255,
+         255,
+         255,
+         255
+        ],
+        "width": 1
+       },
+       "size": 18,
+       "visualVariables": [
+        {
+         "type": "sizeInfo",
+         "field": "Total",
+         "minDataValue": 26,
+         "maxDataValue": 355,
+         "minSize": 18,
+         "maxSize": 44,
+         "legendOptions": {
+          "title": "Delegates voting"
+         }
+        }
+       ]
+      },
+      "labelingInfo": [
+       {
+        "labelExpressionInfo": {
+         "expression": "$feature.Label"
+        },
+        "labelPlacement": "esriServerPointLabelPlacementBelowCenter",
+        "symbol": {
+         "type": "esriTS",
+         "color": [
+          40,
+          40,
+          40,
+          255
+         ],
+         "haloColor": [
+          255,
+          255,
+          255,
+          255
+         ],
+         "haloSize": 1.5,
+         "font": {
+          "family": "Noto Sans",
+          "size": 9,
+          "weight": "bold"
+         },
+         "horizontalAlignment": "center",
+         "verticalAlignment": "baseline"
+        },
+        "minScale": 0,
+        "maxScale": 0,
+        "repeatLabel": false
+       }
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "A9",
+   "what": "Ratification: North Carolina's note gives the Hillsborough vote as 184 to 84, to neither ratify nor reject.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Ratification_1787_1791/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 12,
+   "field": "Note",
+   "from": "A first convention, at Hillsborough in 1788, voted 184 to 83 against ratifying.",
+   "to": "A first convention, at Hillsborough in 1788, voted 184 to 84 to neither ratify nor reject the Constitution."
+  },
+  {
+   "id": "A9",
+   "what": "Ratification: the Hillsborough pie's note says what the vote was on.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Ratification_1787_1791/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 15,
+   "field": "Note",
+   "from": "This first convention did not ratify; a second convention at Fayetteville ratified in November 1789.",
+   "to": "This first convention voted 184 to 84 to neither ratify nor reject the Constitution, and asked for a bill of rights and amendments; a second convention at Fayetteville ratified in November 1789."
+  },
+  {
+   "id": "A9",
+   "what": "Ratification: Hillsborough pie, 84 delegates against the motion.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Ratification_1787_1791/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 15,
+   "field": "Yes",
+   "from": 83,
+   "to": 84
+  },
+  {
+   "id": "A9",
+   "what": "Ratification: Hillsborough pie, 268 delegates in all.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Ratification_1787_1791/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 15,
+   "field": "Total",
+   "from": 267,
+   "to": 268
+  },
+  {
+   "id": "A9",
+   "what": "Ratification: Hillsborough vote text.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Ratification_1787_1791/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 15,
+   "field": "Vote",
+   "from": "83–184",
+   "to": "84–184"
+  },
+  {
+   "id": "B8",
+   "what": "Presidential: Supreme Court squares show only when zoomed in near Washington.",
+   "kind": "webmap-layer",
+   "webmap": "6173219d9cd84812bcd4fed859b2c182",
+   "layerId": "mm1bf86cef7dd6",
+   "layerTitle": "Landmark Supreme Court cases, 1803 and 1819",
+   "before": "6af0556a4d78f5ffe15d80e8be3ee2f4161ec207",
+   "set": {
+    "layerDefinition": {
+     "drawingInfo": {
+      "renderer": {
+       "type": "simple",
+       "symbol": {
+        "type": "esriSMS",
+        "style": "esriSMSSquare",
+        "color": [
+         204,
+         121,
+         167,
+         255
+        ],
+        "size": 12,
+        "angle": 0,
+        "xoffset": 0,
+        "yoffset": 0,
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSSolid",
+         "color": [
+          40,
+          40,
+          40,
+          255
+         ],
+         "width": 1
+        }
+       }
+      },
+      "labelingInfo": [
+       {
+        "labelExpressionInfo": {
+         "expression": "$feature.CaseName + ' (' + $feature.CaseYear + ')'"
+        },
+        "labelPlacement": "esriServerPointLabelPlacementAboveCenter",
+        "symbol": {
+         "type": "esriTS",
+         "color": [
+          40,
+          40,
+          40,
+          255
+         ],
+         "haloColor": [
+          255,
+          255,
+          255,
+          255
+         ],
+         "haloSize": 1.5,
+         "font": {
+          "family": "Noto Sans",
+          "size": 9,
+          "weight": "bold"
+         },
+         "horizontalAlignment": "center",
+         "verticalAlignment": "baseline"
+        },
+        "minScale": 0,
+        "maxScale": 0,
+        "repeatLabel": false
+       }
+      ]
+     },
+     "definitionExpression": "CaseYear <= 1819",
+     "minScale": 6000000
+    }
+   }
+  },
+  {
+   "id": "B9",
+   "what": "Presidential (1796): pop-up title gives the year; pie numbers first; '1 vote'.",
+   "kind": "webmap-layer",
+   "webmap": "6173219d9cd84812bcd4fed859b2c182",
+   "layerId": "mm8960fd6b1f56",
+   "layerTitle": "Election of 1796: electors' votes",
+   "before": "557ad8f66d49531819084c58f9c3e2caae016a37",
+   "set": {
+    "popupInfo": {
+     "title": "{State} in 1796: {Electors} electors",
+     "popupElements": [
+      {
+       "type": "text",
+       "text": "<p>In the pie: John Adams (Federalist), {expression/adams}; Thomas Jefferson (Democratic-Republican), {expression/jefferson}.</p><p>All electors' votes in 1796: {Votes1796}. Each elector cast two votes for president, so the votes add up to twice the number of electors.</p><p>{Note}</p><p><a href='https://www.archives.gov/electoral-college/1796' target='_blank' rel='nofollow ugc noopener noreferrer'>Source: National Archives</a></p>"
+      }
+     ],
+     "fieldInfos": [],
+     "showAttachments": false,
+     "expressionInfos": [
+      {
+       "name": "adams",
+       "title": "Adams votes",
+       "returnType": "string",
+       "expression": "var v = $feature.Adams1796;\nreturn v + IIf(v == 1, ' vote', ' votes');"
+      },
+      {
+       "name": "jefferson",
+       "title": "Jefferson votes",
+       "returnType": "string",
+       "expression": "var v = $feature.Jefferson1796;\nreturn v + IIf(v == 1, ' vote', ' votes');"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "B9",
+   "what": "Presidential (1800): pop-up title gives the year; pie numbers first; '1 vote'.",
+   "kind": "webmap-layer",
+   "webmap": "6173219d9cd84812bcd4fed859b2c182",
+   "layerId": "mm2e4e2e9e6d29",
+   "layerTitle": "Election of 1800: electors' votes",
+   "before": "b5effa87f958c2eab7ca4e565c313091dfa78429",
+   "set": {
+    "popupInfo": {
+     "title": "{State} in 1800: {Electors} electors",
+     "popupElements": [
+      {
+       "type": "text",
+       "text": "<p>In the pie: John Adams (Federalist), {expression/adams}; Thomas Jefferson (Democratic-Republican), {expression/jefferson}.</p><p>All electors' votes in 1800: {Votes1800}. Each elector cast two votes for president, so the votes add up to twice the number of electors.</p><p>Jefferson and Aaron Burr tied with 73 votes each, so the House of Representatives chose the president: Jefferson, on 17 February 1801. The 12th Amendment (1804) then gave electors separate votes for president and vice president.</p><p>{Note}</p><p><a href='https://www.archives.gov/electoral-college/1800' target='_blank' rel='nofollow ugc noopener noreferrer'>Source: National Archives</a></p>"
+      }
+     ],
+     "fieldInfos": [],
+     "showAttachments": false,
+     "expressionInfos": [
+      {
+       "name": "adams",
+       "title": "Adams votes",
+       "returnType": "string",
+       "expression": "var v = $feature.Adams1800;\nreturn v + IIf(v == 1, ' vote', ' votes');"
+      },
+      {
+       "name": "jefferson",
+       "title": "Jefferson votes",
+       "returnType": "string",
+       "expression": "var v = $feature.Jefferson1800;\nreturn v + IIf(v == 1, ' vote', ' votes');"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "B12",
+   "what": "Rights: the district pop-up gives the state's number of districts, at-large seats and the Congress.",
+   "kind": "webmap-layer",
+   "webmap": "59467ac7d7c64542acaa6a3e9c19ebf4",
+   "layerId": "mm519dc47d559a",
+   "layerTitle": "Congressional districts (119th Congress)",
+   "before": "efd37ac97b3dc2c1c8cd8b2aa4534ac9e70732f1",
+   "set": {
+    "popupInfo": {
+     "popupElements": [
+      {
+       "type": "text",
+       "text": "<p style='text-align:center;'><span style='font-size:18px;'>{expression/who}</span></p><p style='text-align:center;'><span style='font-size:18px;'>{expression/district}</span></p><p style='text-align:center;'>{expression/count}</p>"
+      }
+     ],
+     "description": "<p style='text-align:center;'><span style='font-size:18px;'>{expression/who}</span></p><p style='text-align:center;'><span style='font-size:18px;'>{expression/district}</span></p><p style='text-align:center;'>{expression/count}</p>",
+     "expressionInfos": [
+      {
+       "name": "who",
+       "title": "Representative",
+       "returnType": "string",
+       "expression": "IIf($feature.PARTY == 'Vacant' || IsEmpty($feature.NAME), 'This seat was vacant when the layer was last updated:', $feature.NAME + ' (' + $feature.PARTY + ') represents')"
+      },
+      {
+       "name": "district",
+       "title": "District",
+       "returnType": "string",
+       "expression": "var cd = $feature.CDFIPS;\nreturn When(cd == '00', $feature.STATE_NAME + ', the whole state (one at-large seat)', cd == '98', $feature.STATE_NAME + ', as a delegate who cannot vote on final passage of bills', $feature.STATE_NAME + ' Congressional District ' + Number(cd));"
+      },
+      {
+       "name": "count",
+       "title": "Districts in the state",
+       "returnType": "string",
+       "expression": "var st = $feature.STATE_ABBR;\nvar n = Count(Filter(FeatureSetById($map, 'mm519dc47d559a', ['STATE_ABBR'], false), 'STATE_ABBR = @st'));\nreturn When($feature.CDFIPS == '98', '119th Congress, 2025 to 2027.', n == 1, $feature.STATE_NAME + ' has one seat in the House (119th Congress, 2025 to 2027).', $feature.STATE_NAME + ' has ' + n + ' districts (119th Congress, 2025 to 2027).');"
+      }
+     ],
+     "fieldInfos": [
+      {
+       "fieldName": "OBJECTID",
+       "format": {
+        "digitSeparator": false,
+        "places": 0
+       },
+       "isEditable": false,
+       "label": "OBJECTID",
+       "visible": false
+      },
+      {
+       "fieldName": "DISTRICTID",
+       "isEditable": true,
+       "label": "District ID",
+       "visible": true
+      },
+      {
+       "fieldName": "STFIPS",
+       "isEditable": true,
+       "label": "State FIPS",
+       "visible": true
+      },
+      {
+       "fieldName": "CDFIPS",
+       "isEditable": true,
+       "label": "CD FIPS",
+       "visible": true
+      },
+      {
+       "fieldName": "STATE_ABBR",
+       "isEditable": true,
+       "label": "State Abbreviation",
+       "visible": true
+      },
+      {
+       "fieldName": "NAME",
+       "isEditable": true,
+       "label": "Representative Name",
+       "visible": true
+      },
+      {
+       "fieldName": "LAST_NAME",
+       "isEditable": true,
+       "label": "Last Name",
+       "visible": true
+      },
+      {
+       "fieldName": "PARTY",
+       "isEditable": true,
+       "label": "Political Party",
+       "visible": true
+      },
+      {
+       "fieldName": "SQMI",
+       "format": {
+        "digitSeparator": false,
+        "places": 2
+       },
+       "isEditable": true,
+       "label": "Area in square miles",
+       "visible": true
+      },
+      {
+       "fieldName": "STATE_NAME",
+       "isEditable": true,
+       "label": "State Name",
+       "visible": true
+      },
+      {
+       "fieldName": "Shape__Area",
+       "isEditable": true,
+       "label": "Shape__Area",
+       "visible": false
+      },
+      {
+       "fieldName": "Shape__Length",
+       "isEditable": true,
+       "label": "Shape__Length",
+       "visible": false
+      }
+     ],
+     "title": ""
+    }
+   }
+  },
+  {
+   "id": "B13",
+   "what": "Louisiana Purchase: Lewis and Clark trail drawn 3 pt wide.",
+   "kind": "webmap-layer",
+   "webmap": "f8af7269e5c14e69b060d6184d04ff85",
+   "layerId": "mmb290a95aca4e",
+   "layerTitle": "Lewis and Clark National Historic Trail",
+   "before": "31461811fc6fc97eb40f8ef727e5e9f3e359f94c",
+   "set": {
+    "layerDefinition": {
+     "drawingInfo": {
+      "renderer": {
+       "type": "simple",
+       "label": "Lewis and Clark National Historic Trail",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         128,
+         50,
+         160,
+         255
+        ],
+        "width": 3
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "B13",
+   "what": "Louisiana Purchase: campsites drawn as small orange dots.",
+   "kind": "webmap-layer",
+   "webmap": "f8af7269e5c14e69b060d6184d04ff85",
+   "layerId": "mmbda1dc061564",
+   "layerTitle": "Lewis and Clark campsites (approximate)",
+   "before": "31461811fc6fc97eb40f8ef727e5e9f3e359f94c",
+   "set": {
+    "layerDefinition": {
+     "drawingInfo": {
+      "renderer": {
+       "type": "simple",
+       "label": "Campsite",
+       "symbol": {
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "color": [
+         230,
+         85,
+         13,
+         255
+        ],
+        "size": 4.5,
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSSolid",
+         "color": [
+          255,
+          255,
+          255,
+          255
+         ],
+         "width": 0.5
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "C9",
+   "what": "Louisiana Purchase: Biomes pop-up shows biome, realm and ecoregion only.",
+   "kind": "webmap-layer",
+   "webmap": "f8af7269e5c14e69b060d6184d04ff85",
+   "layerId": "mmc9786700c63a",
+   "layerTitle": "Biomes",
+   "before": "efd37ac97b3dc2c1c8cd8b2aa4534ac9e70732f1",
+   "set": {
+    "popupInfo": {
+     "popupElements": [
+      {
+       "type": "text",
+       "text": "<div style='text-align:center;'><span style='color:#239a54;font-size:18px;'><strong>{BIOME_NAME}</strong></span><br /><span style='color:#808080;font-size:medium;'>Realm:</span><span style='font-size:medium;'> {REALM}</span><br /><span style='color:#808080;font-size:medium;'>Ecoregion: {ECO_NAME}</span></div>"
+      }
+     ],
+     "description": "<div style='text-align:center;'><span style='color:#239a54;font-size:18px;'><strong>{BIOME_NAME}</strong></span><br /><span style='color:#808080;font-size:medium;'>Realm:</span><span style='font-size:medium;'> {REALM}</span><br /><span style='color:#808080;font-size:medium;'>Ecoregion: {ECO_NAME}</span></div>",
+     "expressionInfos": [],
+     "fieldInfos": [
+      {
+       "fieldName": "FID",
+       "format": {
+        "digitSeparator": false,
+        "places": 0
+       },
+       "isEditable": false,
+       "label": "FID",
+       "visible": false
+      },
+      {
+       "fieldName": "OBJECTID",
+       "format": {
+        "digitSeparator": false,
+        "places": 6
+       },
+       "isEditable": true,
+       "label": "OBJECTID",
+       "visible": false
+      },
+      {
+       "fieldName": "ECO_NAME",
+       "isEditable": true,
+       "label": "Ecoregion name",
+       "visible": true
+      },
+      {
+       "fieldName": "BIOME_NUM",
+       "format": {
+        "digitSeparator": false,
+        "places": 0
+       },
+       "isEditable": true,
+       "label": "Biome number",
+       "visible": true
+      },
+      {
+       "fieldName": "BIOME_NAME",
+       "isEditable": true,
+       "label": "Biome name",
+       "visible": true
+      },
+      {
+       "fieldName": "REALM",
+       "isEditable": true,
+       "label": "Realm name",
+       "visible": true
+      },
+      {
+       "fieldName": "ECO_BIOME_",
+       "isEditable": true,
+       "label": "Ecoregion Biome",
+       "visible": true
+      },
+      {
+       "fieldName": "NNH",
+       "format": {
+        "digitSeparator": false,
+        "places": 0
+       },
+       "isEditable": true,
+       "label": "Nature Needs Half number",
+       "visible": true
+      },
+      {
+       "fieldName": "ECO_ID",
+       "format": {
+        "digitSeparator": false,
+        "places": 0
+       },
+       "isEditable": true,
+       "label": "Ecoregion unique ID",
+       "visible": true
+      },
+      {
+       "fieldName": "SHAPE_LENG",
+       "format": {
+        "digitSeparator": false,
+        "places": 6
+       },
+       "isEditable": true,
+       "label": "SHAPE_LENG",
+       "visible": false
+      },
+      {
+       "fieldName": "NNH_NAME",
+       "isEditable": true,
+       "label": "Nature Needs Half description",
+       "visible": true
+      },
+      {
+       "fieldName": "COLOR",
+       "isEditable": true,
+       "label": "Color",
+       "visible": false
+      },
+      {
+       "fieldName": "COLOR_BIO",
+       "isEditable": true,
+       "label": "Biome color",
+       "visible": false
+      },
+      {
+       "fieldName": "COLOR_NNH",
+       "isEditable": true,
+       "label": "Nature Needs Half color",
+       "visible": false
+      },
+      {
+       "fieldName": "LICENSE",
+       "isEditable": true,
+       "label": "License",
+       "visible": false
+      },
+      {
+       "fieldName": "Shape__Area",
+       "format": {
+        "digitSeparator": false,
+        "places": 6
+       },
+       "isEditable": false,
+       "label": "Shape__Area",
+       "visible": false
+      },
+      {
+       "fieldName": "Shape__Length",
+       "format": {
+        "digitSeparator": false,
+        "places": 6
+       },
+       "isEditable": false,
+       "label": "Shape__Length",
+       "visible": false
+      }
+     ],
+     "title": ""
+    }
+   }
   }
  ]
 }

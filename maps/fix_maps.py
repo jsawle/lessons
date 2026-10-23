@@ -1,4 +1,4 @@
-# Map fixes v1.0: applies a fix list from the lessons repository (maps/fixes/<list>.json, built by maps/fixes/build.py)
+# Map fixes v1.1: applies a fix list from the lessons repository (maps/fixes/<list>.json, built by maps/fixes/build.py)
 # to ArcGIS Online. Paste this whole file into one ArcGIS Notebook cell.
 #   1. In the organization the list is for, open a new notebook (signed in as the owner or an administrator).
 #   2. Set FIX_LIST below, leave DRY_RUN = True, run the cell and read the report.
@@ -12,7 +12,7 @@ DRY_RUN = True
 RESTORE_FROM = ""           # a backup folder printed by an earlier run, to undo that run (leave empty otherwise)
 
 SOURCE = "https://jsawle.github.io/lessons/maps/fixes/{}.json"
-EXPECT = {"sandbox": "2de9cbb2b6cb1f1a5c52aead1933900737abbf69", "mapmaker": "e5fdfae40c189eb82a659ccee0af7ae0753c46c2"}  # fingerprints of the reviewed lists
+EXPECT = {"sandbox": "d835768181e0f3232039d1d3211afd2b716d3c19", "mapmaker": "e5fdfae40c189eb82a659ccee0af7ae0753c46c2"}  # fingerprints of the reviewed lists
 
 import copy, datetime, hashlib, json, os, urllib.request
 
@@ -31,9 +31,14 @@ def find_layer(data, layer_id):
 
 
 def plan_webmap(data, fixes):
-    """Apply the web map fixes to a copy of the map's data. Returns (new data, [(fix, status)])."""
+    """Apply the web map fixes, in order, to a copy of the map's data. Returns (new data, [(fix, status)])."""
     new, out = copy.deepcopy(data), []
     for f in fixes:
+        if f["kind"] == "webmap-key":
+            now = new.get(f["key"])
+            if fp(now) == fp(f["set"]): out.append((f, "already done")); continue
+            if fp(now) != f["before"]: out.append((f, "skipped: changed since the list was built")); continue
+            new[f["key"]] = copy.deepcopy(f["set"]); out.append((f, "change")); continue
         lyr = find_layer(new, f["layerId"])
         if lyr is None or lyr.get("title") != f["layerTitle"]:
             out.append((f, "skipped: layer not found")); continue
@@ -57,7 +62,7 @@ if __name__ == "__main__" and "ARCGIS_NOTEBOOK_TEST" not in os.environ:
     gis = GIS("home")
     me = gis.users.me
     stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    print(f"Map fixes 1.0 | signed in as {me.username} ({getattr(me, 'role', '')}) in {gis.properties.name} ({gis.properties.id})")
+    print(f"Map fixes 1.1 | signed in as {me.username} ({getattr(me, 'role', '')}) in {gis.properties.name} ({gis.properties.id})")
 
     if RESTORE_FROM:
         print("Restoring from", RESTORE_FROM)
@@ -96,7 +101,7 @@ if __name__ == "__main__" and "ARCGIS_NOTEBOOK_TEST" not in os.environ:
     # Web maps: all of one map's fixes in one update.
     by_map = {}
     for f in plan["fixes"]:
-        if f["kind"] == "webmap-layer": by_map.setdefault(f["webmap"], []).append(f)
+        if f["kind"] in ("webmap-layer", "webmap-key"): by_map.setdefault(f["webmap"], []).append(f)
     for wid, fixes in by_map.items():
         it = gis.content.get(wid)
         if it is None:
