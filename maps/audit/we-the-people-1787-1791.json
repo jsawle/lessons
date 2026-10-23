@@ -1,0 +1,1274 @@
+{
+ "tool": "Map audit 1.2",
+ "lesson": "we-the-people-1787-1791",
+ "webmapId": "eba1ea7488624f3c88ef094167ed03ca",
+ "item": {
+  "id": "eba1ea7488624f3c88ef094167ed03ca",
+  "title": "We the People: Representation and Ratification, 1787–1791",
+  "type": "Web Map",
+  "owner": "GIS-4-Schools",
+  "access": "public",
+  "snippet": "1790 population, free and enslaved; House and Senate seats in 1793; and each state's ratifying convention vote.",
+  "description": "<p><b>Question:</b> How did the Constitution balance large and small states, and how close was ratification?</p><p><b>Ideas for one lesson in MapMaker</b> (choose any):</p><ul><li>Compare free and enslaved populations in 1790 (pie charts), then switch on <i>House seats in 1793</i>. Every state had two senators; House seats followed population counted under the three-fifths clause. Each state's pop-up also shows its seats if enslaved people had been counted in full or not at all.</li><li>Switch on <i>Ratifying the Constitution</i>: each pie shows a convention's vote. Look for the closest votes, and for North Carolina's two conventions.</li><li>Sketch pins for James Madison, Alexander Hamilton, Patrick Henry and George Mason, each with a quote and the principle it argues about.</li><li>Download an image or export a PDF of the map to keep the work.</li></ul><p><b>Notes:</b> Today's state outlines (Natural Earth, public domain), with Maine shown as part of Massachusetts and West Virginia as part of Virginia. The 1790 census figures reproduce every state's House seats under the act of 14 April 1792, which checks them.</p><p><b>Sources:</b> National Archives (seats); U.S. Census Bureau (one seat for every 33,000 people); 1790 census figures as tabulated in Wikipedia; Center for the Study of the American Constitution (votes and meeting places).</p><p><i>Version 1.2 (14 October 2026).</i></p>",
+  "tags": [
+   "MapMaker",
+   "US History",
+   "grade 8",
+   "November 2026",
+   "web map",
+   "activity 8"
+  ],
+  "accessInformation": "National Archives; U.S. Census Bureau; Wikipedia (1790 census figures); Center for the Study of the American Constitution; Natural Earth.",
+  "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
+  "created": 1791982411000,
+  "modified": 1791988657000,
+  "numViews": 14,
+  "thumbnail": null,
+  "contentStatus": null,
+  "extent": [
+   [
+    -92,
+    29
+   ],
+   [
+    -66,
+    47.6
+   ]
+  ],
+  "descriptionChars": 1278
+ },
+ "basemap": {
+  "title": "Modern Antique",
+  "layers": [
+   {
+    "title": "World Hillshade",
+    "type": "ArcGISTiledMapServiceLayer",
+    "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+    "itemId": "1b243539f4514b6ba35e7d995890db1d"
+   },
+   {
+    "title": "Copy of Modern Antique no Labels",
+    "type": "VectorTileLayer",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json",
+    "itemId": "545f2e839f624600bbb092c3ad998bb8"
+   }
+  ]
+ },
+ "opening": {
+  "extent": {
+   "xmin": -10241393.2,
+   "ymin": 3375646,
+   "xmax": -7347086.4,
+   "ymax": 6040565.2,
+   "spatialReference": {
+    "wkid": 102100,
+    "latestWkid": 3857
+   }
+  },
+  "scale": 14921682
+ },
+ "bookmarks": [
+  "The states in 1790",
+  "New England and New York",
+  "The South"
+ ],
+ "applicationProperties": null,
+ "layers": [
+  {
+   "path": "Population in 1790: free and enslaved",
+   "title": "Population in 1790: free and enslaved",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "onAtStart": true,
+   "opacity": 1,
+   "itemId": "43ae0255f8ed46d5973871603f5956dd",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+   "disablePopup": false,
+   "popup": {
+    "title": "{State} in 1790",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "Counted",
+     "Enslaved1790",
+     "HouseSeats",
+     "Note",
+     "PctEnslaved",
+     "SeatsIfAll",
+     "SeatsIfNone",
+     "Senators",
+     "SourceURL",
+     "State",
+     "Total1790"
+    ]
+   },
+   "popupFrom": "map",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "pieChart",
+    "field": null,
+    "valueExpression": false,
+    "visualVariables": [
+     "sizeInfo"
+    ]
+   },
+   "item": {
+    "id": "43ae0255f8ed46d5973871603f5956dd",
+    "title": "Population and House seats, 1790 to 1793",
+    "type": "Feature Service",
+    "owner": "GIS-4-Schools",
+    "access": "public",
+    "snippet": "Each state's 1790 population, free and enslaved, and its House seats under the act of 14 April 1792.",
+    "description": "<p>House seats under the apportionment act of 14 April 1792 (105 seats, one for every 33,000 people counted under the three-fifths clause), with the seats each state would have had if enslaved people had been counted in full (<b>SeatsIfAll</b>) or not at all (<b>SeatsIfNone</b>).</p><p>The 1790 census figures are as tabulated in Wikipedia's article on the 1790 census, from the Census Bureau's <i>Heads of Families</i> volumes. Under the act's rule they reproduce every state's seats, which checks them.</p><p>Today's state outlines (Natural Earth, public domain), with Maine shown as part of Massachusetts and West Virginia as part of Virginia.</p><p><i>Version 1.0 (14 October 2026).</i></p>",
+    "tags": [
+     "MapMaker",
+     "US History",
+     "grade 8",
+     "November 2026",
+     "Constitution",
+     "three-fifths clause",
+     "apportionment",
+     "1790 census"
+    ],
+    "accessInformation": "Seats: National Archives. Ratio: U.S. Census Bureau. 1790 census figures: Wikipedia (from Census Bureau volumes). Outlines: Natural Earth (public domain).",
+    "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
+    "created": 1791982317000,
+    "modified": 1791988593000,
+    "numViews": 65,
+    "thumbnail": null,
+    "contentStatus": null,
+    "extent": [
+     [
+      -89.5779,
+      30.3692
+     ],
+     [
+      -66.9773,
+      47.45969999999999
+     ]
+    ],
+    "descriptionChars": 639
+   },
+   "service": {
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+    "name": "MM_US_House_Seats_1793_polygons",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       76,
+       129,
+       205,
+       191
+      ],
+      "outline": {
+       "color": [
+        0,
+        0,
+        0,
+        255
+       ],
+       "width": 0.75,
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "State",
+      "alias": "State",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Abbr",
+      "alias": "Abbr",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Total1790",
+      "alias": "Total1790",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Enslaved1790",
+      "alias": "Enslaved1790",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Free1790",
+      "alias": "Free1790",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "PctEnslaved",
+      "alias": "PctEnslaved",
+      "type": "esriFieldTypeSingle",
+      "domain": false
+     },
+     {
+      "name": "Counted",
+      "alias": "Counted",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "HouseSeats",
+      "alias": "HouseSeats",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "SeatsIfAll",
+      "alias": "SeatsIfAll",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "SeatsIfNone",
+      "alias": "SeatsIfNone",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Senators",
+      "alias": "Senators",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Note",
+      "alias": "Note",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SourceURL",
+      "alias": "SourceURL",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Source",
+      "alias": "Source",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "ObjectId",
+      "alias": "ObjectId",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "Shape__Area",
+      "alias": "Shape__Area",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "43ae0255f8ed46d5973871603f5956dd",
+    "count": 15,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "State",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.2
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false,
+   "popupNamesClass": false
+  },
+  {
+   "path": "House seats in 1793",
+   "title": "House seats in 1793",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": false,
+   "onAtStart": false,
+   "opacity": 1,
+   "itemId": "43ae0255f8ed46d5973871603f5956dd",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+   "disablePopup": false,
+   "popup": {
+    "title": "{State} in 1790",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "Counted",
+     "Enslaved1790",
+     "HouseSeats",
+     "Note",
+     "PctEnslaved",
+     "SeatsIfAll",
+     "SeatsIfNone",
+     "Senators",
+     "SourceURL",
+     "State",
+     "Total1790"
+    ]
+   },
+   "popupFrom": "map",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "classBreaks",
+    "field": "HouseSeats",
+    "valueExpression": false,
+    "classes": [
+     {
+      "max": 2,
+      "label": "1 to 2 seats",
+      "symbol": {
+       "type": "esriSFS",
+       "style": "esriSFSSolid",
+       "color": [
+        239,
+        243,
+        255,
+        220
+       ],
+       "outline": {
+        "color": [
+         90,
+         90,
+         90,
+         255
+        ],
+        "width": 0.8,
+        "style": "esriSLSSolid"
+       }
+      }
+     },
+     {
+      "max": 6,
+      "label": "4 to 6 seats",
+      "symbol": {
+       "type": "esriSFS",
+       "style": "esriSFSSolid",
+       "color": [
+        189,
+        215,
+        231,
+        220
+       ],
+       "outline": {
+        "color": [
+         90,
+         90,
+         90,
+         255
+        ],
+        "width": 0.8,
+        "style": "esriSLSSolid"
+       }
+      }
+     },
+     {
+      "max": 10,
+      "label": "7 to 10 seats",
+      "symbol": {
+       "type": "esriSFS",
+       "style": "esriSFSSolid",
+       "color": [
+        107,
+        174,
+        214,
+        220
+       ],
+       "outline": {
+        "color": [
+         90,
+         90,
+         90,
+         255
+        ],
+        "width": 0.8,
+        "style": "esriSLSSolid"
+       }
+      }
+     },
+     {
+      "max": 19,
+      "label": "13 to 19 seats",
+      "symbol": {
+       "type": "esriSFS",
+       "style": "esriSFSSolid",
+       "color": [
+        33,
+        113,
+        181,
+        220
+       ],
+       "outline": {
+        "color": [
+         90,
+         90,
+         90,
+         255
+        ],
+        "width": 0.8,
+        "style": "esriSLSSolid"
+       }
+      }
+     }
+    ]
+   },
+   "labelsInMap": true,
+   "item": {
+    "id": "43ae0255f8ed46d5973871603f5956dd",
+    "title": "Population and House seats, 1790 to 1793",
+    "type": "Feature Service",
+    "owner": "GIS-4-Schools",
+    "access": "public",
+    "snippet": "Each state's 1790 population, free and enslaved, and its House seats under the act of 14 April 1792.",
+    "description": "<p>House seats under the apportionment act of 14 April 1792 (105 seats, one for every 33,000 people counted under the three-fifths clause), with the seats each state would have had if enslaved people had been counted in full (<b>SeatsIfAll</b>) or not at all (<b>SeatsIfNone</b>).</p><p>The 1790 census figures are as tabulated in Wikipedia's article on the 1790 census, from the Census Bureau's <i>Heads of Families</i> volumes. Under the act's rule they reproduce every state's seats, which checks them.</p><p>Today's state outlines (Natural Earth, public domain), with Maine shown as part of Massachusetts and West Virginia as part of Virginia.</p><p><i>Version 1.0 (14 October 2026).</i></p>",
+    "tags": [
+     "MapMaker",
+     "US History",
+     "grade 8",
+     "November 2026",
+     "Constitution",
+     "three-fifths clause",
+     "apportionment",
+     "1790 census"
+    ],
+    "accessInformation": "Seats: National Archives. Ratio: U.S. Census Bureau. 1790 census figures: Wikipedia (from Census Bureau volumes). Outlines: Natural Earth (public domain).",
+    "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
+    "created": 1791982317000,
+    "modified": 1791988593000,
+    "numViews": 65,
+    "thumbnail": null,
+    "contentStatus": null,
+    "extent": [
+     [
+      -89.5779,
+      30.3692
+     ],
+     [
+      -66.9773,
+      47.45969999999999
+     ]
+    ],
+    "descriptionChars": 639
+   },
+   "service": {
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+    "name": "MM_US_House_Seats_1793_polygons",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       76,
+       129,
+       205,
+       191
+      ],
+      "outline": {
+       "color": [
+        0,
+        0,
+        0,
+        255
+       ],
+       "width": 0.75,
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "State",
+      "alias": "State",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Abbr",
+      "alias": "Abbr",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Total1790",
+      "alias": "Total1790",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Enslaved1790",
+      "alias": "Enslaved1790",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Free1790",
+      "alias": "Free1790",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "PctEnslaved",
+      "alias": "PctEnslaved",
+      "type": "esriFieldTypeSingle",
+      "domain": false
+     },
+     {
+      "name": "Counted",
+      "alias": "Counted",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "HouseSeats",
+      "alias": "HouseSeats",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "SeatsIfAll",
+      "alias": "SeatsIfAll",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "SeatsIfNone",
+      "alias": "SeatsIfNone",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Senators",
+      "alias": "Senators",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Note",
+      "alias": "Note",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SourceURL",
+      "alias": "SourceURL",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Source",
+      "alias": "Source",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "ObjectId",
+      "alias": "ObjectId",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "Shape__Area",
+      "alias": "Shape__Area",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "43ae0255f8ed46d5973871603f5956dd",
+    "count": 15,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "State",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.0
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": true,
+   "popupNamesClass": true
+  },
+  {
+   "path": "House seats today (2020 apportionment)",
+   "title": "House seats today (2020 apportionment)",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": false,
+   "onAtStart": false,
+   "opacity": 1,
+   "itemId": "0b851ea28ac3470e9f882678470c4f83",
+   "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/2020_Census_State_Apportionment/FeatureServer/0",
+   "disablePopup": false,
+   "popup": {
+    "title": "U.S. House of Representatives Seats: {NAME}",
+    "fieldsShown": [
+     {
+      "field": "NAME",
+      "label": "State Name"
+     },
+     {
+      "field": "Resident_Change_2010to2020",
+      "label": "Change in Resident Population, 2010 to 2020"
+     },
+     {
+      "field": "Seats_Change_2000to2010",
+      "label": "Change in Seats in the U.S. House of Representatives, 2000 to 2010"
+     },
+     {
+      "field": "Seats_Change_2010to2020",
+      "label": "Change in Seats in the U.S. House of Representatives, 2010 to 2020"
+     },
+     {
+      "field": "TotalPopChange_2010to2020",
+      "label": "Change in Total Population, 2010 to 2020"
+     },
+     {
+      "field": "Overseas_Pop_2010",
+      "label": "Overseas Population, 2010"
+     },
+     {
+      "field": "Overseas_Pop_2020",
+      "label": "Overseas Population, 2020"
+     },
+     {
+      "field": "Resident_Pct_Change_2010to2020",
+      "label": "Percent Change in Resident Population, 2010 to 2020"
+     },
+     {
+      "field": "Total_Pct_Change_2010to2020",
+      "label": "Percent Change in Total Population, 2010 to 2020"
+     },
+     {
+      "field": "Resident_Pop_2010",
+      "label": "Resident Population, 2010"
+     },
+     {
+      "field": "Resident_Pop_2020",
+      "label": "Resident Population, 2020"
+     },
+     {
+      "field": "Seats_2010",
+      "label": "Seats in the U.S. House of Representatives, 2010"
+     },
+     {
+      "field": "Seats_2020",
+      "label": "Seats in the U.S. House of Representatives, 2020"
+     },
+     {
+      "field": "Total_Pop_2010",
+      "label": "Total Population, 2010"
+     },
+     {
+      "field": "Total_Pop_2020",
+      "label": "Total Population, 2020"
+     }
+    ],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "fields"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": []
+   },
+   "popupFrom": "layer item",
+   "minScale": null,
+   "maxScale": 877883.599075,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "item": {
+    "id": "0b851ea28ac3470e9f882678470c4f83",
+    "title": "United States Apportionment 2020",
+    "type": "Feature Service",
+    "owner": "mm.atlas",
+    "access": "public",
+    "snippet": "The process to determine how many representatives each state receives in the House of Representatives is called apportionment.",
+    "description": "<p style='margin-top:0pt; margin-bottom:0pt; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><span style='font-family:Hind, sans-serif; color:rgb(0, 0, 0); background-color:transparent; font-variant-numeric:normal; font-variant-east-asian:normal;'><font size='4'>When the founders of the United States established the government, they wanted to ensure power was separated and that there was a system of checks and balances. Therefore, the U.S. has three branches of <a href='https://www.nationalgeographic.org/article/roles-state-and-federal-governments/' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' target='_blank' rel='nofollow ugc noopener noreferrer'>government</a>: the <a href='https://www.nationalgeographic.org/encyclopedia/executive-branch/' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' target='_blank' rel='nofollow ugc noopener noreferrer'>executive branch</a> (to carry out <a href='https://www.nationalgeographic.org/encyclopedia/rule-law/' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' target='_blank' rel='nofollow ugc noopener noreferrer'>laws</a>), the judicial branch (to examine laws), and the legislative branch (<a href='https://www.nationalgeographic.org/interactive/lawcraft/' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' target='_blank' rel='nofollow ugc noopener noreferrer'>to create the laws</a>). </font></span></p><font size='4'><br /></font><p style='margin-top:0pt; margin-bottom:0pt; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><font size='4'><span style='font-family:Hind, sans-serif; color:rgb(0, 0, 0); background-color:transparent; font-variant-numeric:normal; font-variant-east-asian:normal;'><span style='font-family:inherit;'>The executive branch is led by the </span><a href='https://www.nationalgeographic.org/media/you-decide-presidential-decisions/' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' target='_blank' rel='nofollow ugc noopener noreferrer'>president</a>,<span style='font-family:inherit;'> who is </span><a href='https://www.nationalgeographic.org/article/why-voting-important/' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' target='_blank' rel='nofollow ugc noopener noreferrer'>elected</a><span style='font-family:inherit;'> </span><a href='https://www.nationalgeographic.org/encyclopedia/voter/' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' target='_blank' rel='nofollow ugc noopener noreferrer'>by</a><span style='font-family:inherit;'> </span><a href='https://www.nationalgeographic.org/article/voting-rights-throughout-history/' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' target='_blank' rel='nofollow ugc noopener noreferrer'>U.S. citizens 18 years and older</a><span style='font-family:inherit;'> every four years. The </span><a href='https://www.nationalgeographic.org/media/documenting-the-president/' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' target='_blank' rel='nofollow ugc noopener noreferrer'>president</a><span style='font-family:Roboto, RobotoDraft, Helvetica, Arial, sans-serif;'> </span><font style='font-family:inherit;'><span style='font-family:Roboto, RobotoDraft, Helvetica, Arial, sans-serif;'>nominates justices to the Supreme Court to fill vacancies when a justice steps down or dies. The Supreme Court has had nine justices since 1869. The president also nominates court of appeals judges and district court judges. All nominated judges are confirmed by the United States Senate, as stated in the Constitution of the United States</span>.</font></span><span style='font-family:Hind, sans-serif; color:rgb(0, 0, 0); background-color:transparent; font-variant-numeric:normal; font-variant-east-asian:normal;'> The president and members of <a href='https://www.nationalgeographic.org/encyclopedia/congress/' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' target='_blank' rel='nofollow ugc noopener noreferrer'>Congress</a>, or the legislative branch, both serve limited terms. Congress is composed of two parts: the Senate and the House of Representatives. The Senate is composed of 100 senators, two from each of the 50 states. U.S. <a href='https://www.nationalgeographic.org/encyclopedia/territory/' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' target='_blank' rel='nofollow ugc noopener noreferrer'>territories</a> and the District of Columbia are not represented in the Senate, as they are not considered states. Each senator serves a term of six years. The House of Representatives has 435 members determined by the population of each state. Territories are not represented in the House, but the District of Columbia has an at-large representative who may not vote on issues being considered. These members each serve a term of two years.</span></font></p><font size='4'><br /></font><p style='margin-top:0pt; margin-bottom:0pt; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><font size='4'><span style='font-family:Hind, sans-serif; color:rgb(0, 0, 0); background-color:transparent; font-variant-numeric:normal; font-variant-east-asian:normal;'>The process to determine how many representatives each state receives is called apportionment. Every 10 years, since 1790, the United States conducts a <a href='https://www.nationalgeographic.org/encyclopedia/us-census/' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' target='_blank' rel='nofollow ugc noopener noreferrer'>census</a> to tally the total number of residents (<a href='https://www.nationalgeographic.org/encyclopedia/citizenship-united-states/' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' target='_blank' rel='nofollow ugc noopener noreferrer'>citizens</a>, <a href='https://www.nationalgeographic.org/media/path-us-citizenship/' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' target='_blank' rel='nofollow ugc noopener noreferrer'>noncitizens</a>, deployed members of the U.S. <a href='https://www.nationalgeographic.org/encyclopedia/military/' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' target='_blank' rel='nofollow ugc noopener noreferrer'>Armed Forces</a>, and federal civilian employees stationed abroad) in each state and gather information about them and the <a href='https://www.nationalgeographic.org/encyclopedia/nation/' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' target='_blank' rel='nofollow ugc noopener noreferrer'>nation’s</a> economy. The <a href='https://www.archives.gov/founding-docs/constitution-transcript' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' target='_blank' rel='nofollow ugc noopener noreferrer'>U.S. Constitution</a> establishes that each state must have at least one representative. The remaining 385 seats are then divided based on the </span><a href='https://www.census.gov/topics/public-sector/congressional-apportionment/about/computing.html' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'><span style='font-family:Hind, sans-serif; color:rgb(17, 85, 204); background-color:transparent; font-variant-numeric:normal; font-variant-east-asian:normal; text-decoration-line:underline;'>method of equal proportions</span></a><span style='font-family:Hind, sans-serif; color:rgb(0, 0, 0); background-color:transparent; font-variant-numeric:normal; font-variant-east-asian:normal;'>, which was adopted by Congress in 1941. Title 13 of the U.S. Code requires the apportionment calculation must be completed and delivered to the president within nine months of the completion of the census.</span></font></p><font size='4'><br /></font><p style='margin-top:0pt; margin-bottom:0pt; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><span style='font-family:Hind, sans-serif; color:rgb(0, 0, 0); background-color:transparent; font-variant-numeric:normal; font-variant-east-asian:normal;'><font size='4'>This map layer was created with data from the <a href='https://www.census.gov/data/tables/2020/dec/2020-apportionment-data.html' style='color:rgb(0, 121, 193); text-decoration-line:none; font-family:inherit;' target='_blank' rel='nofollow ugc noopener noreferrer'>United States Census Bureau 2020 census</a>. The map shows which states have gained or lost representatives since the last apportionment completed in 2010. </font></span></p><font size='4'><br /></font><p style='margin-top:0pt; margin-bottom:0pt; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><span style='font-family:Hind, sans-serif; color:rgb(0, 0, 0); background-color:transparent; font-variant-numeric:normal; font-variant-east-asian:normal;'><font size='4'>Did the state you live in have a change in the number of people representing you in the House of Representatives? Do you know who your representative is?</font></span></p>",
+    "tags": [
+     "Census 2020",
+     "US Census Bureau",
+     "census",
+     "apportionment",
+     "policy",
+     "House of Representatives",
+     "population",
+     "school",
+     "education",
+     "learn",
+     "sourceId-0f0e62e20cc440a7b2fb926245ced9eb",
+     "copied with ago-assistant"
+    ],
+    "accessInformation": "U.S. Census Bureau",
+    "licenseInfo": "<img src='https://downloads.esri.com/blogs/arcgisonline/esrilogo_new.png' style='max-width:100%; height:auto; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;' /><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'> This work is licensed under the Esri Master License Agreement.</span><br /><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><a href='https://goto.arcgis.com/termsofuse/viewsummary' style='color:rgb(0, 121, 193); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Summary</b></a> | <a href='https://goto.arcgis.com/termsofuse/viewtermsofuse' style='color:rgb(0, 121, 193); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Terms of Use</b></a></div>",
+    "created": 1687552780000,
+    "modified": 1741172796000,
+    "numViews": 16760,
+    "thumbnail": "thumbnail/ago_downloaded.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -170.97357187499674,
+      16.54157220730177
+     ],
+     [
+      -50.49493749994178,
+      72.94133328205857
+     ]
+    ],
+    "descriptionChars": 2616
+   },
+   "service": {
+    "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/2020_Census_State_Apportionment/FeatureServer/0",
+    "name": "States 2020 Apportionment - U.S. House of Representatives Seats",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "uniqueValue",
+     "field": "Seats_Change_2010to2020",
+     "valueExpression": false,
+     "classes": [
+      {
+       "value": "2",
+       "label": "+2 Seats",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         10,
+         110,
+         85,
+         255
+        ],
+        "outline": {
+         "color": [
+          173,
+          173,
+          173,
+          36
+         ],
+         "width": 0.75,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "1",
+       "label": "+1 Seat",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         16,
+         191,
+         150,
+         255
+        ],
+        "outline": {
+         "color": [
+          173,
+          173,
+          173,
+          36
+         ],
+         "width": 0.75,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "0",
+       "label": "No change",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         235,
+         235,
+         235,
+         255
+        ],
+        "outline": {
+         "color": [
+          173,
+          173,
+          173,
+          36
+         ],
+         "width": 0.75,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "-1",
+       "label": "-1 Seat",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         255,
+         61,
+         13,
+         255
+        ],
+        "outline": {
+         "color": [
+          173,
+          173,
+          173,
+          36
+         ],
+         "width": 0.75,
+         "style": "esriSLSSolid"
+        }
+       }
+      }
+     ],
+     "default": "No Seats (DC/PR)"
+    },
+    "labels": true,
+    "fields": [
+     {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "NAME",
+      "alias": "State Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "STUSPS",
+      "alias": "State Abbreviation",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "GEO_ID",
+      "alias": "GEOID FIPS Code",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "STATENS",
+      "alias": "STATENS",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "GEOID",
+      "alias": "GEOID FIPS Code",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Total_Pop_2020",
+      "alias": "Total Population, 2020",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Seats_2020",
+      "alias": "Seats in the U.S. House of Representatives, 2020",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Resident_Pop_2020",
+      "alias": "Resident Population, 2020",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Overseas_Pop_2020",
+      "alias": "Overseas Population, 2020",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Total_Pop_2010",
+      "alias": "Total Population, 2010",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Seats_2010",
+      "alias": "Seats in the U.S. House of Representatives, 2010",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Resident_Pop_2010",
+      "alias": "Resident Population, 2010",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Overseas_Pop_2010",
+      "alias": "Overseas Population, 2010",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "TotalPopChange_2010to2020",
+      "alias": "Change in Total Population, 2010 to 2020",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Total_Pct_Change_2010to2020",
+      "alias": "Percent Change in Total Population, 2010 to 2020",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Seats_Change_2010to2020",
+      "alias": "Change in Seats in the U.S. House of Representatives, 2010 to 2020",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Seats_Change_2000to2010",
+      "alias": "Change in Seats in the U.S. House of Representatives, 2000 to 2010",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Resident_Change_2010to2020",
+      "alias": "Change in Resident Population, 2010 to 2020",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Resident_Pct_Change_2010to2020",
+      "alias": "Percent Change in Resident Population, 2010 to 2020",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Area",
+      "alias": "Shape__Area",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "d1e448bf3dde42338cfc97b85176b36e",
+    "count": 52,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "NAME",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.0
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": true,
+   "popupNamesClass": true
+  },
+  {
+   "path": "Ratifying the Constitution, 1787–1791",
+   "title": "Ratifying the Constitution, 1787–1791",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": false,
+   "onAtStart": false,
+   "opacity": 1,
+   "itemId": "bf397ebfe5054286809672ca62e11174",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Ratification_1787_1791/FeatureServer/0",
+   "disablePopup": false,
+   "popup": {
+    "title": "{State}: {Status}",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "Meeting",
+     "No",
+     "Note",
+     "PlacesURL",
+     "Result",
+     "SourceURL",
+     "VoteDate",
+     "Yes"
+    ]
+   },
+   "popupFrom": "map",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "pieChart",
+    "field": null,
+    "valueExpression": false,
+    "visualVariables": [
+     "sizeInfo"
+    ]
+   },
+   "labelsInMap": true,
+   "item": {
+    "id": "bf397ebfe5054286809672ca62e11174",
+    "title": "Ratifying the Constitution, 1787 to 1791",
+    "type": "Feature Service",
+    "owner": "GIS-4-Schools",
+    "access": "public",
+    "snippet": "Where each state's ratifying convention met, when it voted and how close the vote was.",
+    "description": "<p>One point per ratifying convention at the town where it met, with the vote, the date and the building. North Carolina's first convention (Hillsborough, 1788), which voted against ratifying, has its own point.</p><p><i>Version 1.0 (14 October 2026).</i></p>",
+    "tags": [
+     "MapMaker",
+     "US History",
+     "grade 8",
+     "November 2026",
+     "Constitution",
+     "ratification",
+     "Federalists",
+     "Anti-Federalists"
+    ],
+    "accessInformation": "Votes, dates and meeting places: Center for the Study of the American Constitution, University of Wisconsin-Madison (facts, cited). Town locations: Natural Earth and Wikipedia.",
+    "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
+    "created": 1791982339000,
+    "modified": 1791988605000,
+    "numViews": 58,
+    "thumbnail": null,
+    "contentStatus": null,
+    "extent": [
+     [
+      -81.985,
+      32.7924
+     ],
+     [
+      -71.072,
+      43.208099999999995
+     ]
+    ],
+    "descriptionChars": 238
+   },
+   "service": {
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Ratification_1787_1791/FeatureServer/0",
+    "name": "MM_US_Ratification_1787_1791_points",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPoint",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriPMS",
+      "style": null,
+      "width": 15,
+      "picture": true
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "State",
+      "alias": "State",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Ord",
+      "alias": "Ord",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Status",
+      "alias": "Status",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Result",
+      "alias": "Result",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "VoteDate",
+      "alias": "VoteDate",
+      "type": "esriFieldTypeDate",
+      "domain": false
+     },
+     {
+      "name": "VoteYear",
+      "alias": "VoteYear",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Yes",
+      "alias": "Yes",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "No",
+      "alias": "No",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Total",
+      "alias": "Total",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Vote",
+      "alias": "Vote",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Meeting",
+      "alias": "Meeting",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Town",
+      "alias": "Town",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Note",
+      "alias": "Note",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Label",
+      "alias": "Label",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Source",
+      "alias": "Source",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SourceURL",
+      "alias": "SourceURL",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "PlacesURL",
+      "alias": "PlacesURL",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "ObjectId",
+      "alias": "ObjectId",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "bf397ebfe5054286809672ca62e11174",
+    "count": 15,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "State",
+     "geometryCompared": "geometry"
+    },
+    "seconds": 0.2
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false,
+   "popupNamesClass": false
+  }
+ ],
+ "findings": []
+}

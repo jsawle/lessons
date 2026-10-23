@@ -1,0 +1,2108 @@
+{
+ "tool": "Map audit 1.2",
+ "lesson": "revolutionary-battles-1775-1776",
+ "webmapId": "bda07736a1b9425ea19fdde282088bd6",
+ "item": {
+  "id": "bda07736a1b9425ea19fdde282088bd6",
+  "title": "1775-1776 Revolutionary Battles",
+  "type": "Web Map",
+  "owner": "mm.atlas",
+  "access": "public",
+  "snippet": "Explore how the geography of North America shaped the first phase (1775-1776) of the American Revolution and why location mattered in the fight for independence. ",
+  "description": "<p style='line-height:1.38; margin-bottom:0pt; margin-top:0pt;'><span style='background-color:transparent; color:#000000; font-family:Arial; font-size:18px;'><span style='font-style:normal; font-variant:normal; font-weight:400; text-decoration:none;'>This map highlights key events from the opening phase of the American Revolution, helping understand how the conflict began and spread geographically. The included layers: Port Cities, Battles, Battlefields, Colonies, and&nbsp;</span></span></p><p style='line-height:1.38; margin-bottom:0pt; margin-top:0pt;'>&nbsp;</p><p style='line-height:1.38; margin-bottom:0pt; margin-top:0pt;'><span style='background-color:transparent; color:#000000; font-family:Arial; font-size:18px;'><span style='font-style:normal; font-variant:normal; font-weight:400; text-decoration:none;'>The map popup notes trace the war from the first shots at Lexington and Concord through the major battles around Boston, New York, and New Jersey. These notes emphasize how roads, harbors, rivers, and major cities shaped military decisions and outcomes as both sides fought to gain early control.&nbsp;</span></span></p><p style='line-height:1.38; margin-bottom:0pt; margin-top:0pt;'>&nbsp;</p><p style='line-height:1.38; margin-bottom:0pt; margin-top:0pt;'><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:Arial; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:normal; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>This map and </span></span><a style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration:none; text-indent:0px; text-transform:none; word-spacing:0px;' target='_blank' href='https://www.arcgis.com/apps/instant/portfolio/index.html?appid=24db729176024e848356c086c8c29c22' rel='nofollow ugc noopener noreferrer'><span style='font-family:Arial; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-weight:normal; line-height:1.5;'>its accompanying lesson</span></span></a><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:Arial; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:normal; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'> explore</span></span><span style='background-color:transparent; color:#000000; font-family:Arial; font-size:18px;'><span style='font-style:normal; font-variant:normal; font-weight:400; text-decoration:none;'> how geography shaped the first phase of the American Revolution and why location mattered in the fight for independence.</span></span></p>",
+  "tags": [
+   "ports",
+   "Revolutionary War",
+   "American Revolution",
+   "colony",
+   "1763 Proclamation",
+   "learn",
+   "school",
+   "education",
+   "MapMaker"
+  ],
+  "accessInformation": "The National Geographic Society",
+  "licenseInfo": "<p><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:large;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Copyright&nbsp;</span></span><a style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:large; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration:none; text-indent:0px; text-transform:none; word-spacing:0px;' target='_blank' href='https://www.nationalgeographic.org/terms-of-service/' rel='nofollow ugc noopener noreferrer'>National Geographic Society</a></p>",
+  "created": 1779490715000,
+  "modified": 1787773554000,
+  "numViews": 2544,
+  "thumbnail": "thumbnail/thumbnail1787773552250.png",
+  "contentStatus": null,
+  "extent": [
+   [
+    -78.52637617466826,
+    36.89171133659571
+   ],
+   [
+    -62.92579023717241,
+    47.274577427036114
+   ]
+  ],
+  "descriptionChars": 706
+ },
+ "basemap": {
+  "title": "Human Geography",
+  "layers": [
+   {
+    "title": "World Hillshade",
+    "type": "ArcGISTiledMapServiceLayer",
+    "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+    "itemId": "1b243539f4514b6ba35e7d995890db1d"
+   },
+   {
+    "title": "Environment Base Minus Populated Places",
+    "type": "VectorTileLayer",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/cadafce313e14f03a7c022045d339798/resources/styles/root.json",
+    "itemId": "cadafce313e14f03a7c022045d339798"
+   },
+   {
+    "title": "Modern Antique (no Labels)",
+    "type": "VectorTileLayer",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json",
+    "itemId": "545f2e839f624600bbb092c3ad998bb8"
+   },
+   {
+    "title": "Environment Surface Water and Label",
+    "type": "VectorTileLayer",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/6d188135dc814d4ea254440a3dd844df/resources/styles/root.json",
+    "itemId": "6d188135dc814d4ea254440a3dd844df"
+   }
+  ]
+ },
+ "opening": {
+  "extent": {
+   "spatialReference": {
+    "latestWkid": 3857,
+    "wkid": 102100
+   },
+   "xmin": -8741516.20960512,
+   "ymin": 4424023.473473777,
+   "xmax": -7004866.926966378,
+   "ymax": 5987007.827848646
+  },
+  "scale": 8751618
+ },
+ "bookmarks": [
+  "Massachusetts",
+  "New York/New Jersey"
+ ],
+ "applicationProperties": null,
+ "layers": [
+  {
+   "path": "1763 Proclamation Line",
+   "title": "1763 Proclamation Line",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "onAtStart": true,
+   "opacity": 0.5,
+   "itemId": "6fd5fb24db79436e9b57f3b35a618802",
+   "url": "https://services3.arcgis.com/AdYB7LvDmN7hzWUb/arcgis/rest/services/Proclamation_of_1763/FeatureServer/1",
+   "disablePopup": true,
+   "popup": {
+    "title": "{expression/displayExp}",
+    "fieldsShown": [
+     {
+      "field": "OBJECTID",
+      "label": "OBJECTID"
+     },
+     {
+      "field": "Shape__Length",
+      "label": "SHAPE__Length"
+     },
+     {
+      "field": "Definition",
+      "label": "Definition"
+     },
+     {
+      "field": "Source",
+      "label": "Source"
+     },
+     {
+      "field": "Symbology",
+      "label": "Symbology"
+     }
+    ],
+    "fieldLabelsAreNames": [
+     "OBJECTID"
+    ],
+    "elements": [
+     "fields"
+    ],
+    "images": [],
+    "expressions": [
+     "Display Expression"
+    ],
+    "fieldsInText": []
+   },
+   "popupFrom": "map",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": "Symbology = 'solid'",
+   "rendererInMap": {
+    "type": "simple",
+    "field": null,
+    "valueExpression": false,
+    "symbol": {
+     "type": "esriSLS",
+     "style": "esriSLSSolid",
+     "color": [
+      89,
+      89,
+      54,
+      255
+     ],
+     "width": 3
+    },
+    "label": null
+   },
+   "item": {
+    "id": "6fd5fb24db79436e9b57f3b35a618802",
+    "title": "1763 Proclamation Line",
+    "type": "Feature Service",
+    "owner": "egoldfinger_natgeo",
+    "access": "public",
+    "snippet": "This line was a legal division between British colonial settlement and Indigenous land. In 1763, King George III of Britain declared that British colonists should not settle in lands west of the Appalachian Mountains. The proclamation was supposed to end conflicts between colonists and indigenous groups on lands claimed by the British.",
+    "description": "<p>This map shows a line drawn by British King George III in 1763 to mark a division between the British colonial settlement and land claimed by the British, but occupied by Indigenous Native American groups.</p><p>After the Seven Years War, which was called the <a target='_blank' href='https://education.nationalgeographic.org/resource/native-americans-colonial-america/' rel='nofollow ugc noopener noreferrer'>French and Indian War</a> in North America, the British claimed almost all of the land in North America East of the Mississippi River. This was part of the agreement in the 1763 Treaty of Paris with France and Spain.</p><p>The British claimed the land, but that did not mean they had control over the land. Many Indigenous groups lived on land claimed by Britain. Some of these groups had helped the British fight against France in the French and Indian War. Other Indigenous groups had been allied with France.</p><p>Many settlers in the British Colonies in the Eastern United States wanted to move West to the new lands claimed by Britain between the Appalachian Mountains and Mississippi River.</p><p>Many Indigenous groups in this area resisted the new British rule. Some had traded with the French and had fought against the British in the war. Others did not want new settlers from the British colonies settling their lands. Indigenous Native Americans, an Ottawa tribal chief named Pontiac, attacked British forts.</p><p>To try to end this conflict, the British King George III issued the Proclamation of 1763, closing land west of the Appalachian mountains to settlement. The proclamation did not end the conflict and angered colonial settlers.</p><p>Data:<i> Historical Atlas of the United States.</i> National Geographic Society, 1988.</p>",
+    "tags": [
+     "MapMaker",
+     "1763",
+     "United States history",
+     "Education"
+    ],
+    "accessInformation": "National Geographic Society, Virginia Geographic Alliance.",
+    "licenseInfo": "<p><span style='background-color:rgb(255,255,255); color:rgb(76,76,76); font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:18px;'><span style='box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5 !important; margin:0px; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Copyright&nbsp;</span></span><a style='background-color:rgb(255, 255, 255); box-sizing:border-box; color:rgb(0, 97, 155); font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:large; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5 !important; margin:0px; text-align:start; text-decoration-color:initial !important; text-decoration-line:none; text-decoration-style:initial !important; text-indent:0px; text-transform:none; word-spacing:0px;' target='_blank' href='https://www.nationalgeographic.org/terms-of-service/' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>National Geographic Society</span></a><span style='font-size:18px;'> and Virginia Geographic Alliance.</span></p>",
+    "created": 1778774380000,
+    "modified": 1783541283000,
+    "numViews": 42225,
+    "thumbnail": "thumbnail/thumbnail1783541282170.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -84.44300826938385,
+      30.35573570379165
+     ],
+     [
+      -66.78057663958694,
+      48.17269805163195
+     ]
+    ],
+    "descriptionChars": 1552
+   },
+   "service": {
+    "url": "https://services3.arcgis.com/AdYB7LvDmN7hzWUb/arcgis/rest/services/Proclamation_of_1763/FeatureServer/1",
+    "name": "Proclamation_of_1763",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolyline",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "uniqueValue",
+     "field": "Symbology",
+     "valueExpression": false,
+     "classes": [
+      {
+       "value": "dashed",
+       "label": "dashed",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSDash",
+        "color": [
+         169,
+         0,
+         230,
+         255
+        ],
+        "width": 2
+       }
+      },
+      {
+       "value": "solid",
+       "label": "solid",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         169,
+         0,
+         230,
+         255
+        ],
+        "width": 2
+       }
+      }
+     ],
+     "default": "<all other values>"
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "Definition",
+      "alias": "Definition",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Source",
+      "alias": "Source",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Symbology",
+      "alias": "Symbology",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "6fd5fb24db79436e9b57f3b35a618802",
+    "filter": "Symbology = 'solid'",
+    "count": 6,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": null,
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.5
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false,
+   "popupNamesClass": false
+  },
+  {
+   "path": "Thirteen British Colonies",
+   "title": "Thirteen British Colonies",
+   "layerType": "GroupLayer",
+   "visible": true,
+   "onAtStart": true,
+   "opacity": 1,
+   "itemId": "af8a9da86f1c4d6184b4aece52b2f616",
+   "url": null,
+   "disablePopup": false,
+   "popup": null,
+   "popupFrom": null,
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "item": {
+    "id": "af8a9da86f1c4d6184b4aece52b2f616",
+    "title": "Thirteen British Colonies",
+    "type": "Group Layer",
+    "owner": "mm.sappleton",
+    "access": "public",
+    "snippet": "This National Geographic Society group layer shows the 1763 borders of the 13 British North American colonies that would become the United States.",
+    "description": "<p style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px 0px 1rem; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><span style='font-family:inherit; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'>This map layer shows the 1763 borders of the 13 British North American colonies that would become the United States.</span></span></p><p style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px 0px 1rem; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><span style='font-family:inherit; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'>At the end of the Seven Years' War, which was called the </span></span><a style='border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:inherit; line-height:1.5; text-decoration:none;' target='_blank' href='https://education.nationalgeographic.org/resource/native-americans-colonial-america/' rel='nofollow ugc noopener noreferrer'><span style='font-family:inherit; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'>French and Indian War</span></span></a><span style='font-family:inherit; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'> in North America, the British claimed almost all of the land in North America East of the Mississippi River. This was part of the agreement in the 1763 Treaty of Paris with France and Spain.</span></span></p><p style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px 0px 1rem; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><span style='font-family:inherit; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'>The colonies were founded at different times during the 17th and 18th centuries. By 1763, each colony had slightly different government structures, but all were part of the British claims in North America and were ruled by the British government.</span></span></p><p style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px 0px 1rem; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><span style='font-family:inherit; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'><u>DataCitation</u>:</span><i><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'>&nbsp;</span></i></span></p><p style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px 0px 1rem; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><span style='font-family:inherit; font-size:18px;'><i><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'>Historical Atlas of the United States.</span></i><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'> National Geographic Society, 1988.</span></span></p>",
+    "tags": [
+     "colony",
+     "colonist",
+     "America 250",
+     "Seven Years War",
+     "French and Indian War",
+     "1763 Treaty of Paris",
+     "North America",
+     "school",
+     "learn",
+     "education",
+     "MapMaker"
+    ],
+    "accessInformation": "National Geographic Society, Virginia Geographic Alliance.",
+    "licenseInfo": "<p><span style='background-color:rgb(255,255,255); color:rgb(76,76,76); font-family:inherit; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5 !important; margin:0px; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Copyright&nbsp;</span></span><a style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:large; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5 !important; margin:0px; text-align:start; text-decoration-color:initial !important; text-decoration-line:none; text-decoration-style:initial !important; text-indent:0px; text-transform:none; word-spacing:0px;' target='_blank' href='https://www.nationalgeographic.org/terms-of-service/' rel='nofollow ugc noopener noreferrer'><span style='font-family:inherit; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'>National Geographic Society</span></span></a><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'> and Virginia Geographic Alliance.</span></span></p>",
+    "created": 1780944690000,
+    "modified": 1787767048000,
+    "numViews": 3626,
+    "thumbnail": "thumbnail/thumbnail1781638342460.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -111.6446623074718,
+      28.08228865667611
+     ],
+     [
+      -91.14417402622728,
+      43.25371257995442
+     ]
+    ],
+    "descriptionChars": 723
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false,
+   "popupNamesClass": false
+  },
+  {
+   "path": "Thirteen British Colonies / Colony Area",
+   "title": "Colony Area",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "onAtStart": true,
+   "opacity": 0.5,
+   "itemId": "a0567d6b35994693be300199872b3364",
+   "url": "https://services3.arcgis.com/AdYB7LvDmN7hzWUb/arcgis/rest/services/ThirteenColonies_poly/FeatureServer/22",
+   "disablePopup": false,
+   "popup": {
+    "title": "{expression/displayExp}",
+    "fieldsShown": [
+     {
+      "field": "OBJECTID",
+      "label": "FID"
+     },
+     {
+      "field": "Shape__Length",
+      "label": "SHAPE__Length"
+     },
+     {
+      "field": "Shape__Area",
+      "label": "SHAPE__Area"
+     },
+     {
+      "field": "Colony",
+      "label": "Colony"
+     }
+    ],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "fields"
+    ],
+    "images": [],
+    "expressions": [
+     "Display Expression"
+    ],
+    "fieldsInText": []
+   },
+   "popupFrom": "map",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "simple",
+    "field": null,
+    "valueExpression": false,
+    "symbol": {
+     "type": "esriSFS",
+     "style": "esriSFSSolid",
+     "color": [
+      242,
+      238,
+      226,
+      255
+     ],
+     "outline": {
+      "color": [
+       242,
+       238,
+       226,
+       255
+      ],
+      "width": 0.998,
+      "style": "esriSLSSolid"
+     }
+    },
+    "label": null
+   },
+   "item": {
+    "id": "a0567d6b35994693be300199872b3364",
+    "title": "Colony Area",
+    "type": "Feature Service",
+    "owner": "mm.sappleton",
+    "access": "public",
+    "snippet": "This National Geographic Society layer shows the 1763 borders of the 13 British North American colonies that would become the United States.",
+    "description": "<p style='background-color:rgb(255, 255, 255); border-style:solid; border-width:0px; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px 0px 1rem; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><span style='font-size:18px;'>This map layer shows the 1763 borders of the 13 British North American colonies that would become the United States.</span></p><p style='background-color:rgb(255, 255, 255); border-style:solid; border-width:0px; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px 0px 1rem; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><span style='font-size:18px;'>At the end of the Seven Years' War, which was called the </span><a style='border-style:solid; border-width:0px; box-sizing:border-box; color:rgb(0, 97, 155); font-family:inherit; line-height:1.5; text-decoration:none;' target='_blank' href='https://education.nationalgeographic.org/resource/native-americans-colonial-america/' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>French and Indian War</span></a><span style='font-size:18px;'> in North America, the British claimed almost all of the land in North America East of the Mississippi River. This was part of the agreement in the 1763 Treaty of Paris with France and Spain.</span></p><p style='background-color:rgb(255, 255, 255); border-style:solid; border-width:0px; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px 0px 1rem; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><span style='font-size:18px;'>The colonies were founded at different times during the 17th and 18th centuries. By 1763, each colony had slightly different government structures, but all were part of the British claims in North America and were ruled by the British government.</span></p><p style='background-color:rgb(255, 255, 255); border-style:solid; border-width:0px; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px 0px 1rem; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><span style='font-size:18px;'><u>DataCitation</u>:<i>&nbsp;</i></span></p><p style='background-color:rgb(255, 255, 255); border-style:solid; border-width:0px; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px 0px 1rem; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><span style='font-size:18px;'><i>Historical Atlas of the United States.</i> National Geographic Society, 1988.</span></p>",
+    "tags": [
+     "colony",
+     "colonist",
+     "America 250",
+     "Seven Years War",
+     "French and Indian War",
+     "1763 Treaty of Paris",
+     "North Americ",
+     "school",
+     "learn",
+     "education",
+     "MapMaker"
+    ],
+    "accessInformation": "National Geographic Society, Virginia Geographic Alliance.",
+    "licenseInfo": "<p><span style='background-color:rgb(255,255,255); color:rgb(76,76,76); font-family:inherit; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5 !important; margin:0px; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Copyright&nbsp;</span></span><a style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:large; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5 !important; margin:0px; text-align:start; text-decoration-color:initial !important; text-decoration-line:none; text-decoration-style:initial !important; text-indent:0px; text-transform:none; word-spacing:0px;' target='_blank' href='https://www.nationalgeographic.org/terms-of-service/' rel='nofollow ugc noopener noreferrer'><span style='font-family:inherit; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'>National Geographic Society</span></span></a><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'> and Virginia Geographic Alliance.</span></span></p>",
+    "created": 1780944666000,
+    "modified": 1782336597000,
+    "numViews": 7924,
+    "thumbnail": "thumbnail/thumbnail1781637908644.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -84.442991,
+      30.355782
+     ],
+     [
+      -66.929055,
+      48.172698
+     ]
+    ],
+    "descriptionChars": 723
+   },
+   "service": {
+    "url": "https://services3.arcgis.com/AdYB7LvDmN7hzWUb/arcgis/rest/services/ThirteenColonies_poly/FeatureServer/22",
+    "name": "ThirteenColonies_poly",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       242,
+       238,
+       226,
+       255
+      ],
+      "outline": {
+       "color": [
+        52,
+        52,
+        52,
+        0
+       ],
+       "width": 1,
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID",
+      "alias": "FID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "Colony",
+      "alias": "Colony",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Shape__Area",
+      "alias": "Shape__Area",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "744035767542413590747bc86787284a",
+    "count": 13,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": null,
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.1
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false,
+   "popupNamesClass": false
+  },
+  {
+   "path": "Thirteen British Colonies / Colony Boundary",
+   "title": "Colony Boundary",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "onAtStart": true,
+   "opacity": null,
+   "itemId": "550be06e55c04167b21ca5e24823e1a1",
+   "url": "https://services3.arcgis.com/AdYB7LvDmN7hzWUb/arcgis/rest/services/ThirteenColonies_line/FeatureServer/19",
+   "disablePopup": false,
+   "popup": {
+    "title": "{expression/displayExp}",
+    "fieldsShown": [
+     {
+      "field": "OBJECTID",
+      "label": "FID"
+     },
+     {
+      "field": "LEFT_FID",
+      "label": "LEFT_FID"
+     },
+     {
+      "field": "RIGHT_FID",
+      "label": "RIGHT_FID"
+     },
+     {
+      "field": "Shape__Length",
+      "label": "SHAPE__Length"
+     },
+     {
+      "field": "Symbol",
+      "label": "Symbol"
+     }
+    ],
+    "fieldLabelsAreNames": [
+     "LEFT_FID",
+     "RIGHT_FID"
+    ],
+    "elements": [
+     "fields"
+    ],
+    "images": [],
+    "expressions": [
+     "Display Expression"
+    ],
+    "fieldsInText": []
+   },
+   "popupFrom": "map",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "uniqueValue",
+    "field": "Symbol",
+    "valueExpression": false,
+    "classes": [
+     {
+      "value": "Solid",
+      "label": "Colony Boundary",
+      "symbol": {
+       "type": "esriSLS",
+       "style": "esriSLSSolid",
+       "color": [
+        140,
+        140,
+        130,
+        255
+       ],
+       "width": 1.125
+      }
+     },
+     {
+      "value": "Dashed",
+      "label": "Contested Colony Boundary",
+      "symbol": {
+       "type": "esriSLS",
+       "style": "esriSLSDash",
+       "color": [
+        140,
+        140,
+        130,
+        255
+       ],
+       "width": 1.5
+      }
+     }
+    ],
+    "default": null
+   },
+   "item": {
+    "id": "550be06e55c04167b21ca5e24823e1a1",
+    "title": "Colony Boundary",
+    "type": "Feature Service",
+    "owner": "mm.sappleton",
+    "access": "public",
+    "snippet": "This National Geographic Society layer shows the 1763 borders of the 13 British North American colonies that would become the United States.",
+    "description": "<p style='background-color:rgb(255, 255, 255); border-style:solid; border-width:0px; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px 0px 1rem; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><span style='font-size:18px;'>This map layer shows the 1763 borders of the 13 British North American colonies that would become the United States.</span></p><p style='background-color:rgb(255, 255, 255); border-style:solid; border-width:0px; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px 0px 1rem; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><span style='font-size:18px;'>At the end of the Seven Years' War, which was called the </span><a style='border-style:solid; border-width:0px; box-sizing:border-box; color:rgb(0, 97, 155); font-family:inherit; line-height:1.5; text-decoration:none;' target='_blank' href='https://education.nationalgeographic.org/resource/native-americans-colonial-america/' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>French and Indian War</span></a><span style='font-size:18px;'> in North America, the British claimed almost all of the land in North America East of the Mississippi River. This was part of the agreement in the 1763 Treaty of Paris with France and Spain.</span></p><p style='background-color:rgb(255, 255, 255); border-style:solid; border-width:0px; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px 0px 1rem; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><span style='font-size:18px;'>The colonies were founded at different times during the 17th and 18th centuries. By 1763, each colony had slightly different government structures, but all were part of the British claims in North America and were ruled by the British government.</span></p><p style='background-color:rgb(255, 255, 255); border-style:solid; border-width:0px; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px 0px 1rem; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><span style='font-size:18px;'><u>DataCitation</u>:<i>&nbsp;</i></span></p><p style='background-color:rgb(255, 255, 255); border-style:solid; border-width:0px; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px 0px 1rem; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><span style='font-size:18px;'><i>Historical Atlas of the United States.</i> National Geographic Society, 1988.</span></p>",
+    "tags": [
+     "colony",
+     "colonist",
+     "America 250",
+     "Seven Years War",
+     "French and Indian War",
+     "1763 Treaty of Paris",
+     "North America",
+     "school",
+     "learn",
+     "education",
+     "MapMaker"
+    ],
+    "accessInformation": "National Geographic Society, Virginia Geographic Alliance.",
+    "licenseInfo": "<p><span style='background-color:rgb(255,255,255); color:rgb(76,76,76); font-family:inherit; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5 !important; margin:0px; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Copyright&nbsp;</span></span><a style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:large; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5 !important; margin:0px; text-align:start; text-decoration-color:initial !important; text-decoration-line:none; text-decoration-style:initial !important; text-indent:0px; text-transform:none; word-spacing:0px;' target='_blank' href='https://www.nationalgeographic.org/terms-of-service/' rel='nofollow ugc noopener noreferrer'><span style='font-family:inherit; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'>National Geographic Society</span></span></a><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'> and Virginia Geographic Alliance.</span></span></p>",
+    "created": 1780944660000,
+    "modified": 1782336544000,
+    "numViews": 7931,
+    "thumbnail": "thumbnail/thumbnail1781637593306.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -84.442991,
+      30.355782
+     ],
+     [
+      -66.929055,
+      48.172698
+     ]
+    ],
+    "descriptionChars": 723
+   },
+   "service": {
+    "url": "https://services3.arcgis.com/AdYB7LvDmN7hzWUb/arcgis/rest/services/ThirteenColonies_line/FeatureServer/19",
+    "name": "ThirteenColonies_line",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolyline",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "uniqueValue",
+     "field": "Symbol",
+     "valueExpression": false,
+     "classes": [
+      {
+       "value": "Solid",
+       "label": "Colony Boundary",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         166,
+         160,
+         149,
+         255
+        ],
+        "width": 1
+       }
+      },
+      {
+       "value": "Dashed",
+       "label": "Contested Colony Boundary",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSDash",
+        "color": [
+         166,
+         160,
+         149,
+         255
+        ],
+        "width": 1
+       }
+      }
+     ],
+     "default": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID",
+      "alias": "FID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "LEFT_FID",
+      "alias": "LEFT_FID",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "RIGHT_FID",
+      "alias": "RIGHT_FID",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Symbol",
+      "alias": "Symbol",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "669d28e46b224be2a1bac3f8094ab70a",
+    "count": 141,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [
+      [
+       "feature 8",
+       "feature 9"
+      ],
+      [
+       "feature 10",
+       "feature 11"
+      ],
+      [
+       "feature 16",
+       "feature 17"
+      ],
+      [
+       "feature 24",
+       "feature 25"
+      ],
+      [
+       "feature 29",
+       "feature 30"
+      ],
+      [
+       "feature 31",
+       "feature 32"
+      ],
+      [
+       "feature 64",
+       "feature 65"
+      ],
+      [
+       "feature 66",
+       "feature 67"
+      ],
+      [
+       "feature 68",
+       "feature 69"
+      ],
+      [
+       "feature 72",
+       "feature 73"
+      ],
+      [
+       "feature 74",
+       "feature 75"
+      ],
+      [
+       "feature 78",
+       "feature 79"
+      ],
+      [
+       "feature 80",
+       "feature 81"
+      ],
+      [
+       "feature 84",
+       "feature 85"
+      ],
+      [
+       "feature 86",
+       "feature 87"
+      ],
+      [
+       "feature 90",
+       "feature 91"
+      ],
+      [
+       "feature 92",
+       "feature 93"
+      ],
+      [
+       "feature 98",
+       "feature 99"
+      ],
+      [
+       "feature 100",
+       "feature 101"
+      ]
+     ],
+     "maybeCutOff": [],
+     "nameField": null,
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.1
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false,
+   "popupNamesClass": true
+  },
+  {
+   "path": "Revolutionary War Battlefields",
+   "title": "Revolutionary War Battlefields",
+   "layerType": "GroupLayer",
+   "visible": true,
+   "onAtStart": true,
+   "opacity": null,
+   "itemId": null,
+   "url": null,
+   "disablePopup": false,
+   "popup": null,
+   "popupFrom": null,
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "drawsAtOpening": true,
+   "rendererColourOnly": false,
+   "popupNamesClass": false
+  },
+  {
+   "path": "Revolutionary War Battlefields / Revolutionary War Battlefield Boundary",
+   "title": "Revolutionary War Battlefield Boundary",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "onAtStart": true,
+   "opacity": null,
+   "itemId": "8b2e2d492c124d1cacba0599d20639ae",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/7",
+   "disablePopup": true,
+   "popup": {
+    "title": "The Battle of {NAME}",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "Acres",
+     "NAME"
+    ]
+   },
+   "popupFrom": "map",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "simple",
+    "field": null,
+    "valueExpression": false,
+    "symbol": {
+     "type": "esriSFS",
+     "style": "esriSFSSolid",
+     "color": [
+      158,
+      155,
+      142,
+      191
+     ],
+     "outline": {
+      "color": [
+       158,
+       155,
+       142,
+       255
+      ],
+      "width": 0.75,
+      "style": "esriSLSSolid"
+     }
+    },
+    "label": null
+   },
+   "item": {
+    "id": "8b2e2d492c124d1cacba0599d20639ae",
+    "title": "United States Battlefield Boundaries",
+    "type": "Feature Service",
+    "owner": "mm.atlas",
+    "access": "public",
+    "snippet": "This map layer shows the footprint of historic U.S. battlefields from the Revolutionary War (1775-1783), the War of 1812, and the Civil War (1861-1865) that are part of the National Park Service’s American Battlefield Protection Program.",
+    "description": "<p style='margin-bottom:0in;'><span style='font-size:18px;'>A battlefield is the current or historic location where an armed conflict or military battle takes place. You might be picturing an open field with soldiers based on the name. However, a battlefield is any place where a battle has taken place. For example, the Wilderness battle (May 5<sup>th</sup> to 7<sup>th</sup>, 1864) in the state of Virginia during the Civil War was fought in dense woodland.&nbsp;</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Many people consider battlefields to be sacred sites or hallowed ground. This is because of the number of people who died there in the conflict. Many people travel to these places to learn and honor the soldiers who sacrificed there.</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>This map layer shows the historic battlefields in the United States included in the National Park Service’s </span><a target='_blank' href='https://www.nps.gov/orgs/2287/index.htm' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>American Battlefield Protection Program</span></a><span style='font-size:18px;'>. This program works to preserve and provide interpretation of these important places. By studying the past, we can learn from it and hopefully learn from the past mistakes of others.&nbsp;</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>This map layer includes battlefields from 3 wars: the Revolutionary War (1775-1783), the War of 1812, and the Civil War (1861-1865). This layer includes two parts: one, the footprint of the entire battlefield, and two, the core area, where the fighting was the heaviest. The data for this map comes from two separate reports: the </span><a target='_blank' href='https://chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https:/npshistory.com/publications/battlefield/revolutionary-war-of-1812.pdf' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'><i>Report to Congress on the Historic Preservation of Revolutionary War and War of 1812 Sites in the United States</i></span></a><span style='font-size:18px;'><i>&nbsp;</i>(2007) and the </span><a target='_blank' href='https://chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https:/npshistory.com/publications/battlefield/cwsac/report.pdf' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'><i>Civil War Sites Advisory Commission Report on the Nation’s Civil War Battlefields <span style='font-style:normal;'>(1993)</span></i></span></a><span style='font-size:18px;'>.&nbsp;</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Note: You are likely viewing this layer as part of a map on a specific war or battle. In that case, you may only see the battlefields for the specific event and not all three wars included in this dataset. This is not an error; the map maker has simply filtered the data to keep the map clear and concise.&nbsp;</span></p><p style='margin-bottom:0in;'>&nbsp;</p><h5 style='margin:7.5pt 0in 1.5pt;'><span style='color:#333333; font-family:&quot;Helvetica&quot;,sans-serif; font-size:18px;'><span style='line-height:107%;'><u>Data Citations</u></span></span></h5><p style='margin-bottom:0in;'><span style='background-color:white; color:#404040; font-family:&quot;Helvetica&quot;,sans-serif; font-size:18px;'><span style='line-height:107%;'>Martin V and Stein J. 2020. American Revolution Battlefield Boundaries and Associated Historic Properties. National Park Service. Network Drive</span></span><br /><a target='_blank' href='https://irma.nps.gov/DataStore/Reference/Profile/2279701' rel='nofollow ugc noopener noreferrer'><span style='background-color:white; color:#005EA2; font-family:&quot;Helvetica&quot;,sans-serif; font-size:18px;'><span style='line-height:107%;'>https://irma.nps.gov/DataStore/Reference/Profile/2279701</span></span></a><span style='font-size:18px;'>.</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Martin V and Stein J. 2020. War of 1812 Battlefield Boundaries and Associated Historic Properties. National Park Service. Network Drive</span><br /><a target='_blank' href='https://irma.nps.gov/DataStore/Reference/Profile/2279685' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>https://irma.nps.gov/DataStore/Reference/Profile/2279685</span></a><span style='font-size:18px;'>.</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Stein J and Martin V. 2020. Civil War Battlefield Boundaries. National Park Service. Network Drive</span><br /><a target='_blank' href='https://irma.nps.gov/DataStore/Reference/Profile/2279732' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>https://irma.nps.gov/DataStore/Reference/Profile/2279732</span></a><span style='font-size:18px;'>.</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Martin V and Stein J. 2020. Updated Civil War Battlefield Boundaries. National Park Service. Network Drive</span></p><p style='margin-bottom:0in;'><a target='_blank' href='https://irma.nps.gov/DataStore/Reference/Profile/2279739' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>https://irma.nps.gov/DataStore/Reference/Profile/2279739</span></a><span style='font-size:18px;'>.</span></p>",
+    "tags": [
+     "National Park Service",
+     "ABPP",
+     "American Battlefield Protection Program",
+     "Battlefield Boundaries",
+     "Battlefields",
+     "Boundaries",
+     "Civil War",
+     "History and Culture",
+     "National Parks",
+     "Revolutionary War",
+     "War of 1812",
+     "school",
+     "learn",
+     "education"
+    ],
+    "accessInformation": "American Battlefield Protection Program, National Park Service, Department of the Interior (ABPP-NPS)\nCultural Resources GIS (CRGIS)",
+    "licenseInfo": "<p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The </span><a target='_blank' href='https://www.nps.gov/subjects/gisandmapping/data-disclaimers.htm' rel='nofollow ugc noopener noreferrer'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>National Park Service</span></a><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'> shall not be held liable for improper or incorrect use of the cultural resource data described and/or contained herein. These data and related graphics are not legal documents and are not intended to be used as such, nor do they replace the need for consultation with appropriate state/tribal/federal historic preservation offices.</span></p><p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The information contained in these data is dynamic and may change over time. The data are not better than the original sources from which they were derived. It is the responsibility of the data user to use the data appropriately and consistently within the limitations of geospatial data in general and these data in particular, as expressed in feature-level metadata. The related graphics are intended to aid the data user in acquiring relevant data; it is not appropriate to use the related graphics as data.​​​​​​​</span></p><p style='background-color:white; line-height:normal; margin:0in 2.25pt 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>Cultural resource data sets may contain sensitive information that has been redacted or withheld from general use.&nbsp; These data require express permission from National Park Service programs, parks, or regional offices to access or use. Any unauthorized use of sensitive cultural resource data, disclosure, or distribution of that data, is prohibited unless specifically provided under the Archaeological Resources Protection Act of 1979, 16. U.S.C. 470hh, as amended, and National Park Service and Related Programs, 54&nbsp;U.S.C. 300101 (formerly known as the National Historic Preservation Act, 16 U.S.C. 470-1).</span></p><p style='background-color:white; line-height:normal; margin:0in .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The National Park Service gives no warranty, expressed or implied, as to the accuracy, reliability, or completeness of these data, which may have been generated over many years, using multiple creation methods as well as collection procedures. It is strongly recommended that these data be directly acquired from an NPS server and not indirectly through other sources, which may have changed the data in some way. Although these data have been processed successfully on a computer system at the National Park Service, no warranty expressed or implied is made regarding the utility of the data on another system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. This disclaimer applies both to individual use of the data and aggregate use with other data.</span></p>",
+    "created": 1778620484000,
+    "modified": 1783536706000,
+    "numViews": 14507,
+    "thumbnail": "thumbnail/thumbnail1781189229611.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -137.99999610599997,
+      -89.00000000000001
+     ],
+     [
+      -48.00006761500012,
+      84.22434879200006
+     ]
+    ],
+    "descriptionChars": 2592
+   },
+   "service": {
+    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/7",
+    "name": "Revolutionary War Battlefield Boundary",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "minScale": 2433320,
+    "maxScale": 1530,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       255,
+       247,
+       153,
+       191
+      ],
+      "outline": {
+       "color": [
+        0,
+        0,
+        0,
+        255
+       ],
+       "width": 0.75,
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID_12",
+      "alias": "FID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "BOUNDARY",
+      "alias": "BOUNDARY",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SITE",
+      "alias": "SITE",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "WAR",
+      "alias": "WAR",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "STATE",
+      "alias": "STATE",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "NAME",
+      "alias": "NAME",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Acres",
+      "alias": "ACRES",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Area",
+      "alias": "Shape__Area",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "8b2e2d492c124d1cacba0599d20639ae",
+    "count": 159,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "NAME",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.0
+   },
+   "drawsAtOpening": false,
+   "rendererColourOnly": false,
+   "popupNamesClass": false
+  },
+  {
+   "path": "Revolutionary War Battlefields / Revolutionary War Core Areas",
+   "title": "Revolutionary War Core Areas",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "onAtStart": true,
+   "opacity": null,
+   "itemId": "8b2e2d492c124d1cacba0599d20639ae",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/10",
+   "disablePopup": true,
+   "popup": {
+    "title": "The Battle of {NAME}",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "Acres",
+     "NAME"
+    ]
+   },
+   "popupFrom": "map",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "simple",
+    "field": null,
+    "valueExpression": false,
+    "symbol": {
+     "type": "CIMSymbolReference",
+     "style": null,
+     "cim": true
+    },
+    "label": null
+   },
+   "item": {
+    "id": "8b2e2d492c124d1cacba0599d20639ae",
+    "title": "United States Battlefield Boundaries",
+    "type": "Feature Service",
+    "owner": "mm.atlas",
+    "access": "public",
+    "snippet": "This map layer shows the footprint of historic U.S. battlefields from the Revolutionary War (1775-1783), the War of 1812, and the Civil War (1861-1865) that are part of the National Park Service’s American Battlefield Protection Program.",
+    "description": "<p style='margin-bottom:0in;'><span style='font-size:18px;'>A battlefield is the current or historic location where an armed conflict or military battle takes place. You might be picturing an open field with soldiers based on the name. However, a battlefield is any place where a battle has taken place. For example, the Wilderness battle (May 5<sup>th</sup> to 7<sup>th</sup>, 1864) in the state of Virginia during the Civil War was fought in dense woodland.&nbsp;</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Many people consider battlefields to be sacred sites or hallowed ground. This is because of the number of people who died there in the conflict. Many people travel to these places to learn and honor the soldiers who sacrificed there.</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>This map layer shows the historic battlefields in the United States included in the National Park Service’s </span><a target='_blank' href='https://www.nps.gov/orgs/2287/index.htm' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>American Battlefield Protection Program</span></a><span style='font-size:18px;'>. This program works to preserve and provide interpretation of these important places. By studying the past, we can learn from it and hopefully learn from the past mistakes of others.&nbsp;</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>This map layer includes battlefields from 3 wars: the Revolutionary War (1775-1783), the War of 1812, and the Civil War (1861-1865). This layer includes two parts: one, the footprint of the entire battlefield, and two, the core area, where the fighting was the heaviest. The data for this map comes from two separate reports: the </span><a target='_blank' href='https://chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https:/npshistory.com/publications/battlefield/revolutionary-war-of-1812.pdf' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'><i>Report to Congress on the Historic Preservation of Revolutionary War and War of 1812 Sites in the United States</i></span></a><span style='font-size:18px;'><i>&nbsp;</i>(2007) and the </span><a target='_blank' href='https://chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https:/npshistory.com/publications/battlefield/cwsac/report.pdf' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'><i>Civil War Sites Advisory Commission Report on the Nation’s Civil War Battlefields <span style='font-style:normal;'>(1993)</span></i></span></a><span style='font-size:18px;'>.&nbsp;</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Note: You are likely viewing this layer as part of a map on a specific war or battle. In that case, you may only see the battlefields for the specific event and not all three wars included in this dataset. This is not an error; the map maker has simply filtered the data to keep the map clear and concise.&nbsp;</span></p><p style='margin-bottom:0in;'>&nbsp;</p><h5 style='margin:7.5pt 0in 1.5pt;'><span style='color:#333333; font-family:&quot;Helvetica&quot;,sans-serif; font-size:18px;'><span style='line-height:107%;'><u>Data Citations</u></span></span></h5><p style='margin-bottom:0in;'><span style='background-color:white; color:#404040; font-family:&quot;Helvetica&quot;,sans-serif; font-size:18px;'><span style='line-height:107%;'>Martin V and Stein J. 2020. American Revolution Battlefield Boundaries and Associated Historic Properties. National Park Service. Network Drive</span></span><br /><a target='_blank' href='https://irma.nps.gov/DataStore/Reference/Profile/2279701' rel='nofollow ugc noopener noreferrer'><span style='background-color:white; color:#005EA2; font-family:&quot;Helvetica&quot;,sans-serif; font-size:18px;'><span style='line-height:107%;'>https://irma.nps.gov/DataStore/Reference/Profile/2279701</span></span></a><span style='font-size:18px;'>.</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Martin V and Stein J. 2020. War of 1812 Battlefield Boundaries and Associated Historic Properties. National Park Service. Network Drive</span><br /><a target='_blank' href='https://irma.nps.gov/DataStore/Reference/Profile/2279685' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>https://irma.nps.gov/DataStore/Reference/Profile/2279685</span></a><span style='font-size:18px;'>.</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Stein J and Martin V. 2020. Civil War Battlefield Boundaries. National Park Service. Network Drive</span><br /><a target='_blank' href='https://irma.nps.gov/DataStore/Reference/Profile/2279732' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>https://irma.nps.gov/DataStore/Reference/Profile/2279732</span></a><span style='font-size:18px;'>.</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Martin V and Stein J. 2020. Updated Civil War Battlefield Boundaries. National Park Service. Network Drive</span></p><p style='margin-bottom:0in;'><a target='_blank' href='https://irma.nps.gov/DataStore/Reference/Profile/2279739' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>https://irma.nps.gov/DataStore/Reference/Profile/2279739</span></a><span style='font-size:18px;'>.</span></p>",
+    "tags": [
+     "National Park Service",
+     "ABPP",
+     "American Battlefield Protection Program",
+     "Battlefield Boundaries",
+     "Battlefields",
+     "Boundaries",
+     "Civil War",
+     "History and Culture",
+     "National Parks",
+     "Revolutionary War",
+     "War of 1812",
+     "school",
+     "learn",
+     "education"
+    ],
+    "accessInformation": "American Battlefield Protection Program, National Park Service, Department of the Interior (ABPP-NPS)\nCultural Resources GIS (CRGIS)",
+    "licenseInfo": "<p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The </span><a target='_blank' href='https://www.nps.gov/subjects/gisandmapping/data-disclaimers.htm' rel='nofollow ugc noopener noreferrer'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>National Park Service</span></a><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'> shall not be held liable for improper or incorrect use of the cultural resource data described and/or contained herein. These data and related graphics are not legal documents and are not intended to be used as such, nor do they replace the need for consultation with appropriate state/tribal/federal historic preservation offices.</span></p><p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The information contained in these data is dynamic and may change over time. The data are not better than the original sources from which they were derived. It is the responsibility of the data user to use the data appropriately and consistently within the limitations of geospatial data in general and these data in particular, as expressed in feature-level metadata. The related graphics are intended to aid the data user in acquiring relevant data; it is not appropriate to use the related graphics as data.​​​​​​​</span></p><p style='background-color:white; line-height:normal; margin:0in 2.25pt 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>Cultural resource data sets may contain sensitive information that has been redacted or withheld from general use.&nbsp; These data require express permission from National Park Service programs, parks, or regional offices to access or use. Any unauthorized use of sensitive cultural resource data, disclosure, or distribution of that data, is prohibited unless specifically provided under the Archaeological Resources Protection Act of 1979, 16. U.S.C. 470hh, as amended, and National Park Service and Related Programs, 54&nbsp;U.S.C. 300101 (formerly known as the National Historic Preservation Act, 16 U.S.C. 470-1).</span></p><p style='background-color:white; line-height:normal; margin:0in .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The National Park Service gives no warranty, expressed or implied, as to the accuracy, reliability, or completeness of these data, which may have been generated over many years, using multiple creation methods as well as collection procedures. It is strongly recommended that these data be directly acquired from an NPS server and not indirectly through other sources, which may have changed the data in some way. Although these data have been processed successfully on a computer system at the National Park Service, no warranty expressed or implied is made regarding the utility of the data on another system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. This disclaimer applies both to individual use of the data and aggregate use with other data.</span></p>",
+    "created": 1778620484000,
+    "modified": 1783536706000,
+    "numViews": 14507,
+    "thumbnail": "thumbnail/thumbnail1781189229611.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -137.99999610599997,
+      -89.00000000000001
+     ],
+     [
+      -48.00006761500012,
+      84.22434879200006
+     ]
+    ],
+    "descriptionChars": 2592
+   },
+   "service": {
+    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/10",
+    "name": "Revolutionary War Core Areas",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "minScale": 1078534,
+    "maxScale": 625,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       177,
+       169,
+       208,
+       191
+      ],
+      "outline": {
+       "color": [
+        0,
+        0,
+        0,
+        255
+       ],
+       "width": 0.75,
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID_12",
+      "alias": "OBJECTID_12",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "BOUNDARY",
+      "alias": "BOUNDARY",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SITE",
+      "alias": "SITE",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "WAR",
+      "alias": "WAR",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "STATE",
+      "alias": "STATE",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "NAME",
+      "alias": "NAME",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Acres",
+      "alias": "ACRES",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Area",
+      "alias": "Shape__Area",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "8b2e2d492c124d1cacba0599d20639ae",
+    "count": 146,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "NAME",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.1
+   },
+   "drawsAtOpening": false,
+   "rendererColourOnly": false,
+   "popupNamesClass": false
+  },
+  {
+   "path": "Revolutionary War Battles",
+   "title": "Revolutionary War Battles",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "onAtStart": true,
+   "opacity": null,
+   "itemId": "fb2bcd7497aa41ac8c5f58c89e9c523e",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Revolutionary_War_Battles_copy_edits/FeatureServer/0",
+   "disablePopup": false,
+   "popup": {
+    "title": "",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text",
+     "media",
+     "text",
+     "text"
+    ],
+    "images": [
+     {
+      "title": "",
+      "altText": "",
+      "source": "{Thumbnail}"
+     },
+     {
+      "title": "",
+      "altText": "",
+      "source": "{Thumbnail}"
+     }
+    ],
+    "expressions": [
+     "Victor color"
+    ],
+    "fieldsInText": [
+     "Battle",
+     "Dates",
+     "Image_Credit",
+     "Narrative",
+     "expression/expr0"
+    ]
+   },
+   "popupFrom": "map",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": "Dates IN ('April 19, 1775','April 19, 1775 to March 17, 1776','August 27, 1776','August 8, 1775 to August 9, 1775','December 21, 1776 to December 23, 1776','December 26, 1776','December 31, 1775','December 8, 1776 to December 12, 1776','December 9, 1775','February 27, 1776','July 8, 1776 to July 10, 1776','June 17, 1775','June 28, 1776','June 28, 1776 to June 29, 1776','May 10, 1775','May 12, 1775','November 16, 1776','November 20, 1776','October 11, 1776','October 18, 1776','October 28, 1776')",
+   "rendererInMap": {
+    "type": "uniqueValue",
+    "field": "Victor",
+    "valueExpression": false,
+    "classes": [
+     {
+      "value": "Side B Victory",
+      "label": "British Victory",
+      "symbol": {
+       "type": "esriSMS",
+       "style": "esriSMSDiamond",
+       "color": [
+        161,
+        29,
+        29,
+        255
+       ],
+       "size": 11.25,
+       "outline": {
+        "color": [
+         153,
+         153,
+         153,
+         64
+        ],
+        "width": 0.75,
+        "style": "esriSLSSolid"
+       }
+      }
+     },
+     {
+      "value": "Side A Victory",
+      "label": "American Victory",
+      "symbol": {
+       "type": "esriSMS",
+       "style": "esriSMSDiamond",
+       "color": [
+        18,
+        58,
+        179,
+        255
+       ],
+       "size": 11.25,
+       "outline": {
+        "color": [
+         153,
+         153,
+         153,
+         64
+        ],
+        "width": 0.75,
+        "style": "esriSLSSolid"
+       }
+      }
+     },
+     {
+      "value": "Inconclusive",
+      "label": "Inconclusive",
+      "symbol": {
+       "type": "esriSMS",
+       "style": "esriSMSDiamond",
+       "color": [
+        128,
+        125,
+        125,
+        217
+       ],
+       "size": 11.25,
+       "outline": {
+        "color": [
+         153,
+         153,
+         153,
+         64
+        ],
+        "width": 0.75,
+        "style": "esriSLSSolid"
+       }
+      }
+     }
+    ],
+    "default": null
+   },
+   "item": {
+    "id": "fb2bcd7497aa41ac8c5f58c89e9c523e",
+    "title": "Revolutionary War Battles",
+    "type": "Feature Service",
+    "owner": "mm.atlas",
+    "access": "public",
+    "snippet": "Explore the major battles of the Revolutionary War (1775 to 1783) with this map layer by the American Battlefield Trust, which works to preserve endangered battlefields across the United States.",
+    "description": "<div style='background-color:rgb(255, 255, 255); clear:both; color:rgb(0, 0, 0); font-family:&quot;Segoe UI&quot;, &quot;Segoe UI Web&quot;, Arial, Verdana, sans-serif; font-size:12px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px; overflow:visible; padding:0px; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><p style='background-color:transparent; color:windowtext; font-kerning:none; font-style:normal; font-weight:normal; margin:0px 0px 10.6667px; padding:0px; text-align:left; text-indent:0px;'><span style='font-family:Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, sans-serif; font-size:18px;'><span style='font-variant-ligatures:none !important; line-height:20.925px; margin:0px; padding:0px;'>The United States Revolutionary War was a conflict between the Thirteen Colonies and Great Britain. The colonists, many of whom were British subjects, wanted more autonomy. The Colonies didn’t have any representatives in the British government. So, when Great Britain raised taxes on imported goods, like tea and molasses, many colonists believed this violated their rights as British citizens.&nbsp;</span><span style='line-height:20.925px; margin:0px; padding:0px;'>&nbsp;</span></span></p></div><div style='background-color:rgb(255, 255, 255); clear:both; color:rgb(0, 0, 0); font-family:&quot;Segoe UI&quot;, &quot;Segoe UI Web&quot;, Arial, Verdana, sans-serif; font-size:12px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px; overflow:visible; padding:0px; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><p style='background-color:transparent; color:windowtext; font-kerning:none; font-style:normal; font-weight:normal; margin:0px 0px 10.6667px; padding:0px; text-align:left; text-indent:0px;'><span style='font-family:Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, sans-serif; font-size:18px;'><span style='font-variant-ligatures:none !important; line-height:20.925px; margin:0px; padding:0px;'>In 1774, representatives from 12 of the 13 colonies met in Philadelphia at the First Continental Congress to organize their protests. By 1775, they were at war.&nbsp;</span><span style='line-height:20.925px; margin:0px; padding:0px;'>&nbsp;</span></span></p></div><div style='background-color:rgb(255, 255, 255); clear:both; color:rgb(0, 0, 0); font-family:&quot;Segoe UI&quot;, &quot;Segoe UI Web&quot;, Arial, Verdana, sans-serif; font-size:12px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px; overflow:visible; padding:0px; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><p style='background-color:transparent; color:windowtext; font-kerning:none; font-style:normal; font-weight:normal; margin:0px 0px 10.6667px; padding:0px; text-align:left; text-indent:0px;'><span style='font-family:Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, sans-serif; font-size:18px;'><span style='font-variant-ligatures:none !important; line-height:20.925px; margin:0px; padding:0px;'>The first battles, fought at Lexington and Concord, Massachusetts, were between American militiamen and British troops. Most of these militiamen weren’t professional soldiers, like the British troops. They were farmers, blacksmiths, and others from the community who volunteered to fight. Later that year, the Second Continental Congress created the Continental Army, led by George Washington.</span><span style='line-height:20.925px; margin:0px; padding:0px;'>&nbsp;</span></span></p></div><div style='background-color:rgb(255, 255, 255); clear:both; color:rgb(0, 0, 0); font-family:&quot;Segoe UI&quot;, &quot;Segoe UI Web&quot;, Arial, Verdana, sans-serif; font-size:12px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px; overflow:visible; padding:0px; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><p style='background-color:transparent; color:windowtext; font-kerning:none; font-style:normal; font-weight:normal; margin:0px 0px 10.6667px; padding:0px; text-align:left; text-indent:0px;'><span style='font-family:Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, sans-serif; font-size:18px;'><span style='font-variant-ligatures:none !important; line-height:20.925px; margin:0px; padding:0px;'>In 1776, the Continental Congress issued the Declaration of Independence, and the American colonies became the United States of America. This allowed them to start making treaties with other European powers. The turning point in the war was the Battle of Saratoga, where an American force managed to capture a British army led by General Burgoyne. Following this defeat, France was convinced to send troops and ships to help the new nation, entering the war in 1778.</span><span style='line-height:20.925px; margin:0px; padding:0px;'>&nbsp;</span></span></p></div><div style='background-color:rgb(255, 255, 255); clear:both; color:rgb(0, 0, 0); font-family:&quot;Segoe UI&quot;, &quot;Segoe UI Web&quot;, Arial, Verdana, sans-serif; font-size:12px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px; overflow:visible; padding:0px; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><p style='background-color:transparent; color:windowtext; font-kerning:none; font-style:normal; font-weight:normal; margin:0px 0px 10.6667px; padding:0px; text-align:left; text-indent:0px;'><span style='font-family:Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, sans-serif; font-size:18px;'><span style='font-variant-ligatures:none !important; line-height:20.925px; margin:0px; padding:0px;'>By 1779, the war moved south. After several years of fighting from Virginia to Georgia, the Continental Army and French troops forced the surrender of British General Cornwallis’s army at Yorktown. This battle prompted the start of peace talks between Britain and the new nation of America.</span><span style='line-height:20.925px; margin:0px; padding:0px;'>&nbsp;</span></span></p></div><div style='background-color:rgb(255, 255, 255); clear:both; color:rgb(0, 0, 0); font-family:&quot;Segoe UI&quot;, &quot;Segoe UI Web&quot;, Arial, Verdana, sans-serif; font-size:12px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px; overflow:visible; padding:0px; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><p style='background-color:transparent; color:windowtext; font-kerning:none; font-style:normal; font-weight:normal; margin:0px 0px 10.6667px; padding:0px; text-align:left; text-indent:0px;'><span style='font-family:Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, sans-serif; font-size:18px;'><span style='font-variant-ligatures:none !important; line-height:20.925px; margin:0px; padding:0px;'>Information about the battles comes from two sources. The points showing when each battle occurred and who won it come from the American Battlefield Trust. The polygons showing where battles were fought comes from the National Park Service. Of these layers, the Core Areas polygons show where most of the fighting occurred. These areas are often described as hallowed ground. The Battlefield Boundary layer shows a larger area where areas of combat, command, communications, logistics, and medical services associated with the battle may be found.</span><span style='line-height:20.925px; margin:0px; padding:0px;'>&nbsp;</span></span></p><p style='background-color:transparent; color:windowtext; font-kerning:none; font-style:normal; font-weight:normal; margin:0px 0px 10.6667px; padding:0px; text-align:left; text-indent:0px;'>&nbsp;</p><p style='background-color:transparent; color:windowtext; font-kerning:none; font-style:normal; font-weight:normal; margin:0px 0px 10.6667px; padding:0px; text-align:left; text-indent:0px;'><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:inherit; font-size:large;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Data Citation: American Battlefield Trust. </span><i><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Maps</span></i><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>. 2025 </span></span><a style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration:none; text-indent:0px; text-transform:none; word-spacing:0px;' target='_blank' href='https://www.battlefields.org/search?algolia_search_index%5BrefinementList%5D%5Bfield_resource_type%5D%5B0%5D=map&amp;ms=googlepaid&amp;ms=googlepaid' rel='nofollow ugc noopener noreferrer'><span style='font-family:inherit; font-size:large;'><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'>https://www.battlefields.org/search?algolia_search_index%5BrefinementList%5D%5Bfield_resource_type%5D%5B0%5D=map&amp;ms=googlepaid&amp;ms=googlepaid</span></span></a><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:inherit; font-size:large;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>.&nbsp;</span></span></p></div>",
+    "tags": [
+     "American Revolution",
+     "Revolutionary War",
+     "Great Britian",
+     "United States",
+     "1776",
+     "George Washington",
+     "Continental Army",
+     "school",
+     "learn",
+     "education",
+     "MapMaker"
+    ],
+    "accessInformation": "American Battlefield Trust",
+    "licenseInfo": "<p>Copyright <a target='_blank' href='https://www.battlefields.org/?ms=googlepaid&amp;ms=googlepaid' rel='nofollow ugc noopener noreferrer'>American Battlefield Trust</a></p>",
+    "created": 1761330884000,
+    "modified": 1783646453000,
+    "numViews": 8482,
+    "thumbnail": "thumbnail/thumbnail1761333501415.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -91.34539794921875,
+      30.418422698974595
+     ],
+     [
+      -68.80683898925781,
+      46.81531906127929
+     ]
+    ],
+    "descriptionChars": 2513
+   },
+   "service": {
+    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Revolutionary_War_Battles_copy_edits/FeatureServer/0",
+    "name": "Revolutionary War Battles",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPoint",
+    "minScale": 16157185,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriPMS",
+      "style": null,
+      "width": 15,
+      "picture": true
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "Dates",
+      "alias": "Dates of Battle",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Date_Start",
+      "alias": "Date the Battle Started",
+      "type": "esriFieldTypeDate",
+      "domain": false
+     },
+     {
+      "name": "Date_End",
+      "alias": "Date the Battle Ended",
+      "type": "esriFieldTypeDate",
+      "domain": false
+     },
+     {
+      "name": "Battle",
+      "alias": "Battle Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "State",
+      "alias": "State Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "x",
+      "alias": "Longitude",
+      "type": "esriFieldTypeSingle",
+      "domain": false
+     },
+     {
+      "name": "y",
+      "alias": "Latitude",
+      "type": "esriFieldTypeSingle",
+      "domain": false
+     },
+     {
+      "name": "Victor",
+      "alias": "Battle Victor",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Thumbnail",
+      "alias": "Key Image",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Thumbnail_Small",
+      "alias": "Small Image",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Image_Credit",
+      "alias": "Image Credit",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Narrative",
+      "alias": "Description",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Troops_engaged_Side_A",
+      "alias": "Total American Troops",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Troops_engaged_Side_B",
+      "alias": "Total British Troops",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Casualties_Side_A",
+      "alias": "American Casualties",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Casualties_Side_B",
+      "alias": "British Casualties",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Leaders_Side_A",
+      "alias": "American Leaders",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Leaders_Side_B",
+      "alias": "British Leaders",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Campaign",
+      "alias": "Campaign Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Battle_Page_URL",
+      "alias": "Battle Webpage",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "FID",
+      "alias": "FID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "fb2bcd7497aa41ac8c5f58c89e9c523e",
+    "filter": "Dates IN ('April 19, 1775','April 19, 1775 to March 17, 1776','August 27, 1776','August 8, 1775 to August 9, 1775','December 21, 1776 to December 23, 1776','December 26, 1776','December 31, 1775','December 8, 1776 to December 12, 1776','December 9, 1775','February 27, 1776','July 8, 1776 to July 10, 1776','June 17, 1775','June 28, 1776','June 28, 1776 to June 29, 1776','May 10, 1775','May 12, 1775','November 16, 1776','November 20, 1776','October 11, 1776','October 18, 1776','October 28, 1776')",
+    "count": 21,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "Battle",
+     "geometryCompared": "geometry"
+    },
+    "seconds": 0.0
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": true,
+   "popupNamesClass": false
+  },
+  {
+   "path": "Key Port Cities in the American Revolution 1775-1781",
+   "title": "Key Port Cities in the American Revolution 1775-1781",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": false,
+   "onAtStart": false,
+   "opacity": null,
+   "itemId": "0f26eb607f6d409aade772a4a1a4771c",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/ports_with_coordinates/FeatureServer/0",
+   "disablePopup": false,
+   "popup": {
+    "title": "",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "Port"
+    ]
+   },
+   "popupFrom": "layer item",
+   "minScale": 0,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "uniqueValue",
+    "field": "Category",
+    "valueExpression": false,
+    "classes": [
+     {
+      "value": "Major port city",
+      "label": "Major Port City",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     }
+    ],
+    "default": "Port"
+   },
+   "item": {
+    "id": "0f26eb607f6d409aade772a4a1a4771c",
+    "title": "Key Port Cities in the American Revolution 1775-1781",
+    "type": "Feature Service",
+    "owner": "mm.atlas",
+    "access": "public",
+    "snippet": "During the Revolutionary War (1775-1781), ports were key areas of military logistics, supplying food and supplies and moving troops. Explore a selection of key port cities along the east coast of North America, the Caribbean, and Great Britain from Jay Feyerabend’s master’s thesis, \"Stonington’s Revolution: The role of small port towns in the American Revolution.\" ",
+    "description": "<p style='background-color:white; line-height:normal; margin-bottom:.25in;'><span style='color:#4C4C4C; font-family:&quot;Arial&quot;,sans-serif; font-size:18px;'><u>What is a port?</u></span></p><p style='background-color:white; margin-bottom:.25in;'><span style='color:#4C4C4C; font-family:&quot;Arial&quot;,sans-serif; font-size:18px;'>A&nbsp;</span><a target='_blank' href='https://education.nationalgeographic.org/resource/port/' rel='nofollow ugc noopener noreferrer'><span style='color:black; font-family:&quot;Arial&quot;,sans-serif; font-size:18px;'>port</span></a><span style='color:#4C4C4C; font-family:&quot;Arial&quot;,sans-serif; font-size:18px;'> is a place for ships to dock on the coast of an ocean, lake, sea, or river to unload or load cargo or passengers. These are essential places that play a key role in the transportation of goods and people. Ports are typically in places with enough land to build piers, wharves, warehouses, and loading and unloading facilities. Access to land transportation, such as roads and a large population center, is also key. Many ports also often have the capabilities for ships to be repaired.&nbsp;</span></p><p style='background-color:white; line-height:normal; margin-bottom:.25in;'><span style='color:#4C4C4C; font-family:&quot;Arial&quot;,sans-serif; font-size:18px;'><u>What is a Harbor?</u></span></p><p style='background-color:white; line-height:normal; margin-bottom:.25in;'><span style='color:#4C4C4C; font-family:&quot;Arial&quot;,sans-serif; font-size:18px;'>Many ports are found on&nbsp;</span><a target='_blank' href='https://education.nationalgeographic.org/resource/harbor/' rel='nofollow ugc noopener noreferrer'><span style='color:black; font-family:&quot;Arial&quot;,sans-serif; font-size:18px;'>harbors</span></a><span style='color:#4C4C4C; font-family:&quot;Arial&quot;,sans-serif; font-size:18px;'>, or protected bodies of water, where boats and ships often anchor. Harbors may occur naturally or be constructed by humans. An example of a naturally occurring harbor is Boston Harbor, part of Massachusetts Bay in the United States of America. The first human-engineered breakwater harbor in the United States was constructed near Lewes, Delaware, in 1828. It is not featured on this map.&nbsp;</span></p><p style='background-color:white; margin-bottom:.25in;'><span style='color:#4C4C4C; font-family:&quot;Arial&quot;,sans-serif; font-size:18px;'><u>What is the role of a port during a war?</u></span></p><p style='background-color:white; margin-bottom:.25in;'><span style='color:#4C4C4C; font-family:&quot;Arial&quot;,sans-serif; font-size:18px;'>A key part of any military action is its ability to get supplies. This can include new equipment, medical supplies, food, and fresh troops. Ports are one way troops can be resupplied. There are already places where goods and people come through as part of a country's day-to-day economy. The side that controls the port has access to incoming supplies. During the Revolutionary War, the major port at New York City was divided. New York City had two governments: one under William Tryon, the royal governor, and a provincial congress of patriots seeking to separate from Great Britain. Merchants in the area were equally divided. Some felt that they needed Great Britain to access British markets, while others felt the British system limited their opportunities to make money. Over time, New York City and other large metropolitan areas, became more loyalist, while smaller ports tended to support the rebels.&nbsp;</span></p><p style='background-color:white; margin-bottom:.25in;'><span style='color:#4C4C4C; font-family:&quot;Arial&quot;,sans-serif; font-size:18px;'><u>How was this map layer created?</u></span></p><p style='background-color:white; margin-bottom:.25in;'><span style='color:#4C4C4C; font-family:&quot;Arial&quot;,sans-serif; font-size:18px;'>The data for this map layer is from Jay Feyerabend’s master’s thesis, </span><a target='_blank' href='https://commons.lib.jmu.edu/masters202029/74' rel='nofollow ugc noopener noreferrer'><span style='color:#4C4C4C; font-family:&quot;Arial&quot;,sans-serif; font-size:18px;'><i>Stonington’s Revolution: The role of small port towns in the American Revolution</i></span></a><span style='color:#4C4C4C; font-family:&quot;Arial&quot;,sans-serif; font-size:18px;'>. Their work explores the role key ports in early America played in the Revolutionary War. The map maker made a list of ports that appear in the thesis and categorized them as a major port, small port, Caribbean port, international port, Chesapeake port, river port/trade town, small port/inland port connection, and southern port. The ports were then separated into two groups: major port cities and ports that combined all other categories.&nbsp;</span></p><h5 style='margin:7.5pt 0in 1.5pt;'><span style='color:#333333; font-family:&quot;Helvetica&quot;,sans-serif; font-size:18px;'><span style='line-height:107%;'><u>Data Citation</u></span></span></h5><p><span style='color:#333333; font-family:&quot;Helvetica&quot;,sans-serif; font-size:18px;'><span style='line-height:107%;'>Feyerabend, Jay. “</span><i><span style='line-height:107%;'>Stonington's Revolution: The role of small port towns in the American Revolution</span></i><span style='line-height:107%;'>” (2021), </span><i><span style='line-height:107%;'>Master's Theses</span></i><span style='line-height:107%;'>, 2020-Current. 74. </span></span><a target='_blank' href='https://commons.lib.jmu.edu/masters202029/74' rel='nofollow ugc noopener noreferrer'><span style='color:#333333; font-family:&quot;Helvetica&quot;,sans-serif; font-size:18px;'><span style='line-height:107%;'>https://commons.lib.jmu.edu/masters202029/74</span></span></a><span style='color:#333333; font-family:&quot;Helvetica&quot;,sans-serif; font-size:18px;'><span style='line-height:107%;'>.</span></span></p>",
+    "tags": [
+     "port",
+     "ports",
+     "harbor",
+     "War",
+     "Revolutionary War",
+     "American Revolution",
+     "import",
+     "export",
+     "merchant",
+     "loyalist",
+     "patriot",
+     "rebel",
+     "education",
+     "school",
+     "learn",
+     "MapMaker",
+     "America250"
+    ],
+    "accessInformation": "Feyerabend, Jay. “Stonington's Revolution: The role of small port towns in the American Revolution” (2021), Master's Theses, 2020-Current. 74. https://commons.lib.jmu.edu/masters202029/74.",
+    "licenseInfo": "<p><img style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); display:inline; font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; height:auto; letter-spacing:normal; max-width:100%; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;' src='https://downloads.esri.com/blogs/arcgisonline/esrilogo_new.png' width='113' height='39' /><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><span style='display:inline !important; float:none; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'> This work is licensed under the Esri Master License Agreement.</span></span><br />&nbsp;</p><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><a style='border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:inherit; line-height:1.5; text-decoration:none;' target='_blank' href='https://goto.arcgis.com/termsofuse/viewsummary' rel='nofollow ugc noopener noreferrer'><strong>View Summary</strong></a>&nbsp;|&nbsp;<a style='border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:inherit; line-height:1.5; text-decoration:none;' target='_blank' href='https://goto.arcgis.com/termsofuse/viewtermsofuse' rel='nofollow ugc noopener noreferrer'><strong>View Terms of Use</strong></a></div>",
+    "created": 1778703540000,
+    "modified": 1781636596000,
+    "numViews": 6264,
+    "thumbnail": "thumbnail/thumbnail1781636320706.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -82.36659999999999,
+      14.610399999999998
+     ],
+     [
+      -2.9916,
+      53.40839999999999
+     ]
+    ],
+    "descriptionChars": 2752
+   },
+   "service": {
+    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/ports_with_coordinates/FeatureServer/0",
+    "name": "ports_with_coordinates",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPoint",
+    "minScale": 49089789,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 1000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriPMS",
+      "style": null,
+      "width": 15,
+      "picture": true
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "Port",
+      "alias": "Port Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Latitude",
+      "alias": "Port Latitude",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Longitude",
+      "alias": "Port Longitude",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Category",
+      "alias": "Port Category",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "ObjectId",
+      "alias": "ObjectId",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "0f26eb607f6d409aade772a4a1a4771c",
+    "count": 31,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": null,
+     "geometryCompared": "geometry"
+    },
+    "seconds": 0.2
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false,
+   "popupNamesClass": false
+  },
+  {
+   "path": "Turning Points",
+   "title": "Turning Points",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "onAtStart": true,
+   "opacity": null,
+   "itemId": "60bd29a8eb34401ab70682c7bb272743",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Battle_Detailsv2_75_76/FeatureServer/0",
+   "disablePopup": false,
+   "popup": {
+    "title": "Battle Details",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "Battle",
+     "Battle_details",
+     "Victor",
+     "Year"
+    ]
+   },
+   "popupFrom": "map",
+   "minScale": 3600000.400011,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "simple",
+    "field": null,
+    "valueExpression": false,
+    "symbol": {
+     "type": "esriSMS",
+     "style": "esriSMSCircle",
+     "color": [
+      255,
+      255,
+      255,
+      191
+     ],
+     "size": 18.75,
+     "outline": {
+      "color": [
+       0,
+       0,
+       0,
+       255
+      ],
+      "width": 1.125,
+      "style": "esriSLSSolid"
+     }
+    },
+    "label": null
+   },
+   "labelsInMap": true,
+   "item": {
+    "id": "60bd29a8eb34401ab70682c7bb272743",
+    "title": "Turning Points 1775 to 1776",
+    "type": "Feature Service",
+    "owner": "mm.atlas",
+    "access": "public",
+    "snippet": "This 2026 National Geographic layer highlights key points during the Revolutionary War in the United States, showing how geography shaped the key battles.",
+    "description": "<p><span style='font-family:Arial; font-size:18px;'>This layer highlights key events from the opening phase of the American Revolution, helping students understand how the conflict began and spread geographically. Student-friendly map notes trace the war from the first shots at Lexington and Concord through the major battles around Boston, New York, and New Jersey. These notes emphasize how roads, harbors, rivers, and major cities shaped military decisions and outcomes as both sides fought to gain early control.</span></p><p><span style='font-family:Arial; font-size:18px;'><strong>Sources and Credits</strong></span><br /><span style='font-family:Arial; font-size:18px;'>Historical interpretations, geographic context, and supporting educational materials were developed using publicly available resources from the National Park Service (NPS), National Geographic Society, the U.S. Army Center of Military History (history.army.mil), and select primary source maps from the Library of Congress.</span></p><p><span style='font-family:Arial; font-size:18px;'>Data Citation: Bunin, Chris, and Trentacoste, Peter. <i>Turning Points</i>, 2026. Distributed by </span><a target='_blank' href='https://www.nationalgeographic.org/society/' rel='nofollow ugc noopener noreferrer'><span style='font-family:Arial; font-size:18px;'>The National Geographic Society</span></a><span style='font-family:Arial; font-size:18px;'>.<i>&nbsp;</i></span></p>",
+    "tags": [
+     "American Revolution",
+     "Revolutionary War",
+     "America 250",
+     "school",
+     "education",
+     "learn",
+     "MapMaker",
+     "1776"
+    ],
+    "accessInformation": "Layer researched and created by Chris Bunin and Peter Trentacoste.",
+    "licenseInfo": "<p>Layer created by Chris Bunin and Peter Trentacoste&nbsp;</p><p>Permission to use for educational purposes under <a target='_blank' href='https://creativecommons.org/licenses/by-nc/4.0/deed.en' rel='nofollow ugc noopener noreferrer'>CC BY-NC 4.0</a></p>",
+    "created": 1780693357000,
+    "modified": 1783549577000,
+    "numViews": 2408,
+    "thumbnail": "thumbnail/thumbnail1783548092313.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -74.764722,
+      40.22583299999999
+     ],
+     [
+      -71.060833,
+      42.44944399999999
+     ]
+    ],
+    "descriptionChars": 935
+   },
+   "service": {
+    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Battle_Detailsv2_75_76/FeatureServer/0",
+    "name": "Battle_Detailsv2_75_76",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPoint",
+    "minScale": 13153587,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriPMS",
+      "style": null,
+      "width": 15,
+      "picture": true
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "FID",
+      "alias": "FID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "Battle",
+      "alias": "Battle Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Victor",
+      "alias": "Battle Victor",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Year",
+      "alias": "Year of Battle",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Date",
+      "alias": "Date of Battle",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Latitude",
+      "alias": "Latitude of Battle",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Longitude",
+      "alias": "Longitude of Battle",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Group_",
+      "alias": "Turning Point Label",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Notes",
+      "alias": "Notes on the Battle",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Battle_details",
+      "alias": "Battle Details",
+      "type": "esriFieldTypeString",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "60bd29a8eb34401ab70682c7bb272743",
+    "count": 5,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [
+      {
+       "feature": "Lexington and Concord",
+       "field": "Notes",
+       "ends": "urn, militia fighters from nearby towns had the advantage of"
+      },
+      {
+       "feature": "Battle of Bunker Hill",
+       "field": "Notes",
+       "ends": "troops crossed Boston Harbor by boat to attack American mili"
+      },
+      {
+       "feature": "Battle for New York",
+       "field": "Notes",
+       "ends": "g north across Manhattan, the defeated the Americans at Fort"
+      },
+      {
+       "feature": "Fall of New York City",
+       "field": "Notes",
+       "ends": "ht. American forces crossed the icy Delaware River to surpri"
+      },
+      {
+       "feature": "Washington Strikes Back",
+       "field": "Notes",
+       "ends": "rea. During the Battle of Brooklyn, British troops outmanuev"
+      }
+     ],
+     "nameField": "Battle",
+     "geometryCompared": "geometry"
+    },
+    "seconds": 0.0
+   },
+   "drawsAtOpening": false,
+   "rendererColourOnly": false,
+   "popupNamesClass": false
+  }
+ ],
+ "findings": [
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "pop-up lists raw field names: LEFT_FID, RIGHT_FID"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 8 and feature 9"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 10 and feature 11"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 16 and feature 17"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 24 and feature 25"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 29 and feature 30"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 31 and feature 32"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 64 and feature 65"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 66 and feature 67"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 68 and feature 69"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 72 and feature 73"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 74 and feature 75"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 78 and feature 79"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 80 and feature 81"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 84 and feature 85"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 86 and feature 87"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 90 and feature 91"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 92 and feature 93"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 98 and feature 99"
+  },
+  {
+   "where": "layer Thirteen British Colonies / Colony Boundary",
+   "what": "two features at the same place: feature 100 and feature 101"
+  },
+  {
+   "where": "layer Revolutionary War Battlefields / Revolutionary War Battlefield Boundary",
+   "what": "on at the start but only draws when zoomed in"
+  },
+  {
+   "where": "layer Revolutionary War Battlefields / Revolutionary War Core Areas",
+   "what": "on at the start but only draws when zoomed in"
+  },
+  {
+   "where": "layer Revolutionary War Battles",
+   "what": "pop-up image has no alt text"
+  },
+  {
+   "where": "layer Revolutionary War Battles",
+   "what": "pop-up image has no alt text"
+  },
+  {
+   "where": "layer Revolutionary War Battles",
+   "what": "categories differ by colour only and the pop-up doesn't name them (WCAG 1.4.1 if a question depends on them)"
+  },
+  {
+   "where": "layer Turning Points",
+   "what": "on at the start but only draws when zoomed in"
+  },
+  {
+   "where": "layer Turning Points",
+   "what": "text may be cut off in Notes (Lexington and Concord): …urn, militia fighters from nearby towns had the advantage of"
+  },
+  {
+   "where": "layer Turning Points",
+   "what": "text may be cut off in Notes (Battle of Bunker Hill): …troops crossed Boston Harbor by boat to attack American mili"
+  },
+  {
+   "where": "layer Turning Points",
+   "what": "text may be cut off in Notes (Battle for New York): …g north across Manhattan, the defeated the Americans at Fort"
+  },
+  {
+   "where": "layer Turning Points",
+   "what": "text may be cut off in Notes (Fall of New York City): …ht. American forces crossed the icy Delaware River to surpri"
+  },
+  {
+   "where": "layer Turning Points",
+   "what": "text may be cut off in Notes (Washington Strikes Back): …rea. During the Battle of Brooklyn, British troops outmanuev"
+  }
+ ]
+}

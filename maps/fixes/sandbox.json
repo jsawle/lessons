@@ -1,0 +1,861 @@
+{
+ "tool": "Map fixes 1.0",
+ "read": "2026-10-23T11:12:00Z",
+ "org": "HNLEA4GfnbCFQZGa",
+ "orgLabel": "GIS-4-Schools sandbox",
+ "fixes": [
+  {
+   "id": "A5",
+   "what": "War of 1812: the Spanish Cession pop-up follows the treaty on the $5 million.",
+   "kind": "webmap-layer",
+   "webmap": "fad1cdb9d5704401a4e05c34f7ee693c",
+   "layerId": "mm6492e099a44d",
+   "layerTitle": "Land Spain gave up in 1819",
+   "before": "4e0c8ddc49b9b18fc2d278d9519f2f829e43c896",
+   "set": {
+    "popupInfo": {
+     "popupElements": [
+      {
+       "type": "text",
+       "text": "<p>In the Adams–Onís Treaty of 1819, Spain gave East and West Florida to the United States, and the two countries agreed on a new border between their lands across North America. The United States did not pay Spain for the land. Instead it agreed to pay its own citizens' claims against Spain, up to $5 million.</p>"
+      }
+     ],
+     "description": "<p>In the Adams–Onís Treaty of 1819, Spain gave East and West Florida to the United States, and the two countries agreed on a new border between their lands across North America. The United States did not pay Spain for the land. Instead it agreed to pay its own citizens' claims against Spain, up to $5 million.</p>",
+     "fieldInfos": [
+      {
+       "fieldName": "OBJECTID",
+       "isEditable": false,
+       "label": "OBJECTID",
+       "visible": false
+      },
+      {
+       "fieldName": "NAME",
+       "isEditable": true,
+       "label": "NAME",
+       "visible": true
+      },
+      {
+       "fieldName": "AnalysisArea",
+       "format": {
+        "digitSeparator": true,
+        "places": 2
+       },
+       "isEditable": true,
+       "label": "Area in Square Kilometers",
+       "visible": true
+      },
+      {
+       "fieldName": "Count_",
+       "format": {
+        "digitSeparator": true,
+        "places": 0
+       },
+       "isEditable": true,
+       "label": "Count_",
+       "visible": true
+      },
+      {
+       "fieldName": "Year_Acq",
+       "format": {
+        "digitSeparator": false
+       },
+       "isEditable": true,
+       "label": "Year",
+       "tooltip": "",
+       "visible": true
+      },
+      {
+       "fieldName": "Notes",
+       "format": {
+        "digitSeparator": false
+       },
+       "isEditable": true,
+       "label": "Notes",
+       "tooltip": "",
+       "visible": true
+      }
+     ],
+     "title": "{NAME}"
+    }
+   }
+  },
+  {
+   "id": "A6",
+   "what": "War of 1812: legend and pop-up say 'US victory' and 'Victory for British or Native forces'.",
+   "kind": "webmap-layer",
+   "webmap": "fad1cdb9d5704401a4e05c34f7ee693c",
+   "layerId": "mm36ab25878c1b",
+   "layerTitle": "Battles of the War of 1812",
+   "before": "fdf820116a859a76e89f9bbd226a563370e79d25",
+   "set": {
+    "layerDefinition": {
+     "fieldConfigurations": [
+      {
+       "name": "x",
+       "fieldFormat": {
+        "type": "number",
+        "maximumFractionDigits": 6,
+        "minimumFractionDigits": 6,
+        "useGrouping": "never"
+       }
+      },
+      {
+       "name": "y",
+       "fieldFormat": {
+        "type": "number",
+        "maximumFractionDigits": 6,
+        "minimumFractionDigits": 6,
+        "useGrouping": "never"
+       }
+      },
+      {
+       "name": "Troops_engaged_Side_A",
+       "fieldFormat": {
+        "type": "number",
+        "maximumFractionDigits": 0,
+        "useGrouping": "always"
+       }
+      },
+      {
+       "name": "Troops_engaged_Side_B",
+       "fieldFormat": {
+        "type": "number",
+        "maximumFractionDigits": 0,
+        "useGrouping": "always"
+       }
+      },
+      {
+       "name": "Casualties_Side_A",
+       "fieldFormat": {
+        "type": "number",
+        "maximumFractionDigits": 0,
+        "useGrouping": "always"
+       }
+      },
+      {
+       "name": "Casualties_Side_B",
+       "fieldFormat": {
+        "type": "number",
+        "maximumFractionDigits": 0,
+        "useGrouping": "always"
+       }
+      },
+      {
+       "name": "Total_Casualties",
+       "fieldFormat": {
+        "type": "number",
+        "useGrouping": "always"
+       }
+      }
+     ],
+     "drawingInfo": {
+      "renderer": {
+       "authoringInfo": {
+        "visualVariables": [
+         {
+          "maxSliderValue": 2628,
+          "minSliderValue": 0,
+          "theme": "high-to-low",
+          "type": "sizeInfo"
+         }
+        ]
+       },
+       "type": "uniqueValue",
+       "visualVariables": [
+        {
+         "type": "sizeInfo",
+         "field": "Total_Casualties",
+         "maxDataValue": 2628,
+         "maxSize": {
+          "type": "sizeInfo",
+          "valueExpression": "$view.scale",
+          "stops": [
+           {
+            "size": 75,
+            "value": 288895.277144
+           },
+           {
+            "size": 75,
+            "value": 2311162.217155
+           },
+           {
+            "size": 45,
+            "value": 18489297.737236
+           },
+           {
+            "size": 22.5,
+            "value": 147914381.897889
+           }
+          ]
+         },
+         "minDataValue": 0,
+         "minSize": {
+          "type": "sizeInfo",
+          "valueExpression": "$view.scale",
+          "stops": [
+           {
+            "size": 16.2,
+            "value": 288895.277144
+           },
+           {
+            "size": 12.8,
+            "value": 2311162.217155
+           },
+           {
+            "size": 6.8,
+            "value": 18489297.737236
+           },
+           {
+            "size": 3.5,
+            "value": 147914381.897889
+           }
+          ]
+         }
+        }
+       ],
+       "field1": "Victor",
+       "uniqueValueGroups": [
+        {
+         "classes": [
+          {
+           "label": "American Victory",
+           "symbol": {
+            "type": "esriSMS",
+            "color": [
+             53,
+             115,
+             135,
+             255
+            ],
+            "angle": 0,
+            "xoffset": 0,
+            "yoffset": 0,
+            "size": 12,
+            "style": "esriSMSDiamond",
+            "outline": {
+             "type": "esriSLS",
+             "color": [
+              153,
+              153,
+              153,
+              64
+             ],
+             "width": 0.75,
+             "style": "esriSLSSolid"
+            }
+           },
+           "values": [
+            [
+             "Side A Victory"
+            ]
+           ]
+          },
+          {
+           "label": "British Victory",
+           "symbol": {
+            "type": "esriSMS",
+            "color": [
+             161,
+             29,
+             29,
+             255
+            ],
+            "angle": 0,
+            "xoffset": 0,
+            "yoffset": 0,
+            "size": 12,
+            "style": "esriSMSDiamond",
+            "outline": {
+             "type": "esriSLS",
+             "color": [
+              153,
+              153,
+              153,
+              64
+             ],
+             "width": 0.75,
+             "style": "esriSLSSolid"
+            }
+           },
+           "values": [
+            [
+             "Side B Victory"
+            ]
+           ]
+          },
+          {
+           "label": "Inconclusive",
+           "symbol": {
+            "type": "esriSMS",
+            "color": [
+             161,
+             159,
+             159,
+             255
+            ],
+            "angle": 0,
+            "xoffset": 0,
+            "yoffset": 0,
+            "size": 12,
+            "style": "esriSMSDiamond",
+            "outline": {
+             "type": "esriSLS",
+             "color": [
+              153,
+              153,
+              153,
+              64
+             ],
+             "width": 0.75,
+             "style": "esriSLSSolid"
+            }
+           },
+           "values": [
+            [
+             "Inconclusive"
+            ]
+           ]
+          }
+         ]
+        }
+       ],
+       "uniqueValueInfos": [
+        {
+         "label": "US victory",
+         "symbol": {
+          "type": "esriSMS",
+          "color": [
+           53,
+           115,
+           135,
+           255
+          ],
+          "angle": 0,
+          "xoffset": 0,
+          "yoffset": 0,
+          "size": 12,
+          "style": "esriSMSDiamond",
+          "outline": {
+           "type": "esriSLS",
+           "color": [
+            153,
+            153,
+            153,
+            64
+           ],
+           "width": 0.75,
+           "style": "esriSLSSolid"
+          }
+         },
+         "value": "Side A Victory"
+        },
+        {
+         "label": "Victory for British or Native forces",
+         "symbol": {
+          "type": "esriSMS",
+          "color": [
+           161,
+           29,
+           29,
+           255
+          ],
+          "angle": 0,
+          "xoffset": 0,
+          "yoffset": 0,
+          "size": 12,
+          "style": "esriSMSDiamond",
+          "outline": {
+           "type": "esriSLS",
+           "color": [
+            153,
+            153,
+            153,
+            64
+           ],
+           "width": 0.75,
+           "style": "esriSLSSolid"
+          }
+         },
+         "value": "Side B Victory"
+        },
+        {
+         "label": "Inconclusive",
+         "symbol": {
+          "type": "esriSMS",
+          "color": [
+           161,
+           159,
+           159,
+           255
+          ],
+          "angle": 0,
+          "xoffset": 0,
+          "yoffset": 0,
+          "size": 12,
+          "style": "esriSMSDiamond",
+          "outline": {
+           "type": "esriSLS",
+           "color": [
+            153,
+            153,
+            153,
+            64
+           ],
+           "width": 0.75,
+           "style": "esriSLSSolid"
+          }
+         },
+         "value": "Inconclusive"
+        }
+       ]
+      }
+     }
+    },
+    "popupInfo": {
+     "popupElements": [
+      {
+       "type": "text",
+       "text": "<p style='text-align:center;'><span style='font-size:14px;'><span>{Dates}</span>&nbsp;</span></p><p style='text-align:center;'><span style='color:{expression/expr0}; font-size:18px;'><span>{expression/result}</span></span><span style='font-size:18px;'>&nbsp;</span></p><p style='text-align:center;'>Total Casualties: <span>{Total_Casualties}</span>&nbsp;<br /><span style='color:#120808; font-size:12px;'>____________________________________________________</span></p><p><span>{Narrative}</span>&nbsp;</p>"
+      },
+      {
+       "type": "media",
+       "description": "",
+       "mediaInfos": [
+        {
+         "altText": "",
+         "caption": "Casualties by side",
+         "title": "",
+         "type": "columnchart",
+         "value": {
+          "colors": [
+           [
+            24,
+            123,
+            148,
+            255
+           ],
+           [
+            171,
+            27,
+            30,
+            255
+           ]
+          ],
+          "fields": [
+           "Casualties_Side_A",
+           "Casualties_Side_B"
+          ]
+         }
+        }
+       ],
+       "title": ""
+      }
+     ],
+     "description": "<p style='text-align:center;'><span style='font-size:14px;'><span>{Dates}</span>&nbsp;</span></p><p style='text-align:center;'><span style='color:{expression/expr0}; font-size:18px;'><span>{expression/result}</span></span><span style='font-size:18px;'>&nbsp;</span></p><p style='text-align:center;'>Total Casualties: <span>{Total_Casualties}</span>&nbsp;<br /><span style='color:#120808; font-size:12px;'>____________________________________________________</span></p><p><span>{Narrative}</span>&nbsp;</p>",
+     "mediaInfos": [
+      {
+       "altText": "",
+       "caption": "Casualties by side",
+       "title": "",
+       "type": "columnchart",
+       "value": {
+        "colors": [
+         [
+          24,
+          123,
+          148,
+          255
+         ],
+         [
+          171,
+          27,
+          30,
+          255
+         ]
+        ],
+        "fields": [
+         "Casualties_Side_A",
+         "Casualties_Side_B"
+        ]
+       }
+      }
+     ],
+     "expressionInfos": [
+      {
+       "name": "expr0",
+       "title": "Victory Color",
+       "expression": "If ($feature.Victor == 'Side A Victory') {\r\n  return \"#357387\"\r\n}\r\nelse If ($feature.Victor == \"Side B Victory\") {\r\n  return \"#a11d1d\"\r\n}\r\n",
+       "returnType": "string"
+      },
+      {
+       "name": "result",
+       "title": "Result",
+       "returnType": "string",
+       "expression": "When($feature.Victor == 'Side A Victory', 'US victory', $feature.Victor == 'Side B Victory', 'Victory for British or Native forces', $feature.Victor == 'Inconclusive', 'Inconclusive', '')"
+      }
+     ],
+     "fieldInfos": [
+      {
+       "fieldName": "OBJECTID",
+       "format": {
+        "digitSeparator": false,
+        "places": 0
+       },
+       "isEditable": false,
+       "label": "ObjectID",
+       "visible": true
+      },
+      {
+       "fieldName": "Dates",
+       "isEditable": true,
+       "label": "Battle Dates",
+       "visible": true
+      },
+      {
+       "fieldName": "Date_Start",
+       "isEditable": true,
+       "label": "Battle Start Date",
+       "visible": true
+      },
+      {
+       "fieldName": "Date_End",
+       "isEditable": true,
+       "label": "Battle End Date",
+       "visible": true
+      },
+      {
+       "fieldName": "Battle",
+       "isEditable": true,
+       "label": "Battle Name",
+       "visible": true
+      },
+      {
+       "fieldName": "State",
+       "isEditable": true,
+       "label": "State Name",
+       "visible": true
+      },
+      {
+       "fieldName": "x",
+       "format": {
+        "digitSeparator": false,
+        "places": 6
+       },
+       "isEditable": true,
+       "label": "X Coordinate",
+       "visible": true
+      },
+      {
+       "fieldName": "y",
+       "format": {
+        "digitSeparator": false,
+        "places": 6
+       },
+       "isEditable": true,
+       "label": "Y Coordinate",
+       "visible": true
+      },
+      {
+       "fieldName": "Victor",
+       "isEditable": true,
+       "label": "Battle Victor",
+       "visible": true
+      },
+      {
+       "fieldName": "Thumbnail",
+       "isEditable": true,
+       "label": "Key Image",
+       "visible": true
+      },
+      {
+       "fieldName": "Thumbnail_Small",
+       "isEditable": true,
+       "label": "Key Image Small",
+       "visible": true
+      },
+      {
+       "fieldName": "Image_Credit",
+       "isEditable": true,
+       "label": "Image Credit",
+       "visible": true
+      },
+      {
+       "fieldName": "Narrative",
+       "isEditable": true,
+       "label": "Description",
+       "visible": true
+      },
+      {
+       "fieldName": "Troops_engaged_Side_A",
+       "format": {
+        "digitSeparator": true,
+        "places": 0
+       },
+       "isEditable": true,
+       "label": "America Troops Total",
+       "visible": true
+      },
+      {
+       "fieldName": "Troops_engaged_Side_B",
+       "format": {
+        "digitSeparator": true,
+        "places": 0
+       },
+       "isEditable": true,
+       "label": "British Troop Total",
+       "visible": true
+      },
+      {
+       "fieldName": "Casualties_Side_A",
+       "format": {
+        "digitSeparator": true,
+        "places": 0
+       },
+       "isEditable": true,
+       "label": "US casualties",
+       "visible": true
+      },
+      {
+       "fieldName": "Casualties_Side_B",
+       "format": {
+        "digitSeparator": true,
+        "places": 0
+       },
+       "isEditable": true,
+       "label": "Casualties of British or Native forces",
+       "visible": true
+      },
+      {
+       "fieldName": "Leaders_Side_A",
+       "isEditable": true,
+       "label": "American Leaders",
+       "visible": true
+      },
+      {
+       "fieldName": "Leaders_Side_B",
+       "isEditable": true,
+       "label": "British Leaders",
+       "visible": true
+      },
+      {
+       "fieldName": "Campaign",
+       "isEditable": true,
+       "label": "War Campaign",
+       "visible": true
+      },
+      {
+       "fieldName": "Battle_Page_URL",
+       "isEditable": true,
+       "label": "Battle Page URL",
+       "visible": true
+      },
+      {
+       "fieldName": "Additional_Sources",
+       "isEditable": true,
+       "label": "Additional Sources",
+       "visible": true
+      },
+      {
+       "fieldName": "Total_Casualties",
+       "format": {
+        "digitSeparator": true,
+        "places": 0
+       },
+       "isEditable": true,
+       "label": "Total Casualties",
+       "tooltip": "",
+       "visible": true
+      },
+      {
+       "fieldName": "expression/expr0",
+       "isEditable": true,
+       "visible": false
+      }
+     ],
+     "title": "{Battle}"
+    }
+   }
+  },
+  {
+   "id": "A8",
+   "what": "We the People layer item: credits and description cite the Census Bureau's 1791 return.",
+   "kind": "item-fields",
+   "item": "43ae0255f8ed46d5973871603f5956dd",
+   "fields": {
+    "description": [
+     "<p>House seats under the apportionment act of 14 April 1792 (105 seats, one for every 33,000 people counted under the three-fifths clause), with the seats each state would have had if enslaved people had been counted in full (<b>SeatsIfAll</b>) or not at all (<b>SeatsIfNone</b>).</p><p>The 1790 census figures are as tabulated in Wikipedia's article on the 1790 census, from the Census Bureau's <i>Heads of Families</i> volumes. Under the act's rule they reproduce every state's seats, which checks them.</p><p>Today's state outlines (Natural Earth, public domain), with Maine shown as part of Massachusetts and West Virginia as part of Virginia.</p><p><i>Version 1.0 (14 October 2026).</i></p>",
+     "<p>House seats under the apportionment act of 14 April 1792 (105 seats, one for every 33,000 people counted under the three-fifths clause), with the seats each state would have had if enslaved people had been counted in full (<b>SeatsIfAll</b>) or not at all (<b>SeatsIfNone</b>).</p><p>The 1790 census figures are from the Census Bureau's <i>Return of the Whole Number of Persons within the Several Districts of the United States</i> (1791). Under the act's rule they reproduce every state's seats, which checks them.</p><p>Today's state outlines (Natural Earth, public domain), with Maine shown as part of Massachusetts and West Virginia as part of Virginia.</p><p><i>Version 1.1 (23 October 2026).</i></p>"
+    ],
+    "accessInformation": [
+     "Seats: National Archives. Ratio: U.S. Census Bureau. 1790 census figures: Wikipedia (from Census Bureau volumes). Outlines: Natural Earth (public domain).",
+     "Seats: National Archives. Ratio: U.S. Census Bureau. 1790 census figures: U.S. Census Bureau, Return of the Whole Number of Persons (1791). Outlines: Natural Earth (public domain)."
+    ]
+   }
+  },
+  {
+   "id": "A8",
+   "what": "We the People: Source field cites the Census Bureau's 1791 return.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 1,
+   "field": "Source",
+   "from": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://en.wikipedia.org/wiki/1790_United_States_census",
+   "to": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://www.census.gov/library/publications/1793/dec/number-of-persons.html"
+  },
+  {
+   "id": "A8",
+   "what": "We the People: Source field cites the Census Bureau's 1791 return.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 2,
+   "field": "Source",
+   "from": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://en.wikipedia.org/wiki/1790_United_States_census",
+   "to": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://www.census.gov/library/publications/1793/dec/number-of-persons.html"
+  },
+  {
+   "id": "A8",
+   "what": "We the People: Source field cites the Census Bureau's 1791 return.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 3,
+   "field": "Source",
+   "from": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://en.wikipedia.org/wiki/1790_United_States_census",
+   "to": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://www.census.gov/library/publications/1793/dec/number-of-persons.html"
+  },
+  {
+   "id": "A8",
+   "what": "We the People: Source field cites the Census Bureau's 1791 return.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 4,
+   "field": "Source",
+   "from": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://en.wikipedia.org/wiki/1790_United_States_census",
+   "to": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://www.census.gov/library/publications/1793/dec/number-of-persons.html"
+  },
+  {
+   "id": "A8",
+   "what": "We the People: Source field cites the Census Bureau's 1791 return.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 5,
+   "field": "Source",
+   "from": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://en.wikipedia.org/wiki/1790_United_States_census",
+   "to": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://www.census.gov/library/publications/1793/dec/number-of-persons.html"
+  },
+  {
+   "id": "A8",
+   "what": "We the People: Source field cites the Census Bureau's 1791 return.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 6,
+   "field": "Source",
+   "from": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://en.wikipedia.org/wiki/1790_United_States_census",
+   "to": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://www.census.gov/library/publications/1793/dec/number-of-persons.html"
+  },
+  {
+   "id": "A8",
+   "what": "We the People: Source field cites the Census Bureau's 1791 return.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 7,
+   "field": "Source",
+   "from": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://en.wikipedia.org/wiki/1790_United_States_census",
+   "to": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://www.census.gov/library/publications/1793/dec/number-of-persons.html"
+  },
+  {
+   "id": "A8",
+   "what": "We the People: Source field cites the Census Bureau's 1791 return.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 8,
+   "field": "Source",
+   "from": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://en.wikipedia.org/wiki/1790_United_States_census",
+   "to": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://www.census.gov/library/publications/1793/dec/number-of-persons.html"
+  },
+  {
+   "id": "A8",
+   "what": "We the People: Source field cites the Census Bureau's 1791 return.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 9,
+   "field": "Source",
+   "from": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://en.wikipedia.org/wiki/1790_United_States_census",
+   "to": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://www.census.gov/library/publications/1793/dec/number-of-persons.html"
+  },
+  {
+   "id": "A8",
+   "what": "We the People: Source field cites the Census Bureau's 1791 return.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 10,
+   "field": "Source",
+   "from": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://en.wikipedia.org/wiki/1790_United_States_census",
+   "to": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://www.census.gov/library/publications/1793/dec/number-of-persons.html"
+  },
+  {
+   "id": "A8",
+   "what": "We the People: Source field cites the Census Bureau's 1791 return.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 11,
+   "field": "Source",
+   "from": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://en.wikipedia.org/wiki/1790_United_States_census",
+   "to": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://www.census.gov/library/publications/1793/dec/number-of-persons.html"
+  },
+  {
+   "id": "A8",
+   "what": "We the People: Source field cites the Census Bureau's 1791 return.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 12,
+   "field": "Source",
+   "from": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://en.wikipedia.org/wiki/1790_United_States_census",
+   "to": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://www.census.gov/library/publications/1793/dec/number-of-persons.html"
+  },
+  {
+   "id": "A8",
+   "what": "We the People: Source field cites the Census Bureau's 1791 return.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 13,
+   "field": "Source",
+   "from": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://en.wikipedia.org/wiki/1790_United_States_census",
+   "to": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://www.census.gov/library/publications/1793/dec/number-of-persons.html"
+  },
+  {
+   "id": "A8",
+   "what": "We the People: Source field cites the Census Bureau's 1791 return.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 14,
+   "field": "Source",
+   "from": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://en.wikipedia.org/wiki/1790_United_States_census",
+   "to": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://www.census.gov/library/publications/1793/dec/number-of-persons.html"
+  },
+  {
+   "id": "A8",
+   "what": "We the People: Source field cites the Census Bureau's 1791 return.",
+   "kind": "feature-value",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_House_Seats_1793/FeatureServer/0",
+   "objectIdField": "ObjectId",
+   "objectId": 15,
+   "field": "Source",
+   "from": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://en.wikipedia.org/wiki/1790_United_States_census",
+   "to": "Seats: https://prologue.blogs.archives.gov/2022/04/04/the-1790-census-and-the-first-veto ; ratio: https://www.census.gov/about/history/historical-censuses-and-surveys/census-programs-surveys/decennial-census/legislation-1790-1830.html ; 1790 census figures: https://www.census.gov/library/publications/1793/dec/number-of-persons.html"
+  }
+ ]
+}

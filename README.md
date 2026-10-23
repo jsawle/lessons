@@ -36,6 +36,14 @@ Before the map loads, the player tests each web map layer from this website. Any
 ## Tools
 - `tools/make_lab_portfolio.py`: run in an ArcGIS Notebook. It makes a private lab copy of a lesson Portfolio with a Mystery Place tab added. The original is only read, never changed.
 
+## Web maps (`maps/`)
+Checks and fixes for the lessons' web maps and layers. Nothing here signs in to ArcGIS Online; changes are made only by a notebook run by someone who can edit the items.
+- `maps/checklist.md`: what each lesson's web map and layers should meet.
+- `maps/audit.py` (Map audit 1.2): reads each public web map and its layers and lists what to check (`maps/audit/`). The **Map audit** workflow runs it on GitHub.
+- `maps/fixes.md`: the ranked fixes, checked against the live maps.
+- `maps/fixes/build.py` builds the fix lists (`maps/fixes/sandbox.json`, `maps/fixes/mapmaker.json`) from the live maps; `maps/fix_maps.py` (Map fixes 1.0) applies one in an ArcGIS Notebook: dry run first, a backup of everything it changes, and a change only where the item is still as it was when the list was built.
+- The **Map pictures** workflow (`resources/tools/map-screenshots.mjs`, Map pictures 1.0) takes the lesson pages' map pictures.
+
 ## Changelog
 - **1.1.0**: MapMaker handoff v1.0 adds "Open in MapMaker" (header), "Investigate … in MapMaker" (every round) and "Keep exploring in MapMaker" (end), set per lesson or with `?mapmakerApp=`. Also adds "Copy my results" with a fallback for when downloads are blocked inside a Portfolio tab, plus a handoff test under Teacher tools.
 - **1.0.1**: Layer access check v1.0 added. Data reader v1.1: elevation stays readable when its map layer is skipped.

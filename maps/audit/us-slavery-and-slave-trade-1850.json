@@ -1,0 +1,1711 @@
+{
+ "tool": "Map audit 1.2",
+ "lesson": "us-slavery-and-slave-trade-1850",
+ "webmapId": "819f60a5a3344d958d24f505849abaaa",
+ "item": {
+  "id": "819f60a5a3344d958d24f505849abaaa",
+  "title": "US Slavery and Slave Trade, 1850",
+  "type": "Web Map",
+  "owner": "mm.atlas",
+  "access": "public",
+  "snippet": "This map from \"Harper's Atlas of American History\" shows which U.S. states and territories in 1850 permitted the enslavement of people, and which did not. Slavery had been practiced in North America since well before the United States was founded in 1776, and by 1850, it was entrenched in the agricultural economy of the southern states.",
+  "description": "<p><font size='4'><span style='color:rgb(51, 51, 51);'><i>Note: Explore this map with the activity </i></span><a href='https://storymaps.arcgis.com/collections/e64d01b221bb48cfb49f25974be8e3cd?item=3' target='_blank' rel='nofollow ugc noopener noreferrer'>The Underground Railroad</a><span style='color:rgb(51, 51, 51);'><i>.</i></span></font></p><p><font size='4'><span style='color:rgb(51, 51, 51);'>This map shows which states\nand territories in 1850 permitted the enslavement of people, and which did not.</span><span style='color:black;'> Slavery\nhad been practiced in North America since well before the United States was\nfounded in 1776, and by 1850 it was a key part of the agricultural economy of\nthe southern states. Large cotton plantations operated on the labor of enslaved\npeople, particularly</span><span style='color:black;'> <a>Black Africans</a></span><span style='color:black;'>. Meanwhile, the northern United States had a\nmore industrial economy, and by 1850 had mostly prohibited</span><span style='color:black;'> <a><span><span>slavery for economic, political, and moral\nreasons.</span></span></a></span> <span style='color:black;'>Though these states were considered “free”\nstates, in many cases this meant that slavery wasn’t widespread. Even in states\nand territories where slavery was technically illegal, there were many loopholes\nthat kept people enslaved and restricted free Black people. </span></font></p>\n\n<p><font size='4'><a><span style='color:black;'>I</span></a><span><span style='color:black;'>n </span></span><span style='color:black;'>the years before the American Civil War, which began in\n1861, the question of <a>whether </a></span><span style='color:black;'>new states would allow slavery caused a lot of disagreement\nand tension between the North and South. The United States was carefully\nbalanced to have as many &quot;slave&quot; states as &quot;free&quot; states, giving both sides an\nequal number of <a>senators</a></span><span style='color:black;'>. The South was worried that if more free states were\nadded, this balance would be upset, and the North would be able to pass\nlegislation banning slavery in the United States. The North didn't want slavery\nto spread to new areas, both for moral reasons and because they didn’t think it\nwas fair that enslaved people couldn’t vote but counted as part of the\npopulation when assigning congressional delegates. They argued that this gave\nthe South an unfair advantage when voting for new laws. To try to keep the\npeace, a series of compromises, such as the </span><a href='https://education.nationalgeographic.org/resource/missouri-compromise/' rel='nofollow ugc'><span>Missouri Compromise\nof 1820</span></a><span style='color:black;'> were proposed to determine what states and territories\nwould or would not permit slavery.</span></font></p>\n\n<p><font size='4'><a><span><span style='color:rgb(18, 18, 18);'>Another issue that caused\ntension between abolitionists in the North and slave owners in the South was the\nongoing trade of enslaved people.</span><span style='color:rgb(18, 18, 18);'> </span></span></a><span style='color:rgb(18, 18, 18);'>The United States\ngovernment had banned foreign slave trade in 1800, but this did nothing to free\nthe people who were already enslaved in the United States. States in the upper\nSouth, such as Virginia, now profited from selling </span><span style='color:rgb(18, 18, 18);'>enslaved people to new\nstates in the Deep South.</span></font></p>\n\n<p><font size='4'><span style='color:black;'>To escape enslavement, some enslaved people used an informal network of\nroutes, places, and people known as the </span><a href='https://education.nationalgeographic.org/resource/underground-railroad/' rel='nofollow ugc'><span>Underground Railroad</span></a><span style='color:black;'> to\ntravel in secret to the Northern United States and into Canada, where slavery\nwas illegal. The Underground Railroad was not a literal underground railroad, but\nbecause escaping from slavery and helping enslaved people escape was illegal, the\nnetwork operated in secret. The “conductors” were the people leading enslaved\npeople to freedom and the “station masters,” those who hid enslaved people on\nthe way north. According to some estimates, between 1810 and 1850, the\nUnderground Railroad helped to guide 100,000 enslaved people to freedom.</span></font></p>\n\n<p><font size='4'><span style='color:black;'>This map was made through the process of digitization, or\ntracing historical maps using modern <a>geographic information system (GIS)</a></span><span><span><span> </span></span></span><span style='color:black;'>software. </span><span style='font-family:&quot;Open Sans&quot;, sans-serif; color:black;'>These\nmaps don’t always line up perfectly with modern boundaries, for many reasons.\nOver time, natural landmarks, such as rivers, can shift their paths, and human\nlandmarks, such as buildings and roads, can be abandoned and demolished. There\nare also differences in the accuracy of hand-drawn maps compared to\ncomputer-drawn maps.</span><span> </span></font></p>\n\n<p><span style='color:black;'><font size='4'>The original maps are published in Harper’s Atlas of\nAmerican History, and are available through the Library of Congress:</font></span></p>\n\n<p><a href='https://lccn.loc.gov/32005827' rel='nofollow ugc'><span><font size='4'>Slavery and Slave\nTrade 1830-1850</font></span></a></p>\n\n<p><a href='https://lccn.loc.gov/32005827' rel='nofollow ugc'><span><font size='4'>Routes of the\nUnderground Railroad 1830-1865</font></span></a></p>\n\n<p><font size='4'><span style='font-family:&quot;Open Sans&quot;, sans-serif; color:rgb(36, 36, 36);'>Fox,\nDixon Ryan. <i>Harper's atlas of American history, selected from &quot;The American\nnation series,&quot; with map studies, by Dixon Ryan Fox</i>. [New York,\nLondon, Harper &amp; Brothers, 1920] Pdf. </span><a href='https://www.loc.gov/item/32005827/' rel='nofollow ugc'><span style='font-family:&quot;Open Sans&quot;, sans-serif;'>https://www.loc.gov/item/32005827/</span></a></font></p>",
+  "tags": [
+   "underground railroad",
+   "enslaved people",
+   "Missouri Compromise",
+   "abolition",
+   "Harper's Atlas of American History",
+   "Library of Congress",
+   "schools",
+   "learn",
+   "education",
+   "MapMaker"
+  ],
+  "accessInformation": "Library of Congress, Esri",
+  "licenseInfo": "<img src='https://downloads.esri.com/blogs/arcgisonline/esrilogo_new.png' style='max-width:100%; height:auto; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;' /><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'> This work is licensed under the Esri Master License Agreement.</span><br /><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><a href='https://goto.arcgis.com/termsofuse/viewsummary' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Summary</b></a> | <a href='https://goto.arcgis.com/termsofuse/viewtermsofuse' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Terms of Use</b></a></div>",
+  "created": 1695065664000,
+  "modified": 1787767944000,
+  "numViews": 5672,
+  "thumbnail": "thumbnail/ago_downloaded.png",
+  "contentStatus": null,
+  "extent": [
+   [
+    -129.112121351432,
+    22.79700590273748
+   ],
+   [
+    -63.94419451275465,
+    57.877377880029265
+   ]
+  ],
+  "descriptionChars": 3899
+ },
+ "basemap": {
+  "title": "USA Contiguous Albers Equal Area Conic Basemap",
+  "layers": [
+   {
+    "title": "USA Contiguous Albers Equal Area Conic Basemap",
+    "type": "VectorTileLayer",
+    "url": "https://tiles.arcgis.com/tiles/j80Jz20at6Bi0thr/arcgis/rest/services/USA_Contiguous_Albers_Equal_Area_Conic_Basemap/VectorTileServer/resources/styles/root.json",
+    "itemId": "fcc348034ea24dc8a9c6bddf58302f49"
+   },
+   {
+    "title": "USAMajorRivers_Project",
+    "type": "ArcGISTiledMapServiceLayer",
+    "url": "https://tiles.arcgis.com/tiles/iFGeGXTAJXnjq0YN/arcgis/rest/services/USAMajorRivers_Project/MapServer",
+    "itemId": "848f482c7e9941a4bd9987e78d3a3e90"
+   }
+  ]
+ },
+ "opening": {
+  "extent": {
+   "spatialReference": {
+    "latestWkid": 102003,
+    "wkid": 102003
+   },
+   "xmin": -2212687.310767922,
+   "ymin": -1379714.4387665023,
+   "xmax": 2136352.177436016,
+   "ymax": 2230731.056658968
+  },
+  "scale": 20215968
+ },
+ "bookmarks": [
+  "Illinois, Indiana, and Ohio",
+  "Pennsylvania and New England"
+ ],
+ "applicationProperties": null,
+ "layers": [
+  {
+   "path": "US 1850 Original Map",
+   "title": "US 1850 Original Map",
+   "layerType": "ArcGISTiledMapServiceLayer",
+   "visible": false,
+   "onAtStart": false,
+   "opacity": null,
+   "itemId": "a3cdd4cbc0f6452a8fff1b3b2718eba0",
+   "url": "https://tiles.arcgis.com/tiles/iFGeGXTAJXnjq0YN/arcgis/rest/services/US_1850_Original_Map_Albers/MapServer",
+   "disablePopup": false,
+   "popup": null,
+   "popupFrom": null,
+   "minScale": 62380575.811979,
+   "maxScale": 1949392.994124,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "item": {
+    "id": "a3cdd4cbc0f6452a8fff1b3b2718eba0",
+    "title": "US 1850 Original Map",
+    "type": "Map Service",
+    "owner": "mm.atlas",
+    "access": "public",
+    "snippet": "This historic map was originally published in Harper's Atlas of American History copyrighted 1920 by Harper & Brothers. ",
+    "description": "<p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><span style='font-family:inherit; color:black;'>This historic map was originally published in Harper's Atlas of American History copyrighted 1920 by Harper &amp; Brothers. It was made through the process of digitization, or tracing historical maps using modern <a style='color:rgb(0, 97, 155); font-family:inherit;'>geographic information system (GIS)</a></span><span style='font-family:inherit;'><span style='font-family:inherit;'><span style='font-family:inherit;'> </span></span></span><span style='font-family:inherit; color:black;'>software. </span><span style='font-family:&quot;Open Sans&quot;, sans-serif; color:black;'>These maps don’t always line up perfectly with modern boundaries, for many reasons. Over time, natural landmarks, such as rivers, can shift their paths, and human landmarks, such as buildings and roads, can be abandoned and demolished. There are also differences in the accuracy of hand-drawn maps compared to computer-drawn maps.</span><span style='font-family:inherit;'> </span></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><span style='font-family:inherit; color:black;'><font size='3' style='font-family:inherit;'>The original maps are available through the Library of Congress:</font></span></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><a href='https://lccn.loc.gov/32005827' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'>Slavery and Slave Trade 1830-1850</a></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><a href='https://lccn.loc.gov/32005827' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'>Routes of the Underground Railroad 1830-1865</a></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><span style='font-family:&quot;Open Sans&quot;, sans-serif; color:rgb(36, 36, 36);'>Fox, Dixon Ryan. <i>Harper's atlas of American history, selected from &quot;The American nation series,&quot; with map studies, by Dixon Ryan Fox</i>. [New York, London, Harper &amp; Brothers, 1920] Pdf. </span><a href='https://www.loc.gov/item/32005827/' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'><span style='font-family:&quot;Open Sans&quot;, sans-serif;'>https://www.loc.gov/item/32005827/</span></a></font></p>",
+    "tags": [
+     "historic map",
+     "digitized",
+     "Library of Congress",
+     "Harper's Atlas of American History",
+     "schools",
+     "learn",
+     "education",
+     "MapMaker"
+    ],
+    "accessInformation": "Library of Congress, Esri",
+    "licenseInfo": "<span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'>The map from which this data was digitized, is in the </span><a href='https://www.loc.gov/item/32005827/' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;' target='_blank' rel='nofollow ugc noopener noreferrer'>public domain</a><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'>.</span>",
+    "created": 1695158028000,
+    "modified": 1709696411000,
+    "numViews": 9921,
+    "thumbnail": "thumbnail/thumbnail.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -151.884906106416,
+      4.82117243421419
+     ],
+     [
+      -42.5319440792096,
+      66.1950293462702
+     ]
+    ],
+    "descriptionChars": 962
+   },
+   "service": {
+    "url": "https://tiles.arcgis.com/tiles/iFGeGXTAJXnjq0YN/arcgis/rest/services/US_1850_Original_Map_Albers/MapServer",
+    "copyrightText": "Library of Congress, Esri",
+    "minScale": 62380575.81197931,
+    "maxScale": 1949392.9941243534
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false,
+   "popupNamesClass": false
+  },
+  {
+   "path": "United States, 1850",
+   "title": "United States, 1850",
+   "layerType": "GroupLayer",
+   "visible": true,
+   "onAtStart": true,
+   "opacity": null,
+   "itemId": null,
+   "url": null,
+   "disablePopup": false,
+   "popup": null,
+   "popupFrom": null,
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "drawsAtOpening": true,
+   "rendererColourOnly": false,
+   "popupNamesClass": false
+  },
+  {
+   "path": "United States, 1850 / US States and Territories 1850",
+   "title": "US States and Territories 1850",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "onAtStart": true,
+   "opacity": null,
+   "itemId": "37a9e358f0794a6da03b6ee2f4c0f24a",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/USStatesandTerritories_1850_Albers_version/FeatureServer/1",
+   "disablePopup": false,
+   "popup": {
+    "title": "{STATE_NAME}",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [
+     "Free vs. Slave States"
+    ],
+    "fieldsInText": [
+     "Designation",
+     "expression/expr0"
+    ]
+   },
+   "popupFrom": "map",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "uniqueValue",
+    "field": "Designation",
+    "valueExpression": false,
+    "classes": [
+     {
+      "value": "1",
+      "label": "Abolition by state action by 1850, Ordinance of 1787, act of Congress, and state constitution",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "2",
+      "label": "Abolition by state action by 1850, Ordinance of 1787, act of Congress, and state constitution",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "3",
+      "label": "Abolition by state action by 1850, Ordinance of 1787, act of Congress, and state constitution",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "6",
+      "label": "Free by Compromise of 1820, Missouri Compromise; Acts of Congress admitting Texas, Act of 1848, Ordinance of 1787, and state constitution",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "7",
+      "label": "Free by Compromise of 1820, Missouri Compromise; Acts of Congress admitting Texas, Act of 1848, Ordinance of 1787, and state constitution",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "8",
+      "label": "Free by Compromise of 1820, Missouri Compromise; Acts of Congress admitting Texas, Act of 1848, Ordinance of 1787, and state constitution",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "9",
+      "label": "Free by Compromise of 1820, Missouri Compromise; Acts of Congress admitting Texas, Act of 1848, Ordinance of 1787, and state constitution",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "5",
+      "label": "Free by Compromise of 1820, Missouri Compromise; Acts of Congress admitting Texas, Act of 1848, Ordinance of 1787, and state constitution",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "4",
+      "label": "Free by Compromise of 1820, Missouri Compromise; Acts of Congress admitting Texas, Act of 1848, Ordinance of 1787, and state constitution",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "10",
+      "label": "Original slave states, and slave states admitted out of territory",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "11",
+      "label": "Original slave states, and slave states admitted out of territory",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "12",
+      "label": "Slave state by annexation, Compromise of 1850, by old French law",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "13",
+      "label": "Slave state by annexation, Compromise of 1850, by old French law",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "14",
+      "label": "Slave state by annexation, Compromise of 1850, by old French law",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "15",
+      "label": "Slave state by annexation, Compromise of 1850, by old French law",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "16",
+      "label": "Slave state by annexation, Compromise of 1850, by old French law",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     }
+    ],
+    "default": null
+   },
+   "item": {
+    "id": "37a9e358f0794a6da03b6ee2f4c0f24a",
+    "title": "US States and Territories 1850",
+    "type": "Feature Service",
+    "owner": "mm.atlas",
+    "access": "public",
+    "snippet": "This layer provides a picture of the colonization of land in the United States in 1850.",
+    "description": "<p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><span style='font-family:inherit; color:rgb(51, 51, 51);'>This layer shows which states and territories in 1850 permitted the enslavement of people, and which did not.</span><span style='font-family:inherit; color:black;'> Slavery had been practiced in North America since well before the United States was founded in 1776, and by 1850 it was a key part of the agricultural economy of the southern states. Large cotton plantations operated on the labor of enslaved people, particularly</span><span style='font-family:inherit; color:black;'> <a style='color:rgb(0, 97, 155); font-family:inherit;'>Black Africans</a></span><span style='font-family:inherit; color:black;'>. Meanwhile, the northern United States had a more industrial economy, and by 1850 had mostly prohibited</span><span style='font-family:inherit; color:black;'> <a style='color:rgb(0, 97, 155); font-family:inherit;'><span style='font-family:inherit;'><span style='font-family:inherit;'>slavery for economic, political, and moral reasons.</span></span></a></span><span style='font-family:inherit;'> </span><span style='font-family:inherit; color:black;'>Though these states were considered “free” states, in many cases this meant that slavery wasn’t widespread. Even in states and territories where slavery was technically illegal, there were many loopholes that kept people enslaved and restricted free Black people. </span></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><a style='color:rgb(0, 97, 155); font-family:inherit;'><span style='font-family:inherit; color:black;'>I</span></a><span style='font-family:inherit;'><span style='font-family:inherit; color:black;'>n </span></span><span style='font-family:inherit; color:black;'>the years before the American Civil War, which began in 1861, the question of <a style='color:rgb(0, 97, 155); font-family:inherit;'>whether </a></span><span style='font-family:inherit; color:black;'>new states would allow slavery caused a lot of disagreement and tension between the North and South. The United States was carefully balanced to have as many &quot;slave&quot; states as &quot;free&quot; states, giving both sides an equal number of <a style='color:rgb(0, 97, 155); font-family:inherit;'>senators</a></span><span style='font-family:inherit; color:black;'>. The South was worried that if more free states were added, this balance would be upset, and the North would be able to pass legislation banning slavery in the United States. The North didn't want slavery to spread to new areas, both for moral reasons and because they didn’t think it was fair that enslaved people couldn’t vote but counted as part of the population when assigning congressional delegates. They argued that this gave the South an unfair advantage when voting for new laws. To try to keep the peace, a series of compromises, such as the </span><a href='https://education.nationalgeographic.org/resource/missouri-compromise/' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'><span style='font-family:inherit;'>Missouri Compromise of 1820</span></a><span style='font-family:inherit; color:black;'> were proposed to determine what states and territories would or would not permit slavery.</span></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><span style='font-family:inherit; color:black;'>This layer was made through the process of digitization, or tracing historical maps using modern <a style='color:rgb(0, 97, 155); font-family:inherit;'>geographic information system (GIS)</a></span><span style='font-family:inherit;'><span style='font-family:inherit;'><span style='font-family:inherit;'> </span></span></span><span style='font-family:inherit; color:black;'>software. </span><span style='font-family:&quot;Open Sans&quot;, sans-serif; color:black;'>These maps don’t always line up perfectly with modern boundaries, for many reasons. Over time, natural landmarks, such as rivers, can shift their paths, and human landmarks, such as buildings and roads, can be abandoned and demolished. There are also differences in the accuracy of hand-drawn maps compared to computer-drawn maps.</span><span style='font-family:inherit;'> </span></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><span style='font-family:inherit; color:black;'><font size='3' style='font-family:inherit;'>The original maps are published in Harper’s Atlas of American History, and are available through the Library of Congress:</font></span></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><a href='https://lccn.loc.gov/32005827' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'>Slavery and Slave Trade 1830-1850</a></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><a href='https://lccn.loc.gov/32005827' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'>Routes of the Underground Railroad 1830-1865</a></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><span style='font-family:&quot;Open Sans&quot;, sans-serif; color:rgb(36, 36, 36);'>Fox, Dixon Ryan. <i>Harper's atlas of American history, selected from &quot;The American nation series,&quot; with map studies, by Dixon Ryan Fox</i>. [New York, London, Harper &amp; Brothers, 1920] Pdf. </span><a href='https://www.loc.gov/item/32005827/' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'><span style='font-family:&quot;Open Sans&quot;, sans-serif;'>https://www.loc.gov/item/32005827/</span></a></font></p>",
+    "tags": [
+     "slavery",
+     "Missouri Compromise",
+     "territory",
+     "Louisiana territory",
+     "learn",
+     "school",
+     "education",
+     "MapMaker"
+    ],
+    "accessInformation": "Library of Congress, Esri",
+    "licenseInfo": "<span style='font-size:16px;'>The map from which this data was digitized, is in the </span><a href='https://www.loc.gov/item/32005827/' style='color:rgb(0, 97, 155); text-decoration-line:none; font-size:16px;' target='_blank' rel='nofollow ugc noopener noreferrer'>public domain</a><span style='font-size:16px;'>.</span>",
+    "created": 1695065384000,
+    "modified": 1709696404000,
+    "numViews": 24200,
+    "thumbnail": "thumbnail/thumbnail.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -127.84204525529486,
+      21.633709461886696
+     ],
+     [
+      -64.52761029333108,
+      51.540441746789305
+     ]
+    ],
+    "descriptionChars": 2727
+   },
+   "service": {
+    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/USStatesandTerritories_1850_Albers_version/FeatureServer/1",
+    "name": "USStatesandTerritori_Project",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "uniqueValue",
+     "field": "Designation",
+     "valueExpression": false,
+     "classes": [
+      {
+       "value": "0",
+       "label": "No designation",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         145,
+         80,
+         70,
+         255
+        ],
+        "outline": {
+         "color": [
+          0,
+          0,
+          0,
+          255
+         ],
+         "width": 1,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "1",
+       "label": "Abolition by state action by 1830",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         81,
+         232,
+         111,
+         255
+        ],
+        "outline": {
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0.7,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "2",
+       "label": "Abolition by state action between 1830-1850",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         86,
+         84,
+         232,
+         255
+        ],
+        "outline": {
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0.7,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "3",
+       "label": "Free by Ordinance of 1787, act of Congress, and state constitution",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         162,
+         231,
+         245,
+         255
+        ],
+        "outline": {
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0.7,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "4",
+       "label": "Free by Ordinance of 1787, act of Congress",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         207,
+         185,
+         78,
+         255
+        ],
+        "outline": {
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0.7,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "5",
+       "label": "Free by Missouri Compromise of 1820, acts of Congress, and state constitution",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         63,
+         102,
+         166,
+         255
+        ],
+        "outline": {
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0.7,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "6",
+       "label": "Free by Missouri Compromise",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         242,
+         109,
+         185,
+         255
+        ],
+        "outline": {
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0.7,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "7",
+       "label": "Free by act of Congress admitting Texas",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         245,
+         196,
+         164,
+         255
+        ],
+        "outline": {
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0.7,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "8",
+       "label": "Free by act of Congress 1848",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         130,
+         60,
+         145,
+         255
+        ],
+        "outline": {
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0.7,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "9",
+       "label": "Free by state constitution",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         247,
+         143,
+         99,
+         255
+        ],
+        "outline": {
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0.7,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "10",
+       "label": "Original slave states",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         227,
+         113,
+         240,
+         255
+        ],
+        "outline": {
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0.7,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "11",
+       "label": "Slave states admitted out of territory",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         169,
+         165,
+         250,
+         255
+        ],
+        "outline": {
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0.7,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "12",
+       "label": "Free by Missouri Compromise, slave by addition to Missouri",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         96,
+         235,
+         179,
+         255
+        ],
+        "outline": {
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0.7,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "13",
+       "label": "Slave state by annexation",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         90,
+         130,
+         138,
+         255
+        ],
+        "outline": {
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0.7,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "14",
+       "label": "Territory opened to slavery by compromise of 1850",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         230,
+         147,
+         163,
+         255
+        ],
+        "outline": {
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0.7,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "15",
+       "label": "Slave territory by old French law; no action of Congress to the contrary",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         247,
+         87,
+         121,
+         255
+        ],
+        "outline": {
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0.7,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "16",
+       "label": "Free by Missouri Compromise, opened to slavery by Compromise of 1850",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         168,
+         214,
+         122,
+         255
+        ],
+        "outline": {
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0.7,
+         "style": "esriSLSSolid"
+        }
+       }
+      }
+     ],
+     "default": "<all other values>"
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "STATE_NAME",
+      "alias": "Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "STATE_ABBR",
+      "alias": "Abbreviation",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SUB_REGION",
+      "alias": "Region",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "GlobalID",
+      "alias": "GlobalID",
+      "type": "esriFieldTypeGlobalID",
+      "domain": false
+     },
+     {
+      "name": "Designation",
+      "alias": "Designation",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Shape__Area",
+      "alias": "Shape__Area",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "StateYear",
+      "alias": "StateYear",
+      "type": "esriFieldTypeSingle",
+      "domain": false
+     },
+     {
+      "name": "Type",
+      "alias": "Type",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "FreeSlave12",
+      "alias": "FreeSlave12",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "37a9e358f0794a6da03b6ee2f4c0f24a",
+    "count": 44,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "STATE_NAME",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.1
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false,
+   "popupNamesClass": true
+  },
+  {
+   "path": "United States, 1850 / Internal Routes of the US Slave Trade",
+   "title": "Internal Routes of the US Slave Trade",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "onAtStart": true,
+   "opacity": null,
+   "itemId": "37a9e358f0794a6da03b6ee2f4c0f24a",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/USStatesandTerritories_1850_Albers_version/FeatureServer/0",
+   "disablePopup": true,
+   "popup": {
+    "title": "{Type}",
+    "fieldsShown": [
+     {
+      "field": "OBJECTID",
+      "label": "OBJECTID"
+     },
+     {
+      "field": "InLine_FID",
+      "label": "InLine_FID"
+     },
+     {
+      "field": "Type",
+      "label": "Type"
+     },
+     {
+      "field": "Shape__Length",
+      "label": "Shape__Length"
+     }
+    ],
+    "fieldLabelsAreNames": [
+     "OBJECTID",
+     "InLine_FID",
+     "Shape__Length"
+    ],
+    "elements": [
+     "fields"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": []
+   },
+   "popupFrom": "layer item",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "uniqueValue",
+    "field": "Type",
+    "valueExpression": false,
+    "classes": [
+     {
+      "value": "Internal Routes",
+      "label": "Internal Routes",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "Route of L'Amistead",
+      "label": "Route of L'Amistead",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "Route of the Creole",
+      "label": "Route of the Creole",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "Sea Routes",
+      "label": "Sea Routes",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     }
+    ],
+    "default": null
+   },
+   "item": {
+    "id": "37a9e358f0794a6da03b6ee2f4c0f24a",
+    "title": "US States and Territories 1850",
+    "type": "Feature Service",
+    "owner": "mm.atlas",
+    "access": "public",
+    "snippet": "This layer provides a picture of the colonization of land in the United States in 1850.",
+    "description": "<p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><span style='font-family:inherit; color:rgb(51, 51, 51);'>This layer shows which states and territories in 1850 permitted the enslavement of people, and which did not.</span><span style='font-family:inherit; color:black;'> Slavery had been practiced in North America since well before the United States was founded in 1776, and by 1850 it was a key part of the agricultural economy of the southern states. Large cotton plantations operated on the labor of enslaved people, particularly</span><span style='font-family:inherit; color:black;'> <a style='color:rgb(0, 97, 155); font-family:inherit;'>Black Africans</a></span><span style='font-family:inherit; color:black;'>. Meanwhile, the northern United States had a more industrial economy, and by 1850 had mostly prohibited</span><span style='font-family:inherit; color:black;'> <a style='color:rgb(0, 97, 155); font-family:inherit;'><span style='font-family:inherit;'><span style='font-family:inherit;'>slavery for economic, political, and moral reasons.</span></span></a></span><span style='font-family:inherit;'> </span><span style='font-family:inherit; color:black;'>Though these states were considered “free” states, in many cases this meant that slavery wasn’t widespread. Even in states and territories where slavery was technically illegal, there were many loopholes that kept people enslaved and restricted free Black people. </span></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><a style='color:rgb(0, 97, 155); font-family:inherit;'><span style='font-family:inherit; color:black;'>I</span></a><span style='font-family:inherit;'><span style='font-family:inherit; color:black;'>n </span></span><span style='font-family:inherit; color:black;'>the years before the American Civil War, which began in 1861, the question of <a style='color:rgb(0, 97, 155); font-family:inherit;'>whether </a></span><span style='font-family:inherit; color:black;'>new states would allow slavery caused a lot of disagreement and tension between the North and South. The United States was carefully balanced to have as many &quot;slave&quot; states as &quot;free&quot; states, giving both sides an equal number of <a style='color:rgb(0, 97, 155); font-family:inherit;'>senators</a></span><span style='font-family:inherit; color:black;'>. The South was worried that if more free states were added, this balance would be upset, and the North would be able to pass legislation banning slavery in the United States. The North didn't want slavery to spread to new areas, both for moral reasons and because they didn’t think it was fair that enslaved people couldn’t vote but counted as part of the population when assigning congressional delegates. They argued that this gave the South an unfair advantage when voting for new laws. To try to keep the peace, a series of compromises, such as the </span><a href='https://education.nationalgeographic.org/resource/missouri-compromise/' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'><span style='font-family:inherit;'>Missouri Compromise of 1820</span></a><span style='font-family:inherit; color:black;'> were proposed to determine what states and territories would or would not permit slavery.</span></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><span style='font-family:inherit; color:black;'>This layer was made through the process of digitization, or tracing historical maps using modern <a style='color:rgb(0, 97, 155); font-family:inherit;'>geographic information system (GIS)</a></span><span style='font-family:inherit;'><span style='font-family:inherit;'><span style='font-family:inherit;'> </span></span></span><span style='font-family:inherit; color:black;'>software. </span><span style='font-family:&quot;Open Sans&quot;, sans-serif; color:black;'>These maps don’t always line up perfectly with modern boundaries, for many reasons. Over time, natural landmarks, such as rivers, can shift their paths, and human landmarks, such as buildings and roads, can be abandoned and demolished. There are also differences in the accuracy of hand-drawn maps compared to computer-drawn maps.</span><span style='font-family:inherit;'> </span></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><span style='font-family:inherit; color:black;'><font size='3' style='font-family:inherit;'>The original maps are published in Harper’s Atlas of American History, and are available through the Library of Congress:</font></span></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><a href='https://lccn.loc.gov/32005827' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'>Slavery and Slave Trade 1830-1850</a></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><a href='https://lccn.loc.gov/32005827' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'>Routes of the Underground Railroad 1830-1865</a></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><span style='font-family:&quot;Open Sans&quot;, sans-serif; color:rgb(36, 36, 36);'>Fox, Dixon Ryan. <i>Harper's atlas of American history, selected from &quot;The American nation series,&quot; with map studies, by Dixon Ryan Fox</i>. [New York, London, Harper &amp; Brothers, 1920] Pdf. </span><a href='https://www.loc.gov/item/32005827/' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'><span style='font-family:&quot;Open Sans&quot;, sans-serif;'>https://www.loc.gov/item/32005827/</span></a></font></p>",
+    "tags": [
+     "slavery",
+     "Missouri Compromise",
+     "territory",
+     "Louisiana territory",
+     "learn",
+     "school",
+     "education",
+     "MapMaker"
+    ],
+    "accessInformation": "Library of Congress, Esri",
+    "licenseInfo": "<span style='font-size:16px;'>The map from which this data was digitized, is in the </span><a href='https://www.loc.gov/item/32005827/' style='color:rgb(0, 97, 155); text-decoration-line:none; font-size:16px;' target='_blank' rel='nofollow ugc noopener noreferrer'>public domain</a><span style='font-size:16px;'>.</span>",
+    "created": 1695065384000,
+    "modified": 1709696404000,
+    "numViews": 24200,
+    "thumbnail": "thumbnail/thumbnail.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -127.84204525529486,
+      21.633709461886696
+     ],
+     [
+      -64.52761029333108,
+      51.540441746789305
+     ]
+    ],
+    "descriptionChars": 2727
+   },
+   "service": {
+    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/USStatesandTerritories_1850_Albers_version/FeatureServer/0",
+    "name": "RoutesoftheUSSlaveTr_Project",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolyline",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "uniqueValue",
+     "field": "Type",
+     "valueExpression": false,
+     "classes": [
+      {
+       "value": "Internal Routes",
+       "label": "Internal Routes",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         0,
+         0,
+         0,
+         255
+        ],
+        "width": 2
+       }
+      },
+      {
+       "value": "Route of L'Amistead",
+       "label": "Route of L'Amistead",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         0,
+         0,
+         0,
+         255
+        ],
+        "width": 2
+       }
+      },
+      {
+       "value": "Route of the Creole",
+       "label": "Route of the Creole",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         51,
+         51,
+         51,
+         255
+        ],
+        "width": 2
+       }
+      },
+      {
+       "value": "Sea Routes",
+       "label": "Sea Routes",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         51,
+         51,
+         51,
+         255
+        ],
+        "width": 3
+       }
+      }
+     ],
+     "default": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "InLine_FID",
+      "alias": "InLine_FID",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Type",
+      "alias": "Type",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "37a9e358f0794a6da03b6ee2f4c0f24a",
+    "count": 4,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "Type",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.1
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false,
+   "popupNamesClass": true
+  },
+  {
+   "path": "Underground Railroad Approximate Routes",
+   "title": "Underground Railroad Approximate Routes",
+   "layerType": "GroupLayer",
+   "visible": true,
+   "onAtStart": true,
+   "opacity": null,
+   "itemId": null,
+   "url": null,
+   "disablePopup": false,
+   "popup": null,
+   "popupFrom": null,
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "drawsAtOpening": true,
+   "rendererColourOnly": false,
+   "popupNamesClass": false
+  },
+  {
+   "path": "Underground Railroad Approximate Routes / Underground Railroad Approximate Routes",
+   "title": "Underground Railroad Approximate Routes",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "onAtStart": true,
+   "opacity": null,
+   "itemId": "d8a604eef63e469189db303419718b5c",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Underground_Railroad_Approximate_Routes_Albers/FeatureServer/1",
+   "disablePopup": true,
+   "popup": {
+    "title": "{InLine_FID}",
+    "fieldsShown": [
+     {
+      "field": "OBJECTID",
+      "label": "OBJECTID"
+     },
+     {
+      "field": "InLine_FID",
+      "label": "InLine_FID"
+     },
+     {
+      "field": "Shape__Length",
+      "label": "Shape__Length"
+     }
+    ],
+    "fieldLabelsAreNames": [
+     "OBJECTID",
+     "InLine_FID",
+     "Shape__Length"
+    ],
+    "elements": [
+     "fields"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": []
+   },
+   "popupFrom": "map",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "simple",
+    "field": null,
+    "valueExpression": false,
+    "symbol": {
+     "type": "CIMSymbolReference",
+     "style": null,
+     "cim": true
+    },
+    "label": null
+   },
+   "item": {
+    "id": "d8a604eef63e469189db303419718b5c",
+    "title": "Underground Railroad Approximate Routes",
+    "type": "Feature Service",
+    "owner": "mm.atlas",
+    "access": "public",
+    "snippet": "The Underground Railroad is the network of resistance to enslavement that facilitated the escape of enslaved people from the southern United States to northern states and Canada.",
+    "description": "<p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><font size='4' style='font-family:inherit;'><span style='font-family:inherit; color:black;'>To escape enslavement, some enslaved people used an informal network of routes, places, and people known as the </span><a href='https://education.nationalgeographic.org/resource/underground-railroad/' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'><span style='font-family:inherit;'>Underground Railroad</span></a><span style='font-family:inherit; color:black;'> to travel in secret to the Northern United States and into Canada, where slavery was illegal. The Underground Railroad was not a literal underground railroad, but because escaping from slavery and helping enslaved people escape was illegal, the network operated in secret. The “conductors” were the people leading enslaved people to freedom and the “station masters,” those who hid enslaved people on the way north. According to some estimates, between 1810 and 1850, the Underground Railroad helped to guide 100,000 enslaved people to freedom.</span></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><font size='4' style='font-family:inherit;'><span style='font-family:inherit; color:black;'>This layer was made through the process of digitization, or tracing historical maps using modern <a style='color:rgb(0, 97, 155); font-family:inherit;'>geographic information system (GIS)</a></span><span style='font-family:inherit;'><span style='font-family:inherit;'><span style='font-family:inherit;'> </span></span></span><span style='font-family:inherit; color:black;'>software. </span><span style='font-family:&quot;Open Sans&quot;, sans-serif; color:black;'>These maps don’t always line up perfectly with modern boundaries, for many reasons. Over time, natural landmarks, such as rivers, can shift their paths, and human landmarks, such as buildings and roads, can be abandoned and demolished. There are also differences in the accuracy of hand-drawn maps compared to computer-drawn maps.</span><span style='font-family:inherit;'> </span></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><span style='font-family:inherit; color:black;'><font size='4' style='font-family:inherit;'>The original maps are published in Harper’s Atlas of American History, and are available through the Library of Congress:</font></span></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><font size='4' style='font-family:inherit;'><a href='https://lccn.loc.gov/32005827' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'>Slavery and Slave Trade 1830-1850</a></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><font size='4' style='font-family:inherit;'><a href='https://lccn.loc.gov/32005827' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'>Routes of the Underground Railroad 1830-1865</a></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><font size='4' style='font-family:inherit;'><span style='font-family:&quot;Open Sans&quot;, sans-serif; color:rgb(36, 36, 36);'>Fox, Dixon Ryan. <i>Harper's atlas of American history, selected from &quot;The American nation series,&quot; with map studies, by Dixon Ryan Fox</i>. [New York, London, Harper &amp; Brothers, 1920] Pdf. </span><a href='https://www.loc.gov/item/32005827/' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'><span style='font-family:&quot;Open Sans&quot;, sans-serif;'>https://www.loc.gov/item/32005827/</span></a></font></p>",
+    "tags": [
+     "underground railroad",
+     "slavery",
+     "enslaved people",
+     "cities",
+     "freedom",
+     "conductors",
+     "station master",
+     "1810",
+     "1850",
+     "freedom seeker"
+    ],
+    "accessInformation": "Library of Congress, Esri",
+    "licenseInfo": "The map from which this data was digitized, is in the <a href='https://www.loc.gov/item/32005827/' target='_blank' rel='nofollow ugc noopener noreferrer'>public domain</a>.",
+    "created": 1695147703000,
+    "modified": 1735660690000,
+    "numViews": 29537,
+    "thumbnail": "thumbnail/thumbnail1698686099064.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -95.86576941299238,
+      33.920779357121745
+     ],
+     [
+      -66.39192855394269,
+      48.34413065861186
+     ]
+    ],
+    "descriptionChars": 1580
+   },
+   "service": {
+    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Underground_Railroad_Approximate_Routes_Albers/FeatureServer/1",
+    "name": "Underground Railroad Approximate Routes",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolyline",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSLS",
+      "style": "esriSLSSolid",
+      "color": [
+       173,
+       69,
+       6,
+       255
+      ],
+      "width": 2
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "InLine_FID",
+      "alias": "InLine_FID",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "d8a604eef63e469189db303419718b5c",
+    "count": 166,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "InLine_FID",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.1
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false,
+   "popupNamesClass": false
+  },
+  {
+   "path": "Underground Railroad Approximate Routes / Cities",
+   "title": "Cities",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "onAtStart": true,
+   "opacity": null,
+   "itemId": "d8a604eef63e469189db303419718b5c",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Underground_Railroad_Approximate_Routes_Albers/FeatureServer/0",
+   "disablePopup": true,
+   "popup": {
+    "title": "{Name}",
+    "fieldsShown": [
+     {
+      "field": "OBJECTID",
+      "label": "OBJECTID"
+     },
+     {
+      "field": "Name",
+      "label": "Name"
+     },
+     {
+      "field": "State",
+      "label": "State"
+     },
+     {
+      "field": "Country",
+      "label": "Country"
+     }
+    ],
+    "fieldLabelsAreNames": [
+     "OBJECTID"
+    ],
+    "elements": [
+     "fields"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": []
+   },
+   "popupFrom": "map",
+   "minScale": 9152861.381909,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "uniqueValue",
+    "field": "Country",
+    "valueExpression": false,
+    "classes": [
+     {
+      "value": "Canada",
+      "label": "Canada",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "United States",
+      "label": "United States",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     }
+    ],
+    "default": null
+   },
+   "item": {
+    "id": "d8a604eef63e469189db303419718b5c",
+    "title": "Underground Railroad Approximate Routes",
+    "type": "Feature Service",
+    "owner": "mm.atlas",
+    "access": "public",
+    "snippet": "The Underground Railroad is the network of resistance to enslavement that facilitated the escape of enslaved people from the southern United States to northern states and Canada.",
+    "description": "<p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><font size='4' style='font-family:inherit;'><span style='font-family:inherit; color:black;'>To escape enslavement, some enslaved people used an informal network of routes, places, and people known as the </span><a href='https://education.nationalgeographic.org/resource/underground-railroad/' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'><span style='font-family:inherit;'>Underground Railroad</span></a><span style='font-family:inherit; color:black;'> to travel in secret to the Northern United States and into Canada, where slavery was illegal. The Underground Railroad was not a literal underground railroad, but because escaping from slavery and helping enslaved people escape was illegal, the network operated in secret. The “conductors” were the people leading enslaved people to freedom and the “station masters,” those who hid enslaved people on the way north. According to some estimates, between 1810 and 1850, the Underground Railroad helped to guide 100,000 enslaved people to freedom.</span></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><font size='4' style='font-family:inherit;'><span style='font-family:inherit; color:black;'>This layer was made through the process of digitization, or tracing historical maps using modern <a style='color:rgb(0, 97, 155); font-family:inherit;'>geographic information system (GIS)</a></span><span style='font-family:inherit;'><span style='font-family:inherit;'><span style='font-family:inherit;'> </span></span></span><span style='font-family:inherit; color:black;'>software. </span><span style='font-family:&quot;Open Sans&quot;, sans-serif; color:black;'>These maps don’t always line up perfectly with modern boundaries, for many reasons. Over time, natural landmarks, such as rivers, can shift their paths, and human landmarks, such as buildings and roads, can be abandoned and demolished. There are also differences in the accuracy of hand-drawn maps compared to computer-drawn maps.</span><span style='font-family:inherit;'> </span></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><span style='font-family:inherit; color:black;'><font size='4' style='font-family:inherit;'>The original maps are published in Harper’s Atlas of American History, and are available through the Library of Congress:</font></span></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><font size='4' style='font-family:inherit;'><a href='https://lccn.loc.gov/32005827' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'>Slavery and Slave Trade 1830-1850</a></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><font size='4' style='font-family:inherit;'><a href='https://lccn.loc.gov/32005827' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'>Routes of the Underground Railroad 1830-1865</a></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><font size='4' style='font-family:inherit;'><span style='font-family:&quot;Open Sans&quot;, sans-serif; color:rgb(36, 36, 36);'>Fox, Dixon Ryan. <i>Harper's atlas of American history, selected from &quot;The American nation series,&quot; with map studies, by Dixon Ryan Fox</i>. [New York, London, Harper &amp; Brothers, 1920] Pdf. </span><a href='https://www.loc.gov/item/32005827/' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'><span style='font-family:&quot;Open Sans&quot;, sans-serif;'>https://www.loc.gov/item/32005827/</span></a></font></p>",
+    "tags": [
+     "underground railroad",
+     "slavery",
+     "enslaved people",
+     "cities",
+     "freedom",
+     "conductors",
+     "station master",
+     "1810",
+     "1850",
+     "freedom seeker"
+    ],
+    "accessInformation": "Library of Congress, Esri",
+    "licenseInfo": "The map from which this data was digitized, is in the <a href='https://www.loc.gov/item/32005827/' target='_blank' rel='nofollow ugc noopener noreferrer'>public domain</a>.",
+    "created": 1695147703000,
+    "modified": 1735660690000,
+    "numViews": 29537,
+    "thumbnail": "thumbnail/thumbnail1698686099064.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -95.86576941299238,
+      33.920779357121745
+     ],
+     [
+      -66.39192855394269,
+      48.34413065861186
+     ]
+    ],
+    "descriptionChars": 1580
+   },
+   "service": {
+    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Underground_Railroad_Approximate_Routes_Albers/FeatureServer/0",
+    "name": "UGRR Cities",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPoint",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "uniqueValue",
+     "field": "Country",
+     "valueExpression": false,
+     "classes": [
+      {
+       "value": "Canada",
+       "label": "Canada",
+       "symbol": {
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "color": [
+         0,
+         0,
+         0,
+         255
+        ],
+        "size": 10,
+        "outline": {
+         "color": [
+          246,
+          241,
+          233,
+          255
+         ],
+         "width": 0.7,
+         "style": null
+        }
+       }
+      },
+      {
+       "value": "United States",
+       "label": "United States",
+       "symbol": {
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "color": [
+         171,
+         67,
+         7,
+         255
+        ],
+        "size": 10,
+        "outline": {
+         "color": [
+          246,
+          241,
+          233,
+          255
+         ],
+         "width": 0.7,
+         "style": null
+        }
+       }
+      }
+     ],
+     "default": null
+    },
+    "labels": true,
+    "fields": [
+     {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "Name",
+      "alias": "Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "State",
+      "alias": "State",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Country",
+      "alias": "Country",
+      "type": "esriFieldTypeString",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "d8a604eef63e469189db303419718b5c",
+    "count": 69,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "Name",
+     "geometryCompared": "geometry"
+    },
+    "seconds": 0.1
+   },
+   "drawsAtOpening": false,
+   "rendererColourOnly": false,
+   "popupNamesClass": true
+  },
+  {
+   "path": "Missouri Compromise Line",
+   "title": "Missouri Compromise Line",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "onAtStart": true,
+   "opacity": null,
+   "itemId": "d68c728f32c4479b9bcd15a67db78b20",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/MissouriCompromiseLine_Albers/FeatureServer/0",
+   "disablePopup": true,
+   "popup": {
+    "title": "{NAME}",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "NOTES",
+     "YEAR"
+    ]
+   },
+   "popupFrom": "map",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "simple",
+    "field": null,
+    "valueExpression": false,
+    "symbol": {
+     "type": "CIMSymbolReference",
+     "style": null,
+     "cim": true
+    },
+    "label": null
+   },
+   "item": {
+    "id": "d68c728f32c4479b9bcd15a67db78b20",
+    "title": "Missouri Compromise Line",
+    "type": "Feature Service",
+    "owner": "mm.atlas",
+    "access": "public",
+    "snippet": "The Missouri Compromise of 1820 allowed the states of Missouri and Maine to join the United States as a slave and non-slave state respectively. It also made the practice of slavery illegal above 36º 30' in the territories not yet eligible for statehood.",
+    "description": "<a style='color:rgb(0, 97, 155); font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:medium;'><span style='font-family:inherit; color:black;'>I</span></a><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:medium;'><span style='font-family:inherit; color:black;'>n </span></span><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:medium; color:black;'>the years before the American Civil War, which began in 1861, the question of <a style='color:rgb(0, 97, 155); font-family:inherit;'>whether </a></span><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:medium; color:black;'>new states would allow slavery caused a lot of disagreement and tension between the North and South. The United States was carefully balanced to have as many &quot;slave&quot; states as &quot;free&quot; states, giving both sides an equal number of <a style='color:rgb(0, 97, 155); font-family:inherit;'>senators</a></span><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:medium; color:black;'>. The South was worried that if more free states were added, this balance would be upset, and the North would be able to pass legislation banning slavery in the United States. The North didn't want slavery to spread to new areas, both for moral reasons and because they didn’t think it was fair that enslaved people couldn’t vote but counted as part of the population when assigning congressional delegates. They argued that this gave the South an unfair advantage when voting for new laws. To try to keep the peace, a series of compromises, such as the </span><a href='https://education.nationalgeographic.org/resource/missouri-compromise/' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:medium;' rel='nofollow ugc'>Missouri Compromise of 1820</a><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:medium; color:black;'> were proposed to determine what states and territories would or would not permit slavery.</span><div><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:medium; color:black;'><br /></span></div><div><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><span style='font-family:inherit; color:black;'>This layer was made through the process of digitization, or tracing historical maps using modern <a style='color:rgb(0, 97, 155); font-family:inherit;'>geographic information system (GIS)</a></span><span style='font-family:inherit;'><span style='font-family:inherit;'><span style='font-family:inherit;'> </span></span></span><span style='font-family:inherit; color:black;'>software. </span><span style='font-family:&quot;Open Sans&quot;, sans-serif; color:black;'>These maps don’t always line up perfectly with modern boundaries, for many reasons. Over time, natural landmarks, such as rivers, can shift their paths, and human landmarks, such as buildings and roads, can be abandoned and demolished. There are also differences in the accuracy of hand-drawn maps compared to computer-drawn maps.</span><span style='font-family:inherit;'> </span></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><span style='font-family:inherit; color:black;'><font size='3' style='font-family:inherit;'>The original maps are published in Harper’s Atlas of American History, and are available through the Library of Congress:</font></span></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><a href='https://lccn.loc.gov/32005827' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'>Slavery and Slave Trade 1830-1850</a></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><a href='https://lccn.loc.gov/32005827' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'>Routes of the Underground Railroad 1830-1865</a></font></p><p style='margin-top:0px; margin-bottom:1.5rem; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='3' style='font-family:inherit;'><span style='font-family:&quot;Open Sans&quot;, sans-serif; color:rgb(36, 36, 36);'>Fox, Dixon Ryan. <i>Harper's atlas of American history, selected from &quot;The American nation series,&quot; with map studies, by Dixon Ryan Fox</i>. [New York, London, Harper &amp; Brothers, 1920] Pdf. </span><a href='https://www.loc.gov/item/32005827/' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:inherit;' rel='nofollow ugc'><span style='font-family:&quot;Open Sans&quot;, sans-serif;'>https://www.loc.gov/item/32005827/</span></a></font></p></div>",
+    "tags": [
+     "Missouri Compromise",
+     "slavery",
+     "territories",
+     "Louisiana Territory",
+     "schools",
+     "learn",
+     "education",
+     "MapMaker"
+    ],
+    "accessInformation": "Esri",
+    "licenseInfo": "<span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'>The map from which this data was digitized, is in the </span><a href='https://www.loc.gov/item/32005827/' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;' target='_blank' rel='nofollow ugc noopener noreferrer'>public domain</a><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'>.</span>",
+    "created": 1696446095000,
+    "modified": 1709696398000,
+    "numViews": 8816,
+    "thumbnail": "thumbnail/thumbnail.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -103.00023808000387,
+      36.296450142891246
+     ],
+     [
+      -90.15732782490564,
+      36.70435890571292
+     ]
+    ],
+    "descriptionChars": 1919
+   },
+   "service": {
+    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/MissouriCompromiseLine_Albers/FeatureServer/0",
+    "name": "MissouriCompromiseLine_Albers",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolyline",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSLS",
+      "style": "esriSLSDash",
+      "color": [
+       104,
+       104,
+       104,
+       255
+      ],
+      "width": 3
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "NAME",
+      "alias": "Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "DESCRIPTION",
+      "alias": "Description",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "DEPICTION",
+      "alias": "DEPICTION",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "YEAR",
+      "alias": "Year Created",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "NOTES",
+      "alias": "NOTES",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "d68c728f32c4479b9bcd15a67db78b20",
+    "count": 1,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "NAME",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.1
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false,
+   "popupNamesClass": false
+  }
+ ],
+ "findings": [
+  {
+   "where": "layer Underground Railroad Approximate Routes / Cities",
+   "what": "on at the start but only draws when zoomed in"
+  }
+ ]
+}

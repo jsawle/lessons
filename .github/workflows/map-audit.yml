@@ -1,0 +1,51 @@
+name: Map audit
+
+# Reads each lesson's public web map and its layers without signing in (maps/audit.py) and commits what it finds to
+# maps/audit on the branch it ran on. It changes nothing in ArcGIS Online. Run it from the Actions tab (optionally
+# naming lesson ids), or by pushing a change to the audit script to a branch named map-audit or map-audit/...
+
+on:
+  workflow_dispatch:
+    inputs:
+      lessons:
+        description: "Lesson ids, separated by spaces (leave empty for every lesson)"
+        required: false
+        default: ""
+  push:
+    branches:
+      - "map-audit"
+      - "map-audit/**"
+    paths:
+      - "maps/audit.py"
+      - ".github/workflows/map-audit.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: map-audit-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Read the maps
+        run: python maps/audit.py ${{ github.event.inputs.lessons }}
+      - name: Commit what it found
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add maps/audit
+          if git diff --cached --quiet; then
+            echo "Nothing new."
+          else
+            git commit -m "Update map audit [skip ci]"
+            git push
+          fi
