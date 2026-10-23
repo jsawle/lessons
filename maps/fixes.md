@@ -9,7 +9,7 @@ From Map audit 1.2 (`maps/audit/`) and the lessons' known issues. Each was check
 `maps/fix_maps.py` is pasted into one ArcGIS Notebook cell, in the organization the list is for. It runs as a dry run first, backs up everything it changes, and changes a thing only if it is still exactly as it was when the list was built (`maps/fixes/build.py`).
 
 - **`maps/fixes/sandbox.json`**, run signed in to GIS-4-Schools: A5, A6, A8.
-- **`maps/fixes/mapmaker.json`**, run as an administrator of the MapMaker organization: A1, A2, A4, B1, B3, B4, C1, C4.
+- **MapMaker organization** (A1, A2, A4, B1, B3, B4, C1, C4, and the layer problems marked "later"): passed to the MapMaker team as a document, "MapMaker web map fixes: Grade 8 US History lessons" (23 October 2026). `maps/fixes/mapmaker.json` holds the same changes, so the team can run the notebook if they prefer.
 
 Data edits (A1, A2, A8) change the layer wherever it is used. All the other fixes change only that lesson's web map.
 
