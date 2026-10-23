@@ -14,7 +14,7 @@ REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / "maps" / "audit"
 PORTAL = "https://www.arcgis.com/sharing/rest"
 VIEW_WIDTH_PX = 1200            # the width the map pictures are taken at; the opening scale is worked out for it
-DUP_LIMIT = 5000                # look for duplicate features only in layers this small
+DUP_LIMIT = 3000                # look for duplicate features only in layers this small
 CUT_MIN = 120                   # a text value this long that doesn't end like a sentence may be cut off
 HEADERS = {"User-Agent": "lessons-map-audit/" + VERSION, "Referer": "https://www.arcgis.com/"}
 hosts = set()
@@ -160,16 +160,19 @@ def text_checks(features, fields):
     return {"duplicates": dup_full[:20], "sameGeometry": dup_geom[:20], "maybeCutOff": cut[:20], "nameField": name_field}
 
 
-def query_all(url, count):
+def query_all(url, count, geometry_type):
+    """Every feature, with points to about 10 cm and lines and polygons simplified to about 1 km, so big layers stay quick."""
     feats, offset = [], 0
+    simple = {} if geometry_type == "esriGeometryPoint" else {"maxAllowableOffset": 0.01}
     while offset < count:
         r = get(url + "/query", {"where": "1=1", "outFields": "*", "returnGeometry": "true", "outSR": 4326,
-                                 "geometryPrecision": 6, "resultOffset": offset, "resultRecordCount": 1000})
+                                 "geometryPrecision": 6 if not simple else 2, "resultOffset": offset, "resultRecordCount": 1000, **simple})
         if "_error" in r or not r.get("features"):
             break
         feats += r["features"]; offset += len(r["features"])
-        if not r.get("exceededTransferLimit") and len(r["features"]) < 1000:
+        if not r.get("exceededTransferLimit"):
             break
+    print(f"    {url.rsplit('/', 3)[-3]}: {len(feats)} of {count} features read", flush=True)
     return feats
 
 
@@ -187,7 +190,7 @@ def service_layer(url):
         c = get(url + "/query", {"where": "1=1", "returnCountOnly": "true"})
         out["count"] = c.get("count") if "_error" not in c else None
         if out["count"] is not None and out["count"] <= DUP_LIMIT:
-            out["checks"] = text_checks(query_all(url, out["count"]), info.get("fields") or [])
+            out["checks"] = text_checks(query_all(url, out["count"], info.get("geometryType")), info.get("fields") or [])
     return out
 
 
@@ -269,6 +272,7 @@ def findings(lesson, wm_item, data, layers):
 
 
 def audit(lesson_id):
+    print(lesson_id, flush=True)
     lesson = json.loads((REPO / "resources" / "lessons" / f"{lesson_id}.json").read_text())
     wid = lesson["map"]["webmapId"]
     wm_item = item_info(wid)
