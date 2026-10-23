@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Map capture 1.0</title>
+<link rel="stylesheet" href="https://js.arcgis.com/4.34/esri/themes/light/main.css">
+<style>html,body,#view{margin:0;width:100%;height:100%}</style>
+<script src="https://js.arcgis.com/4.34/"></script></head>
+<body><div id="view"></div>
+<script>
+window.H = { ready: false };
+require(["esri/WebMap", "esri/views/MapView", "esri/widgets/Legend", "esri/widgets/Expand", "esri/core/reactiveUtils", "esri/geometry/Point"],
+function (WebMap, MapView, Legend, Expand, reactiveUtils, Point) {
+  const id = new URLSearchParams(location.search).get("webmap");
+  const map = new WebMap({ portalItem: { id } });
+  const view = new MapView({ container: "view", map, popup: { dockEnabled: false, collapseEnabled: false } });
+  const legend = new Expand({ view, content: new Legend({ view }), expanded: false, expandIconClass: "esri-icon-legend" });
+  view.ui.add(legend, "top-right");
+  const settle = async (ms = 1800) => { await Promise.race([reactiveUtils.whenOnce(() => !view.updating), new Promise((r) => setTimeout(r, (Number(new URLSearchParams(location.search).get("cap"))||30000)))]); H.stillUpdating = view.updating; await new Promise((r) => setTimeout(r, ms)); };
+  const byTitle = (t) => map.allLayers.find((l) => l.title === t);
+  H.legend = async (on) => { legend.expanded = !!on; await new Promise((r) => setTimeout(r, 800)); };
+  H.closePopup = () => { try { if (typeof view.closePopup === "function") view.closePopup(); else if (view.popup && typeof view.popup.close === "function") view.popup.close(); } catch (e) {} };
+  H.bookmark = async (name) => { const b = map.bookmarks.find((x) => x.name === name); if (!b) throw new Error("no bookmark " + name); await view.goTo(b.viewpoint); await settle(); };
+  H.visible = async (title, on) => { const l = byTitle(title); if (!l) throw new Error("no layer " + title); l.visible = on; if (on) { let p = l.parent; while (p && p.declaredClass !== "esri.WebMap") { p.visible = true; p = p.parent; } } await settle(); };
+  H.goTo = async (x, y, scale) => { await view.goTo({ target: new Point({ x, y, spatialReference: { wkid: 4326 } }), scale }); await settle(); };
+  H.home = async () => { await view.goTo(map.initialViewProperties.viewpoint); await settle(); };
+  // Screen point of a feature: a point layer's point, a line's middle vertex, or a given inside point for polygons.
+  H.point = async (title, where, inside, scale) => {
+    const l = byTitle(title); if (!l) throw new Error("no layer " + title);
+    let pt;
+    if (inside) pt = new Point({ x: inside[0], y: inside[1], spatialReference: { wkid: 4326 } });
+    else {
+      const res = await l.queryFeatures({ where, returnGeometry: true, outSpatialReference: view.spatialReference });
+      if (!res.features.length) throw new Error("no feature " + where);
+      const g = res.features[0].geometry;
+      const frac = (window.__frac == null ? 0.5 : window.__frac);
+      const path = g.type === "polyline" ? g.paths.reduce((a, b) => (b.length > a.length ? b : a)) : null;
+      pt = g.type === "point" ? g : g.type === "polyline" ? new Point({ x: path[Math.floor((path.length - 1) * frac)][0], y: path[Math.floor((path.length - 1) * frac)][1], spatialReference: g.spatialReference }) : g.centroid || g.extent.center;
+    }
+    if (scale) { await view.goTo({ target: pt, scale }); await settle(); }
+    const sp = view.toScreen(pt); return { x: sp.x, y: sp.y };
+  };
+  // What a click at a screen point opens: fetch the features there as the pop-up does, and wait for the result.
+  H.fetchAt = async (x, y) => {
+    const mapPoint = view.toMap({ x, y });
+    view.openPopup({ location: mapPoint, fetchFeatures: true });
+    const pop = view.popup;
+    for (let i = 0; i < 60; i++) { await new Promise((r) => setTimeout(r, 500)); if (pop && pop.viewModel && !pop.viewModel.waitingForResult && !pop.viewModel.active === false) break; }
+    await new Promise((r) => setTimeout(r, 3000));
+    const feats = (pop && pop.features) || [];
+    return { count: feats.length, layers: feats.map((f) => f.layer && f.layer.title), visible: !!(pop && pop.visible) };
+  };
+  // Open the pop-up a student gets for one feature (found by a where clause, or the feature under a point).
+  H.openFeature = async (title, where, at) => {
+    const l = byTitle(title); if (!l) throw new Error("no layer " + title);
+    const q = l.createQuery(); q.where = where || "1=1"; q.outFields = ["*"]; q.returnGeometry = true;
+    if (at) { q.geometry = new Point({ x: at[0], y: at[1], spatialReference: { wkid: 4326 } }); q.spatialRelationship = "intersects"; }
+    const res = await l.queryFeatures(q);
+    if (!res.features.length) throw new Error("no feature " + where);
+    const f = res.features[0]; const g = f.geometry;
+    const loc = at ? new Point({ x: at[0], y: at[1], spatialReference: { wkid: 4326 } }) : (g.type === "point" ? g : (g.extent ? g.extent.center : g));
+    await view.goTo({ target: loc }); await settle(800);
+    view.openPopup({ features: [f], location: loc });
+    await new Promise((r) => setTimeout(r, 5000));
+    return res.features.length;
+  };
+  H.layers = () => { const out = []; const walk = (ls, d) => ls.forEach((l) => { out.push({ title: l.title, visible: l.visible, depth: d, type: l.type, popupEnabled: l.popupEnabled, hasPopup: !!l.popupTemplate });
+    if (l.layers) walk(l.layers.toArray().slice().reverse(), d + 1); }); walk(map.layers.toArray().slice().reverse(), 0); return out; };
+  H.legendText = () => { const el = document.querySelector(".esri-legend"); return el ? el.innerText : ""; };
+  H.bookmarks = () => map.bookmarks.map((b) => b.name).toArray();
+  view.when(async () => { await map.loadAll(); await settle(2500); H.ready = true; }, (e) => { H.error = String(e); });
+});
+</script></body></html>

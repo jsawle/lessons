@@ -1,0 +1,1090 @@
+{
+ "revolutionary-battles-1775-1776": {
+  "webmap": "bda07736a1b9425ea19fdde282088bd6",
+  "shots": [
+   {
+    "name": "open",
+    "file": "revolutionary-battles-1775-1776--open.png",
+    "what": "The map as it opens, legend open",
+    "popup": null,
+    "legend": "Revolutionary War Battles\n\tBritish Victory\n\n\tAmerican Victory\n\n\tInconclusive\nThirteen British Colonies\nColony Boundary\n\tColony Boundary\n\n\tContested Colony Boundary\nColony Area\n\t\n1763 Proclamation Line\n\t",
+    "stillDrawing": false
+   },
+   {
+    "name": "q1-bookmark",
+    "file": "revolutionary-battles-1775-1776--q1-bookmark.png",
+    "what": "Q1: the Massachusetts bookmark, legend open",
+    "popup": null,
+    "legend": "Turning Points\n\t\nRevolutionary War Battles\n\tBritish Victory\n\n\tAmerican Victory\n\n\tInconclusive\nRevolutionary War Battlefields\nRevolutionary War Battlefield Boundary\n\t\nThirteen British Colonies\nColony Boundary\n\tColony Boundary\n\n\tContested Colony Boundary\nColony Area\n\t\n1763 Proclamation Line\n\t",
+    "stillDrawing": false
+   },
+   {
+    "name": "q1-lexington",
+    "file": "revolutionary-battles-1775-1776--q1-lexington.png",
+    "what": "Q1: clicking the Lexington and Concord diamond in the bookmark view (pop-up shown on the feature)",
+    "popup": "The Battle of Lexington and Concord \n\nApril 19, 1775 \n\nThe Battle of Lexington and Concord was the first battle of the American Revolution. Leading up to this conflict, there was unrest in the Massachusetts colony caused by restrictive British policies and taxes. The British governor of the Mas​s​achusetts colony, Governor Gage, inflamed tensions by harshly enforcing British law. He drafted the Coercive Acts, which punished colonists for deeds of defiance against the king, such as the Boston Tea Party. Colonists who fought against British rule in favor of independence became known as Patriots.\nBy April 1775, Governor Gage was facing the threat of outright rebellion. He hoped to prevent violence by seizing weapons and gunpowder being stored in Concord, Massachusetts, 20 miles northwest of Boston.\nBut Patriot spies learned of Gage's plan. On the evening of April 18, Paul Revere and others raised the alarm that British soldiers were on their way to Concord. Minute Men and militias rushed to confront them early on April 19. As the British soldiers passed through Lexington on their way to Concord, they came face to face with the Patriot militia. When the British soldiers started across the village green, the militia retreated. In the confusion, a shot was fired. Though no one knows who fired the first shot that day, it effectively began the war.\nFrom Lexington, the British soldiers continued toward Concord. There, they met more Patriot militia members. Alarmed by the number of militia members gathered, the British retreated toward Boston. Along the way, they were ambushed by Patriot militia members. \n\nImage credit: Courtesy the National Guard Bureau ",
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q2-all",
+    "file": "revolutionary-battles-1775-1776--q2-all.png",
+    "what": "Q2: zoomed out to see every diamond, Quebec to South Carolina",
+    "popup": null,
+    "legend": "Revolutionary War Battles\n\tBritish Victory\n\n\tAmerican Victory\n\n\tInconclusive\nThirteen British Colonies\nColony Boundary\n\tColony Boundary\n\n\tContested Colony Boundary\nColony Area\n\t\n1763 Proclamation Line\n\t",
+    "stillDrawing": false
+   },
+   {
+    "name": "q2-colony",
+    "file": "revolutionary-battles-1775-1776--q2-colony.png",
+    "what": "Q2: clicking inside a colony (Virginia) to read its name",
+    "popup": null,
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q2-bunkerhill",
+    "file": "revolutionary-battles-1775-1776--q2-bunkerhill.png",
+    "what": "Q2: clicking a diamond (Bunker Hill) at the zoomed-out view",
+    "popup": "The Battle of Bunker Hill \n\nJune 17, 1775 \n\nThe Patriots were defeated at the Battle of Bunker Hill, but they proved they could hold their own against the British Army. The battle was a tactical victory for the British, but it was a sobering experience. The British sustained twice as many casualties as the Patriots and lost many officers. The fierce fight confirmed that any reconciliation between England and the American colonies was no longer possible.\n\nBritish commander in chief General Sir Thomas Gage was under pressure from his superiors to quash the colonial rebellion. The British army planned to launch an attack against the Patriots on the heights north and south of Boston. Details of the attack were leaked, and a detachment of 1,000 Massachusetts and Connecticut soldiers gathered to defend a hill in Charlestown. The violent clash of these forces signaled that the colonial revolt would not be easily extinguished. \n\nImage credit: John Trumbull ",
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q3-ports",
+    "file": "revolutionary-battles-1775-1776--q3-ports.png",
+    "what": "Q3: Key Port Cities turned on, legend open",
+    "popup": null,
+    "legend": "Key Port Cities in the American Revolution 1775-1781\nMajor Port City\n\tMajor Port City\n\tPort\nRevolutionary War Battles\n\tBritish Victory\n\n\tAmerican Victory\n\n\tInconclusive\nThirteen British Colonies\nColony Boundary\n\tColony Boundary\n\n\tContested Colony Boundary\nColony Area\n\t\n1763 Proclamation Line\n\t",
+    "stillDrawing": true
+   },
+   {
+    "name": "q4-circles",
+    "file": "revolutionary-battles-1775-1776--q4-circles.png",
+    "what": "Q4: zoomed in on New York City so the numbered circles show",
+    "popup": null,
+    "legend": "Turning Points\n\t\nKey Port Cities in the American Revolution 1775-1781\nMajor Port City\n\tMajor Port City\n\tPort\nRevolutionary War Battles\n\tBritish Victory\n\n\tAmerican Victory\n\n\tInconclusive\nRevolutionary War Battlefields\nRevolutionary War Battlefield Boundary\n\t\nThirteen British Colonies\nColony Boundary\n\tColony Boundary\n\n\tContested Colony Boundary\nColony Area\n\t\n1763 Proclamation Line\n\t",
+    "stillDrawing": true
+   },
+   {
+    "name": "q4-circle4",
+    "file": "revolutionary-battles-1775-1776--q4-circle4.png",
+    "what": "Q4: clicking circle 4",
+    "popup": "Battle Details\n\nFall of New York City\n\n1776 \n\nAfter forcing Washington's army to retreat from Long Island in the Battle of Brooklyn, the British build on their advantage. They continued attacking American forces across New York. Moving north across Manhattan, they defeated the Americans at Fort Washington and captured 3,000 soldiers. The British take control of New York City. They maintained that stronghold for the remainder of the war. \n\nVictor: Britain \n\n ",
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q2-colony-ny",
+    "file": "revolutionary-battles-1775-1776--q2-colony-ny.png",
+    "what": "Q2: clicking inside a colony (New York) to read its name",
+    "popup": null,
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q3-port",
+    "file": "revolutionary-battles-1775-1776--q3-port.png",
+    "what": "Q3: the pop-up a Key Port Cities symbol opens (the sheet says this layer has none)",
+    "popup": "Stonington, CT ",
+    "legend": null
+   }
+  ],
+  "log": [],
+  "layers": [
+   {
+    "title": "Turning Points",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Key Port Cities in the American Revolution 1775-1781",
+    "visible": false,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Revolutionary War Battles",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Revolutionary War Battlefields",
+    "visible": true,
+    "depth": 0,
+    "type": "group",
+    "popupEnabled": true,
+    "hasPopup": false
+   },
+   {
+    "title": "Revolutionary War Core Areas",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": false,
+    "hasPopup": true
+   },
+   {
+    "title": "Revolutionary War Battlefield Boundary",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": false,
+    "hasPopup": true
+   },
+   {
+    "title": "Thirteen British Colonies",
+    "visible": true,
+    "depth": 0,
+    "type": "group",
+    "popupEnabled": true,
+    "hasPopup": false
+   },
+   {
+    "title": "Colony Boundary",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Colony Area",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": false,
+    "hasPopup": true
+   },
+   {
+    "title": "1763 Proclamation Line",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": false,
+    "hasPopup": true
+   }
+  ],
+  "bookmarks": [
+   "Massachusetts",
+   "New York/New Jersey"
+  ]
+ },
+ "roads-trails-and-rails-west": {
+  "webmap": "3ec83a9d66454ade8aead0a64872d931",
+  "shots": [
+   {
+    "name": "open",
+    "file": "roads-trails-and-rails-west--open.png",
+    "what": "The map as it opens, legend open",
+    "popup": null,
+    "legend": "Trails West\n\tOregon\n\n\tCalifornia\n\n\tMormon Pioneer\n\n\tOld Spanish\n\n\tSanta Fe\n\n\tButterfield Overland\n\n\tPony Express",
+    "stillDrawing": false
+   },
+   {
+    "name": "q2-oregon",
+    "file": "roads-trails-and-rails-west--q2-oregon.png",
+    "what": "Q2: clicking the Oregon Trail (west of where the trails split)",
+    "popup": "Pony Express Trail\n\nThe Pony Express was a mail service that could deliver mail from St. Joseph, Missouri to Sacramento, California in 10 days. With a system of 153 stations each located 16-24 kilometers (10-15 miles) apart so that riders could stop for fresh horses, mail could travel more than 2897 kilometers (1,800 miles) in just 10 days. At the time, mail was typically carried by stagecoach on the Butterfield Overland Trail, which could take several weeks. It could also be taken by trail to the Isthmus of Panama, where it was transferred to a ship headed north to California. While not as fast as today’s mail, the Pony Express played an important role in connecting the West to Eastern cities.\n\nThe Pony Express trail, also known as the Overland Route, followed the Mormon Pioneer trail through Salt Lake City, then headed straight across Nevada to the mountain pass the Donner Party used to reach California. The service only operated for 18 months between April 1860 and October 1861, when a transcontinental telegraph line was completed.  ",
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q3-indigenous",
+    "file": "roads-trails-and-rails-west--q3-indigenous.png",
+    "what": "Q3: Indigenous Territories on, zoomed in on the trails in Wyoming",
+    "popup": null,
+    "legend": "Trails West\n\tOregon\n\n\tCalifornia\n\n\tMormon Pioneer\n\n\tOld Spanish\n\n\tSanta Fe\n\n\tButterfield Overland\n\n\tPony Express",
+    "stillDrawing": true
+   },
+   {
+    "name": "q4-railroads",
+    "file": "roads-trails-and-rails-west--q4-railroads.png",
+    "what": "Q4: Railroads on, legend open",
+    "popup": null,
+    "legend": "Trails West\n\tOregon\n\n\tCalifornia\n\n\tMormon Pioneer\n\n\tOld Spanish\n\n\tSanta Fe\n\n\tButterfield Overland\n\n\tPony Express\nRailroads\nRailroads 1826 to 1911\n\t\nTranscontinental Railroads completed by 1911\n\tGreat Northern\n\n\tNorthern Pacific\n\n\tTranscontinental Railroad (Union Pacific)\n\n\tTranscontinental Railroad (Central Pacific)\n\n\tSouthern Pacific",
+    "stillDrawing": false
+   },
+   {
+    "name": "q4-grayline",
+    "file": "roads-trails-and-rails-west--q4-grayline.png",
+    "what": "Q4: clicking a thin gray railroad line",
+    "popup": "Union Pacific (Transcontinental)\n\nRailroad in operation by: 1869 \n\n*Some railroad names aren't recorded due to mergers, acquisitions, and other changes.\n\n ",
+    "legend": null,
+    "stillDrawing": false
+   }
+  ],
+  "log": [],
+  "layers": [
+   {
+    "title": "Trails West",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Railroads",
+    "visible": false,
+    "depth": 0,
+    "type": "group",
+    "popupEnabled": true,
+    "hasPopup": false
+   },
+   {
+    "title": "Railroads 1826 to 1911",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Transcontinental Railroads completed by 1911",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": false,
+    "hasPopup": true
+   },
+   {
+    "title": "Indigenous Territories",
+    "visible": false,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   }
+  ],
+  "bookmarks": []
+ },
+ "us-slavery-and-slave-trade-1850": {
+  "webmap": "819f60a5a3344d958d24f505849abaaa",
+  "shots": [
+   {
+    "name": "open",
+    "file": "us-slavery-and-slave-trade-1850--open.png",
+    "what": "The map as it opens, legend open",
+    "popup": null,
+    "legend": "Missouri Compromise Line\n\t\nUnderground Railroad Approximate Routes\nUnderground Railroad Approximate Routes\n\t\nUnited States, 1850\nInternal Routes of the US Slave Trade\n\tInternal Routes\n\n\tRoute of L'Amistead\n\n\tRoute of the Creole\n\n\tSea Routes\nUS States and Territories 1850\nFree states\n\tAbolition by state action by 1850, Ordinance of 1787, act of Congress, and state constitution\nFree states and territories by compromise\n\tFree by Compromise of 1820, Missouri Compromise; Acts of Congress admitting Texas, Act of 1848, Ordinance of 1787, and state constitution\nSlave states\n\tOriginal slave states, and slave states admitted out of territory\nSlave states and territories by compromise\n\tSlave state by annexation, Compromise of 1850, by old French law",
+    "stillDrawing": false
+   },
+   {
+    "name": "q1-pennsylvania",
+    "file": "us-slavery-and-slave-trade-1850--q1-pennsylvania.png",
+    "what": "Q1: clicking a free state (Pennsylvania)",
+    "popup": "Pennsylvania\n\nThis state passed legislation against the enslavement of people 1780. \n\nIt is recorded on the primary source as:\n\nAbolition by state action between 1830-1850 \n\n*Year and classification of the state or territory are based on the original map, published by Harper's Atlas of American History in 1920. Current scholarship may differ.",
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q2-missouri",
+    "file": "us-slavery-and-slave-trade-1850--q2-missouri.png",
+    "what": "Q2: clicking Missouri",
+    "popup": "Missouri\n\nThis state was admitted to the United States as a state that allowed the enslavement of people in 1821. \n\nIt is recorded on the primary source as:\n\nSlave states admitted out of territory \n\n*Year and classification of the state or territory are based on the original map, published by Harper's Atlas of American History in 1920. Current scholarship may differ.",
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q2-line",
+    "file": "us-slavery-and-slave-trade-1850--q2-line.png",
+    "what": "Q2: clicking the Missouri Compromise Line",
+    "popup": "Unorganized Territory\n\nThis territory was recognized as a territory that would not permit the enslavement of people in 1820. \n\nIt is recorded on the primary source as:\n\nFree by Missouri Compromise \n\n*Year and classification of the state or territory are based on the original map, published by Harper's Atlas of American History in 1920. Current scholarship may differ.",
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q3-slavetrade",
+    "file": "us-slavery-and-slave-trade-1850--q3-slavetrade.png",
+    "what": "Q3: Underground Railroad routes off so the slave trade routes stand out",
+    "popup": null,
+    "legend": "Missouri Compromise Line\n\t\nUnited States, 1850\nInternal Routes of the US Slave Trade\n\tInternal Routes\n\n\tRoute of L'Amistead\n\n\tRoute of the Creole\n\n\tSea Routes\nUS States and Territories 1850\nFree states\n\tAbolition by state action by 1850, Ordinance of 1787, act of Congress, and state constitution\nFree states and territories by compromise\n\tFree by Compromise of 1820, Missouri Compromise; Acts of Congress admitting Texas, Act of 1848, Ordinance of 1787, and state constitution\nSlave states\n\tOriginal slave states, and slave states admitted out of territory\nSlave states and territories by compromise\n\tSlave state by annexation, Compromise of 1850, by old French law",
+    "stillDrawing": false
+   },
+   {
+    "name": "q4-bookmark",
+    "file": "us-slavery-and-slave-trade-1850--q4-bookmark.png",
+    "what": "Q4: the Illinois, Indiana, and Ohio bookmark",
+    "popup": null,
+    "legend": "Missouri Compromise Line\n\t\nUnderground Railroad Approximate Routes\nCities\n\tCanada\n\n\tUnited States\nUnderground Railroad Approximate Routes\n\t\nUnited States, 1850\nInternal Routes of the US Slave Trade\n\tInternal Routes\n\n\tRoute of L'Amistead\n\n\tRoute of the Creole\n\n\tSea Routes\nUS States and Territories 1850\nFree states\n\tAbolition by state action by 1850, Ordinance of 1787, act of Congress, and state constitution\nFree states and territories by compromise\n\tFree by Compromise of 1820, Missouri Compromise; Acts of Congress admitting Texas, Act of 1848, Ordinance of 1787, and state constitution\nSlave states\n\tOriginal slave states, and slave states admitted out of territory\nSlave states and territories by compromise\n\tSlave state by annexation, Compromise of 1850, by old French law",
+    "stillDrawing": false
+   }
+  ],
+  "log": [],
+  "layers": [
+   {
+    "title": "Missouri Compromise Line",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": false,
+    "hasPopup": true
+   },
+   {
+    "title": "Underground Railroad Approximate Routes",
+    "visible": true,
+    "depth": 0,
+    "type": "group",
+    "popupEnabled": true,
+    "hasPopup": false
+   },
+   {
+    "title": "Cities",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": false,
+    "hasPopup": true
+   },
+   {
+    "title": "Underground Railroad Approximate Routes",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": false,
+    "hasPopup": true
+   },
+   {
+    "title": "United States, 1850",
+    "visible": true,
+    "depth": 0,
+    "type": "group",
+    "popupEnabled": true,
+    "hasPopup": false
+   },
+   {
+    "title": "Internal Routes of the US Slave Trade",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": false,
+    "hasPopup": true
+   },
+   {
+    "title": "US States and Territories 1850",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "US 1850 Original Map",
+    "visible": false,
+    "depth": 0,
+    "type": "tile",
+    "popupEnabled": true,
+    "hasPopup": false
+   }
+  ],
+  "bookmarks": [
+   "Illinois, Indiana, and Ohio",
+   "Pennsylvania and New England"
+  ]
+ },
+ "civil-war-battlefields": {
+  "webmap": "7a06e8e2818941f99a3d40bb32e08118",
+  "shots": [
+   {
+    "name": "open",
+    "file": "civil-war-battlefields--open.png",
+    "what": "The map as it opens, legend open",
+    "popup": null,
+    "legend": "Civil War Battlefields\n\tUnion Victory\n\n\tConfederate Victory\n\n\tInconclusive\n\n\tOther\nTotal casualties\n\t> 50,000\n\n\t40,000\n\n\t25,000\n\n\t10,000\n\n\t< 0\nBoundary between Union and Confederacy\n\t\nU.S. Civil War States and Territories (1863)\n\tUnion Free State\n\n\tUnion slave state (border state)\n\n\tSlave state seceding before Fort Sumter, April 1861\n\n\tSlave state seceding after Fort Sumter, April 1861\n\n\tTerritories",
+    "stillDrawing": false
+   },
+   {
+    "name": "q2-dc",
+    "file": "civil-war-battlefields--q2-dc.png",
+    "what": "Q2: zoomed in to Washington, D.C.",
+    "popup": null,
+    "legend": "Civil War Battlefields\n\tUnion Victory\n\n\tConfederate Victory\n\n\tInconclusive\n\n\tOther\nTotal casualties\n\t> 50,000\n\n\t40,000\n\n\t25,000\n\n\t10,000\n\n\t< 0\nBoundary between Union and Confederacy\n\t\nU.S. Civil War States and Territories (1863)\n\tUnion Free State\n\n\tUnion slave state (border state)\n\n\tSlave state seceding before Fort Sumter, April 1861\n\n\tSlave state seceding after Fort Sumter, April 1861\n\n\tTerritories",
+    "stillDrawing": false
+   },
+   {
+    "name": "q3-railroads",
+    "file": "civil-war-battlefields--q3-railroads.png",
+    "what": "Q3: states layer off, zoomed in to see the railroads either side of the boundary",
+    "popup": null,
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q4-gettysburg",
+    "file": "civil-war-battlefields--q4-gettysburg.png",
+    "what": "Q4: clicking the tan area of a battlefield (Gettysburg)",
+    "popup": "GETTYSBURG\n\nThe battlefield area in the Battle of GETTYSBURG during the CIVIL WAR. It spans 14,508 acres.",
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q4-diamond",
+    "file": "civil-war-battlefields--q4-diamond.png",
+    "what": "Q4: clicking a battle diamond (Antietam)",
+    "popup": "Antietam\n\nAntietam\n\n____________________________\n \n\n \nSeptember 16, 1862 – September 18, 1862\nAmerican Battlefield Trust",
+    "legend": null,
+    "stillDrawing": false
+   }
+  ],
+  "log": [],
+  "layers": [
+   {
+    "title": "Civil War Battlefields",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Railroads 1826 to 1863 (static)",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Boundary between Union and Confederacy",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": false,
+    "hasPopup": true
+   },
+   {
+    "title": "United States Battlefield Boundaries",
+    "visible": true,
+    "depth": 0,
+    "type": "group",
+    "popupEnabled": true,
+    "hasPopup": false
+   },
+   {
+    "title": "Civil War Core Areas",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Civil War Battlefield Boundary",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "U.S. Civil War States and Territories (1863)",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": false,
+    "hasPopup": true
+   }
+  ],
+  "bookmarks": []
+ },
+ "the-battle-of-vicksburg": {
+  "webmap": "1ba8cd3fc75a49a497be1137fce4c032",
+  "shots": [
+   {
+    "name": "open",
+    "file": "the-battle-of-vicksburg--open.png",
+    "what": "The map as it opens, legend open",
+    "popup": null,
+    "legend": "Railroads 1826 to 1911\n\tTranscontinental Railroad (Union Pacific)\n\n\tGreat Northern\n\n\tNorthern Pacific\n\n\tSouthern Pacific\n\n\tTranscontinental Railroad (Central Pacific)\n\n\tothers",
+    "stillDrawing": false
+   },
+   {
+    "name": "q1-bookmark",
+    "file": "the-battle-of-vicksburg--q1-bookmark.png",
+    "what": "Q1: The Battle of Vicksburg bookmark",
+    "popup": null,
+    "legend": "Railroads 1826 to 1911\n\tTranscontinental Railroad (Union Pacific)\n\n\tGreat Northern\n\n\tNorthern Pacific\n\n\tSouthern Pacific\n\n\tTranscontinental Railroad (Central Pacific)\n\n\tothers",
+    "stillDrawing": false
+   },
+   {
+    "name": "q3-battles",
+    "file": "the-battle-of-vicksburg--q3-battles.png",
+    "what": "Q3: Civil War Battlefields turned on",
+    "popup": null,
+    "legend": "Civil War Battlefields\n\tUnion Victory\n\n\tConfederate Victory\n\n\tInconclusive\n\n\tOther\nRailroads 1826 to 1911\n\tTranscontinental Railroad (Union Pacific)\n\n\tGreat Northern\n\n\tNorthern Pacific\n\n\tSouthern Pacific\n\n\tTranscontinental Railroad (Central Pacific)\n\n\tothers",
+    "stillDrawing": false
+   },
+   {
+    "name": "q3-championhill",
+    "file": "the-battle-of-vicksburg--q3-championhill.png",
+    "what": "Q3: clicking a diamond between Bruinsburg Bend and Jackson (Champion Hill) (pop-up shown on the feature)",
+    "popup": "Champion Hill\n____________________________\n\n\n\nMay 16, 1863\nBattlefield Trust page\nTap on image to view page",
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q4-porthudson",
+    "file": "the-battle-of-vicksburg--q4-porthudson.png",
+    "what": "Q4: zoomed out, clicking Port Hudson",
+    "popup": "Port Hudson\n____________________________\n\n\n\nMay 21, 1863 – July 9, 1863\nBattlefield Trust page\nTap on image to view page",
+    "legend": null,
+    "stillDrawing": false
+   }
+  ],
+  "log": [],
+  "layers": [
+   {
+    "title": "Key Places in the Union March to Vicksburg",
+    "visible": true,
+    "depth": 0,
+    "type": "map-notes",
+    "popupEnabled": true,
+    "hasPopup": false
+   },
+   {
+    "title": "Civil War Battlefields",
+    "visible": false,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Railroads 1826 to 1911",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   }
+  ],
+  "bookmarks": [
+   "The Battle of Vicksburg"
+  ]
+ },
+ "we-the-people-1787-1791": {
+  "webmap": "eba1ea7488624f3c88ef094167ed03ca",
+  "shots": [
+   {
+    "name": "open",
+    "file": "we-the-people-1787-1791--open.png",
+    "what": "The map as it opens, legend open",
+    "popup": null,
+    "legend": "Population in 1790: free and enslaved\n\tFree people\n\n\tEnslaved people\n\n\tOther\nTotal1790\n\t> 747,610\n\n\t600,000\n\n\t400,000\n\n\t200,000\n\n\t< 59,094",
+    "stillDrawing": false
+   },
+   {
+    "name": "q1-virginia",
+    "file": "we-the-people-1787-1791--q1-virginia.png",
+    "what": "Q1/Q3: clicking the Virginia pie",
+    "popup": "Virginia in 1790\n\n1790 census: 747,610 people, 292,627 of them enslaved (39.099998474121094%).\n\nCounted for the House under the three-fifths clause: 630,559. That gave Virginia 19 House seats in 1793 (one for every 33,000 people), plus 2 senators, like every state.\n\nIf enslaved people had been counted in full: 22 seats. If they had not been counted at all: 13 seats.\n\nVirginia's census figure excludes Kentucky, which was counted separately. Today's state outlines, with Maine shown as part of Massachusetts and West Virginia as part of Virginia, as they were in the 1790s.\n\nSeats: National Archives · Ratio: U.S. Census Bureau",
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q2-seats",
+    "file": "we-the-people-1787-1791--q2-seats.png",
+    "what": "Q2: House seats in 1793 turned on, legend open (pop-up shown on the feature)",
+    "popup": "Massachusetts in 1790\n\n1790 census: 475,327 people, 0 of them enslaved (0%).\n\nCounted for the House under the three-fifths clause: 475,327. That gave Massachusetts 14 House seats in 1793 (one for every 33,000 people), plus 2 senators, like every state.\n\nIf enslaved people had been counted in full: 14 seats. If they had not been counted at all: 14 seats.\n\nIncludes Maine (96,540 people), then part of Massachusetts. Today's state outlines, with Maine shown as part of Massachusetts and West Virginia as part of Virginia, as they were in the 1790s.\n\nSeats: National Archives · Ratio: U.S. Census Bureau",
+    "legend": "House seats in 1793\nHouseSeats\n\t13 to 19 seats\n\n\t7 to 10 seats\n\n\t4 to 6 seats\n\n\t1 to 2 seats\nPopulation in 1790: free and enslaved\n\tFree people\n\n\tEnslaved people\n\n\tOther\nTotal1790\n\t> 747,610\n\n\t600,000\n\n\t400,000\n\n\t200,000\n\n\t< 59,094",
+    "stillDrawing": false
+   },
+   {
+    "name": "q4-ratify",
+    "file": "we-the-people-1787-1791--q4-ratify.png",
+    "what": "Q4: Ratifying the Constitution on",
+    "popup": null,
+    "legend": "Ratifying the Constitution, 1787–1791\n\tVoted to ratify\n\n\tVoted against\n\n\tOther\nTotal\n\t> 355\n\n\t270\n\n\t200\n\n\t100\n\n\t< 26",
+    "stillDrawing": false
+   },
+   {
+    "name": "q4-nc",
+    "file": "we-the-people-1787-1791--q4-nc.png",
+    "what": "Q4: clicking a North Carolina pie (pop-up shown on the feature)",
+    "popup": "North Carolina: 12th state to ratify\n\nRatified on 11/21/1789, 12:00 AM: 194 for, 77 against.\n\nThe convention met at the State House, Fayetteville, 16–23 November 1789.\n\nA first convention, at Hillsborough in 1788, voted 184 to 83 against ratifying.\n\nSources: votes and dates and meeting places, Center for the Study of the American Constitution",
+    "legend": null,
+    "stillDrawing": false
+   }
+  ],
+  "log": [],
+  "layers": [
+   {
+    "title": "Ratifying the Constitution, 1787–1791",
+    "visible": false,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "House seats today (2020 apportionment)",
+    "visible": false,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "House seats in 1793",
+    "visible": false,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Population in 1790: free and enslaved",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   }
+  ],
+  "bookmarks": [
+   "The states in 1790",
+   "New England and New York",
+   "The South"
+  ]
+ },
+ "rights-and-responsibilities-where-we-live": {
+  "webmap": "59467ac7d7c64542acaa6a3e9c19ebf4",
+  "shots": [
+   {
+    "name": "open",
+    "file": "rights-and-responsibilities-where-we-live--open.png",
+    "what": "The map as it opens, legend open",
+    "popup": null,
+    "legend": "Congressional districts (119th Congress)\n\tCongressional district",
+    "stillDrawing": false
+   },
+   {
+    "name": "q1-district",
+    "file": "rights-and-responsibilities-where-we-live--q1-district.png",
+    "what": "Q1: zoomed to a town (Columbus, Ohio), clicking inside the district",
+    "popup": "Mike Carey (Republican) represents \n\nOhio Congressional District 15",
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q4-nrhp",
+    "file": "rights-and-responsibilities-where-we-live--q4-nrhp.png",
+    "what": "Q4: National Register of Historic Places on, zoomed in on a town",
+    "popup": null,
+    "legend": "National Register of Historic Places\n\tbuilding\n\n\tstructure\n\n\tdistrict\n\n\tsite\n\n\tobject\nCongressional districts (119th Congress)\n\tCongressional district",
+    "stillDrawing": false
+   },
+   {
+    "name": "q4-nrhp-click",
+    "file": "rights-and-responsibilities-where-we-live--q4-nrhp-click.png",
+    "what": "Q4: clicking a historic place diamond",
+    "popup": "Ohio Statehouse\nProperty ID: 72001011\n\nSE corner of High and Broad Sts.\nColumbus, Ohio\nCounty: Franklin\n\nResource Type: building\nStatus: Listed\nNational Register Information Tracking System Reference Number: 72001011\nNational Archive Information",
+    "legend": null,
+    "stillDrawing": false
+   }
+  ],
+  "log": [],
+  "layers": [
+   {
+    "title": "National Register of Historic Places",
+    "visible": false,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Congressional districts (119th Congress)",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   }
+  ],
+  "bookmarks": [
+   "The United States"
+  ]
+ },
+ "presidential-elections-1796-1800": {
+  "webmap": "6173219d9cd84812bcd4fed859b2c182",
+  "shots": [
+   {
+    "name": "open",
+    "file": "presidential-elections-1796-1800--open.png",
+    "what": "The map as it opens, legend open",
+    "popup": null,
+    "legend": "Landmark Supreme Court cases, 1803 and 1819\n\t\nElection of 1796: electors' votes\n\tJohn Adams (Federalist)\n\n\tThomas Jefferson (Democratic-Republican)\n\n\tOther\nElectors\n\t> 21\n\n\t16\n\n\t12\n\n\t7\n\n\t< 3",
+    "stillDrawing": false
+   },
+   {
+    "name": "q1-pie",
+    "file": "presidential-elections-1796-1800--q1-pie.png",
+    "what": "Q1: clicking a two-colour 1796 pie (Pennsylvania) (pop-up shown on the feature)",
+    "popup": "Pennsylvania: 15 electors\n\nElectors' votes in 1796: John Adams 1, Thomas Jefferson 14, Thomas Pinckney 2, Aaron Burr 13.\n\nEach elector cast two votes for president, so the votes add up to twice the number of electors. In the pie: John Adams (Federalist), 1 votes; Thomas Jefferson (Democratic-Republican), 14 votes.\n\nToday's state outlines, with Maine shown as part of Massachusetts and West Virginia as part of Virginia, as they were in the 1790s.\n\nSource: National Archives",
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q2-1800",
+    "file": "presidential-elections-1796-1800--q2-1800.png",
+    "what": "Q2: 1796 off, 1800 on, legend open",
+    "popup": null,
+    "legend": "Landmark Supreme Court cases, 1803 and 1819\n\t\nElection of 1800: electors' votes\n\tJohn Adams (Federalist)\n\n\tThomas Jefferson (Democratic-Republican)\n\n\tOther\nElectors\n\t> 21\n\n\t16\n\n\t12\n\n\t7\n\n\t< 3",
+    "stillDrawing": true
+   },
+   {
+    "name": "q4-marbury",
+    "file": "presidential-elections-1796-1800--q4-marbury.png",
+    "what": "Q4: clicking the Marbury v. Madison square",
+    "popup": null,
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q4-mcculloch",
+    "file": "presidential-elections-1796-1800--q4-mcculloch.png",
+    "what": "Q4: the pop-up for the McCulloch v. Maryland square",
+    "popup": "McCulloch v. Maryland (1819)\n\nQuestion: Could Congress charter a national bank, and could a state tax it?\n\nRuling: Congress could charter the bank, and Maryland's tax on it was unconstitutional and void.\n\nWhy it matters: Congress may use appropriate means to carry out its powers, and federal law is supreme over state law: \"the power to tax involves the power to destroy.\"\n\nWhy here: Maryland sued James McCulloch, a cashier at the Baltimore branch of the Bank of the United States, to collect a state tax on the bank.\n\nSource",
+    "legend": null
+   }
+  ],
+  "log": [],
+  "layers": [
+   {
+    "title": "Landmark Supreme Court cases, 1803 and 1819",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Election of 1800: electors' votes",
+    "visible": false,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Election of 1796: electors' votes",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   }
+  ],
+  "bookmarks": [
+   "The sixteen states"
+  ]
+ },
+ "louisiana-purchase-1803-1806": {
+  "webmap": "f8af7269e5c14e69b060d6184d04ff85",
+  "shots": [
+   {
+    "name": "open",
+    "file": "louisiana-purchase-1803-1806--open.png",
+    "what": "The map as it opens, legend open",
+    "popup": null,
+    "legend": "Lewis and Clark campsites (approximate)\n\t\nLewis and Clark National Historic Trail\n\t\nTerritorial acquisitions to 1803\n\tTerritory of the Original Thirteen States (Ceded by Great Britain) 1783\n\n\tLouisiana Purchase 1803\n\n\tLouisiana Purchase 1803 / Ceded to Great Britain 1818\n\n\tLouisiana Purchase 1803 / Texas Annexation 1845\n\n\tLouisiana Purchase 1803 / Mexican Cession 1848",
+    "stillDrawing": false
+   },
+   {
+    "name": "q1-purchase",
+    "file": "louisiana-purchase-1803-1806--q1-purchase.png",
+    "what": "Q1: clicking the Louisiana Purchase",
+    "popup": "Louisiana Purchase 1803\n\nThe Louisiana Purchase encompassed 530,000,000 acres of territory in North America that the United States purchased from France in 1803 for $15 million. ",
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q2-watersheds",
+    "file": "louisiana-purchase-1803-1806--q2-watersheds.png",
+    "what": "Q2: United States Watersheds on, legend open",
+    "popup": null,
+    "legend": "Lewis and Clark campsites (approximate)\n\t\nLewis and Clark National Historic Trail\n\t\nUnited States Watersheds\nHydrologic Unit Code 2s\n\t\nTerritorial acquisitions to 1803\n\tTerritory of the Original Thirteen States (Ceded by Great Britain) 1783\n\n\tLouisiana Purchase 1803\n\n\tLouisiana Purchase 1803 / Ceded to Great Britain 1818\n\n\tLouisiana Purchase 1803 / Texas Annexation 1845\n\n\tLouisiana Purchase 1803 / Mexican Cession 1848",
+    "stillDrawing": false
+   },
+   {
+    "name": "q2-missouri-basin",
+    "file": "louisiana-purchase-1803-1806--q2-missouri-basin.png",
+    "what": "Q2: clicking inside the Missouri River outline (pop-up shown on the feature)",
+    "popup": "Missouri Region\nHUC ID: 10 ",
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q3-biomes",
+    "file": "louisiana-purchase-1803-1806--q3-biomes.png",
+    "what": "Q3: Up the Missouri bookmark, Biomes on, legend open",
+    "popup": null,
+    "legend": "Lewis and Clark campsites (approximate)\n\t\nLewis and Clark National Historic Trail\n\t\nBiomes\n\tBoreal Forests/Taiga\n\n\tDeserts & Xeric Shrublands\n\n\tFlooded Grasslands & Savannas\n\n\tMangroves\n\n\tMediterranean Forests, Woodlands & Scrub\n\n\tMontane Grasslands & Shrublands\n\n\tRock and Ice\n\n\tTemperate Broadleaf & Mixed Forests\n\n\tTemperate Conifer Forests\n\n\tTemperate Grasslands, Savannas & Shrublands\n\n\tTropical & Subtropical Coniferous Forests\n\n\tTropical & Subtropical Dry Broadleaf Forests\n\n\tTropical & Subtropical Grasslands, Savannas & Shrublands\n\n\tTropical & Subtropical Moist Broadleaf Forests\n\n\tTundra\n\n\tothers\nTerritorial acquisitions to 1803\n\tTerritory of the Original Thirteen States (Ceded by Great Britain) 1783\n\n\tLouisiana Purchase 1803\n\n\tLouisiana Purchase 1803 / Ceded to Great Britain 1818\n\n\tLouisiana Purchase 1803 / Texas Annexation 1845\n\n\tLouisiana Purchase 1803 / Mexican Cession 1848",
+    "stillDrawing": true
+   },
+   {
+    "name": "q3-biome-click",
+    "file": "louisiana-purchase-1803-1806--q3-biome-click.png",
+    "what": "Q3: clicking the shading along the route (pop-up shown on the feature)",
+    "popup": "Temperate Grasslands, Savannas & Shrublands\nRealm: Nearctic\nEcoregion: Northern Shortgrass prairie\n \nNature Could Recover \nThe amount of protected and unprotected natural habitat remaining is less than 50% but more than 20%. Ecoregions in this category would require restoration to reach Half Protected. ",
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q4-rockies",
+    "file": "louisiana-purchase-1803-1806--q4-rockies.png",
+    "what": "Q4: Across the Rockies to the Pacific bookmark",
+    "popup": null,
+    "legend": "Lewis and Clark campsites (approximate)\n\t\nLewis and Clark National Historic Trail\n\t\nTerritorial acquisitions to 1803\n\tTerritory of the Original Thirteen States (Ceded by Great Britain) 1783\n\n\tLouisiana Purchase 1803\n\n\tLouisiana Purchase 1803 / Ceded to Great Britain 1818\n\n\tLouisiana Purchase 1803 / Texas Annexation 1845\n\n\tLouisiana Purchase 1803 / Mexican Cession 1848",
+    "stillDrawing": false
+   }
+  ],
+  "log": [],
+  "layers": [
+   {
+    "title": "Lewis and Clark campsites (approximate)",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": false
+   },
+   {
+    "title": "Lewis and Clark National Historic Trail",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": false
+   },
+   {
+    "title": "United States Watersheds",
+    "visible": false,
+    "depth": 0,
+    "type": "group",
+    "popupEnabled": true,
+    "hasPopup": false
+   },
+   {
+    "title": "Hydrologic Unit Code 2s",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Hydrologic Unit Code 4s",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Hydrologic Unit Code 6s",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Hydrologic Unit Code 8s",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Hydrologic Unit Code 10s",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Hydrologic Unit Code 12s",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Biomes",
+    "visible": false,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Territorial acquisitions to 1803",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   }
+  ],
+  "bookmarks": [
+   "The Louisiana Purchase",
+   "Up the Missouri",
+   "Across the Rockies to the Pacific"
+  ]
+ },
+ "war-of-1812-and-monroe-doctrine": {
+  "webmap": "fad1cdb9d5704401a4e05c34f7ee693c",
+  "shots": [
+   {
+    "name": "open",
+    "file": "war-of-1812-and-monroe-doctrine--open.png",
+    "what": "The map as it opens, legend open",
+    "popup": null,
+    "legend": "Battles of the War of 1812\n\tAmerican Victory\n\n\tBritish Victory\n\n\tInconclusive\nTotal Casualties\n\t> 2,628\n\n\t2,000\n\n\t1,300\n\n\t700\n\n\t< 0\nHistoric National Boundaries: 1800\n\tUnited States\n\n\tOther",
+    "stillDrawing": true
+   },
+   {
+    "name": "q1-bookmark",
+    "file": "war-of-1812-and-monroe-doctrine--q1-bookmark.png",
+    "what": "Q1: The War of 1812 bookmark",
+    "popup": null,
+    "legend": "Battles of the War of 1812\n\tAmerican Victory\n\n\tBritish Victory\n\n\tInconclusive\nTotal Casualties\n\t> 2,628\n\n\t2,000\n\n\t1,300\n\n\t700\n\n\t< 0\nHistoric National Boundaries: 1800\n\tUnited States\n\n\tOther",
+    "stillDrawing": false
+   },
+   {
+    "name": "q2-neworleans",
+    "file": "war-of-1812-and-monroe-doctrine--q2-neworleans.png",
+    "what": "Q2: clicking one of the biggest diamonds (New Orleans)",
+    "popup": "New Orleans\n\nJanuary 8, 1815 \n\nAmerican Side Victory \n\nTotal Casualties: 2,096 \n____________________________________________________\n\nThe United States achieved its greatest land victory of the War of 1812 at New Orleans. The battle ended a British effort to gain control of a critical American port and elevated Maj. Gen. Andrew Jackson to national fame. The British launched a forward attack against American forces at Chalmette Plantation. British casualties far outnumbered those of the Americans. Jackson's fame from the battle contributed to him winning the presidential election thirteen years later.\n\nThe British strategy had been to focus on attacking American coastal regions to cripple American trade and transportation. Although they had been unable to take Baltimore, the British moved ahead with a plan to attack New Orleans.\n\nThe Americans were aware of a possible invasion on the Gulf Coast. Andrew Jackson reached the city on December 1 and began assembling an army. His force consisted of Tennessee and Kentucky frontiersmen, Louisiana militia, New Orleans businessmen, free men of color, Choctaw warriors, smuggler Jean Lafitte and his privateers, sailors, marines, and United States troops.\n\nOn January 8, 1815, Maj. Gen. Andrew Jackson's hastily assembled army won the day against a battle-hardened and numerically superior British force. The resounding American victory at the Battle of New Orleans soon became a symbol of American democracy triumphing over the old European ideas of aristocracy and entitlement. The battle was the last major armed engagement between the United States and Britain.\nOn January 8, 1815, Maj. Gen. Andrew Jackson's hastily assembled army won the day against a battle-hardened and numerically superior British force. The resounding American victory at the Battle of New Orleans soon became a symbol of American democracy triumphing over the old European ideas of aristocracy and entitlement. The battle was the last major armed engagement between the United States and Britain. \n\nCasualties by side",
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q3-boundary",
+    "file": "war-of-1812-and-monroe-doctrine--q3-boundary.png",
+    "what": "Q3: The 1819 boundary bookmark with both layers on",
+    "popup": null,
+    "legend": "Battles of the War of 1812\n\tAmerican Victory\n\n\tBritish Victory\n\n\tInconclusive\nTotal Casualties\n\t> 2,628\n\n\t2,000\n\n\t1,300\n\n\t700\n\n\t< 0\nAdams–Onís Treaty line, 1819\n\t\nLand Spain gave up in 1819\n\tEast Florida (Spanish Cession) 1819\n\n\tWest Florida (Spanish Cession) 1819\n\n\tSpanish Cession 1819\nHistoric National Boundaries: 1800\n\tUnited States\n\n\tOther",
+    "stillDrawing": false
+   },
+   {
+    "name": "q3-florida",
+    "file": "war-of-1812-and-monroe-doctrine--q3-florida.png",
+    "what": "Q3: clicking the green land (East Florida) (pop-up shown on the feature)",
+    "popup": "East Florida (Spanish Cession) 1819\n\nSecretary of State John Quincy Adams negotiated the acquisition of the Florida territory from Spain via the Adams-Onis Treaty. While the Americans didn't pay Spain for the land, they did agree to assume $5 million in damage caused by American citizens when they rebelled against Spain ",
+    "legend": null,
+    "stillDrawing": false
+   },
+   {
+    "name": "q4-latin",
+    "file": "war-of-1812-and-monroe-doctrine--q4-latin.png",
+    "what": "Q4: Latin America in 1825 bookmark, recognition layer on",
+    "popup": null,
+    "legend": "Latin American independence and US recognition\n\tRecognized by the United States by 1824\n\n\tRecognized later (1826 to 1862)\n\n\tOther\nBattles of the War of 1812\n\tAmerican Victory\n\n\tBritish Victory\n\n\tInconclusive\nTotal Casualties\n\t> 2,628\n\n\t2,000\n\n\t1,300\n\n\t700\n\n\t< 0\nHistoric National Boundaries: 1800\n\tUnited States\n\n\tOther",
+    "stillDrawing": false
+   },
+   {
+    "name": "q4-circle",
+    "file": "war-of-1812-and-monroe-doctrine--q4-circle.png",
+    "what": "Q4: the pop-up for a blue circle",
+    "popup": "Buenos Ayres (United Provinces)\n\nCapital: Buenos Aires. Today: Argentina.\n\nIndependence: Declared independence from Spain on 9 July 1816.\n\nRecognized by the United States: 1/27/1823, 12:00 AM. Caesar Rodney was appointed U.S. Minister Plenipotentiary.\n\nSource: Office of the Historian, U.S. Department of State",
+    "legend": null
+   },
+   {
+    "name": "q3-treatyline",
+    "file": "war-of-1812-and-monroe-doctrine--q3-treatyline.png",
+    "what": "Q3: the pop-up for one part of the pink dashed line",
+    "popup": "Adams–Onís Treaty line, 1819 (part 1)\n\nThe Sabine River, from the Gulf of Mexico north to latitude 32° N\n\nDrawn from the treaty's description on Natural Earth's rivers (public domain): approximate at classroom scale.\n\nTreaty text (Avalon Project)",
+    "legend": null
+   }
+  ],
+  "log": [
+   "q4-circle: page.evaluate: o"
+  ],
+  "layers": [
+   {
+    "title": "Latin American independence and US recognition",
+    "visible": false,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Battles of the War of 1812",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Adams–Onís Treaty line, 1819",
+    "visible": false,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Battlefield Boundaries: War of 1812",
+    "visible": true,
+    "depth": 0,
+    "type": "group",
+    "popupEnabled": true,
+    "hasPopup": false
+   },
+   {
+    "title": "Core Areas",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Battlefield Boundary",
+    "visible": true,
+    "depth": 1,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Land Spain gave up in 1819",
+    "visible": false,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   },
+   {
+    "title": "Historic National Boundaries: 1800",
+    "visible": true,
+    "depth": 0,
+    "type": "feature",
+    "popupEnabled": true,
+    "hasPopup": true
+   }
+  ],
+  "bookmarks": [
+   "The War of 1812",
+   "The 1819 boundary",
+   "Latin America in 1825"
+  ]
+ }
+}
