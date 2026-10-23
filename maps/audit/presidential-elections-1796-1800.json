@@ -1,0 +1,769 @@
+{
+ "tool": "Map audit 1.0",
+ "lesson": "presidential-elections-1796-1800",
+ "webmapId": "6173219d9cd84812bcd4fed859b2c182",
+ "item": {
+  "id": "6173219d9cd84812bcd4fed859b2c182",
+  "title": "Presidential Elections, 1796 and 1800",
+  "type": "Web Map",
+  "owner": "GIS-4-Schools",
+  "access": "public",
+  "snippet": "How each state's electors voted in 1796 and 1800, with Marbury v. Madison and McCulloch v. Maryland.",
+  "description": "<p><b>Question:</b> How did the first political parties divide the country?</p><p><b>Ideas for one lesson in MapMaker</b> (choose any):</p><ul><li>Compare the elections of 1796 and 1800. Each pie shows how a state's electors voted for John Adams (Federalist) and Thomas Jefferson (Democratic-Republican); bigger pies mean more electors. Which regions backed each party, and which states split?</li><li>Click <i>Marbury v. Madison</i> (1803) and <i>McCulloch v. Maryland</i> (1819) for the question, the ruling and why each matters.</li><li>Sketch pins for the First Bank of the United States (Philadelphia, 1791) and Washington's Farewell Address (published in Philadelphia, 1796).</li><li>Download an image or export a PDF of the map to keep the work.</li></ul><p><b>Notes:</b> In 1796 and 1800 each elector cast two votes for president, so a state's votes add up to twice its electors. The pies show only the votes for Adams and Jefferson; each pop-up lists every candidate. In 1800, Jefferson and Aaron Burr tied with 73 votes each, so the House of Representatives chose the president: Jefferson, on 17 February 1801. The 12th Amendment (1804) then gave electors separate votes for president and vice president. The National Archives' 1800 table shows a dash for Virginia's Aaron Burr, but its own Burr total of 73 needs Virginia's 21. Today's state outlines (Natural Earth, public domain), with Maine shown as part of Massachusetts and West Virginia as part of Virginia. Territories aren't shown.</p><p><b>Sources:</b> National Archives (electoral votes and court cases); Natural Earth (outlines).</p><p><i>Version 1.2 (14 October 2026).</i></p>",
+  "tags": [
+   "MapMaker",
+   "US History",
+   "grade 8",
+   "November 2026",
+   "web map",
+   "activity 10"
+  ],
+  "accessInformation": "National Archives; Natural Earth.",
+  "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
+  "created": 1791982424000,
+  "modified": 1791988677000,
+  "numViews": 0,
+  "thumbnail": null,
+  "contentStatus": null,
+  "extent": [
+   [
+    -92,
+    29
+   ],
+   [
+    -66,
+    47.6
+   ]
+  ],
+  "descriptionChars": 1520
+ },
+ "basemap": {
+  "title": "Modern Antique",
+  "layers": [
+   {
+    "title": "World Hillshade",
+    "type": "ArcGISTiledMapServiceLayer",
+    "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+    "itemId": "1b243539f4514b6ba35e7d995890db1d"
+   },
+   {
+    "title": "Copy of Modern Antique no Labels",
+    "type": "VectorTileLayer",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json",
+    "itemId": "545f2e839f624600bbb092c3ad998bb8"
+   }
+  ]
+ },
+ "opening": {
+  "extent": {
+   "xmin": -10241393.2,
+   "ymin": 3375646,
+   "xmax": -7347086.4,
+   "ymax": 6040565.2,
+   "spatialReference": {
+    "wkid": 102100,
+    "latestWkid": 3857
+   }
+  },
+  "scale": 9115927
+ },
+ "bookmarks": [
+  "The sixteen states"
+ ],
+ "applicationProperties": null,
+ "layers": [
+  {
+   "path": "Election of 1796: electors' votes",
+   "title": "Election of 1796: electors' votes",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "opacity": 1,
+   "itemId": "d125b07d377c4282af37bf3296788b91",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Electoral_Votes_1796_1800/FeatureServer/0",
+   "disablePopup": false,
+   "popup": {
+    "title": "{State}: {Electors} electors",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "Adams1796",
+     "Jefferson1796",
+     "Note",
+     "Votes1796"
+    ]
+   },
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "pieChart",
+    "field": null,
+    "valueExpression": false,
+    "visualVariables": [
+     "sizeInfo"
+    ]
+   },
+   "item": {
+    "id": "d125b07d377c4282af37bf3296788b91",
+    "title": "Electoral votes by state, 1796 and 1800",
+    "type": "Feature Service",
+    "owner": "GIS-4-Schools",
+    "access": "public",
+    "snippet": "How each state's electors voted in the presidential elections of 1796 and 1800.",
+    "description": "<p>One polygon per state that voted in 1796 and 1800, with the votes for every candidate. Each elector cast two votes for president. The fields <b>Adams1796</b>, <b>Jefferson1796</b>, <b>Adams1800</b> and <b>Jefferson1800</b> hold the votes for the two main candidates.</p><p>The National Archives' 1800 table shows a dash (no votes) for Virginia's Aaron Burr, but its own Burr total of 73 needs Virginia's 21, so 21 is used here. In 1800 Jefferson and Burr tied with 73 votes each, and the House of Representatives chose Jefferson.</p><p>Today's state outlines (Natural Earth, public domain), with Maine shown as part of Massachusetts and West Virginia as part of Virginia.</p><p><i>Version 1.0 (14 October 2026).</i></p>",
+    "tags": [
+     "MapMaker",
+     "US History",
+     "grade 8",
+     "November 2026",
+     "elections",
+     "Electoral College",
+     "1796",
+     "1800"
+    ],
+    "accessInformation": "Votes: National Archives (public domain). Outlines: Natural Earth (public domain).",
+    "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
+    "created": 1791982295000,
+    "modified": 1791988581000,
+    "numViews": 0,
+    "thumbnail": null,
+    "contentStatus": null,
+    "extent": [
+     [
+      -90.3042,
+      30.3692
+     ],
+     [
+      -66.9773,
+      47.45969999999999
+     ]
+    ],
+    "descriptionChars": 659
+   },
+   "service": {
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Electoral_Votes_1796_1800/FeatureServer/0",
+    "name": "MM_US_Electoral_Votes_1796_1800_polygons",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       76,
+       129,
+       205,
+       191
+      ],
+      "outline": {
+       "color": [
+        0,
+        0,
+        0,
+        255
+       ],
+       "width": 0.75,
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "State",
+      "alias": "State",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Abbr",
+      "alias": "Abbr",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Electors",
+      "alias": "Electors",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Adams1796",
+      "alias": "Adams1796",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Jefferson1796",
+      "alias": "Jefferson1796",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Other1796",
+      "alias": "Other1796",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Votes1796",
+      "alias": "Votes1796",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Lead1796",
+      "alias": "Lead1796",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Adams1800",
+      "alias": "Adams1800",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Jefferson1800",
+      "alias": "Jefferson1800",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Other1800",
+      "alias": "Other1800",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Votes1800",
+      "alias": "Votes1800",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Lead1800",
+      "alias": "Lead1800",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SourceURL",
+      "alias": "SourceURL",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SourceURL1800",
+      "alias": "SourceURL1800",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Note",
+      "alias": "Note",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Source",
+      "alias": "Source",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "ObjectId",
+      "alias": "ObjectId",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "Shape__Area",
+      "alias": "Shape__Area",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "d125b07d377c4282af37bf3296788b91",
+    "count": 16,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": null
+    }
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false
+  },
+  {
+   "path": "Election of 1800: electors' votes",
+   "title": "Election of 1800: electors' votes",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": false,
+   "opacity": 1,
+   "itemId": "d125b07d377c4282af37bf3296788b91",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Electoral_Votes_1796_1800/FeatureServer/0",
+   "disablePopup": false,
+   "popup": {
+    "title": "{State}: {Electors} electors",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "Adams1800",
+     "Jefferson1800",
+     "Note",
+     "Votes1800"
+    ]
+   },
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "pieChart",
+    "field": null,
+    "valueExpression": false,
+    "visualVariables": [
+     "sizeInfo"
+    ]
+   },
+   "item": {
+    "id": "d125b07d377c4282af37bf3296788b91",
+    "title": "Electoral votes by state, 1796 and 1800",
+    "type": "Feature Service",
+    "owner": "GIS-4-Schools",
+    "access": "public",
+    "snippet": "How each state's electors voted in the presidential elections of 1796 and 1800.",
+    "description": "<p>One polygon per state that voted in 1796 and 1800, with the votes for every candidate. Each elector cast two votes for president. The fields <b>Adams1796</b>, <b>Jefferson1796</b>, <b>Adams1800</b> and <b>Jefferson1800</b> hold the votes for the two main candidates.</p><p>The National Archives' 1800 table shows a dash (no votes) for Virginia's Aaron Burr, but its own Burr total of 73 needs Virginia's 21, so 21 is used here. In 1800 Jefferson and Burr tied with 73 votes each, and the House of Representatives chose Jefferson.</p><p>Today's state outlines (Natural Earth, public domain), with Maine shown as part of Massachusetts and West Virginia as part of Virginia.</p><p><i>Version 1.0 (14 October 2026).</i></p>",
+    "tags": [
+     "MapMaker",
+     "US History",
+     "grade 8",
+     "November 2026",
+     "elections",
+     "Electoral College",
+     "1796",
+     "1800"
+    ],
+    "accessInformation": "Votes: National Archives (public domain). Outlines: Natural Earth (public domain).",
+    "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
+    "created": 1791982295000,
+    "modified": 1791988581000,
+    "numViews": 0,
+    "thumbnail": null,
+    "contentStatus": null,
+    "extent": [
+     [
+      -90.3042,
+      30.3692
+     ],
+     [
+      -66.9773,
+      47.45969999999999
+     ]
+    ],
+    "descriptionChars": 659
+   },
+   "service": {
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Electoral_Votes_1796_1800/FeatureServer/0",
+    "name": "MM_US_Electoral_Votes_1796_1800_polygons",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       76,
+       129,
+       205,
+       191
+      ],
+      "outline": {
+       "color": [
+        0,
+        0,
+        0,
+        255
+       ],
+       "width": 0.75,
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "State",
+      "alias": "State",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Abbr",
+      "alias": "Abbr",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Electors",
+      "alias": "Electors",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Adams1796",
+      "alias": "Adams1796",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Jefferson1796",
+      "alias": "Jefferson1796",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Other1796",
+      "alias": "Other1796",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Votes1796",
+      "alias": "Votes1796",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Lead1796",
+      "alias": "Lead1796",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Adams1800",
+      "alias": "Adams1800",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Jefferson1800",
+      "alias": "Jefferson1800",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Other1800",
+      "alias": "Other1800",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Votes1800",
+      "alias": "Votes1800",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Lead1800",
+      "alias": "Lead1800",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SourceURL",
+      "alias": "SourceURL",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SourceURL1800",
+      "alias": "SourceURL1800",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Note",
+      "alias": "Note",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Source",
+      "alias": "Source",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "ObjectId",
+      "alias": "ObjectId",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "Shape__Area",
+      "alias": "Shape__Area",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "d125b07d377c4282af37bf3296788b91",
+    "count": 16,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": null
+    }
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false
+  },
+  {
+   "path": "Landmark Supreme Court cases, 1803 and 1819",
+   "title": "Landmark Supreme Court cases, 1803 and 1819",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "opacity": 1,
+   "itemId": "8b3b0b6964eb434fa5408fa12efa0c42",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Supreme_Court_Cases_1803_1857/FeatureServer/0",
+   "disablePopup": false,
+   "popup": {
+    "title": "{CaseName} ({CaseYear})",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "Principle",
+     "Question",
+     "Ruling",
+     "SourceURL",
+     "WhyHere"
+    ]
+   },
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": "CaseYear <= 1819",
+   "rendererInMap": {
+    "type": "simple",
+    "field": null,
+    "valueExpression": false,
+    "symbol": {
+     "type": "esriSMS",
+     "style": "esriSMSSquare",
+     "color": [
+      204,
+      121,
+      167,
+      255
+     ],
+     "size": 12,
+     "outline": {
+      "color": [
+       40,
+       40,
+       40,
+       255
+      ],
+      "width": 1,
+      "style": "esriSLSSolid"
+     }
+    },
+    "label": null
+   },
+   "labelsInMap": true,
+   "item": {
+    "id": "8b3b0b6964eb434fa5408fa12efa0c42",
+    "title": "Landmark Supreme Court cases, 1803 to 1857",
+    "type": "Feature Service",
+    "owner": "GIS-4-Schools",
+    "access": "public",
+    "snippet": "Six landmark cases: the question, the ruling and why each matters, at a place linked to each case.",
+    "description": "<p>Marbury v. Madison, McCulloch v. Maryland, Gibbons v. Ogden, Cherokee Nation v. Georgia, Worcester v. Georgia and Dred Scott v. Sandford, each at a place linked to the case (see <b>WhyHere</b>).</p><p><i>Version 1.0 (14 October 2026).</i></p>",
+    "tags": [
+     "MapMaker",
+     "US History",
+     "grade 8",
+     "November 2026",
+     "Supreme Court",
+     "judicial review",
+     "federalism"
+    ],
+    "accessInformation": "National Archives Milestone Documents (public domain); New Georgia Encyclopedia; Justia. Locations: Natural Earth and Wikipedia.",
+    "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
+    "created": 1791982356000,
+    "modified": 1791988617000,
+    "numViews": 58,
+    "thumbnail": null,
+    "contentStatus": null,
+    "extent": [
+     [
+      -90.2419,
+      33.087799999999994
+     ],
+     [
+      -74.214,
+      40.663
+     ]
+    ],
+    "descriptionChars": 217
+   },
+   "service": {
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Supreme_Court_Cases_1803_1857/FeatureServer/0",
+    "name": "MM_US_Supreme_Court_Cases_1803_1857_points",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPoint",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriPMS",
+      "style": null,
+      "width": 15,
+      "picture": true
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "CaseName",
+      "alias": "CaseName",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "CaseYear",
+      "alias": "CaseYear",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Place",
+      "alias": "Place",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "WhyHere",
+      "alias": "WhyHere",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Question",
+      "alias": "Question",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Ruling",
+      "alias": "Ruling",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Principle",
+      "alias": "Principle",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Source",
+      "alias": "Source",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SourceURL",
+      "alias": "SourceURL",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "ObjectId",
+      "alias": "ObjectId",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "8b3b0b6964eb434fa5408fa12efa0c42",
+    "count": 6,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [
+      {
+       "feature": "Cherokee Nation v. Georgia",
+       "field": "Source",
+       "ends": "a.org/articles/government-politics/worcester-v-georgia-1832/"
+      }
+     ],
+     "nameField": "CaseName"
+    }
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false
+  }
+ ],
+ "findings": [
+  {
+   "where": "layer Landmark Supreme Court cases, 1803 and 1819",
+   "what": "text may be cut off in Source (Cherokee Nation v. Georgia): …a.org/articles/government-politics/worcester-v-georgia-1832/"
+  }
+ ]
+}

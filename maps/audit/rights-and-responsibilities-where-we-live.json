@@ -1,0 +1,665 @@
+{
+ "tool": "Map audit 1.0",
+ "lesson": "rights-and-responsibilities-where-we-live",
+ "webmapId": "59467ac7d7c64542acaa6a3e9c19ebf4",
+ "item": {
+  "id": "59467ac7d7c64542acaa6a3e9c19ebf4",
+  "title": "Rights and Responsibilities Where We Live",
+  "type": "Web Map",
+  "owner": "GIS-4-Schools",
+  "access": "public",
+  "snippet": "Congressional districts and historic places, for mapping the rights and responsibilities in your own community.",
+  "description": "<p><b>Question:</b> Where do we use our rights and carry out our responsibilities?</p><p><b>Ideas for one lesson in MapMaker</b> (choose any):</p><ul><li>Zoom to your community and sketch pins on public places such as the courthouse, a polling place, city hall, the library, a newspaper office and a place of worship, and label each with a right in the Bill of Rights or a citizen's responsibility. Choosing public places rather than homes keeps students' addresses private.</li><li>Switch on the National Register layer to find historic public buildings nearby.</li><li>Click inside your congressional district to see who represents it now.</li><li>Download an image or export a PDF of the map to keep the work.</li></ul><p><b>Notes:</b> The midterm elections are on 3 November 2026. California, Florida, Louisiana, North Carolina, Ohio, Tennessee, Texas and Utah have new congressional districts for the 2026 elections (National Conference of State Legislatures, September 2026), so in those states the district on the ballot can differ from the 119th Congress districts shown here.</p><p><b>Sources:</b> U.S. 119th Congressional Districts and National Register of Historic Places, from the MapMaker catalogue.</p><p><i>Version 1.2 (14 October 2026).</i></p>",
+  "tags": [
+   "MapMaker",
+   "US History",
+   "grade 8",
+   "November 2026",
+   "web map",
+   "activity 9"
+  ],
+  "accessInformation": "MapMaker catalogue layers (U.S. 119th Congressional Districts; National Register of Historic Places).",
+  "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
+  "created": 1791982418000,
+  "modified": 1791988671000,
+  "numViews": 0,
+  "thumbnail": null,
+  "contentStatus": null,
+  "extent": [
+   [
+    -125,
+    24
+   ],
+   [
+    -66,
+    50
+   ]
+  ],
+  "descriptionChars": 1145
+ },
+ "basemap": {
+  "title": "Topographic",
+  "layers": [
+   {
+    "title": "World_Hillshade",
+    "type": "ArcGISTiledMapServiceLayer",
+    "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+    "itemId": null
+   },
+   {
+    "title": "World Topographic Map",
+    "type": "VectorTileLayer",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/7dc6cea0b1764a1f9af2e679f642f0f5/resources/styles/root.json",
+    "itemId": "7dc6cea0b1764a1f9af2e679f642f0f5"
+   }
+  ]
+ },
+ "opening": {
+  "extent": {
+   "xmin": -13914936.3,
+   "ymin": 2753408.1,
+   "xmax": -7347086.4,
+   "ymax": 6446275.8,
+   "spatialReference": {
+    "wkid": 102100,
+    "latestWkid": 3857
+   }
+  },
+  "scale": 20686141
+ },
+ "bookmarks": [
+  "The United States"
+ ],
+ "applicationProperties": null,
+ "layers": [
+  {
+   "path": "Congressional districts (119th Congress)",
+   "title": "Congressional districts (119th Congress)",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "opacity": 1,
+   "itemId": "930f9f68739f48bab91e500711c80dc4",
+   "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/USA_119th_Congressional_Districts/FeatureServer/0",
+   "disablePopup": false,
+   "popup": null,
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "simple",
+    "field": null,
+    "valueExpression": false,
+    "symbol": {
+     "type": "esriSFS",
+     "style": "esriSFSSolid",
+     "color": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "outline": {
+      "color": [
+       0,
+       114,
+       178,
+       255
+      ],
+      "width": 2,
+      "style": "esriSLSSolid"
+     }
+    },
+    "label": "Congressional district"
+   },
+   "item": {
+    "id": "930f9f68739f48bab91e500711c80dc4",
+    "title": "U.S. 119th Congressional Districts",
+    "type": "Feature Service",
+    "owner": "mm.atlas",
+    "access": "public",
+    "snippet": "Congressional districts are regions of nearly equal population within a state. Each district is represented by one person in the House of Representatives. This layer shows the 119th (January 3, 2025 – January 3, 2027) Congressional Districts. It was built with data from the U.S. Census Bureau and the Clerk of the U.S. House of Representatives.",
+    "description": "<p><span style='font-size:12.0pt;'><span style='line-height:107%;'>The United States of America has </span></span><a target='_blank' href='https://www.pbslearningmedia.org/resource/civ23-soc-separatepowers/the-separation-of-powers-in-the-us-government/' rel='nofollow ugc noopener noreferrer'><span style='font-size:12.0pt;'><span style='line-height:107%;'>three branches of government</span></span></a><span style='font-size:12.0pt;'><span style='line-height:107%;'>: the Executive Branch, the Judicial Branch, and the Legislative Branch. The Executive Branch is led by the President and is responsible for enforcing the laws of the country. The Judicial Branch works to interpret and review the laws of the country and ensure they align with the Constitution. &nbsp;This is the Supreme Court and the federal district courts.&nbsp;</span></span></p><p><span style='font-size:12.0pt;'><span style='line-height:107%;'>Finally, the Legislative Branch makes the laws. It is composed of two parts, the Senate and the House of Representatives. The Senate has 100 members, two from each of the 50 U.S. States. Each Senator serves a six-year term. The House of Representatives is made up of 435 members. Each Representative serves a two-year term. Each state has a different number of seats in the House of Representatives based on its population. For example, California has 52 representatives as it has the highest population. Whereas, Alaska, Delaware, Montana, North Dakota, South Dakota, Vermont, and Wyoming only have one representative each due to their lower populations. For much of history, representative seats were added to the House after every census as the country’s population grew. However, the number was capped in 1941 to 435 members.</span></span></p><p><span style='font-size:12.0pt;'><span style='line-height:107%;'>Each representative represents a congressional district. A congressional district, also called an electoral district, is a geographic area of nearly equal population that elects a representative to the House. Each state draws its own districts every ten years after the decennial census. This is a process called redistricting. How these districts are drawn often impacts which political party (Democrat or Republican) has the most representatives in Congress.</span></span></p><p><span style='font-size:12.0pt;'><span style='line-height:107%;'>Sometimes, the states draw congressional districts to represent one political party more favorably than the other. This is called gerrymandering. This makes elections less competitive and can mean one person’s vote matters more than another person’s in a different place. If this is the case, citizens of the state can take the matter to court. If the court agrees that the congressional district maps are unfair to voters, the state must redraw the maps to be fairer. Researchers at Princeton University maintain a </span></span><a target='_blank' href='https://gerrymander.princeton.edu/redistricting-report-card/' rel='nofollow ugc noopener noreferrer'><span style='font-size:12.0pt;'><span style='line-height:107%;'>Redistricting Report Card</span></span></a><span style='font-size:12.0pt;'><span style='line-height:107%;'>. How is your state doing?</span></span></p><p><span style='font-size:12.0pt;'><span style='line-height:107%;'>Congressional districts are sometimes used for other purposes as well. For example, they are sometimes used to better understand the demographics of a particular place but the Census Bureau. They sort the information they collect into congressional districts, so they know more about the social, economic, and housing situation of each district. This can help representatives make policy decisions about the place they represent.</span></span></p><p><span style='font-size:12.0pt;'><span style='line-height:107%;'>This layer illustrates the 119<sup>th</sup> (January 3, 2025 – January 3, 2027) Congressional Districts. The map maker used data on the location of the districts from the U.S. Census Bureau and joined it with data on each elected official from the Clerk of the U.S. House of Representatives. The layer uses the congressional districts drawn from the 2020 Census. You can use the legend to see what party represents each congressional district or click on a district to see the name of the representative. Who is your representative?</span></span></p><p><span style='font-size:12.0pt;'><span style='line-height:107%;'>Data Citation:&nbsp;</span></span></p><p><span style='font-size:12.0pt;'><span style='line-height:107%;'>Esri, </span><i><span style='line-height:107%;'>USA 119th Congressional Districts (All Territories)</span></i><span style='line-height:107%;'>, (October 16, 2024), distributed by Esri, </span></span><a target='_blank' href='https://www.arcgis.com/home/item.html?id=dd86c378a5d94483be9cb25996d873a4' rel='nofollow ugc noopener noreferrer'><span style='font-size:12.0pt;'><span style='line-height:107%;'>https://www.arcgis.com/home/item.html?id=dd86c378a5d94483be9cb25996d873a4</span></span></a><span style='font-size:12.0pt;'><span style='line-height:107%;'>.</span></span></p>",
+    "tags": [
+     "layer",
+     "polygon",
+     "congressional districts",
+     "Congress",
+     "House of Representatives",
+     "Democrat",
+     "Republican",
+     "area",
+     "boundaries",
+     "society",
+     "United States",
+     "Puerto Rico",
+     "U.S. Virgin Islands",
+     "American Samoa",
+     "Guam",
+     "Northern Mariana Islands",
+     "2023-2025"
+    ],
+    "accessInformation": "Sources: Esri; U.S. Department of Commerce, Census Bureau; Clerk of the U.S. House of Representatives; U.S. Department of Commerce (DOC), National Oceanic and Atmospheric Administration (NOAA), National Ocean Service (NOS), National Geodetic Survey (NGS)",
+    "licenseInfo": "<p><img style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; height:auto; max-width:100%;' src='https://downloads.esri.com/blogs/arcgisonline/esrilogo_new.png' width='113' height='43' /><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'> This work is licensed under the Esri Master License Agreement.</span><br />&nbsp;</p><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><a style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' href='https://goto.arcgis.com/termsofuse/viewsummary' rel='nofollow ugc noopener noreferrer'><strong>View Summary</strong></a>&nbsp;|&nbsp;<a style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' href='https://goto.arcgis.com/termsofuse/viewtermsofuse' rel='nofollow ugc noopener noreferrer'><strong>View Terms of Use</strong></a></div>",
+    "created": 1754939800000,
+    "modified": 1772126984000,
+    "numViews": 9966,
+    "thumbnail": "thumbnail/thumbnail1755020292929.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -180,
+      -1.603693
+     ],
+     [
+      180,
+      71.365162
+     ]
+    ],
+    "descriptionChars": 3426
+   },
+   "service": {
+    "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/USA_119th_Congressional_Districts/FeatureServer/0",
+    "name": "USA 119th Congressional Districts",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "minScale": 80000000,
+    "maxScale": 0,
+    "copyrightText": "Esri; U.S. Department of Commerce, Census Bureau; Clerk of the U.S. House of Representatives; U.S. Department of Commerce (DOC), National Oceanic and Atmospheric Administration (NOAA), National Ocean Service (NOS), National Geodetic Survey (NGS)",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "uniqueValue",
+     "field": "PARTY",
+     "valueExpression": false,
+     "classes": [
+      {
+       "value": "Republican",
+       "label": "Republican",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         255,
+         190,
+         190,
+         255
+        ],
+        "outline": {
+         "color": [
+          255,
+          255,
+          255,
+          255
+         ],
+         "width": 1,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "Democrat",
+       "label": "Democrat",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         122,
+         182,
+         245,
+         255
+        ],
+        "outline": {
+         "color": [
+          255,
+          255,
+          255,
+          255
+         ],
+         "width": 1,
+         "style": "esriSLSSolid"
+        }
+       }
+      },
+      {
+       "value": "Vacant",
+       "label": "Vacant",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         178,
+         178,
+         178,
+         255
+        ],
+        "outline": {
+         "color": [
+          255,
+          255,
+          255,
+          255
+         ],
+         "width": 1,
+         "style": "esriSLSSolid"
+        }
+       }
+      }
+     ],
+     "default": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "DISTRICTID",
+      "alias": "DISTRICTID",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "STFIPS",
+      "alias": "STFIPS",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "CDFIPS",
+      "alias": "CDFIPS",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "STATE_ABBR",
+      "alias": "STATE_ABBR",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "NAME",
+      "alias": "NAME",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "LAST_NAME",
+      "alias": "LAST_NAME",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "PARTY",
+      "alias": "PARTY",
+      "type": "esriFieldTypeString",
+      "domain": true
+     },
+     {
+      "name": "SQMI",
+      "alias": "SQMI",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "STATE_NAME",
+      "alias": "STATE_NAME",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Shape__Area",
+      "alias": "Shape__Area",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "dd86c378a5d94483be9cb25996d873a4",
+    "count": 441,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "NAME"
+    }
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false
+  },
+  {
+   "path": "National Register of Historic Places",
+   "title": "National Register of Historic Places",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": false,
+   "opacity": 1,
+   "itemId": "818d5ef9168b420cb3fee99f7aef7760",
+   "url": "https://services2.arcgis.com/FiaPA4ga0iQKduv3/arcgis/rest/services/nrhp_points_v1/FeatureServer/0",
+   "disablePopup": false,
+   "popup": null,
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "item": {
+    "id": "818d5ef9168b420cb3fee99f7aef7760",
+    "title": "United States National Register of Historic Places",
+    "type": "Feature Service",
+    "owner": "mm.atlas",
+    "access": "public",
+    "snippet": "The National Park Service’s National Register of Historic Places contains more than 90,000 historical buildings, sites, structures, and objects judged worthy of preservation. Explore those in or near your community with this map layer.",
+    "description": "<p><font size='4'><span>The National\nPark Service’s National Register of Historic Places is a list of historical\nbuildings, sites, structures, and objects judged worthy of preservation. It was\nestablished in 1966 when Congress passed the </span><a href='https://ncshpo.org/wp-content/uploads/2017/02/nhpaTitle54Dec2016.pdf' rel='nofollow ugc'><span>National Historic Preservation Act</span></a><span>. Since then, more than 90,000 places\nhave been added to the list due to their archeological, architectural,\nartistic, cultural, engineering, or historical significance.</span></font></p><p><span><font size='4'>According to\nthe National Park Service, for a place to be considered for the National\nRegister of Historic Places, it must meet at least one of the following criteria:</font></span></p><p></p><ol><li><span style='text-indent:-0.25in;'><font size='4'>The place must be related to events\nthat have made significant contributions to history.</font></span></li><li><font size='4'>The place is associated with a\nsignificant historical figure.</font></li><li><font size='4'>The place has distinctive\ncharacteristics (type, period, or construction method) or represent a notable\ncraftsman or artist.</font></li><li><font size='4'>The place contains or might contain\nartifacts from history or prehistory.</font></li></ol><p><span><font size='4'>Each place\non the National Register of Historic Places is sorted into one of the following\ncategories:</font></span></p><p></p><ul><li><span style='text-indent:-0.25in;'><font size='4'>Building—Any\nbuilding created to house a human activity (for example, a place of worship,\nhouse, barn, hotel, or theater).</font></span></li><li><font size='4'>Structure—Any\nbuilding created for a purpose other than housing a human activity (for\nexample, bridge, aircraft, bandstand, canal, lighthouse, or tunnel).</font></li><li><font size='4'>Object—Small\nconstructions that are primarily artistic (for example, fountains, monuments,\nsculptures, or statuary).</font></li><li><font size='4'>Site—A\nlocation with archaeological (prehistoric or historic), historic, or cultural\nsignificance (for example, battlefield, ceremonial site, petroglyph, or shipwreck).</font></li><li><font size='4'>District—An\narea with a significant group of buildings, structures, objects, or sites\nunited by a historic event or unique architecture (for example, business\ndistrict, canal system, estates and farms, or rural villages).</font></li></ul><p></p><p><span><font size='4'>Anyone can\nnominate a place to be added to the National Register of Historic Places. One\nstarts at their state, the federal, or tribal historic preservation office\nwhere they can download the required forms to begin the process. The nominated\nplace is then reviewed by the state historic preservation office and the\nstate’s National Register Review Board. These two entities will notify affected\nproperty owners and if they object, or in the case of a district, if a\nsignificant portion of the property owners object the process stops. If the\noffice and board agree that the property should be added to the register, they\nwill submit it to the National Park Service to make the final decision.</font></span></p><p><span><font size='4'>This vector\ndataset in this map layer is from the National Park Service. Each location on\nthe National Register of Historic Places is marked with a point. Each category\nis represented by a unique color. Due to the large number of places on the\nlist, the map maker chose to make each point visible only at regional and local\nscales.</font></span></p><p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n</p><p><span><font size='4'>Look at the\nmap. Is there a location on the National Register of Historic Places near you?\nHave you visited this place? Is there a place in your community that you think\nneeds to be protected? Does it qualify to be added to the National Register of\nHistoric Places?</font></span></p>",
+    "tags": [
+     "National Park Service",
+     "NPS",
+     "National Register of Historic Places",
+     "Historic Sites",
+     "historical preservation",
+     "preservation",
+     "culture",
+     "school",
+     "learn",
+     "education",
+     "MapMaker"
+    ],
+    "accessInformation": "National Park Service (NPS)",
+    "licenseInfo": "<font size='4' style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><img src='https://licensebuttons.net/l/by/3.0/88x31.png' style='max-width:100%; height:auto;' /> This work is licensed under a Creative Commons by Attribution (CC BY 4.0) license. See Credits and Map for Attribution.</font><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='4'><br /></font><div><font size='4'><a href='https://creativecommons.org/licenses/by/4.0' style='color:rgb(0, 121, 193); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View License Deed</b></a> | <a href='https://creativecommons.org/licenses/by/4.0/legalcode' style='color:rgb(0, 121, 193); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Legal Code</b></a></font></div></div>",
+    "created": 1684164701000,
+    "modified": 1741172836000,
+    "numViews": 40282,
+    "thumbnail": "thumbnail/thumbnail1684975390173.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -174.88956249999237,
+      17.537375562251984
+     ],
+     [
+      -64.13461562493879,
+      71.90750504204175
+     ]
+    ],
+    "descriptionChars": 3134
+   },
+   "service": {
+    "url": "https://services2.arcgis.com/FiaPA4ga0iQKduv3/arcgis/rest/services/nrhp_points_v1/FeatureServer/0",
+    "name": "National_Register_of_Historic_Places_Points",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPoint",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSMS",
+      "style": "esriSMSCircle",
+      "color": [
+       65,
+       138,
+       145,
+       255
+      ],
+      "size": 4,
+      "outline": {
+       "color": [
+        0,
+        0,
+        0,
+        255
+       ],
+       "width": 0.7,
+       "style": null
+      }
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "CertDate",
+      "alias": "Certification Date",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "OBJECTID",
+      "alias": "Object ID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "NRIS_Refnum",
+      "alias": "National Register Information System (NRIS) Reference Number",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "RESNAME",
+      "alias": "Resource Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "ResType",
+      "alias": "Resource Type",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Address",
+      "alias": " Street Address",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "City",
+      "alias": "City Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "County",
+      "alias": "County Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "State",
+      "alias": "State Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Vicinity",
+      "alias": "Vicinity Description",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "MultiName",
+      "alias": "Multiple Resource Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "NumCBldg",
+      "alias": "Number of Contributing Buildings",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "NumCObj",
+      "alias": "Number of Contributing Objects",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "NumCSite",
+      "alias": "Number of Contributing Sites",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "NumCStru",
+      "alias": "Number of Contributing Structures",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Is_NHL",
+      "alias": "Is National Historic Landmark (NHL)",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "BND_TYPE",
+      "alias": "Boundary Classification Type",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "BND_OTHER",
+      "alias": "Other Boundary Description",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "IS_EXTANT",
+      "alias": "Extant Status",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "EXTANT_OTH",
+      "alias": "Is Extant Comment",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "CREATEDATE",
+      "alias": "Creation Date",
+      "type": "esriFieldTypeDate",
+      "domain": false
+     },
+     {
+      "name": "EDIT_DATE",
+      "alias": "Last Edit Date",
+      "type": "esriFieldTypeDate",
+      "domain": false
+     },
+     {
+      "name": "MAP_METHOD",
+      "alias": "Mapping  Method",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "MAP_MTH_OT",
+      "alias": "Map Method Comment",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SOURCE",
+      "alias": "Data Source",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SRC_DATE",
+      "alias": "Source Date",
+      "type": "esriFieldTypeDate",
+      "domain": false
+     },
+     {
+      "name": "SRC_SCALE",
+      "alias": "Source Scale",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SRC_ACCU",
+      "alias": "Source Horizontal Accuracy",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SRC_COORD",
+      "alias": "Source Coordinate System",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "ORIGINATOR",
+      "alias": "Originating Institution",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "CONSTRANT",
+      "alias": "Use Constraint",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "CR_ID",
+      "alias": "Cultural Resource Globally Unique Identifier (GUID)",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "GEOM_ID",
+      "alias": "Feature Geometry Globally Unique Identifier (GUID)",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "PROPERTY_ID",
+      "alias": "Property Identifier",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Status",
+      "alias": "National Register Status",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "NARA_URL",
+      "alias": "National Archives and Records Administration (NARA) Record URL",
+      "type": "esriFieldTypeString",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "d1073c2945cb4c6793136f51a97bdd8d",
+    "count": 74636
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false
+  }
+ ],
+ "findings": [
+  {
+   "where": "layer Congressional districts (119th Congress)",
+   "what": "no pop-up configured in the map (the layer's default pop-up shows)"
+  },
+  {
+   "where": "layer National Register of Historic Places",
+   "what": "no pop-up configured in the map (the layer's default pop-up shows)"
+  }
+ ]
+}
