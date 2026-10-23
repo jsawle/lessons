@@ -41,7 +41,8 @@ Checks and fixes for the lessons' web maps and layers. Nothing here signs in to 
 - `maps/checklist.md`: what each lesson's web map and layers should meet.
 - `maps/audit.py` (Map audit 1.2): reads each public web map and its layers and lists what to check (`maps/audit/`). The **Map audit** workflow runs it on GitHub.
 - `maps/fixes.md`: the ranked fixes, checked against the live maps.
-- `maps/fixes/build.py` builds the fix lists (`maps/fixes/sandbox.json`, `maps/fixes/mapmaker.json`) from the live maps; `maps/fix_maps.py` (Map fixes 1.0) applies one in an ArcGIS Notebook: dry run first, a backup of everything it changes, and a change only where the item is still as it was when the list was built.
+- `maps/fixes/build.py` (1.1) builds the fix lists (`maps/fixes/sandbox.json`, `maps/fixes/mapmaker.json`) from the live maps, one list or both (`python3 maps/fixes/build.py sandbox`); `maps/fix_maps.py` (Map fixes 1.1, which also changes bookmarks) applies one in an ArcGIS Notebook: dry run first, a backup of everything it changes, and a change only where the item is still as it was when the list was built.
+- `review/maps-2026-10-23.md`: the map checker and persona review of the ten web maps; `review/tools/` holds the capture and checker runners it used.
 - The **Map pictures** workflow (`resources/tools/map-screenshots.mjs`, Map pictures 1.0) takes the lesson pages' map pictures.
 
 ## Changelog

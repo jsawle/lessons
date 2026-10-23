@@ -2,13 +2,15 @@
 """Builds the fix lists that maps/fix_maps.py applies: maps/fixes/sandbox.json (GIS-4-Schools) and
 maps/fixes/mapmaker.json (the MapMaker organization). Reads the live web maps, layer items and features without
 signing in, makes each change on a copy, and records a fingerprint of what it read, so the notebook changes a
-thing only if it is still exactly as it was when this ran. Run from the repo root: python3 maps/fixes/build.py
+thing only if it is still exactly as it was when this ran. Fixes to the same web map are built in order, each on the
+result of the ones before, as the notebook applies them.
+Run from the repo root: python3 maps/fixes/build.py [sandbox] [mapmaker]   (no argument: both lists)
 Each fix's id matches maps/fixes.md.
 """
 import copy, datetime, hashlib, json, sys, urllib.parse, urllib.request
 from pathlib import Path
 
-VERSION = "1.0"
+VERSION = "1.1"
 OUT = Path(__file__).resolve().parent
 PORTAL = "https://www.arcgis.com/sharing/rest"
 
@@ -47,8 +49,18 @@ def webmap_fix(fid, what, webmap_id, data, title, changes):
     """Set keys on one layer of a web map. `changes` maps key -> new value (None removes the key)."""
     lyr = layer(data, title)
     before = {k: lyr.get(k) for k in changes}
+    for k, v in changes.items():
+        if v is None: lyr.pop(k, None)
+        else: lyr[k] = copy.deepcopy(v)
     return {"id": fid, "what": what, "kind": "webmap-layer", "webmap": webmap_id, "layerId": lyr["id"], "layerTitle": title,
             "before": fp(before), "set": changes}
+
+
+def webmap_key_fix(fid, what, webmap_id, data, key, value):
+    """Set a top-level key of a web map's data (for example its bookmarks)."""
+    before = data.get(key)
+    data[key] = copy.deepcopy(value)
+    return {"id": fid, "what": what, "kind": "webmap-key", "webmap": webmap_id, "key": key, "before": fp(before), "set": value}
 
 
 def text_value(url, oid_field, oid, field):
@@ -87,12 +99,28 @@ def build_sandbox():
     labels = {"Side A Victory": "US victory", "Side B Victory": "Victory for British or Native forces", "Inconclusive": "Inconclusive"}
     for u in ld["drawingInfo"]["renderer"]["uniqueValueInfos"]:
         u["label"] = labels[u["value"]]
+    # The legend reads its labels from uniqueValueGroups when the renderer has them (this one does).
+    for g in ld["drawingInfo"]["renderer"].get("uniqueValueGroups", []):
+        for c in g["classes"]:
+            assert len(c["values"]) == 1 and len(c["values"][0]) == 1
+            c["label"] = labels[c["values"][0][0]]
+    # C7: the casualty size legend ran from "< 0" to "> 2,628"; it now runs from "< 10" to "> 2,500".
+    vv = ld["drawingInfo"]["renderer"]["visualVariables"][0]
+    assert vv["type"] == "sizeInfo" and vv["field"] == "Total_Casualties" and vv["minDataValue"] == 0 and vv["maxDataValue"] == 2628
+    vv["minDataValue"], vv["maxDataValue"] = 10, 2500
     item = get(f"{PORTAL}/content/items/{lyr['itemId']}/data")
     p = copy.deepcopy(item["layers"][0]["popupInfo"])
     t = p["popupElements"][0]["text"]
     assert t.count("<span>{Victor}</span>") == 1
     p["popupElements"][0]["text"] = t.replace("<span>{Victor}</span>", "<span>{expression/result}</span>")
     if p.get("description"): p["description"] = p["description"].replace("<span>{Victor}</span>", "<span>{expression/result}</span>")
+    # B14: the pop-up says where the battle was (the lesson page asks for the state; the layer has it).
+    dates = "<p style='text-align:center;'><span style='font-size:14px;'><span>{Dates}</span>&nbsp;</span></p>"
+    where = "<p style='text-align:center;'><span style='font-size:14px;'>Where: {State} (today's name)</span></p>"
+    for k in ("text",):
+        assert p["popupElements"][0][k].count(dates) == 1
+        p["popupElements"][0][k] = p["popupElements"][0][k].replace(dates, dates + where)
+    if p.get("description") and p["description"].count(dates) == 1: p["description"] = p["description"].replace(dates, dates + where)
     p.setdefault("expressionInfos", []).append({"name": "result", "title": "Result", "returnType": "string",
         "expression": "When($feature.Victor == 'Side A Victory', 'US victory', $feature.Victor == 'Side B Victory', "
                       "'Victory for British or Native forces', $feature.Victor == 'Inconclusive', 'Inconclusive', '')"})
@@ -102,7 +130,7 @@ def build_sandbox():
         if f["fieldName"] in names: f["label"] = names[f["fieldName"]]
     for k, v in names.items():
         if k not in have: p.setdefault("fieldInfos", []).append({"fieldName": k, "label": v, "visible": False})
-    fixes.append(webmap_fix("A6", "War of 1812: legend and pop-up say 'US victory' and 'Victory for British or Native forces'.", w, d,
+    fixes.append(webmap_fix("A6+B14+C7", "War of 1812: legend and pop-up say 'US victory' and 'Victory for British or Native forces'; the pop-up says where; casualty sizes from '< 10'.", w, d,
                             "Battles of the War of 1812", {"layerDefinition": ld, "popupInfo": p}))
 
     # A8: We the People: the layer item cites the Census Bureau's 1791 return instead of Wikipedia.
@@ -125,6 +153,159 @@ def build_sandbox():
         fixes.append({"id": "A8", "what": "We the People: Source field cites the Census Bureau's 1791 return.", "kind": "feature-value", "url": url,
                       "objectIdField": oid, "objectId": a[oid], "field": "Source", "from": a["Source"],
                       "to": a["Source"].replace("https://en.wikipedia.org/wiki/1790_United_States_census", "https://www.census.gov/library/publications/1793/dec/number-of-persons.html")})
+    # War of 1812, continued (same web map data d, after A5 and A6).
+    # A10: the recognition date is shown as a date in UTC, as stored. Shown in the browser's time zone, it read
+    # "12/11/1822, 6:09 PM" in US Central time for 12 December 1822.
+    lyr = layer(d, "Latin American independence and US recognition")
+    p = copy.deepcopy(lyr["popupInfo"])
+    t = p["popupElements"][0]["text"]
+    assert t.count("{USRecognized}") == 1 and not p.get("expressionInfos")
+    p["popupElements"][0]["text"] = t.replace("{USRecognized}", "{expression/recognized}")
+    p["expressionInfos"] = [{"name": "recognized", "title": "Recognized by the United States", "returnType": "string",
+                             "expression": "Text(ChangeTimeZone($feature.USRecognized, 'UTC'), 'MMMM D, Y')"}]
+    fixes.append(webmap_fix("A10", "War of 1812: recognition dates read as dates (December 12, 1822), the same in every time zone.", w, d,
+                            "Latin American independence and US recognition", {"popupInfo": p}))
+    # B11: the labels sit under their symbols instead of above and to the right, where they landed on the next one.
+    ld = copy.deepcopy(lyr["layerDefinition"])
+    li = ld["drawingInfo"]["labelingInfo"]
+    assert len(li) == 1 and li[0]["labelPlacement"] == "esriServerPointLabelPlacementAboveRight"
+    li[0]["labelPlacement"] = "esriServerPointLabelPlacementBelowCenter"
+    li[0]["deconflictionStrategy"] = "none"
+    fixes.append(webmap_fix("B11", "War of 1812: Latin American labels sit under their own symbols.", w, d,
+                            "Latin American independence and US recognition", {"layerDefinition": ld}))
+    # B10: The 1819 boundary bookmark takes in Florida and the Sabine, with room on the right for the legend.
+    bm = copy.deepcopy(d["bookmarks"])
+    b = [x for x in bm if x["name"] == "The 1819 boundary"]
+    assert len(b) == 1 and round(b[0]["extent"]["xmax"]) == -9350837
+    b[0]["extent"].update({"xmin": -14150000.0, "ymin": 2000000.0, "xmax": -6550000.0, "ymax": 7000000.0})
+    fixes.append(webmap_key_fix("B10", "War of 1812: The 1819 boundary bookmark shows Florida and the whole treaty line.", w, d, "bookmarks", bm))
+
+    # We the People web map
+    w = "eba1ea7488624f3c88ef094167ed03ca"; d = get(f"{PORTAL}/content/items/{w}/data")
+    # B5: the percentage enslaved to one decimal place ("39.1%", not "39.099998474121094%").
+    for title in ("Population in 1790: free and enslaved", "House seats in 1793"):
+        p = copy.deepcopy(layer(d, title)["popupInfo"])
+        assert "({PctEnslaved}%)" in p["popupElements"][0]["text"]
+        assert not any(f["fieldName"] == "PctEnslaved" for f in p["fieldInfos"])
+        p["fieldInfos"].append({"fieldName": "PctEnslaved", "label": "Percent enslaved", "visible": False, "format": {"places": 1, "digitSeparator": True}})
+        fixes.append(webmap_fix("B5", f"We the People ({title}): percentage enslaved to one decimal place.", w, d, title, {"popupInfo": p}))
+    # C8: legend headings in words (they were the field names Total1790, HouseSeats and Total).
+    ld = copy.deepcopy(layer(d, "Population in 1790: free and enslaved")["layerDefinition"])
+    vv = ld["drawingInfo"]["renderer"]["visualVariables"][0]; assert vv["field"] == "Total1790"
+    vv["legendOptions"] = {"title": "People in 1790"}
+    fixes.append(webmap_fix("C8", "We the People: population legend headed 'People in 1790'.", w, d, "Population in 1790: free and enslaved", {"layerDefinition": ld}))
+    # B7 and C8: every state's House seats label draws (NH, RI and DE were dropped where labels crowd), legend in words.
+    ld = copy.deepcopy(layer(d, "House seats in 1793")["layerDefinition"])
+    r = ld["drawingInfo"]["renderer"]; assert r["type"] == "classBreaks" and r["field"] == "HouseSeats"
+    r["legendOptions"] = {"title": "Seats in the House"}
+    li = ld["drawingInfo"]["labelingInfo"]; assert len(li) == 1 and "deconflictionStrategy" not in li[0]
+    li[0]["deconflictionStrategy"] = "none"
+    fixes.append(webmap_fix("B7+C8", "We the People: every state's House seats label shows; legend headed 'Seats in the House'.", w, d, "House seats in 1793", {"layerDefinition": ld}))
+    # A10: ratification dates in UTC, as stored ("December 7, 1787"; in US time zones it read "12/6/1787, 6:09 PM").
+    rt = "Ratifying the Constitution, 1787–1791"
+    p = copy.deepcopy(layer(d, rt)["popupInfo"])
+    t = p["popupElements"][0]["text"]
+    assert t.count("{VoteDate}") == 1 and not p.get("expressionInfos")
+    p["popupElements"][0]["text"] = t.replace("{VoteDate}", "{expression/votedate}")
+    p["expressionInfos"] = [{"name": "votedate", "title": "Date of the vote", "returnType": "string",
+                             "expression": "Text(ChangeTimeZone($feature.VoteDate, 'UTC'), 'MMMM D, Y')"}]
+    fixes.append(webmap_fix("A10", "We the People: ratification dates read as dates (November 21, 1789), the same in every time zone.", w, d, rt, {"popupInfo": p}))
+    # B6 and C8: ratification labels under their own pies (above-right put them on the next pie); legend in words.
+    ld = copy.deepcopy(layer(d, rt)["layerDefinition"])
+    li = ld["drawingInfo"]["labelingInfo"]; assert len(li) == 1 and li[0]["labelPlacement"] == "esriServerPointLabelPlacementAboveRight"
+    li[0]["labelPlacement"] = "esriServerPointLabelPlacementBelowCenter"
+    vv = ld["drawingInfo"]["renderer"]["visualVariables"][0]; assert vv["field"] == "Total"
+    vv["legendOptions"] = {"title": "Delegates voting"}
+    fixes.append(webmap_fix("B6+C8", "We the People: ratification labels under their own pies; legend headed 'Delegates voting'.", w, d, rt, {"layerDefinition": ld}))
+    # A9: North Carolina's first convention (Hillsborough, 1788) voted 184 to 84 to neither ratify nor reject.
+    url = "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Ratification_1787_1791/FeatureServer/0"
+    fixes.append(feature_fix("A9", "Ratification: North Carolina's note gives the Hillsborough vote as 184 to 84, to neither ratify nor reject.", url, "ObjectId", 12, "Note",
+                             replace=[("voted 184 to 83 against ratifying.", "voted 184 to 84 to neither ratify nor reject the Constitution.")]))
+    fixes.append(feature_fix("A9", "Ratification: the Hillsborough pie's note says what the vote was on.", url, "ObjectId", 15, "Note",
+                             new="This first convention voted 184 to 84 to neither ratify nor reject the Constitution, and asked for a bill of rights "
+                                 "and amendments; a second convention at Fayetteville ratified in November 1789."))
+    fixes.append(feature_fix("A9", "Ratification: Hillsborough pie, 84 delegates against the motion.", url, "ObjectId", 15, "Yes", new=84))
+    fixes.append(feature_fix("A9", "Ratification: Hillsborough pie, 268 delegates in all.", url, "ObjectId", 15, "Total", new=268))
+    fixes.append(feature_fix("A9", "Ratification: Hillsborough vote text.", url, "ObjectId", 15, "Vote", new="84–184"))
+
+    # Presidential Elections web map
+    w = "6173219d9cd84812bcd4fed859b2c182"; d = get(f"{PORTAL}/content/items/{w}/data")
+    # B8: the Supreme Court squares draw only when zoomed in past 1:6,000,000, so they no longer cover Maryland's pie
+    # in the sixteen-states view. Question 4 then starts "Zoom in on Washington, D.C., until two pink squares appear."
+    ct = "Landmark Supreme Court cases, 1803 and 1819"
+    ld = copy.deepcopy(layer(d, ct)["layerDefinition"])
+    assert ld.get("minScale") in (None, 0) and layer(d, ct).get("minScale") in (None, 0)
+    ld["minScale"] = 6000000  # a feature layer's visible range lives in its layerDefinition
+    fixes.append(webmap_fix("B8", "Presidential: Supreme Court squares show only when zoomed in near Washington.", w, d, ct, {"layerDefinition": ld}))
+    # B9: the pop-up says which year, puts the two pie numbers first, and says "1 vote".
+    for year in ("1796", "1800"):
+        title = f"Election of {year}: electors' votes"
+        p = copy.deepcopy(layer(d, title)["popupInfo"])
+        assert p["title"] == "{State}: {Electors} electors" and not p.get("expressionInfos")
+        t = p["popupElements"][0]["text"]
+        old_open = (f"<p>Electors' votes in {year}: {{Votes{year}}}.</p><p>Each elector cast two votes for president, so the votes add up to twice "
+                    f"the number of electors. In the pie: John Adams (Federalist), {{Adams{year}}} votes; Thomas Jefferson (Democratic-Republican), "
+                    f"{{Jefferson{year}}} votes.</p>")
+        assert t.count(old_open) == 1
+        t = t.replace(old_open, f"<p>In the pie: John Adams (Federalist), {{expression/adams}}; Thomas Jefferson (Democratic-Republican), {{expression/jefferson}}.</p>"
+                                f"<p>All electors' votes in {year}: {{Votes{year}}}. Each elector cast two votes for president, so the votes add up to twice the number of electors.</p>")
+        p["popupElements"][0]["text"] = t
+        p["title"] = f"{{State}} in {year}: {{Electors}} electors"
+        p["expressionInfos"] = [{"name": n, "title": f"{n.capitalize()} votes", "returnType": "string",
+                                 "expression": f"var v = $feature.{n.capitalize()}{year};\nreturn v + IIf(v == 1, ' vote', ' votes');"} for n in ("adams", "jefferson")]
+        fixes.append(webmap_fix("B9", f"Presidential ({year}): pop-up title gives the year; pie numbers first; '1 vote'.", w, d, title, {"popupInfo": p}))
+
+    # Rights web map
+    w = "59467ac7d7c64542acaa6a3e9c19ebf4"; d = get(f"{PORTAL}/content/items/{w}/data")
+    # B12: the district pop-up gives the number of districts in the state (Q1 asked students to count outlines that
+    # look the same as state lines), names at-large seats and delegates, and says which Congress.
+    dt = "Congressional districts (119th Congress)"; lyr = layer(d, dt)
+    assert "popupInfo" not in lyr
+    item = get(f"{PORTAL}/content/items/{lyr['itemId']}/data")
+    p = copy.deepcopy(item["layers"][0]["popupInfo"])
+    assert "{STATE_NAME} Congressional District {CDFIPS}" in p["popupElements"][0]["text"]
+    big = "<p style='text-align:center;'><span style='font-size:18px;'>{}</span></p>"
+    text = big.format("{expression/who}") + big.format("{expression/district}") + "<p style='text-align:center;'>{expression/count}</p>"
+    p["popupElements"][0]["text"] = text; p["description"] = text
+    p["expressionInfos"] = [
+        {"name": "who", "title": "Representative", "returnType": "string", "expression":
+            "IIf($feature.PARTY == 'Vacant' || IsEmpty($feature.NAME), 'This seat was vacant when the layer was last updated:', "
+            "$feature.NAME + ' (' + $feature.PARTY + ') represents')"},
+        {"name": "district", "title": "District", "returnType": "string", "expression":
+            "var cd = $feature.CDFIPS;\nreturn When(cd == '00', $feature.STATE_NAME + ', the whole state (one at-large seat)', "
+            "cd == '98', $feature.STATE_NAME + ', as a delegate who cannot vote on final passage of bills', "
+            "$feature.STATE_NAME + ' Congressional District ' + Number(cd));"},
+        {"name": "count", "title": "Districts in the state", "returnType": "string", "expression":
+            "var st = $feature.STATE_ABBR;\nvar n = Count(Filter(FeatureSetById($map, '" + lyr["id"] + "', ['STATE_ABBR'], false), 'STATE_ABBR = @st'));\n"
+            "return When($feature.CDFIPS == '98', '119th Congress, 2025 to 2027.', n == 1, $feature.STATE_NAME + ' has one seat in the House (119th Congress, 2025 to 2027).', "
+            "$feature.STATE_NAME + ' has ' + n + ' districts (119th Congress, 2025 to 2027).');"}]
+    fixes.append(webmap_fix("B12", "Rights: the district pop-up gives the state's number of districts, at-large seats and the Congress.", w, d, dt, {"popupInfo": p}))
+
+    # Louisiana Purchase web map
+    w = "f8af7269e5c14e69b060d6184d04ff85"; d = get(f"{PORTAL}/content/items/{w}/data")
+    # B13: a wider purple trail and small campsite dots, so the trail shows between them (both layers drew from
+    # their services: a 1 px line under large red spheres).
+    tl, cl = "Lewis and Clark National Historic Trail", "Lewis and Clark campsites (approximate)"
+    assert "layerDefinition" not in layer(d, tl) and "layerDefinition" not in layer(d, cl)
+    fixes.append(webmap_fix("B13", "Louisiana Purchase: Lewis and Clark trail drawn 3 pt wide.", w, d, tl, {"layerDefinition": {"drawingInfo": {"renderer": {
+        "type": "simple", "label": "Lewis and Clark National Historic Trail",
+        "symbol": {"type": "esriSLS", "style": "esriSLSSolid", "color": [128, 50, 160, 255], "width": 3}}}}}))
+    fixes.append(webmap_fix("B13", "Louisiana Purchase: campsites drawn as small orange dots.", w, d, cl, {"layerDefinition": {"drawingInfo": {"renderer": {
+        "type": "simple", "label": "Campsite",
+        "symbol": {"type": "esriSMS", "style": "esriSMSCircle", "color": [230, 85, 13, 255], "size": 4.5,
+                   "outline": {"type": "esriSLS", "style": "esriSLSSolid", "color": [255, 255, 255, 255], "width": 0.5}}}}}}))
+    # C9: the Biomes pop-up shows the biome, realm and ecoregion, without the conservation fields.
+    lyr = layer(d, "Biomes"); assert "popupInfo" not in lyr
+    item = get(f"{PORTAL}/content/items/{lyr['itemId']}/data")
+    p = copy.deepcopy(item["layers"][0]["popupInfo"])
+    t = p["popupElements"][0]["text"]
+    cut = "<br /><span style='font-size:large;'>&nbsp;</span><br /><span style='color:#808080;font-size:medium;'>{NNH_NAME}&nbsp;</span><br /><span style='font-size:small;'>{expression/expr0}&nbsp;</span>"
+    assert t.count(cut) == 1
+    p["popupElements"][0]["text"] = t.replace(cut, "")
+    if p.get("description"): p["description"] = p["description"].replace(cut, "")
+    p["expressionInfos"] = []
+    p["fieldInfos"] = [f for f in p["fieldInfos"] if f["fieldName"] != "expression/expr0"]
+    fixes.append(webmap_fix("C9", "Louisiana Purchase: Biomes pop-up shows biome, realm and ecoregion only.", w, d, "Biomes", {"popupInfo": p}))
     return {"org": "HNLEA4GfnbCFQZGa", "orgLabel": "GIS-4-Schools sandbox", "fixes": fixes}
 
 
@@ -197,7 +378,9 @@ def build_mapmaker():
 
 if __name__ == "__main__":
     stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    wanted = sys.argv[1:] or ["sandbox", "mapmaker"]
     for name, fn in (("sandbox", build_sandbox), ("mapmaker", build_mapmaker)):
+        if name not in wanted: continue
         out = {"tool": "Map fixes " + VERSION, "read": stamp, **fn()}
         (OUT / f"{name}.json").write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n")
         print(name, len(out["fixes"]), "changes")

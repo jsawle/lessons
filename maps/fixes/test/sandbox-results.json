@@ -1,0 +1,211 @@
+{
+ "tool": "Fix test 1.0",
+ "timeZone": "America/Chicago",
+ "sdk": "ArcGIS Maps SDK for JavaScript 4.34",
+ "list": "maps/fixes/sandbox.json",
+ "results": [
+  {
+   "case": "wtp",
+   "step": "q1-legend",
+   "popup": null,
+   "legend": "Population in 1790: free and enslaved\n\tFree people\n\n\tEnslaved people\n\n\tOther\nPeople in 1790\n\t> 747,610\n\n\t600,000\n\n\t400,000\n\n\t200,000\n\n\t< 59,094",
+   "scale": 0
+  },
+  {
+   "case": "wtp",
+   "step": "q1-virginia",
+   "popup": "Virginia in 1790\n\n1790 census: 747,610 people, 292,627 of them enslaved (39.1%).\n\nCounted for the House under the three-fifths clause: 630,559. That gave Virginia 19 House seats in 1793 (one for every 33,000 people), plus 2 senators, like every state.\n\nIf enslaved people had been counted in full: 22 seats. If they had not been counted at all: 13 seats.\n\nVirginia's census figure excludes Kentucky, which was counted separately. Today's state outlines, with Maine shown as part of Massachusetts and West Virginia as part of Virginia, as they were in the 1790s.\n\nSeats: National Archives · Ratio: U.S. Census Bureau",
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "wtp",
+   "step": "q2-seats",
+   "popup": null,
+   "legend": "House seats in 1793\nSeats in the House\n\t13 to 19 seats\n\n\t7 to 10 seats\n\n\t4 to 6 seats\n\n\t1 to 2 seats\nPopulation in 1790: free and enslaved\n\tFree people\n\n\tEnslaved people\n\n\tOther\nPeople in 1790\n\t> 747,610\n\n\t600,000\n\n\t400,000\n\n\t200,000\n\n\t< 59,094",
+   "scale": 0
+  },
+  {
+   "case": "wtp",
+   "step": "q2-seats-nolegend",
+   "popup": null,
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "wtp",
+   "step": "q4-ratify",
+   "popup": null,
+   "legend": "Ratifying the Constitution, 1787–1791\n\tVoted to ratify\n\n\tVoted against\n\n\tOther\nDelegates voting\n\t> 355\n\n\t270\n\n\t200\n\n\t100\n\n\t< 26",
+   "scale": 0
+  },
+  {
+   "case": "wtp",
+   "step": "q4-ratify-nolegend",
+   "popup": null,
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "wtp",
+   "step": "q4-nc",
+   "popup": "North Carolina: 12th state to ratify\n\nRatified on November 21, 1789: 194 for, 77 against.\n\nThe convention met at the State House, Fayetteville, 16–23 November 1789.\n\nA first convention, at Hillsborough in 1788, voted 184 to 83 against ratifying.\n\nSources: votes and dates and meeting places, Center for the Study of the American Constitution",
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "wtp",
+   "step": "q4-de",
+   "popup": "Delaware: 1st state to ratify\n\nRatified on December 7, 1787: 30 for, 0 against.\n\nThe convention met at the Golden Fleece Tavern, Dover, 3–7 December 1787.\n\nSources: votes and dates and meeting places, Center for the Study of the American Constitution",
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "wtp",
+   "step": "q4-newengland",
+   "popup": null,
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "1812",
+   "step": "q1-legend",
+   "popup": null,
+   "legend": "Battles of the War of 1812\n\tUS victory\n\n\tVictory for British or Native forces\n\n\tInconclusive\nTotal Casualties\n\t> 2,500\n\n\t1,900\n\n\t1,300\n\n\t600\n\n\t< 10\nHistoric National Boundaries: 1800\n\tUnited States\n\n\tOther",
+   "scale": 0
+  },
+  {
+   "case": "1812",
+   "step": "q2-neworleans",
+   "popup": "New Orleans\n\nJanuary 8, 1815 \n\nWhere: Louisiana (today's name)\n\nUS victory \n\nTotal Casualties: 2,096 \n____________________________________________________\n\nThe United States achieved its greatest land victory of the War of 1812 at New Orleans. The battle ended a British effort to gain control of a critical American port and elevated Maj. Gen. Andrew Jackson to national fame. The British launched a forward attack against American forces at Chalmette Plantation. British casualties far outnumbered those of the Americans. Jackson's fame from the battle contributed to him winning the presidential election thirteen years later.\n\nThe British strategy had been to focus on attacking American coastal regions to cripple American trade and transportation. Although they had been unable to take Baltimore, the British moved ahead with a plan to attack New Orleans.\n\nThe Americans were aware of a possible invasion on the Gulf Coast. Andrew Jackson reached the city on December 1 and began assembling an army. His force consisted of Tennessee and Kentucky frontiersmen, Louisiana militia, New Orleans businessmen, free men of color, Choctaw warriors, smuggler Jean Lafitte and his privateers, sailors, marines, and United States troops.\n\nOn January 8, 1815, Maj. Gen. Andrew Jackson's hastily assembled army won the day against a battle-hardened and numerically superior British force. The resounding American victory at the Battle of New Orleans soon became a symbol of American democracy triumphing over the old European ideas of aristocracy and entitlement. The battle was the last major armed engagement between the United States and Britain.\nOn January 8, 1815, Maj. Gen. Andrew Jackson's hastily assembled army won the day against a battle-hardened and numerically superior British force. The resounding American victory at the Battle of New Orleans soon became a symbol of American democracy triumphing over the old European ideas of aristocracy and entitlement. The battle was the last major armed engagement between the United States and Britain. \n\nCasualties by side",
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "1812",
+   "step": "q3-boundary",
+   "popup": null,
+   "legend": "Battles of the War of 1812\n\tUS victory\n\n\tVictory for British or Native forces\n\n\tInconclusive\nTotal Casualties\n\t> 2,500\n\n\t1,900\n\n\t1,300\n\n\t600\n\n\t< 10\nAdams–Onís Treaty line, 1819\n\t\nLand Spain gave up in 1819\n\tEast Florida (Spanish Cession) 1819\n\n\tWest Florida (Spanish Cession) 1819\n\n\tSpanish Cession 1819\nHistoric National Boundaries: 1800\n\tUnited States\n\n\tOther",
+   "scale": 0
+  },
+  {
+   "case": "1812",
+   "step": "q4-latin",
+   "popup": null,
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "1812",
+   "step": "q4-mexico",
+   "popup": "Mexico\n\nCapital: Mexico City. Today: Mexico.\n\nIndependence: Won independence from Spain in 1821, after the Plan of Iguala of 24 February 1821 (Library of Congress).\n\nRecognized by the United States: December 12, 1822. President Monroe received José Manuel Zozaya as Mexico's minister.\n\nSource: Office of the Historian, U.S. Department of State",
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "pres",
+   "step": "open",
+   "popup": null,
+   "legend": "Landmark Supreme Court cases, 1803 and 1819\n\t\nElection of 1796: electors' votes\n\tJohn Adams (Federalist)\n\n\tThomas Jefferson (Democratic-Republican)\n\n\tOther\nElectors\n\t> 21\n\n\t16\n\n\t12\n\n\t7\n\n\t< 3",
+   "scale": 0
+  },
+  {
+   "case": "pres",
+   "step": "q1-pa",
+   "popup": "Pennsylvania in 1796: 15 electors\n\nIn the pie: John Adams (Federalist), 1 vote; Thomas Jefferson (Democratic-Republican), 14 votes.\n\nAll electors' votes in 1796: John Adams 1, Thomas Jefferson 14, Thomas Pinckney 2, Aaron Burr 13. Each elector cast two votes for president, so the votes add up to twice the number of electors.\n\nToday's state outlines, with Maine shown as part of Massachusetts and West Virginia as part of Virginia, as they were in the 1790s.\n\nSource: National Archives",
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "pres",
+   "step": "q1-va",
+   "popup": "Virginia in 1796: 21 electors\n\nIn the pie: John Adams (Federalist), 1 vote; Thomas Jefferson (Democratic-Republican), 20 votes.\n\nAll electors' votes in 1796: John Adams 1, Thomas Jefferson 20, Thomas Pinckney 1, Aaron Burr 1, Samuel Adams 15, others 4. Each elector cast two votes for president, so the votes add up to twice the number of electors.\n\nThe National Archives' 1800 table shows a dash (no votes) for Virginia's Aaron Burr, but its own Burr total of 73 needs Virginia's 21. Today's state outlines, with Maine shown as part of Massachusetts and West Virginia as part of Virginia, as they were in the 1790s.\n\nSource: National Archives",
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "pres",
+   "step": "q2-pa",
+   "popup": "Pennsylvania in 1800: 15 electors\n\nIn the pie: John Adams (Federalist), 7 votes; Thomas Jefferson (Democratic-Republican), 8 votes.\n\nAll electors' votes in 1800: Thomas Jefferson 8, Aaron Burr 8, John Adams 7, Charles C. Pinckney 7. Each elector cast two votes for president, so the votes add up to twice the number of electors.\n\nJefferson and Aaron Burr tied with 73 votes each, so the House of Representatives chose the president: Jefferson, on 17 February 1801. The 12th Amendment (1804) then gave electors separate votes for president and vice president.\n\nToday's state outlines, with Maine shown as part of Massachusetts and West Virginia as part of Virginia, as they were in the 1790s.\n\nSource: National Archives",
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "pres",
+   "step": "q4-z7",
+   "popup": null,
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "pres",
+   "step": "q4-z8",
+   "popup": null,
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "rights",
+   "step": "oh15",
+   "popup": "Mike Carey (Republican) represents\n\nOhio Congressional District 15\n\nOhio has 15 districts (119th Congress, 2025 to 2027).",
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "rights",
+   "step": "wy",
+   "popup": "Harriet M. Hageman (Republican) represents\n\nWyoming, the whole state (one at-large seat)\n\nWyoming has one seat in the House (119th Congress, 2025 to 2027).",
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "rights",
+   "step": "dc",
+   "popup": "Eleanor Holmes Norton (Democrat) represents\n\nDistrict of Columbia, as a delegate who cannot vote on final passage of bills\n\n119th Congress, 2025 to 2027.",
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "rights",
+   "step": "fl20",
+   "popup": "This seat was vacant when the layer was last updated:\n\nFlorida Congressional District 20\n\nFlorida has 28 districts (119th Congress, 2025 to 2027).",
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "rights",
+   "step": "tx",
+   "popup": "Lizzie Fletcher (Democrat) represents\n\nTexas Congressional District 7\n\nTexas has 38 districts (119th Congress, 2025 to 2027).",
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "lp",
+   "step": "q1",
+   "popup": null,
+   "legend": "Lewis and Clark campsites (approximate)\n\tCampsite\nLewis and Clark National Historic Trail\n\tLewis and Clark National Historic Trail\nTerritorial acquisitions to 1803\n\tTerritory of the Original Thirteen States (Ceded by Great Britain) 1783\n\n\tLouisiana Purchase 1803\n\n\tLouisiana Purchase 1803 / Ceded to Great Britain 1818\n\n\tLouisiana Purchase 1803 / Texas Annexation 1845\n\n\tLouisiana Purchase 1803 / Mexican Cession 1848",
+   "scale": 0
+  },
+  {
+   "case": "lp",
+   "step": "q3",
+   "popup": null,
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "lp",
+   "step": "q3-biome",
+   "popup": "Temperate Grasslands, Savannas & Shrublands\nRealm: Nearctic\nEcoregion: Northern Shortgrass prairie",
+   "legend": null,
+   "scale": 0
+  },
+  {
+   "case": "lp",
+   "step": "q4",
+   "popup": null,
+   "legend": null,
+   "scale": 0
+  }
+ ]
+}

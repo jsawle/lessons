@@ -1,0 +1,253 @@
+[
+ {
+  "name": "wtp",
+  "json": "(the web map as fix_maps.py would change it: maps/fixes/sandbox.json applied to the live map)",
+  "steps": [
+   {
+    "name": "q1-legend",
+    "bookmark": "The states in 1790",
+    "legend": true
+   },
+   {
+    "name": "q1-virginia",
+    "open": {
+     "layer": "Population in 1790: free and enslaved",
+     "where": "State='Virginia'"
+    }
+   },
+   {
+    "name": "q2-seats",
+    "on": [
+     "House seats in 1793"
+    ],
+    "bookmark": "The states in 1790",
+    "legend": true
+   },
+   {
+    "name": "q2-seats-nolegend",
+    "bookmark": "The states in 1790",
+    "legend": false
+   },
+   {
+    "name": "q4-ratify",
+    "off": [
+     "Population in 1790: free and enslaved",
+     "House seats in 1793"
+    ],
+    "on": [
+     "Ratifying the Constitution, 1787–1791"
+    ],
+    "bookmark": "The states in 1790",
+    "legend": true
+   },
+   {
+    "name": "q4-ratify-nolegend",
+    "bookmark": "The states in 1790",
+    "legend": false
+   },
+   {
+    "name": "q4-nc",
+    "open": {
+     "layer": "Ratifying the Constitution, 1787–1791",
+     "where": "ObjectId=12"
+    }
+   },
+   {
+    "name": "q4-de",
+    "open": {
+     "layer": "Ratifying the Constitution, 1787–1791",
+     "where": "Ord=1"
+    }
+   },
+   {
+    "name": "q4-newengland",
+    "goTo": [
+     -71.5,
+     42.3,
+     4622324
+    ],
+    "legend": false
+   }
+  ]
+ },
+ {
+  "name": "1812",
+  "json": "(the web map as fix_maps.py would change it: maps/fixes/sandbox.json applied to the live map)",
+  "steps": [
+   {
+    "name": "q1-legend",
+    "bookmark": "The War of 1812",
+    "legend": true
+   },
+   {
+    "name": "q2-neworleans",
+    "open": {
+     "layer": "Battles of the War of 1812",
+     "where": "Battle LIKE 'New Orleans%'"
+    }
+   },
+   {
+    "name": "q3-boundary",
+    "on": [
+     "Land Spain gave up in 1819",
+     "Adams–Onís Treaty line, 1819"
+    ],
+    "bookmark": "The 1819 boundary",
+    "legend": true
+   },
+   {
+    "name": "q4-latin",
+    "on": [
+     "Latin American independence and US recognition"
+    ],
+    "bookmark": "Latin America in 1825",
+    "legend": false
+   },
+   {
+    "name": "q4-mexico",
+    "open": {
+     "layer": "Latin American independence and US recognition",
+     "where": "Name LIKE 'Mexico%'"
+    }
+   }
+  ]
+ },
+ {
+  "name": "pres",
+  "json": "(the web map as fix_maps.py would change it: maps/fixes/sandbox.json applied to the live map)",
+  "steps": [
+   {
+    "name": "open",
+    "bookmark": "The sixteen states",
+    "legend": true
+   },
+   {
+    "name": "q1-pa",
+    "open": {
+     "layer": "Election of 1796: electors' votes",
+     "where": "State='Pennsylvania'"
+    }
+   },
+   {
+    "name": "q1-va",
+    "open": {
+     "layer": "Election of 1796: electors' votes",
+     "where": "State='Virginia'"
+    }
+   },
+   {
+    "name": "q2-pa",
+    "off": [
+     "Election of 1796: electors' votes"
+    ],
+    "on": [
+     "Election of 1800: electors' votes"
+    ],
+    "open": {
+     "layer": "Election of 1800: electors' votes",
+     "where": "State='Pennsylvania'"
+    }
+   },
+   {
+    "name": "q4-z7",
+    "goTo": [
+     -76.8,
+     39.1,
+     4622324
+    ],
+    "legend": false
+   },
+   {
+    "name": "q4-z8",
+    "goTo": [
+     -76.8,
+     39.1,
+     2311162
+    ],
+    "legend": false
+   }
+  ]
+ },
+ {
+  "name": "rights",
+  "json": "(the web map as fix_maps.py would change it: maps/fixes/sandbox.json applied to the live map)",
+  "steps": [
+   {
+    "name": "oh15",
+    "open": {
+     "layer": "Congressional districts (119th Congress)",
+     "where": "STATE_ABBR='OH' AND CDFIPS='15'"
+    }
+   },
+   {
+    "name": "wy",
+    "open": {
+     "layer": "Congressional districts (119th Congress)",
+     "where": "STATE_ABBR='WY'"
+    }
+   },
+   {
+    "name": "dc",
+    "open": {
+     "layer": "Congressional districts (119th Congress)",
+     "where": "STATE_ABBR='DC'"
+    }
+   },
+   {
+    "name": "fl20",
+    "open": {
+     "layer": "Congressional districts (119th Congress)",
+     "where": "STATE_ABBR='FL' AND CDFIPS='20'"
+    }
+   },
+   {
+    "name": "tx",
+    "open": {
+     "layer": "Congressional districts (119th Congress)",
+     "where": "STATE_ABBR='TX' AND CDFIPS='07'"
+    }
+   }
+  ]
+ },
+ {
+  "name": "lp",
+  "json": "(the web map as fix_maps.py would change it: maps/fixes/sandbox.json applied to the live map)",
+  "steps": [
+   {
+    "name": "q1",
+    "bookmark": "The Louisiana Purchase",
+    "legend": true
+   },
+   {
+    "name": "q3",
+    "bookmark": "Up the Missouri",
+    "legend": false
+   },
+   {
+    "name": "q3-biome",
+    "off": [
+     "United States Watersheds"
+    ],
+    "on": [
+     "Biomes"
+    ],
+    "open": {
+     "layer": "Biomes",
+     "where": "1=1",
+     "at": [
+      -100.5,
+      46.5
+     ]
+    }
+   },
+   {
+    "name": "q4",
+    "off": [
+     "Biomes"
+    ],
+    "bookmark": "Across the Rockies to the Pacific",
+    "legend": false
+   }
+  ]
+ }
+]
