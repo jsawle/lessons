@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Map audit v1.0: reads each lesson's public web map and its layers from ArcGIS Online, without signing in,
+"""Map audit v1.1: reads each lesson's public web map and its layers from ArcGIS Online, without signing in,
 and writes what it finds for checking against maps/checklist.md. It changes nothing.
 
 Run from the repo root:  python3 maps/audit.py [lesson id ...]     (no ids: every lesson in resources/lessons/index.json)
@@ -9,12 +9,13 @@ Standard library only, so it runs anywhere with Python 3.9+ and access to www.ar
 import hashlib, json, math, re, sys, time, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
 
-VERSION = "1.0"
+VERSION = "1.1"
 REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / "maps" / "audit"
 PORTAL = "https://www.arcgis.com/sharing/rest"
 VIEW_WIDTH_PX = 1200            # the width the map pictures are taken at; the opening scale is worked out for it
 DUP_LIMIT = 3000                # look for duplicate features only in layers this small
+GEOM_LIMIT = 300                # lines and polygons without area/length fields: compare geometry only up to this many
 CUT_MIN = 120                   # a text value this long that doesn't end like a sentence may be cut off
 HEADERS = {"User-Agent": "lessons-map-audit/" + VERSION, "Referer": "https://www.arcgis.com/"}
 hosts = set()
@@ -22,11 +23,13 @@ hosts = set()
 
 def get(url, params=None, tries=3):
     q = dict(params or {}); q.setdefault("f", "json")
+    parts = urllib.parse.urlsplit(url)
+    url = urllib.parse.urlunsplit(parts._replace(path=urllib.parse.quote(urllib.parse.unquote(parts.path), safe="/")))
     full = url + ("&" if "?" in url else "?") + urllib.parse.urlencode(q)
     hosts.add(urllib.parse.urlparse(full).hostname)
     for i in range(tries):
         try:
-            with urllib.request.urlopen(urllib.request.Request(full, headers=HEADERS), timeout=60) as r:
+            with urllib.request.urlopen(urllib.request.Request(full, headers=HEADERS), timeout=45) as r:
                 data = json.loads(r.read().decode("utf-8"))
             if isinstance(data, dict) and "error" in data:
                 return {"_error": data["error"]}
@@ -111,10 +114,17 @@ def popup_summary(p):
     if p is None:
         return None
     out = {"title": p.get("title")}
-    shown = [f for f in p.get("fieldInfos", []) if f.get("visible")]
+    els = p.get("popupElements") or []
+    # A field list shows only from a "fields" element, or in an older pop-up with no elements and no custom text.
+    lists = [e for e in els if e.get("type") == "fields"]
+    if lists:
+        shown = [f for e in lists for f in (e.get("fieldInfos") or [x for x in p.get("fieldInfos", []) if x.get("visible")])]
+    elif not els and not (p.get("description") or "").strip():
+        shown = [f for f in p.get("fieldInfos", []) if f.get("visible")]
+    else:
+        shown = []
     out["fieldsShown"] = [{"field": f.get("fieldName"), "label": f.get("label")} for f in shown]
     out["fieldLabelsAreNames"] = [f.get("fieldName") for f in shown if f.get("label") in (None, "", f.get("fieldName")) and not str(f.get("fieldName", "")).startswith("expression/")]
-    els = p.get("popupElements") or []
     out["elements"] = [e.get("type") for e in els]
     media = [m for e in els if e.get("type") == "media" for m in e.get("mediaInfos", [])] + (p.get("mediaInfos") or [])
     out["images"] = [{"title": m.get("title"), "altText": m.get("altText"), "source": (m.get("value") or {}).get("sourceURL")} for m in media if m.get("type") == "image"]
@@ -135,16 +145,28 @@ def geom_key(g):
     return hashlib.sha1(json.dumps(g, sort_keys=True).encode()).hexdigest()
 
 
-def text_checks(features, fields):
-    """Duplicates (same geometry and attributes, or same geometry), and long text values that may be cut off."""
+SHAPE_FIELDS = re.compile(r"^(shape__area|shape__length|shape_area|shape_length|shape\.starea\(\)|shape\.stlength\(\))$", re.I)
+URLISH = re.compile(r"(https?://|www\.|\.(jpe?g|png|gif|pdf|html?)\b|\?itok=)", re.I)
+
+
+def text_checks(features, fields, title_field=None):
+    """Duplicates (same place and attributes, or same place), and long text values that may be cut off.
+    "Same place" is the geometry, or for lines and polygons read without geometry, their area and length."""
     seen_full, seen_geom, dup_full, dup_geom, cut = {}, {}, [], [], []
-    name_field = next((f["name"] for f in fields if re.search(r"name|title", f["name"], re.I) and f.get("type") == "esriFieldTypeString"), None)
+    names = [f["name"] for f in fields]
+    name_field = (title_field if title_field in names else None) or next((n for n in names if re.search(r"name|title|battle|place", n, re.I)), None)
     oid = next((f["name"] for f in fields if f.get("type") == "esriFieldTypeOID"), None)
+    shape = [n for n in names if SHAPE_FIELDS.match(n)]
     for ft in features:
         a = dict(ft.get("attributes") or {}); fid = a.pop(oid, None) if oid else None
         a.pop("GlobalID", None); a.pop("globalid", None)
-        label = a.get(name_field) if name_field else fid
-        gk = geom_key(ft.get("geometry"))
+        label = (a.get(name_field) if name_field else None) or f"feature {fid}"
+        if ft.get("geometry"):
+            gk = geom_key(ft["geometry"])
+        elif shape and all(a.get(s) is not None for s in shape):
+            gk = "|".join(f"{float(a[s]):.6g}" for s in shape)
+        else:
+            gk = None
         full = (gk, json.dumps(a, sort_keys=True, default=str))
         if gk and full in seen_full:
             dup_full.append([seen_full[full], label])
@@ -155,18 +177,18 @@ def text_checks(features, fields):
         for k, v in a.items():
             if isinstance(v, str):
                 t = re.sub(r"<[^>]+>", "", v).strip()
-                if len(t) >= CUT_MIN and not re.search(r"[.!?\"'”’)\]]$", t):
+                last = t.split()[-1] if t.split() else ""
+                if len(t) >= CUT_MIN and re.search(r"[A-Za-z,;:–-]$", t) and not URLISH.search(last):
                     cut.append({"feature": label, "field": k, "ends": t[-60:]})
     return {"duplicates": dup_full[:20], "sameGeometry": dup_geom[:20], "maybeCutOff": cut[:20], "nameField": name_field}
 
 
-def query_all(url, count, geometry_type):
-    """Every feature, with points to about 10 cm and lines and polygons simplified to about 1 km, so big layers stay quick."""
+def query_all(url, count, with_geometry, where="1=1"):
+    """Every feature's attributes, with point geometry to about 10 cm when asked for."""
     feats, offset = [], 0
-    simple = {} if geometry_type == "esriGeometryPoint" else {"maxAllowableOffset": 0.01}
     while offset < count:
-        r = get(url + "/query", {"where": "1=1", "outFields": "*", "returnGeometry": "true", "outSR": 4326,
-                                 "geometryPrecision": 6 if not simple else 2, "resultOffset": offset, "resultRecordCount": 1000, **simple})
+        r = get(url + "/query", {"where": where, "outFields": "*", "returnGeometry": "true" if with_geometry else "false",
+                                 "outSR": 4326, "geometryPrecision": 6, "resultOffset": offset, "resultRecordCount": 1000})
         if "_error" in r or not r.get("features"):
             break
         feats += r["features"]; offset += len(r["features"])
@@ -176,7 +198,7 @@ def query_all(url, count, geometry_type):
     return feats
 
 
-def service_layer(url):
+def service_layer(url, title_field=None, where=None):
     info = get(url)
     if "_error" in info:
         return {"url": url, "error": info["_error"]}
@@ -187,10 +209,18 @@ def service_layer(url):
            "fields": [{"name": f["name"], "alias": f.get("alias"), "type": f.get("type"), "domain": bool(f.get("domain"))} for f in info.get("fields") or []],
            "serviceItemId": info.get("serviceItemId")}
     if info.get("type") in ("Feature Layer", "Table"):
-        c = get(url + "/query", {"where": "1=1", "returnCountOnly": "true"})
+        where = where or "1=1"
+        c = get(url + "/query", {"where": where, "returnCountOnly": "true"})
+        if where != "1=1": out["filter"] = where
         out["count"] = c.get("count") if "_error" not in c else None
-        if out["count"] is not None and out["count"] <= DUP_LIMIT:
-            out["checks"] = text_checks(query_all(url, out["count"], info.get("geometryType")), info.get("fields") or [])
+        n, gt = out["count"], info.get("geometryType")
+        has_shape = any(SHAPE_FIELDS.match(f["name"]) for f in info.get("fields") or [])
+        if n is not None and n <= DUP_LIMIT:
+            geom = gt in ("esriGeometryPoint", "esriGeometryMultipoint") or (not has_shape and n <= GEOM_LIMIT)
+            t0 = time.time()
+            out["checks"] = text_checks(query_all(url, n, geom, where), info.get("fields") or [], title_field)
+            out["checks"]["geometryCompared"] = "geometry" if geom else ("area and length" if has_shape else "attributes only")
+            out["seconds"] = round(time.time() - t0, 1)
     return out
 
 
@@ -202,26 +232,55 @@ def walk_layers(layers, path=""):
             yield from walk_layers(lyr.get("layers"), (path + " / " if path else "") + str(title))
 
 
+_item_data = {}
+
+
+def from_item(lyr):
+    """The pop-up and layer definition a layer takes from its item when the web map doesn't set them."""
+    if not lyr.get("itemId"):
+        return {}
+    if lyr["itemId"] not in _item_data:
+        d = get(f"{PORTAL}/content/items/{lyr['itemId']}/data")
+        _item_data[lyr["itemId"]] = {} if "_error" in d else d
+    d = _item_data[lyr["itemId"]] or {}
+    m = re.search(r"/(\d+)/?$", lyr.get("url") or "")
+    for sub in d.get("layers") or []:
+        if m and str(sub.get("id")) == m.group(1):
+            return sub
+    return {}
+
+
 def audit_layer(lyr, path, opening_scale):
+    inherited = from_item(lyr) if lyr.get("layerType") == "ArcGISFeatureLayer" else {}
     ld = lyr.get("layerDefinition") or {}
+    ild = inherited.get("layerDefinition") or {}
+    popup = lyr.get("popupInfo") or inherited.get("popupInfo")
     out = {"path": path, "title": lyr.get("title"), "layerType": lyr.get("layerType"), "visible": lyr.get("visibility", True),
            "opacity": lyr.get("opacity"), "itemId": lyr.get("itemId"), "url": lyr.get("url"), "disablePopup": lyr.get("disablePopup", False),
-           "popup": popup_summary(lyr.get("popupInfo")), "minScale": lyr.get("minScale", ld.get("minScale")),
+           "popup": popup_summary(popup), "popupFrom": "map" if lyr.get("popupInfo") else ("layer item" if inherited.get("popupInfo") else None),
+           "minScale": lyr.get("minScale", ld.get("minScale")),
            "maxScale": lyr.get("maxScale", ld.get("maxScale")), "showLegend": lyr.get("showLegend", True),
            "listMode": lyr.get("listMode"), "definitionExpression": ld.get("definitionExpression")}
-    wm_r = (ld.get("drawingInfo") or {}).get("renderer")
+    wm_r = (ld.get("drawingInfo") or {}).get("renderer") or (ild.get("drawingInfo") or {}).get("renderer")
     if wm_r: out["rendererInMap"] = renderer_summary(wm_r)
+    if out["minScale"] is None and ild.get("minScale") is not None: out["minScale"] = ild.get("minScale")
+    if out["maxScale"] is None and ild.get("maxScale") is not None: out["maxScale"] = ild.get("maxScale")
+    if not out["definitionExpression"] and ild.get("definitionExpression"): out["definitionExpression"] = ild["definitionExpression"]
+    title_field = (re.findall(r"\{([^}]+)\}", (popup or {}).get("title") or "") or [None])[0]
     if (ld.get("drawingInfo") or {}).get("labelingInfo"): out["labelsInMap"] = True
     if lyr.get("itemId"):
         out["item"] = item_info(lyr["itemId"])
     if lyr.get("layerType") == "ArcGISFeatureLayer" and lyr.get("url"):
-        out["service"] = service_layer(lyr["url"])
+        out["service"] = service_layer(lyr["url"], title_field, out["definitionExpression"])
     elif lyr.get("featureCollection"):
         fc = lyr["featureCollection"].get("layers") or []
         out["featureCollection"] = [{"count": len(l.get("featureSet", {}).get("features", [])),
                                      "renderer": renderer_summary((l.get("layerDefinition", {}).get("drawingInfo") or {}).get("renderer")),
                                      "popup": popup_summary(l.get("popupInfo")),
-                                     "checks": text_checks(l.get("featureSet", {}).get("features", []), l.get("layerDefinition", {}).get("fields") or [])} for l in fc]
+                                     "checks": text_checks(l.get("featureSet", {}).get("features", []), l.get("layerDefinition", {}).get("fields") or [], title_field)} for l in fc]
+        fc_popups = [x["popup"] for x in out["featureCollection"] if x.get("popup")]
+        if fc_popups and not out["popup"]:
+            out["popup"], out["popupFrom"] = fc_popups[0], "map notes"
     elif lyr.get("url") and lyr.get("layerType") in ("ArcGISMapServiceLayer", "ArcGISTiledMapServiceLayer", "VectorTileLayer", "ArcGISImageServiceLayer"):
         info = get(lyr["url"].split("?")[0])
         out["service"] = {"url": lyr["url"], "error": info.get("_error")} if "_error" in info else {"url": lyr["url"], "copyrightText": info.get("copyrightText"), "minScale": info.get("minScale"), "maxScale": info.get("maxScale")}
@@ -254,7 +313,7 @@ def findings(lesson, wm_item, data, layers):
         if (L.get("service") or {}).get("error"): add(where, f"service could not be read: {L['service']['error']}")
         if re.match(r"copy of", t, re.I): add(where, "title starts with \"Copy of\"")
         if L["layerType"] in ("ArcGISFeatureLayer",) and not L.get("disablePopup") and not L.get("popup") and t in names:
-            add(where, "no pop-up configured in the map (the layer's default pop-up shows)")
+            add(where, "no pop-up set in the map or its layer item, so the default list of every field shows")
         p = L.get("popup") or {}
         if p.get("fieldLabelsAreNames"): add(where, f"pop-up shows field names as labels: {', '.join(p['fieldLabelsAreNames'][:6])}")
         for im in p.get("images", []):
