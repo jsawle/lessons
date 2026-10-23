@@ -1,0 +1,5087 @@
+{
+ "tool": "MapMaker Web Map Auditor (jsawle/mapchecker index.html)",
+ "rubricVersion": "0.7.1",
+ "run": "2026-10-23",
+ "maps": [
+  {
+   "itemId": "bda07736a1b9425ea19fdde282088bd6",
+   "title": "1775-1776 Revolutionary Battles",
+   "owner": "mm.atlas",
+   "auditedAt": "2026-10-23T11:37:49.709Z",
+   "rubricVersion": "0.7.1",
+   "standards": "General Cartographic Standards for MapMaker",
+   "tally": {
+    "fail": 0,
+    "warn": 7,
+    "info": 3,
+    "pass": 28,
+    "skip": 0
+   },
+   "verdict": "review",
+   "score": 91.5,
+   "grade": "A",
+   "sectionScores": {
+    "Map title & metadata": 100,
+    "Extent & scale": 100,
+    "Layers": 100,
+    "Pop-ups": 50,
+    "Visual effects & labels": 100,
+    "Accessibility": 62.5,
+    "Symbology & legend": 92.9
+   },
+   "checks": [
+    {
+     "id": "meta.title.present",
+     "section": "Map title & metadata",
+     "name": "Title present and not a default",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"1775-1776 Revolutionary Battles\""
+     ]
+    },
+    {
+     "id": "meta.title.length",
+     "section": "Map title & metadata",
+     "name": "Title length",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title length: 31"
+     ]
+    },
+    {
+     "id": "meta.title.abbrev",
+     "section": "Map title & metadata",
+     "name": "Title avoids unexplained abbreviations",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"1775-1776 Revolutionary Battles\""
+     ]
+    },
+    {
+     "id": "meta.snippet",
+     "section": "Map title & metadata",
+     "name": "Summary (snippet) present",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "snippet: 162 chars"
+     ]
+    },
+    {
+     "id": "meta.description",
+     "section": "Map title & metadata",
+     "name": "Description present and substantive",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "description: 710 chars"
+     ]
+    },
+    {
+     "id": "meta.tags",
+     "section": "Map title & metadata",
+     "name": "Tags",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "tags: ports, Revolutionary War, American Revolution, colony, 1763 Proclamation, learn, school, education, MapMaker"
+     ]
+    },
+    {
+     "id": "meta.credits",
+     "section": "Map title & metadata",
+     "name": "Credits / attribution",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "credits: The National Geographic Society"
+     ]
+    },
+    {
+     "id": "meta.license",
+     "section": "Map title & metadata",
+     "name": "Terms of use",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "licenseInfo: set"
+     ]
+    },
+    {
+     "id": "meta.thumbnail",
+     "section": "Map title & metadata",
+     "name": "Custom thumbnail",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "thumbnail: thumbnail/thumbnail1787773552250.png"
+     ]
+    },
+    {
+     "id": "extent.initial",
+     "section": "Extent & scale",
+     "name": "Initial extent set and appropriate",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "extent: -8741516, 4424023 -> -7004867, 5987008 (wkid 3857)",
+      "width ~ 16 deg"
+     ]
+    },
+    {
+     "id": "extent.visrange",
+     "section": "Extent & scale",
+     "name": "Visibility ranges",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "1 of 8 feature layers have a visibility range"
+     ]
+    },
+    {
+     "id": "proj.explained",
+     "section": "Extent & scale",
+     "name": "Alternate projection explained",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "wkid 3857 (Web Mercator)"
+     ]
+    },
+    {
+     "id": "basemap.info",
+     "section": "Extent & scale",
+     "name": "Basemap",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "Basemap: Human Geography.",
+     "evidence": [
+      "baseMap.title: Human Geography",
+      "spatial reference wkid: 3857",
+      "World Hillshade",
+      "Environment Base Minus Populated Places",
+      "Modern Antique (no Labels)",
+      "Environment Surface Water and Label"
+     ]
+    },
+    {
+     "id": "layer.count",
+     "section": "Layers",
+     "name": "Layer count",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "8 operational layers"
+     ]
+    },
+    {
+     "id": "layer.reachable",
+     "section": "Layers",
+     "name": "All layers public and reachable",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "1763 Proclamation Line: ok",
+      "Colony Area: ok",
+      "Colony Boundary: ok",
+      "Revolutionary War Battlefield Boundary: ok",
+      "Revolutionary War Core Areas: ok",
+      "Revolutionary War Battles: ok",
+      "Key Port Cities in the American Revolution 1775-1781: ok",
+      "Turning Points: ok"
+     ]
+    },
+    {
+     "id": "layer.title",
+     "section": "Layers",
+     "name": "Layer titles are plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "1763 Proclamation Line",
+      "Colony Area",
+      "Colony Boundary",
+      "Revolutionary War Battlefield Boundary",
+      "Revolutionary War Core Areas",
+      "Revolutionary War Battles",
+      "Key Port Cities in the American Revolution 1775-1781",
+      "Turning Points"
+     ]
+    },
+    {
+     "id": "layer.fields",
+     "section": "Layers",
+     "name": "Layer field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "field counts reasonable"
+     ]
+    },
+    {
+     "id": "layer.renderer",
+     "section": "Layers",
+     "name": "Symbology set in the map",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "1 of 8 feature layer(s) use service default symbology.",
+     "evidence": [
+      "Colony Area"
+     ]
+    },
+    {
+     "id": "popup.configured",
+     "section": "Pop-ups",
+     "name": "Pop-ups configured (not default all-fields)",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 of 5 data layer(s) show a default or missing pop-up.",
+     "evidence": [
+      "Key Port Cities in the American Revolution 1775-1781 (no pop-up; 5 fields would show by default)",
+      "--- pop-up kinds ---",
+      "1763 Proclamation Line: disabled",
+      "Colony Area: arcade",
+      "Colony Boundary: arcade",
+      "Revolutionary War Battlefield Boundary: disabled",
+      "Revolutionary War Core Areas: disabled",
+      "Revolutionary War Battles: arcade",
+      "Key Port Cities in the American Revolution 1775-1781: none",
+      "Turning Points: elements"
+     ]
+    },
+    {
+     "id": "popup.metafields",
+     "section": "Pop-ups",
+     "name": "Metadata fields hidden",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "Metadata fields visible in 2 layer(s).",
+     "evidence": [
+      "Colony Area: OBJECTID, Shape__Length, Shape__Area",
+      "Colony Boundary: OBJECTID, Shape__Length"
+     ]
+    },
+    {
+     "id": "popup.aliases",
+     "section": "Pop-ups",
+     "name": "Fields renamed to plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "Code-like field names shown without a plain-language label in 3 layer(s).",
+     "evidence": [
+      "Colony Boundary: LEFT_FID, RIGHT_FID",
+      "Revolutionary War Battles: Battle_Page_URL, BFT_Coords, Casualties_Side_A, Casualties_Side_B, Date_End, Date_Start, Image_Credit, Leaders_Side_A, Leaders_Side_B, Thumbnail_Small, Troops_engaged_Side_A, Troops_engaged_Side_B, x, y",
+      "Turning Points: Group_"
+     ]
+    },
+    {
+     "id": "popup.many",
+     "section": "Pop-ups",
+     "name": "Pop-up field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "Long pop-ups in 1 layer(s).",
+     "evidence": [
+      "Revolutionary War Battles: 21 visible fields"
+     ]
+    },
+    {
+     "id": "effects.sparingly",
+     "section": "Visual effects & labels",
+     "name": "Effects used sparingly",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Revolutionary War Battlefield Boundary: [{\"type\":\"blur\",\"radius\":1.875}]",
+      "Revolutionary War Battles: [{\"scale\":18489297.737236,\"value\":[{\"type\":\"drop-shadow\",\"xoffset\":0.375,\"yoffse"
+     ]
+    },
+    {
+     "id": "effects.recolour",
+     "section": "Visual effects & labels",
+     "name": "No colour-altering effects",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no colour-altering effects"
+     ]
+    },
+    {
+     "id": "fonts.max",
+     "section": "Visual effects & labels",
+     "name": "At most two fonts",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Arial"
+     ]
+    },
+    {
+     "id": "labels.halo",
+     "section": "Visual effects & labels",
+     "name": "Label halos",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all label classes have halos"
+     ]
+    },
+    {
+     "id": "a11y.cvd",
+     "section": "Accessibility",
+     "name": "Colours distinguishable with colour-vision deficiency",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 layer(s) have classes that merge under colour-vision deficiency.",
+     "evidence": [
+      "Colony Boundary: protanopia - classes 1/2 dE 0.0 (#8c8c82 vs #8c8c82)",
+      "Colony Boundary: deuteranopia - classes 1/2 dE 0.0 (#8c8c82 vs #8c8c82)",
+      "Colony Boundary: tritanopia - classes 1/2 dE 0.0 (#8c8c82 vs #8c8c82)"
+     ]
+    },
+    {
+     "id": "a11y.contrast",
+     "section": "Accessibility",
+     "name": "Adjacent classes have sufficient colour contrast",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 renderer(s) with low contrast between classes.",
+     "evidence": [
+      "Colony Boundary: classes 1/2 dE 0.0 (normal vision)"
+     ]
+    },
+    {
+     "id": "a11y.symbol-size",
+     "section": "Accessibility",
+     "name": "Symbols large enough on small screens",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "symbol sizes OK"
+     ]
+    },
+    {
+     "id": "a11y.label-size",
+     "section": "Accessibility",
+     "name": "Label text large enough",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 label class(es) below 10pt.",
+     "evidence": [
+      "Turning Points: 9.75pt"
+     ]
+    },
+    {
+     "id": "a11y.opacity",
+     "section": "Accessibility",
+     "name": "Very transparent layers",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "opacities OK"
+     ]
+    },
+    {
+     "id": "a11y.colour-only",
+     "section": "Accessibility",
+     "name": "Many categories distinguished by colour alone",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "categorical class counts OK"
+     ]
+    },
+    {
+     "id": "sym.count-choropleth",
+     "section": "Symbology & legend",
+     "name": "Counts not mapped as choropleth",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no unnormalised count choropleths detected"
+     ]
+    },
+    {
+     "id": "sym.ramp-order",
+     "section": "Symbology & legend",
+     "name": "Class-break ramp reads sequential or diverging",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "class-break ramps read sequential/diverging"
+     ]
+    },
+    {
+     "id": "sym.unique-distinct",
+     "section": "Symbology & legend",
+     "name": "Categorical classes have distinct colours",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 categorical layer(s) with near-identical class colours.",
+     "evidence": [
+      "Colony Boundary: classes 1 and 2 dE 0.0 (#8c8c82 vs #8c8c82)"
+     ]
+    },
+    {
+     "id": "sym.prop-size",
+     "section": "Symbology & legend",
+     "name": "Proportional symbol sizes discernible",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "proportional symbol ranges OK / not used"
+     ]
+    },
+    {
+     "id": "legend.labels",
+     "section": "Symbology & legend",
+     "name": "Legend labels are readable and include units",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "legend labels look readable"
+     ]
+    },
+    {
+     "id": "sym.diverging-note",
+     "section": "Symbology & legend",
+     "name": "Diverging ramp pivot explained",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no diverging ramps"
+     ]
+    }
+   ]
+  },
+  {
+   "itemId": "3ec83a9d66454ade8aead0a64872d931",
+   "title": "Roads, Trails, and Rails West",
+   "owner": "mm.atlas",
+   "auditedAt": "2026-10-23T11:37:51.828Z",
+   "rubricVersion": "0.7.1",
+   "standards": "General Cartographic Standards for MapMaker",
+   "tally": {
+    "fail": 1,
+    "warn": 7,
+    "info": 5,
+    "pass": 25,
+    "skip": 0
+   },
+   "verdict": "fail",
+   "score": 83.8,
+   "grade": "B",
+   "sectionScores": {
+    "Map title & metadata": 100,
+    "Extent & scale": 100,
+    "Layers": 100,
+    "Pop-ups": 50,
+    "Visual effects & labels": 100,
+    "Accessibility": 62.5,
+    "Symbology & legend": 50
+   },
+   "checks": [
+    {
+     "id": "meta.title.present",
+     "section": "Map title & metadata",
+     "name": "Title present and not a default",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"Roads, Trails, and Rails West\""
+     ]
+    },
+    {
+     "id": "meta.title.length",
+     "section": "Map title & metadata",
+     "name": "Title length",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title length: 29"
+     ]
+    },
+    {
+     "id": "meta.title.abbrev",
+     "section": "Map title & metadata",
+     "name": "Title avoids unexplained abbreviations",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"Roads, Trails, and Rails West\""
+     ]
+    },
+    {
+     "id": "meta.snippet",
+     "section": "Map title & metadata",
+     "name": "Summary (snippet) present",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "snippet: 123 chars"
+     ]
+    },
+    {
+     "id": "meta.description",
+     "section": "Map title & metadata",
+     "name": "Description present and substantive",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "description: 1613 chars"
+     ]
+    },
+    {
+     "id": "meta.tags",
+     "section": "Map title & metadata",
+     "name": "Tags",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "tags: trails west, Manifest Destiny, Oregon Trail, Santa Fe National Historic Trail, schools, learn, education, MapMaker"
+     ]
+    },
+    {
+     "id": "meta.credits",
+     "section": "Map title & metadata",
+     "name": "Credits / attribution",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "credits: Jeremy Atack, \"Historical Geographic Information Systems (GIS) database of U.S. Railroads for 1826-1911\" (August 2015) Digitized and assembled by Jeremy Atack, Professor Emeritus and Research Professor of Economics at Vanderbilt University, Nashville TN and Research Associate with the National Bureau of Economic Research, Cambridge, MA (jeremy.atack@vanderbilt.edu); National Park Service"
+     ]
+    },
+    {
+     "id": "meta.license",
+     "section": "Map title & metadata",
+     "name": "Terms of use",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "licenseInfo: set"
+     ]
+    },
+    {
+     "id": "meta.thumbnail",
+     "section": "Map title & metadata",
+     "name": "Custom thumbnail",
+     "severity": "warn",
+     "provisional": true,
+     "status": "info",
+     "message": "Thumbnail appears to be the auto-generated map capture - consider a designed thumbnail for the gallery.",
+     "evidence": [
+      "thumbnail: thumbnail/ago_downloaded.png"
+     ]
+    },
+    {
+     "id": "extent.initial",
+     "section": "Extent & scale",
+     "name": "Initial extent set and appropriate",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "extent: -15272337, 2396361 -> -7371806, 7117112 (wkid 3857)",
+      "width ~ 71 deg"
+     ]
+    },
+    {
+     "id": "extent.visrange",
+     "section": "Extent & scale",
+     "name": "Visibility ranges",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "None of 4 layers use a visibility range.",
+     "evidence": [
+      "Indigenous Territories",
+      "Transcontinental Railroads completed by 1911",
+      "Railroads 1826 to 1911",
+      "Trails West"
+     ]
+    },
+    {
+     "id": "proj.explained",
+     "section": "Extent & scale",
+     "name": "Alternate projection explained",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "wkid 3857 (Web Mercator)"
+     ]
+    },
+    {
+     "id": "basemap.info",
+     "section": "Extent & scale",
+     "name": "Basemap",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "Basemap: Modern Antique Map.",
+     "evidence": [
+      "baseMap.title: Modern Antique Map",
+      "spatial reference wkid: 3857",
+      "World Hillshade",
+      "Modern Antique"
+     ]
+    },
+    {
+     "id": "layer.count",
+     "section": "Layers",
+     "name": "Layer count",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "4 operational layers"
+     ]
+    },
+    {
+     "id": "layer.reachable",
+     "section": "Layers",
+     "name": "All layers public and reachable",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Indigenous Territories: ok",
+      "Transcontinental Railroads completed by 1911: ok",
+      "Railroads 1826 to 1911: ok",
+      "Trails West: ok"
+     ]
+    },
+    {
+     "id": "layer.title",
+     "section": "Layers",
+     "name": "Layer titles are plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Indigenous Territories",
+      "Transcontinental Railroads completed by 1911",
+      "Railroads 1826 to 1911",
+      "Trails West"
+     ]
+    },
+    {
+     "id": "layer.fields",
+     "section": "Layers",
+     "name": "Layer field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "field counts reasonable"
+     ]
+    },
+    {
+     "id": "layer.renderer",
+     "section": "Layers",
+     "name": "Symbology set in the map",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "1 of 4 feature layer(s) use service default symbology.",
+     "evidence": [
+      "Indigenous Territories"
+     ]
+    },
+    {
+     "id": "popup.configured",
+     "section": "Pop-ups",
+     "name": "Pop-ups configured (not default all-fields)",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 of 3 data layer(s) show a default or missing pop-up.",
+     "evidence": [
+      "Indigenous Territories (no pop-up; 8 fields would show by default)",
+      "--- pop-up kinds ---",
+      "Indigenous Territories: none",
+      "Transcontinental Railroads completed by 1911: disabled",
+      "Railroads 1826 to 1911: elements",
+      "Trails West: elements"
+     ]
+    },
+    {
+     "id": "popup.metafields",
+     "section": "Pop-ups",
+     "name": "Metadata fields hidden",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "Metadata fields visible in 1 layer(s).",
+     "evidence": [
+      "Railroads 1826 to 1911: FID, Shape__Length"
+     ]
+    },
+    {
+     "id": "popup.aliases",
+     "section": "Pop-ups",
+     "name": "Fields renamed to plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "Code-like field names shown without a plain-language label in 1 layer(s).",
+     "evidence": [
+      "Railroads 1826 to 1911: FID_RR1826, FID_1900St"
+     ]
+    },
+    {
+     "id": "popup.many",
+     "section": "Pop-ups",
+     "name": "Pop-up field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "Long pop-ups in 1 layer(s).",
+     "evidence": [
+      "Railroads 1826 to 1911: 15 visible fields"
+     ]
+    },
+    {
+     "id": "effects.sparingly",
+     "section": "Visual effects & labels",
+     "name": "Effects used sparingly",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Trails West: [{\"scale\":73957190.948944,\"value\":[{\"type\":\"drop-shadow\",\"xoffset\":0.375,\"yoffse"
+     ]
+    },
+    {
+     "id": "effects.recolour",
+     "section": "Visual effects & labels",
+     "name": "No colour-altering effects",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no colour-altering effects"
+     ]
+    },
+    {
+     "id": "fonts.max",
+     "section": "Visual effects & labels",
+     "name": "At most two fonts",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no map labels"
+     ]
+    },
+    {
+     "id": "labels.halo",
+     "section": "Visual effects & labels",
+     "name": "Label halos",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all label classes have halos"
+     ]
+    },
+    {
+     "id": "a11y.cvd",
+     "section": "Accessibility",
+     "name": "Colours distinguishable with colour-vision deficiency",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "2 layer(s) have classes that merge under colour-vision deficiency.",
+     "evidence": [
+      "Transcontinental Railroads completed by 1911: protanopia - classes 3/4 dE 6.9 (#d4779c vs #779fb6)",
+      "Transcontinental Railroads completed by 1911: deuteranopia - classes 1/4 dE 4.6 (#a679b3 vs #779fb6)",
+      "Transcontinental Railroads completed by 1911: tritanopia - classes 2/3 dE 8.6 (#c29665 vs #d4779c)",
+      "Trails West: deuteranopia - classes 2/7 dE 8.4 (#5c4e09 vs #690a0f)",
+      "Trails West: tritanopia - classes 2/4 dE 5.4 (#5c4e09 vs #5c4039)"
+     ]
+    },
+    {
+     "id": "a11y.contrast",
+     "section": "Accessibility",
+     "name": "Adjacent classes have sufficient colour contrast",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 renderer(s) with low contrast between classes.",
+     "evidence": [
+      "Transcontinental Railroads completed by 1911: classes 2/5 dE 10.4 (normal vision)"
+     ]
+    },
+    {
+     "id": "a11y.symbol-size",
+     "section": "Accessibility",
+     "name": "Symbols large enough on small screens",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 small symbol size(s).",
+     "evidence": [
+      "Railroads 1826 to 1911: line 0.75px"
+     ]
+    },
+    {
+     "id": "a11y.label-size",
+     "section": "Accessibility",
+     "name": "Label text large enough",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "label sizes OK / no labels"
+     ]
+    },
+    {
+     "id": "a11y.opacity",
+     "section": "Accessibility",
+     "name": "Very transparent layers",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "opacities OK"
+     ]
+    },
+    {
+     "id": "a11y.colour-only",
+     "section": "Accessibility",
+     "name": "Many categories distinguished by colour alone",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "categorical class counts OK"
+     ]
+    },
+    {
+     "id": "sym.count-choropleth",
+     "section": "Symbology & legend",
+     "name": "Counts not mapped as choropleth",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no unnormalised count choropleths detected"
+     ]
+    },
+    {
+     "id": "sym.ramp-order",
+     "section": "Symbology & legend",
+     "name": "Class-break ramp reads sequential or diverging",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "class-break ramps read sequential/diverging"
+     ]
+    },
+    {
+     "id": "sym.unique-distinct",
+     "section": "Symbology & legend",
+     "name": "Categorical classes have distinct colours",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 categorical layer(s) with near-identical class colours.",
+     "evidence": [
+      "Transcontinental Railroads completed by 1911: classes 2 and 5 dE 10.4 (#c29665 vs #ed983e)"
+     ]
+    },
+    {
+     "id": "sym.prop-size",
+     "section": "Symbology & legend",
+     "name": "Proportional symbol sizes discernible",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "proportional symbol ranges OK / not used"
+     ]
+    },
+    {
+     "id": "legend.labels",
+     "section": "Symbology & legend",
+     "name": "Legend labels are readable and include units",
+     "severity": "fail",
+     "provisional": false,
+     "status": "fail",
+     "message": "1 legend issue(s).",
+     "evidence": [
+      "Trails West: legend headed by raw field \"TR_NAME\""
+     ]
+    },
+    {
+     "id": "sym.diverging-note",
+     "section": "Symbology & legend",
+     "name": "Diverging ramp pivot explained",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no diverging ramps"
+     ]
+    }
+   ]
+  },
+  {
+   "itemId": "819f60a5a3344d958d24f505849abaaa",
+   "title": "US Slavery and Slave Trade, 1850",
+   "owner": "mm.atlas",
+   "auditedAt": "2026-10-23T11:37:52.789Z",
+   "rubricVersion": "0.7.1",
+   "standards": "General Cartographic Standards for MapMaker",
+   "tally": {
+    "fail": 0,
+    "warn": 3,
+    "info": 3,
+    "pass": 32,
+    "skip": 0
+   },
+   "verdict": "review",
+   "score": 96.3,
+   "grade": "A",
+   "sectionScores": {
+    "Map title & metadata": 96.9,
+    "Extent & scale": 75,
+    "Layers": 100,
+    "Pop-ups": 83.3,
+    "Visual effects & labels": 100,
+    "Accessibility": 100,
+    "Symbology & legend": 100
+   },
+   "checks": [
+    {
+     "id": "meta.title.present",
+     "section": "Map title & metadata",
+     "name": "Title present and not a default",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"US Slavery and Slave Trade, 1850\""
+     ]
+    },
+    {
+     "id": "meta.title.length",
+     "section": "Map title & metadata",
+     "name": "Title length",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title length: 32"
+     ]
+    },
+    {
+     "id": "meta.title.abbrev",
+     "section": "Map title & metadata",
+     "name": "Title avoids unexplained abbreviations",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "Title contains abbreviation(s) not expanded in the summary or description: US.",
+     "evidence": [
+      "title: \"US Slavery and Slave Trade, 1850\""
+     ]
+    },
+    {
+     "id": "meta.snippet",
+     "section": "Map title & metadata",
+     "name": "Summary (snippet) present",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "snippet: 338 chars"
+     ]
+    },
+    {
+     "id": "meta.description",
+     "section": "Map title & metadata",
+     "name": "Description present and substantive",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "description: 3895 chars"
+     ]
+    },
+    {
+     "id": "meta.tags",
+     "section": "Map title & metadata",
+     "name": "Tags",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "tags: underground railroad, enslaved people, Missouri Compromise, abolition, Harper's Atlas of American History, Library of Congress, schools, learn, education, MapMaker"
+     ]
+    },
+    {
+     "id": "meta.credits",
+     "section": "Map title & metadata",
+     "name": "Credits / attribution",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "credits: Library of Congress, Esri"
+     ]
+    },
+    {
+     "id": "meta.license",
+     "section": "Map title & metadata",
+     "name": "Terms of use",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "licenseInfo: set"
+     ]
+    },
+    {
+     "id": "meta.thumbnail",
+     "section": "Map title & metadata",
+     "name": "Custom thumbnail",
+     "severity": "warn",
+     "provisional": true,
+     "status": "info",
+     "message": "Thumbnail appears to be the auto-generated map capture - consider a designed thumbnail for the gallery.",
+     "evidence": [
+      "thumbnail: thumbnail/ago_downloaded.png"
+     ]
+    },
+    {
+     "id": "extent.initial",
+     "section": "Extent & scale",
+     "name": "Initial extent set and appropriate",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "extent: -2212687, -1379714 -> 2136352, 2230731 (wkid 102003)"
+     ]
+    },
+    {
+     "id": "extent.visrange",
+     "section": "Extent & scale",
+     "name": "Visibility ranges",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "2 of 6 feature layers have a visibility range"
+     ]
+    },
+    {
+     "id": "proj.explained",
+     "section": "Extent & scale",
+     "name": "Alternate projection explained",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "Map uses a non-Web Mercator spatial reference (wkid 102003) and the description does not mention the projection.",
+     "evidence": [
+      "wkid: 102003"
+     ]
+    },
+    {
+     "id": "basemap.info",
+     "section": "Extent & scale",
+     "name": "Basemap",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "Basemap: USA Contiguous Albers Equal Area Conic Basemap.",
+     "evidence": [
+      "baseMap.title: USA Contiguous Albers Equal Area Conic Basemap",
+      "spatial reference wkid: 102003",
+      "USA Contiguous Albers Equal Area Conic Basemap",
+      "USAMajorRivers_Project"
+     ]
+    },
+    {
+     "id": "layer.count",
+     "section": "Layers",
+     "name": "Layer count",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "6 operational layers"
+     ]
+    },
+    {
+     "id": "layer.reachable",
+     "section": "Layers",
+     "name": "All layers public and reachable",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "US 1850 Original Map: ok",
+      "US States and Territories 1850: ok",
+      "Internal Routes of the US Slave Trade: ok",
+      "Underground Railroad Approximate Routes: ok",
+      "Cities: ok",
+      "Missouri Compromise Line: ok"
+     ]
+    },
+    {
+     "id": "layer.title",
+     "section": "Layers",
+     "name": "Layer titles are plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "US 1850 Original Map",
+      "US States and Territories 1850",
+      "Internal Routes of the US Slave Trade",
+      "Underground Railroad Approximate Routes",
+      "Cities",
+      "Missouri Compromise Line"
+     ]
+    },
+    {
+     "id": "layer.fields",
+     "section": "Layers",
+     "name": "Layer field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "field counts reasonable"
+     ]
+    },
+    {
+     "id": "layer.renderer",
+     "section": "Layers",
+     "name": "Symbology set in the map",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "3 of 5 feature layer(s) use service default symbology.",
+     "evidence": [
+      "Internal Routes of the US Slave Trade",
+      "Cities",
+      "Missouri Compromise Line"
+     ]
+    },
+    {
+     "id": "popup.configured",
+     "section": "Pop-ups",
+     "name": "Pop-ups configured (not default all-fields)",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "All 1 data layer(s) have an authored pop-up (Arcade / elements / fields / media / raster identify).",
+     "evidence": [
+      "US 1850 Original Map: ArcGISTiledMapServiceLayer (exempt)",
+      "US States and Territories 1850: arcade",
+      "Internal Routes of the US Slave Trade: disabled",
+      "Underground Railroad Approximate Routes: disabled",
+      "Cities: disabled",
+      "Missouri Compromise Line: disabled"
+     ]
+    },
+    {
+     "id": "popup.metafields",
+     "section": "Pop-ups",
+     "name": "Metadata fields hidden",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "Metadata fields visible in 1 layer(s).",
+     "evidence": [
+      "US States and Territories 1850: Shape__Area, Shape__Length"
+     ]
+    },
+    {
+     "id": "popup.aliases",
+     "section": "Pop-ups",
+     "name": "Fields renamed to plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "visible fields have readable labels"
+     ]
+    },
+    {
+     "id": "popup.many",
+     "section": "Pop-ups",
+     "name": "Pop-up field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "pop-ups within field-count guideline"
+     ]
+    },
+    {
+     "id": "effects.sparingly",
+     "section": "Visual effects & labels",
+     "name": "Effects used sparingly",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no layer effects"
+     ]
+    },
+    {
+     "id": "effects.recolour",
+     "section": "Visual effects & labels",
+     "name": "No colour-altering effects",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no colour-altering effects"
+     ]
+    },
+    {
+     "id": "fonts.max",
+     "section": "Visual effects & labels",
+     "name": "At most two fonts",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no map labels"
+     ]
+    },
+    {
+     "id": "labels.halo",
+     "section": "Visual effects & labels",
+     "name": "Label halos",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all label classes have halos"
+     ]
+    },
+    {
+     "id": "a11y.cvd",
+     "section": "Accessibility",
+     "name": "Colours distinguishable with colour-vision deficiency",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "1 renderer(s) checked under protan/deutan/tritan simulation (min dE >= 10)"
+     ]
+    },
+    {
+     "id": "a11y.contrast",
+     "section": "Accessibility",
+     "name": "Adjacent classes have sufficient colour contrast",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all adjacent classes dE >= 12"
+     ]
+    },
+    {
+     "id": "a11y.symbol-size",
+     "section": "Accessibility",
+     "name": "Symbols large enough on small screens",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "symbol sizes OK"
+     ]
+    },
+    {
+     "id": "a11y.label-size",
+     "section": "Accessibility",
+     "name": "Label text large enough",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "label sizes OK / no labels"
+     ]
+    },
+    {
+     "id": "a11y.opacity",
+     "section": "Accessibility",
+     "name": "Very transparent layers",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "opacities OK"
+     ]
+    },
+    {
+     "id": "a11y.colour-only",
+     "section": "Accessibility",
+     "name": "Many categories distinguished by colour alone",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "categorical class counts OK"
+     ]
+    },
+    {
+     "id": "sym.count-choropleth",
+     "section": "Symbology & legend",
+     "name": "Counts not mapped as choropleth",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no unnormalised count choropleths detected"
+     ]
+    },
+    {
+     "id": "sym.ramp-order",
+     "section": "Symbology & legend",
+     "name": "Class-break ramp reads sequential or diverging",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "class-break ramps read sequential/diverging"
+     ]
+    },
+    {
+     "id": "sym.unique-distinct",
+     "section": "Symbology & legend",
+     "name": "Categorical classes have distinct colours",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "categorical classes distinct"
+     ]
+    },
+    {
+     "id": "sym.prop-size",
+     "section": "Symbology & legend",
+     "name": "Proportional symbol sizes discernible",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "proportional symbol ranges OK / not used"
+     ]
+    },
+    {
+     "id": "legend.labels",
+     "section": "Symbology & legend",
+     "name": "Legend labels are readable and include units",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "legend labels look readable"
+     ]
+    },
+    {
+     "id": "sym.diverging-note",
+     "section": "Symbology & legend",
+     "name": "Diverging ramp pivot explained",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no diverging ramps"
+     ]
+    }
+   ]
+  },
+  {
+   "itemId": "7a06e8e2818941f99a3d40bb32e08118",
+   "title": "Civil War Battlefields",
+   "owner": "mm.atlas",
+   "auditedAt": "2026-10-23T11:37:53.814Z",
+   "rubricVersion": "0.7.1",
+   "standards": "General Cartographic Standards for MapMaker",
+   "tally": {
+    "fail": 0,
+    "warn": 7,
+    "info": 4,
+    "pass": 27,
+    "skip": 0
+   },
+   "verdict": "review",
+   "score": 91.3,
+   "grade": "A",
+   "sectionScores": {
+    "Map title & metadata": 100,
+    "Extent & scale": 100,
+    "Layers": 100,
+    "Pop-ups": 50,
+    "Visual effects & labels": 100,
+    "Accessibility": 62.5,
+    "Symbology & legend": 92.9
+   },
+   "checks": [
+    {
+     "id": "meta.title.present",
+     "section": "Map title & metadata",
+     "name": "Title present and not a default",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"Civil War Battlefields\""
+     ]
+    },
+    {
+     "id": "meta.title.length",
+     "section": "Map title & metadata",
+     "name": "Title length",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title length: 22"
+     ]
+    },
+    {
+     "id": "meta.title.abbrev",
+     "section": "Map title & metadata",
+     "name": "Title avoids unexplained abbreviations",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"Civil War Battlefields\""
+     ]
+    },
+    {
+     "id": "meta.snippet",
+     "section": "Map title & metadata",
+     "name": "Summary (snippet) present",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "snippet: 155 chars"
+     ]
+    },
+    {
+     "id": "meta.description",
+     "section": "Map title & metadata",
+     "name": "Description present and substantive",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "description: 3020 chars"
+     ]
+    },
+    {
+     "id": "meta.tags",
+     "section": "Map title & metadata",
+     "name": "Tags",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "tags: Civil War, U.S. Civil War, War Between The States, history, America, school, learn, education, MapMaker"
+     ]
+    },
+    {
+     "id": "meta.credits",
+     "section": "Map title & metadata",
+     "name": "Credits / attribution",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "credits: American Battlefield Trust"
+     ]
+    },
+    {
+     "id": "meta.license",
+     "section": "Map title & metadata",
+     "name": "Terms of use",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "licenseInfo: set"
+     ]
+    },
+    {
+     "id": "meta.thumbnail",
+     "section": "Map title & metadata",
+     "name": "Custom thumbnail",
+     "severity": "warn",
+     "provisional": true,
+     "status": "info",
+     "message": "Thumbnail appears to be the auto-generated map capture - consider a designed thumbnail for the gallery.",
+     "evidence": [
+      "thumbnail: thumbnail/ago_downloaded.png"
+     ]
+    },
+    {
+     "id": "extent.initial",
+     "section": "Extent & scale",
+     "name": "Initial extent set and appropriate",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "extent: -13878591, 2462312 -> -7435867, 6644947 (wkid 3857)",
+      "width ~ 58 deg"
+     ]
+    },
+    {
+     "id": "extent.visrange",
+     "section": "Extent & scale",
+     "name": "Visibility ranges",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "None of 6 layers use a visibility range.",
+     "evidence": [
+      "U.S. Civil War States and Territories (1863)",
+      "Civil War Battlefield Boundary",
+      "Civil War Core Areas",
+      "Boundary between Union and Confederacy",
+      "Railroads 1826 to 1863 (static)",
+      "Civil War Battlefields"
+     ]
+    },
+    {
+     "id": "proj.explained",
+     "section": "Extent & scale",
+     "name": "Alternate projection explained",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "wkid 3857 (Web Mercator)"
+     ]
+    },
+    {
+     "id": "basemap.info",
+     "section": "Extent & scale",
+     "name": "Basemap",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "Basemap: Human Geography.",
+     "evidence": [
+      "baseMap.title: Human Geography",
+      "spatial reference wkid: 3857",
+      "World Hillshade",
+      "Copy of Modern Antique no Labels"
+     ]
+    },
+    {
+     "id": "layer.count",
+     "section": "Layers",
+     "name": "Layer count",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "6 operational layers"
+     ]
+    },
+    {
+     "id": "layer.reachable",
+     "section": "Layers",
+     "name": "All layers public and reachable",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "U.S. Civil War States and Territories (1863): ok",
+      "Civil War Battlefield Boundary: ok",
+      "Civil War Core Areas: ok",
+      "Boundary between Union and Confederacy: ok",
+      "Railroads 1826 to 1863 (static): ok",
+      "Civil War Battlefields: ok"
+     ]
+    },
+    {
+     "id": "layer.title",
+     "section": "Layers",
+     "name": "Layer titles are plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "U.S. Civil War States and Territories (1863)",
+      "Civil War Battlefield Boundary",
+      "Civil War Core Areas",
+      "Boundary between Union and Confederacy",
+      "Railroads 1826 to 1863 (static)",
+      "Civil War Battlefields"
+     ]
+    },
+    {
+     "id": "layer.fields",
+     "section": "Layers",
+     "name": "Layer field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "field counts reasonable"
+     ]
+    },
+    {
+     "id": "layer.renderer",
+     "section": "Layers",
+     "name": "Symbology set in the map",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "3 of 6 feature layer(s) use service default symbology.",
+     "evidence": [
+      "Civil War Core Areas",
+      "Boundary between Union and Confederacy",
+      "Railroads 1826 to 1863 (static)"
+     ]
+    },
+    {
+     "id": "popup.configured",
+     "section": "Pop-ups",
+     "name": "Pop-ups configured (not default all-fields)",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "3 of 5 data layer(s) show a default or missing pop-up.",
+     "evidence": [
+      "Boundary between Union and Confederacy (no pop-up; 10 fields would show by default)",
+      "Railroads 1826 to 1863 (static) (no pop-up; 16 fields would show by default)",
+      "Civil War Battlefields (no pop-up; 25 fields would show by default)",
+      "--- pop-up kinds ---",
+      "U.S. Civil War States and Territories (1863): disabled",
+      "Civil War Battlefield Boundary: elements",
+      "Civil War Core Areas: elements",
+      "Boundary between Union and Confederacy: none",
+      "Railroads 1826 to 1863 (static): none",
+      "Civil War Battlefields: none"
+     ]
+    },
+    {
+     "id": "popup.metafields",
+     "section": "Pop-ups",
+     "name": "Metadata fields hidden",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "Metadata fields visible in 2 layer(s).",
+     "evidence": [
+      "Civil War Battlefield Boundary: Shape__Area, Shape__Length",
+      "Civil War Core Areas: Shape__Area, Shape__Length"
+     ]
+    },
+    {
+     "id": "popup.aliases",
+     "section": "Pop-ups",
+     "name": "Fields renamed to plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "Code-like field names shown without a plain-language label in 1 layer(s).",
+     "evidence": [
+      "Civil War Core Areas: NAME, BOUNDARY, SITE, STATE, WAR"
+     ]
+    },
+    {
+     "id": "popup.many",
+     "section": "Pop-ups",
+     "name": "Pop-up field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "pop-ups within field-count guideline"
+     ]
+    },
+    {
+     "id": "effects.sparingly",
+     "section": "Visual effects & labels",
+     "name": "Effects used sparingly",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "U.S. Civil War States and Territories (1863): blend: multiply"
+     ]
+    },
+    {
+     "id": "effects.recolour",
+     "section": "Visual effects & labels",
+     "name": "No colour-altering effects",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no colour-altering effects"
+     ]
+    },
+    {
+     "id": "fonts.max",
+     "section": "Visual effects & labels",
+     "name": "At most two fonts",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Arial"
+     ]
+    },
+    {
+     "id": "labels.halo",
+     "section": "Visual effects & labels",
+     "name": "Label halos",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all label classes have halos"
+     ]
+    },
+    {
+     "id": "a11y.cvd",
+     "section": "Accessibility",
+     "name": "Colours distinguishable with colour-vision deficiency",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 layer(s) have classes that merge under colour-vision deficiency.",
+     "evidence": [
+      "U.S. Civil War States and Territories (1863): protanopia - classes 1/2 dE 0.0 (#404f7d vs #404f7d)",
+      "U.S. Civil War States and Territories (1863): deuteranopia - classes 1/2 dE 0.0 (#404f7d vs #404f7d)",
+      "U.S. Civil War States and Territories (1863): tritanopia - classes 1/2 dE 0.0 (#404f7d vs #404f7d)"
+     ]
+    },
+    {
+     "id": "a11y.contrast",
+     "section": "Accessibility",
+     "name": "Adjacent classes have sufficient colour contrast",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 renderer(s) with low contrast between classes.",
+     "evidence": [
+      "U.S. Civil War States and Territories (1863): classes 1/2 dE 0.0 (normal vision)"
+     ]
+    },
+    {
+     "id": "a11y.symbol-size",
+     "section": "Accessibility",
+     "name": "Symbols large enough on small screens",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "symbol sizes OK"
+     ]
+    },
+    {
+     "id": "a11y.label-size",
+     "section": "Accessibility",
+     "name": "Label text large enough",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 label class(es) below 10pt.",
+     "evidence": [
+      "U.S. Civil War States and Territories (1863): 9.75pt"
+     ]
+    },
+    {
+     "id": "a11y.opacity",
+     "section": "Accessibility",
+     "name": "Very transparent layers",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "opacities OK"
+     ]
+    },
+    {
+     "id": "a11y.colour-only",
+     "section": "Accessibility",
+     "name": "Many categories distinguished by colour alone",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "categorical class counts OK"
+     ]
+    },
+    {
+     "id": "sym.count-choropleth",
+     "section": "Symbology & legend",
+     "name": "Counts not mapped as choropleth",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no unnormalised count choropleths detected"
+     ]
+    },
+    {
+     "id": "sym.ramp-order",
+     "section": "Symbology & legend",
+     "name": "Class-break ramp reads sequential or diverging",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "class-break ramps read sequential/diverging"
+     ]
+    },
+    {
+     "id": "sym.unique-distinct",
+     "section": "Symbology & legend",
+     "name": "Categorical classes have distinct colours",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 categorical layer(s) with near-identical class colours.",
+     "evidence": [
+      "U.S. Civil War States and Territories (1863): classes 1 and 2 dE 0.0 (#404f7d vs #404f7d)"
+     ]
+    },
+    {
+     "id": "sym.prop-size",
+     "section": "Symbology & legend",
+     "name": "Proportional symbol sizes discernible",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "proportional symbol ranges OK / not used"
+     ]
+    },
+    {
+     "id": "legend.labels",
+     "section": "Symbology & legend",
+     "name": "Legend labels are readable and include units",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "legend labels look readable"
+     ]
+    },
+    {
+     "id": "sym.diverging-note",
+     "section": "Symbology & legend",
+     "name": "Diverging ramp pivot explained",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no diverging ramps"
+     ]
+    }
+   ]
+  },
+  {
+   "itemId": "1ba8cd3fc75a49a497be1137fce4c032",
+   "title": "The Battle of Vicksburg",
+   "owner": "mm.atlas",
+   "auditedAt": "2026-10-23T11:37:54.653Z",
+   "rubricVersion": "0.7.1",
+   "standards": "General Cartographic Standards for MapMaker",
+   "tally": {
+    "fail": 0,
+    "warn": 5,
+    "info": 2,
+    "pass": 31,
+    "skip": 0
+   },
+   "verdict": "review",
+   "score": 93.9,
+   "grade": "A",
+   "sectionScores": {
+    "Map title & metadata": 97.1,
+    "Extent & scale": 100,
+    "Layers": 100,
+    "Pop-ups": 83.3,
+    "Visual effects & labels": 100,
+    "Accessibility": 75,
+    "Symbology & legend": 92.9
+   },
+   "checks": [
+    {
+     "id": "meta.title.present",
+     "section": "Map title & metadata",
+     "name": "Title present and not a default",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"The Battle of Vicksburg\""
+     ]
+    },
+    {
+     "id": "meta.title.length",
+     "section": "Map title & metadata",
+     "name": "Title length",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title length: 23"
+     ]
+    },
+    {
+     "id": "meta.title.abbrev",
+     "section": "Map title & metadata",
+     "name": "Title avoids unexplained abbreviations",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "Title contains abbreviation(s) not expanded in the summary or description: Vicksburg.",
+     "evidence": [
+      "title: \"The Battle of Vicksburg\""
+     ]
+    },
+    {
+     "id": "meta.snippet",
+     "section": "Map title & metadata",
+     "name": "Summary (snippet) present",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "snippet: 163 chars"
+     ]
+    },
+    {
+     "id": "meta.description",
+     "section": "Map title & metadata",
+     "name": "Description present and substantive",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "description: 2987 chars"
+     ]
+    },
+    {
+     "id": "meta.tags",
+     "section": "Map title & metadata",
+     "name": "Tags",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "tags: Civil War, U.S. Civil War, War, War Between The States, history, American, school, learn, education, MapMaker, Battle of Vicksburg, seige, ulysses s grant"
+     ]
+    },
+    {
+     "id": "meta.credits",
+     "section": "Map title & metadata",
+     "name": "Credits / attribution",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "credits: The American Battlefield Trust, Jeremy Atack, \"Historical Geographic Information Systems (GIS) database of U.S. Railroads for 1826-1911\" (August 2015) Digitized and assembled by Jeremy Atack, Professor Emeritus and Research Professor of Economics at Vanderbilt University, Nashville TN and Research Associate with the National Bureau of Economic Research, Cambridge, MA (jeremy.atack@vanderbilt.edu), Esri"
+     ]
+    },
+    {
+     "id": "meta.license",
+     "section": "Map title & metadata",
+     "name": "Terms of use",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "licenseInfo: set"
+     ]
+    },
+    {
+     "id": "meta.thumbnail",
+     "section": "Map title & metadata",
+     "name": "Custom thumbnail",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "thumbnail: thumbnail/thumbnail1702673296499.png"
+     ]
+    },
+    {
+     "id": "extent.initial",
+     "section": "Extent & scale",
+     "name": "Initial extent set and appropriate",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "extent: -10182493, 3726405 -> -10056525, 3850233 (wkid 3857)",
+      "width ~ 1 deg"
+     ]
+    },
+    {
+     "id": "extent.visrange",
+     "section": "Extent & scale",
+     "name": "Visibility ranges",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "1 of 3 feature layers have a visibility range"
+     ]
+    },
+    {
+     "id": "proj.explained",
+     "section": "Extent & scale",
+     "name": "Alternate projection explained",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "wkid 3857 (Web Mercator)"
+     ]
+    },
+    {
+     "id": "basemap.info",
+     "section": "Extent & scale",
+     "name": "Basemap",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "Basemap: Modern Antique Map.",
+     "evidence": [
+      "baseMap.title: Modern Antique Map",
+      "spatial reference wkid: 3857",
+      "World Hillshade",
+      "Modern Antique"
+     ]
+    },
+    {
+     "id": "layer.count",
+     "section": "Layers",
+     "name": "Layer count",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "3 operational layers"
+     ]
+    },
+    {
+     "id": "layer.reachable",
+     "section": "Layers",
+     "name": "All layers public and reachable",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Railroads 1826 to 1911: ok",
+      "Civil War Battlefields: ok",
+      "Key Places in the Union March to Vicksburg: (no url - embedded)"
+     ]
+    },
+    {
+     "id": "layer.title",
+     "section": "Layers",
+     "name": "Layer titles are plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Railroads 1826 to 1911",
+      "Civil War Battlefields",
+      "Key Places in the Union March to Vicksburg"
+     ]
+    },
+    {
+     "id": "layer.fields",
+     "section": "Layers",
+     "name": "Layer field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "field counts reasonable"
+     ]
+    },
+    {
+     "id": "layer.renderer",
+     "section": "Layers",
+     "name": "Symbology set in the map",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all 3 feature layer(s) have a renderer defined in the map"
+     ]
+    },
+    {
+     "id": "popup.configured",
+     "section": "Pop-ups",
+     "name": "Pop-ups configured (not default all-fields)",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "2 of 3 data layer(s) show a default or missing pop-up.",
+     "evidence": [
+      "Railroads 1826 to 1911 (no pop-up; 16 fields would show by default)",
+      "Key Places in the Union March to Vicksburg (no pop-up; 2 fields would show by default)",
+      "--- pop-up kinds ---",
+      "Railroads 1826 to 1911: none",
+      "Civil War Battlefields: elements",
+      "Key Places in the Union March to Vicksburg: none"
+     ]
+    },
+    {
+     "id": "popup.metafields",
+     "section": "Pop-ups",
+     "name": "Metadata fields hidden",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no metadata fields visible"
+     ]
+    },
+    {
+     "id": "popup.aliases",
+     "section": "Pop-ups",
+     "name": "Fields renamed to plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "visible fields have readable labels"
+     ]
+    },
+    {
+     "id": "popup.many",
+     "section": "Pop-ups",
+     "name": "Pop-up field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "pop-ups within field-count guideline"
+     ]
+    },
+    {
+     "id": "effects.sparingly",
+     "section": "Visual effects & labels",
+     "name": "Effects used sparingly",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Civil War Battlefields: [{\"scale\":1155581.108576,\"value\":[{\"type\":\"drop-shadow\",\"xoffset\":0.375,\"yoffset"
+     ]
+    },
+    {
+     "id": "effects.recolour",
+     "section": "Visual effects & labels",
+     "name": "No colour-altering effects",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no colour-altering effects"
+     ]
+    },
+    {
+     "id": "fonts.max",
+     "section": "Visual effects & labels",
+     "name": "At most two fonts",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no map labels"
+     ]
+    },
+    {
+     "id": "labels.halo",
+     "section": "Visual effects & labels",
+     "name": "Label halos",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all label classes have halos"
+     ]
+    },
+    {
+     "id": "a11y.cvd",
+     "section": "Accessibility",
+     "name": "Colours distinguishable with colour-vision deficiency",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 layer(s) have classes that merge under colour-vision deficiency.",
+     "evidence": [
+      "Railroads 1826 to 1911: protanopia - classes 1/2 dE 6.5 (#8a1b13 vs #5c291f)",
+      "Railroads 1826 to 1911: deuteranopia - classes 3/5 dE 5.3 (#c25e48 vs #bd4242)",
+      "Railroads 1826 to 1911: tritanopia - classes 3/4 dE 5.7 (#c25e48 vs #de408c)"
+     ]
+    },
+    {
+     "id": "a11y.contrast",
+     "section": "Accessibility",
+     "name": "Adjacent classes have sufficient colour contrast",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 renderer(s) with low contrast between classes.",
+     "evidence": [
+      "Railroads 1826 to 1911: classes 3/5 dE 8.7 (normal vision)"
+     ]
+    },
+    {
+     "id": "a11y.symbol-size",
+     "section": "Accessibility",
+     "name": "Symbols large enough on small screens",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "symbol sizes OK"
+     ]
+    },
+    {
+     "id": "a11y.label-size",
+     "section": "Accessibility",
+     "name": "Label text large enough",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "label sizes OK / no labels"
+     ]
+    },
+    {
+     "id": "a11y.opacity",
+     "section": "Accessibility",
+     "name": "Very transparent layers",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "1 layer(s) very transparent.",
+     "evidence": [
+      "Key Places in the Union March to Vicksburg: symbol fill alpha < 0.3"
+     ]
+    },
+    {
+     "id": "a11y.colour-only",
+     "section": "Accessibility",
+     "name": "Many categories distinguished by colour alone",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "categorical class counts OK"
+     ]
+    },
+    {
+     "id": "sym.count-choropleth",
+     "section": "Symbology & legend",
+     "name": "Counts not mapped as choropleth",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no unnormalised count choropleths detected"
+     ]
+    },
+    {
+     "id": "sym.ramp-order",
+     "section": "Symbology & legend",
+     "name": "Class-break ramp reads sequential or diverging",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "class-break ramps read sequential/diverging"
+     ]
+    },
+    {
+     "id": "sym.unique-distinct",
+     "section": "Symbology & legend",
+     "name": "Categorical classes have distinct colours",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 categorical layer(s) with near-identical class colours.",
+     "evidence": [
+      "Railroads 1826 to 1911: classes 3 and 5 dE 8.7 (#c25e48 vs #bd4242)"
+     ]
+    },
+    {
+     "id": "sym.prop-size",
+     "section": "Symbology & legend",
+     "name": "Proportional symbol sizes discernible",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "proportional symbol ranges OK / not used"
+     ]
+    },
+    {
+     "id": "legend.labels",
+     "section": "Symbology & legend",
+     "name": "Legend labels are readable and include units",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "legend labels look readable"
+     ]
+    },
+    {
+     "id": "sym.diverging-note",
+     "section": "Symbology & legend",
+     "name": "Diverging ramp pivot explained",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no diverging ramps"
+     ]
+    }
+   ]
+  },
+  {
+   "itemId": "eba1ea7488624f3c88ef094167ed03ca",
+   "title": "We the People: Representation and Ratification, 1787–1791",
+   "owner": "GIS-4-Schools",
+   "auditedAt": "2026-10-23T11:37:55.716Z",
+   "rubricVersion": "0.7.1",
+   "standards": "General Cartographic Standards for MapMaker",
+   "tally": {
+    "fail": 0,
+    "warn": 5,
+    "info": 3,
+    "pass": 30,
+    "skip": 0
+   },
+   "verdict": "review",
+   "score": 93.9,
+   "grade": "A",
+   "sectionScores": {
+    "Map title & metadata": 97.1,
+    "Extent & scale": 100,
+    "Layers": 100,
+    "Pop-ups": 83.3,
+    "Visual effects & labels": 100,
+    "Accessibility": 62.5,
+    "Symbology & legend": 100
+   },
+   "checks": [
+    {
+     "id": "meta.title.present",
+     "section": "Map title & metadata",
+     "name": "Title present and not a default",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"We the People: Representation and Ratification, 1787–1791\""
+     ]
+    },
+    {
+     "id": "meta.title.length",
+     "section": "Map title & metadata",
+     "name": "Title length",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title length: 57"
+     ]
+    },
+    {
+     "id": "meta.title.abbrev",
+     "section": "Map title & metadata",
+     "name": "Title avoids unexplained abbreviations",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"We the People: Representation and Ratification, 1787–1791\""
+     ]
+    },
+    {
+     "id": "meta.snippet",
+     "section": "Map title & metadata",
+     "name": "Summary (snippet) present",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "snippet: 111 chars"
+     ]
+    },
+    {
+     "id": "meta.description",
+     "section": "Map title & metadata",
+     "name": "Description present and substantive",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "description: 1288 chars"
+     ]
+    },
+    {
+     "id": "meta.tags",
+     "section": "Map title & metadata",
+     "name": "Tags",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "tags: MapMaker, US History, grade 8, November 2026, web map, activity 8"
+     ]
+    },
+    {
+     "id": "meta.credits",
+     "section": "Map title & metadata",
+     "name": "Credits / attribution",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "credits: National Archives; U.S. Census Bureau; Wikipedia (1790 census figures); Center for the Study of the American Constitution; Natural Earth."
+     ]
+    },
+    {
+     "id": "meta.license",
+     "section": "Map title & metadata",
+     "name": "Terms of use",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "licenseInfo: set"
+     ]
+    },
+    {
+     "id": "meta.thumbnail",
+     "section": "Map title & metadata",
+     "name": "Custom thumbnail",
+     "severity": "warn",
+     "provisional": true,
+     "status": "warn",
+     "message": "No custom thumbnail - the default will show in galleries.",
+     "evidence": [
+      "thumbnail: none"
+     ]
+    },
+    {
+     "id": "extent.initial",
+     "section": "Extent & scale",
+     "name": "Initial extent set and appropriate",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "extent: -10241393, 3375646 -> -7347086, 6040565 (wkid 3857)",
+      "width ~ 26 deg"
+     ]
+    },
+    {
+     "id": "extent.visrange",
+     "section": "Extent & scale",
+     "name": "Visibility ranges",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "None of 4 layers use a visibility range.",
+     "evidence": [
+      "Population in 1790: free and enslaved",
+      "House seats in 1793",
+      "House seats today (2020 apportionment)",
+      "Ratifying the Constitution, 1787–1791"
+     ]
+    },
+    {
+     "id": "proj.explained",
+     "section": "Extent & scale",
+     "name": "Alternate projection explained",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "wkid 3857 (Web Mercator)"
+     ]
+    },
+    {
+     "id": "basemap.info",
+     "section": "Extent & scale",
+     "name": "Basemap",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "Basemap: Modern Antique.",
+     "evidence": [
+      "baseMap.title: Modern Antique",
+      "spatial reference wkid: 3857",
+      "World Hillshade",
+      "Copy of Modern Antique no Labels"
+     ]
+    },
+    {
+     "id": "layer.count",
+     "section": "Layers",
+     "name": "Layer count",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "4 operational layers"
+     ]
+    },
+    {
+     "id": "layer.reachable",
+     "section": "Layers",
+     "name": "All layers public and reachable",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Population in 1790: free and enslaved: ok",
+      "House seats in 1793: ok",
+      "House seats today (2020 apportionment): ok",
+      "Ratifying the Constitution, 1787–1791: ok"
+     ]
+    },
+    {
+     "id": "layer.title",
+     "section": "Layers",
+     "name": "Layer titles are plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Population in 1790: free and enslaved",
+      "House seats in 1793",
+      "House seats today (2020 apportionment)",
+      "Ratifying the Constitution, 1787–1791"
+     ]
+    },
+    {
+     "id": "layer.fields",
+     "section": "Layers",
+     "name": "Layer field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "field counts reasonable"
+     ]
+    },
+    {
+     "id": "layer.renderer",
+     "section": "Layers",
+     "name": "Symbology set in the map",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "1 of 4 feature layer(s) use service default symbology.",
+     "evidence": [
+      "House seats today (2020 apportionment)"
+     ]
+    },
+    {
+     "id": "popup.configured",
+     "section": "Pop-ups",
+     "name": "Pop-ups configured (not default all-fields)",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 of 4 data layer(s) show a default or missing pop-up.",
+     "evidence": [
+      "House seats today (2020 apportionment) (no pop-up; 22 fields would show by default)",
+      "--- pop-up kinds ---",
+      "Population in 1790: free and enslaved: elements",
+      "House seats in 1793: elements",
+      "House seats today (2020 apportionment): none",
+      "Ratifying the Constitution, 1787–1791: elements"
+     ]
+    },
+    {
+     "id": "popup.metafields",
+     "section": "Pop-ups",
+     "name": "Metadata fields hidden",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no metadata fields visible"
+     ]
+    },
+    {
+     "id": "popup.aliases",
+     "section": "Pop-ups",
+     "name": "Fields renamed to plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "visible fields have readable labels"
+     ]
+    },
+    {
+     "id": "popup.many",
+     "section": "Pop-ups",
+     "name": "Pop-up field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "pop-ups within field-count guideline"
+     ]
+    },
+    {
+     "id": "effects.sparingly",
+     "section": "Visual effects & labels",
+     "name": "Effects used sparingly",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no layer effects"
+     ]
+    },
+    {
+     "id": "effects.recolour",
+     "section": "Visual effects & labels",
+     "name": "No colour-altering effects",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no colour-altering effects"
+     ]
+    },
+    {
+     "id": "fonts.max",
+     "section": "Visual effects & labels",
+     "name": "At most two fonts",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Noto Sans"
+     ]
+    },
+    {
+     "id": "labels.halo",
+     "section": "Visual effects & labels",
+     "name": "Label halos",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all label classes have halos"
+     ]
+    },
+    {
+     "id": "a11y.cvd",
+     "section": "Accessibility",
+     "name": "Colours distinguishable with colour-vision deficiency",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 layer(s) have classes that merge under colour-vision deficiency.",
+     "evidence": [
+      "House seats in 1793: protanopia - classes 1/2 dE 7.1 (#eff3ff vs #bdd7e7)",
+      "House seats in 1793: deuteranopia - classes 1/2 dE 8.3 (#eff3ff vs #bdd7e7)"
+     ]
+    },
+    {
+     "id": "a11y.contrast",
+     "section": "Accessibility",
+     "name": "Adjacent classes have sufficient colour contrast",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 renderer(s) with low contrast between classes.",
+     "evidence": [
+      "House seats in 1793: classes 1/2 dE 10.8 (normal vision)"
+     ]
+    },
+    {
+     "id": "a11y.symbol-size",
+     "section": "Accessibility",
+     "name": "Symbols large enough on small screens",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "symbol sizes OK"
+     ]
+    },
+    {
+     "id": "a11y.label-size",
+     "section": "Accessibility",
+     "name": "Label text large enough",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 label class(es) below 10pt.",
+     "evidence": [
+      "Ratifying the Constitution, 1787–1791: 9pt"
+     ]
+    },
+    {
+     "id": "a11y.opacity",
+     "section": "Accessibility",
+     "name": "Very transparent layers",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "opacities OK"
+     ]
+    },
+    {
+     "id": "a11y.colour-only",
+     "section": "Accessibility",
+     "name": "Many categories distinguished by colour alone",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "categorical class counts OK"
+     ]
+    },
+    {
+     "id": "sym.count-choropleth",
+     "section": "Symbology & legend",
+     "name": "Counts not mapped as choropleth",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no unnormalised count choropleths detected"
+     ]
+    },
+    {
+     "id": "sym.ramp-order",
+     "section": "Symbology & legend",
+     "name": "Class-break ramp reads sequential or diverging",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "class-break ramps read sequential/diverging"
+     ]
+    },
+    {
+     "id": "sym.unique-distinct",
+     "section": "Symbology & legend",
+     "name": "Categorical classes have distinct colours",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "categorical classes distinct"
+     ]
+    },
+    {
+     "id": "sym.prop-size",
+     "section": "Symbology & legend",
+     "name": "Proportional symbol sizes discernible",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "proportional symbol ranges OK / not used"
+     ]
+    },
+    {
+     "id": "legend.labels",
+     "section": "Symbology & legend",
+     "name": "Legend labels are readable and include units",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "legend labels look readable"
+     ]
+    },
+    {
+     "id": "sym.diverging-note",
+     "section": "Symbology & legend",
+     "name": "Diverging ramp pivot explained",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no diverging ramps"
+     ]
+    }
+   ]
+  },
+  {
+   "itemId": "59467ac7d7c64542acaa6a3e9c19ebf4",
+   "title": "Rights and Responsibilities Where We Live",
+   "owner": "GIS-4-Schools",
+   "auditedAt": "2026-10-23T11:37:56.343Z",
+   "rubricVersion": "0.7.1",
+   "standards": "General Cartographic Standards for MapMaker",
+   "tally": {
+    "fail": 0,
+    "warn": 3,
+    "info": 3,
+    "pass": 24,
+    "skip": 8
+   },
+   "verdict": "review",
+   "score": 95.3,
+   "grade": "A",
+   "sectionScores": {
+    "Map title & metadata": 94.1,
+    "Extent & scale": 100,
+    "Layers": 100,
+    "Pop-ups": 50,
+    "Visual effects & labels": 100,
+    "Accessibility": 100,
+    "Symbology & legend": 100
+   },
+   "checks": [
+    {
+     "id": "meta.title.present",
+     "section": "Map title & metadata",
+     "name": "Title present and not a default",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"Rights and Responsibilities Where We Live\""
+     ]
+    },
+    {
+     "id": "meta.title.length",
+     "section": "Map title & metadata",
+     "name": "Title length",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title length: 41"
+     ]
+    },
+    {
+     "id": "meta.title.abbrev",
+     "section": "Map title & metadata",
+     "name": "Title avoids unexplained abbreviations",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "Title contains abbreviation(s) not expanded in the summary or description: Rights.",
+     "evidence": [
+      "title: \"Rights and Responsibilities Where We Live\""
+     ]
+    },
+    {
+     "id": "meta.snippet",
+     "section": "Map title & metadata",
+     "name": "Summary (snippet) present",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "snippet: 111 chars"
+     ]
+    },
+    {
+     "id": "meta.description",
+     "section": "Map title & metadata",
+     "name": "Description present and substantive",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "description: 1153 chars"
+     ]
+    },
+    {
+     "id": "meta.tags",
+     "section": "Map title & metadata",
+     "name": "Tags",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "tags: MapMaker, US History, grade 8, November 2026, web map, activity 9"
+     ]
+    },
+    {
+     "id": "meta.credits",
+     "section": "Map title & metadata",
+     "name": "Credits / attribution",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "credits: MapMaker catalogue layers (U.S. 119th Congressional Districts; National Register of Historic Places)."
+     ]
+    },
+    {
+     "id": "meta.license",
+     "section": "Map title & metadata",
+     "name": "Terms of use",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "licenseInfo: set"
+     ]
+    },
+    {
+     "id": "meta.thumbnail",
+     "section": "Map title & metadata",
+     "name": "Custom thumbnail",
+     "severity": "warn",
+     "provisional": true,
+     "status": "warn",
+     "message": "No custom thumbnail - the default will show in galleries.",
+     "evidence": [
+      "thumbnail: none"
+     ]
+    },
+    {
+     "id": "extent.initial",
+     "section": "Extent & scale",
+     "name": "Initial extent set and appropriate",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "extent: -13914936, 2753408 -> -7347086, 6446276 (wkid 3857)",
+      "width ~ 59 deg"
+     ]
+    },
+    {
+     "id": "extent.visrange",
+     "section": "Extent & scale",
+     "name": "Visibility ranges",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "0 of 2 feature layers have a visibility range"
+     ]
+    },
+    {
+     "id": "proj.explained",
+     "section": "Extent & scale",
+     "name": "Alternate projection explained",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "wkid 3857 (Web Mercator)"
+     ]
+    },
+    {
+     "id": "basemap.info",
+     "section": "Extent & scale",
+     "name": "Basemap",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "Basemap: Topographic.",
+     "evidence": [
+      "baseMap.title: Topographic",
+      "spatial reference wkid: 3857",
+      "World_Hillshade",
+      "World Topographic Map"
+     ]
+    },
+    {
+     "id": "layer.count",
+     "section": "Layers",
+     "name": "Layer count",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "2 operational layers"
+     ]
+    },
+    {
+     "id": "layer.reachable",
+     "section": "Layers",
+     "name": "All layers public and reachable",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Congressional districts (119th Congress): ok",
+      "National Register of Historic Places: ok"
+     ]
+    },
+    {
+     "id": "layer.title",
+     "section": "Layers",
+     "name": "Layer titles are plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Congressional districts (119th Congress)",
+      "National Register of Historic Places"
+     ]
+    },
+    {
+     "id": "layer.fields",
+     "section": "Layers",
+     "name": "Layer field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "field counts reasonable"
+     ]
+    },
+    {
+     "id": "layer.renderer",
+     "section": "Layers",
+     "name": "Symbology set in the map",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "1 of 2 feature layer(s) use service default symbology.",
+     "evidence": [
+      "National Register of Historic Places"
+     ]
+    },
+    {
+     "id": "popup.configured",
+     "section": "Pop-ups",
+     "name": "Pop-ups configured (not default all-fields)",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "2 of 2 data layer(s) show a default or missing pop-up.",
+     "evidence": [
+      "Congressional districts (119th Congress) (no pop-up; 12 fields would show by default)",
+      "National Register of Historic Places (no pop-up; 36 fields would show by default)",
+      "--- pop-up kinds ---",
+      "Congressional districts (119th Congress): none",
+      "National Register of Historic Places: none"
+     ]
+    },
+    {
+     "id": "popup.metafields",
+     "section": "Pop-ups",
+     "name": "Metadata fields hidden",
+     "severity": "warn",
+     "provisional": false,
+     "status": "skip",
+     "message": "Not assessed - no vector pop-up configuration to check.",
+     "evidence": []
+    },
+    {
+     "id": "popup.aliases",
+     "section": "Pop-ups",
+     "name": "Fields renamed to plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "skip",
+     "message": "Not assessed - no vector pop-up configuration to check.",
+     "evidence": []
+    },
+    {
+     "id": "popup.many",
+     "section": "Pop-ups",
+     "name": "Pop-up field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "skip",
+     "message": "Not assessed - no vector pop-up configuration to check.",
+     "evidence": []
+    },
+    {
+     "id": "effects.sparingly",
+     "section": "Visual effects & labels",
+     "name": "Effects used sparingly",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no layer effects"
+     ]
+    },
+    {
+     "id": "effects.recolour",
+     "section": "Visual effects & labels",
+     "name": "No colour-altering effects",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no colour-altering effects"
+     ]
+    },
+    {
+     "id": "fonts.max",
+     "section": "Visual effects & labels",
+     "name": "At most two fonts",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no map labels"
+     ]
+    },
+    {
+     "id": "labels.halo",
+     "section": "Visual effects & labels",
+     "name": "Label halos",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all label classes have halos"
+     ]
+    },
+    {
+     "id": "a11y.cvd",
+     "section": "Accessibility",
+     "name": "Colours distinguishable with colour-vision deficiency",
+     "severity": "warn",
+     "provisional": false,
+     "status": "skip",
+     "message": "No classed feature renderers to assess (raster/single-symbol map).",
+     "evidence": []
+    },
+    {
+     "id": "a11y.contrast",
+     "section": "Accessibility",
+     "name": "Adjacent classes have sufficient colour contrast",
+     "severity": "warn",
+     "provisional": false,
+     "status": "skip",
+     "message": "No classed feature renderers to assess (raster/single-symbol map).",
+     "evidence": []
+    },
+    {
+     "id": "a11y.symbol-size",
+     "section": "Accessibility",
+     "name": "Symbols large enough on small screens",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "symbol sizes OK"
+     ]
+    },
+    {
+     "id": "a11y.label-size",
+     "section": "Accessibility",
+     "name": "Label text large enough",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "label sizes OK / no labels"
+     ]
+    },
+    {
+     "id": "a11y.opacity",
+     "section": "Accessibility",
+     "name": "Very transparent layers",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "1 layer(s) very transparent.",
+     "evidence": [
+      "Congressional districts (119th Congress): symbol fill alpha < 0.3"
+     ]
+    },
+    {
+     "id": "a11y.colour-only",
+     "section": "Accessibility",
+     "name": "Many categories distinguished by colour alone",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "categorical class counts OK"
+     ]
+    },
+    {
+     "id": "sym.count-choropleth",
+     "section": "Symbology & legend",
+     "name": "Counts not mapped as choropleth",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no unnormalised count choropleths detected"
+     ]
+    },
+    {
+     "id": "sym.ramp-order",
+     "section": "Symbology & legend",
+     "name": "Class-break ramp reads sequential or diverging",
+     "severity": "warn",
+     "provisional": false,
+     "status": "skip",
+     "message": "No class-break renderers in map.",
+     "evidence": []
+    },
+    {
+     "id": "sym.unique-distinct",
+     "section": "Symbology & legend",
+     "name": "Categorical classes have distinct colours",
+     "severity": "warn",
+     "provisional": false,
+     "status": "skip",
+     "message": "No categorical renderers in map.",
+     "evidence": []
+    },
+    {
+     "id": "sym.prop-size",
+     "section": "Symbology & legend",
+     "name": "Proportional symbol sizes discernible",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "proportional symbol ranges OK / not used"
+     ]
+    },
+    {
+     "id": "legend.labels",
+     "section": "Symbology & legend",
+     "name": "Legend labels are readable and include units",
+     "severity": "fail",
+     "provisional": false,
+     "status": "skip",
+     "message": "No classed renderers whose legend labels can be read (raster/single-symbol map).",
+     "evidence": []
+    },
+    {
+     "id": "sym.diverging-note",
+     "section": "Symbology & legend",
+     "name": "Diverging ramp pivot explained",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no diverging ramps"
+     ]
+    }
+   ]
+  },
+  {
+   "itemId": "6173219d9cd84812bcd4fed859b2c182",
+   "title": "Presidential Elections, 1796 and 1800",
+   "owner": "GIS-4-Schools",
+   "auditedAt": "2026-10-23T11:37:57.036Z",
+   "rubricVersion": "0.7.1",
+   "standards": "General Cartographic Standards for MapMaker",
+   "tally": {
+    "fail": 0,
+    "warn": 2,
+    "info": 1,
+    "pass": 30,
+    "skip": 5
+   },
+   "verdict": "review",
+   "score": 97.1,
+   "grade": "A",
+   "sectionScores": {
+    "Map title & metadata": 97.1,
+    "Extent & scale": 100,
+    "Layers": 100,
+    "Pop-ups": 100,
+    "Visual effects & labels": 100,
+    "Accessibility": 75,
+    "Symbology & legend": 100
+   },
+   "checks": [
+    {
+     "id": "meta.title.present",
+     "section": "Map title & metadata",
+     "name": "Title present and not a default",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"Presidential Elections, 1796 and 1800\""
+     ]
+    },
+    {
+     "id": "meta.title.length",
+     "section": "Map title & metadata",
+     "name": "Title length",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title length: 37"
+     ]
+    },
+    {
+     "id": "meta.title.abbrev",
+     "section": "Map title & metadata",
+     "name": "Title avoids unexplained abbreviations",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"Presidential Elections, 1796 and 1800\""
+     ]
+    },
+    {
+     "id": "meta.snippet",
+     "section": "Map title & metadata",
+     "name": "Summary (snippet) present",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "snippet: 100 chars"
+     ]
+    },
+    {
+     "id": "meta.description",
+     "section": "Map title & metadata",
+     "name": "Description present and substantive",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "description: 1528 chars"
+     ]
+    },
+    {
+     "id": "meta.tags",
+     "section": "Map title & metadata",
+     "name": "Tags",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "tags: MapMaker, US History, grade 8, November 2026, web map, activity 10"
+     ]
+    },
+    {
+     "id": "meta.credits",
+     "section": "Map title & metadata",
+     "name": "Credits / attribution",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "credits: National Archives; Natural Earth."
+     ]
+    },
+    {
+     "id": "meta.license",
+     "section": "Map title & metadata",
+     "name": "Terms of use",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "licenseInfo: set"
+     ]
+    },
+    {
+     "id": "meta.thumbnail",
+     "section": "Map title & metadata",
+     "name": "Custom thumbnail",
+     "severity": "warn",
+     "provisional": true,
+     "status": "warn",
+     "message": "No custom thumbnail - the default will show in galleries.",
+     "evidence": [
+      "thumbnail: none"
+     ]
+    },
+    {
+     "id": "extent.initial",
+     "section": "Extent & scale",
+     "name": "Initial extent set and appropriate",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "extent: -10241393, 3375646 -> -7347086, 6040565 (wkid 3857)",
+      "width ~ 26 deg"
+     ]
+    },
+    {
+     "id": "extent.visrange",
+     "section": "Extent & scale",
+     "name": "Visibility ranges",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "0 of 3 feature layers have a visibility range"
+     ]
+    },
+    {
+     "id": "proj.explained",
+     "section": "Extent & scale",
+     "name": "Alternate projection explained",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "wkid 3857 (Web Mercator)"
+     ]
+    },
+    {
+     "id": "basemap.info",
+     "section": "Extent & scale",
+     "name": "Basemap",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "Basemap: Modern Antique.",
+     "evidence": [
+      "baseMap.title: Modern Antique",
+      "spatial reference wkid: 3857",
+      "World Hillshade",
+      "Copy of Modern Antique no Labels"
+     ]
+    },
+    {
+     "id": "layer.count",
+     "section": "Layers",
+     "name": "Layer count",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "3 operational layers"
+     ]
+    },
+    {
+     "id": "layer.reachable",
+     "section": "Layers",
+     "name": "All layers public and reachable",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Election of 1796: electors' votes: ok",
+      "Election of 1800: electors' votes: ok",
+      "Landmark Supreme Court cases, 1803 and 1819: ok"
+     ]
+    },
+    {
+     "id": "layer.title",
+     "section": "Layers",
+     "name": "Layer titles are plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Election of 1796: electors' votes",
+      "Election of 1800: electors' votes",
+      "Landmark Supreme Court cases, 1803 and 1819"
+     ]
+    },
+    {
+     "id": "layer.fields",
+     "section": "Layers",
+     "name": "Layer field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "field counts reasonable"
+     ]
+    },
+    {
+     "id": "layer.renderer",
+     "section": "Layers",
+     "name": "Symbology set in the map",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all 3 feature layer(s) have a renderer defined in the map"
+     ]
+    },
+    {
+     "id": "popup.configured",
+     "section": "Pop-ups",
+     "name": "Pop-ups configured (not default all-fields)",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "All 3 data layer(s) have an authored pop-up (Arcade / elements / fields / media / raster identify).",
+     "evidence": [
+      "Election of 1796: electors' votes: elements",
+      "Election of 1800: electors' votes: elements",
+      "Landmark Supreme Court cases, 1803 and 1819: elements"
+     ]
+    },
+    {
+     "id": "popup.metafields",
+     "section": "Pop-ups",
+     "name": "Metadata fields hidden",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no metadata fields visible"
+     ]
+    },
+    {
+     "id": "popup.aliases",
+     "section": "Pop-ups",
+     "name": "Fields renamed to plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "visible fields have readable labels"
+     ]
+    },
+    {
+     "id": "popup.many",
+     "section": "Pop-ups",
+     "name": "Pop-up field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "pop-ups within field-count guideline"
+     ]
+    },
+    {
+     "id": "effects.sparingly",
+     "section": "Visual effects & labels",
+     "name": "Effects used sparingly",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no layer effects"
+     ]
+    },
+    {
+     "id": "effects.recolour",
+     "section": "Visual effects & labels",
+     "name": "No colour-altering effects",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no colour-altering effects"
+     ]
+    },
+    {
+     "id": "fonts.max",
+     "section": "Visual effects & labels",
+     "name": "At most two fonts",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Noto Sans"
+     ]
+    },
+    {
+     "id": "labels.halo",
+     "section": "Visual effects & labels",
+     "name": "Label halos",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all label classes have halos"
+     ]
+    },
+    {
+     "id": "a11y.cvd",
+     "section": "Accessibility",
+     "name": "Colours distinguishable with colour-vision deficiency",
+     "severity": "warn",
+     "provisional": false,
+     "status": "skip",
+     "message": "No classed feature renderers to assess (raster/single-symbol map).",
+     "evidence": []
+    },
+    {
+     "id": "a11y.contrast",
+     "section": "Accessibility",
+     "name": "Adjacent classes have sufficient colour contrast",
+     "severity": "warn",
+     "provisional": false,
+     "status": "skip",
+     "message": "No classed feature renderers to assess (raster/single-symbol map).",
+     "evidence": []
+    },
+    {
+     "id": "a11y.symbol-size",
+     "section": "Accessibility",
+     "name": "Symbols large enough on small screens",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "symbol sizes OK"
+     ]
+    },
+    {
+     "id": "a11y.label-size",
+     "section": "Accessibility",
+     "name": "Label text large enough",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 label class(es) below 10pt.",
+     "evidence": [
+      "Landmark Supreme Court cases, 1803 and 1819: 9pt"
+     ]
+    },
+    {
+     "id": "a11y.opacity",
+     "section": "Accessibility",
+     "name": "Very transparent layers",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "opacities OK"
+     ]
+    },
+    {
+     "id": "a11y.colour-only",
+     "section": "Accessibility",
+     "name": "Many categories distinguished by colour alone",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "categorical class counts OK"
+     ]
+    },
+    {
+     "id": "sym.count-choropleth",
+     "section": "Symbology & legend",
+     "name": "Counts not mapped as choropleth",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no unnormalised count choropleths detected"
+     ]
+    },
+    {
+     "id": "sym.ramp-order",
+     "section": "Symbology & legend",
+     "name": "Class-break ramp reads sequential or diverging",
+     "severity": "warn",
+     "provisional": false,
+     "status": "skip",
+     "message": "No class-break renderers in map.",
+     "evidence": []
+    },
+    {
+     "id": "sym.unique-distinct",
+     "section": "Symbology & legend",
+     "name": "Categorical classes have distinct colours",
+     "severity": "warn",
+     "provisional": false,
+     "status": "skip",
+     "message": "No categorical renderers in map.",
+     "evidence": []
+    },
+    {
+     "id": "sym.prop-size",
+     "section": "Symbology & legend",
+     "name": "Proportional symbol sizes discernible",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "proportional symbol ranges OK / not used"
+     ]
+    },
+    {
+     "id": "legend.labels",
+     "section": "Symbology & legend",
+     "name": "Legend labels are readable and include units",
+     "severity": "fail",
+     "provisional": false,
+     "status": "skip",
+     "message": "No classed renderers whose legend labels can be read (raster/single-symbol map).",
+     "evidence": []
+    },
+    {
+     "id": "sym.diverging-note",
+     "section": "Symbology & legend",
+     "name": "Diverging ramp pivot explained",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no diverging ramps"
+     ]
+    }
+   ]
+  },
+  {
+   "itemId": "f8af7269e5c14e69b060d6184d04ff85",
+   "title": "The Louisiana Purchase and the Corps of Discovery, 1803–1806",
+   "owner": "GIS-4-Schools",
+   "auditedAt": "2026-10-23T11:37:58.182Z",
+   "rubricVersion": "0.7.1",
+   "standards": "General Cartographic Standards for MapMaker",
+   "tally": {
+    "fail": 1,
+    "warn": 4,
+    "info": 3,
+    "pass": 30,
+    "skip": 0
+   },
+   "verdict": "fail",
+   "score": 87.8,
+   "grade": "B",
+   "sectionScores": {
+    "Map title & metadata": 97.1,
+    "Extent & scale": 100,
+    "Layers": 100,
+    "Pop-ups": 50,
+    "Visual effects & labels": 100,
+    "Accessibility": 100,
+    "Symbology & legend": 57.1
+   },
+   "checks": [
+    {
+     "id": "meta.title.present",
+     "section": "Map title & metadata",
+     "name": "Title present and not a default",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"The Louisiana Purchase and the Corps of Discovery, 1803–1806\""
+     ]
+    },
+    {
+     "id": "meta.title.length",
+     "section": "Map title & metadata",
+     "name": "Title length",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title length: 60"
+     ]
+    },
+    {
+     "id": "meta.title.abbrev",
+     "section": "Map title & metadata",
+     "name": "Title avoids unexplained abbreviations",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"The Louisiana Purchase and the Corps of Discovery, 1803–1806\""
+     ]
+    },
+    {
+     "id": "meta.snippet",
+     "section": "Map title & metadata",
+     "name": "Summary (snippet) present",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "snippet: 109 chars"
+     ]
+    },
+    {
+     "id": "meta.description",
+     "section": "Map title & metadata",
+     "name": "Description present and substantive",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "description: 1053 chars"
+     ]
+    },
+    {
+     "id": "meta.tags",
+     "section": "Map title & metadata",
+     "name": "Tags",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "tags: MapMaker, US History, grade 8, November 2026, web map, activity 11"
+     ]
+    },
+    {
+     "id": "meta.credits",
+     "section": "Map title & metadata",
+     "name": "Credits / attribution",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "credits: National Park Service; MapMaker catalogue layers (territorial acquisitions, watersheds, biomes)."
+     ]
+    },
+    {
+     "id": "meta.license",
+     "section": "Map title & metadata",
+     "name": "Terms of use",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "licenseInfo: set"
+     ]
+    },
+    {
+     "id": "meta.thumbnail",
+     "section": "Map title & metadata",
+     "name": "Custom thumbnail",
+     "severity": "warn",
+     "provisional": true,
+     "status": "warn",
+     "message": "No custom thumbnail - the default will show in galleries.",
+     "evidence": [
+      "thumbnail: none"
+     ]
+    },
+    {
+     "id": "extent.initial",
+     "section": "Extent & scale",
+     "name": "Initial extent set and appropriate",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "extent: -13914936, 3248974 -> -9573476, 6446276 (wkid 3857)",
+      "width ~ 39 deg"
+     ]
+    },
+    {
+     "id": "extent.visrange",
+     "section": "Extent & scale",
+     "name": "Visibility ranges",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "None of 10 layers use a visibility range.",
+     "evidence": [
+      "Territorial acquisitions to 1803",
+      "Biomes",
+      "Hydrologic Unit Code 12s",
+      "Hydrologic Unit Code 10s",
+      "Hydrologic Unit Code 8s",
+      "Hydrologic Unit Code 6s",
+      "Hydrologic Unit Code 4s",
+      "Hydrologic Unit Code 2s",
+      "Lewis and Clark National Historic Trail",
+      "Lewis and Clark campsites (approximate)"
+     ]
+    },
+    {
+     "id": "proj.explained",
+     "section": "Extent & scale",
+     "name": "Alternate projection explained",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "wkid 3857 (Web Mercator)"
+     ]
+    },
+    {
+     "id": "basemap.info",
+     "section": "Extent & scale",
+     "name": "Basemap",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "Basemap: Modern Antique.",
+     "evidence": [
+      "baseMap.title: Modern Antique",
+      "spatial reference wkid: 3857",
+      "World Hillshade",
+      "Copy of Modern Antique no Labels"
+     ]
+    },
+    {
+     "id": "layer.count",
+     "section": "Layers",
+     "name": "Layer count",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "10 operational layers"
+     ]
+    },
+    {
+     "id": "layer.reachable",
+     "section": "Layers",
+     "name": "All layers public and reachable",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Territorial acquisitions to 1803: ok",
+      "Biomes: ok",
+      "Hydrologic Unit Code 12s: ok",
+      "Hydrologic Unit Code 10s: ok",
+      "Hydrologic Unit Code 8s: ok",
+      "Hydrologic Unit Code 6s: ok",
+      "Hydrologic Unit Code 4s: ok",
+      "Hydrologic Unit Code 2s: ok",
+      "Lewis and Clark National Historic Trail: ok",
+      "Lewis and Clark campsites (approximate): ok"
+     ]
+    },
+    {
+     "id": "layer.title",
+     "section": "Layers",
+     "name": "Layer titles are plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Territorial acquisitions to 1803",
+      "Biomes",
+      "Hydrologic Unit Code 12s",
+      "Hydrologic Unit Code 10s",
+      "Hydrologic Unit Code 8s",
+      "Hydrologic Unit Code 6s",
+      "Hydrologic Unit Code 4s",
+      "Hydrologic Unit Code 2s",
+      "Lewis and Clark National Historic Trail",
+      "Lewis and Clark campsites (approximate)"
+     ]
+    },
+    {
+     "id": "layer.fields",
+     "section": "Layers",
+     "name": "Layer field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "field counts reasonable"
+     ]
+    },
+    {
+     "id": "layer.renderer",
+     "section": "Layers",
+     "name": "Symbology set in the map",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "7 of 10 feature layer(s) use service default symbology.",
+     "evidence": [
+      "Biomes",
+      "Hydrologic Unit Code 12s",
+      "Hydrologic Unit Code 10s",
+      "Hydrologic Unit Code 8s",
+      "Hydrologic Unit Code 6s",
+      "Lewis and Clark National Historic Trail",
+      "Lewis and Clark campsites (approximate)"
+     ]
+    },
+    {
+     "id": "popup.configured",
+     "section": "Pop-ups",
+     "name": "Pop-ups configured (not default all-fields)",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "3 of 10 data layer(s) show a default or missing pop-up.",
+     "evidence": [
+      "Biomes (no pop-up; 17 fields would show by default)",
+      "Lewis and Clark National Historic Trail (no pop-up; 12 fields would show by default)",
+      "Lewis and Clark campsites (approximate) (no pop-up; 18 fields would show by default)",
+      "--- pop-up kinds ---",
+      "Territorial acquisitions to 1803: elements",
+      "Biomes: none",
+      "Hydrologic Unit Code 12s: arcade",
+      "Hydrologic Unit Code 10s: arcade",
+      "Hydrologic Unit Code 8s: arcade",
+      "Hydrologic Unit Code 6s: arcade",
+      "Hydrologic Unit Code 4s: arcade",
+      "Hydrologic Unit Code 2s: arcade",
+      "Lewis and Clark National Historic Trail: none",
+      "Lewis and Clark campsites (approximate): none"
+     ]
+    },
+    {
+     "id": "popup.metafields",
+     "section": "Pop-ups",
+     "name": "Metadata fields hidden",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "Metadata fields visible in 6 layer(s).",
+     "evidence": [
+      "Hydrologic Unit Code 12s: OBJECTID, Shape__Area, Shape__Length",
+      "Hydrologic Unit Code 10s: OBJECTID, Shape__Area, Shape__Length",
+      "Hydrologic Unit Code 8s: OBJECTID, Shape__Area, Shape__Length",
+      "Hydrologic Unit Code 6s: OBJECTID, Shape__Area, Shape__Length",
+      "Hydrologic Unit Code 4s: OBJECTID, Shape__Area, Shape__Length",
+      "Hydrologic Unit Code 2s: OBJECTID, Shape__Area, Shape__Length"
+     ]
+    },
+    {
+     "id": "popup.aliases",
+     "section": "Pop-ups",
+     "name": "Fields renamed to plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "Code-like field names shown without a plain-language label in 7 layer(s).",
+     "evidence": [
+      "Territorial acquisitions to 1803: NAME, Count_",
+      "Hydrologic Unit Code 12s: HUC12, NAME, NONCONTRIBUTINGACRES, NONCONTRIBUTINGSQKM",
+      "Hydrologic Unit Code 10s: HUC10, NAME",
+      "Hydrologic Unit Code 8s: HUC8, NAME",
+      "Hydrologic Unit Code 6s: HUC6, NAME",
+      "Hydrologic Unit Code 4s: HUC4, NAME",
+      "Hydrologic Unit Code 2s: HUC2, NAME"
+     ]
+    },
+    {
+     "id": "popup.many",
+     "section": "Pop-ups",
+     "name": "Pop-up field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "pop-ups within field-count guideline"
+     ]
+    },
+    {
+     "id": "effects.sparingly",
+     "section": "Visual effects & labels",
+     "name": "Effects used sparingly",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no layer effects"
+     ]
+    },
+    {
+     "id": "effects.recolour",
+     "section": "Visual effects & labels",
+     "name": "No colour-altering effects",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no colour-altering effects"
+     ]
+    },
+    {
+     "id": "fonts.max",
+     "section": "Visual effects & labels",
+     "name": "At most two fonts",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no map labels"
+     ]
+    },
+    {
+     "id": "labels.halo",
+     "section": "Visual effects & labels",
+     "name": "Label halos",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all label classes have halos"
+     ]
+    },
+    {
+     "id": "a11y.cvd",
+     "section": "Accessibility",
+     "name": "Colours distinguishable with colour-vision deficiency",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "1 renderer(s) checked under protan/deutan/tritan simulation (min dE >= 10)"
+     ]
+    },
+    {
+     "id": "a11y.contrast",
+     "section": "Accessibility",
+     "name": "Adjacent classes have sufficient colour contrast",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all adjacent classes dE >= 12"
+     ]
+    },
+    {
+     "id": "a11y.symbol-size",
+     "section": "Accessibility",
+     "name": "Symbols large enough on small screens",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "symbol sizes OK"
+     ]
+    },
+    {
+     "id": "a11y.label-size",
+     "section": "Accessibility",
+     "name": "Label text large enough",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "label sizes OK / no labels"
+     ]
+    },
+    {
+     "id": "a11y.opacity",
+     "section": "Accessibility",
+     "name": "Very transparent layers",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "opacities OK"
+     ]
+    },
+    {
+     "id": "a11y.colour-only",
+     "section": "Accessibility",
+     "name": "Many categories distinguished by colour alone",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "categorical class counts OK"
+     ]
+    },
+    {
+     "id": "sym.count-choropleth",
+     "section": "Symbology & legend",
+     "name": "Counts not mapped as choropleth",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no unnormalised count choropleths detected"
+     ]
+    },
+    {
+     "id": "sym.ramp-order",
+     "section": "Symbology & legend",
+     "name": "Class-break ramp reads sequential or diverging",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "class-break ramps read sequential/diverging"
+     ]
+    },
+    {
+     "id": "sym.unique-distinct",
+     "section": "Symbology & legend",
+     "name": "Categorical classes have distinct colours",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "categorical classes distinct"
+     ]
+    },
+    {
+     "id": "sym.prop-size",
+     "section": "Symbology & legend",
+     "name": "Proportional symbol sizes discernible",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "proportional symbol ranges OK / not used"
+     ]
+    },
+    {
+     "id": "legend.labels",
+     "section": "Symbology & legend",
+     "name": "Legend labels are readable and include units",
+     "severity": "fail",
+     "provisional": false,
+     "status": "fail",
+     "message": "1 legend issue(s).",
+     "evidence": [
+      "Territorial acquisitions to 1803: legend headed by raw field \"NAME\""
+     ]
+    },
+    {
+     "id": "sym.diverging-note",
+     "section": "Symbology & legend",
+     "name": "Diverging ramp pivot explained",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no diverging ramps"
+     ]
+    }
+   ]
+  },
+  {
+   "itemId": "fad1cdb9d5704401a4e05c34f7ee693c",
+   "title": "The War of 1812 and the Monroe Doctrine, 1807–1823",
+   "owner": "GIS-4-Schools",
+   "auditedAt": "2026-10-23T11:37:59.419Z",
+   "rubricVersion": "0.7.1",
+   "standards": "General Cartographic Standards for MapMaker",
+   "tally": {
+    "fail": 1,
+    "warn": 8,
+    "info": 2,
+    "pass": 27,
+    "skip": 0
+   },
+   "verdict": "fail",
+   "score": 82.9,
+   "grade": "B",
+   "sectionScores": {
+    "Map title & metadata": 97.1,
+    "Extent & scale": 100,
+    "Layers": 100,
+    "Pop-ups": 50,
+    "Visual effects & labels": 100,
+    "Accessibility": 62.5,
+    "Symbology & legend": 50
+   },
+   "checks": [
+    {
+     "id": "meta.title.present",
+     "section": "Map title & metadata",
+     "name": "Title present and not a default",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"The War of 1812 and the Monroe Doctrine, 1807–1823\""
+     ]
+    },
+    {
+     "id": "meta.title.length",
+     "section": "Map title & metadata",
+     "name": "Title length",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title length: 50"
+     ]
+    },
+    {
+     "id": "meta.title.abbrev",
+     "section": "Map title & metadata",
+     "name": "Title avoids unexplained abbreviations",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"The War of 1812 and the Monroe Doctrine, 1807–1823\""
+     ]
+    },
+    {
+     "id": "meta.snippet",
+     "section": "Map title & metadata",
+     "name": "Summary (snippet) present",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "snippet: 119 chars"
+     ]
+    },
+    {
+     "id": "meta.description",
+     "section": "Map title & metadata",
+     "name": "Description present and substantive",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "description: 1900 chars"
+     ]
+    },
+    {
+     "id": "meta.tags",
+     "section": "Map title & metadata",
+     "name": "Tags",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "tags: MapMaker, US History, grade 8, November 2026, web map, activity 12"
+     ]
+    },
+    {
+     "id": "meta.credits",
+     "section": "Map title & metadata",
+     "name": "Credits / attribution",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "credits: American Battlefield Trust (battles) and National Park Service, American Battlefield Protection Program (battlefield boundaries), from the War of 1812 Battles map; University of Minnesota (national boundaries, 1800); MapMaker catalogue (territorial acquisitions); Office of the Historian, U.S. Department of State; Library of Congress (country studies); Avalon Project, Yale Law School; Natural Earth."
+     ]
+    },
+    {
+     "id": "meta.license",
+     "section": "Map title & metadata",
+     "name": "Terms of use",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "licenseInfo: set"
+     ]
+    },
+    {
+     "id": "meta.thumbnail",
+     "section": "Map title & metadata",
+     "name": "Custom thumbnail",
+     "severity": "warn",
+     "provisional": true,
+     "status": "warn",
+     "message": "No custom thumbnail - the default will show in galleries.",
+     "evidence": [
+      "thumbnail: none"
+     ]
+    },
+    {
+     "id": "extent.initial",
+     "section": "Extent & scale",
+     "name": "Initial extent set and appropriate",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "extent: -14026256, 893464 -> -6122572, 6446276 (wkid 3857)",
+      "width ~ 71 deg"
+     ]
+    },
+    {
+     "id": "extent.visrange",
+     "section": "Extent & scale",
+     "name": "Visibility ranges",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "1 of 7 feature layers have a visibility range"
+     ]
+    },
+    {
+     "id": "proj.explained",
+     "section": "Extent & scale",
+     "name": "Alternate projection explained",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "wkid 3857 (Web Mercator)"
+     ]
+    },
+    {
+     "id": "basemap.info",
+     "section": "Extent & scale",
+     "name": "Basemap",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "Basemap: Modern Antique.",
+     "evidence": [
+      "baseMap.title: Modern Antique",
+      "spatial reference wkid: 3857",
+      "World Hillshade",
+      "Copy of Modern Antique no Labels"
+     ]
+    },
+    {
+     "id": "layer.count",
+     "section": "Layers",
+     "name": "Layer count",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "7 operational layers"
+     ]
+    },
+    {
+     "id": "layer.reachable",
+     "section": "Layers",
+     "name": "All layers public and reachable",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Historic National Boundaries: 1800: ok",
+      "Land Spain gave up in 1819: ok",
+      "Battlefield Boundary: ok",
+      "Core Areas: ok",
+      "Adams–Onís Treaty line, 1819: ok",
+      "Battles of the War of 1812: ok",
+      "Latin American independence and US recognition: ok"
+     ]
+    },
+    {
+     "id": "layer.title",
+     "section": "Layers",
+     "name": "Layer titles are plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Historic National Boundaries: 1800",
+      "Land Spain gave up in 1819",
+      "Battlefield Boundary",
+      "Core Areas",
+      "Adams–Onís Treaty line, 1819",
+      "Battles of the War of 1812",
+      "Latin American independence and US recognition"
+     ]
+    },
+    {
+     "id": "layer.fields",
+     "section": "Layers",
+     "name": "Layer field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "field counts reasonable"
+     ]
+    },
+    {
+     "id": "layer.renderer",
+     "section": "Layers",
+     "name": "Symbology set in the map",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all 6 feature layer(s) have a renderer defined in the map"
+     ]
+    },
+    {
+     "id": "popup.configured",
+     "section": "Pop-ups",
+     "name": "Pop-ups configured (not default all-fields)",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 of 6 data layer(s) show a default or missing pop-up.",
+     "evidence": [
+      "Battles of the War of 1812 (no pop-up; 23 fields would show by default)",
+      "--- pop-up kinds ---",
+      "Historic National Boundaries: 1800: elements",
+      "Land Spain gave up in 1819: reference (exempt)",
+      "Battlefield Boundary: elements",
+      "Core Areas: elements",
+      "Adams–Onís Treaty line, 1819: elements",
+      "Battles of the War of 1812: none",
+      "Latin American independence and US recognition: elements"
+     ]
+    },
+    {
+     "id": "popup.metafields",
+     "section": "Pop-ups",
+     "name": "Metadata fields hidden",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "Metadata fields visible in 2 layer(s).",
+     "evidence": [
+      "Battlefield Boundary: Shape__Area, Shape__Length",
+      "Core Areas: Shape__Area, Shape__Length"
+     ]
+    },
+    {
+     "id": "popup.aliases",
+     "section": "Pop-ups",
+     "name": "Fields renamed to plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "Code-like field names shown without a plain-language label in 3 layer(s).",
+     "evidence": [
+      "Historic National Boundaries: 1800: NAME",
+      "Battlefield Boundary: NAME, BOUNDARY, SITE, STATE, WAR",
+      "Core Areas: NAME, BOUNDARY, SITE, STATE, WAR"
+     ]
+    },
+    {
+     "id": "popup.many",
+     "section": "Pop-ups",
+     "name": "Pop-up field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "pop-ups within field-count guideline"
+     ]
+    },
+    {
+     "id": "effects.sparingly",
+     "section": "Visual effects & labels",
+     "name": "Effects used sparingly",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Historic National Boundaries: 1800: [{\"scale\":73957190.948944,\"value\":[{\"type\":\"drop-shadow\",\"xoffset\":0,\"yoffset\":0"
+     ]
+    },
+    {
+     "id": "effects.recolour",
+     "section": "Visual effects & labels",
+     "name": "No colour-altering effects",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no colour-altering effects"
+     ]
+    },
+    {
+     "id": "fonts.max",
+     "section": "Visual effects & labels",
+     "name": "At most two fonts",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Alegreya",
+      "Noto Sans"
+     ]
+    },
+    {
+     "id": "labels.halo",
+     "section": "Visual effects & labels",
+     "name": "Label halos",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all label classes have halos"
+     ]
+    },
+    {
+     "id": "a11y.cvd",
+     "section": "Accessibility",
+     "name": "Colours distinguishable with colour-vision deficiency",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 layer(s) have classes that merge under colour-vision deficiency.",
+     "evidence": [
+      "Land Spain gave up in 1819: protanopia - classes 1/2 dE 0.0 (#7fa160 vs #7fa160)",
+      "Land Spain gave up in 1819: deuteranopia - classes 1/2 dE 0.0 (#7fa160 vs #7fa160)",
+      "Land Spain gave up in 1819: tritanopia - classes 1/2 dE 0.0 (#7fa160 vs #7fa160)"
+     ]
+    },
+    {
+     "id": "a11y.contrast",
+     "section": "Accessibility",
+     "name": "Adjacent classes have sufficient colour contrast",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 renderer(s) with low contrast between classes.",
+     "evidence": [
+      "Land Spain gave up in 1819: classes 1/2 dE 0.0 (normal vision)"
+     ]
+    },
+    {
+     "id": "a11y.symbol-size",
+     "section": "Accessibility",
+     "name": "Symbols large enough on small screens",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "symbol sizes OK"
+     ]
+    },
+    {
+     "id": "a11y.label-size",
+     "section": "Accessibility",
+     "name": "Label text large enough",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 label class(es) below 10pt.",
+     "evidence": [
+      "Latin American independence and US recognition: 9pt"
+     ]
+    },
+    {
+     "id": "a11y.opacity",
+     "section": "Accessibility",
+     "name": "Very transparent layers",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "1 layer(s) very transparent.",
+     "evidence": [
+      "Historic National Boundaries: 1800: symbol fill alpha < 0.3"
+     ]
+    },
+    {
+     "id": "a11y.colour-only",
+     "section": "Accessibility",
+     "name": "Many categories distinguished by colour alone",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "categorical class counts OK"
+     ]
+    },
+    {
+     "id": "sym.count-choropleth",
+     "section": "Symbology & legend",
+     "name": "Counts not mapped as choropleth",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no unnormalised count choropleths detected"
+     ]
+    },
+    {
+     "id": "sym.ramp-order",
+     "section": "Symbology & legend",
+     "name": "Class-break ramp reads sequential or diverging",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "class-break ramps read sequential/diverging"
+     ]
+    },
+    {
+     "id": "sym.unique-distinct",
+     "section": "Symbology & legend",
+     "name": "Categorical classes have distinct colours",
+     "severity": "warn",
+     "provisional": false,
+     "status": "warn",
+     "message": "1 categorical layer(s) with near-identical class colours.",
+     "evidence": [
+      "Land Spain gave up in 1819: classes 1 and 2 dE 0.0 (#7fa160 vs #7fa160)"
+     ]
+    },
+    {
+     "id": "sym.prop-size",
+     "section": "Symbology & legend",
+     "name": "Proportional symbol sizes discernible",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "proportional symbol ranges OK / not used"
+     ]
+    },
+    {
+     "id": "legend.labels",
+     "section": "Symbology & legend",
+     "name": "Legend labels are readable and include units",
+     "severity": "fail",
+     "provisional": false,
+     "status": "fail",
+     "message": "2 legend issue(s).",
+     "evidence": [
+      "Historic National Boundaries: 1800: legend headed by raw field \"NAME\"",
+      "Land Spain gave up in 1819: legend headed by raw field \"NAME\""
+     ]
+    },
+    {
+     "id": "sym.diverging-note",
+     "section": "Symbology & legend",
+     "name": "Diverging ramp pivot explained",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no diverging ramps"
+     ]
+    }
+   ]
+  }
+ ]
+}
