@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Map audit v1.1: reads each lesson's public web map and its layers from ArcGIS Online, without signing in,
+"""Map audit v1.2: reads each lesson's public web map and its layers from ArcGIS Online, without signing in,
 and writes what it finds for checking against maps/checklist.md. It changes nothing.
 
 Run from the repo root:  python3 maps/audit.py [lesson id ...]     (no ids: every lesson in resources/lessons/index.json)
@@ -9,7 +9,7 @@ Standard library only, so it runs anywhere with Python 3.9+ and access to www.ar
 import hashlib, json, math, re, sys, time, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
 
-VERSION = "1.1"
+VERSION = "1.2"
 REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / "maps" / "audit"
 PORTAL = "https://www.arcgis.com/sharing/rest"
@@ -56,13 +56,14 @@ def item_info(item_id):
 
 
 def scale_of(extent):
-    """Nominal scale of a Web Mercator extent shown VIEW_WIDTH_PX wide (same convention as layer min/max scales)."""
+    """Nominal scale at which the extent fits a 1200 x 675 view, as the map pictures are taken (the convention of layer
+    min/max scales). A stored viewpoint scale is ignored: the app fits the extent to the screen it opens on."""
     try:
-        w = abs(extent["xmax"] - extent["xmin"])
+        w, h = abs(extent["xmax"] - extent["xmin"]), abs(extent["ymax"] - extent["ymin"])
         wkid = (extent.get("spatialReference") or {}).get("latestWkid") or (extent.get("spatialReference") or {}).get("wkid")
         if wkid in (4326, 4269):
-            w = w * 111319.49
-        return round(w / VIEW_WIDTH_PX * 96 / 0.0254)
+            w, h = w * 111319.49, h * 111319.49
+        return round(max(w / VIEW_WIDTH_PX, h / 675) * 96 / 0.0254)
     except Exception:
         return None
 
@@ -110,6 +111,9 @@ def colour_only(rs):
     return len(shapes) == 1 and len(colours) > 1
 
 
+CODE_LIKE = re.compile(r"(_|\d|^[A-Z]{3,}$|^(OBJECTID|FID|GlobalID)$|[a-z][A-Z])")  # OBJECTID, Shape__Area, GISJOIN, InOpBy
+
+
 def popup_summary(p):
     if p is None:
         return None
@@ -124,7 +128,7 @@ def popup_summary(p):
     else:
         shown = []
     out["fieldsShown"] = [{"field": f.get("fieldName"), "label": f.get("label")} for f in shown]
-    out["fieldLabelsAreNames"] = [f.get("fieldName") for f in shown if f.get("label") in (None, "", f.get("fieldName")) and not str(f.get("fieldName", "")).startswith("expression/")]
+    out["fieldLabelsAreNames"] = [f.get("fieldName") for f in shown if f.get("label") in (None, "", f.get("fieldName")) and CODE_LIKE.search(str(f.get("fieldName", "")))]
     out["elements"] = [e.get("type") for e in els]
     media = [m for e in els if e.get("type") == "media" for m in e.get("mediaInfos", [])] + (p.get("mediaInfos") or [])
     out["images"] = [{"title": m.get("title"), "altText": m.get("altText"), "source": (m.get("value") or {}).get("sourceURL")} for m in media if m.get("type") == "image"]
@@ -224,12 +228,14 @@ def service_layer(url, title_field=None, where=None):
     return out
 
 
-def walk_layers(layers, path=""):
+def walk_layers(layers, path="", parent_on=True):
+    """Each layer with its path and whether it is on at the start once its groups are taken into account."""
     for lyr in layers or []:
         title = lyr.get("title") or lyr.get("id")
-        yield lyr, (path + " / " if path else "") + str(title)
+        on = parent_on and lyr.get("visibility", True)
+        yield lyr, (path + " / " if path else "") + str(title), on
         if lyr.get("layerType") == "GroupLayer":
-            yield from walk_layers(lyr.get("layers"), (path + " / " if path else "") + str(title))
+            yield from walk_layers(lyr.get("layers"), (path + " / " if path else "") + str(title), on)
 
 
 _item_data = {}
@@ -250,12 +256,12 @@ def from_item(lyr):
     return {}
 
 
-def audit_layer(lyr, path, opening_scale):
+def audit_layer(lyr, path, on_at_start, opening_scale):
     inherited = from_item(lyr) if lyr.get("layerType") == "ArcGISFeatureLayer" else {}
     ld = lyr.get("layerDefinition") or {}
     ild = inherited.get("layerDefinition") or {}
     popup = lyr.get("popupInfo") or inherited.get("popupInfo")
-    out = {"path": path, "title": lyr.get("title"), "layerType": lyr.get("layerType"), "visible": lyr.get("visibility", True),
+    out = {"path": path, "title": lyr.get("title"), "layerType": lyr.get("layerType"), "visible": lyr.get("visibility", True), "onAtStart": on_at_start,
            "opacity": lyr.get("opacity"), "itemId": lyr.get("itemId"), "url": lyr.get("url"), "disablePopup": lyr.get("disablePopup", False),
            "popup": popup_summary(popup), "popupFrom": "map" if lyr.get("popupInfo") else ("layer item" if inherited.get("popupInfo") else None),
            "minScale": lyr.get("minScale", ld.get("minScale")),
@@ -285,11 +291,16 @@ def audit_layer(lyr, path, opening_scale):
         info = get(lyr["url"].split("?")[0])
         out["service"] = {"url": lyr["url"], "error": info.get("_error")} if "_error" in info else {"url": lyr["url"], "copyrightText": info.get("copyrightText"), "minScale": info.get("minScale"), "maxScale": info.get("maxScale")}
     # Does it draw at the opening view?
-    mn = out["minScale"] or (out.get("service") or {}).get("minScale") or 0
-    mx = out["maxScale"] or (out.get("service") or {}).get("maxScale") or 0
+    svc = out.get("service") or {}
+    mn = out["minScale"] if out["minScale"] is not None else (svc.get("minScale") or 0)
+    mx = out["maxScale"] if out["maxScale"] is not None else (svc.get("maxScale") or 0)
     if opening_scale:
         out["drawsAtOpening"] = (mn == 0 or opening_scale <= mn) and (mx == 0 or opening_scale >= mx)
-    out["rendererColourOnly"] = colour_only(out.get("rendererInMap") or (out.get("service") or {}).get("renderer"))
+    rs = out.get("rendererInMap") or svc.get("renderer")
+    out["rendererColourOnly"] = colour_only(rs)
+    p = out.get("popup") or {}
+    named = {f["field"] for f in p.get("fieldsShown", [])} | set(p.get("fieldsInText", []))
+    out["popupNamesClass"] = bool(rs and rs.get("field") and rs["field"] in named)
     return out
 
 
@@ -313,13 +324,14 @@ def findings(lesson, wm_item, data, layers):
         if (L.get("service") or {}).get("error"): add(where, f"service could not be read: {L['service']['error']}")
         if re.match(r"copy of", t, re.I): add(where, "title starts with \"Copy of\"")
         if L["layerType"] in ("ArcGISFeatureLayer",) and not L.get("disablePopup") and not L.get("popup") and t in names:
-            add(where, "no pop-up set in the map or its layer item, so the default list of every field shows")
-        p = L.get("popup") or {}
-        if p.get("fieldLabelsAreNames"): add(where, f"pop-up shows field names as labels: {', '.join(p['fieldLabelsAreNames'][:6])}")
+            add(where, "no pop-up set in the map or its layer item (most apps then show nothing on a click; check in the Atlas app)")
+        p = {} if L.get("disablePopup") else (L.get("popup") or {})
+        if p.get("fieldLabelsAreNames"): add(where, f"pop-up lists raw field names: {', '.join(p['fieldLabelsAreNames'][:8])}")
         for im in p.get("images", []):
             if not (im.get("altText") or "").strip(): add(where, "pop-up image has no alt text")
-        if L.get("rendererColourOnly"): add(where, "symbols differ by colour only (WCAG 1.4.1 if a question depends on telling them apart)")
-        if L.get("visible") and L.get("drawsAtOpening") is False: add(where, "on at the start but doesn't draw at the opening scale")
+        if L.get("rendererColourOnly") and not (L.get("popupNamesClass") and not L.get("disablePopup")):
+            add(where, "categories differ by colour only and the pop-up doesn't name them (WCAG 1.4.1 if a question depends on them)")
+        if L.get("onAtStart") and L.get("drawsAtOpening") is False: add(where, "on at the start but only draws when zoomed in")
         for src in ([L["service"]] if isinstance(L.get("service"), dict) else []) + (L.get("featureCollection") or []):
             c = src.get("checks") or {}
             for d in c.get("duplicates", []): add(where, f"duplicate feature: {d[1]}")
@@ -343,8 +355,8 @@ def audit(lesson_id):
     if not opening_extent and wm_item.get("extent"):  # older maps keep the opening view as the item extent, in degrees
         (x0, y0), (x1, y1) = wm_item["extent"]
         opening_extent = {"xmin": x0, "ymin": y0, "xmax": x1, "ymax": y1, "spatialReference": {"wkid": 4326}}
-    opening_scale = vp.get("scale") or (scale_of(opening_extent) if opening_extent else None)
-    layers = [audit_layer(l, p, opening_scale) for l, p in walk_layers(data.get("operationalLayers"))]
+    opening_scale = scale_of(opening_extent) if opening_extent else vp.get("scale")
+    layers = [audit_layer(l, p, on, opening_scale) for l, p, on in walk_layers(data.get("operationalLayers"))]
     rec = {"tool": "Map audit " + VERSION, "lesson": lesson_id, "webmapId": wid, "item": wm_item,
            "basemap": {"title": (data.get("baseMap") or {}).get("title"),
                        "layers": [{"title": b.get("title"), "type": b.get("layerType"), "url": b.get("url") or b.get("styleUrl"), "itemId": b.get("itemId")} for b in (data.get("baseMap") or {}).get("baseMapLayers", [])]},
