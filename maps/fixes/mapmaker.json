@@ -1,0 +1,4665 @@
+{
+ "tool": "Map fixes 1.0",
+ "read": "2026-10-23T11:12:00Z",
+ "org": "iFGeGXTAJXnjq0YN",
+ "orgLabel": "MapMaker",
+ "fixes": [
+  {
+   "id": "B3",
+   "what": "Revolutionary Battles: clicking a colony shows its name.",
+   "kind": "webmap-layer",
+   "webmap": "bda07736a1b9425ea19fdde282088bd6",
+   "layerId": "19ea8c06cab-layer-11",
+   "layerTitle": "Colony Area",
+   "before": "aea9d812100b2d1327b39c4faccf2cce7d30e4e2",
+   "set": {
+    "disablePopup": false,
+    "popupInfo": {
+     "title": "{Colony}",
+     "popupElements": [],
+     "showLastEditInfo": false,
+     "fieldInfos": [
+      {
+       "fieldName": "Colony",
+       "label": "Colony",
+       "visible": false
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "B3",
+   "what": "Revolutionary Battles: colony borders have no pop-up.",
+   "kind": "webmap-layer",
+   "webmap": "bda07736a1b9425ea19fdde282088bd6",
+   "layerId": "19ea8c06cac-layer-12",
+   "layerTitle": "Colony Boundary",
+   "before": "cfd766db9975003040984d7373275b5548faa6e6",
+   "set": {
+    "disablePopup": true
+   }
+  },
+  {
+   "id": "B1",
+   "what": "Revolutionary Battles: the battle pop-up says who won, and its picture has alt text.",
+   "kind": "webmap-layer",
+   "webmap": "bda07736a1b9425ea19fdde282088bd6",
+   "layerId": "19e1e11470a-layer-73",
+   "layerTitle": "Revolutionary War Battles",
+   "before": "ca3c69a39ab007f07d67d0c9fbdffc9583e6018f",
+   "set": {
+    "popupInfo": {
+     "popupElements": [
+      {
+       "type": "text",
+       "text": "<p style='text-align:center;'><span style='font-size:24px;'><span style='color:{expression/expr0};'>The Battle of {Battle}&nbsp;</span></span></p><p style='text-align:center;'><span style='font-size:18px;'><span>{Dates}</span>&nbsp;</span></p><p style='text-align:center;'><span style='font-size:18px;'>Result: {expression/result}</span></p>"
+      },
+      {
+       "type": "media",
+       "description": "",
+       "mediaInfos": [
+        {
+         "altText": "Picture for the battle of {Battle}",
+         "caption": "",
+         "title": "",
+         "type": "image",
+         "refreshInterval": 0,
+         "value": {
+          "linkURL": "",
+          "sourceURL": "{Thumbnail}"
+         }
+        }
+       ],
+       "title": ""
+      },
+      {
+       "type": "text",
+       "text": "<p><span>{Narrative}</span>&nbsp;</p>"
+      },
+      {
+       "type": "text",
+       "text": "<p><span style='font-size:10px;'><i>Image credit: <span>{Image_Credit}</span>&nbsp;</i></span></p>"
+      }
+     ],
+     "description": "<p style='text-align:center;'><span style='font-size:24px;'><span style='color:{expression/expr0};'>The Battle of {Battle}&nbsp;</span></span></p><p style='text-align:center;'><span style='font-size:18px;'><span>{Dates}</span>&nbsp;</span></p>",
+     "mediaInfos": [
+      {
+       "altText": "",
+       "caption": "",
+       "title": "",
+       "type": "image",
+       "refreshInterval": 0,
+       "value": {
+        "linkURL": "",
+        "sourceURL": "{Thumbnail}"
+       }
+      }
+     ],
+     "expressionInfos": [
+      {
+       "name": "expr0",
+       "title": "Victor color",
+       "expression": "If ($feature.Victor == 'Side A') {\r\n  return \"#357387\"\r\n}\r\nelse if ($feature.Victor == 'Side B') {\r\n  return '#a11d1d'\r\n}\r\nelse {\r\n  return '#5c5c5c'\r\n}",
+       "returnType": "string"
+      },
+      {
+       "name": "result",
+       "title": "Result",
+       "returnType": "string",
+       "expression": "When($feature.Victor == 'Side A Victory', 'American victory', $feature.Victor == 'Side B Victory', 'British victory', $feature.Victor == 'Inconclusive', 'Inconclusive', '')"
+      }
+     ],
+     "fieldInfos": [
+      {
+       "fieldName": "FID",
+       "isEditable": false,
+       "label": "FID",
+       "visible": false
+      },
+      {
+       "fieldName": "Battle",
+       "isEditable": true,
+       "label": "Battle",
+       "visible": true
+      },
+      {
+       "fieldName": "Battle_Page_URL",
+       "isEditable": true,
+       "label": "Battle_Page_URL",
+       "visible": true
+      },
+      {
+       "fieldName": "BFT_Coords",
+       "isEditable": true,
+       "label": "BFT_Coords",
+       "visible": true
+      },
+      {
+       "fieldName": "Campaign",
+       "isEditable": true,
+       "label": "Campaign",
+       "visible": true
+      },
+      {
+       "fieldName": "Casualties_Side_A",
+       "format": {
+        "digitSeparator": true,
+        "places": 0
+       },
+       "isEditable": true,
+       "label": "Casualties_Side_A",
+       "visible": true
+      },
+      {
+       "fieldName": "Casualties_Side_B",
+       "format": {
+        "digitSeparator": true,
+        "places": 0
+       },
+       "isEditable": true,
+       "label": "Casualties_Side_B",
+       "visible": true
+      },
+      {
+       "fieldName": "Date_End",
+       "isEditable": true,
+       "label": "Date_End",
+       "visible": true
+      },
+      {
+       "fieldName": "Date_Start",
+       "isEditable": true,
+       "label": "Date_Start",
+       "visible": true
+      },
+      {
+       "fieldName": "Dates",
+       "isEditable": true,
+       "label": "Dates",
+       "visible": true
+      },
+      {
+       "fieldName": "Image_Credit",
+       "isEditable": true,
+       "label": "Image_Credit",
+       "visible": true
+      },
+      {
+       "fieldName": "Leaders_Side_A",
+       "isEditable": true,
+       "label": "Leaders_Side_A",
+       "visible": true
+      },
+      {
+       "fieldName": "Leaders_Side_B",
+       "isEditable": true,
+       "label": "Leaders_Side_B",
+       "visible": true
+      },
+      {
+       "fieldName": "Narrative",
+       "isEditable": true,
+       "label": "Narrative",
+       "visible": true
+      },
+      {
+       "fieldName": "State",
+       "isEditable": true,
+       "label": "State",
+       "visible": true
+      },
+      {
+       "fieldName": "Thumbnail",
+       "isEditable": true,
+       "label": "Thumbnail",
+       "visible": true
+      },
+      {
+       "fieldName": "Thumbnail_Small",
+       "isEditable": true,
+       "label": "Thumbnail_Small",
+       "visible": true
+      },
+      {
+       "fieldName": "Troops_engaged_Side_A",
+       "format": {
+        "digitSeparator": true,
+        "places": 0
+       },
+       "isEditable": true,
+       "label": "Troops_engaged_Side_A",
+       "visible": true
+      },
+      {
+       "fieldName": "Troops_engaged_Side_B",
+       "format": {
+        "digitSeparator": true,
+        "places": 0
+       },
+       "isEditable": true,
+       "label": "Troops_engaged_Side_B",
+       "visible": true
+      },
+      {
+       "fieldName": "Victor",
+       "isEditable": true,
+       "label": "Victor",
+       "visible": true
+      },
+      {
+       "fieldName": "x",
+       "format": {
+        "digitSeparator": true,
+        "places": 2
+       },
+       "isEditable": true,
+       "label": "x",
+       "visible": true
+      },
+      {
+       "fieldName": "y",
+       "format": {
+        "digitSeparator": true,
+        "places": 2
+       },
+       "isEditable": true,
+       "label": "y",
+       "visible": true
+      },
+      {
+       "fieldName": "expression/expr0",
+       "isEditable": true,
+       "visible": false
+      }
+     ],
+     "title": ""
+    }
+   }
+  },
+  {
+   "id": "A1",
+   "what": "Turning Points: Lexington and Concord was won by the colonists.",
+   "kind": "feature-value",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Battle_Detailsv2_75_76/FeatureServer/0",
+   "objectIdField": "FID",
+   "objectId": 1,
+   "field": "Victor",
+   "from": "Britain",
+   "to": "American colonists"
+  },
+  {
+   "id": "A2",
+   "what": "Turning Points: spelling in the Bunker Hill text.",
+   "kind": "feature-value",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Battle_Detailsv2_75_76/FeatureServer/0",
+   "objectIdField": "FID",
+   "objectId": 2,
+   "field": "Battle_details",
+   "from": "After Lexington and Concord the British were forced back to Boston and Amerian militia gather around the city to keep pressure on British forces.  The first major battle of the war begins when British troops crossed Boston Harbor by boat to attack American militia soldiers holding the high ground at Breed's Hill. Even though the British were victorious, they lost over 1,000 soldiers and realized the war would not be easy to win.",
+   "to": "After Lexington and Concord the British were forced back to Boston and American militia gather around the city to keep pressure on British forces.  The first major battle of the war begins when British troops crossed Boston Harbor by boat to attack American militia soldiers holding the high ground at Breed's Hill. Even though the British were victorious, they lost over 1,000 soldiers and realized the war would not be easy to win."
+  },
+  {
+   "id": "A2",
+   "what": "Turning Points: spelling in the Battle for New York text.",
+   "kind": "feature-value",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Battle_Detailsv2_75_76/FeatureServer/0",
+   "objectIdField": "FID",
+   "objectId": 3,
+   "field": "Battle_details",
+   "from": "After leaving Boston, the British regrouped in Halifax, Nova Scotia. Next, they launched a large attack on New York City, an important port city, with the help of many Loyalist supporters in the area. During the Battle of Brooklyn, British troops outmanuevered Washinton's army by moving around the sides of the American defenses to attack where they were unprepared. The Americans were forced to retreat but kept fighting.",
+   "to": "After leaving Boston, the British regrouped in Halifax, Nova Scotia. Next, they launched a large attack on New York City, an important port city, with the help of many Loyalist supporters in the area. During the Battle of Brooklyn, British troops outmaneuvered Washington's army by moving around the sides of the American defenses to attack where they were unprepared. The Americans were forced to retreat but kept fighting."
+  },
+  {
+   "id": "C4",
+   "what": "Vicksburg: Milliken's Bend spelled as usual; the Vicksburg pin named.",
+   "kind": "webmap-layer",
+   "webmap": "1ba8cd3fc75a49a497be1137fce4c032",
+   "layerId": "18bd9995d05-layer-47",
+   "layerTitle": "Key Places in the Union March to Vicksburg",
+   "before": "4f6f98cc1cc3c8f5a9e7b3fadfb3aa2b37ebbdf0",
+   "set": {
+    "featureCollection": {
+     "layers": [
+      {
+       "layerDefinition": {
+        "name": "Polygons",
+        "drawingInfo": {
+         "renderer": {
+          "type": "simple",
+          "symbol": {
+           "type": "esriSFS",
+           "color": [
+            0,
+            0,
+            0,
+            64
+           ],
+           "outline": {
+            "type": "esriSLS",
+            "color": [
+             0,
+             0,
+             0,
+             255
+            ],
+            "width": 0.75,
+            "style": "esriSLSSolid"
+           },
+           "style": "esriSFSSolid"
+          }
+         }
+        },
+        "id": 0,
+        "geometryType": "esriGeometryPolygon",
+        "minScale": 0,
+        "maxScale": 0,
+        "objectIdField": "OBJECTID",
+        "fields": [
+         {
+          "alias": "OBJECTID",
+          "editable": false,
+          "name": "OBJECTID",
+          "nullable": false,
+          "type": "esriFieldTypeOID"
+         },
+         {
+          "alias": "Title",
+          "editable": true,
+          "length": 255,
+          "name": "title",
+          "nullable": true,
+          "type": "esriFieldTypeString"
+         }
+        ],
+        "spatialReference": {
+         "latestWkid": 3857,
+         "wkid": 102100
+        }
+       },
+       "featureSet": {
+        "features": [],
+        "geometryType": "esriGeometryPolygon"
+       }
+      },
+      {
+       "layerDefinition": {
+        "name": "Polylines",
+        "drawingInfo": {
+         "renderer": {
+          "type": "simple",
+          "symbol": {
+           "type": "esriSLS",
+           "color": [
+            0,
+            0,
+            0,
+            255
+           ],
+           "width": 0.75,
+           "style": "esriSLSSolid"
+          }
+         }
+        },
+        "id": 1,
+        "geometryType": "esriGeometryPolyline",
+        "minScale": 0,
+        "maxScale": 0,
+        "objectIdField": "OBJECTID",
+        "fields": [
+         {
+          "alias": "OBJECTID",
+          "editable": false,
+          "name": "OBJECTID",
+          "nullable": false,
+          "type": "esriFieldTypeOID"
+         },
+         {
+          "alias": "Title",
+          "editable": true,
+          "length": 255,
+          "name": "title",
+          "nullable": true,
+          "type": "esriFieldTypeString"
+         }
+        ],
+        "spatialReference": {
+         "latestWkid": 3857,
+         "wkid": 102100
+        }
+       },
+       "featureSet": {
+        "features": [],
+        "geometryType": "esriGeometryPolyline"
+       }
+      },
+      {
+       "layerDefinition": {
+        "name": "Multipoints",
+        "drawingInfo": {
+         "renderer": {
+          "type": "simple",
+          "symbol": {
+           "type": "esriSMS",
+           "color": [
+            255,
+            255,
+            255,
+            64
+           ],
+           "angle": 0,
+           "xoffset": 0,
+           "yoffset": 0,
+           "size": 12,
+           "style": "esriSMSCircle",
+           "outline": {
+            "type": "esriSLS",
+            "color": [
+             0,
+             0,
+             0,
+             255
+            ],
+            "width": 0.75,
+            "style": "esriSLSSolid"
+           }
+          }
+         }
+        },
+        "id": 2,
+        "geometryType": "esriGeometryMultipoint",
+        "minScale": 0,
+        "maxScale": 0,
+        "objectIdField": "OBJECTID",
+        "fields": [
+         {
+          "alias": "OBJECTID",
+          "editable": false,
+          "name": "OBJECTID",
+          "nullable": false,
+          "type": "esriFieldTypeOID"
+         },
+         {
+          "alias": "Title",
+          "editable": true,
+          "length": 255,
+          "name": "title",
+          "nullable": true,
+          "type": "esriFieldTypeString"
+         }
+        ],
+        "spatialReference": {
+         "latestWkid": 3857,
+         "wkid": 102100
+        }
+       },
+       "featureSet": {
+        "features": [],
+        "geometryType": "esriGeometryMultipoint"
+       }
+      },
+      {
+       "layerDefinition": {
+        "name": "Points",
+        "drawingInfo": {
+         "renderer": {
+          "type": "simple",
+          "symbol": {
+           "type": "esriSMS",
+           "color": [
+            255,
+            255,
+            255,
+            64
+           ],
+           "angle": 0,
+           "xoffset": 0,
+           "yoffset": 0,
+           "size": 12,
+           "style": "esriSMSCircle",
+           "outline": {
+            "type": "esriSLS",
+            "color": [
+             0,
+             0,
+             0,
+             255
+            ],
+            "width": 0.75,
+            "style": "esriSLSSolid"
+           }
+          }
+         }
+        },
+        "id": 3,
+        "geometryType": "esriGeometryPoint",
+        "minScale": 0,
+        "maxScale": 0,
+        "objectIdField": "OBJECTID",
+        "fields": [
+         {
+          "alias": "OBJECTID",
+          "editable": false,
+          "name": "OBJECTID",
+          "nullable": false,
+          "type": "esriFieldTypeOID"
+         },
+         {
+          "alias": "Title",
+          "editable": true,
+          "length": 255,
+          "name": "title",
+          "nullable": true,
+          "type": "esriFieldTypeString"
+         }
+        ],
+        "spatialReference": {
+         "latestWkid": 3857,
+         "wkid": 102100
+        }
+       },
+       "featureSet": {
+        "features": [
+         {
+          "attributes": {
+           "title": "Bruinsburg Bend, Mississippi",
+           "OBJECTID": 1
+          },
+          "geometry": {
+           "spatialReference": {
+            "latestWkid": 3857,
+            "wkid": 102100
+           },
+           "x": -10144781.52640402,
+           "y": 3755866.40153582
+          },
+          "symbol": {
+           "type": "CIMSymbolReference",
+           "symbol": {
+            "type": "CIMPointSymbol",
+            "symbolLayers": [
+             {
+              "type": "CIMVectorMarker",
+              "enable": true,
+              "colorLocked": true,
+              "anchorPoint": {
+               "x": 0,
+               "y": -1.75
+              },
+              "anchorPointUnits": "Relative",
+              "size": 5.7,
+              "frame": {
+               "xmin": 0,
+               "ymin": 0,
+               "xmax": 84.3,
+               "ymax": 84.3
+              },
+              "markerGraphics": [
+               {
+                "type": "CIMMarkerGraphic",
+                "geometry": {
+                 "rings": [
+                  [
+                   [
+                    83.2,
+                    32.5
+                   ],
+                   [
+                    84.3,
+                    40.7
+                   ],
+                   [
+                    83.8,
+                    48.9
+                   ],
+                   [
+                    81.7,
+                    56.9
+                   ],
+                   [
+                    78.1,
+                    64.3
+                   ],
+                   [
+                    73,
+                    70.9
+                   ],
+                   [
+                    66.9,
+                    76.4
+                   ],
+                   [
+                    59.7,
+                    80.5
+                   ],
+                   [
+                    51.9,
+                    83.2
+                   ],
+                   [
+                    43.7,
+                    84.3
+                   ],
+                   [
+                    35.4,
+                    83.8
+                   ],
+                   [
+                    27.4,
+                    81.7
+                   ],
+                   [
+                    20,
+                    78
+                   ],
+                   [
+                    13.4,
+                    73
+                   ],
+                   [
+                    7.9,
+                    66.8
+                   ],
+                   [
+                    3.8,
+                    59.7
+                   ],
+                   [
+                    1.1,
+                    51.9
+                   ],
+                   [
+                    0,
+                    43.7
+                   ],
+                   [
+                    0.5,
+                    35.4
+                   ],
+                   [
+                    2.6,
+                    27.4
+                   ],
+                   [
+                    6.3,
+                    20
+                   ],
+                   [
+                    11.3,
+                    13.4
+                   ],
+                   [
+                    17.5,
+                    7.9
+                   ],
+                   [
+                    24.7,
+                    3.8
+                   ],
+                   [
+                    32.5,
+                    1.1
+                   ],
+                   [
+                    39.8,
+                    0.1
+                   ],
+                   [
+                    47.1,
+                    0.3
+                   ],
+                   [
+                    54.3,
+                    1.8
+                   ],
+                   [
+                    61.1,
+                    4.5
+                   ],
+                   [
+                    67.4,
+                    8.4
+                   ],
+                   [
+                    72.9,
+                    13.3
+                   ],
+                   [
+                    77.4,
+                    19.1
+                   ],
+                   [
+                    80.9,
+                    25.5
+                   ],
+                   [
+                    83.2,
+                    32.5
+                   ]
+                  ]
+                 ]
+                },
+                "symbol": {
+                 "type": "CIMPolygonSymbol",
+                 "symbolLayers": [
+                  {
+                   "type": "CIMSolidFill",
+                   "enable": true,
+                   "color": [
+                    242,
+                    242,
+                    242,
+                    255
+                   ]
+                  }
+                 ]
+                }
+               }
+              ],
+              "scaleSymbolsProportionally": true,
+              "respectFrame": true,
+              "rotation": 0
+             },
+             {
+              "type": "CIMVectorMarker",
+              "enable": true,
+              "anchorPoint": {
+               "x": 0,
+               "y": -0.5
+              },
+              "anchorPointUnits": "Relative",
+              "size": 15.22395656599932,
+              "frame": {
+               "xmin": -1.475873769935518,
+               "ymin": -2.1999999999999886,
+               "xmax": 199.1758737699355,
+               "ymax": 296.9
+              },
+              "markerGraphics": [
+               {
+                "type": "CIMMarkerGraphic",
+                "geometry": {
+                 "rings": [
+                  [
+                   [
+                    98.9,
+                    0
+                   ],
+                   [
+                    119.4,
+                    23.2
+                   ],
+                   [
+                    139.4,
+                    49.3
+                   ],
+                   [
+                    156.8,
+                    75.2
+                   ],
+                   [
+                    171.2,
+                    100.8
+                   ],
+                   [
+                    182.4,
+                    125.3
+                   ],
+                   [
+                    190.6,
+                    148.8
+                   ],
+                   [
+                    195.7,
+                    171.4
+                   ],
+                   [
+                    197.7,
+                    192.9
+                   ],
+                   [
+                    197.7,
+                    195.8
+                   ],
+                   [
+                    197.7,
+                    200.3
+                   ],
+                   [
+                    197.6,
+                    202.5
+                   ],
+                   [
+                    197.5,
+                    204.8
+                   ],
+                   [
+                    197.3,
+                    207.1
+                   ],
+                   [
+                    197,
+                    209.4
+                   ],
+                   [
+                    196.7,
+                    211.7
+                   ],
+                   [
+                    196.4,
+                    214.1
+                   ],
+                   [
+                    196,
+                    216.4
+                   ],
+                   [
+                    195.5,
+                    218.7
+                   ],
+                   [
+                    195,
+                    221.1
+                   ],
+                   [
+                    194.4,
+                    223.4
+                   ],
+                   [
+                    193.7,
+                    225.8
+                   ],
+                   [
+                    193,
+                    228.1
+                   ],
+                   [
+                    192.2,
+                    230.5
+                   ],
+                   [
+                    191.4,
+                    232.8
+                   ],
+                   [
+                    190.5,
+                    235.1
+                   ],
+                   [
+                    189.5,
+                    237.5
+                   ],
+                   [
+                    188.5,
+                    239.7
+                   ],
+                   [
+                    187.4,
+                    242
+                   ],
+                   [
+                    186.2,
+                    244.3
+                   ],
+                   [
+                    185,
+                    246.5
+                   ],
+                   [
+                    183.7,
+                    248.7
+                   ],
+                   [
+                    182.4,
+                    250.9
+                   ],
+                   [
+                    181,
+                    253.1
+                   ],
+                   [
+                    179.5,
+                    255.2
+                   ],
+                   [
+                    178,
+                    257.3
+                   ],
+                   [
+                    176.4,
+                    259.4
+                   ],
+                   [
+                    174.7,
+                    261.4
+                   ],
+                   [
+                    173.1,
+                    263.3
+                   ],
+                   [
+                    171.3,
+                    265.3
+                   ],
+                   [
+                    169.5,
+                    267.2
+                   ],
+                   [
+                    167.7,
+                    269
+                   ],
+                   [
+                    165.8,
+                    270.8
+                   ],
+                   [
+                    163.9,
+                    272.5
+                   ],
+                   [
+                    161.9,
+                    274.2
+                   ],
+                   [
+                    159.9,
+                    275.8
+                   ],
+                   [
+                    157.8,
+                    277.4
+                   ],
+                   [
+                    155.7,
+                    278.9
+                   ],
+                   [
+                    153.6,
+                    280.4
+                   ],
+                   [
+                    151.4,
+                    281.7
+                   ],
+                   [
+                    149.2,
+                    283.1
+                   ],
+                   [
+                    147,
+                    284.4
+                   ],
+                   [
+                    144.8,
+                    285.6
+                   ],
+                   [
+                    142.5,
+                    286.7
+                   ],
+                   [
+                    140.3,
+                    287.8
+                   ],
+                   [
+                    138,
+                    288.8
+                   ],
+                   [
+                    135.7,
+                    289.8
+                   ],
+                   [
+                    133.4,
+                    290.7
+                   ],
+                   [
+                    131,
+                    291.5
+                   ],
+                   [
+                    128.7,
+                    292.3
+                   ],
+                   [
+                    126.4,
+                    293
+                   ],
+                   [
+                    124,
+                    293.6
+                   ],
+                   [
+                    121.7,
+                    294.2
+                   ],
+                   [
+                    119.4,
+                    294.7
+                   ],
+                   [
+                    117,
+                    295.2
+                   ],
+                   [
+                    114.7,
+                    295.6
+                   ],
+                   [
+                    112.4,
+                    296
+                   ],
+                   [
+                    110.1,
+                    296.3
+                   ],
+                   [
+                    107.8,
+                    296.5
+                   ],
+                   [
+                    105.5,
+                    296.7
+                   ],
+                   [
+                    103.3,
+                    296.8
+                   ],
+                   [
+                    101.1,
+                    296.9
+                   ],
+                   [
+                    98.8,
+                    296.9
+                   ],
+                   [
+                    83.1,
+                    295.7
+                   ],
+                   [
+                    67.8,
+                    292
+                   ],
+                   [
+                    53.3,
+                    285.9
+                   ],
+                   [
+                    39.9,
+                    277.5
+                   ],
+                   [
+                    28.1,
+                    267.2
+                   ],
+                   [
+                    18,
+                    255.1
+                   ],
+                   [
+                    10,
+                    241.5
+                   ],
+                   [
+                    4.2,
+                    226.9
+                   ],
+                   [
+                    0.9,
+                    211.5
+                   ],
+                   [
+                    0,
+                    195.8
+                   ],
+                   [
+                    0.1,
+                    192.9
+                   ],
+                   [
+                    2.1,
+                    171.4
+                   ],
+                   [
+                    7.2,
+                    148.8
+                   ],
+                   [
+                    15.4,
+                    125.3
+                   ],
+                   [
+                    26.6,
+                    100.8
+                   ],
+                   [
+                    41,
+                    75.2
+                   ],
+                   [
+                    58.4,
+                    49.3
+                   ],
+                   [
+                    78.4,
+                    23.2
+                   ],
+                   [
+                    98.9,
+                    0
+                   ]
+                  ]
+                 ]
+                },
+                "symbol": {
+                 "type": "CIMPolygonSymbol",
+                 "symbolLayers": [
+                  {
+                   "type": "CIMSolidFill",
+                   "enable": true,
+                   "color": [
+                    17,
+                    26,
+                    40,
+                    255
+                   ]
+                  }
+                 ]
+                }
+               }
+              ],
+              "scaleSymbolsProportionally": true,
+              "respectFrame": true,
+              "rotation": 0
+             }
+            ],
+            "scaleX": 1,
+            "angleAlignment": "Display",
+            "angle": 0
+           }
+          }
+         },
+         {
+          "attributes": {
+           "title": "Milliken's Bend, Louisiana",
+           "OBJECTID": 2
+          },
+          "geometry": {
+           "spatialReference": {
+            "latestWkid": 3857,
+            "wkid": 102100
+           },
+           "x": -10132135.860994121,
+           "y": 3817778.5201281644
+          },
+          "symbol": {
+           "type": "CIMSymbolReference",
+           "symbol": {
+            "type": "CIMPointSymbol",
+            "symbolLayers": [
+             {
+              "type": "CIMVectorMarker",
+              "enable": true,
+              "colorLocked": true,
+              "anchorPoint": {
+               "x": 0,
+               "y": -1.75
+              },
+              "anchorPointUnits": "Relative",
+              "size": 5.7,
+              "frame": {
+               "xmin": 0,
+               "ymin": 0,
+               "xmax": 84.3,
+               "ymax": 84.3
+              },
+              "markerGraphics": [
+               {
+                "type": "CIMMarkerGraphic",
+                "geometry": {
+                 "rings": [
+                  [
+                   [
+                    83.2,
+                    32.5
+                   ],
+                   [
+                    84.3,
+                    40.7
+                   ],
+                   [
+                    83.8,
+                    48.9
+                   ],
+                   [
+                    81.7,
+                    56.9
+                   ],
+                   [
+                    78.1,
+                    64.3
+                   ],
+                   [
+                    73,
+                    70.9
+                   ],
+                   [
+                    66.9,
+                    76.4
+                   ],
+                   [
+                    59.7,
+                    80.5
+                   ],
+                   [
+                    51.9,
+                    83.2
+                   ],
+                   [
+                    43.7,
+                    84.3
+                   ],
+                   [
+                    35.4,
+                    83.8
+                   ],
+                   [
+                    27.4,
+                    81.7
+                   ],
+                   [
+                    20,
+                    78
+                   ],
+                   [
+                    13.4,
+                    73
+                   ],
+                   [
+                    7.9,
+                    66.8
+                   ],
+                   [
+                    3.8,
+                    59.7
+                   ],
+                   [
+                    1.1,
+                    51.9
+                   ],
+                   [
+                    0,
+                    43.7
+                   ],
+                   [
+                    0.5,
+                    35.4
+                   ],
+                   [
+                    2.6,
+                    27.4
+                   ],
+                   [
+                    6.3,
+                    20
+                   ],
+                   [
+                    11.3,
+                    13.4
+                   ],
+                   [
+                    17.5,
+                    7.9
+                   ],
+                   [
+                    24.7,
+                    3.8
+                   ],
+                   [
+                    32.5,
+                    1.1
+                   ],
+                   [
+                    39.8,
+                    0.1
+                   ],
+                   [
+                    47.1,
+                    0.3
+                   ],
+                   [
+                    54.3,
+                    1.8
+                   ],
+                   [
+                    61.1,
+                    4.5
+                   ],
+                   [
+                    67.4,
+                    8.4
+                   ],
+                   [
+                    72.9,
+                    13.3
+                   ],
+                   [
+                    77.4,
+                    19.1
+                   ],
+                   [
+                    80.9,
+                    25.5
+                   ],
+                   [
+                    83.2,
+                    32.5
+                   ]
+                  ]
+                 ]
+                },
+                "symbol": {
+                 "type": "CIMPolygonSymbol",
+                 "symbolLayers": [
+                  {
+                   "type": "CIMSolidFill",
+                   "enable": true,
+                   "color": [
+                    242,
+                    242,
+                    242,
+                    255
+                   ]
+                  }
+                 ]
+                }
+               }
+              ],
+              "scaleSymbolsProportionally": true,
+              "respectFrame": true,
+              "rotation": 0
+             },
+             {
+              "type": "CIMVectorMarker",
+              "enable": true,
+              "anchorPoint": {
+               "x": 0,
+               "y": -0.5
+              },
+              "anchorPointUnits": "Relative",
+              "size": 15,
+              "frame": {
+               "xmin": 0,
+               "ymin": 0,
+               "xmax": 197.7,
+               "ymax": 294.7
+              },
+              "markerGraphics": [
+               {
+                "type": "CIMMarkerGraphic",
+                "geometry": {
+                 "rings": [
+                  [
+                   [
+                    98.9,
+                    0
+                   ],
+                   [
+                    119.4,
+                    23.2
+                   ],
+                   [
+                    139.4,
+                    49.3
+                   ],
+                   [
+                    156.8,
+                    75.2
+                   ],
+                   [
+                    171.2,
+                    100.8
+                   ],
+                   [
+                    182.4,
+                    125.3
+                   ],
+                   [
+                    190.6,
+                    148.8
+                   ],
+                   [
+                    195.7,
+                    171.4
+                   ],
+                   [
+                    197.7,
+                    192.9
+                   ],
+                   [
+                    197.7,
+                    195.8
+                   ],
+                   [
+                    197.7,
+                    200.3
+                   ],
+                   [
+                    197.6,
+                    202.5
+                   ],
+                   [
+                    197.5,
+                    204.8
+                   ],
+                   [
+                    197.3,
+                    207.1
+                   ],
+                   [
+                    197,
+                    209.4
+                   ],
+                   [
+                    196.7,
+                    211.7
+                   ],
+                   [
+                    196.4,
+                    214.1
+                   ],
+                   [
+                    196,
+                    216.4
+                   ],
+                   [
+                    195.5,
+                    218.7
+                   ],
+                   [
+                    195,
+                    221.1
+                   ],
+                   [
+                    194.4,
+                    223.4
+                   ],
+                   [
+                    193.7,
+                    225.8
+                   ],
+                   [
+                    193,
+                    228.1
+                   ],
+                   [
+                    192.2,
+                    230.5
+                   ],
+                   [
+                    191.4,
+                    232.8
+                   ],
+                   [
+                    190.5,
+                    235.1
+                   ],
+                   [
+                    189.5,
+                    237.5
+                   ],
+                   [
+                    188.5,
+                    239.7
+                   ],
+                   [
+                    187.4,
+                    242
+                   ],
+                   [
+                    186.2,
+                    244.3
+                   ],
+                   [
+                    185,
+                    246.5
+                   ],
+                   [
+                    183.7,
+                    248.7
+                   ],
+                   [
+                    182.4,
+                    250.9
+                   ],
+                   [
+                    181,
+                    253.1
+                   ],
+                   [
+                    179.5,
+                    255.2
+                   ],
+                   [
+                    178,
+                    257.3
+                   ],
+                   [
+                    176.4,
+                    259.4
+                   ],
+                   [
+                    174.7,
+                    261.4
+                   ],
+                   [
+                    173.1,
+                    263.3
+                   ],
+                   [
+                    171.3,
+                    265.3
+                   ],
+                   [
+                    169.5,
+                    267.2
+                   ],
+                   [
+                    167.7,
+                    269
+                   ],
+                   [
+                    165.8,
+                    270.8
+                   ],
+                   [
+                    163.9,
+                    272.5
+                   ],
+                   [
+                    161.9,
+                    274.2
+                   ],
+                   [
+                    159.9,
+                    275.8
+                   ],
+                   [
+                    157.8,
+                    277.4
+                   ],
+                   [
+                    155.7,
+                    278.9
+                   ],
+                   [
+                    153.6,
+                    280.4
+                   ],
+                   [
+                    151.4,
+                    281.7
+                   ],
+                   [
+                    149.2,
+                    283.1
+                   ],
+                   [
+                    147,
+                    284.4
+                   ],
+                   [
+                    144.8,
+                    285.6
+                   ],
+                   [
+                    142.5,
+                    286.7
+                   ],
+                   [
+                    140.3,
+                    287.8
+                   ],
+                   [
+                    138,
+                    288.8
+                   ],
+                   [
+                    135.7,
+                    289.8
+                   ],
+                   [
+                    133.4,
+                    290.7
+                   ],
+                   [
+                    131,
+                    291.5
+                   ],
+                   [
+                    128.7,
+                    292.3
+                   ],
+                   [
+                    126.4,
+                    293
+                   ],
+                   [
+                    124,
+                    293.6
+                   ],
+                   [
+                    121.7,
+                    294.2
+                   ],
+                   [
+                    119.4,
+                    294.7
+                   ],
+                   [
+                    117,
+                    295.2
+                   ],
+                   [
+                    114.7,
+                    295.6
+                   ],
+                   [
+                    112.4,
+                    296
+                   ],
+                   [
+                    110.1,
+                    296.3
+                   ],
+                   [
+                    107.8,
+                    296.5
+                   ],
+                   [
+                    105.5,
+                    296.7
+                   ],
+                   [
+                    103.3,
+                    296.8
+                   ],
+                   [
+                    101.1,
+                    296.9
+                   ],
+                   [
+                    98.8,
+                    296.9
+                   ],
+                   [
+                    83.1,
+                    295.7
+                   ],
+                   [
+                    67.8,
+                    292
+                   ],
+                   [
+                    53.3,
+                    285.9
+                   ],
+                   [
+                    39.9,
+                    277.5
+                   ],
+                   [
+                    28.1,
+                    267.2
+                   ],
+                   [
+                    18,
+                    255.1
+                   ],
+                   [
+                    10,
+                    241.5
+                   ],
+                   [
+                    4.2,
+                    226.9
+                   ],
+                   [
+                    0.9,
+                    211.5
+                   ],
+                   [
+                    0,
+                    195.8
+                   ],
+                   [
+                    0.1,
+                    192.9
+                   ],
+                   [
+                    2.1,
+                    171.4
+                   ],
+                   [
+                    7.2,
+                    148.8
+                   ],
+                   [
+                    15.4,
+                    125.3
+                   ],
+                   [
+                    26.6,
+                    100.8
+                   ],
+                   [
+                    41,
+                    75.2
+                   ],
+                   [
+                    58.4,
+                    49.3
+                   ],
+                   [
+                    78.4,
+                    23.2
+                   ],
+                   [
+                    98.9,
+                    0
+                   ]
+                  ]
+                 ]
+                },
+                "symbol": {
+                 "type": "CIMPolygonSymbol",
+                 "symbolLayers": [
+                  {
+                   "type": "CIMSolidFill",
+                   "enable": true,
+                   "color": [
+                    17,
+                    26,
+                    40,
+                    255
+                   ]
+                  }
+                 ]
+                }
+               }
+              ],
+              "scaleSymbolsProportionally": true,
+              "respectFrame": true,
+              "rotation": 0
+             }
+            ],
+            "scaleX": 1,
+            "angleAlignment": "Display",
+            "angle": 0
+           }
+          }
+         },
+         {
+          "attributes": {
+           "title": "New Carthage, Louisiana",
+           "OBJECTID": 3
+          },
+          "geometry": {
+           "spatialReference": {
+            "latestWkid": 3857,
+            "wkid": 102100
+           },
+           "x": -10144258.252145167,
+           "y": 3791725.8442758587
+          },
+          "symbol": {
+           "type": "CIMSymbolReference",
+           "symbol": {
+            "type": "CIMPointSymbol",
+            "symbolLayers": [
+             {
+              "type": "CIMVectorMarker",
+              "enable": true,
+              "colorLocked": true,
+              "anchorPoint": {
+               "x": 0,
+               "y": -1.75
+              },
+              "anchorPointUnits": "Relative",
+              "size": 5.7,
+              "frame": {
+               "xmin": 0,
+               "ymin": 0,
+               "xmax": 84.3,
+               "ymax": 84.3
+              },
+              "markerGraphics": [
+               {
+                "type": "CIMMarkerGraphic",
+                "geometry": {
+                 "rings": [
+                  [
+                   [
+                    83.2,
+                    32.5
+                   ],
+                   [
+                    84.3,
+                    40.7
+                   ],
+                   [
+                    83.8,
+                    48.9
+                   ],
+                   [
+                    81.7,
+                    56.9
+                   ],
+                   [
+                    78.1,
+                    64.3
+                   ],
+                   [
+                    73,
+                    70.9
+                   ],
+                   [
+                    66.9,
+                    76.4
+                   ],
+                   [
+                    59.7,
+                    80.5
+                   ],
+                   [
+                    51.9,
+                    83.2
+                   ],
+                   [
+                    43.7,
+                    84.3
+                   ],
+                   [
+                    35.4,
+                    83.8
+                   ],
+                   [
+                    27.4,
+                    81.7
+                   ],
+                   [
+                    20,
+                    78
+                   ],
+                   [
+                    13.4,
+                    73
+                   ],
+                   [
+                    7.9,
+                    66.8
+                   ],
+                   [
+                    3.8,
+                    59.7
+                   ],
+                   [
+                    1.1,
+                    51.9
+                   ],
+                   [
+                    0,
+                    43.7
+                   ],
+                   [
+                    0.5,
+                    35.4
+                   ],
+                   [
+                    2.6,
+                    27.4
+                   ],
+                   [
+                    6.3,
+                    20
+                   ],
+                   [
+                    11.3,
+                    13.4
+                   ],
+                   [
+                    17.5,
+                    7.9
+                   ],
+                   [
+                    24.7,
+                    3.8
+                   ],
+                   [
+                    32.5,
+                    1.1
+                   ],
+                   [
+                    39.8,
+                    0.1
+                   ],
+                   [
+                    47.1,
+                    0.3
+                   ],
+                   [
+                    54.3,
+                    1.8
+                   ],
+                   [
+                    61.1,
+                    4.5
+                   ],
+                   [
+                    67.4,
+                    8.4
+                   ],
+                   [
+                    72.9,
+                    13.3
+                   ],
+                   [
+                    77.4,
+                    19.1
+                   ],
+                   [
+                    80.9,
+                    25.5
+                   ],
+                   [
+                    83.2,
+                    32.5
+                   ]
+                  ]
+                 ]
+                },
+                "symbol": {
+                 "type": "CIMPolygonSymbol",
+                 "symbolLayers": [
+                  {
+                   "type": "CIMSolidFill",
+                   "enable": true,
+                   "color": [
+                    242,
+                    242,
+                    242,
+                    255
+                   ]
+                  }
+                 ]
+                }
+               }
+              ],
+              "scaleSymbolsProportionally": true,
+              "respectFrame": true,
+              "rotation": 0
+             },
+             {
+              "type": "CIMVectorMarker",
+              "enable": true,
+              "anchorPoint": {
+               "x": 0,
+               "y": -0.5
+              },
+              "anchorPointUnits": "Relative",
+              "size": 15,
+              "frame": {
+               "xmin": 0,
+               "ymin": 0,
+               "xmax": 197.7,
+               "ymax": 294.7
+              },
+              "markerGraphics": [
+               {
+                "type": "CIMMarkerGraphic",
+                "geometry": {
+                 "rings": [
+                  [
+                   [
+                    98.9,
+                    0
+                   ],
+                   [
+                    119.4,
+                    23.2
+                   ],
+                   [
+                    139.4,
+                    49.3
+                   ],
+                   [
+                    156.8,
+                    75.2
+                   ],
+                   [
+                    171.2,
+                    100.8
+                   ],
+                   [
+                    182.4,
+                    125.3
+                   ],
+                   [
+                    190.6,
+                    148.8
+                   ],
+                   [
+                    195.7,
+                    171.4
+                   ],
+                   [
+                    197.7,
+                    192.9
+                   ],
+                   [
+                    197.7,
+                    195.8
+                   ],
+                   [
+                    197.7,
+                    200.3
+                   ],
+                   [
+                    197.6,
+                    202.5
+                   ],
+                   [
+                    197.5,
+                    204.8
+                   ],
+                   [
+                    197.3,
+                    207.1
+                   ],
+                   [
+                    197,
+                    209.4
+                   ],
+                   [
+                    196.7,
+                    211.7
+                   ],
+                   [
+                    196.4,
+                    214.1
+                   ],
+                   [
+                    196,
+                    216.4
+                   ],
+                   [
+                    195.5,
+                    218.7
+                   ],
+                   [
+                    195,
+                    221.1
+                   ],
+                   [
+                    194.4,
+                    223.4
+                   ],
+                   [
+                    193.7,
+                    225.8
+                   ],
+                   [
+                    193,
+                    228.1
+                   ],
+                   [
+                    192.2,
+                    230.5
+                   ],
+                   [
+                    191.4,
+                    232.8
+                   ],
+                   [
+                    190.5,
+                    235.1
+                   ],
+                   [
+                    189.5,
+                    237.5
+                   ],
+                   [
+                    188.5,
+                    239.7
+                   ],
+                   [
+                    187.4,
+                    242
+                   ],
+                   [
+                    186.2,
+                    244.3
+                   ],
+                   [
+                    185,
+                    246.5
+                   ],
+                   [
+                    183.7,
+                    248.7
+                   ],
+                   [
+                    182.4,
+                    250.9
+                   ],
+                   [
+                    181,
+                    253.1
+                   ],
+                   [
+                    179.5,
+                    255.2
+                   ],
+                   [
+                    178,
+                    257.3
+                   ],
+                   [
+                    176.4,
+                    259.4
+                   ],
+                   [
+                    174.7,
+                    261.4
+                   ],
+                   [
+                    173.1,
+                    263.3
+                   ],
+                   [
+                    171.3,
+                    265.3
+                   ],
+                   [
+                    169.5,
+                    267.2
+                   ],
+                   [
+                    167.7,
+                    269
+                   ],
+                   [
+                    165.8,
+                    270.8
+                   ],
+                   [
+                    163.9,
+                    272.5
+                   ],
+                   [
+                    161.9,
+                    274.2
+                   ],
+                   [
+                    159.9,
+                    275.8
+                   ],
+                   [
+                    157.8,
+                    277.4
+                   ],
+                   [
+                    155.7,
+                    278.9
+                   ],
+                   [
+                    153.6,
+                    280.4
+                   ],
+                   [
+                    151.4,
+                    281.7
+                   ],
+                   [
+                    149.2,
+                    283.1
+                   ],
+                   [
+                    147,
+                    284.4
+                   ],
+                   [
+                    144.8,
+                    285.6
+                   ],
+                   [
+                    142.5,
+                    286.7
+                   ],
+                   [
+                    140.3,
+                    287.8
+                   ],
+                   [
+                    138,
+                    288.8
+                   ],
+                   [
+                    135.7,
+                    289.8
+                   ],
+                   [
+                    133.4,
+                    290.7
+                   ],
+                   [
+                    131,
+                    291.5
+                   ],
+                   [
+                    128.7,
+                    292.3
+                   ],
+                   [
+                    126.4,
+                    293
+                   ],
+                   [
+                    124,
+                    293.6
+                   ],
+                   [
+                    121.7,
+                    294.2
+                   ],
+                   [
+                    119.4,
+                    294.7
+                   ],
+                   [
+                    117,
+                    295.2
+                   ],
+                   [
+                    114.7,
+                    295.6
+                   ],
+                   [
+                    112.4,
+                    296
+                   ],
+                   [
+                    110.1,
+                    296.3
+                   ],
+                   [
+                    107.8,
+                    296.5
+                   ],
+                   [
+                    105.5,
+                    296.7
+                   ],
+                   [
+                    103.3,
+                    296.8
+                   ],
+                   [
+                    101.1,
+                    296.9
+                   ],
+                   [
+                    98.8,
+                    296.9
+                   ],
+                   [
+                    83.1,
+                    295.7
+                   ],
+                   [
+                    67.8,
+                    292
+                   ],
+                   [
+                    53.3,
+                    285.9
+                   ],
+                   [
+                    39.9,
+                    277.5
+                   ],
+                   [
+                    28.1,
+                    267.2
+                   ],
+                   [
+                    18,
+                    255.1
+                   ],
+                   [
+                    10,
+                    241.5
+                   ],
+                   [
+                    4.2,
+                    226.9
+                   ],
+                   [
+                    0.9,
+                    211.5
+                   ],
+                   [
+                    0,
+                    195.8
+                   ],
+                   [
+                    0.1,
+                    192.9
+                   ],
+                   [
+                    2.1,
+                    171.4
+                   ],
+                   [
+                    7.2,
+                    148.8
+                   ],
+                   [
+                    15.4,
+                    125.3
+                   ],
+                   [
+                    26.6,
+                    100.8
+                   ],
+                   [
+                    41,
+                    75.2
+                   ],
+                   [
+                    58.4,
+                    49.3
+                   ],
+                   [
+                    78.4,
+                    23.2
+                   ],
+                   [
+                    98.9,
+                    0
+                   ]
+                  ]
+                 ]
+                },
+                "symbol": {
+                 "type": "CIMPolygonSymbol",
+                 "symbolLayers": [
+                  {
+                   "type": "CIMSolidFill",
+                   "enable": true,
+                   "color": [
+                    17,
+                    26,
+                    40,
+                    255
+                   ]
+                  }
+                 ]
+                }
+               }
+              ],
+              "scaleSymbolsProportionally": true,
+              "respectFrame": true,
+              "rotation": 0
+             }
+            ],
+            "scaleX": 1,
+            "angleAlignment": "Display",
+            "angle": 0
+           }
+          }
+         },
+         {
+          "attributes": {
+           "title": "Hard Times, Louisiana",
+           "OBJECTID": 4
+          },
+          "geometry": {
+           "spatialReference": {
+            "latestWkid": 3857,
+            "wkid": 102100
+           },
+           "x": -10145566.575782225,
+           "y": 3768827.083316041
+          },
+          "symbol": {
+           "type": "CIMSymbolReference",
+           "symbol": {
+            "type": "CIMPointSymbol",
+            "symbolLayers": [
+             {
+              "type": "CIMVectorMarker",
+              "enable": true,
+              "colorLocked": true,
+              "anchorPoint": {
+               "x": 0,
+               "y": -1.75
+              },
+              "anchorPointUnits": "Relative",
+              "size": 5.7,
+              "frame": {
+               "xmin": 0,
+               "ymin": 0,
+               "xmax": 84.3,
+               "ymax": 84.3
+              },
+              "markerGraphics": [
+               {
+                "type": "CIMMarkerGraphic",
+                "geometry": {
+                 "rings": [
+                  [
+                   [
+                    83.2,
+                    32.5
+                   ],
+                   [
+                    84.3,
+                    40.7
+                   ],
+                   [
+                    83.8,
+                    48.9
+                   ],
+                   [
+                    81.7,
+                    56.9
+                   ],
+                   [
+                    78.1,
+                    64.3
+                   ],
+                   [
+                    73,
+                    70.9
+                   ],
+                   [
+                    66.9,
+                    76.4
+                   ],
+                   [
+                    59.7,
+                    80.5
+                   ],
+                   [
+                    51.9,
+                    83.2
+                   ],
+                   [
+                    43.7,
+                    84.3
+                   ],
+                   [
+                    35.4,
+                    83.8
+                   ],
+                   [
+                    27.4,
+                    81.7
+                   ],
+                   [
+                    20,
+                    78
+                   ],
+                   [
+                    13.4,
+                    73
+                   ],
+                   [
+                    7.9,
+                    66.8
+                   ],
+                   [
+                    3.8,
+                    59.7
+                   ],
+                   [
+                    1.1,
+                    51.9
+                   ],
+                   [
+                    0,
+                    43.7
+                   ],
+                   [
+                    0.5,
+                    35.4
+                   ],
+                   [
+                    2.6,
+                    27.4
+                   ],
+                   [
+                    6.3,
+                    20
+                   ],
+                   [
+                    11.3,
+                    13.4
+                   ],
+                   [
+                    17.5,
+                    7.9
+                   ],
+                   [
+                    24.7,
+                    3.8
+                   ],
+                   [
+                    32.5,
+                    1.1
+                   ],
+                   [
+                    39.8,
+                    0.1
+                   ],
+                   [
+                    47.1,
+                    0.3
+                   ],
+                   [
+                    54.3,
+                    1.8
+                   ],
+                   [
+                    61.1,
+                    4.5
+                   ],
+                   [
+                    67.4,
+                    8.4
+                   ],
+                   [
+                    72.9,
+                    13.3
+                   ],
+                   [
+                    77.4,
+                    19.1
+                   ],
+                   [
+                    80.9,
+                    25.5
+                   ],
+                   [
+                    83.2,
+                    32.5
+                   ]
+                  ]
+                 ]
+                },
+                "symbol": {
+                 "type": "CIMPolygonSymbol",
+                 "symbolLayers": [
+                  {
+                   "type": "CIMSolidFill",
+                   "enable": true,
+                   "color": [
+                    242,
+                    242,
+                    242,
+                    255
+                   ]
+                  }
+                 ]
+                }
+               }
+              ],
+              "scaleSymbolsProportionally": true,
+              "respectFrame": true,
+              "rotation": 0
+             },
+             {
+              "type": "CIMVectorMarker",
+              "enable": true,
+              "anchorPoint": {
+               "x": 0,
+               "y": -0.5
+              },
+              "anchorPointUnits": "Relative",
+              "size": 15,
+              "frame": {
+               "xmin": 0,
+               "ymin": 0,
+               "xmax": 197.7,
+               "ymax": 294.7
+              },
+              "markerGraphics": [
+               {
+                "type": "CIMMarkerGraphic",
+                "geometry": {
+                 "rings": [
+                  [
+                   [
+                    98.9,
+                    0
+                   ],
+                   [
+                    119.4,
+                    23.2
+                   ],
+                   [
+                    139.4,
+                    49.3
+                   ],
+                   [
+                    156.8,
+                    75.2
+                   ],
+                   [
+                    171.2,
+                    100.8
+                   ],
+                   [
+                    182.4,
+                    125.3
+                   ],
+                   [
+                    190.6,
+                    148.8
+                   ],
+                   [
+                    195.7,
+                    171.4
+                   ],
+                   [
+                    197.7,
+                    192.9
+                   ],
+                   [
+                    197.7,
+                    195.8
+                   ],
+                   [
+                    197.7,
+                    200.3
+                   ],
+                   [
+                    197.6,
+                    202.5
+                   ],
+                   [
+                    197.5,
+                    204.8
+                   ],
+                   [
+                    197.3,
+                    207.1
+                   ],
+                   [
+                    197,
+                    209.4
+                   ],
+                   [
+                    196.7,
+                    211.7
+                   ],
+                   [
+                    196.4,
+                    214.1
+                   ],
+                   [
+                    196,
+                    216.4
+                   ],
+                   [
+                    195.5,
+                    218.7
+                   ],
+                   [
+                    195,
+                    221.1
+                   ],
+                   [
+                    194.4,
+                    223.4
+                   ],
+                   [
+                    193.7,
+                    225.8
+                   ],
+                   [
+                    193,
+                    228.1
+                   ],
+                   [
+                    192.2,
+                    230.5
+                   ],
+                   [
+                    191.4,
+                    232.8
+                   ],
+                   [
+                    190.5,
+                    235.1
+                   ],
+                   [
+                    189.5,
+                    237.5
+                   ],
+                   [
+                    188.5,
+                    239.7
+                   ],
+                   [
+                    187.4,
+                    242
+                   ],
+                   [
+                    186.2,
+                    244.3
+                   ],
+                   [
+                    185,
+                    246.5
+                   ],
+                   [
+                    183.7,
+                    248.7
+                   ],
+                   [
+                    182.4,
+                    250.9
+                   ],
+                   [
+                    181,
+                    253.1
+                   ],
+                   [
+                    179.5,
+                    255.2
+                   ],
+                   [
+                    178,
+                    257.3
+                   ],
+                   [
+                    176.4,
+                    259.4
+                   ],
+                   [
+                    174.7,
+                    261.4
+                   ],
+                   [
+                    173.1,
+                    263.3
+                   ],
+                   [
+                    171.3,
+                    265.3
+                   ],
+                   [
+                    169.5,
+                    267.2
+                   ],
+                   [
+                    167.7,
+                    269
+                   ],
+                   [
+                    165.8,
+                    270.8
+                   ],
+                   [
+                    163.9,
+                    272.5
+                   ],
+                   [
+                    161.9,
+                    274.2
+                   ],
+                   [
+                    159.9,
+                    275.8
+                   ],
+                   [
+                    157.8,
+                    277.4
+                   ],
+                   [
+                    155.7,
+                    278.9
+                   ],
+                   [
+                    153.6,
+                    280.4
+                   ],
+                   [
+                    151.4,
+                    281.7
+                   ],
+                   [
+                    149.2,
+                    283.1
+                   ],
+                   [
+                    147,
+                    284.4
+                   ],
+                   [
+                    144.8,
+                    285.6
+                   ],
+                   [
+                    142.5,
+                    286.7
+                   ],
+                   [
+                    140.3,
+                    287.8
+                   ],
+                   [
+                    138,
+                    288.8
+                   ],
+                   [
+                    135.7,
+                    289.8
+                   ],
+                   [
+                    133.4,
+                    290.7
+                   ],
+                   [
+                    131,
+                    291.5
+                   ],
+                   [
+                    128.7,
+                    292.3
+                   ],
+                   [
+                    126.4,
+                    293
+                   ],
+                   [
+                    124,
+                    293.6
+                   ],
+                   [
+                    121.7,
+                    294.2
+                   ],
+                   [
+                    119.4,
+                    294.7
+                   ],
+                   [
+                    117,
+                    295.2
+                   ],
+                   [
+                    114.7,
+                    295.6
+                   ],
+                   [
+                    112.4,
+                    296
+                   ],
+                   [
+                    110.1,
+                    296.3
+                   ],
+                   [
+                    107.8,
+                    296.5
+                   ],
+                   [
+                    105.5,
+                    296.7
+                   ],
+                   [
+                    103.3,
+                    296.8
+                   ],
+                   [
+                    101.1,
+                    296.9
+                   ],
+                   [
+                    98.8,
+                    296.9
+                   ],
+                   [
+                    83.1,
+                    295.7
+                   ],
+                   [
+                    67.8,
+                    292
+                   ],
+                   [
+                    53.3,
+                    285.9
+                   ],
+                   [
+                    39.9,
+                    277.5
+                   ],
+                   [
+                    28.1,
+                    267.2
+                   ],
+                   [
+                    18,
+                    255.1
+                   ],
+                   [
+                    10,
+                    241.5
+                   ],
+                   [
+                    4.2,
+                    226.9
+                   ],
+                   [
+                    0.9,
+                    211.5
+                   ],
+                   [
+                    0,
+                    195.8
+                   ],
+                   [
+                    0.1,
+                    192.9
+                   ],
+                   [
+                    2.1,
+                    171.4
+                   ],
+                   [
+                    7.2,
+                    148.8
+                   ],
+                   [
+                    15.4,
+                    125.3
+                   ],
+                   [
+                    26.6,
+                    100.8
+                   ],
+                   [
+                    41,
+                    75.2
+                   ],
+                   [
+                    58.4,
+                    49.3
+                   ],
+                   [
+                    78.4,
+                    23.2
+                   ],
+                   [
+                    98.9,
+                    0
+                   ]
+                  ]
+                 ]
+                },
+                "symbol": {
+                 "type": "CIMPolygonSymbol",
+                 "symbolLayers": [
+                  {
+                   "type": "CIMSolidFill",
+                   "enable": true,
+                   "color": [
+                    17,
+                    26,
+                    40,
+                    255
+                   ]
+                  }
+                 ]
+                }
+               }
+              ],
+              "scaleSymbolsProportionally": true,
+              "respectFrame": true,
+              "rotation": 0
+             }
+            ],
+            "scaleX": 1,
+            "angleAlignment": "Display",
+            "angle": 0
+           }
+          }
+         },
+         {
+          "attributes": {
+           "title": "Edwards, Mississippi",
+           "OBJECTID": 5
+          },
+          "geometry": {
+           "spatialReference": {
+            "latestWkid": 3857,
+            "wkid": 102100
+           },
+           "x": -10086307.77965764,
+           "y": 3807065.7674617036
+          },
+          "symbol": {
+           "type": "CIMSymbolReference",
+           "symbol": {
+            "type": "CIMPointSymbol",
+            "symbolLayers": [
+             {
+              "type": "CIMVectorMarker",
+              "enable": true,
+              "colorLocked": true,
+              "anchorPoint": {
+               "x": 0,
+               "y": -1.75
+              },
+              "anchorPointUnits": "Relative",
+              "size": 5.7,
+              "frame": {
+               "xmin": 0,
+               "ymin": 0,
+               "xmax": 84.3,
+               "ymax": 84.3
+              },
+              "markerGraphics": [
+               {
+                "type": "CIMMarkerGraphic",
+                "geometry": {
+                 "rings": [
+                  [
+                   [
+                    83.2,
+                    32.5
+                   ],
+                   [
+                    84.3,
+                    40.7
+                   ],
+                   [
+                    83.8,
+                    48.9
+                   ],
+                   [
+                    81.7,
+                    56.9
+                   ],
+                   [
+                    78.1,
+                    64.3
+                   ],
+                   [
+                    73,
+                    70.9
+                   ],
+                   [
+                    66.9,
+                    76.4
+                   ],
+                   [
+                    59.7,
+                    80.5
+                   ],
+                   [
+                    51.9,
+                    83.2
+                   ],
+                   [
+                    43.7,
+                    84.3
+                   ],
+                   [
+                    35.4,
+                    83.8
+                   ],
+                   [
+                    27.4,
+                    81.7
+                   ],
+                   [
+                    20,
+                    78
+                   ],
+                   [
+                    13.4,
+                    73
+                   ],
+                   [
+                    7.9,
+                    66.8
+                   ],
+                   [
+                    3.8,
+                    59.7
+                   ],
+                   [
+                    1.1,
+                    51.9
+                   ],
+                   [
+                    0,
+                    43.7
+                   ],
+                   [
+                    0.5,
+                    35.4
+                   ],
+                   [
+                    2.6,
+                    27.4
+                   ],
+                   [
+                    6.3,
+                    20
+                   ],
+                   [
+                    11.3,
+                    13.4
+                   ],
+                   [
+                    17.5,
+                    7.9
+                   ],
+                   [
+                    24.7,
+                    3.8
+                   ],
+                   [
+                    32.5,
+                    1.1
+                   ],
+                   [
+                    39.8,
+                    0.1
+                   ],
+                   [
+                    47.1,
+                    0.3
+                   ],
+                   [
+                    54.3,
+                    1.8
+                   ],
+                   [
+                    61.1,
+                    4.5
+                   ],
+                   [
+                    67.4,
+                    8.4
+                   ],
+                   [
+                    72.9,
+                    13.3
+                   ],
+                   [
+                    77.4,
+                    19.1
+                   ],
+                   [
+                    80.9,
+                    25.5
+                   ],
+                   [
+                    83.2,
+                    32.5
+                   ]
+                  ]
+                 ]
+                },
+                "symbol": {
+                 "type": "CIMPolygonSymbol",
+                 "symbolLayers": [
+                  {
+                   "type": "CIMSolidFill",
+                   "enable": true,
+                   "color": [
+                    242,
+                    242,
+                    242,
+                    255
+                   ]
+                  }
+                 ]
+                }
+               }
+              ],
+              "scaleSymbolsProportionally": true,
+              "respectFrame": true,
+              "rotation": 0
+             },
+             {
+              "type": "CIMVectorMarker",
+              "enable": true,
+              "anchorPoint": {
+               "x": 0,
+               "y": -0.5
+              },
+              "anchorPointUnits": "Relative",
+              "size": 15,
+              "frame": {
+               "xmin": 0,
+               "ymin": 0,
+               "xmax": 197.7,
+               "ymax": 294.7
+              },
+              "markerGraphics": [
+               {
+                "type": "CIMMarkerGraphic",
+                "geometry": {
+                 "rings": [
+                  [
+                   [
+                    98.9,
+                    0
+                   ],
+                   [
+                    119.4,
+                    23.2
+                   ],
+                   [
+                    139.4,
+                    49.3
+                   ],
+                   [
+                    156.8,
+                    75.2
+                   ],
+                   [
+                    171.2,
+                    100.8
+                   ],
+                   [
+                    182.4,
+                    125.3
+                   ],
+                   [
+                    190.6,
+                    148.8
+                   ],
+                   [
+                    195.7,
+                    171.4
+                   ],
+                   [
+                    197.7,
+                    192.9
+                   ],
+                   [
+                    197.7,
+                    195.8
+                   ],
+                   [
+                    197.7,
+                    200.3
+                   ],
+                   [
+                    197.6,
+                    202.5
+                   ],
+                   [
+                    197.5,
+                    204.8
+                   ],
+                   [
+                    197.3,
+                    207.1
+                   ],
+                   [
+                    197,
+                    209.4
+                   ],
+                   [
+                    196.7,
+                    211.7
+                   ],
+                   [
+                    196.4,
+                    214.1
+                   ],
+                   [
+                    196,
+                    216.4
+                   ],
+                   [
+                    195.5,
+                    218.7
+                   ],
+                   [
+                    195,
+                    221.1
+                   ],
+                   [
+                    194.4,
+                    223.4
+                   ],
+                   [
+                    193.7,
+                    225.8
+                   ],
+                   [
+                    193,
+                    228.1
+                   ],
+                   [
+                    192.2,
+                    230.5
+                   ],
+                   [
+                    191.4,
+                    232.8
+                   ],
+                   [
+                    190.5,
+                    235.1
+                   ],
+                   [
+                    189.5,
+                    237.5
+                   ],
+                   [
+                    188.5,
+                    239.7
+                   ],
+                   [
+                    187.4,
+                    242
+                   ],
+                   [
+                    186.2,
+                    244.3
+                   ],
+                   [
+                    185,
+                    246.5
+                   ],
+                   [
+                    183.7,
+                    248.7
+                   ],
+                   [
+                    182.4,
+                    250.9
+                   ],
+                   [
+                    181,
+                    253.1
+                   ],
+                   [
+                    179.5,
+                    255.2
+                   ],
+                   [
+                    178,
+                    257.3
+                   ],
+                   [
+                    176.4,
+                    259.4
+                   ],
+                   [
+                    174.7,
+                    261.4
+                   ],
+                   [
+                    173.1,
+                    263.3
+                   ],
+                   [
+                    171.3,
+                    265.3
+                   ],
+                   [
+                    169.5,
+                    267.2
+                   ],
+                   [
+                    167.7,
+                    269
+                   ],
+                   [
+                    165.8,
+                    270.8
+                   ],
+                   [
+                    163.9,
+                    272.5
+                   ],
+                   [
+                    161.9,
+                    274.2
+                   ],
+                   [
+                    159.9,
+                    275.8
+                   ],
+                   [
+                    157.8,
+                    277.4
+                   ],
+                   [
+                    155.7,
+                    278.9
+                   ],
+                   [
+                    153.6,
+                    280.4
+                   ],
+                   [
+                    151.4,
+                    281.7
+                   ],
+                   [
+                    149.2,
+                    283.1
+                   ],
+                   [
+                    147,
+                    284.4
+                   ],
+                   [
+                    144.8,
+                    285.6
+                   ],
+                   [
+                    142.5,
+                    286.7
+                   ],
+                   [
+                    140.3,
+                    287.8
+                   ],
+                   [
+                    138,
+                    288.8
+                   ],
+                   [
+                    135.7,
+                    289.8
+                   ],
+                   [
+                    133.4,
+                    290.7
+                   ],
+                   [
+                    131,
+                    291.5
+                   ],
+                   [
+                    128.7,
+                    292.3
+                   ],
+                   [
+                    126.4,
+                    293
+                   ],
+                   [
+                    124,
+                    293.6
+                   ],
+                   [
+                    121.7,
+                    294.2
+                   ],
+                   [
+                    119.4,
+                    294.7
+                   ],
+                   [
+                    117,
+                    295.2
+                   ],
+                   [
+                    114.7,
+                    295.6
+                   ],
+                   [
+                    112.4,
+                    296
+                   ],
+                   [
+                    110.1,
+                    296.3
+                   ],
+                   [
+                    107.8,
+                    296.5
+                   ],
+                   [
+                    105.5,
+                    296.7
+                   ],
+                   [
+                    103.3,
+                    296.8
+                   ],
+                   [
+                    101.1,
+                    296.9
+                   ],
+                   [
+                    98.8,
+                    296.9
+                   ],
+                   [
+                    83.1,
+                    295.7
+                   ],
+                   [
+                    67.8,
+                    292
+                   ],
+                   [
+                    53.3,
+                    285.9
+                   ],
+                   [
+                    39.9,
+                    277.5
+                   ],
+                   [
+                    28.1,
+                    267.2
+                   ],
+                   [
+                    18,
+                    255.1
+                   ],
+                   [
+                    10,
+                    241.5
+                   ],
+                   [
+                    4.2,
+                    226.9
+                   ],
+                   [
+                    0.9,
+                    211.5
+                   ],
+                   [
+                    0,
+                    195.8
+                   ],
+                   [
+                    0.1,
+                    192.9
+                   ],
+                   [
+                    2.1,
+                    171.4
+                   ],
+                   [
+                    7.2,
+                    148.8
+                   ],
+                   [
+                    15.4,
+                    125.3
+                   ],
+                   [
+                    26.6,
+                    100.8
+                   ],
+                   [
+                    41,
+                    75.2
+                   ],
+                   [
+                    58.4,
+                    49.3
+                   ],
+                   [
+                    78.4,
+                    23.2
+                   ],
+                   [
+                    98.9,
+                    0
+                   ]
+                  ]
+                 ]
+                },
+                "symbol": {
+                 "type": "CIMPolygonSymbol",
+                 "symbolLayers": [
+                  {
+                   "type": "CIMSolidFill",
+                   "enable": true,
+                   "color": [
+                    17,
+                    26,
+                    40,
+                    255
+                   ]
+                  }
+                 ]
+                }
+               }
+              ],
+              "scaleSymbolsProportionally": true,
+              "respectFrame": true,
+              "rotation": 0
+             }
+            ],
+            "scaleX": 1,
+            "angleAlignment": "Display",
+            "angle": 0
+           }
+          }
+         },
+         {
+          "attributes": {
+           "title": "Vicksburg, Mississippi",
+           "OBJECTID": 6
+          },
+          "geometry": {
+           "spatialReference": {
+            "latestWkid": 3857,
+            "wkid": 102100
+           },
+           "x": -10117457.954093356,
+           "y": 3809767.528792919
+          },
+          "symbol": {
+           "type": "CIMSymbolReference",
+           "symbol": {
+            "type": "CIMPointSymbol",
+            "symbolLayers": [
+             {
+              "type": "CIMVectorMarker",
+              "enable": true,
+              "colorLocked": true,
+              "anchorPoint": {
+               "x": 0,
+               "y": -1.75
+              },
+              "anchorPointUnits": "Relative",
+              "size": 6.84,
+              "frame": {
+               "xmin": 0,
+               "ymin": 0,
+               "xmax": 84.3,
+               "ymax": 84.3
+              },
+              "markerGraphics": [
+               {
+                "type": "CIMMarkerGraphic",
+                "geometry": {
+                 "rings": [
+                  [
+                   [
+                    83.2,
+                    32.5
+                   ],
+                   [
+                    84.3,
+                    40.7
+                   ],
+                   [
+                    83.8,
+                    48.9
+                   ],
+                   [
+                    81.7,
+                    56.9
+                   ],
+                   [
+                    78.1,
+                    64.3
+                   ],
+                   [
+                    73,
+                    70.9
+                   ],
+                   [
+                    66.9,
+                    76.4
+                   ],
+                   [
+                    59.7,
+                    80.5
+                   ],
+                   [
+                    51.9,
+                    83.2
+                   ],
+                   [
+                    43.7,
+                    84.3
+                   ],
+                   [
+                    35.4,
+                    83.8
+                   ],
+                   [
+                    27.4,
+                    81.7
+                   ],
+                   [
+                    20,
+                    78
+                   ],
+                   [
+                    13.4,
+                    73
+                   ],
+                   [
+                    7.9,
+                    66.8
+                   ],
+                   [
+                    3.8,
+                    59.7
+                   ],
+                   [
+                    1.1,
+                    51.9
+                   ],
+                   [
+                    0,
+                    43.7
+                   ],
+                   [
+                    0.5,
+                    35.4
+                   ],
+                   [
+                    2.6,
+                    27.4
+                   ],
+                   [
+                    6.3,
+                    20
+                   ],
+                   [
+                    11.3,
+                    13.4
+                   ],
+                   [
+                    17.5,
+                    7.9
+                   ],
+                   [
+                    24.7,
+                    3.8
+                   ],
+                   [
+                    32.5,
+                    1.1
+                   ],
+                   [
+                    39.8,
+                    0.1
+                   ],
+                   [
+                    47.1,
+                    0.3
+                   ],
+                   [
+                    54.3,
+                    1.8
+                   ],
+                   [
+                    61.1,
+                    4.5
+                   ],
+                   [
+                    67.4,
+                    8.4
+                   ],
+                   [
+                    72.9,
+                    13.3
+                   ],
+                   [
+                    77.4,
+                    19.1
+                   ],
+                   [
+                    80.9,
+                    25.5
+                   ],
+                   [
+                    83.2,
+                    32.5
+                   ]
+                  ]
+                 ]
+                },
+                "symbol": {
+                 "type": "CIMPolygonSymbol",
+                 "symbolLayers": [
+                  {
+                   "type": "CIMSolidFill",
+                   "enable": true,
+                   "color": [
+                    255,
+                    255,
+                    255,
+                    255
+                   ]
+                  }
+                 ]
+                }
+               }
+              ],
+              "scaleSymbolsProportionally": true,
+              "respectFrame": true,
+              "rotation": 0
+             },
+             {
+              "type": "CIMVectorMarker",
+              "enable": true,
+              "anchorPoint": {
+               "x": 0,
+               "y": -0.5
+              },
+              "anchorPointUnits": "Relative",
+              "size": 18.268747879199182,
+              "frame": {
+               "xmin": -1.475873769935518,
+               "ymin": -2.1999999999999886,
+               "xmax": 199.1758737699355,
+               "ymax": 296.9
+              },
+              "markerGraphics": [
+               {
+                "type": "CIMMarkerGraphic",
+                "geometry": {
+                 "rings": [
+                  [
+                   [
+                    98.9,
+                    0
+                   ],
+                   [
+                    119.4,
+                    23.2
+                   ],
+                   [
+                    139.4,
+                    49.3
+                   ],
+                   [
+                    156.8,
+                    75.2
+                   ],
+                   [
+                    171.2,
+                    100.8
+                   ],
+                   [
+                    182.4,
+                    125.3
+                   ],
+                   [
+                    190.6,
+                    148.8
+                   ],
+                   [
+                    195.7,
+                    171.4
+                   ],
+                   [
+                    197.7,
+                    192.9
+                   ],
+                   [
+                    197.7,
+                    195.8
+                   ],
+                   [
+                    197.7,
+                    200.3
+                   ],
+                   [
+                    197.6,
+                    202.5
+                   ],
+                   [
+                    197.5,
+                    204.8
+                   ],
+                   [
+                    197.3,
+                    207.1
+                   ],
+                   [
+                    197,
+                    209.4
+                   ],
+                   [
+                    196.7,
+                    211.7
+                   ],
+                   [
+                    196.4,
+                    214.1
+                   ],
+                   [
+                    196,
+                    216.4
+                   ],
+                   [
+                    195.5,
+                    218.7
+                   ],
+                   [
+                    195,
+                    221.1
+                   ],
+                   [
+                    194.4,
+                    223.4
+                   ],
+                   [
+                    193.7,
+                    225.8
+                   ],
+                   [
+                    193,
+                    228.1
+                   ],
+                   [
+                    192.2,
+                    230.5
+                   ],
+                   [
+                    191.4,
+                    232.8
+                   ],
+                   [
+                    190.5,
+                    235.1
+                   ],
+                   [
+                    189.5,
+                    237.5
+                   ],
+                   [
+                    188.5,
+                    239.7
+                   ],
+                   [
+                    187.4,
+                    242
+                   ],
+                   [
+                    186.2,
+                    244.3
+                   ],
+                   [
+                    185,
+                    246.5
+                   ],
+                   [
+                    183.7,
+                    248.7
+                   ],
+                   [
+                    182.4,
+                    250.9
+                   ],
+                   [
+                    181,
+                    253.1
+                   ],
+                   [
+                    179.5,
+                    255.2
+                   ],
+                   [
+                    178,
+                    257.3
+                   ],
+                   [
+                    176.4,
+                    259.4
+                   ],
+                   [
+                    174.7,
+                    261.4
+                   ],
+                   [
+                    173.1,
+                    263.3
+                   ],
+                   [
+                    171.3,
+                    265.3
+                   ],
+                   [
+                    169.5,
+                    267.2
+                   ],
+                   [
+                    167.7,
+                    269
+                   ],
+                   [
+                    165.8,
+                    270.8
+                   ],
+                   [
+                    163.9,
+                    272.5
+                   ],
+                   [
+                    161.9,
+                    274.2
+                   ],
+                   [
+                    159.9,
+                    275.8
+                   ],
+                   [
+                    157.8,
+                    277.4
+                   ],
+                   [
+                    155.7,
+                    278.9
+                   ],
+                   [
+                    153.6,
+                    280.4
+                   ],
+                   [
+                    151.4,
+                    281.7
+                   ],
+                   [
+                    149.2,
+                    283.1
+                   ],
+                   [
+                    147,
+                    284.4
+                   ],
+                   [
+                    144.8,
+                    285.6
+                   ],
+                   [
+                    142.5,
+                    286.7
+                   ],
+                   [
+                    140.3,
+                    287.8
+                   ],
+                   [
+                    138,
+                    288.8
+                   ],
+                   [
+                    135.7,
+                    289.8
+                   ],
+                   [
+                    133.4,
+                    290.7
+                   ],
+                   [
+                    131,
+                    291.5
+                   ],
+                   [
+                    128.7,
+                    292.3
+                   ],
+                   [
+                    126.4,
+                    293
+                   ],
+                   [
+                    124,
+                    293.6
+                   ],
+                   [
+                    121.7,
+                    294.2
+                   ],
+                   [
+                    119.4,
+                    294.7
+                   ],
+                   [
+                    117,
+                    295.2
+                   ],
+                   [
+                    114.7,
+                    295.6
+                   ],
+                   [
+                    112.4,
+                    296
+                   ],
+                   [
+                    110.1,
+                    296.3
+                   ],
+                   [
+                    107.8,
+                    296.5
+                   ],
+                   [
+                    105.5,
+                    296.7
+                   ],
+                   [
+                    103.3,
+                    296.8
+                   ],
+                   [
+                    101.1,
+                    296.9
+                   ],
+                   [
+                    98.8,
+                    296.9
+                   ],
+                   [
+                    83.1,
+                    295.7
+                   ],
+                   [
+                    67.8,
+                    292
+                   ],
+                   [
+                    53.3,
+                    285.9
+                   ],
+                   [
+                    39.9,
+                    277.5
+                   ],
+                   [
+                    28.1,
+                    267.2
+                   ],
+                   [
+                    18,
+                    255.1
+                   ],
+                   [
+                    10,
+                    241.5
+                   ],
+                   [
+                    4.2,
+                    226.9
+                   ],
+                   [
+                    0.9,
+                    211.5
+                   ],
+                   [
+                    0,
+                    195.8
+                   ],
+                   [
+                    0.1,
+                    192.9
+                   ],
+                   [
+                    2.1,
+                    171.4
+                   ],
+                   [
+                    7.2,
+                    148.8
+                   ],
+                   [
+                    15.4,
+                    125.3
+                   ],
+                   [
+                    26.6,
+                    100.8
+                   ],
+                   [
+                    41,
+                    75.2
+                   ],
+                   [
+                    58.4,
+                    49.3
+                   ],
+                   [
+                    78.4,
+                    23.2
+                   ],
+                   [
+                    98.9,
+                    0
+                   ]
+                  ]
+                 ]
+                },
+                "symbol": {
+                 "type": "CIMPolygonSymbol",
+                 "symbolLayers": [
+                  {
+                   "type": "CIMSolidFill",
+                   "enable": true,
+                   "color": [
+                    232,
+                    201,
+                    23,
+                    255
+                   ]
+                  }
+                 ]
+                }
+               }
+              ],
+              "scaleSymbolsProportionally": true,
+              "respectFrame": true,
+              "rotation": 0
+             }
+            ],
+            "scaleX": 1,
+            "angleAlignment": "Display",
+            "angle": 0
+           }
+          }
+         }
+        ],
+        "geometryType": "esriGeometryPoint"
+       }
+      },
+      {
+       "layerDefinition": {
+        "name": "Text",
+        "drawingInfo": {
+         "renderer": {
+          "type": "simple",
+          "symbol": {
+           "type": "esriTS",
+           "color": [
+            0,
+            0,
+            0,
+            255
+           ],
+           "font": {
+            "family": "sans-serif",
+            "size": 9
+           },
+           "horizontalAlignment": "center",
+           "kerning": true,
+           "rotated": false,
+           "text": "",
+           "verticalAlignment": "baseline",
+           "xoffset": 0,
+           "yoffset": 0,
+           "angle": 0,
+           "lineWidth": 192,
+           "lineHeight": 1
+          }
+         }
+        },
+        "id": 4,
+        "geometryType": "esriGeometryPoint",
+        "minScale": 0,
+        "maxScale": 0,
+        "objectIdField": "OBJECTID",
+        "fields": [
+         {
+          "alias": "OBJECTID",
+          "editable": false,
+          "name": "OBJECTID",
+          "nullable": false,
+          "type": "esriFieldTypeOID"
+         },
+         {
+          "alias": "Title",
+          "editable": true,
+          "length": 255,
+          "name": "title",
+          "nullable": true,
+          "type": "esriFieldTypeString"
+         }
+        ],
+        "spatialReference": {
+         "latestWkid": 3857,
+         "wkid": 102100
+        }
+       },
+       "featureSet": {
+        "features": [
+         {
+          "attributes": {
+           "title": "Bruinsburg Bend, Mississippi",
+           "OBJECTID": 1
+          },
+          "geometry": {
+           "spatialReference": {
+            "latestWkid": 3857,
+            "wkid": 102100
+           },
+           "x": -10144582.527460765,
+           "y": 3754842.2894519866
+          },
+          "symbol": {
+           "type": "esriTS",
+           "color": [
+            0,
+            0,
+            0,
+            255
+           ],
+           "font": {
+            "family": "Arial",
+            "size": 9,
+            "weight": "bold"
+           },
+           "horizontalAlignment": "center",
+           "kerning": true,
+           "haloSize": 0.75,
+           "rotated": false,
+           "text": "Bruinsburg Bend",
+           "verticalAlignment": "baseline",
+           "xoffset": 0,
+           "yoffset": 0,
+           "angle": 0,
+           "lineWidth": 512,
+           "lineHeight": 1
+          }
+         },
+         {
+          "attributes": {
+           "title": "Hard Times",
+           "OBJECTID": 2
+          },
+          "geometry": {
+           "spatialReference": {
+            "latestWkid": 3857,
+            "wkid": 102100
+           },
+           "x": -10145346.897743616,
+           "y": 3767581.7957212804
+          },
+          "symbol": {
+           "type": "esriTS",
+           "color": [
+            0,
+            0,
+            0,
+            255
+           ],
+           "font": {
+            "family": "Arial",
+            "size": 9,
+            "weight": "bold"
+           },
+           "horizontalAlignment": "center",
+           "kerning": true,
+           "haloSize": 0.75,
+           "rotated": false,
+           "text": "Hard Times",
+           "verticalAlignment": "baseline",
+           "xoffset": 0,
+           "yoffset": 0,
+           "angle": 0,
+           "lineWidth": 512,
+           "lineHeight": 1
+          }
+         },
+         {
+          "attributes": {
+           "title": "New Carthage",
+           "OBJECTID": 3
+          },
+          "geometry": {
+           "spatialReference": {
+            "latestWkid": 3857,
+            "wkid": 102100
+           },
+           "x": -10144497.590172132,
+           "y": 3790343.043625575
+          },
+          "symbol": {
+           "type": "esriTS",
+           "color": [
+            0,
+            0,
+            0,
+            255
+           ],
+           "font": {
+            "family": "Arial",
+            "size": 9,
+            "weight": "bold"
+           },
+           "horizontalAlignment": "center",
+           "kerning": true,
+           "haloSize": 0.75,
+           "rotated": false,
+           "text": "New Carthage",
+           "verticalAlignment": "baseline",
+           "xoffset": 0,
+           "yoffset": 0,
+           "angle": 0,
+           "lineWidth": 512,
+           "lineHeight": 1
+          }
+         },
+         {
+          "attributes": {
+           "title": "Text",
+           "OBJECTID": 4
+          },
+          "geometry": {
+           "spatialReference": {
+            "latestWkid": 3857,
+            "wkid": 102100
+           },
+           "x": -10132522.45885103,
+           "y": 3816671.3555712933
+          },
+          "symbol": {
+           "type": "esriTS",
+           "color": [
+            0,
+            0,
+            0,
+            255
+           ],
+           "font": {
+            "family": "Arial",
+            "size": 9,
+            "weight": "bold"
+           },
+           "horizontalAlignment": "center",
+           "kerning": true,
+           "haloSize": 0.75,
+           "rotated": false,
+           "text": "Milliken's Bend",
+           "verticalAlignment": "baseline",
+           "xoffset": 0,
+           "yoffset": 0,
+           "angle": 0,
+           "lineWidth": 512,
+           "lineHeight": 1
+          }
+         },
+         {
+          "attributes": {
+           "title": "Text",
+           "OBJECTID": 5
+          },
+          "geometry": {
+           "spatialReference": {
+            "latestWkid": 3857,
+            "wkid": 102100
+           },
+           "x": -10086095.450432096,
+           "y": 3806089.0726186545
+          },
+          "symbol": {
+           "type": "esriTS",
+           "color": [
+            0,
+            0,
+            0,
+            255
+           ],
+           "font": {
+            "family": "Arial",
+            "size": 9,
+            "weight": "bold"
+           },
+           "horizontalAlignment": "center",
+           "kerning": true,
+           "haloSize": 0.75,
+           "rotated": false,
+           "text": "Edwards",
+           "verticalAlignment": "baseline",
+           "xoffset": 0,
+           "yoffset": 0,
+           "angle": 0,
+           "lineWidth": 512,
+           "lineHeight": 1
+          }
+         }
+        ],
+        "geometryType": "esriGeometryPoint"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "B4",
+   "what": "Civil War: railroads have no pop-up (it listed raw fields).",
+   "kind": "webmap-layer",
+   "webmap": "7a06e8e2818941f99a3d40bb32e08118",
+   "layerId": "19f6c631016-layer-15",
+   "layerTitle": "Railroads 1826 to 1863 (static)",
+   "before": "c93058b9b0372ada1805b24e5c44da8f4242b826",
+   "set": {
+    "disablePopup": true
+   }
+  },
+  {
+   "id": "A4",
+   "what": "US Slavery 1850: state pop-ups read correctly, with or without a year.",
+   "kind": "webmap-layer",
+   "webmap": "819f60a5a3344d958d24f505849abaaa",
+   "layerId": "18aaee485df-layer-4",
+   "layerTitle": "US States and Territories 1850",
+   "before": "02832248ba65d78472d21dd04b212c4cdb969283",
+   "set": {
+    "popupInfo": {
+     "popupElements": [
+      {
+       "type": "text",
+       "text": "<p>{expression/expr0}&nbsp;</p><p>Category on the source map: {Designation}&nbsp;<br /><br />*Year and classification of the state or territory are based on the original map, published by Harper's Atlas of American History in 1920. Current scholarship may differ.</p>"
+      }
+     ],
+     "description": "<p>{expression/expr0}&nbsp;</p><p>Category on the source map: {Designation}&nbsp;<br /><br />*Year and classification of the state or territory are based on the original map, published by Harper's Atlas of American History in 1920. Current scholarship may differ.</p>",
+     "expressionInfos": [
+      {
+       "name": "expr0",
+       "title": "Free vs. Slave States",
+       "expression": "var free = $feature.FreeSlave12 == 1;\nvar y = $feature.StateYear;\nvar s = When(\n  $feature.Type == 'state', IIf(free, 'A free state: slavery was not allowed here.', 'A slave state: slavery was allowed here.'),\n  $feature.Type == 'territory', IIf(free, 'A territory where slavery was not allowed.', 'A territory where slavery was allowed.'),\n  IIf(free, 'Slavery was not allowed here.', 'Slavery was allowed here.'));\nreturn IIf(IsEmpty(y), s, s + ' Year given on the source map: ' + y + '.');",
+       "returnType": "string"
+      }
+     ],
+     "fieldInfos": [
+      {
+       "fieldName": "STATE_NAME",
+       "isEditable": true,
+       "label": "Name",
+       "visible": true
+      },
+      {
+       "fieldName": "STATE_ABBR",
+       "isEditable": true,
+       "label": "Abbreviation",
+       "visible": true
+      },
+      {
+       "fieldName": "SUB_REGION",
+       "isEditable": true,
+       "label": "Region",
+       "visible": true
+      },
+      {
+       "fieldName": "Shape__Area",
+       "isEditable": true,
+       "label": "Shape__Area",
+       "visible": true
+      },
+      {
+       "fieldName": "Shape__Length",
+       "isEditable": true,
+       "label": "Shape__Length",
+       "visible": true
+      },
+      {
+       "fieldName": "OBJECTID",
+       "isEditable": true,
+       "label": "OBJECTID",
+       "visible": false
+      },
+      {
+       "fieldName": "GlobalID",
+       "isEditable": true,
+       "label": "GlobalID",
+       "visible": false
+      },
+      {
+       "fieldName": "Designation",
+       "isEditable": true,
+       "label": "Designation",
+       "visible": false
+      },
+      {
+       "fieldName": "StateYear",
+       "isEditable": true,
+       "label": "StateYear",
+       "visible": false
+      },
+      {
+       "fieldName": "Type",
+       "isEditable": true,
+       "label": "Type",
+       "visible": false
+      },
+      {
+       "fieldName": "FreeSlave12",
+       "isEditable": true,
+       "label": "FreeSlave12",
+       "visible": false
+      },
+      {
+       "fieldName": "expression/expr0",
+       "isEditable": true,
+       "visible": false
+      }
+     ],
+     "title": "{STATE_NAME}"
+    }
+   }
+  }
+ ]
+}
