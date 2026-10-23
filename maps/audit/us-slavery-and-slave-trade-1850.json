@@ -1,5 +1,5 @@
 {
- "tool": "Map audit 1.0",
+ "tool": "Map audit 1.1",
  "lesson": "us-slavery-and-slave-trade-1850",
  "webmapId": "819f60a5a3344d958d24f505849abaaa",
  "item": {
@@ -26,7 +26,7 @@
   "licenseInfo": "<img src='https://downloads.esri.com/blogs/arcgisonline/esrilogo_new.png' style='max-width:100%; height:auto; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;' /><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'> This work is licensed under the Esri Master License Agreement.</span><br /><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><a href='https://goto.arcgis.com/termsofuse/viewsummary' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Summary</b></a> | <a href='https://goto.arcgis.com/termsofuse/viewtermsofuse' style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Terms of Use</b></a></div>",
   "created": 1695065664000,
   "modified": 1787767944000,
-  "numViews": 0,
+  "numViews": 5672,
   "thumbnail": "thumbnail/ago_downloaded.png",
   "contentStatus": null,
   "extent": [
@@ -87,6 +87,7 @@
    "url": "https://tiles.arcgis.com/tiles/iFGeGXTAJXnjq0YN/arcgis/rest/services/US_1850_Original_Map_Albers/MapServer",
    "disablePopup": false,
    "popup": null,
+   "popupFrom": null,
    "minScale": 62380575.811979,
    "maxScale": 1949392.994124,
    "showLegend": true,
@@ -114,7 +115,7 @@
     "licenseInfo": "<span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'>The map from which this data was digitized, is in the </span><a href='https://www.loc.gov/item/32005827/' style='color:rgb(0, 97, 155); text-decoration-line:none; font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;' target='_blank' rel='nofollow ugc noopener noreferrer'>public domain</a><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'>.</span>",
     "created": 1695158028000,
     "modified": 1709696411000,
-    "numViews": 0,
+    "numViews": 9921,
     "thumbnail": "thumbnail/thumbnail.png",
     "contentStatus": null,
     "extent": [
@@ -148,6 +149,7 @@
    "url": null,
    "disablePopup": false,
    "popup": null,
+   "popupFrom": null,
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -167,32 +169,8 @@
    "disablePopup": false,
    "popup": {
     "title": "{STATE_NAME}",
-    "fieldsShown": [
-     {
-      "field": "STATE_NAME",
-      "label": "Name"
-     },
-     {
-      "field": "STATE_ABBR",
-      "label": "Abbreviation"
-     },
-     {
-      "field": "SUB_REGION",
-      "label": "Region"
-     },
-     {
-      "field": "Shape__Area",
-      "label": "Shape__Area"
-     },
-     {
-      "field": "Shape__Length",
-      "label": "Shape__Length"
-     }
-    ],
-    "fieldLabelsAreNames": [
-     "Shape__Area",
-     "Shape__Length"
-    ],
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
     "elements": [
      "text"
     ],
@@ -205,6 +183,7 @@
      "expression/expr0"
     ]
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -384,7 +363,7 @@
     "licenseInfo": "<span style='font-size:16px;'>The map from which this data was digitized, is in the </span><a href='https://www.loc.gov/item/32005827/' style='color:rgb(0, 97, 155); text-decoration-line:none; font-size:16px;' target='_blank' rel='nofollow ugc noopener noreferrer'>public domain</a><span style='font-size:16px;'>.</span>",
     "created": 1695065384000,
     "modified": 1709696404000,
-    "numViews": 0,
+    "numViews": 24200,
     "thumbnail": "thumbnail/thumbnail.png",
     "contentStatus": null,
     "extent": [
@@ -899,8 +878,10 @@
      "duplicates": [],
      "sameGeometry": [],
      "maybeCutOff": [],
-     "nameField": "STATE_NAME"
-    }
+     "nameField": "STATE_NAME",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.1
    },
    "drawsAtOpening": true,
    "rendererColourOnly": false
@@ -914,12 +895,89 @@
    "itemId": "37a9e358f0794a6da03b6ee2f4c0f24a",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/USStatesandTerritories_1850_Albers_version/FeatureServer/0",
    "disablePopup": true,
-   "popup": null,
+   "popup": {
+    "title": "{Type}",
+    "fieldsShown": [
+     {
+      "field": "OBJECTID",
+      "label": "OBJECTID"
+     },
+     {
+      "field": "InLine_FID",
+      "label": "InLine_FID"
+     },
+     {
+      "field": "Type",
+      "label": "Type"
+     },
+     {
+      "field": "Shape__Length",
+      "label": "Shape__Length"
+     }
+    ],
+    "fieldLabelsAreNames": [
+     "OBJECTID",
+     "InLine_FID",
+     "Type",
+     "Shape__Length"
+    ],
+    "elements": [
+     "fields"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": []
+   },
+   "popupFrom": "layer item",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
    "listMode": null,
    "definitionExpression": null,
+   "rendererInMap": {
+    "type": "uniqueValue",
+    "field": "Type",
+    "valueExpression": false,
+    "classes": [
+     {
+      "value": "Internal Routes",
+      "label": "Internal Routes",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "Route of L'Amistead",
+      "label": "Route of L'Amistead",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "Route of the Creole",
+      "label": "Route of the Creole",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "Sea Routes",
+      "label": "Sea Routes",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     }
+    ],
+    "default": null
+   },
    "item": {
     "id": "37a9e358f0794a6da03b6ee2f4c0f24a",
     "title": "US States and Territories 1850",
@@ -942,7 +1000,7 @@
     "licenseInfo": "<span style='font-size:16px;'>The map from which this data was digitized, is in the </span><a href='https://www.loc.gov/item/32005827/' style='color:rgb(0, 97, 155); text-decoration-line:none; font-size:16px;' target='_blank' rel='nofollow ugc noopener noreferrer'>public domain</a><span style='font-size:16px;'>.</span>",
     "created": 1695065384000,
     "modified": 1709696404000,
-    "numViews": 0,
+    "numViews": 24200,
     "thumbnail": "thumbnail/thumbnail.png",
     "contentStatus": null,
     "extent": [
@@ -1067,8 +1125,10 @@
      "duplicates": [],
      "sameGeometry": [],
      "maybeCutOff": [],
-     "nameField": null
-    }
+     "nameField": "Type",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.1
    },
    "drawsAtOpening": true,
    "rendererColourOnly": false
@@ -1083,6 +1143,7 @@
    "url": null,
    "disablePopup": false,
    "popup": null,
+   "popupFrom": null,
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -1128,6 +1189,7 @@
     "expressions": [],
     "fieldsInText": []
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -1236,8 +1298,10 @@
      "duplicates": [],
      "sameGeometry": [],
      "maybeCutOff": [],
-     "nameField": null
-    }
+     "nameField": "InLine_FID",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.1
    },
    "drawsAtOpening": true,
    "rendererColourOnly": false
@@ -1284,11 +1348,38 @@
     "expressions": [],
     "fieldsInText": []
    },
+   "popupFrom": "map",
    "minScale": 9152861.381909,
    "maxScale": null,
    "showLegend": true,
    "listMode": null,
    "definitionExpression": null,
+   "rendererInMap": {
+    "type": "uniqueValue",
+    "field": "Country",
+    "valueExpression": false,
+    "classes": [
+     {
+      "value": "Canada",
+      "label": "Canada",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     },
+     {
+      "value": "United States",
+      "label": "United States",
+      "symbol": {
+       "type": "CIMSymbolReference",
+       "style": null,
+       "cim": true
+      }
+     }
+    ],
+    "default": null
+   },
    "item": {
     "id": "d8a604eef63e469189db303419718b5c",
     "title": "Underground Railroad Approximate Routes",
@@ -1428,11 +1519,13 @@
      "duplicates": [],
      "sameGeometry": [],
      "maybeCutOff": [],
-     "nameField": "Name"
-    }
+     "nameField": "Name",
+     "geometryCompared": "geometry"
+    },
+    "seconds": 0.1
    },
    "drawsAtOpening": false,
-   "rendererColourOnly": true
+   "rendererColourOnly": false
   },
   {
    "path": "Missouri Compromise Line",
@@ -1457,11 +1550,23 @@
      "YEAR"
     ]
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
    "listMode": null,
    "definitionExpression": null,
+   "rendererInMap": {
+    "type": "simple",
+    "field": null,
+    "valueExpression": false,
+    "symbol": {
+     "type": "CIMSymbolReference",
+     "style": null,
+     "cim": true
+    },
+    "label": null
+   },
    "item": {
     "id": "d68c728f32c4479b9bcd15a67db78b20",
     "title": "Missouri Compromise Line",
@@ -1576,8 +1681,10 @@
      "duplicates": [],
      "sameGeometry": [],
      "maybeCutOff": [],
-     "nameField": "NAME"
-    }
+     "nameField": "NAME",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.1
    },
    "drawsAtOpening": true,
    "rendererColourOnly": false
@@ -1585,8 +1692,8 @@
  ],
  "findings": [
   {
-   "where": "layer United States, 1850 / US States and Territories 1850",
-   "what": "pop-up shows field names as labels: Shape__Area, Shape__Length"
+   "where": "layer United States, 1850 / Internal Routes of the US Slave Trade",
+   "what": "pop-up shows field names as labels: OBJECTID, InLine_FID, Type, Shape__Length"
   },
   {
    "where": "layer Underground Railroad Approximate Routes / Underground Railroad Approximate Routes",
@@ -1595,10 +1702,6 @@
   {
    "where": "layer Underground Railroad Approximate Routes / Cities",
    "what": "pop-up shows field names as labels: OBJECTID, Name, State, Country"
-  },
-  {
-   "where": "layer Underground Railroad Approximate Routes / Cities",
-   "what": "symbols differ by colour only (WCAG 1.4.1 if a question depends on telling them apart)"
   },
   {
    "where": "layer Underground Railroad Approximate Routes / Cities",

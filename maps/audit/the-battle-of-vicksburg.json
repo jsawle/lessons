@@ -1,5 +1,5 @@
 {
- "tool": "Map audit 1.0",
+ "tool": "Map audit 1.1",
  "lesson": "the-battle-of-vicksburg",
  "webmapId": "1ba8cd3fc75a49a497be1137fce4c032",
  "item": {
@@ -29,7 +29,7 @@
   "licenseInfo": "<p><img style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; height:auto; max-width:100%;' src='https://downloads.esri.com/blogs/arcgisonline/esrilogo_new.png' /><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'>This work is licensed under the Esri Master License Agreement.</span><br />&nbsp;</p><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><a style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' href='https://goto.arcgis.com/termsofuse/viewsummary' rel='nofollow ugc noopener noreferrer'><strong>View Summary</strong></a>&nbsp;|&nbsp;<a style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' href='https://goto.arcgis.com/termsofuse/viewtermsofuse' rel='nofollow ugc noopener noreferrer'><strong>View Terms of Use</strong></a></div><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'>&nbsp;</div>",
   "created": 1700178564000,
   "modified": 1782843555000,
-  "numViews": 2475,
+  "numViews": 2476,
   "thumbnail": "thumbnail/thumbnail1702673296499.png",
   "contentStatus": null,
   "extent": [
@@ -88,7 +88,82 @@
    "itemId": "694a76f1ebe241088e3ed39fb494a8e2",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/RR1826_1911Modified103123/FeatureServer/0",
    "disablePopup": false,
-   "popup": null,
+   "popup": {
+    "title": "{RRname}",
+    "fieldsShown": [
+     {
+      "field": "FID",
+      "label": "FID"
+     },
+     {
+      "field": "FID_RR1826",
+      "label": "Unique ID 1"
+     },
+     {
+      "field": "track",
+      "label": "Track Miles"
+     },
+     {
+      "field": "VxCount",
+      "label": "Vertex Count"
+     },
+     {
+      "field": "Gauge",
+      "label": "Track Gauge"
+     },
+     {
+      "field": "RRname",
+      "label": "Railroad Name"
+     },
+     {
+      "field": "InOpBy",
+      "label": "In Operation By"
+     },
+     {
+      "field": "ExactDate",
+      "label": "Exact Date"
+     },
+     {
+      "field": "FIDAll",
+      "label": "Unique ID 2"
+     },
+     {
+      "field": "Edited",
+      "label": "Total Edits"
+     },
+     {
+      "field": "Miles",
+      "label": "Miles of Track"
+     },
+     {
+      "field": "FID_1900St",
+      "label": "Unique Identifier 3"
+     },
+     {
+      "field": "STATENAM",
+      "label": "State Name"
+     },
+     {
+      "field": "Transcont",
+      "label": "Transcontinental Railroads"
+     },
+     {
+      "field": "Shape__Length",
+      "label": "Shape__Length"
+     }
+    ],
+    "fieldLabelsAreNames": [
+     "FID",
+     "Shape__Length"
+    ],
+    "elements": [
+     "fields"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": []
+   },
+   "popupFrom": "layer item",
    "minScale": 1500000,
    "maxScale": 0,
    "showLegend": true,
@@ -443,11 +518,12 @@
      "Dates"
     ]
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
    "listMode": null,
-   "definitionExpression": null,
+   "definitionExpression": "OBJECTID NOT IN (106,125,268)",
    "rendererInMap": {
     "type": "uniqueValue",
     "field": "Victor",
@@ -727,143 +803,52 @@
      }
     ],
     "serviceItemId": "de5fad0e406c4a46bc73270dfb291c92",
-    "count": 287,
+    "filter": "OBJECTID NOT IN (106,125,268)",
+    "count": 284,
     "checks": {
      "duplicates": [],
      "sameGeometry": [
       [
-       98,
-       99
+       "Suffolk (Hill's Point) (Battle of Fort Huger)",
+       "Suffolk (Norfleet House); Siege of Suffolk"
       ],
       [
-       49,
-       118
+       "Winchester",
+       "Winchester"
       ],
       [
-       21,
-       125
+       "Charleston Harbor",
+       "Charleston Harbor"
       ],
       [
-       97,
-       135
+       "Kernstown",
+       "Second Battle of Kernstown"
       ],
       [
-       33,
-       213
+       "Memphis",
+       "Memphis"
       ],
       [
-       52,
-       224
-      ],
-      [
-       200,
-       270
+       "Petersburg",
+       "Fort Stedman"
       ]
      ],
      "maybeCutOff": [
       {
-       "feature": 1,
-       "field": "Thumbnail",
-       "ends": "bnails/image/Fort%20Sumter%20Battle%20Hero.jpg?itok=xkCKB-jy"
+       "feature": "Shepherdstown",
+       "field": "Notes",
+       "ends": " command for not aggressively pursuing Lee's retreating army"
       },
       {
-       "feature": 1,
-       "field": "Thumbnail_Small",
-       "ends": "bnails/image/Fort%20Sumter%20Battle%20Hero.jpg?itok=LX_pKnCq"
-      },
-      {
-       "feature": 3,
-       "field": "Thumbnail",
-       "ends": "e/Sokalski%27s%20Battery%20Hero.jpg?h=5eea89f8&itok=NNpFbSes"
-      },
-      {
-       "feature": 3,
-       "field": "Thumbnail_Small",
-       "ends": "e/Sokalski%27s%20Battery%20Hero.jpg?h=5eea89f8&itok=NNpFbSes"
-      },
-      {
-       "feature": 4,
-       "field": "Thumbnail",
-       "ends": "/thumbnails/image/Carthage%20Battle%20Hero.jpg?itok=aFED-02z"
-      },
-      {
-       "feature": 4,
-       "field": "Thumbnail_Small",
-       "ends": "/thumbnails/image/Carthage%20Battle%20Hero.jpg?itok=9nZJxhJ7"
-      },
-      {
-       "feature": 5,
-       "field": "Thumbnail",
-       "ends": "/thumbnails/image/Rich%20Mountain%20Battle.jpg?itok=VhPyfsAG"
-      },
-      {
-       "feature": 5,
-       "field": "Thumbnail_Small",
-       "ends": "/thumbnails/image/Rich%20Mountain%20Battle.jpg?itok=ARpkwAhY"
-      },
-      {
-       "feature": 6,
-       "field": "Thumbnail",
-       "ends": "ils/image/Battle%20of%20Corrick%27s%20Ford.jpg?itok=HmnuWY90"
-      },
-      {
-       "feature": 6,
-       "field": "Thumbnail_Small",
-       "ends": "ils/image/Battle%20of%20Corrick%27s%20Ford.jpg?itok=J3o37kxO"
-      },
-      {
-       "feature": 7,
-       "field": "Thumbnail",
-       "ends": "idth/public/thumbnails/image/bull-run-hero.jpg?itok=Zp-Pszkz"
-      },
-      {
-       "feature": 8,
-       "field": "Thumbnail",
-       "ends": "idth/public/thumbnails/image/bull-run-hero.jpg?itok=Zp-Pszkz"
-      },
-      {
-       "feature": 9,
-       "field": "Thumbnail",
-       "ends": "s/image/Wilson%27s%20Creek%20Battle%20Hero.jpg?itok=15UFmYEJ"
-      },
-      {
-       "feature": 9,
-       "field": "Thumbnail_Small",
-       "ends": "s/image/Wilson%27s%20Creek%20Battle%20Hero.jpg?itok=pmOtyHoM"
-      },
-      {
-       "feature": 16,
-       "field": "Thumbnail",
-       "ends": "ils/image/Ball%27s%20Bluff%20Battle%20Hero.jpg?itok=8yp79z_D"
-      },
-      {
-       "feature": 16,
-       "field": "Thumbnail_Small",
-       "ends": "ils/image/Ball%27s%20Bluff%20Battle%20Hero.jpg?itok=DmTgU1DX"
-      },
-      {
-       "feature": 20,
-       "field": "Thumbnail",
-       "ends": "umbnails/image/Dranesville%20Battle%20Hero.jpg?itok=hjMAGmmj"
-      },
-      {
-       "feature": 20,
-       "field": "Thumbnail_Small",
-       "ends": "umbnails/image/Dranesville%20Battle%20Hero.jpg?itok=Z4zSOZEl"
-      },
-      {
-       "feature": 24,
-       "field": "Thumbnail",
-       "ends": "nails/image/Mill%20Springs%20Battle%20Hero.jpg?itok=F6wPRBBu"
-      },
-      {
-       "feature": 24,
-       "field": "Thumbnail_Small",
-       "ends": "nails/image/Mill%20Springs%20Battle%20Hero.jpg?itok=OB-dZMMD"
+       "feature": "Shepherdstown",
+       "field": "Narrative",
+       "ends": " command for not aggressively pursuing Lee's retreating army"
       }
      ],
-     "nameField": null
-    }
+     "nameField": "Battle",
+     "geometryCompared": "geometry"
+    },
+    "seconds": 0.3
    },
    "drawsAtOpening": true,
    "rendererColourOnly": true
@@ -878,6 +863,7 @@
    "url": null,
    "disablePopup": false,
    "popup": null,
+   "popupFrom": null,
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -1055,7 +1041,7 @@
  "findings": [
   {
    "where": "layer Railroads 1826 to 1911",
-   "what": "no pop-up configured in the map (the layer's default pop-up shows)"
+   "what": "pop-up shows field names as labels: FID, Shape__Length"
   },
   {
    "where": "layer Railroads 1826 to 1911",
@@ -1075,115 +1061,39 @@
   },
   {
    "where": "layer Civil War Battlefields",
-   "what": "two features at the same place: 98 and 99"
+   "what": "two features at the same place: Suffolk (Hill's Point) (Battle of Fort Huger) and Suffolk (Norfleet House); Siege of Suffolk"
   },
   {
    "where": "layer Civil War Battlefields",
-   "what": "two features at the same place: 49 and 118"
+   "what": "two features at the same place: Winchester and Winchester"
   },
   {
    "where": "layer Civil War Battlefields",
-   "what": "two features at the same place: 21 and 125"
+   "what": "two features at the same place: Charleston Harbor and Charleston Harbor"
   },
   {
    "where": "layer Civil War Battlefields",
-   "what": "two features at the same place: 97 and 135"
+   "what": "two features at the same place: Kernstown and Second Battle of Kernstown"
   },
   {
    "where": "layer Civil War Battlefields",
-   "what": "two features at the same place: 33 and 213"
+   "what": "two features at the same place: Memphis and Memphis"
   },
   {
    "where": "layer Civil War Battlefields",
-   "what": "two features at the same place: 52 and 224"
+   "what": "two features at the same place: Petersburg and Fort Stedman"
   },
   {
    "where": "layer Civil War Battlefields",
-   "what": "two features at the same place: 200 and 270"
+   "what": "text may be cut off in Notes (Shepherdstown): … command for not aggressively pursuing Lee's retreating army"
   },
   {
    "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail (1): …bnails/image/Fort%20Sumter%20Battle%20Hero.jpg?itok=xkCKB-jy"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail_Small (1): …bnails/image/Fort%20Sumter%20Battle%20Hero.jpg?itok=LX_pKnCq"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail (3): …e/Sokalski%27s%20Battery%20Hero.jpg?h=5eea89f8&itok=NNpFbSes"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail_Small (3): …e/Sokalski%27s%20Battery%20Hero.jpg?h=5eea89f8&itok=NNpFbSes"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail (4): …/thumbnails/image/Carthage%20Battle%20Hero.jpg?itok=aFED-02z"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail_Small (4): …/thumbnails/image/Carthage%20Battle%20Hero.jpg?itok=9nZJxhJ7"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail (5): …/thumbnails/image/Rich%20Mountain%20Battle.jpg?itok=VhPyfsAG"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail_Small (5): …/thumbnails/image/Rich%20Mountain%20Battle.jpg?itok=ARpkwAhY"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail (6): …ils/image/Battle%20of%20Corrick%27s%20Ford.jpg?itok=HmnuWY90"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail_Small (6): …ils/image/Battle%20of%20Corrick%27s%20Ford.jpg?itok=J3o37kxO"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail (7): …idth/public/thumbnails/image/bull-run-hero.jpg?itok=Zp-Pszkz"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail (8): …idth/public/thumbnails/image/bull-run-hero.jpg?itok=Zp-Pszkz"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail (9): …s/image/Wilson%27s%20Creek%20Battle%20Hero.jpg?itok=15UFmYEJ"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail_Small (9): …s/image/Wilson%27s%20Creek%20Battle%20Hero.jpg?itok=pmOtyHoM"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail (16): …ils/image/Ball%27s%20Bluff%20Battle%20Hero.jpg?itok=8yp79z_D"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail_Small (16): …ils/image/Ball%27s%20Bluff%20Battle%20Hero.jpg?itok=DmTgU1DX"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail (20): …umbnails/image/Dranesville%20Battle%20Hero.jpg?itok=hjMAGmmj"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail_Small (20): …umbnails/image/Dranesville%20Battle%20Hero.jpg?itok=Z4zSOZEl"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail (24): …nails/image/Mill%20Springs%20Battle%20Hero.jpg?itok=F6wPRBBu"
-  },
-  {
-   "where": "layer Civil War Battlefields",
-   "what": "text may be cut off in Thumbnail_Small (24): …nails/image/Mill%20Springs%20Battle%20Hero.jpg?itok=OB-dZMMD"
+   "what": "text may be cut off in Narrative (Shepherdstown): … command for not aggressively pursuing Lee's retreating army"
   },
   {
    "where": "layer Key Places in the Union March to Vicksburg",
-   "what": "no pop-up configured in the map (the layer's default pop-up shows)"
+   "what": "no pop-up set in the map or its layer item, so the default list of every field shows"
   }
  ]
 }

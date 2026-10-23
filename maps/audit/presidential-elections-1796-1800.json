@@ -1,5 +1,5 @@
 {
- "tool": "Map audit 1.0",
+ "tool": "Map audit 1.1",
  "lesson": "presidential-elections-1796-1800",
  "webmapId": "6173219d9cd84812bcd4fed859b2c182",
  "item": {
@@ -22,7 +22,7 @@
   "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
   "created": 1791982424000,
   "modified": 1791988677000,
-  "numViews": 0,
+  "numViews": 20,
   "thumbnail": null,
   "contentStatus": null,
   "extent": [
@@ -97,6 +97,7 @@
      "Votes1796"
     ]
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -132,7 +133,7 @@
     "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
     "created": 1791982295000,
     "modified": 1791988581000,
-    "numViews": 0,
+    "numViews": 71,
     "thumbnail": null,
     "contentStatus": null,
     "extent": [
@@ -311,8 +312,10 @@
      "duplicates": [],
      "sameGeometry": [],
      "maybeCutOff": [],
-     "nameField": null
-    }
+     "nameField": "State",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.3
    },
    "drawsAtOpening": true,
    "rendererColourOnly": false
@@ -342,6 +345,7 @@
      "Votes1800"
     ]
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -377,7 +381,7 @@
     "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
     "created": 1791982295000,
     "modified": 1791988581000,
-    "numViews": 0,
+    "numViews": 71,
     "thumbnail": null,
     "contentStatus": null,
     "extent": [
@@ -556,8 +560,10 @@
      "duplicates": [],
      "sameGeometry": [],
      "maybeCutOff": [],
-     "nameField": null
-    }
+     "nameField": "State",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.0
    },
    "drawsAtOpening": true,
    "rendererColourOnly": false
@@ -588,6 +594,7 @@
      "WhyHere"
     ]
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -742,28 +749,20 @@
      }
     ],
     "serviceItemId": "8b3b0b6964eb434fa5408fa12efa0c42",
-    "count": 6,
+    "filter": "CaseYear <= 1819",
+    "count": 2,
     "checks": {
      "duplicates": [],
      "sameGeometry": [],
-     "maybeCutOff": [
-      {
-       "feature": "Cherokee Nation v. Georgia",
-       "field": "Source",
-       "ends": "a.org/articles/government-politics/worcester-v-georgia-1832/"
-      }
-     ],
-     "nameField": "CaseName"
-    }
+     "maybeCutOff": [],
+     "nameField": "CaseName",
+     "geometryCompared": "geometry"
+    },
+    "seconds": 0.2
    },
    "drawsAtOpening": true,
    "rendererColourOnly": false
   }
  ],
- "findings": [
-  {
-   "where": "layer Landmark Supreme Court cases, 1803 and 1819",
-   "what": "text may be cut off in Source (Cherokee Nation v. Georgia): …a.org/articles/government-politics/worcester-v-georgia-1832/"
-  }
- ]
+ "findings": []
 }

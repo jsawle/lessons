@@ -1,5 +1,5 @@
 {
- "tool": "Map audit 1.0",
+ "tool": "Map audit 1.1",
  "lesson": "we-the-people-1787-1791",
  "webmapId": "eba1ea7488624f3c88ef094167ed03ca",
  "item": {
@@ -22,7 +22,7 @@
   "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
   "created": 1791982411000,
   "modified": 1791988657000,
-  "numViews": 13,
+  "numViews": 14,
   "thumbnail": null,
   "contentStatus": null,
   "extent": [
@@ -85,30 +85,8 @@
    "disablePopup": false,
    "popup": {
     "title": "{State} in 1790",
-    "fieldsShown": [
-     {
-      "field": "Total1790",
-      "label": null
-     },
-     {
-      "field": "Enslaved1790",
-      "label": null
-     },
-     {
-      "field": "Free1790",
-      "label": null
-     },
-     {
-      "field": "Counted",
-      "label": null
-     }
-    ],
-    "fieldLabelsAreNames": [
-     "Total1790",
-     "Enslaved1790",
-     "Free1790",
-     "Counted"
-    ],
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
     "elements": [
      "text"
     ],
@@ -128,6 +106,7 @@
      "Total1790"
     ]
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -163,7 +142,7 @@
     "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
     "created": 1791982317000,
     "modified": 1791988593000,
-    "numViews": 0,
+    "numViews": 65,
     "thumbnail": null,
     "contentStatus": null,
     "extent": [
@@ -323,85 +302,11 @@
     "checks": {
      "duplicates": [],
      "sameGeometry": [],
-     "maybeCutOff": [
-      {
-       "feature": 1,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 2,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 3,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 4,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 5,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 6,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 7,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 8,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 9,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 10,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 11,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 12,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 13,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 14,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 15,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      }
-     ],
-     "nameField": null
-    }
+     "maybeCutOff": [],
+     "nameField": "State",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.4
    },
    "drawsAtOpening": true,
    "rendererColourOnly": false
@@ -417,30 +322,8 @@
    "disablePopup": false,
    "popup": {
     "title": "{State} in 1790",
-    "fieldsShown": [
-     {
-      "field": "Total1790",
-      "label": null
-     },
-     {
-      "field": "Enslaved1790",
-      "label": null
-     },
-     {
-      "field": "Free1790",
-      "label": null
-     },
-     {
-      "field": "Counted",
-      "label": null
-     }
-    ],
-    "fieldLabelsAreNames": [
-     "Total1790",
-     "Enslaved1790",
-     "Free1790",
-     "Counted"
-    ],
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
     "elements": [
      "text"
     ],
@@ -460,6 +343,7 @@
      "Total1790"
     ]
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -591,7 +475,7 @@
     "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
     "created": 1791982317000,
     "modified": 1791988593000,
-    "numViews": 0,
+    "numViews": 65,
     "thumbnail": null,
     "contentStatus": null,
     "extent": [
@@ -751,85 +635,11 @@
     "checks": {
      "duplicates": [],
      "sameGeometry": [],
-     "maybeCutOff": [
-      {
-       "feature": 1,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 2,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 3,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 4,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 5,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 6,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 7,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 8,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 9,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 10,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 11,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 12,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 13,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 14,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      },
-      {
-       "feature": 15,
-       "field": "Source",
-       "ends": "res: https://en.wikipedia.org/wiki/1790_United_States_census"
-      }
-     ],
-     "nameField": null
-    }
+     "maybeCutOff": [],
+     "nameField": "State",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.0
    },
    "drawsAtOpening": true,
    "rendererColourOnly": true
@@ -843,9 +653,81 @@
    "itemId": "0b851ea28ac3470e9f882678470c4f83",
    "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/2020_Census_State_Apportionment/FeatureServer/0",
    "disablePopup": false,
-   "popup": null,
+   "popup": {
+    "title": "U.S. House of Representatives Seats: {NAME}",
+    "fieldsShown": [
+     {
+      "field": "NAME",
+      "label": "State Name"
+     },
+     {
+      "field": "Resident_Change_2010to2020",
+      "label": "Change in Resident Population, 2010 to 2020"
+     },
+     {
+      "field": "Seats_Change_2000to2010",
+      "label": "Change in Seats in the U.S. House of Representatives, 2000 to 2010"
+     },
+     {
+      "field": "Seats_Change_2010to2020",
+      "label": "Change in Seats in the U.S. House of Representatives, 2010 to 2020"
+     },
+     {
+      "field": "TotalPopChange_2010to2020",
+      "label": "Change in Total Population, 2010 to 2020"
+     },
+     {
+      "field": "Overseas_Pop_2010",
+      "label": "Overseas Population, 2010"
+     },
+     {
+      "field": "Overseas_Pop_2020",
+      "label": "Overseas Population, 2020"
+     },
+     {
+      "field": "Resident_Pct_Change_2010to2020",
+      "label": "Percent Change in Resident Population, 2010 to 2020"
+     },
+     {
+      "field": "Total_Pct_Change_2010to2020",
+      "label": "Percent Change in Total Population, 2010 to 2020"
+     },
+     {
+      "field": "Resident_Pop_2010",
+      "label": "Resident Population, 2010"
+     },
+     {
+      "field": "Resident_Pop_2020",
+      "label": "Resident Population, 2020"
+     },
+     {
+      "field": "Seats_2010",
+      "label": "Seats in the U.S. House of Representatives, 2010"
+     },
+     {
+      "field": "Seats_2020",
+      "label": "Seats in the U.S. House of Representatives, 2020"
+     },
+     {
+      "field": "Total_Pop_2010",
+      "label": "Total Population, 2010"
+     },
+     {
+      "field": "Total_Pop_2020",
+      "label": "Total Population, 2020"
+     }
+    ],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "fields"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": []
+   },
+   "popupFrom": "layer item",
    "minScale": null,
-   "maxScale": null,
+   "maxScale": 877883.599075,
    "showLegend": true,
    "listMode": null,
    "definitionExpression": null,
@@ -1144,8 +1026,10 @@
      "duplicates": [],
      "sameGeometry": [],
      "maybeCutOff": [],
-     "nameField": "NAME"
-    }
+     "nameField": "NAME",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.1
    },
    "drawsAtOpening": true,
    "rendererColourOnly": true
@@ -1179,6 +1063,7 @@
      "Yes"
     ]
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -1215,7 +1100,7 @@
     "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
     "created": 1791982339000,
     "modified": 1791988605000,
-    "numViews": 0,
+    "numViews": 58,
     "thumbnail": null,
     "contentStatus": null,
     "extent": [
@@ -1367,95 +1252,11 @@
     "checks": {
      "duplicates": [],
      "sameGeometry": [],
-     "maybeCutOff": [
-      {
-       "feature": 1,
-       "field": "Source",
-       "ends": "edu/states-and-ratification/state-convention-meeting-places/"
-      },
-      {
-       "feature": 2,
-       "field": "Source",
-       "ends": "edu/states-and-ratification/state-convention-meeting-places/"
-      },
-      {
-       "feature": 3,
-       "field": "Source",
-       "ends": "edu/states-and-ratification/state-convention-meeting-places/"
-      },
-      {
-       "feature": 4,
-       "field": "Source",
-       "ends": "edu/states-and-ratification/state-convention-meeting-places/"
-      },
-      {
-       "feature": 5,
-       "field": "Source",
-       "ends": "edu/states-and-ratification/state-convention-meeting-places/"
-      },
-      {
-       "feature": 6,
-       "field": "Meeting",
-       "ends": "ral Street Meeting House), Boston, 9 January–7 February 1788"
-      },
-      {
-       "feature": 6,
-       "field": "Source",
-       "ends": "edu/states-and-ratification/state-convention-meeting-places/"
-      },
-      {
-       "feature": 7,
-       "field": "Source",
-       "ends": "edu/states-and-ratification/state-convention-meeting-places/"
-      },
-      {
-       "feature": 8,
-       "field": "Source",
-       "ends": "edu/states-and-ratification/state-convention-meeting-places/"
-      },
-      {
-       "feature": 9,
-       "field": "Source",
-       "ends": "edu/states-and-ratification/state-convention-meeting-places/"
-      },
-      {
-       "feature": 10,
-       "field": "Source",
-       "ends": "edu/states-and-ratification/state-convention-meeting-places/"
-      },
-      {
-       "feature": 11,
-       "field": "Source",
-       "ends": "edu/states-and-ratification/state-convention-meeting-places/"
-      },
-      {
-       "feature": 12,
-       "field": "Source",
-       "ends": "edu/states-and-ratification/state-convention-meeting-places/"
-      },
-      {
-       "feature": 13,
-       "field": "Meeting",
-       "ends": "en the Second Congregational Church, Newport, 24–29 May 1790"
-      },
-      {
-       "feature": 13,
-       "field": "Source",
-       "ends": "edu/states-and-ratification/state-convention-meeting-places/"
-      },
-      {
-       "feature": 14,
-       "field": "Source",
-       "ends": "edu/states-and-ratification/state-convention-meeting-places/"
-      },
-      {
-       "feature": 15,
-       "field": "Source",
-       "ends": "edu/states-and-ratification/state-convention-meeting-places/"
-      }
-     ],
-     "nameField": null
-    }
+     "maybeCutOff": [],
+     "nameField": "State",
+     "geometryCompared": "geometry"
+    },
+    "seconds": 0.3
    },
    "drawsAtOpening": true,
    "rendererColourOnly": false
@@ -1463,212 +1264,12 @@
  ],
  "findings": [
   {
-   "where": "layer Population in 1790: free and enslaved",
-   "what": "pop-up shows field names as labels: Total1790, Enslaved1790, Free1790, Counted"
-  },
-  {
-   "where": "layer Population in 1790: free and enslaved",
-   "what": "text may be cut off in Source (1): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer Population in 1790: free and enslaved",
-   "what": "text may be cut off in Source (2): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer Population in 1790: free and enslaved",
-   "what": "text may be cut off in Source (3): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer Population in 1790: free and enslaved",
-   "what": "text may be cut off in Source (4): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer Population in 1790: free and enslaved",
-   "what": "text may be cut off in Source (5): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer Population in 1790: free and enslaved",
-   "what": "text may be cut off in Source (6): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer Population in 1790: free and enslaved",
-   "what": "text may be cut off in Source (7): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer Population in 1790: free and enslaved",
-   "what": "text may be cut off in Source (8): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer Population in 1790: free and enslaved",
-   "what": "text may be cut off in Source (9): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer Population in 1790: free and enslaved",
-   "what": "text may be cut off in Source (10): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer Population in 1790: free and enslaved",
-   "what": "text may be cut off in Source (11): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer Population in 1790: free and enslaved",
-   "what": "text may be cut off in Source (12): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer Population in 1790: free and enslaved",
-   "what": "text may be cut off in Source (13): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer Population in 1790: free and enslaved",
-   "what": "text may be cut off in Source (14): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer Population in 1790: free and enslaved",
-   "what": "text may be cut off in Source (15): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer House seats in 1793",
-   "what": "pop-up shows field names as labels: Total1790, Enslaved1790, Free1790, Counted"
-  },
-  {
    "where": "layer House seats in 1793",
    "what": "symbols differ by colour only (WCAG 1.4.1 if a question depends on telling them apart)"
   },
   {
-   "where": "layer House seats in 1793",
-   "what": "text may be cut off in Source (1): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer House seats in 1793",
-   "what": "text may be cut off in Source (2): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer House seats in 1793",
-   "what": "text may be cut off in Source (3): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer House seats in 1793",
-   "what": "text may be cut off in Source (4): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer House seats in 1793",
-   "what": "text may be cut off in Source (5): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer House seats in 1793",
-   "what": "text may be cut off in Source (6): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer House seats in 1793",
-   "what": "text may be cut off in Source (7): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer House seats in 1793",
-   "what": "text may be cut off in Source (8): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer House seats in 1793",
-   "what": "text may be cut off in Source (9): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer House seats in 1793",
-   "what": "text may be cut off in Source (10): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer House seats in 1793",
-   "what": "text may be cut off in Source (11): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer House seats in 1793",
-   "what": "text may be cut off in Source (12): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer House seats in 1793",
-   "what": "text may be cut off in Source (13): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer House seats in 1793",
-   "what": "text may be cut off in Source (14): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer House seats in 1793",
-   "what": "text may be cut off in Source (15): …res: https://en.wikipedia.org/wiki/1790_United_States_census"
-  },
-  {
-   "where": "layer House seats today (2020 apportionment)",
-   "what": "no pop-up configured in the map (the layer's default pop-up shows)"
-  },
-  {
    "where": "layer House seats today (2020 apportionment)",
    "what": "symbols differ by colour only (WCAG 1.4.1 if a question depends on telling them apart)"
-  },
-  {
-   "where": "layer Ratifying the Constitution, 1787–1791",
-   "what": "text may be cut off in Source (1): …edu/states-and-ratification/state-convention-meeting-places/"
-  },
-  {
-   "where": "layer Ratifying the Constitution, 1787–1791",
-   "what": "text may be cut off in Source (2): …edu/states-and-ratification/state-convention-meeting-places/"
-  },
-  {
-   "where": "layer Ratifying the Constitution, 1787–1791",
-   "what": "text may be cut off in Source (3): …edu/states-and-ratification/state-convention-meeting-places/"
-  },
-  {
-   "where": "layer Ratifying the Constitution, 1787–1791",
-   "what": "text may be cut off in Source (4): …edu/states-and-ratification/state-convention-meeting-places/"
-  },
-  {
-   "where": "layer Ratifying the Constitution, 1787–1791",
-   "what": "text may be cut off in Source (5): …edu/states-and-ratification/state-convention-meeting-places/"
-  },
-  {
-   "where": "layer Ratifying the Constitution, 1787–1791",
-   "what": "text may be cut off in Meeting (6): …ral Street Meeting House), Boston, 9 January–7 February 1788"
-  },
-  {
-   "where": "layer Ratifying the Constitution, 1787–1791",
-   "what": "text may be cut off in Source (6): …edu/states-and-ratification/state-convention-meeting-places/"
-  },
-  {
-   "where": "layer Ratifying the Constitution, 1787–1791",
-   "what": "text may be cut off in Source (7): …edu/states-and-ratification/state-convention-meeting-places/"
-  },
-  {
-   "where": "layer Ratifying the Constitution, 1787–1791",
-   "what": "text may be cut off in Source (8): …edu/states-and-ratification/state-convention-meeting-places/"
-  },
-  {
-   "where": "layer Ratifying the Constitution, 1787–1791",
-   "what": "text may be cut off in Source (9): …edu/states-and-ratification/state-convention-meeting-places/"
-  },
-  {
-   "where": "layer Ratifying the Constitution, 1787–1791",
-   "what": "text may be cut off in Source (10): …edu/states-and-ratification/state-convention-meeting-places/"
-  },
-  {
-   "where": "layer Ratifying the Constitution, 1787–1791",
-   "what": "text may be cut off in Source (11): …edu/states-and-ratification/state-convention-meeting-places/"
-  },
-  {
-   "where": "layer Ratifying the Constitution, 1787–1791",
-   "what": "text may be cut off in Source (12): …edu/states-and-ratification/state-convention-meeting-places/"
-  },
-  {
-   "where": "layer Ratifying the Constitution, 1787–1791",
-   "what": "text may be cut off in Meeting (13): …en the Second Congregational Church, Newport, 24–29 May 1790"
-  },
-  {
-   "where": "layer Ratifying the Constitution, 1787–1791",
-   "what": "text may be cut off in Source (13): …edu/states-and-ratification/state-convention-meeting-places/"
-  },
-  {
-   "where": "layer Ratifying the Constitution, 1787–1791",
-   "what": "text may be cut off in Source (14): …edu/states-and-ratification/state-convention-meeting-places/"
-  },
-  {
-   "where": "layer Ratifying the Constitution, 1787–1791",
-   "what": "text may be cut off in Source (15): …edu/states-and-ratification/state-convention-meeting-places/"
   }
  ]
 }

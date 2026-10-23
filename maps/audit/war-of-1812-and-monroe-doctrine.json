@@ -1,0 +1,1762 @@
+{
+ "tool": "Map audit 1.1",
+ "lesson": "war-of-1812-and-monroe-doctrine",
+ "webmapId": "fad1cdb9d5704401a4e05c34f7ee693c",
+ "item": {
+  "id": "fad1cdb9d5704401a4e05c34f7ee693c",
+  "title": "The War of 1812 and the Monroe Doctrine, 1807–1823",
+  "type": "Web Map",
+  "owner": "GIS-4-Schools",
+  "access": "public",
+  "snippet": "War of 1812 battles, Latin American independence and US recognition, and the 1819 boundary with the land Spain gave up.",
+  "description": "<p><b>Question:</b> Why did the United States go to war in 1812, and what did the Monroe Doctrine claim?</p><p><b>Ideas for one lesson in MapMaker</b> (choose any):</p><ul><li>Choose three War of 1812 battles and explain why each was fought where it was. Sketch the British blockade along the coast, and a pin at Ghent, where the peace treaty was signed in December 1814.</li><li>Switch on <i>Latin American independence</i>: when did each nation become independent, and when did the United States recognize it? Compare the dates with the Monroe Doctrine (1823), and sketch the area it covered.</li><li>Switch on <i>Adams–Onís Treaty line, 1819</i> and <i>Land Spain gave up in 1819</i> to see what the treaty settled.</li><li>Download an image or export a PDF of the map to keep the work.</li></ul><p><b>Notes:</b> The 1819 line is drawn from the treaty's description on Natural Earth's rivers, so it's approximate. In the treaty Spain ceded East Florida and gave up its claim to West Florida, which the United States had claimed as part of the Louisiana Purchase after American settlers there rebelled in 1810; the treaty was ratified in 1821 (Office of the Historian). The national boundaries layer, from the War of 1812 Battles map, shows 1800, before the Louisiana Purchase. Recognition dates come from the Office of the Historian, and so do independence dates, except Mexico's and Brazil's, which come from the Library of Congress country studies. Chile celebrates 18 September 1810 as independence day (both sources) and won formal independence in 1818 (Library of Congress).</p><p><b>Sources:</b> American Battlefield Trust (battles) and National Park Service (battlefield boundaries), from the War of 1812 Battles map; University of Minnesota (national boundaries, 1800); MapMaker catalogue (territorial acquisitions); Office of the Historian, U.S. Department of State; Library of Congress (country studies); Avalon Project, Yale Law School (treaty text); Natural Earth.</p><p><i>Version 1.2 (14 October 2026).</i></p>",
+  "tags": [
+   "MapMaker",
+   "US History",
+   "grade 8",
+   "November 2026",
+   "web map",
+   "activity 12"
+  ],
+  "accessInformation": "American Battlefield Trust (battles) and National Park Service, American Battlefield Protection Program (battlefield boundaries), from the War of 1812 Battles map; University of Minnesota (national boundaries, 1800); MapMaker catalogue (territorial acquisitions); Office of the Historian, U.S. Department of State; Library of Congress (country studies); Avalon Project, Yale Law School; Natural Earth.",
+  "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
+  "created": 1791982440000,
+  "modified": 1791988692000,
+  "numViews": 18,
+  "thumbnail": null,
+  "contentStatus": null,
+  "extent": [
+   [
+    -126,
+    8
+   ],
+   [
+    -55,
+    50
+   ]
+  ],
+  "descriptionChars": 1891
+ },
+ "basemap": {
+  "title": "Modern Antique",
+  "layers": [
+   {
+    "title": "World Hillshade",
+    "type": "ArcGISTiledMapServiceLayer",
+    "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+    "itemId": "1b243539f4514b6ba35e7d995890db1d"
+   },
+   {
+    "title": "Copy of Modern Antique no Labels",
+    "type": "VectorTileLayer",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json",
+    "itemId": "545f2e839f624600bbb092c3ad998bb8"
+   }
+  ]
+ },
+ "opening": {
+  "extent": {
+   "xmin": -14026255.8,
+   "ymin": 893463.8,
+   "xmax": -6122572,
+   "ymax": 6446275.8,
+   "spatialReference": {
+    "wkid": 102100,
+    "latestWkid": 3857
+   }
+  },
+  "scale": 24893492
+ },
+ "bookmarks": [
+  "The War of 1812",
+  "The 1819 boundary",
+  "Latin America in 1825"
+ ],
+ "applicationProperties": null,
+ "layers": [
+  {
+   "path": "Historic National Boundaries: 1800",
+   "title": "Historic National Boundaries: 1800",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "opacity": null,
+   "itemId": "e1fae733490742c5832a0c92bf7ef29d",
+   "url": "https://services.arcgis.com/8df8p0NlLFEShl0r/arcgis/rest/services/Historic_National_Boundaries_NEW/FeatureServer/7",
+   "disablePopup": false,
+   "popup": {
+    "title": "Year 1800",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "NAME"
+    ]
+   },
+   "popupFrom": "map",
+   "minScale": null,
+   "maxScale": 5414684.585589,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "uniqueValue",
+    "field": "NAME",
+    "valueExpression": false,
+    "classes": [
+     {
+      "value": "United States",
+      "label": "United States",
+      "symbol": {
+       "type": "esriSFS",
+       "style": "esriSFSSolid",
+       "color": [
+        172,
+        81,
+        122,
+        38
+       ],
+       "outline": {
+        "color": [
+         153,
+         153,
+         153,
+         64
+        ],
+        "width": 2.002,
+        "style": "esriSLSSolid"
+       }
+      }
+     }
+    ],
+    "default": "Other",
+    "visualVariables": [
+     "sizeInfo"
+    ]
+   },
+   "labelsInMap": true,
+   "item": {
+    "id": "e1fae733490742c5832a0c92bf7ef29d",
+    "title": "Historical National Boundaries",
+    "type": "Feature Service",
+    "owner": "mm.sappleton",
+    "access": "public",
+    "snippet": "Historical national boundaries for key years in history, including 1800, 1914, 1918, 1939, 1945, 1970, 1990, and 2000.",
+    "description": "<span><p style='margin-top:0pt; margin-bottom:0pt;'><span style='color:rgb(0, 0, 0); font-family:Arial; font-size:14.6667px;'>Historical National Boundaries displays global national boundaries for the following dates in history: 1800, 1914, 1918, 1939, 1945, 1970, 1990, 2000. </span><span style='color:rgb(0, 0, 0); font-family:Arial; font-size:14.6667px;'>Boundary changes associated with World War I (1914 - 1918) and World War II (1939 - 1945) can be viewed by turning off all other layers and toggling between the two. </span></p><p style='margin-top:0pt; margin-bottom:0pt;'><span style='color:rgb(0, 0, 0); font-family:Arial; font-size:14.6667px;'><span><span style='font-size:14.6667px;'>Data for each layer comes from a variety of sources, including historical atlases and the Library of Congress website - </span><a href='https://www.loc.gov/maps/' style='text-decoration:none;' rel='nofollow ugc'><span style='font-size:14.6667px; color:rgb(17, 85, 204); text-decoration:underline;'>https://www.loc.gov/maps/</span></a><span style='font-size:14.6667px;'>. </span></span><br /></span></p><p style='margin-top:0pt; margin-bottom:0pt;'><span style='color:rgb(0, 0, 0); font-family:Arial; font-size:14.6667px;'><span><span style='font-size:14.6667px;'><br /></span></span></span></p><h5 style='box-sizing:border-box; font-family:&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight:500; color:rgb(51, 51, 51); margin-top:10px; margin-bottom:2px; font-size:14px;'><strong>Suggested Citation</strong></h5><div style='box-sizing:border-box; color:rgb(51, 51, 51); font-family:&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size:14px;'><span style='box-sizing:border-box;'>Kropelnicki, Jeffrey; Johnson, Grace; Kne, Len; Lindberg, Mark</span>. (2022). <span style='box-sizing:border-box;'>Historical National Boundaries. </span><span style='box-sizing:border-box;'>Retrieved from the Data Repository for the University of Minnesota, https://doi.org/10.13020/146x-1412. </span></div></span><span><p></p></span>",
+    "tags": [
+     "Countries",
+     "Historic",
+     "National Boundaries",
+     "2000",
+     "1990",
+     "1970",
+     "1945",
+     "1939",
+     "1918",
+     "1914",
+     "1800",
+     "historical",
+     "education"
+    ],
+    "accessInformation": "University of Minnesota",
+    "licenseInfo": "<span><span style='font-size: 14.6667px; font-family: Arial; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;'>Data may be freely downloaded for research, study, or teaching, but must be cited appropriately. Re-release of the data, or incorporation of the data into a commercial product, is allowed only with explicit permission. Contact U-Spatial at </span><a href='mailto:uspatial@umn.edu' style='text-decoration:none;' rel='nofollow ugc'><span style='font-size: 14.6667px; font-family: Arial; color: rgb(17, 85, 204); text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;'>uspatial@umn.edu</span></a><span style='font-size: 14.6667px; font-family: Arial; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;'> or visit our website at </span><a href='http://www.uspatial.umn.edu' style='text-decoration:none;' rel='nofollow ugc'><span style='font-size: 14.6667px; font-family: Arial; color: rgb(17, 85, 204); text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;'>www.uspatial.umn.edu</span></a><span style='font-size: 14.6667px; font-family: Arial; color: rgb(0, 0, 0); vertical-align: baseline; white-space: pre-wrap;'> for more information.</span></span>",
+    "created": 1695933661000,
+    "modified": 1718384420000,
+    "numViews": 4213,
+    "thumbnail": "thumbnail/thumbnail1716298853482.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -180,
+      -90
+     ],
+     [
+      180,
+      90
+     ]
+    ],
+    "descriptionChars": 690
+   },
+   "service": {
+    "url": "https://services.arcgis.com/8df8p0NlLFEShl0r/arcgis/rest/services/Historic_National_Boundaries_NEW/FeatureServer/7",
+    "name": "Year_1800",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "University of Minnesota",
+    "maxRecordCount": 1000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       223,
+       115,
+       255,
+       255
+      ],
+      "outline": {
+       "color": [
+        52,
+        52,
+        52,
+        255
+       ],
+       "width": 0.4,
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": ""
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID_12",
+      "alias": "OBJECTID_12",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "NAME",
+      "alias": "NAME",
+      "type": "esriFieldTypeString",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "85e35d64d67f425c94ebca45dad6568a",
+    "count": 134,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "NAME",
+     "geometryCompared": "geometry"
+    },
+    "seconds": 1.9
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false
+  },
+  {
+   "path": "Land Spain gave up in 1819",
+   "title": "Land Spain gave up in 1819",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": false,
+   "opacity": 0.6,
+   "itemId": "2f560d7a635342b18f78e40955903589",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/US_Terr_Acq/FeatureServer/0",
+   "disablePopup": false,
+   "popup": {
+    "title": "{NAME}",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "Notes"
+    ]
+   },
+   "popupFrom": "map",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": "NAME IN ('East Florida (Spanish Cession) 1819', 'West Florida (Spanish Cession) 1819', 'Spanish Cession 1819')",
+   "rendererInMap": {
+    "type": "uniqueValue",
+    "field": "NAME",
+    "valueExpression": false,
+    "classes": [
+     {
+      "value": "East Florida (Spanish Cession) 1819",
+      "label": "East Florida (Spanish Cession) 1819",
+      "symbol": {
+       "type": "esriSFS",
+       "style": "esriSFSSolid",
+       "color": [
+        127,
+        161,
+        96,
+        230
+       ],
+       "outline": {
+        "color": [
+         153,
+         153,
+         153,
+         64
+        ],
+        "width": 1.147,
+        "style": "esriSLSSolid"
+       }
+      }
+     },
+     {
+      "value": "West Florida (Spanish Cession) 1819",
+      "label": "West Florida (Spanish Cession) 1819",
+      "symbol": {
+       "type": "esriSFS",
+       "style": "esriSFSSolid",
+       "color": [
+        127,
+        161,
+        96,
+        230
+       ],
+       "outline": {
+        "color": [
+         176,
+         191,
+         162,
+         64
+        ],
+        "width": 1.147,
+        "style": "esriSLSSolid"
+       }
+      }
+     },
+     {
+      "value": "Spanish Cession 1819",
+      "label": "Spanish Cession 1819",
+      "symbol": {
+       "type": "esriSFS",
+       "style": "esriSFSSolid",
+       "color": [
+        127,
+        161,
+        96,
+        230
+       ],
+       "outline": {
+        "color": [
+         176,
+         191,
+         162,
+         64
+        ],
+        "width": 1.147,
+        "style": "esriSLSSolid"
+       }
+      }
+     }
+    ],
+    "default": null
+   },
+   "item": {
+    "id": "2f560d7a635342b18f78e40955903589",
+    "title": "United States Territorial Acquisitions",
+    "type": "Feature Service",
+    "owner": "mm.sappleton",
+    "access": "public",
+    "snippet": "This layer by the U.S. Geological Survey and the U.S. Department of the Interior shows territorial acquisitions made by the United States from the post-Revolutionary War era through its current boundaries, which were established in 1917.  ",
+    "description": "<div style='background-color:rgb(255, 255, 255); clear:both; color:rgb(0, 0, 0); font-family:&quot;Segoe UI&quot;, &quot;Segoe UI Web&quot;, Arial, Verdana, sans-serif; font-size:12px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px; overflow:visible; padding:0px; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><p style='background-color:transparent; color:windowtext; font-kerning:none; font-style:normal; font-weight:normal; margin:0px 0px 10.6667px; padding:0px; text-align:left; text-indent:0px;'><span style='font-family:Arial; font-size:18px;'><span style='font-variant-ligatures:none !important; line-height:20.5042px; margin:0px; padding:0px;'>The nation we now know as the United States was built slowly, over time. This layer shows how the territory that now forms the U.S. was shaped by a series of purchases, treaties, battles, and migration.</span><span style='line-height:20.5042px; margin:0px; padding:0px;'>&nbsp;</span></span></p></div><div style='background-color:rgb(255, 255, 255); clear:both; color:rgb(0, 0, 0); font-family:&quot;Segoe UI&quot;, &quot;Segoe UI Web&quot;, Arial, Verdana, sans-serif; font-size:12px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px; overflow:visible; padding:0px; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><p style='background-color:transparent; color:windowtext; font-kerning:none; font-style:normal; font-weight:normal; margin:0px 0px 10.6667px; padding:0px; text-align:left; text-indent:0px;'><span style='font-family:Arial; font-size:18px;'><span style='font-variant-ligatures:none !important; line-height:20.5042px; margin:0px; padding:0px;'>It is important to acknowledge that this map only shows land acquisitions from a Western colonial perspective. It focuses on the acquisition of land from other Western nations’ colonial claims. It does not show land taken from Indigenous Nations, whether by treaty, theft, forced relocation, or other means. Please use this layer together with the </span></span><a style='color:inherit; margin:0px; padding:0px; text-decoration:none;' target='_blank' href='https://arcg.is/8b9ar0' rel='nofollow ugc noopener noreferrer'><span style='color:rgb(5,99,193); font-family:Arial; font-size:18px;'><span style='font-variant-ligatures:none !important; line-height:20.5042px; margin:0px; padding:0px;'><u>Indigenous Territories</u></span></span></a><span style='font-family:Arial; font-size:18px;'><span style='font-variant-ligatures:none !important; line-height:20.5042px; margin:0px; padding:0px;'> layer to map a more complete picture of the Indigenous Nations who lived on these lands prior to European and other Western settlement.</span><span style='line-height:20.5042px; margin:0px; padding:0px;'>&nbsp;</span></span></p></div><div style='background-color:rgb(255, 255, 255); clear:both; color:rgb(0, 0, 0); font-family:&quot;Segoe UI&quot;, &quot;Segoe UI Web&quot;, Arial, Verdana, sans-serif; font-size:12px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; margin:0px; overflow:visible; padding:0px; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><p style='background-color:transparent; color:windowtext; font-kerning:none; font-style:normal; font-weight:normal; margin:0px 0px 10.6667px; padding:0px; text-align:left; text-indent:0px;'><span style='font-family:Arial; font-size:18px;'><span style='font-variant-ligatures:none !important; line-height:20.5042px; margin:0px; padding:0px;'>This layer is based on a map provided by the U.S. Department of the Interior and the U.S. Geological Survey. Some areas were disputed and have more than one treaty listed. In these cases, the later date was used to show when the area became part of the U.S. For example, at the time when the United States and France negotiated the Louisiana Purchase, no Western nations had actually explored or mapped the territory, and so the boundary between the Spanish and French territorial holdings had never been defined. French and American negotiators never settled on an official western boundary, leaving ownership of this portion of the Louisiana territory to be contested by Spain and later Mexico. These areas were officially acquired by the U.S. through the Annexation of Texas, formalized by the Treaty of Guadalupe Hidalgo, following the Mexican-American War.</span><span style='line-height:20.5042px; margin:0px; padding:0px;'>&nbsp;</span></span></p><p style='background-color:transparent; color:windowtext; font-kerning:none; font-style:normal; font-weight:normal; margin:0px 0px 10.6667px; padding:0px; text-align:left; text-indent:0px;'><span style='font-family:Arial; font-size:18px;'><span style='line-height:20.5042px; margin:0px; padding:0px;'>Data Citation: U.S. Department of the Interior and the U.S. Geological Survey, </span><i><span style='line-height:20.5042px; margin:0px; padding:0px;'>Territorial Acquisitions Map</span></i><span style='line-height:20.5042px; margin:0px; padding:0px;'>, 2014, </span></span><a target='_blank' href='https://www.census.gov/programs-surveys/sis/resources/maps/territorial-acquisitions.html' rel='nofollow ugc noopener noreferrer'><span style='font-family:Arial; font-size:18px;'><span style='line-height:20.5042px; margin:0px; padding:0px;'>https://www.census.gov/programs-surveys/sis/resources/maps/territorial-acquisitions.html</span></span></a><span style='font-family:Arial; font-size:18px;'><span style='line-height:20.5042px; margin:0px; padding:0px;'>.&nbsp;</span></span></p></div>",
+    "tags": [
+     "territory",
+     "United States",
+     "US Territorial Acquisitions",
+     "Spain",
+     "France",
+     "Louisiana Purchase",
+     "Mexico",
+     "Mexican-American War",
+     "Annexation of Texas",
+     "Treaty of Guadalupe",
+     "colonization",
+     "indigenous territories",
+     "education",
+     "school",
+     "learn"
+    ],
+    "accessInformation": "The National Atlas, USGS",
+    "licenseInfo": "<p>This map is in the <a target='_blank' href='https://creativecommons.org/public-domain/' rel='nofollow ugc noopener noreferrer'>public domain</a>.&nbsp;</p>",
+    "created": 1751058091000,
+    "modified": 1784060280000,
+    "numViews": 8106,
+    "thumbnail": "thumbnail/thumbnail1751488959579.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -179.1333931488387,
+      17.674692605711776
+     ],
+     [
+      179.78820631480414,
+      71.39804839878236
+     ]
+    ],
+    "descriptionChars": 1797
+   },
+   "service": {
+    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/US_Terr_Acq/FeatureServer/0",
+    "name": "U.S. Territorial Acquisitions",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       79,
+       129,
+       189,
+       255
+      ],
+      "outline": {
+       "color": [
+        54,
+        93,
+        141,
+        255
+       ],
+       "width": 1.5,
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "NAME",
+      "alias": "Territory Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Count_",
+      "alias": "Count",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "AnalysisArea",
+      "alias": "Area in Square Kilometers",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Year_Acq",
+      "alias": "Year",
+      "type": "esriFieldTypeDateOnly",
+      "domain": false
+     },
+     {
+      "name": "Notes",
+      "alias": "Description",
+      "type": "esriFieldTypeString",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "2f560d7a635342b18f78e40955903589",
+    "filter": "NAME IN ('East Florida (Spanish Cession) 1819', 'West Florida (Spanish Cession) 1819', 'Spanish Cession 1819')",
+    "count": 3,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [
+      {
+       "feature": "East Florida (Spanish Cession) 1819",
+       "field": "Notes",
+       "ends": "caused by American citizens when they rebelled against Spain"
+      },
+      {
+       "feature": "Spanish Cession 1819",
+       "field": "Notes",
+       "ends": "caused by American citizens when they rebelled against Spain"
+      },
+      {
+       "feature": "West Florida (Spanish Cession) 1819",
+       "field": "Notes",
+       "ends": "caused by American citizens when they rebelled against Spain"
+      }
+     ],
+     "nameField": "NAME",
+     "geometryCompared": "geometry"
+    },
+    "seconds": 0.4
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false
+  },
+  {
+   "path": "Battlefield Boundaries: War of 1812",
+   "title": "Battlefield Boundaries: War of 1812",
+   "layerType": "GroupLayer",
+   "visible": true,
+   "opacity": null,
+   "itemId": null,
+   "url": null,
+   "disablePopup": false,
+   "popup": null,
+   "popupFrom": null,
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "drawsAtOpening": true,
+   "rendererColourOnly": false
+  },
+  {
+   "path": "Battlefield Boundaries: War of 1812 / Battlefield Boundary",
+   "title": "Battlefield Boundary",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "opacity": null,
+   "itemId": "8b2e2d492c124d1cacba0599d20639ae",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/8",
+   "disablePopup": false,
+   "popup": {
+    "title": "{NAME}",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "Acres",
+     "NAME",
+     "WAR"
+    ]
+   },
+   "popupFrom": "map",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "simple",
+    "field": null,
+    "valueExpression": false,
+    "symbol": {
+     "type": "esriSFS",
+     "style": "esriSFSSolid",
+     "color": [
+      156,
+      146,
+      115,
+      179
+     ],
+     "outline": {
+      "color": [
+       0,
+       0,
+       0,
+       0
+      ],
+      "width": 0.75,
+      "style": "esriSLSSolid"
+     }
+    },
+    "label": null
+   },
+   "item": {
+    "id": "8b2e2d492c124d1cacba0599d20639ae",
+    "title": "United States Battlefield Boundaries",
+    "type": "Feature Service",
+    "owner": "mm.atlas",
+    "access": "public",
+    "snippet": "This map layer shows the footprint of historic U.S. battlefields from the Revolutionary War (1775-1783), the War of 1812, and the Civil War (1861-1865) that are part of the National Park Service’s American Battlefield Protection Program.",
+    "description": "<p style='margin-bottom:0in;'><span style='font-size:18px;'>A battlefield is the current or historic location where an armed conflict or military battle takes place. You might be picturing an open field with soldiers based on the name. However, a battlefield is any place where a battle has taken place. For example, the Wilderness battle (May 5<sup>th</sup> to 7<sup>th</sup>, 1864) in the state of Virginia during the Civil War was fought in dense woodland.&nbsp;</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Many people consider battlefields to be sacred sites or hallowed ground. This is because of the number of people who died there in the conflict. Many people travel to these places to learn and honor the soldiers who sacrificed there.</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>This map layer shows the historic battlefields in the United States included in the National Park Service’s </span><a target='_blank' href='https://www.nps.gov/orgs/2287/index.htm' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>American Battlefield Protection Program</span></a><span style='font-size:18px;'>. This program works to preserve and provide interpretation of these important places. By studying the past, we can learn from it and hopefully learn from the past mistakes of others.&nbsp;</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>This map layer includes battlefields from 3 wars: the Revolutionary War (1775-1783), the War of 1812, and the Civil War (1861-1865). This layer includes two parts: one, the footprint of the entire battlefield, and two, the core area, where the fighting was the heaviest. The data for this map comes from two separate reports: the </span><a target='_blank' href='https://chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https:/npshistory.com/publications/battlefield/revolutionary-war-of-1812.pdf' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'><i>Report to Congress on the Historic Preservation of Revolutionary War and War of 1812 Sites in the United States</i></span></a><span style='font-size:18px;'><i>&nbsp;</i>(2007) and the </span><a target='_blank' href='https://chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https:/npshistory.com/publications/battlefield/cwsac/report.pdf' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'><i>Civil War Sites Advisory Commission Report on the Nation’s Civil War Battlefields <span style='font-style:normal;'>(1993)</span></i></span></a><span style='font-size:18px;'>.&nbsp;</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Note: You are likely viewing this layer as part of a map on a specific war or battle. In that case, you may only see the battlefields for the specific event and not all three wars included in this dataset. This is not an error; the map maker has simply filtered the data to keep the map clear and concise.&nbsp;</span></p><p style='margin-bottom:0in;'>&nbsp;</p><h5 style='margin:7.5pt 0in 1.5pt;'><span style='color:#333333; font-family:&quot;Helvetica&quot;,sans-serif; font-size:18px;'><span style='line-height:107%;'><u>Data Citations</u></span></span></h5><p style='margin-bottom:0in;'><span style='background-color:white; color:#404040; font-family:&quot;Helvetica&quot;,sans-serif; font-size:18px;'><span style='line-height:107%;'>Martin V and Stein J. 2020. American Revolution Battlefield Boundaries and Associated Historic Properties. National Park Service. Network Drive</span></span><br /><a target='_blank' href='https://irma.nps.gov/DataStore/Reference/Profile/2279701' rel='nofollow ugc noopener noreferrer'><span style='background-color:white; color:#005EA2; font-family:&quot;Helvetica&quot;,sans-serif; font-size:18px;'><span style='line-height:107%;'>https://irma.nps.gov/DataStore/Reference/Profile/2279701</span></span></a><span style='font-size:18px;'>.</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Martin V and Stein J. 2020. War of 1812 Battlefield Boundaries and Associated Historic Properties. National Park Service. Network Drive</span><br /><a target='_blank' href='https://irma.nps.gov/DataStore/Reference/Profile/2279685' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>https://irma.nps.gov/DataStore/Reference/Profile/2279685</span></a><span style='font-size:18px;'>.</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Stein J and Martin V. 2020. Civil War Battlefield Boundaries. National Park Service. Network Drive</span><br /><a target='_blank' href='https://irma.nps.gov/DataStore/Reference/Profile/2279732' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>https://irma.nps.gov/DataStore/Reference/Profile/2279732</span></a><span style='font-size:18px;'>.</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Martin V and Stein J. 2020. Updated Civil War Battlefield Boundaries. National Park Service. Network Drive</span></p><p style='margin-bottom:0in;'><a target='_blank' href='https://irma.nps.gov/DataStore/Reference/Profile/2279739' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>https://irma.nps.gov/DataStore/Reference/Profile/2279739</span></a><span style='font-size:18px;'>.</span></p>",
+    "tags": [
+     "National Park Service",
+     "ABPP",
+     "American Battlefield Protection Program",
+     "Battlefield Boundaries",
+     "Battlefields",
+     "Boundaries",
+     "Civil War",
+     "History and Culture",
+     "National Parks",
+     "Revolutionary War",
+     "War of 1812",
+     "school",
+     "learn",
+     "education"
+    ],
+    "accessInformation": "American Battlefield Protection Program, National Park Service, Department of the Interior (ABPP-NPS)\nCultural Resources GIS (CRGIS)",
+    "licenseInfo": "<p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The </span><a target='_blank' href='https://www.nps.gov/subjects/gisandmapping/data-disclaimers.htm' rel='nofollow ugc noopener noreferrer'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>National Park Service</span></a><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'> shall not be held liable for improper or incorrect use of the cultural resource data described and/or contained herein. These data and related graphics are not legal documents and are not intended to be used as such, nor do they replace the need for consultation with appropriate state/tribal/federal historic preservation offices.</span></p><p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The information contained in these data is dynamic and may change over time. The data are not better than the original sources from which they were derived. It is the responsibility of the data user to use the data appropriately and consistently within the limitations of geospatial data in general and these data in particular, as expressed in feature-level metadata. The related graphics are intended to aid the data user in acquiring relevant data; it is not appropriate to use the related graphics as data.​​​​​​​</span></p><p style='background-color:white; line-height:normal; margin:0in 2.25pt 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>Cultural resource data sets may contain sensitive information that has been redacted or withheld from general use.&nbsp; These data require express permission from National Park Service programs, parks, or regional offices to access or use. Any unauthorized use of sensitive cultural resource data, disclosure, or distribution of that data, is prohibited unless specifically provided under the Archaeological Resources Protection Act of 1979, 16. U.S.C. 470hh, as amended, and National Park Service and Related Programs, 54&nbsp;U.S.C. 300101 (formerly known as the National Historic Preservation Act, 16 U.S.C. 470-1).</span></p><p style='background-color:white; line-height:normal; margin:0in .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The National Park Service gives no warranty, expressed or implied, as to the accuracy, reliability, or completeness of these data, which may have been generated over many years, using multiple creation methods as well as collection procedures. It is strongly recommended that these data be directly acquired from an NPS server and not indirectly through other sources, which may have changed the data in some way. Although these data have been processed successfully on a computer system at the National Park Service, no warranty expressed or implied is made regarding the utility of the data on another system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. This disclaimer applies both to individual use of the data and aggregate use with other data.</span></p>",
+    "created": 1778620484000,
+    "modified": 1783536706000,
+    "numViews": 14507,
+    "thumbnail": "thumbnail/thumbnail1781189229611.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -137.99999610599997,
+      -89.00000000000001
+     ],
+     [
+      -48.00006761500012,
+      84.22434879200006
+     ]
+    ],
+    "descriptionChars": 2592
+   },
+   "service": {
+    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/8",
+    "name": "War Of 1812 Battlefield Boundary",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "minScale": 1923787,
+    "maxScale": 2795,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       106,
+       246,
+       137,
+       191
+      ],
+      "outline": {
+       "color": [
+        0,
+        0,
+        0,
+        255
+       ],
+       "width": 0.75,
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID_12",
+      "alias": "FID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "BOUNDARY",
+      "alias": "BOUNDARY",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SITE",
+      "alias": "SITE",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "WAR",
+      "alias": "WAR",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "STATE",
+      "alias": "STATE",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "NAME",
+      "alias": "NAME",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Acres",
+      "alias": "ACRES",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Area",
+      "alias": "Shape__Area",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "8b2e2d492c124d1cacba0599d20639ae",
+    "count": 80,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [
+      [
+       "Dudley's Defeat",
+       "Fort Meigs (Second)"
+      ],
+      [
+       "Dudley's Defeat",
+       "Fort Meigs (First)"
+      ],
+      [
+       "Benedict",
+       "Benedict"
+      ]
+     ],
+     "maybeCutOff": [],
+     "nameField": "NAME",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.1
+   },
+   "drawsAtOpening": false,
+   "rendererColourOnly": false
+  },
+  {
+   "path": "Battlefield Boundaries: War of 1812 / Core Areas",
+   "title": "Core Areas",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "opacity": null,
+   "itemId": "8b2e2d492c124d1cacba0599d20639ae",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/9",
+   "disablePopup": false,
+   "popup": {
+    "title": "{NAME}",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "Acres",
+     "NAME",
+     "WAR"
+    ]
+   },
+   "popupFrom": "map",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "simple",
+    "field": null,
+    "valueExpression": false,
+    "symbol": {
+     "type": "esriSFS",
+     "style": "esriSFSSolid",
+     "color": [
+      227,
+      211,
+      175,
+      191
+     ],
+     "outline": {
+      "color": [
+       0,
+       0,
+       0,
+       0
+      ],
+      "width": 0.75,
+      "style": "esriSLSSolid"
+     }
+    },
+    "label": null
+   },
+   "item": {
+    "id": "8b2e2d492c124d1cacba0599d20639ae",
+    "title": "United States Battlefield Boundaries",
+    "type": "Feature Service",
+    "owner": "mm.atlas",
+    "access": "public",
+    "snippet": "This map layer shows the footprint of historic U.S. battlefields from the Revolutionary War (1775-1783), the War of 1812, and the Civil War (1861-1865) that are part of the National Park Service’s American Battlefield Protection Program.",
+    "description": "<p style='margin-bottom:0in;'><span style='font-size:18px;'>A battlefield is the current or historic location where an armed conflict or military battle takes place. You might be picturing an open field with soldiers based on the name. However, a battlefield is any place where a battle has taken place. For example, the Wilderness battle (May 5<sup>th</sup> to 7<sup>th</sup>, 1864) in the state of Virginia during the Civil War was fought in dense woodland.&nbsp;</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Many people consider battlefields to be sacred sites or hallowed ground. This is because of the number of people who died there in the conflict. Many people travel to these places to learn and honor the soldiers who sacrificed there.</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>This map layer shows the historic battlefields in the United States included in the National Park Service’s </span><a target='_blank' href='https://www.nps.gov/orgs/2287/index.htm' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>American Battlefield Protection Program</span></a><span style='font-size:18px;'>. This program works to preserve and provide interpretation of these important places. By studying the past, we can learn from it and hopefully learn from the past mistakes of others.&nbsp;</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>This map layer includes battlefields from 3 wars: the Revolutionary War (1775-1783), the War of 1812, and the Civil War (1861-1865). This layer includes two parts: one, the footprint of the entire battlefield, and two, the core area, where the fighting was the heaviest. The data for this map comes from two separate reports: the </span><a target='_blank' href='https://chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https:/npshistory.com/publications/battlefield/revolutionary-war-of-1812.pdf' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'><i>Report to Congress on the Historic Preservation of Revolutionary War and War of 1812 Sites in the United States</i></span></a><span style='font-size:18px;'><i>&nbsp;</i>(2007) and the </span><a target='_blank' href='https://chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https:/npshistory.com/publications/battlefield/cwsac/report.pdf' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'><i>Civil War Sites Advisory Commission Report on the Nation’s Civil War Battlefields <span style='font-style:normal;'>(1993)</span></i></span></a><span style='font-size:18px;'>.&nbsp;</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Note: You are likely viewing this layer as part of a map on a specific war or battle. In that case, you may only see the battlefields for the specific event and not all three wars included in this dataset. This is not an error; the map maker has simply filtered the data to keep the map clear and concise.&nbsp;</span></p><p style='margin-bottom:0in;'>&nbsp;</p><h5 style='margin:7.5pt 0in 1.5pt;'><span style='color:#333333; font-family:&quot;Helvetica&quot;,sans-serif; font-size:18px;'><span style='line-height:107%;'><u>Data Citations</u></span></span></h5><p style='margin-bottom:0in;'><span style='background-color:white; color:#404040; font-family:&quot;Helvetica&quot;,sans-serif; font-size:18px;'><span style='line-height:107%;'>Martin V and Stein J. 2020. American Revolution Battlefield Boundaries and Associated Historic Properties. National Park Service. Network Drive</span></span><br /><a target='_blank' href='https://irma.nps.gov/DataStore/Reference/Profile/2279701' rel='nofollow ugc noopener noreferrer'><span style='background-color:white; color:#005EA2; font-family:&quot;Helvetica&quot;,sans-serif; font-size:18px;'><span style='line-height:107%;'>https://irma.nps.gov/DataStore/Reference/Profile/2279701</span></span></a><span style='font-size:18px;'>.</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Martin V and Stein J. 2020. War of 1812 Battlefield Boundaries and Associated Historic Properties. National Park Service. Network Drive</span><br /><a target='_blank' href='https://irma.nps.gov/DataStore/Reference/Profile/2279685' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>https://irma.nps.gov/DataStore/Reference/Profile/2279685</span></a><span style='font-size:18px;'>.</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Stein J and Martin V. 2020. Civil War Battlefield Boundaries. National Park Service. Network Drive</span><br /><a target='_blank' href='https://irma.nps.gov/DataStore/Reference/Profile/2279732' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>https://irma.nps.gov/DataStore/Reference/Profile/2279732</span></a><span style='font-size:18px;'>.</span></p><p style='margin-bottom:0in;'>&nbsp;</p><p style='margin-bottom:0in;'><span style='font-size:18px;'>Martin V and Stein J. 2020. Updated Civil War Battlefield Boundaries. National Park Service. Network Drive</span></p><p style='margin-bottom:0in;'><a target='_blank' href='https://irma.nps.gov/DataStore/Reference/Profile/2279739' rel='nofollow ugc noopener noreferrer'><span style='font-size:18px;'>https://irma.nps.gov/DataStore/Reference/Profile/2279739</span></a><span style='font-size:18px;'>.</span></p>",
+    "tags": [
+     "National Park Service",
+     "ABPP",
+     "American Battlefield Protection Program",
+     "Battlefield Boundaries",
+     "Battlefields",
+     "Boundaries",
+     "Civil War",
+     "History and Culture",
+     "National Parks",
+     "Revolutionary War",
+     "War of 1812",
+     "school",
+     "learn",
+     "education"
+    ],
+    "accessInformation": "American Battlefield Protection Program, National Park Service, Department of the Interior (ABPP-NPS)\nCultural Resources GIS (CRGIS)",
+    "licenseInfo": "<p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The </span><a target='_blank' href='https://www.nps.gov/subjects/gisandmapping/data-disclaimers.htm' rel='nofollow ugc noopener noreferrer'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>National Park Service</span></a><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'> shall not be held liable for improper or incorrect use of the cultural resource data described and/or contained herein. These data and related graphics are not legal documents and are not intended to be used as such, nor do they replace the need for consultation with appropriate state/tribal/federal historic preservation offices.</span></p><p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The information contained in these data is dynamic and may change over time. The data are not better than the original sources from which they were derived. It is the responsibility of the data user to use the data appropriately and consistently within the limitations of geospatial data in general and these data in particular, as expressed in feature-level metadata. The related graphics are intended to aid the data user in acquiring relevant data; it is not appropriate to use the related graphics as data.​​​​​​​</span></p><p style='background-color:white; line-height:normal; margin:0in 2.25pt 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>Cultural resource data sets may contain sensitive information that has been redacted or withheld from general use.&nbsp; These data require express permission from National Park Service programs, parks, or regional offices to access or use. Any unauthorized use of sensitive cultural resource data, disclosure, or distribution of that data, is prohibited unless specifically provided under the Archaeological Resources Protection Act of 1979, 16. U.S.C. 470hh, as amended, and National Park Service and Related Programs, 54&nbsp;U.S.C. 300101 (formerly known as the National Historic Preservation Act, 16 U.S.C. 470-1).</span></p><p style='background-color:white; line-height:normal; margin:0in .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The National Park Service gives no warranty, expressed or implied, as to the accuracy, reliability, or completeness of these data, which may have been generated over many years, using multiple creation methods as well as collection procedures. It is strongly recommended that these data be directly acquired from an NPS server and not indirectly through other sources, which may have changed the data in some way. Although these data have been processed successfully on a computer system at the National Park Service, no warranty expressed or implied is made regarding the utility of the data on another system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. This disclaimer applies both to individual use of the data and aggregate use with other data.</span></p>",
+    "created": 1778620484000,
+    "modified": 1783536706000,
+    "numViews": 14507,
+    "thumbnail": "thumbnail/thumbnail1781189229611.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -137.99999610599997,
+      -89.00000000000001
+     ],
+     [
+      -48.00006761500012,
+      84.22434879200006
+     ]
+    ],
+    "descriptionChars": 2592
+   },
+   "service": {
+    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/9",
+    "name": "War Of 1812 Core Areas",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "minScale": 821783,
+    "maxScale": 883,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       252,
+       111,
+       132,
+       191
+      ],
+      "outline": {
+       "color": [
+        0,
+        0,
+        0,
+        255
+       ],
+       "width": 0.75,
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID_12",
+      "alias": "FID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "BOUNDARY",
+      "alias": "BOUNDARY",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SITE",
+      "alias": "SITE",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "WAR",
+      "alias": "WAR",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "STATE",
+      "alias": "STATE",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "NAME",
+      "alias": "NAME",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Acres",
+      "alias": "ACRES",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Area",
+      "alias": "Shape__Area",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "8b2e2d492c124d1cacba0599d20639ae",
+    "count": 70,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [
+      [
+       "Benedict",
+       "Benedict"
+      ]
+     ],
+     "maybeCutOff": [],
+     "nameField": "NAME",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.1
+   },
+   "drawsAtOpening": false,
+   "rendererColourOnly": false
+  },
+  {
+   "path": "Adams–Onís Treaty line, 1819",
+   "title": "Adams–Onís Treaty line, 1819",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": false,
+   "opacity": 1,
+   "itemId": "dc51cf9ed75b4cef8301e6615356affb",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Adams_Onis_Line_1819/FeatureServer/0",
+   "disablePopup": false,
+   "popup": {
+    "title": "Adams–Onís Treaty line, 1819 (part {Segment})",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "Description",
+     "Note",
+     "SourceURL"
+    ]
+   },
+   "popupFrom": "map",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "simple",
+    "field": null,
+    "valueExpression": false,
+    "symbol": {
+     "type": "esriSLS",
+     "style": "esriSLSDash",
+     "color": [
+      204,
+      121,
+      167,
+      255
+     ],
+     "width": 3
+    },
+    "label": null
+   },
+   "item": {
+    "id": "dc51cf9ed75b4cef8301e6615356affb",
+    "title": "Adams–Onís Treaty line, 1819",
+    "type": "Feature Service",
+    "owner": "GIS-4-Schools",
+    "access": "public",
+    "snippet": "The 1819 boundary between the United States and Spanish lands, from the Gulf of Mexico to the Pacific.",
+    "description": "<p>Seven parts following Article 3 of the treaty: up the Sabine to 32° N, north to the Red River, up the Red to 100° W, north to the Arkansas, up the Arkansas to its source, north to 42° N and west along 42° N to the Pacific.</p><p>Drawn from the treaty's description on Natural Earth's rivers: approximate at classroom scale.</p><p><i>Version 1.0 (14 October 2026).</i></p>",
+    "tags": [
+     "MapMaker",
+     "US History",
+     "grade 8",
+     "November 2026",
+     "Adams-Onis Treaty",
+     "Transcontinental Treaty",
+     "boundary",
+     "Florida"
+    ],
+    "accessInformation": "Treaty text: Avalon Project, Yale Law School. Rivers: Natural Earth (public domain).",
+    "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
+    "created": 1791982392000,
+    "modified": 1791988643000,
+    "numViews": 62,
+    "thumbnail": "thumbnail/ago_downloaded.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -124.2147,
+      29.990299999999994
+     ],
+     [
+      -93.51490000000001,
+      41.99999999999999
+     ]
+    ],
+    "descriptionChars": 346
+   },
+   "service": {
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Adams_Onis_Line_1819/FeatureServer/0",
+    "name": "MM_US_Adams_Onis_Line_1819_lines",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolyline",
+    "minScale": 92292757,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSLS",
+      "style": "esriSLSSolid",
+      "color": [
+       165,
+       83,
+       183,
+       255
+      ],
+      "width": 1
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "Segment",
+      "alias": "Segment",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "Description",
+      "alias": "Description",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Note",
+      "alias": "Note",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Source",
+      "alias": "Source",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SourceURL",
+      "alias": "SourceURL",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "ObjectId",
+      "alias": "ObjectId",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "dc51cf9ed75b4cef8301e6615356affb",
+    "count": 7,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "Segment",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.3
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false
+  },
+  {
+   "path": "Battles of the War of 1812",
+   "title": "Battles of the War of 1812",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": true,
+   "opacity": null,
+   "itemId": "d84a0d3a85b344cfaaa660f4068c5c33",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Battles_of_the_War_of_1812/FeatureServer/0",
+   "disablePopup": false,
+   "popup": {
+    "title": "{Battle}",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text",
+     "media"
+    ],
+    "images": [],
+    "expressions": [
+     "Victory Color"
+    ],
+    "fieldsInText": [
+     "Dates",
+     "Narrative",
+     "Total_Casualties",
+     "Victor",
+     "expression/expr0"
+    ]
+   },
+   "popupFrom": "layer item",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "uniqueValue",
+    "field": "Victor",
+    "valueExpression": false,
+    "classes": [
+     {
+      "value": "Side A Victory",
+      "label": "American Victory",
+      "symbol": {
+       "type": "esriSMS",
+       "style": "esriSMSDiamond",
+       "color": [
+        53,
+        115,
+        135,
+        255
+       ],
+       "size": 12,
+       "outline": {
+        "color": [
+         153,
+         153,
+         153,
+         64
+        ],
+        "width": 0.75,
+        "style": "esriSLSSolid"
+       }
+      }
+     },
+     {
+      "value": "Side B Victory",
+      "label": "British Victory",
+      "symbol": {
+       "type": "esriSMS",
+       "style": "esriSMSDiamond",
+       "color": [
+        161,
+        29,
+        29,
+        255
+       ],
+       "size": 12,
+       "outline": {
+        "color": [
+         153,
+         153,
+         153,
+         64
+        ],
+        "width": 0.75,
+        "style": "esriSLSSolid"
+       }
+      }
+     },
+     {
+      "value": "Inconclusive",
+      "label": "Inconclusive",
+      "symbol": {
+       "type": "esriSMS",
+       "style": "esriSMSDiamond",
+       "color": [
+        161,
+        159,
+        159,
+        255
+       ],
+       "size": 12,
+       "outline": {
+        "color": [
+         153,
+         153,
+         153,
+         64
+        ],
+        "width": 0.75,
+        "style": "esriSLSSolid"
+       }
+      }
+     }
+    ],
+    "default": null,
+    "visualVariables": [
+     "sizeInfo"
+    ]
+   },
+   "item": {
+    "id": "d84a0d3a85b344cfaaa660f4068c5c33",
+    "title": "Battles of the War of 1812",
+    "type": "Feature Service",
+    "owner": "mm.atlas",
+    "access": "public",
+    "snippet": "Explore the major battles of the War of 1812 (1812 to 1815) with this map layer by the American Battlefield Trust, which works to preserve endangered battlefields across the United States.",
+    "description": "<p><span style='font-family:Arial; font-size:18px;'>This layer, compiled by the American Battlefield Trust, shows the battles fought during the War of 1812. </span><span style='background-color:rgba(0,0,0,0); color:rgb(0,0,0); font-family:Arial; font-size:18px;'><span style='border-collapse:separate; border-image:none 100% / 1 / 0 stretch; border-radius:0px; border-spacing:0px; border:0px none rgb(0, 0, 0); box-decoration-break:slice; box-shadow:none; box-sizing:content-box; break-after:auto; break-before:auto; break-inside:auto; clear:none; color-interpolation-filters:linearrgb; display:inline; flex-flow:row; flex:0 1 auto; float:none; font-feature-settings:normal; font-kerning:none; font-size-adjust:none; font-stretch:100%; font-style:normal; font-synthesis:weight style small-caps; font-variant:none; font-weight:400; gap:normal; grid-area:auto; grid:none; height:auto; letter-spacing:normal; lighting-color:rgb(255, 255, 255); line-height:20.925px; list-style:outside none disc; margin:0px; max-height:none; max-width:none; min-height:0px; min-width:0px; overflow:visible; padding:0px; text-align-last:auto; text-align:left; text-combine-upright:none; text-decoration:none solid rgb(0, 0, 0); text-emphasis-position:over; text-emphasis:none rgb(0, 0, 0); text-indent:0px; text-orientation:mixed; text-overflow:clip; text-shadow:none; text-transform:none; text-underline-position:auto; text-wrap:wrap; width:auto; word-break:normal; word-spacing:0px;'>The War of 1812 is sometimes called the Second War of Independence. </span></span><span style='background-color:rgb(255,255,255); color:rgb(0,0,0); font-family:Arial; font-size:18px;'><span style='font-style:normal; font-variant-caps:normal; font-variant-ligatures:none !important; font-weight:400; letter-spacing:normal; line-height:20.925px; margin:0px; padding:0px; text-align:left; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Britain and France were at war, and both were attempting to restrict the United States from trading with the other. France was a major trading partner for the United States. Britain was also stopping U.S. ships at sea, forcing their sailors to join the Royal Navy. Enraged, the U.S., under President James Madison, prepared for war.</span><span style='font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:20.925px; margin:0px; padding:0px; text-align:left; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>&nbsp;</span></span></p><p><span style='background-color:rgb(255,255,255); color:rgb(0,0,0); font-family:Arial; font-size:18px;'><span style='font-style:normal; font-variant-caps:normal; font-variant-ligatures:none; font-weight:400; letter-spacing:normal; margin:0px; padding:0px; text-align:left; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>The U.S. Navy won several battles against the British Royal Navy, especially in the Great Lakes region. But the army was less successful. </span><span style='font-style:normal; font-variant-caps:normal; font-variant-ligatures:none !important; font-weight:400; letter-spacing:normal; line-height:20.925px; margin:0px; padding:0px; text-align:left; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>The U.S. Army attempted several times to invade Canada, primarily around Buffalo, New York, and Niagara Falls. </span><span style='font-style:normal; font-variant-caps:normal; font-variant-ligatures:none; font-weight:400; letter-spacing:normal; margin:0px; padding:0px; text-align:left; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>At the time, the U.S. Army was small and poorly trained compared to Britain’s forces. It was supplemented by state militias, which often lacked sufficient weapons or supplies.</span></span></p><p><span style='background-color:rgb(255,255,255); color:rgb(0,0,0); font-family:Arial; font-size:18px;'><span style='font-style:normal; font-variant-caps:normal; font-variant-ligatures:none !important; font-weight:400; letter-spacing:normal; line-height:20.925px; margin:0px; padding:0px; text-align:left; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>In 1814, when the war with France temporarily ended, additional British forces landed in Maryland. This army marched through Washington, D.C., burning public buildings, before trying to capture Baltimore. From there, they moved south.</span><span style='font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:20.925px; margin:0px; padding:0px; text-align:left; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'> </span><span style='font-style:normal; font-variant-caps:normal; font-variant-ligatures:none; font-weight:400; letter-spacing:normal; margin:0px; padding:0px; text-align:left; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>By the end of the war, British troops were quartered in the Spanish territory in Florida. Jackson pursued them there, but by the time he fought them in the Battle of New Orleans, the Treaty of Ghent had officially ended the war.</span></span></p><p><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:Arial; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Data Citation: American Battlefield Trust. </span><i><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Maps</span></i><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>. 2025 </span></span><a style='background-color:rgb(255, 255, 255); border-style:solid; border-width:0px; box-sizing:border-box; color:rgb(0, 97, 155); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration:none; text-indent:0px; text-transform:none; word-spacing:0px;' target='_blank' href='https://www.battlefields.org/search?algolia_search_index%5BrefinementList%5D%5Bfield_resource_type%5D%5B0%5D=map&amp;ms=googlepaid&amp;ms=googlepaid' rel='nofollow ugc noopener noreferrer'><span style='font-family:Arial; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'>https://www.battlefields.org/search?algolia_search_index%5BrefinementList%5D%5Bfield_resource_type%5D%5B0%5D=map&amp;ms=googlepaid&amp;ms=googlepaid</span></span></a><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:Arial; font-size:18px;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>.&nbsp;</span></span></p>",
+    "tags": [
+     "War of 1812",
+     "Great Britain",
+     "United States",
+     "school",
+     "learn",
+     "education",
+     "MapMaker"
+    ],
+    "accessInformation": "American Battlefield Trust",
+    "licenseInfo": "<p>Copyright <a target='_blank' href='https://www.battlefields.org/?ms=googlepaid&amp;ms=googlepaid' rel='nofollow ugc noopener noreferrer'>American Battlefield Trust</a></p>",
+    "created": 1755104094000,
+    "modified": 1785524487000,
+    "numViews": 1640,
+    "thumbnail": "thumbnail/thumbnail1783649533304.png",
+    "contentStatus": null,
+    "extent": [
+     [
+      -91.15730399999995,
+      29.238628000000062
+     ],
+     [
+      -66.98861099999993,
+      45.87225600000005
+     ]
+    ],
+    "descriptionChars": 1607
+   },
+   "service": {
+    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Battles_of_the_War_of_1812/FeatureServer/0",
+    "name": "Warof1812_Battles",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPoint",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSMS",
+      "style": "esriSMSCircle",
+      "color": [
+       130,
+       59,
+       104,
+       255
+      ],
+      "size": 4,
+      "outline": {
+       "color": [
+        0,
+        0,
+        0,
+        255
+       ],
+       "width": 0.7,
+       "style": null
+      }
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID",
+      "alias": "ObjectID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "Dates",
+      "alias": "Battle Dates",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Date_Start",
+      "alias": "Battle Start Date",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Date_End",
+      "alias": "Battle End Date",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Battle",
+      "alias": "Battle Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "State",
+      "alias": "State Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "x",
+      "alias": "X Coordinate",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "y",
+      "alias": "Y Coordinate",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Victor",
+      "alias": "Battle Victor",
+      "type": "esriFieldTypeString",
+      "domain": true
+     },
+     {
+      "name": "Thumbnail",
+      "alias": "Key Image",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Thumbnail_Small",
+      "alias": "Key Image Small",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Image_Credit",
+      "alias": "Image Credit",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Narrative",
+      "alias": "Description",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Troops_engaged_Side_A",
+      "alias": "America Troops Total",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Troops_engaged_Side_B",
+      "alias": "British Troop Total",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Casualties_Side_A",
+      "alias": "American Casualties",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Casualties_Side_B",
+      "alias": "British Casualties",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Leaders_Side_A",
+      "alias": "American Leaders",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Leaders_Side_B",
+      "alias": "British Leaders",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Campaign",
+      "alias": "War Campaign",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Battle_Page_URL",
+      "alias": "Battle Page URL",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Additional_Sources",
+      "alias": "Additional Sources",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Total_Casualties",
+      "alias": "Total Casualties",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "d84a0d3a85b344cfaaa660f4068c5c33",
+    "count": 52,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "Battle",
+     "geometryCompared": "geometry"
+    },
+    "seconds": 0.2
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": true
+  },
+  {
+   "path": "Latin American independence and US recognition",
+   "title": "Latin American independence and US recognition",
+   "layerType": "ArcGISFeatureLayer",
+   "visible": false,
+   "opacity": 1,
+   "itemId": "0781ec0ab08242288662526afdcf5630",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_LatAm_Independence_Recognition/FeatureServer/0",
+   "disablePopup": false,
+   "popup": {
+    "title": "{Name}",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "Capital",
+     "HowRecognized",
+     "Independence",
+     "SourceURL",
+     "Today",
+     "USRecognized"
+    ]
+   },
+   "popupFrom": "map",
+   "minScale": null,
+   "maxScale": null,
+   "showLegend": true,
+   "listMode": null,
+   "definitionExpression": null,
+   "rendererInMap": {
+    "type": "uniqueValue",
+    "field": "Recognition",
+    "valueExpression": false,
+    "classes": [
+     {
+      "value": "Recognized by 1824",
+      "label": "Recognized by the United States by 1824",
+      "symbol": {
+       "type": "esriSMS",
+       "style": "esriSMSCircle",
+       "color": [
+        0,
+        114,
+        178,
+        255
+       ],
+       "size": 12,
+       "outline": {
+        "color": [
+         255,
+         255,
+         255,
+         255
+        ],
+        "width": 1.2,
+        "style": "esriSLSSolid"
+       }
+      }
+     },
+     {
+      "value": "Recognized later (1826 to 1862)",
+      "label": "Recognized later (1826 to 1862)",
+      "symbol": {
+       "type": "esriSMS",
+       "style": "esriSMSDiamond",
+       "color": [
+        230,
+        159,
+        0,
+        255
+       ],
+       "size": 13,
+       "outline": {
+        "color": [
+         40,
+         40,
+         40,
+         255
+        ],
+        "width": 1,
+        "style": "esriSLSSolid"
+       }
+      }
+     }
+    ],
+    "default": "Other"
+   },
+   "labelsInMap": true,
+   "item": {
+    "id": "0781ec0ab08242288662526afdcf5630",
+    "title": "Latin American independence and US recognition, 1804 to 1825",
+    "type": "Feature Service",
+    "owner": "GIS-4-Schools",
+    "access": "public",
+    "snippet": "When each nation became independent and when the United States recognized it.",
+    "description": "<p>Ten nations independent by 1825, at their capitals of the time. Dates are as the Office of the Historian gives them. Mexico's and Brazil's independence dates, which its pages don't give, and Chile's formal independence in 1818 are from the Library of Congress country studies.</p><p><i>Version 1.1 (14 October 2026).</i></p>",
+    "tags": [
+     "MapMaker",
+     "US History",
+     "grade 8",
+     "November 2026",
+     "Monroe Doctrine",
+     "Latin America",
+     "independence",
+     "diplomacy"
+    ],
+    "accessInformation": "Office of the Historian, U.S. Department of State; Library of Congress country studies (both public domain). Capitals: Natural Earth (public domain).",
+    "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
+    "created": 1791982374000,
+    "modified": 1791988632000,
+    "numViews": 56,
+    "thumbnail": null,
+    "contentStatus": null,
+    "extent": [
+     [
+      -99.13290000000002,
+      -34.600600000000014
+     ],
+     [
+      -43.227,
+      19.444400000000005
+     ]
+    ],
+    "descriptionChars": 306
+   },
+   "service": {
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_LatAm_Independence_Recognition/FeatureServer/0",
+    "name": "MM_US_LatAm_Independence_Recognition_points",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPoint",
+    "minScale": 0,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriPMS",
+      "style": null,
+      "width": 15,
+      "picture": true
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "Name",
+      "alias": "Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Today",
+      "alias": "Today",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Capital",
+      "alias": "Capital",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Independence",
+      "alias": "Independence",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "IndYear",
+      "alias": "IndYear",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "USRecognized",
+      "alias": "USRecognized",
+      "type": "esriFieldTypeDate",
+      "domain": false
+     },
+     {
+      "name": "RecYear",
+      "alias": "RecYear",
+      "type": "esriFieldTypeSmallInteger",
+      "domain": false
+     },
+     {
+      "name": "HowRecognized",
+      "alias": "HowRecognized",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Recognition",
+      "alias": "Recognition",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Label",
+      "alias": "Label",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Source",
+      "alias": "Source",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SourceURL",
+      "alias": "SourceURL",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "ObjectId",
+      "alias": "ObjectId",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "0781ec0ab08242288662526afdcf5630",
+    "count": 10,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "Name",
+     "geometryCompared": "geometry"
+    },
+    "seconds": 0.2
+   },
+   "drawsAtOpening": true,
+   "rendererColourOnly": false
+  }
+ ],
+ "findings": [
+  {
+   "where": "layer Land Spain gave up in 1819",
+   "what": "text may be cut off in Notes (East Florida (Spanish Cession) 1819): …caused by American citizens when they rebelled against Spain"
+  },
+  {
+   "where": "layer Land Spain gave up in 1819",
+   "what": "text may be cut off in Notes (Spanish Cession 1819): …caused by American citizens when they rebelled against Spain"
+  },
+  {
+   "where": "layer Land Spain gave up in 1819",
+   "what": "text may be cut off in Notes (West Florida (Spanish Cession) 1819): …caused by American citizens when they rebelled against Spain"
+  },
+  {
+   "where": "layer Battlefield Boundaries: War of 1812 / Battlefield Boundary",
+   "what": "on at the start but doesn't draw at the opening scale"
+  },
+  {
+   "where": "layer Battlefield Boundaries: War of 1812 / Battlefield Boundary",
+   "what": "two features at the same place: Dudley's Defeat and Fort Meigs (Second)"
+  },
+  {
+   "where": "layer Battlefield Boundaries: War of 1812 / Battlefield Boundary",
+   "what": "two features at the same place: Dudley's Defeat and Fort Meigs (First)"
+  },
+  {
+   "where": "layer Battlefield Boundaries: War of 1812 / Battlefield Boundary",
+   "what": "two features at the same place: Benedict and Benedict"
+  },
+  {
+   "where": "layer Battlefield Boundaries: War of 1812 / Core Areas",
+   "what": "on at the start but doesn't draw at the opening scale"
+  },
+  {
+   "where": "layer Battlefield Boundaries: War of 1812 / Core Areas",
+   "what": "two features at the same place: Benedict and Benedict"
+  },
+  {
+   "where": "layer Battles of the War of 1812",
+   "what": "symbols differ by colour only (WCAG 1.4.1 if a question depends on telling them apart)"
+  }
+ ]
+}

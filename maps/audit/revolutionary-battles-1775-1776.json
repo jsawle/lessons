@@ -1,5 +1,5 @@
 {
- "tool": "Map audit 1.0",
+ "tool": "Map audit 1.1",
  "lesson": "revolutionary-battles-1775-1776",
  "webmapId": "bda07736a1b9425ea19fdde282088bd6",
  "item": {
@@ -25,7 +25,7 @@
   "licenseInfo": "<p><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:large;'><span style='border:0px solid currentcolor; box-sizing:border-box; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Copyright&nbsp;</span></span><a style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:large; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration:none; text-indent:0px; text-transform:none; word-spacing:0px;' target='_blank' href='https://www.nationalgeographic.org/terms-of-service/' rel='nofollow ugc noopener noreferrer'>National Geographic Society</a></p>",
   "created": 1779490715000,
   "modified": 1787773554000,
-  "numViews": 2542,
+  "numViews": 2543,
   "thumbnail": "thumbnail/thumbnail1787773552250.png",
   "contentStatus": null,
   "extent": [
@@ -136,6 +136,7 @@
     ],
     "fieldsInText": []
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -272,13 +273,16 @@
      }
     ],
     "serviceItemId": "6fd5fb24db79436e9b57f3b35a618802",
-    "count": 8,
+    "filter": "Symbology = 'solid'",
+    "count": 6,
     "checks": {
      "duplicates": [],
      "sameGeometry": [],
      "maybeCutOff": [],
-     "nameField": null
-    }
+     "nameField": null,
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.2
    },
    "drawsAtOpening": true,
    "rendererColourOnly": false
@@ -293,6 +297,7 @@
    "url": null,
    "disablePopup": false,
    "popup": null,
+   "popupFrom": null,
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -382,11 +387,38 @@
     ],
     "fieldsInText": []
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
    "listMode": null,
    "definitionExpression": null,
+   "rendererInMap": {
+    "type": "simple",
+    "field": null,
+    "valueExpression": false,
+    "symbol": {
+     "type": "esriSFS",
+     "style": "esriSFSSolid",
+     "color": [
+      242,
+      238,
+      226,
+      255
+     ],
+     "outline": {
+      "color": [
+       242,
+       238,
+       226,
+       255
+      ],
+      "width": 0.998,
+      "style": "esriSLSSolid"
+     }
+    },
+    "label": null
+   },
    "item": {
     "id": "a0567d6b35994693be300199872b3364",
     "title": "Colony Area",
@@ -495,8 +527,10 @@
      "duplicates": [],
      "sameGeometry": [],
      "maybeCutOff": [],
-     "nameField": null
-    }
+     "nameField": null,
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.2
    },
    "drawsAtOpening": true,
    "rendererColourOnly": false
@@ -548,6 +582,7 @@
     ],
     "fieldsInText": []
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -717,85 +752,87 @@
      "duplicates": [],
      "sameGeometry": [
       [
-       8,
-       9
+       "feature 8",
+       "feature 9"
       ],
       [
-       10,
-       11
+       "feature 10",
+       "feature 11"
       ],
       [
-       16,
-       17
+       "feature 16",
+       "feature 17"
       ],
       [
-       24,
-       25
+       "feature 24",
+       "feature 25"
       ],
       [
-       29,
-       30
+       "feature 29",
+       "feature 30"
       ],
       [
-       31,
-       32
+       "feature 31",
+       "feature 32"
       ],
       [
-       64,
-       65
+       "feature 64",
+       "feature 65"
       ],
       [
-       66,
-       67
+       "feature 66",
+       "feature 67"
       ],
       [
-       68,
-       69
+       "feature 68",
+       "feature 69"
       ],
       [
-       72,
-       73
+       "feature 72",
+       "feature 73"
       ],
       [
-       74,
-       75
+       "feature 74",
+       "feature 75"
       ],
       [
-       78,
-       79
+       "feature 78",
+       "feature 79"
       ],
       [
-       80,
-       81
+       "feature 80",
+       "feature 81"
       ],
       [
-       84,
-       85
+       "feature 84",
+       "feature 85"
       ],
       [
-       86,
-       87
+       "feature 86",
+       "feature 87"
       ],
       [
-       90,
-       91
+       "feature 90",
+       "feature 91"
       ],
       [
-       92,
-       93
+       "feature 92",
+       "feature 93"
       ],
       [
-       98,
-       99
+       "feature 98",
+       "feature 99"
       ],
       [
-       100,
-       101
+       "feature 100",
+       "feature 101"
       ]
      ],
      "maybeCutOff": [],
-     "nameField": null
-    }
+     "nameField": null,
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.2
    },
    "drawsAtOpening": true,
    "rendererColourOnly": false
@@ -810,6 +847,7 @@
    "url": null,
    "disablePopup": false,
    "popup": null,
+   "popupFrom": null,
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -829,49 +867,8 @@
    "disablePopup": true,
    "popup": {
     "title": "The Battle of {NAME}",
-    "fieldsShown": [
-     {
-      "field": "NAME",
-      "label": "NAME"
-     },
-     {
-      "field": "Acres",
-      "label": "ACRES"
-     },
-     {
-      "field": "BOUNDARY",
-      "label": "BOUNDARY"
-     },
-     {
-      "field": "Shape__Area",
-      "label": "Shape__Area"
-     },
-     {
-      "field": "Shape__Length",
-      "label": "Shape__Length"
-     },
-     {
-      "field": "SITE",
-      "label": "SITE"
-     },
-     {
-      "field": "STATE",
-      "label": "STATE"
-     },
-     {
-      "field": "WAR",
-      "label": "WAR"
-     }
-    ],
-    "fieldLabelsAreNames": [
-     "NAME",
-     "BOUNDARY",
-     "Shape__Area",
-     "Shape__Length",
-     "SITE",
-     "STATE",
-     "WAR"
-    ],
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
     "elements": [
      "text"
     ],
@@ -882,6 +879,7 @@
      "NAME"
     ]
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -941,7 +939,7 @@
     "licenseInfo": "<p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The </span><a target='_blank' href='https://www.nps.gov/subjects/gisandmapping/data-disclaimers.htm' rel='nofollow ugc noopener noreferrer'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>National Park Service</span></a><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'> shall not be held liable for improper or incorrect use of the cultural resource data described and/or contained herein. These data and related graphics are not legal documents and are not intended to be used as such, nor do they replace the need for consultation with appropriate state/tribal/federal historic preservation offices.</span></p><p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The information contained in these data is dynamic and may change over time. The data are not better than the original sources from which they were derived. It is the responsibility of the data user to use the data appropriately and consistently within the limitations of geospatial data in general and these data in particular, as expressed in feature-level metadata. The related graphics are intended to aid the data user in acquiring relevant data; it is not appropriate to use the related graphics as data.​​​​​​​</span></p><p style='background-color:white; line-height:normal; margin:0in 2.25pt 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>Cultural resource data sets may contain sensitive information that has been redacted or withheld from general use.&nbsp; These data require express permission from National Park Service programs, parks, or regional offices to access or use. Any unauthorized use of sensitive cultural resource data, disclosure, or distribution of that data, is prohibited unless specifically provided under the Archaeological Resources Protection Act of 1979, 16. U.S.C. 470hh, as amended, and National Park Service and Related Programs, 54&nbsp;U.S.C. 300101 (formerly known as the National Historic Preservation Act, 16 U.S.C. 470-1).</span></p><p style='background-color:white; line-height:normal; margin:0in .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The National Park Service gives no warranty, expressed or implied, as to the accuracy, reliability, or completeness of these data, which may have been generated over many years, using multiple creation methods as well as collection procedures. It is strongly recommended that these data be directly acquired from an NPS server and not indirectly through other sources, which may have changed the data in some way. Although these data have been processed successfully on a computer system at the National Park Service, no warranty expressed or implied is made regarding the utility of the data on another system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. This disclaimer applies both to individual use of the data and aggregate use with other data.</span></p>",
     "created": 1778620484000,
     "modified": 1783536706000,
-    "numViews": 0,
+    "numViews": 14506,
     "thumbnail": "thumbnail/thumbnail1781189229611.png",
     "contentStatus": null,
     "extent": [
@@ -958,11 +956,108 @@
    },
    "service": {
     "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/7",
-    "error": {
-     "message": "InvalidURL: URL can't contain control characters. '/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/7?f=json' (found at least ' ')"
-    }
+    "name": "Revolutionary War Battlefield Boundary",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "minScale": 2433320,
+    "maxScale": 1530,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       255,
+       247,
+       153,
+       191
+      ],
+      "outline": {
+       "color": [
+        0,
+        0,
+        0,
+        255
+       ],
+       "width": 0.75,
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID_12",
+      "alias": "FID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "BOUNDARY",
+      "alias": "BOUNDARY",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SITE",
+      "alias": "SITE",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "WAR",
+      "alias": "WAR",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "STATE",
+      "alias": "STATE",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "NAME",
+      "alias": "NAME",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Acres",
+      "alias": "ACRES",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Area",
+      "alias": "Shape__Area",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "8b2e2d492c124d1cacba0599d20639ae",
+    "count": 159,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "NAME",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.2
    },
-   "drawsAtOpening": true,
+   "drawsAtOpening": false,
    "rendererColourOnly": false
   },
   {
@@ -976,49 +1071,8 @@
    "disablePopup": true,
    "popup": {
     "title": "The Battle of {NAME}",
-    "fieldsShown": [
-     {
-      "field": "NAME",
-      "label": "NAME"
-     },
-     {
-      "field": "Acres",
-      "label": "ACRES"
-     },
-     {
-      "field": "BOUNDARY",
-      "label": "BOUNDARY"
-     },
-     {
-      "field": "Shape__Area",
-      "label": "Shape__Area"
-     },
-     {
-      "field": "Shape__Length",
-      "label": "Shape__Length"
-     },
-     {
-      "field": "SITE",
-      "label": "SITE"
-     },
-     {
-      "field": "STATE",
-      "label": "STATE"
-     },
-     {
-      "field": "WAR",
-      "label": "WAR"
-     }
-    ],
-    "fieldLabelsAreNames": [
-     "NAME",
-     "BOUNDARY",
-     "Shape__Area",
-     "Shape__Length",
-     "SITE",
-     "STATE",
-     "WAR"
-    ],
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
     "elements": [
      "text"
     ],
@@ -1029,6 +1083,7 @@
      "NAME"
     ]
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -1073,7 +1128,7 @@
     "licenseInfo": "<p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The </span><a target='_blank' href='https://www.nps.gov/subjects/gisandmapping/data-disclaimers.htm' rel='nofollow ugc noopener noreferrer'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>National Park Service</span></a><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'> shall not be held liable for improper or incorrect use of the cultural resource data described and/or contained herein. These data and related graphics are not legal documents and are not intended to be used as such, nor do they replace the need for consultation with appropriate state/tribal/federal historic preservation offices.</span></p><p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The information contained in these data is dynamic and may change over time. The data are not better than the original sources from which they were derived. It is the responsibility of the data user to use the data appropriately and consistently within the limitations of geospatial data in general and these data in particular, as expressed in feature-level metadata. The related graphics are intended to aid the data user in acquiring relevant data; it is not appropriate to use the related graphics as data.​​​​​​​</span></p><p style='background-color:white; line-height:normal; margin:0in 2.25pt 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>Cultural resource data sets may contain sensitive information that has been redacted or withheld from general use.&nbsp; These data require express permission from National Park Service programs, parks, or regional offices to access or use. Any unauthorized use of sensitive cultural resource data, disclosure, or distribution of that data, is prohibited unless specifically provided under the Archaeological Resources Protection Act of 1979, 16. U.S.C. 470hh, as amended, and National Park Service and Related Programs, 54&nbsp;U.S.C. 300101 (formerly known as the National Historic Preservation Act, 16 U.S.C. 470-1).</span></p><p style='background-color:white; line-height:normal; margin:0in .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The National Park Service gives no warranty, expressed or implied, as to the accuracy, reliability, or completeness of these data, which may have been generated over many years, using multiple creation methods as well as collection procedures. It is strongly recommended that these data be directly acquired from an NPS server and not indirectly through other sources, which may have changed the data in some way. Although these data have been processed successfully on a computer system at the National Park Service, no warranty expressed or implied is made regarding the utility of the data on another system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. This disclaimer applies both to individual use of the data and aggregate use with other data.</span></p>",
     "created": 1778620484000,
     "modified": 1783536706000,
-    "numViews": 0,
+    "numViews": 14506,
     "thumbnail": "thumbnail/thumbnail1781189229611.png",
     "contentStatus": null,
     "extent": [
@@ -1090,11 +1145,108 @@
    },
    "service": {
     "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/10",
-    "error": {
-     "message": "InvalidURL: URL can't contain control characters. '/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/10?f=json' (found at least ' ')"
-    }
+    "name": "Revolutionary War Core Areas",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "minScale": 1078534,
+    "maxScale": 625,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       177,
+       169,
+       208,
+       191
+      ],
+      "outline": {
+       "color": [
+        0,
+        0,
+        0,
+        255
+       ],
+       "width": 0.75,
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID_12",
+      "alias": "OBJECTID_12",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "BOUNDARY",
+      "alias": "BOUNDARY",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "SITE",
+      "alias": "SITE",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "WAR",
+      "alias": "WAR",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "STATE",
+      "alias": "STATE",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "NAME",
+      "alias": "NAME",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Acres",
+      "alias": "ACRES",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Area",
+      "alias": "Shape__Area",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "8b2e2d492c124d1cacba0599d20639ae",
+    "count": 146,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "NAME",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.1
    },
-   "drawsAtOpening": true,
+   "drawsAtOpening": false,
    "rendererColourOnly": false
   },
   {
@@ -1108,115 +1260,8 @@
    "disablePopup": false,
    "popup": {
     "title": "",
-    "fieldsShown": [
-     {
-      "field": "Battle",
-      "label": "Battle"
-     },
-     {
-      "field": "Battle_Page_URL",
-      "label": "Battle_Page_URL"
-     },
-     {
-      "field": "BFT_Coords",
-      "label": "BFT_Coords"
-     },
-     {
-      "field": "Campaign",
-      "label": "Campaign"
-     },
-     {
-      "field": "Casualties_Side_A",
-      "label": "Casualties_Side_A"
-     },
-     {
-      "field": "Casualties_Side_B",
-      "label": "Casualties_Side_B"
-     },
-     {
-      "field": "Date_End",
-      "label": "Date_End"
-     },
-     {
-      "field": "Date_Start",
-      "label": "Date_Start"
-     },
-     {
-      "field": "Dates",
-      "label": "Dates"
-     },
-     {
-      "field": "Image_Credit",
-      "label": "Image_Credit"
-     },
-     {
-      "field": "Leaders_Side_A",
-      "label": "Leaders_Side_A"
-     },
-     {
-      "field": "Leaders_Side_B",
-      "label": "Leaders_Side_B"
-     },
-     {
-      "field": "Narrative",
-      "label": "Narrative"
-     },
-     {
-      "field": "State",
-      "label": "State"
-     },
-     {
-      "field": "Thumbnail",
-      "label": "Thumbnail"
-     },
-     {
-      "field": "Thumbnail_Small",
-      "label": "Thumbnail_Small"
-     },
-     {
-      "field": "Troops_engaged_Side_A",
-      "label": "Troops_engaged_Side_A"
-     },
-     {
-      "field": "Troops_engaged_Side_B",
-      "label": "Troops_engaged_Side_B"
-     },
-     {
-      "field": "Victor",
-      "label": "Victor"
-     },
-     {
-      "field": "x",
-      "label": "x"
-     },
-     {
-      "field": "y",
-      "label": "y"
-     }
-    ],
-    "fieldLabelsAreNames": [
-     "Battle",
-     "Battle_Page_URL",
-     "BFT_Coords",
-     "Campaign",
-     "Casualties_Side_A",
-     "Casualties_Side_B",
-     "Date_End",
-     "Date_Start",
-     "Dates",
-     "Image_Credit",
-     "Leaders_Side_A",
-     "Leaders_Side_B",
-     "Narrative",
-     "State",
-     "Thumbnail",
-     "Thumbnail_Small",
-     "Troops_engaged_Side_A",
-     "Troops_engaged_Side_B",
-     "Victor",
-     "x",
-     "y"
-    ],
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
     "elements": [
      "text",
      "media",
@@ -1246,6 +1291,7 @@
      "expression/expr0"
     ]
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -1525,131 +1571,16 @@
      }
     ],
     "serviceItemId": "fb2bcd7497aa41ac8c5f58c89e9c523e",
-    "count": 121,
+    "filter": "Dates IN ('April 19, 1775','April 19, 1775 to March 17, 1776','August 27, 1776','August 8, 1775 to August 9, 1775','December 21, 1776 to December 23, 1776','December 26, 1776','December 31, 1775','December 8, 1776 to December 12, 1776','December 9, 1775','February 27, 1776','July 8, 1776 to July 10, 1776','June 17, 1775','June 28, 1776','June 28, 1776 to June 29, 1776','May 10, 1775','May 12, 1775','November 16, 1776','November 20, 1776','October 11, 1776','October 18, 1776','October 28, 1776')",
+    "count": 21,
     "checks": {
      "duplicates": [],
-     "sameGeometry": [
-      [
-       3,
-       26
-      ],
-      [
-       20,
-       47
-      ],
-      [
-       77,
-       81
-      ],
-      [
-       67,
-       111
-      ]
-     ],
-     "maybeCutOff": [
-      {
-       "feature": 1,
-       "field": "Thumbnail",
-       "ends": "th/public/Stand-Your-Ground-By-Don-Troiani.jpg?itok=1e6WletH"
-      },
-      {
-       "feature": 2,
-       "field": "Thumbnail",
-       "ends": "ublic/thumbnails/image/Siege%20of%20Boston.jpg?itok=HfIPvX9M"
-      },
-      {
-       "feature": 3,
-       "field": "Thumbnail",
-       "ends": "thumbnails/image/Fort%20Ticonderoga%20Hero.jpg?itok=zLexz--x"
-      },
-      {
-       "feature": 4,
-       "field": "Thumbnail",
-       "ends": "thumbnails/image/Crown%20Point%20landscape.png?itok=dewQg6Sy"
-      },
-      {
-       "feature": 5,
-       "field": "Thumbnail",
-       "ends": "%20Bunker%20Hill%20-%20Death%20of%20Warren.jpg?itok=52AQQ1na"
-      },
-      {
-       "feature": 5,
-       "field": "Thumbnail_Small",
-       "ends": "%20Bunker%20Hill%20-%20Death%20of%20Warren.jpg?itok=uaFda2sD"
-      },
-      {
-       "feature": 7,
-       "field": "Thumbnail",
-       "ends": "lic/thumbnails/image/Great%20Bridge%20Hero.jpg?itok=8x7IKfPe"
-      },
-      {
-       "feature": 8,
-       "field": "Thumbnail",
-       "ends": "_in_the_Attack_on_Quebec_December_31_1775.jpeg?itok=Kmx1QHjU"
-      },
-      {
-       "feature": 8,
-       "field": "Thumbnail_Small",
-       "ends": "_in_the_Attack_on_Quebec_December_31_1775.jpeg?itok=axBT4sfc"
-      },
-      {
-       "feature": 10,
-       "field": "Thumbnail",
-       "ends": "r_Parker%27s_Attack_Against_Fort_Moultrie.jpeg?itok=yyTAPRbB"
-      },
-      {
-       "feature": 11,
-       "field": "Thumbnail",
-       "ends": "et%20de%20Fort%20Sulivan%2C%20mai%201780..jpeg?itok=M3EU8tjs"
-      },
-      {
-       "feature": 11,
-       "field": "Thumbnail_Small",
-       "ends": "et%20de%20Fort%20Sulivan%2C%20mai%201780..jpeg?itok=H3qZUlbt"
-      },
-      {
-       "feature": 12,
-       "field": "Thumbnail",
-       "ends": "ails/image/Default-Visit-Places-76-Field_0.jpg?itok=kxqj9ESE"
-      },
-      {
-       "feature": 13,
-       "field": "Thumbnail",
-       "ends": "age/South%20Carolina%20Map%20-%20Landscape.png?itok=7DUh9Wr8"
-      },
-      {
-       "feature": 14,
-       "field": "Thumbnail",
-       "ends": "umbnails/image/Battle%20of%20Long%20Island.jpg?itok=5XFRQIfc"
-      },
-      {
-       "feature": 15,
-       "field": "Thumbnail",
-       "ends": "c/thumbnails/image/Valcour%20Island%20Hero.jpg?itok=Au9KJeEl"
-      },
-      {
-       "feature": 16,
-       "field": "Thumbnail",
-       "ends": "c/thumbnails/image/Pell%27s%20Point%20Hero.jpg?itok=ktEhPtRL"
-      },
-      {
-       "feature": 17,
-       "field": "Thumbnail",
-       "ends": "umbnails/image/white-plains-header-970x650.jpg?itok=SdsSzmIo"
-      },
-      {
-       "feature": 18,
-       "field": "Thumbnail",
-       "ends": "ic/thumbnails/image/Fort%20Washington_Hero.jpg?itok=zeARTRjY"
-      },
-      {
-       "feature": 19,
-       "field": "Thumbnail",
-       "ends": "ish_forces_in_the_Jerseys_-_Thomas_Davies.jpeg?itok=kSZ_uEgu"
-      }
-     ],
-     "nameField": null
-    }
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "Battle",
+     "geometryCompared": "geometry"
+    },
+    "seconds": 0.1
    },
    "drawsAtOpening": true,
    "rendererColourOnly": true
@@ -1663,7 +1594,20 @@
    "itemId": "0f26eb607f6d409aade772a4a1a4771c",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/ports_with_coordinates/FeatureServer/0",
    "disablePopup": false,
-   "popup": null,
+   "popup": {
+    "title": "",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "Port"
+    ]
+   },
+   "popupFrom": "layer item",
    "minScale": 0,
    "maxScale": null,
    "showLegend": true,
@@ -1792,8 +1736,10 @@
      "duplicates": [],
      "sameGeometry": [],
      "maybeCutOff": [],
-     "nameField": null
-    }
+     "nameField": null,
+     "geometryCompared": "geometry"
+    },
+    "seconds": 0.1
    },
    "drawsAtOpening": true,
    "rendererColourOnly": false
@@ -1809,50 +1755,8 @@
    "disablePopup": false,
    "popup": {
     "title": "Battle Details",
-    "fieldsShown": [
-     {
-      "field": "Battle",
-      "label": "Battle"
-     },
-     {
-      "field": "Date",
-      "label": "Date"
-     },
-     {
-      "field": "Group_",
-      "label": "Group_"
-     },
-     {
-      "field": "Latitude",
-      "label": "Latitude"
-     },
-     {
-      "field": "Longitude",
-      "label": "Longitude"
-     },
-     {
-      "field": "Notes",
-      "label": "Notes"
-     },
-     {
-      "field": "Victor",
-      "label": "Victor"
-     },
-     {
-      "field": "Year",
-      "label": "Year"
-     }
-    ],
-    "fieldLabelsAreNames": [
-     "Battle",
-     "Date",
-     "Group_",
-     "Latitude",
-     "Longitude",
-     "Notes",
-     "Victor",
-     "Year"
-    ],
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
     "elements": [
      "text"
     ],
@@ -1865,6 +1769,7 @@
      "Year"
     ]
    },
+   "popupFrom": "map",
    "minScale": 3600000.400011,
    "maxScale": null,
    "showLegend": true,
@@ -1920,7 +1825,7 @@
     "licenseInfo": "<p>Layer created by Chris Bunin and Peter Trentacoste&nbsp;</p><p>Permission to use for educational purposes under <a target='_blank' href='https://creativecommons.org/licenses/by-nc/4.0/deed.en' rel='nofollow ugc noopener noreferrer'>CC BY-NC 4.0</a></p>",
     "created": 1780693357000,
     "modified": 1783549577000,
-    "numViews": 0,
+    "numViews": 2406,
     "thumbnail": "thumbnail/thumbnail1783548092313.png",
     "contentStatus": null,
     "extent": [
@@ -2026,33 +1931,35 @@
      "sameGeometry": [],
      "maybeCutOff": [
       {
-       "feature": 1,
+       "feature": "Lexington and Concord",
        "field": "Notes",
        "ends": "urn, militia fighters from nearby towns had the advantage of"
       },
       {
-       "feature": 2,
+       "feature": "Battle of Bunker Hill",
        "field": "Notes",
        "ends": "troops crossed Boston Harbor by boat to attack American mili"
       },
       {
-       "feature": 3,
+       "feature": "Battle for New York",
        "field": "Notes",
        "ends": "g north across Manhattan, the defeated the Americans at Fort"
       },
       {
-       "feature": 4,
+       "feature": "Fall of New York City",
        "field": "Notes",
        "ends": "ht. American forces crossed the icy Delaware River to surpri"
       },
       {
-       "feature": 5,
+       "feature": "Washington Strikes Back",
        "field": "Notes",
        "ends": "rea. During the Battle of Brooklyn, British troops outmanuev"
       }
      ],
-     "nameField": null
-    }
+     "nameField": "Battle",
+     "geometryCompared": "geometry"
+    },
+    "seconds": 0.2
    },
    "drawsAtOpening": false,
    "rendererColourOnly": false
@@ -2073,99 +1980,87 @@
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 8 and 9"
+   "what": "two features at the same place: feature 8 and feature 9"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 10 and 11"
+   "what": "two features at the same place: feature 10 and feature 11"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 16 and 17"
+   "what": "two features at the same place: feature 16 and feature 17"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 24 and 25"
+   "what": "two features at the same place: feature 24 and feature 25"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 29 and 30"
+   "what": "two features at the same place: feature 29 and feature 30"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 31 and 32"
+   "what": "two features at the same place: feature 31 and feature 32"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 64 and 65"
+   "what": "two features at the same place: feature 64 and feature 65"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 66 and 67"
+   "what": "two features at the same place: feature 66 and feature 67"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 68 and 69"
+   "what": "two features at the same place: feature 68 and feature 69"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 72 and 73"
+   "what": "two features at the same place: feature 72 and feature 73"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 74 and 75"
+   "what": "two features at the same place: feature 74 and feature 75"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 78 and 79"
+   "what": "two features at the same place: feature 78 and feature 79"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 80 and 81"
+   "what": "two features at the same place: feature 80 and feature 81"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 84 and 85"
+   "what": "two features at the same place: feature 84 and feature 85"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 86 and 87"
+   "what": "two features at the same place: feature 86 and feature 87"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 90 and 91"
+   "what": "two features at the same place: feature 90 and feature 91"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 92 and 93"
+   "what": "two features at the same place: feature 92 and feature 93"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 98 and 99"
+   "what": "two features at the same place: feature 98 and feature 99"
   },
   {
    "where": "layer Thirteen British Colonies / Colony Boundary",
-   "what": "two features at the same place: 100 and 101"
+   "what": "two features at the same place: feature 100 and feature 101"
   },
   {
    "where": "layer Revolutionary War Battlefields / Revolutionary War Battlefield Boundary",
-   "what": "service could not be read: {'message': \"InvalidURL: URL can't contain control characters. '/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/7?f=json' (found at least ' ')\"}"
-  },
-  {
-   "where": "layer Revolutionary War Battlefields / Revolutionary War Battlefield Boundary",
-   "what": "pop-up shows field names as labels: NAME, BOUNDARY, Shape__Area, Shape__Length, SITE, STATE"
+   "what": "on at the start but doesn't draw at the opening scale"
   },
   {
    "where": "layer Revolutionary War Battlefields / Revolutionary War Core Areas",
-   "what": "service could not be read: {'message': \"InvalidURL: URL can't contain control characters. '/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/10?f=json' (found at least ' ')\"}"
-  },
-  {
-   "where": "layer Revolutionary War Battlefields / Revolutionary War Core Areas",
-   "what": "pop-up shows field names as labels: NAME, BOUNDARY, Shape__Area, Shape__Length, SITE, STATE"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "pop-up shows field names as labels: Battle, Battle_Page_URL, BFT_Coords, Campaign, Casualties_Side_A, Casualties_Side_B"
+   "what": "on at the start but doesn't draw at the opening scale"
   },
   {
    "where": "layer Revolutionary War Battles",
@@ -2180,132 +2075,28 @@
    "what": "symbols differ by colour only (WCAG 1.4.1 if a question depends on telling them apart)"
   },
   {
-   "where": "layer Revolutionary War Battles",
-   "what": "two features at the same place: 3 and 26"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "two features at the same place: 20 and 47"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "two features at the same place: 77 and 81"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "two features at the same place: 67 and 111"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail (1): …th/public/Stand-Your-Ground-By-Don-Troiani.jpg?itok=1e6WletH"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail (2): …ublic/thumbnails/image/Siege%20of%20Boston.jpg?itok=HfIPvX9M"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail (3): …thumbnails/image/Fort%20Ticonderoga%20Hero.jpg?itok=zLexz--x"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail (4): …thumbnails/image/Crown%20Point%20landscape.png?itok=dewQg6Sy"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail (5): …%20Bunker%20Hill%20-%20Death%20of%20Warren.jpg?itok=52AQQ1na"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail_Small (5): …%20Bunker%20Hill%20-%20Death%20of%20Warren.jpg?itok=uaFda2sD"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail (7): …lic/thumbnails/image/Great%20Bridge%20Hero.jpg?itok=8x7IKfPe"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail (8): …_in_the_Attack_on_Quebec_December_31_1775.jpeg?itok=Kmx1QHjU"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail_Small (8): …_in_the_Attack_on_Quebec_December_31_1775.jpeg?itok=axBT4sfc"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail (10): …r_Parker%27s_Attack_Against_Fort_Moultrie.jpeg?itok=yyTAPRbB"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail (11): …et%20de%20Fort%20Sulivan%2C%20mai%201780..jpeg?itok=M3EU8tjs"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail_Small (11): …et%20de%20Fort%20Sulivan%2C%20mai%201780..jpeg?itok=H3qZUlbt"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail (12): …ails/image/Default-Visit-Places-76-Field_0.jpg?itok=kxqj9ESE"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail (13): …age/South%20Carolina%20Map%20-%20Landscape.png?itok=7DUh9Wr8"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail (14): …umbnails/image/Battle%20of%20Long%20Island.jpg?itok=5XFRQIfc"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail (15): …c/thumbnails/image/Valcour%20Island%20Hero.jpg?itok=Au9KJeEl"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail (16): …c/thumbnails/image/Pell%27s%20Point%20Hero.jpg?itok=ktEhPtRL"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail (17): …umbnails/image/white-plains-header-970x650.jpg?itok=SdsSzmIo"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail (18): …ic/thumbnails/image/Fort%20Washington_Hero.jpg?itok=zeARTRjY"
-  },
-  {
-   "where": "layer Revolutionary War Battles",
-   "what": "text may be cut off in Thumbnail (19): …ish_forces_in_the_Jerseys_-_Thomas_Davies.jpeg?itok=kSZ_uEgu"
-  },
-  {
-   "where": "layer Key Port Cities in the American Revolution 1775-1781",
-   "what": "no pop-up configured in the map (the layer's default pop-up shows)"
-  },
-  {
-   "where": "layer Turning Points",
-   "what": "pop-up shows field names as labels: Battle, Date, Group_, Latitude, Longitude, Notes"
-  },
-  {
    "where": "layer Turning Points",
    "what": "on at the start but doesn't draw at the opening scale"
   },
   {
    "where": "layer Turning Points",
-   "what": "text may be cut off in Notes (1): …urn, militia fighters from nearby towns had the advantage of"
+   "what": "text may be cut off in Notes (Lexington and Concord): …urn, militia fighters from nearby towns had the advantage of"
   },
   {
    "where": "layer Turning Points",
-   "what": "text may be cut off in Notes (2): …troops crossed Boston Harbor by boat to attack American mili"
+   "what": "text may be cut off in Notes (Battle of Bunker Hill): …troops crossed Boston Harbor by boat to attack American mili"
   },
   {
    "where": "layer Turning Points",
-   "what": "text may be cut off in Notes (3): …g north across Manhattan, the defeated the Americans at Fort"
+   "what": "text may be cut off in Notes (Battle for New York): …g north across Manhattan, the defeated the Americans at Fort"
   },
   {
    "where": "layer Turning Points",
-   "what": "text may be cut off in Notes (4): …ht. American forces crossed the icy Delaware River to surpri"
+   "what": "text may be cut off in Notes (Fall of New York City): …ht. American forces crossed the icy Delaware River to surpri"
   },
   {
    "where": "layer Turning Points",
-   "what": "text may be cut off in Notes (5): …rea. During the Battle of Brooklyn, British troops outmanuev"
+   "what": "text may be cut off in Notes (Washington Strikes Back): …rea. During the Battle of Brooklyn, British troops outmanuev"
   }
  ]
 }

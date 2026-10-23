@@ -1,5 +1,5 @@
 {
- "tool": "Map audit 1.0",
+ "tool": "Map audit 1.1",
  "lesson": "civil-war-battlefields",
  "webmapId": "7a06e8e2818941f99a3d40bb32e08118",
  "item": {
@@ -25,7 +25,7 @@
   "licenseInfo": "<p><img style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; height:auto; max-width:100%;' src='https://downloads.esri.com/blogs/arcgisonline/esrilogo_new.png' /><span style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'>This work is licensed under the Esri Master License Agreement.</span><br />&nbsp;</p><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><a style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' href='https://goto.arcgis.com/termsofuse/viewsummary' rel='nofollow ugc noopener noreferrer'><strong>View Summary</strong></a>&nbsp;|&nbsp;<a style='color:rgb(0, 97, 155); text-decoration-line:none;' target='_blank' href='https://goto.arcgis.com/termsofuse/viewtermsofuse' rel='nofollow ugc noopener noreferrer'><strong>View Terms of Use</strong></a></div>",
   "created": 1755123203000,
   "modified": 1792159522000,
-  "numViews": 1819,
+  "numViews": 1820,
   "thumbnail": "thumbnail/ago_downloaded.png",
   "contentStatus": null,
   "extent": [
@@ -145,6 +145,7 @@
     "expressions": [],
     "fieldsInText": []
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -306,7 +307,7 @@
     "licenseInfo": "<p>Copyright <a target='_blank' href='https://www.nationalgeographic.org/society/terms-of-service/' rel='nofollow ugc noopener noreferrer'>National Geographic Society</a></p>",
     "created": 1755121664000,
     "modified": 1783465342000,
-    "numViews": 0,
+    "numViews": 1935,
     "thumbnail": "thumbnail/thumbnail1783453956686.png",
     "contentStatus": null,
     "extent": [
@@ -431,8 +432,10 @@
      "duplicates": [],
      "sameGeometry": [],
      "maybeCutOff": [],
-     "nameField": null
-    }
+     "nameField": null,
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.1
    },
    "drawsAtOpening": true,
    "rendererColourOnly": true
@@ -447,6 +450,7 @@
    "url": null,
    "disablePopup": false,
    "popup": null,
+   "popupFrom": null,
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -466,44 +470,8 @@
    "disablePopup": false,
    "popup": {
     "title": "{NAME}",
-    "fieldsShown": [
-     {
-      "field": "NAME",
-      "label": "Battlefield Name"
-     },
-     {
-      "field": "Acres",
-      "label": "Battlefield Acres"
-     },
-     {
-      "field": "BOUNDARY",
-      "label": "Study Area"
-     },
-     {
-      "field": "Shape__Area",
-      "label": "Shape__Area"
-     },
-     {
-      "field": "Shape__Length",
-      "label": "Shape__Length"
-     },
-     {
-      "field": "SITE",
-      "label": "Site ID"
-     },
-     {
-      "field": "STATE",
-      "label": "State Name"
-     },
-     {
-      "field": "WAR",
-      "label": "War Name"
-     }
-    ],
-    "fieldLabelsAreNames": [
-     "Shape__Area",
-     "Shape__Length"
-    ],
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
     "elements": [
      "text"
     ],
@@ -515,6 +483,7 @@
      "WAR"
     ]
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -574,7 +543,7 @@
     "licenseInfo": "<p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The </span><a target='_blank' href='https://www.nps.gov/subjects/gisandmapping/data-disclaimers.htm' rel='nofollow ugc noopener noreferrer'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>National Park Service</span></a><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'> shall not be held liable for improper or incorrect use of the cultural resource data described and/or contained herein. These data and related graphics are not legal documents and are not intended to be used as such, nor do they replace the need for consultation with appropriate state/tribal/federal historic preservation offices.</span></p><p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The information contained in these data is dynamic and may change over time. The data are not better than the original sources from which they were derived. It is the responsibility of the data user to use the data appropriately and consistently within the limitations of geospatial data in general and these data in particular, as expressed in feature-level metadata. The related graphics are intended to aid the data user in acquiring relevant data; it is not appropriate to use the related graphics as data.​​​​​​​</span></p><p style='background-color:white; line-height:normal; margin:0in 2.25pt 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>Cultural resource data sets may contain sensitive information that has been redacted or withheld from general use.&nbsp; These data require express permission from National Park Service programs, parks, or regional offices to access or use. Any unauthorized use of sensitive cultural resource data, disclosure, or distribution of that data, is prohibited unless specifically provided under the Archaeological Resources Protection Act of 1979, 16. U.S.C. 470hh, as amended, and National Park Service and Related Programs, 54&nbsp;U.S.C. 300101 (formerly known as the National Historic Preservation Act, 16 U.S.C. 470-1).</span></p><p style='background-color:white; line-height:normal; margin:0in .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The National Park Service gives no warranty, expressed or implied, as to the accuracy, reliability, or completeness of these data, which may have been generated over many years, using multiple creation methods as well as collection procedures. It is strongly recommended that these data be directly acquired from an NPS server and not indirectly through other sources, which may have changed the data in some way. Although these data have been processed successfully on a computer system at the National Park Service, no warranty expressed or implied is made regarding the utility of the data on another system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. This disclaimer applies both to individual use of the data and aggregate use with other data.</span></p>",
     "created": 1778620484000,
     "modified": 1783536706000,
-    "numViews": 0,
+    "numViews": 14506,
     "thumbnail": "thumbnail/thumbnail1781189229611.png",
     "contentStatus": null,
     "extent": [
@@ -591,11 +560,113 @@
    },
    "service": {
     "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/0",
-    "error": {
-     "message": "InvalidURL: URL can't contain control characters. '/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/0?f=json' (found at least ' ')"
-    }
+    "name": "Civil War Resurvey Battlefield Boundary",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "minScale": 4316378,
+    "maxScale": 14724,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       76,
+       129,
+       205,
+       191
+      ],
+      "outline": {
+       "color": [
+        0,
+        0,
+        0,
+        255
+       ],
+       "width": 0.75,
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID_1",
+      "alias": "OBJECTID_1",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "SITE",
+      "alias": "Site ID",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "STATE",
+      "alias": "State Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "WAR",
+      "alias": "War Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "NAME",
+      "alias": "Battlefield Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "BOUNDARY",
+      "alias": "Study Area",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Acres",
+      "alias": "Battlefield Acres",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Area",
+      "alias": "Shape__Area",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "8b2e2d492c124d1cacba0599d20639ae",
+    "count": 378,
+    "checks": {
+     "duplicates": [
+      [
+       " ",
+       " "
+      ]
+     ],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "NAME",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.2
    },
-   "drawsAtOpening": true,
+   "drawsAtOpening": false,
    "rendererColourOnly": false
   },
   {
@@ -609,49 +680,8 @@
    "disablePopup": false,
    "popup": {
     "title": "{NAME}",
-    "fieldsShown": [
-     {
-      "field": "NAME",
-      "label": "NAME"
-     },
-     {
-      "field": "Acres",
-      "label": "ACRES"
-     },
-     {
-      "field": "BOUNDARY",
-      "label": "BOUNDARY"
-     },
-     {
-      "field": "Shape__Area",
-      "label": "Shape__Area"
-     },
-     {
-      "field": "Shape__Length",
-      "label": "Shape__Length"
-     },
-     {
-      "field": "SITE",
-      "label": "SITE"
-     },
-     {
-      "field": "STATE",
-      "label": "STATE"
-     },
-     {
-      "field": "WAR",
-      "label": "WAR"
-     }
-    ],
-    "fieldLabelsAreNames": [
-     "NAME",
-     "BOUNDARY",
-     "Shape__Area",
-     "Shape__Length",
-     "SITE",
-     "STATE",
-     "WAR"
-    ],
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
     "elements": [
      "text"
     ],
@@ -663,11 +693,23 @@
      "WAR"
     ]
    },
+   "popupFrom": "map",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
    "listMode": null,
    "definitionExpression": null,
+   "rendererInMap": {
+    "type": "simple",
+    "field": null,
+    "valueExpression": false,
+    "symbol": {
+     "type": "CIMSymbolReference",
+     "style": null,
+     "cim": true
+    },
+    "label": null
+   },
    "item": {
     "id": "8b2e2d492c124d1cacba0599d20639ae",
     "title": "United States Battlefield Boundaries",
@@ -696,7 +738,7 @@
     "licenseInfo": "<p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The </span><a target='_blank' href='https://www.nps.gov/subjects/gisandmapping/data-disclaimers.htm' rel='nofollow ugc noopener noreferrer'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>National Park Service</span></a><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'> shall not be held liable for improper or incorrect use of the cultural resource data described and/or contained herein. These data and related graphics are not legal documents and are not intended to be used as such, nor do they replace the need for consultation with appropriate state/tribal/federal historic preservation offices.</span></p><p style='background-color:white; line-height:normal; margin:0in 0in 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The information contained in these data is dynamic and may change over time. The data are not better than the original sources from which they were derived. It is the responsibility of the data user to use the data appropriately and consistently within the limitations of geospatial data in general and these data in particular, as expressed in feature-level metadata. The related graphics are intended to aid the data user in acquiring relevant data; it is not appropriate to use the related graphics as data.​​​​​​​</span></p><p style='background-color:white; line-height:normal; margin:0in 2.25pt 16.8pt .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>Cultural resource data sets may contain sensitive information that has been redacted or withheld from general use.&nbsp; These data require express permission from National Park Service programs, parks, or regional offices to access or use. Any unauthorized use of sensitive cultural resource data, disclosure, or distribution of that data, is prohibited unless specifically provided under the Archaeological Resources Protection Act of 1979, 16. U.S.C. 470hh, as amended, and National Park Service and Related Programs, 54&nbsp;U.S.C. 300101 (formerly known as the National Historic Preservation Act, 16 U.S.C. 470-1).</span></p><p style='background-color:white; line-height:normal; margin:0in .75pt;'><span style='color:black; font-family:&quot;Segoe UI&quot;,sans-serif; font-size:13.5pt;'>The National Park Service gives no warranty, expressed or implied, as to the accuracy, reliability, or completeness of these data, which may have been generated over many years, using multiple creation methods as well as collection procedures. It is strongly recommended that these data be directly acquired from an NPS server and not indirectly through other sources, which may have changed the data in some way. Although these data have been processed successfully on a computer system at the National Park Service, no warranty expressed or implied is made regarding the utility of the data on another system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. This disclaimer applies both to individual use of the data and aggregate use with other data.</span></p>",
     "created": 1778620484000,
     "modified": 1783536706000,
-    "numViews": 0,
+    "numViews": 14506,
     "thumbnail": "thumbnail/thumbnail1781189229611.png",
     "contentStatus": null,
     "extent": [
@@ -713,11 +755,108 @@
    },
    "service": {
     "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/1",
-    "error": {
-     "message": "InvalidURL: URL can't contain control characters. '/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/1?f=json' (found at least ' ')"
-    }
+    "name": "Civil War Resurvey Core Areas",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "minScale": 1664988,
+    "maxScale": 4375,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       252,
+       225,
+       56,
+       191
+      ],
+      "outline": {
+       "color": [
+        0,
+        0,
+        0,
+        255
+       ],
+       "width": 0.75,
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID_1",
+      "alias": "FID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "SITE",
+      "alias": "SITE",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "STATE",
+      "alias": "STATE",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "WAR",
+      "alias": "WAR",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "NAME",
+      "alias": "NAME",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "BOUNDARY",
+      "alias": "BOUNDARY",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Acres",
+      "alias": "ACRES",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Area",
+      "alias": "Shape__Area",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     },
+     {
+      "name": "Shape__Length",
+      "alias": "Shape__Length",
+      "type": "esriFieldTypeDouble",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "8b2e2d492c124d1cacba0599d20639ae",
+    "count": 376,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [],
+     "maybeCutOff": [],
+     "nameField": "NAME",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.2
    },
-   "drawsAtOpening": true,
+   "drawsAtOpening": false,
    "rendererColourOnly": false
   },
   {
@@ -729,12 +868,79 @@
    "itemId": "35d06a0be8944c848584b7f398df6760",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/US_Civil_War___Boundary_between_Union_and_Confederacy_(1)/FeatureServer/0",
    "disablePopup": false,
-   "popup": null,
+   "popup": {
+    "title": "US_Civil_War___Boundary_between_Union_and_Confederacy (1)",
+    "fieldsShown": [
+     {
+      "field": "GISJOIN",
+      "label": "Join 1"
+     },
+     {
+      "field": "GISJOIN2",
+      "label": "Join 2"
+     },
+     {
+      "field": "ICPSRST",
+      "label": "ICPSR State Code"
+     },
+     {
+      "field": "NHGISST",
+      "label": "NHGISST Code"
+     },
+     {
+      "field": "Shape__Length",
+      "label": "Shape__Length"
+     },
+     {
+      "field": "SHAPE_AREA",
+      "label": "Shape Area"
+     },
+     {
+      "field": "SHAPE_LEN",
+      "label": "Shape Length"
+     },
+     {
+      "field": "STATENAM",
+      "label": "State Name"
+     },
+     {
+      "field": "Status",
+      "label": "Classification"
+     }
+    ],
+    "fieldLabelsAreNames": [
+     "Shape__Length"
+    ],
+    "elements": [
+     "fields"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": []
+   },
+   "popupFrom": "layer item",
    "minScale": null,
-   "maxScale": null,
+   "maxScale": 750000,
    "showLegend": true,
    "listMode": null,
    "definitionExpression": null,
+   "rendererInMap": {
+    "type": "simple",
+    "field": null,
+    "valueExpression": false,
+    "symbol": {
+     "type": "esriSLS",
+     "style": "esriSLSDash",
+     "color": [
+      250,
+      250,
+      250,
+      255
+     ],
+     "width": 0.998
+    },
+    "label": null
+   },
    "item": {
     "id": "35d06a0be8944c848584b7f398df6760",
     "title": "Boundary between Union and Confederacy",
@@ -867,8 +1073,10 @@
      "duplicates": [],
      "sameGeometry": [],
      "maybeCutOff": [],
-     "nameField": null
-    }
+     "nameField": null,
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.1
    },
    "drawsAtOpening": true,
    "rendererColourOnly": false
@@ -882,12 +1090,104 @@
    "itemId": "300106342f0f456381bac735c7962572",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Railroads_1826_to_1911_static/FeatureServer/0",
    "disablePopup": false,
-   "popup": null,
-   "minScale": null,
+   "popup": {
+    "title": "Railroads_1826_to_1911_static: {RRname}",
+    "fieldsShown": [
+     {
+      "field": "Edited",
+      "label": "Edits"
+     },
+     {
+      "field": "ExactDate",
+      "label": "Exact Date"
+     },
+     {
+      "field": "FID_1900St",
+      "label": "Unique ID Field 3"
+     },
+     {
+      "field": "FID_RR1826",
+      "label": "Unique ID"
+     },
+     {
+      "field": "FIDAll",
+      "label": "Unique ID Field 2"
+     },
+     {
+      "field": "Gauge",
+      "label": "Track Gauge"
+     },
+     {
+      "field": "InOpBy",
+      "label": "In Operation By"
+     },
+     {
+      "field": "Miles",
+      "label": "Total Miles"
+     },
+     {
+      "field": "OperationY",
+      "label": "Operation Year"
+     },
+     {
+      "field": "RRname",
+      "label": "Railroad Name"
+     },
+     {
+      "field": "Shape__Length",
+      "label": "Shape__Length"
+     },
+     {
+      "field": "STATENAM",
+      "label": "State Name"
+     },
+     {
+      "field": "track",
+      "label": "Track Miles"
+     },
+     {
+      "field": "Transcont",
+      "label": "Transcontinental Railroads"
+     },
+     {
+      "field": "VxCount",
+      "label": "Vertex Count"
+     }
+    ],
+    "fieldLabelsAreNames": [
+     "Shape__Length"
+    ],
+    "elements": [
+     "fields",
+     "attachments"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": []
+   },
+   "popupFrom": "layer item",
+   "minScale": 2799993.199939,
    "maxScale": null,
    "showLegend": true,
    "listMode": null,
-   "definitionExpression": null,
+   "definitionExpression": "InOpBy < 1864",
+   "rendererInMap": {
+    "type": "simple",
+    "field": null,
+    "valueExpression": false,
+    "symbol": {
+     "type": "esriSLS",
+     "style": "esriSLSSolid",
+     "color": [
+      77,
+      77,
+      77,
+      255
+     ],
+     "width": 0.998
+    },
+    "label": null
+   },
    "item": {
     "id": "300106342f0f456381bac735c7962572",
     "title": "Railroads in the United States from 1826 to 1911 (static)",
@@ -1051,7 +1351,8 @@
      }
     ],
     "serviceItemId": "300106342f0f456381bac735c7962572",
-    "count": 76849
+    "filter": "InOpBy < 1864",
+    "count": 16137
    },
    "drawsAtOpening": false,
    "rendererColourOnly": false
@@ -1065,9 +1366,37 @@
    "itemId": "538d28b7c91b476ba19f3f64f1e5d8d5",
    "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Civil War Battlefields (time-enabled)/FeatureServer/0",
    "disablePopup": false,
-   "popup": null,
-   "minScale": null,
-   "maxScale": null,
+   "popup": {
+    "title": "{Battle}",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text",
+     "media"
+    ],
+    "images": [
+     {
+      "title": "American Battlefield Trust",
+      "altText": "",
+      "source": "{Thumbnail}"
+     },
+     {
+      "title": "American Battlefield Trust",
+      "altText": "",
+      "source": "{Thumbnail}"
+     }
+    ],
+    "expressions": [
+     "Total Casulaties"
+    ],
+    "fieldsInText": [
+     "Battle",
+     "Dates"
+    ]
+   },
+   "popupFrom": "layer item",
+   "minScale": 0,
+   "maxScale": 320000,
    "showLegend": true,
    "listMode": null,
    "definitionExpression": null,
@@ -1206,11 +1535,221 @@
    },
    "service": {
     "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Civil War Battlefields (time-enabled)/FeatureServer/0",
-    "error": {
-     "message": "InvalidURL: URL can't contain control characters. '/iFGeGXTAJXnjq0YN/arcgis/rest/services/Civil War Battlefields (time-enabled)/FeatureServer/0?f=json' (found at least ' ')"
-    }
+    "name": "outputLayer",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPoint",
+    "minScale": 13461138,
+    "maxScale": 0,
+    "copyrightText": "",
+    "maxRecordCount": 2000,
+    "renderer": {
+     "type": "simple",
+     "field": null,
+     "valueExpression": false,
+     "symbol": {
+      "type": "esriSMS",
+      "style": "esriSMSCircle",
+      "color": [
+       79,
+       129,
+       189,
+       255
+      ],
+      "size": 10,
+      "outline": {
+       "color": [
+        54,
+        93,
+        141,
+        255
+       ],
+       "width": 1,
+       "style": null
+      }
+     },
+     "label": null
+    },
+    "labels": false,
+    "fields": [
+     {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "domain": false
+     },
+     {
+      "name": "Battle",
+      "alias": "Name of Battle",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Dates",
+      "alias": "Date of Battle",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "State",
+      "alias": "State Name",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Victor",
+      "alias": "Battle Victor",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Notes",
+      "alias": "Battle Notes",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Thumbnail",
+      "alias": "Image",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Thumbnail_Small",
+      "alias": "Thumbnail Small",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Image_Credit",
+      "alias": "Image Credit",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Narrative",
+      "alias": "Narrative Description",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Campaign",
+      "alias": "Military Campaign",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Battle_Page_URL",
+      "alias": "Battle Page URL",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "CWSAC",
+      "alias": "Civil War Sites Advisory Commission Battlefield Classification",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Date_Start_Converted",
+      "alias": "Start Date Converted",
+      "type": "esriFieldTypeDate",
+      "domain": false
+     },
+     {
+      "name": "Date_End_Converted",
+      "alias": "End Date Converted",
+      "type": "esriFieldTypeDate",
+      "domain": false
+     },
+     {
+      "name": "Dates_1",
+      "alias": "Date or Dates of Battle",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Date_Start",
+      "alias": "Date Start",
+      "type": "esriFieldTypeDate",
+      "domain": false
+     },
+     {
+      "name": "Date_End",
+      "alias": "Date End",
+      "type": "esriFieldTypeDate",
+      "domain": false
+     },
+     {
+      "name": "Troops_engaged_Side_A",
+      "alias": "Union Troops Engaged",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Troops_engaged_Side_B",
+      "alias": "Confederate Troops Engaged",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Casualties_Side_A",
+      "alias": "Union Casualties",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Casualties_Side_B",
+      "alias": "Confederate Casualties",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     },
+     {
+      "name": "Leaders_Side_A",
+      "alias": "Union Leaders",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Leaders_Side_B",
+      "alias": "Confederate Leaders",
+      "type": "esriFieldTypeString",
+      "domain": false
+     },
+     {
+      "name": "Total_Combatants",
+      "alias": "Total Combatants",
+      "type": "esriFieldTypeInteger",
+      "domain": false
+     }
+    ],
+    "serviceItemId": "538d28b7c91b476ba19f3f64f1e5d8d5",
+    "count": 178,
+    "checks": {
+     "duplicates": [],
+     "sameGeometry": [
+      [
+       "Petersburg",
+       "Fort Stedman"
+      ]
+     ],
+     "maybeCutOff": [
+      {
+       "feature": "Shepherdstown",
+       "field": "Notes",
+       "ends": " command for not aggressively pursuing Lee's retreating army"
+      },
+      {
+       "feature": "Shepherdstown",
+       "field": "Narrative",
+       "ends": " command for not aggressively pursuing Lee's retreating army"
+      }
+     ],
+     "nameField": "Battle",
+     "geometryCompared": "geometry"
+    },
+    "seconds": 0.3
    },
-   "drawsAtOpening": true,
+   "drawsAtOpening": false,
    "rendererColourOnly": true
   }
  ],
@@ -1225,27 +1764,23 @@
   },
   {
    "where": "layer United States Battlefield Boundaries / Civil War Battlefield Boundary",
-   "what": "service could not be read: {'message': \"InvalidURL: URL can't contain control characters. '/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/0?f=json' (found at least ' ')\"}"
+   "what": "on at the start but doesn't draw at the opening scale"
   },
   {
    "where": "layer United States Battlefield Boundaries / Civil War Battlefield Boundary",
-   "what": "pop-up shows field names as labels: Shape__Area, Shape__Length"
+   "what": "duplicate feature:  "
   },
   {
    "where": "layer United States Battlefield Boundaries / Civil War Core Areas",
-   "what": "service could not be read: {'message': \"InvalidURL: URL can't contain control characters. '/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/1?f=json' (found at least ' ')\"}"
-  },
-  {
-   "where": "layer United States Battlefield Boundaries / Civil War Core Areas",
-   "what": "pop-up shows field names as labels: NAME, BOUNDARY, Shape__Area, Shape__Length, SITE, STATE"
+   "what": "on at the start but doesn't draw at the opening scale"
   },
   {
    "where": "layer Boundary between Union and Confederacy",
-   "what": "no pop-up configured in the map (the layer's default pop-up shows)"
+   "what": "pop-up shows field names as labels: Shape__Length"
   },
   {
    "where": "layer Railroads 1826 to 1863 (static)",
-   "what": "no pop-up configured in the map (the layer's default pop-up shows)"
+   "what": "pop-up shows field names as labels: Shape__Length"
   },
   {
    "where": "layer Railroads 1826 to 1863 (static)",
@@ -1253,15 +1788,31 @@
   },
   {
    "where": "layer Civil War Battlefields",
-   "what": "service could not be read: {'message': \"InvalidURL: URL can't contain control characters. '/iFGeGXTAJXnjq0YN/arcgis/rest/services/Civil War Battlefields (time-enabled)/FeatureServer/0?f=json' (found at least ' ')\"}"
+   "what": "pop-up image has no alt text"
   },
   {
    "where": "layer Civil War Battlefields",
-   "what": "no pop-up configured in the map (the layer's default pop-up shows)"
+   "what": "pop-up image has no alt text"
   },
   {
    "where": "layer Civil War Battlefields",
    "what": "symbols differ by colour only (WCAG 1.4.1 if a question depends on telling them apart)"
+  },
+  {
+   "where": "layer Civil War Battlefields",
+   "what": "on at the start but doesn't draw at the opening scale"
+  },
+  {
+   "where": "layer Civil War Battlefields",
+   "what": "two features at the same place: Petersburg and Fort Stedman"
+  },
+  {
+   "where": "layer Civil War Battlefields",
+   "what": "text may be cut off in Notes (Shepherdstown): … command for not aggressively pursuing Lee's retreating army"
+  },
+  {
+   "where": "layer Civil War Battlefields",
+   "what": "text may be cut off in Narrative (Shepherdstown): … command for not aggressively pursuing Lee's retreating army"
   }
  ]
 }

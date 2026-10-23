@@ -1,5 +1,5 @@
 {
- "tool": "Map audit 1.0",
+ "tool": "Map audit 1.1",
  "lesson": "rights-and-responsibilities-where-we-live",
  "webmapId": "59467ac7d7c64542acaa6a3e9c19ebf4",
  "item": {
@@ -22,7 +22,7 @@
   "licenseInfo": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them.",
   "created": 1791982418000,
   "modified": 1791988671000,
-  "numViews": 0,
+  "numViews": 21,
   "thumbnail": null,
   "contentStatus": null,
   "extent": [
@@ -81,7 +81,23 @@
    "itemId": "930f9f68739f48bab91e500711c80dc4",
    "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/USA_119th_Congressional_Districts/FeatureServer/0",
    "disablePopup": false,
-   "popup": null,
+   "popup": {
+    "title": "",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [],
+    "fieldsInText": [
+     "CDFIPS",
+     "NAME",
+     "PARTY",
+     "STATE_NAME"
+    ]
+   },
+   "popupFrom": "layer item",
    "minScale": null,
    "maxScale": null,
    "showLegend": true,
@@ -329,8 +345,10 @@
      "duplicates": [],
      "sameGeometry": [],
      "maybeCutOff": [],
-     "nameField": "NAME"
-    }
+     "nameField": "NAME",
+     "geometryCompared": "area and length"
+    },
+    "seconds": 0.2
    },
    "drawsAtOpening": true,
    "rendererColourOnly": false
@@ -344,12 +362,174 @@
    "itemId": "818d5ef9168b420cb3fee99f7aef7760",
    "url": "https://services2.arcgis.com/FiaPA4ga0iQKduv3/arcgis/rest/services/nrhp_points_v1/FeatureServer/0",
    "disablePopup": false,
-   "popup": null,
-   "minScale": null,
+   "popup": {
+    "title": "",
+    "fieldsShown": [],
+    "fieldLabelsAreNames": [],
+    "elements": [
+     "text"
+    ],
+    "images": [],
+    "expressions": [
+     "City",
+     "State",
+     "Status"
+    ],
+    "fieldsInText": [
+     "Address",
+     "County",
+     "NARA_URL",
+     "NRIS_Refnum",
+     "PROPERTY_ID",
+     "RESNAME",
+     "ResType",
+     "expression/expr0",
+     "expression/expr1",
+     "expression/expr2"
+    ]
+   },
+   "popupFrom": "layer item",
+   "minScale": 1458477.3441,
    "maxScale": null,
    "showLegend": true,
    "listMode": null,
    "definitionExpression": null,
+   "rendererInMap": {
+    "type": "uniqueValue",
+    "field": "ResType",
+    "valueExpression": false,
+    "classes": [
+     {
+      "value": "building",
+      "label": "building",
+      "symbol": {
+       "type": "esriSMS",
+       "style": "esriSMSDiamond",
+       "color": [
+        62,
+        117,
+        109,
+        255
+       ],
+       "size": 4.71,
+       "outline": {
+        "color": [
+         153,
+         153,
+         153,
+         64
+        ],
+        "width": 0.75,
+        "style": "esriSLSSolid"
+       }
+      }
+     },
+     {
+      "value": "structure",
+      "label": "structure",
+      "symbol": {
+       "type": "esriSMS",
+       "style": "esriSMSDiamond",
+       "color": [
+        217,
+        215,
+        140,
+        255
+       ],
+       "size": 4.71,
+       "outline": {
+        "color": [
+         153,
+         153,
+         153,
+         64
+        ],
+        "width": 0.75,
+        "style": "esriSLSSolid"
+       }
+      }
+     },
+     {
+      "value": "district",
+      "label": "district",
+      "symbol": {
+       "type": "esriSMS",
+       "style": "esriSMSDiamond",
+       "color": [
+        184,
+        107,
+        83,
+        255
+       ],
+       "size": 4.71,
+       "outline": {
+        "color": [
+         153,
+         153,
+         153,
+         64
+        ],
+        "width": 0.75,
+        "style": "esriSLSSolid"
+       }
+      }
+     },
+     {
+      "value": "site",
+      "label": "site",
+      "symbol": {
+       "type": "esriSMS",
+       "style": "esriSMSDiamond",
+       "color": [
+        115,
+        36,
+        31,
+        255
+       ],
+       "size": 4.71,
+       "outline": {
+        "color": [
+         153,
+         153,
+         153,
+         64
+        ],
+        "width": 0.75,
+        "style": "esriSLSSolid"
+       }
+      }
+     },
+     {
+      "value": "object",
+      "label": "object",
+      "symbol": {
+       "type": "esriSMS",
+       "style": "esriSMSDiamond",
+       "color": [
+        176,
+        191,
+        162,
+        255
+       ],
+       "size": 4.71,
+       "outline": {
+        "color": [
+         153,
+         153,
+         153,
+         64
+        ],
+        "width": 0.75,
+        "style": "esriSLSSolid"
+       }
+      }
+     }
+    ],
+    "default": null,
+    "visualVariables": [
+     "sizeInfo"
+    ]
+   },
    "item": {
     "id": "818d5ef9168b420cb3fee99f7aef7760",
     "title": "United States National Register of Historic Places",
@@ -375,7 +555,7 @@
     "licenseInfo": "<font size='4' style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif;'><img src='https://licensebuttons.net/l/by/3.0/88x31.png' style='max-width:100%; height:auto;' /> This work is licensed under a Creative Commons by Attribution (CC BY 4.0) license. See Credits and Map for Attribution.</font><div style='font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><font size='4'><br /></font><div><font size='4'><a href='https://creativecommons.org/licenses/by/4.0' style='color:rgb(0, 121, 193); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View License Deed</b></a> | <a href='https://creativecommons.org/licenses/by/4.0/legalcode' style='color:rgb(0, 121, 193); text-decoration-line:none;' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Legal Code</b></a></font></div></div>",
     "created": 1684164701000,
     "modified": 1741172836000,
-    "numViews": 40282,
+    "numViews": 40283,
     "thumbnail": "thumbnail/thumbnail1684975390173.png",
     "contentStatus": null,
     "extent": [
@@ -648,18 +828,14 @@
     "serviceItemId": "d1073c2945cb4c6793136f51a97bdd8d",
     "count": 74636
    },
-   "drawsAtOpening": true,
-   "rendererColourOnly": false
+   "drawsAtOpening": false,
+   "rendererColourOnly": true
   }
  ],
  "findings": [
   {
-   "where": "layer Congressional districts (119th Congress)",
-   "what": "no pop-up configured in the map (the layer's default pop-up shows)"
-  },
-  {
    "where": "layer National Register of Historic Places",
-   "what": "no pop-up configured in the map (the layer's default pop-up shows)"
+   "what": "symbols differ by colour only (WCAG 1.4.1 if a question depends on telling them apart)"
   }
  ]
 }
