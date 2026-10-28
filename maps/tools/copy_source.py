@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Data copy 1.1: copies a public source layer into your ArcGIS Online organization as a hosted feature layer.
+"""Data copy 1.1.1: copies a public source layer into your ArcGIS Online organization as a hosted feature layer.
 
 Why: a published map should not depend on a service we do not control (it can move or change fields), and Map test
 runs where the agency's server may be out of reach. The copy keeps the source credited, keeps only the fields the map
@@ -20,7 +20,7 @@ import argparse, datetime, json, re, sys, urllib.parse, urllib.request
 from collections import Counter
 from pathlib import Path
 
-VERSION = "1.1"
+VERSION = "1.1.1"
 ROOT = Path(__file__).resolve().parents[2]
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 EPOCH = datetime.datetime(1970, 1, 1, tzinfo=datetime.timezone.utc)
@@ -129,7 +129,7 @@ def main():
     if not raw: sys.exit("  REFUSED: the source returned nothing.")
     feats, stats = transform(raw, spec)
     out_dir = ROOT / "maps" / "data" / "build" / spec["id"]; out_dir.mkdir(parents=True, exist_ok=True)
-    gj = out_dir / (spec["id"] + ".geojson")
+    gj = out_dir / (spec["id"] + "-v" + spec["version"].replace(".", "_") + ".geojson")  # the version is in the name: ArcGIS Online refuses a second upload with the same file name
     gj.write_text(json.dumps({"type": "FeatureCollection", "features": feats}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     d = spec["dates"]
     summary = {"features": len(feats), "bytes": gj.stat().st_size,
