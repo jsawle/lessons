@@ -1,0 +1,490 @@
+{
+ "rubricVersion": "0.7.1",
+ "maps": [
+  {
+   "itemId": "2d887313b249d5155fb0b4594c2d704d",
+   "title": "Presidential Elections, 1796 and 1800",
+   "owner": "build",
+   "auditedAt": "2026-10-28T09:27:25.153Z",
+   "rubricVersion": "0.7.1",
+   "standards": "General Cartographic Standards for MapMaker",
+   "tally": {
+    "fail": 0,
+    "warn": 1,
+    "info": 1,
+    "pass": 31,
+    "skip": 5
+   },
+   "verdict": "review",
+   "score": 98.5,
+   "grade": "A",
+   "sectionScores": {
+    "Map title & metadata": 97.1,
+    "Extent & scale": 100,
+    "Layers": 100,
+    "Pop-ups": 100,
+    "Visual effects & labels": 100,
+    "Accessibility": 100,
+    "Symbology & legend": 100
+   },
+   "checks": [
+    {
+     "id": "meta.title.present",
+     "section": "Map title & metadata",
+     "name": "Title present and not a default",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"Presidential Elections, 1796 and 1800\""
+     ]
+    },
+    {
+     "id": "meta.title.length",
+     "section": "Map title & metadata",
+     "name": "Title length",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title length: 37"
+     ]
+    },
+    {
+     "id": "meta.title.abbrev",
+     "section": "Map title & metadata",
+     "name": "Title avoids unexplained abbreviations",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"Presidential Elections, 1796 and 1800\""
+     ]
+    },
+    {
+     "id": "meta.snippet",
+     "section": "Map title & metadata",
+     "name": "Summary (snippet) present",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "snippet: 100 chars"
+     ]
+    },
+    {
+     "id": "meta.description",
+     "section": "Map title & metadata",
+     "name": "Description present and substantive",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "description: 1528 chars"
+     ]
+    },
+    {
+     "id": "meta.tags",
+     "section": "Map title & metadata",
+     "name": "Tags",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "tags: MapMaker, US History, grade 8, November 2026, web map, activity 10"
+     ]
+    },
+    {
+     "id": "meta.credits",
+     "section": "Map title & metadata",
+     "name": "Credits / attribution",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "credits: National Archives; Natural Earth."
+     ]
+    },
+    {
+     "id": "meta.license",
+     "section": "Map title & metadata",
+     "name": "Terms of use",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "licenseInfo: set"
+     ]
+    },
+    {
+     "id": "meta.thumbnail",
+     "section": "Map title & metadata",
+     "name": "Custom thumbnail",
+     "severity": "warn",
+     "provisional": true,
+     "status": "warn",
+     "message": "No custom thumbnail - the default will show in galleries.",
+     "evidence": [
+      "thumbnail: none"
+     ]
+    },
+    {
+     "id": "extent.initial",
+     "section": "Extent & scale",
+     "name": "Initial extent set and appropriate",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "extent: -10241393, 3375646 -> -7347086, 6040565 (wkid 3857)",
+      "width ~ 26 deg"
+     ]
+    },
+    {
+     "id": "extent.visrange",
+     "section": "Extent & scale",
+     "name": "Visibility ranges",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "1 of 3 feature layers have a visibility range"
+     ]
+    },
+    {
+     "id": "proj.explained",
+     "section": "Extent & scale",
+     "name": "Alternate projection explained",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "wkid 3857 (Web Mercator)"
+     ]
+    },
+    {
+     "id": "basemap.info",
+     "section": "Extent & scale",
+     "name": "Basemap",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "Basemap: Modern Antique.",
+     "evidence": [
+      "baseMap.title: Modern Antique",
+      "spatial reference wkid: 3857",
+      "World Hillshade",
+      "Modern Antique (no Labels)"
+     ]
+    },
+    {
+     "id": "layer.count",
+     "section": "Layers",
+     "name": "Layer count",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "3 operational layers"
+     ]
+    },
+    {
+     "id": "layer.reachable",
+     "section": "Layers",
+     "name": "All layers public and reachable",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Election of 1796: electors' votes: ok",
+      "Election of 1800: electors' votes: ok",
+      "Landmark Supreme Court cases, 1803 and 1819: ok"
+     ]
+    },
+    {
+     "id": "layer.title",
+     "section": "Layers",
+     "name": "Layer titles are plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Election of 1796: electors' votes",
+      "Election of 1800: electors' votes",
+      "Landmark Supreme Court cases, 1803 and 1819"
+     ]
+    },
+    {
+     "id": "layer.fields",
+     "section": "Layers",
+     "name": "Layer field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "field counts reasonable"
+     ]
+    },
+    {
+     "id": "layer.renderer",
+     "section": "Layers",
+     "name": "Symbology set in the map",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all 3 feature layer(s) have a renderer defined in the map"
+     ]
+    },
+    {
+     "id": "popup.configured",
+     "section": "Pop-ups",
+     "name": "Pop-ups configured (not default all-fields)",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "All 3 data layer(s) have an authored pop-up (Arcade / elements / fields / media / raster identify).",
+     "evidence": [
+      "Election of 1796: electors' votes: arcade",
+      "Election of 1800: electors' votes: arcade",
+      "Landmark Supreme Court cases, 1803 and 1819: elements"
+     ]
+    },
+    {
+     "id": "popup.metafields",
+     "section": "Pop-ups",
+     "name": "Metadata fields hidden",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no metadata fields visible"
+     ]
+    },
+    {
+     "id": "popup.aliases",
+     "section": "Pop-ups",
+     "name": "Fields renamed to plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "visible fields have readable labels"
+     ]
+    },
+    {
+     "id": "popup.many",
+     "section": "Pop-ups",
+     "name": "Pop-up field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "pop-ups within field-count guideline"
+     ]
+    },
+    {
+     "id": "effects.sparingly",
+     "section": "Visual effects & labels",
+     "name": "Effects used sparingly",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no layer effects"
+     ]
+    },
+    {
+     "id": "effects.recolour",
+     "section": "Visual effects & labels",
+     "name": "No colour-altering effects",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no colour-altering effects"
+     ]
+    },
+    {
+     "id": "fonts.max",
+     "section": "Visual effects & labels",
+     "name": "At most two fonts",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Noto Sans"
+     ]
+    },
+    {
+     "id": "labels.halo",
+     "section": "Visual effects & labels",
+     "name": "Label halos",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all label classes have halos"
+     ]
+    },
+    {
+     "id": "a11y.cvd",
+     "section": "Accessibility",
+     "name": "Colours distinguishable with colour-vision deficiency",
+     "severity": "warn",
+     "provisional": false,
+     "status": "skip",
+     "message": "No classed feature renderers to assess (raster/single-symbol map).",
+     "evidence": []
+    },
+    {
+     "id": "a11y.contrast",
+     "section": "Accessibility",
+     "name": "Adjacent classes have sufficient colour contrast",
+     "severity": "warn",
+     "provisional": false,
+     "status": "skip",
+     "message": "No classed feature renderers to assess (raster/single-symbol map).",
+     "evidence": []
+    },
+    {
+     "id": "a11y.symbol-size",
+     "section": "Accessibility",
+     "name": "Symbols large enough on small screens",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "symbol sizes OK"
+     ]
+    },
+    {
+     "id": "a11y.label-size",
+     "section": "Accessibility",
+     "name": "Label text large enough",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "label sizes OK / no labels"
+     ]
+    },
+    {
+     "id": "a11y.opacity",
+     "section": "Accessibility",
+     "name": "Very transparent layers",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "opacities OK"
+     ]
+    },
+    {
+     "id": "a11y.colour-only",
+     "section": "Accessibility",
+     "name": "Many categories distinguished by colour alone",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "categorical class counts OK"
+     ]
+    },
+    {
+     "id": "sym.count-choropleth",
+     "section": "Symbology & legend",
+     "name": "Counts not mapped as choropleth",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no unnormalised count choropleths detected"
+     ]
+    },
+    {
+     "id": "sym.ramp-order",
+     "section": "Symbology & legend",
+     "name": "Class-break ramp reads sequential or diverging",
+     "severity": "warn",
+     "provisional": false,
+     "status": "skip",
+     "message": "No class-break renderers in map.",
+     "evidence": []
+    },
+    {
+     "id": "sym.unique-distinct",
+     "section": "Symbology & legend",
+     "name": "Categorical classes have distinct colours",
+     "severity": "warn",
+     "provisional": false,
+     "status": "skip",
+     "message": "No categorical renderers in map.",
+     "evidence": []
+    },
+    {
+     "id": "sym.prop-size",
+     "section": "Symbology & legend",
+     "name": "Proportional symbol sizes discernible",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "proportional symbol ranges OK / not used"
+     ]
+    },
+    {
+     "id": "legend.labels",
+     "section": "Symbology & legend",
+     "name": "Legend labels are readable and include units",
+     "severity": "fail",
+     "provisional": false,
+     "status": "skip",
+     "message": "No classed renderers whose legend labels can be read (raster/single-symbol map).",
+     "evidence": []
+    },
+    {
+     "id": "sym.diverging-note",
+     "section": "Symbology & legend",
+     "name": "Diverging ramp pivot explained",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no diverging ramps"
+     ]
+    }
+   ]
+  }
+ ]
+}

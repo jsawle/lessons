@@ -1,0 +1,366 @@
+{
+ "format": "Map spec 1.0",
+ "id": "presidential-elections-1796-1800",
+ "version": "1.0.0",
+ "lesson": "resources/lessons/presidential-elections-1796-1800.json",
+ "liveWebmap": "6173219d9cd84812bcd4fed859b2c182",
+ "notes": "Pilot: the lesson's web map written as a spec, with fixes B8 and B9 from maps/fixes.md built in.",
+ "item": {
+  "title": "Presidential Elections, 1796 and 1800",
+  "snippet": "How each state's electors voted in 1796 and 1800, with Marbury v. Madison and McCulloch v. Maryland.",
+  "description": "<p><b>Question:</b> How did the first political parties divide the country?</p><p><b>Ideas for one lesson in MapMaker</b> (choose any):</p><ul><li>Compare the elections of 1796 and 1800. Each pie shows how a state's electors voted for John Adams (Federalist) and Thomas Jefferson (Democratic-Republican); bigger pies mean more electors. Which regions backed each party, and which states split?</li><li>Click <i>Marbury v. Madison</i> (1803) and <i>McCulloch v. Maryland</i> (1819) for the question, the ruling and why each matters.</li><li>Sketch pins for the First Bank of the United States (Philadelphia, 1791) and Washington's Farewell Address (published in Philadelphia, 1796).</li><li>Download an image or export a PDF of the map to keep the work.</li></ul><p><b>Notes:</b> In 1796 and 1800 each elector cast two votes for president, so a state's votes add up to twice its electors. The pies show only the votes for Adams and Jefferson; each pop-up lists every candidate. In 1800, Jefferson and Aaron Burr tied with 73 votes each, so the House of Representatives chose the president: Jefferson, on 17 February 1801. The 12th Amendment (1804) then gave electors separate votes for president and vice president. The National Archives' 1800 table shows a dash for Virginia's Aaron Burr, but its own Burr total of 73 needs Virginia's 21. Today's state outlines (Natural Earth, public domain), with Maine shown as part of Massachusetts and West Virginia as part of Virginia. Territories aren't shown.</p><p><b>Sources:</b> National Archives (electoral votes and court cases); Natural Earth (outlines).</p><p><i>Version 1.2 (14 October 2026).</i></p>",
+  "tags": [
+   "MapMaker",
+   "US History",
+   "grade 8",
+   "November 2026",
+   "web map",
+   "activity 10"
+  ],
+  "credits": "National Archives; Natural Earth.",
+  "license": "Built from public-domain sources (National Archives, U.S. Census Bureau, Office of the Historian, Library of Congress, Natural Earth) and facts cited from the Center for the Study of the American Constitution, Wikipedia, Justia, the New Georgia Encyclopedia and the Avalon Project. No text is copied from them."
+ },
+ "basemap": {
+  "title": "Modern Antique",
+  "layers": [
+   {
+    "type": "tile",
+    "title": "World Hillshade",
+    "itemId": "1b243539f4514b6ba35e7d995890db1d",
+    "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer"
+   },
+   {
+    "type": "vectorTile",
+    "title": "Modern Antique (no Labels)",
+    "itemId": "545f2e839f624600bbb092c3ad998bb8",
+    "blendMode": "multiply",
+    "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json"
+   }
+  ]
+ },
+ "view": {
+  "extent": [
+   -92.0,
+   29.0,
+   -66.0,
+   47.6
+  ]
+ },
+ "bookmarks": [
+  {
+   "name": "The sixteen states",
+   "extent": [
+    -92.0,
+    29.0,
+    -66.0,
+    47.6
+   ]
+  }
+ ],
+ "layers": [
+  {
+   "title": "Landmark Supreme Court cases, 1803 and 1819",
+   "source": {
+    "itemId": "8b3b0b6964eb434fa5408fa12efa0c42",
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Supreme_Court_Cases_1803_1857/FeatureServer/0"
+   },
+   "visible": true,
+   "filter": "CaseYear <= 1819",
+   "visibleRange": {
+    "minScale": 6000000,
+    "why": "At the sixteen-states view the squares cover Maryland's pie; they appear from about 1:4,600,000 near Washington."
+   },
+   "symbol": {
+    "type": "marker",
+    "shape": "square",
+    "color": "#CC79A7",
+    "size": 12,
+    "outline": {
+     "color": "#282828",
+     "width": 1
+    },
+    "legendLabel": "Supreme Court case"
+   },
+   "labels": {
+    "expression": "$feature.CaseName + ' (' + $feature.CaseYear + ')'",
+    "placement": "above",
+    "font": {
+     "family": "Noto Sans",
+     "size": 10,
+     "weight": "bold"
+    },
+    "color": "#282828",
+    "halo": {
+     "color": "#FFFFFF",
+     "size": 1.5
+    }
+   },
+   "popup": {
+    "title": "{CaseName} ({CaseYear})",
+    "html": "<p><b>Question:</b> {Question}</p><p><b>Ruling:</b> {Ruling}</p><p><b>Why it matters:</b> {Principle}</p><p><b>Why here:</b> {WhyHere}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source</a></p>"
+   }
+  },
+  {
+   "title": "Election of 1800: electors' votes",
+   "source": {
+    "itemId": "d125b07d377c4282af37bf3296788b91",
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Electoral_Votes_1796_1800/FeatureServer/0"
+   },
+   "visible": false,
+   "symbol": {
+    "type": "pieChart",
+    "slices": [
+     {
+      "field": "Adams1800",
+      "label": "John Adams (Federalist)",
+      "color": "#E69F00"
+     },
+     {
+      "field": "Jefferson1800",
+      "label": "Thomas Jefferson (Democratic-Republican)",
+      "color": "#0072B2"
+     }
+    ],
+    "size": {
+     "field": "Electors",
+     "legendTitle": "Electors",
+     "from": [
+      3,
+      18
+     ],
+     "to": [
+      21,
+      44
+     ]
+    },
+    "outline": {
+     "color": "#FFFFFF",
+     "width": 1
+    },
+    "background": {
+     "color": "#FAF8F096",
+     "outline": {
+      "color": "#5A5A5A",
+      "width": 0.8
+     }
+    },
+    "other": {
+     "label": "Other",
+     "color": "#AAAAAA"
+    }
+   },
+   "popup": {
+    "title": "{State} in 1800: {Electors} electors",
+    "html": "<p>In the pie: John Adams (Federalist), {expression/adams}; Thomas Jefferson (Democratic-Republican), {expression/jefferson}.</p><p>All electors' votes in 1800: {Votes1800}. Each elector cast two votes for president, so the votes add up to twice the number of electors.</p><p>Jefferson and Aaron Burr tied with 73 votes each, so the House of Representatives chose the president: Jefferson, on 17 February 1801. The 12th Amendment (1804) then gave electors separate votes for president and vice president.</p><p>{Note}</p><p><a href='https://www.archives.gov/electoral-college/1800' target='_blank' rel='nofollow ugc noopener noreferrer'>Source: National Archives</a></p>",
+    "expressions": {
+     "adams": {
+      "title": "Adams votes",
+      "arcade": "var v = $feature.Adams1800;\nreturn v + IIf(v == 1, ' vote', ' votes');"
+     },
+     "jefferson": {
+      "title": "Jefferson votes",
+      "arcade": "var v = $feature.Jefferson1800;\nreturn v + IIf(v == 1, ' vote', ' votes');"
+     }
+    }
+   }
+  },
+  {
+   "title": "Election of 1796: electors' votes",
+   "source": {
+    "itemId": "d125b07d377c4282af37bf3296788b91",
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Electoral_Votes_1796_1800/FeatureServer/0"
+   },
+   "visible": true,
+   "symbol": {
+    "type": "pieChart",
+    "slices": [
+     {
+      "field": "Adams1796",
+      "label": "John Adams (Federalist)",
+      "color": "#E69F00"
+     },
+     {
+      "field": "Jefferson1796",
+      "label": "Thomas Jefferson (Democratic-Republican)",
+      "color": "#0072B2"
+     }
+    ],
+    "size": {
+     "field": "Electors",
+     "legendTitle": "Electors",
+     "from": [
+      3,
+      18
+     ],
+     "to": [
+      21,
+      44
+     ]
+    },
+    "outline": {
+     "color": "#FFFFFF",
+     "width": 1
+    },
+    "background": {
+     "color": "#FAF8F096",
+     "outline": {
+      "color": "#5A5A5A",
+      "width": 0.8
+     }
+    },
+    "other": {
+     "label": "Other",
+     "color": "#AAAAAA"
+    }
+   },
+   "popup": {
+    "title": "{State} in 1796: {Electors} electors",
+    "html": "<p>In the pie: John Adams (Federalist), {expression/adams}; Thomas Jefferson (Democratic-Republican), {expression/jefferson}.</p><p>All electors' votes in 1796: {Votes1796}. Each elector cast two votes for president, so the votes add up to twice the number of electors.</p><p>{Note}</p><p><a href='https://www.archives.gov/electoral-college/1796' target='_blank' rel='nofollow ugc noopener noreferrer'>Source: National Archives</a></p>",
+    "expressions": {
+     "adams": {
+      "title": "Adams votes",
+      "arcade": "var v = $feature.Adams1796;\nreturn v + IIf(v == 1, ' vote', ' votes');"
+     },
+     "jefferson": {
+      "title": "Jefferson votes",
+      "arcade": "var v = $feature.Jefferson1796;\nreturn v + IIf(v == 1, ' vote', ' votes');"
+     }
+    }
+   }
+  }
+ ],
+ "checks": [
+  {
+   "name": "q1-legend",
+   "question": "The election of 1796",
+   "do": {
+    "bookmark": "The sixteen states",
+    "legend": true
+   },
+   "expect": {
+    "legendHas": [
+     "John Adams (Federalist)",
+     "Thomas Jefferson (Democratic-Republican)",
+     "Electors"
+    ],
+    "hiddenAtScale": [
+     "Landmark Supreme Court cases, 1803 and 1819"
+    ]
+   }
+  },
+  {
+   "name": "q1-pennsylvania",
+   "question": "The election of 1796",
+   "do": {
+    "open": {
+     "layer": "Election of 1796: electors' votes",
+     "where": "State='Pennsylvania'"
+    }
+   },
+   "expect": {
+    "popupHas": [
+     "Pennsylvania in 1796: 15 electors",
+     "John Adams (Federalist), 1 vote;",
+     "Thomas Jefferson (Democratic-Republican), 14 votes."
+    ]
+   }
+  },
+  {
+   "name": "q2-pennsylvania",
+   "question": "The election of 1800",
+   "do": {
+    "off": [
+     "Election of 1796: electors' votes"
+    ],
+    "on": [
+     "Election of 1800: electors' votes"
+    ],
+    "open": {
+     "layer": "Election of 1800: electors' votes",
+     "where": "State='Pennsylvania'"
+    }
+   },
+   "expect": {
+    "popupHas": [
+     "Pennsylvania in 1800: 15 electors",
+     "7 votes",
+     "8 votes",
+     "Jefferson and Aaron Burr tied"
+    ]
+   }
+  },
+  {
+   "name": "q3-new-york",
+   "question": "Which states switched?",
+   "do": {
+    "open": {
+     "layer": "Election of 1800: electors' votes",
+     "where": "State='New York'"
+    }
+   },
+   "expect": {
+    "popupHas": [
+     "New York in 1800",
+     "John Adams (Federalist), 0 votes",
+     "Thomas Jefferson (Democratic-Republican), 12 votes"
+    ]
+   }
+  },
+  {
+   "name": "q4-squares-appear",
+   "question": "The Supreme Court, near the capital",
+   "do": {
+    "goTo": [
+     -76.8,
+     39.1,
+     4622324
+    ]
+   },
+   "expect": {
+    "drawnAtScale": [
+     "Landmark Supreme Court cases, 1803 and 1819"
+    ]
+   }
+  },
+  {
+   "name": "q4-marbury",
+   "question": "The Supreme Court, near the capital",
+   "do": {
+    "click": {
+     "layer": "Landmark Supreme Court cases, 1803 and 1819",
+     "where": "CaseName='Marbury v. Madison'",
+     "scale": 2311162
+    }
+   },
+   "expect": {
+    "popupHas": [
+     "Marbury v. Madison (1803)",
+     "Why here:"
+    ]
+   }
+  },
+  {
+   "name": "q4-mcculloch",
+   "question": "The Supreme Court, near the capital",
+   "do": {
+    "click": {
+     "layer": "Landmark Supreme Court cases, 1803 and 1819",
+     "where": "CaseName='McCulloch v. Maryland'",
+     "scale": 2311162
+    }
+   },
+   "expect": {
+    "popupHas": [
+     "McCulloch v. Maryland (1819)",
+     "Why here:"
+    ]
+   }
+  }
+ ],
+ "publish": {
+  "org": "HNLEA4GfnbCFQZGa",
+  "orgLabel": "GIS-4-Schools",
+  "folder": "Map builds",
+  "thumbnail": "resources/assets/screenshots/presidential-elections-1796-1800.jpg"
+ }
+}

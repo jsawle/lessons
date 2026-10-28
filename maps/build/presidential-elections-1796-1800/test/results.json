@@ -1,0 +1,64 @@
+{
+ "tool": "Map test 1.0",
+ "timeZone": "America/Chicago",
+ "sdk": "ArcGIS Maps SDK for JavaScript 4.34",
+ "webmapFingerprint": "2d887313b249d5155fb0b4594c2d704d6d246cff",
+ "results": [
+  {
+   "name": "q1-legend",
+   "question": "The election of 1796",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": "Election of 1796: electors' votes\n\tJohn Adams (Federalist)\n\n\tThomas Jefferson (Democratic-Republican)\n\n\tOther\nElectors\n\t> 21\n\n\t16\n\n\t12\n\n\t7\n\n\t< 3"
+  },
+  {
+   "name": "q1-pennsylvania",
+   "question": "The election of 1796",
+   "pass": true,
+   "failures": [],
+   "popup": "Pennsylvania in 1796: 15 electors\n\nIn the pie: John Adams (Federalist), 1 vote; Thomas Jefferson (Democratic-Republican), 14 votes.\n\nAll electors' votes in 1796: John Adams 1, Thomas Jefferson 14, Thomas Pinckney 2, Aaron Burr 13. Each elector cast two votes for president, so the votes add up to twice the number of electors.\n\nToday's state outlines, with Maine shown as part of Massachusetts and West Virginia as part of Virginia, as they were in the 1790s.\n\nSource: National Archives",
+   "legend": null
+  },
+  {
+   "name": "q2-pennsylvania",
+   "question": "The election of 1800",
+   "pass": true,
+   "failures": [],
+   "popup": "Pennsylvania in 1800: 15 electors\n\nIn the pie: John Adams (Federalist), 7 votes; Thomas Jefferson (Democratic-Republican), 8 votes.\n\nAll electors' votes in 1800: Thomas Jefferson 8, Aaron Burr 8, John Adams 7, Charles C. Pinckney 7. Each elector cast two votes for president, so the votes add up to twice the number of electors.\n\nJefferson and Aaron Burr tied with 73 votes each, so the House of Representatives chose the president: Jefferson, on 17 February 1801. The 12th Amendment (1804) then gave electors separate votes for president and vice president.\n\nToday's state outlines, with Maine shown as part of Massachusetts and West Virginia as part of Virginia, as they were in the 1790s.\n\nSource: National Archives",
+   "legend": null
+  },
+  {
+   "name": "q3-new-york",
+   "question": "Which states switched?",
+   "pass": true,
+   "failures": [],
+   "popup": "New York in 1800: 12 electors\n\nIn the pie: John Adams (Federalist), 0 votes; Thomas Jefferson (Democratic-Republican), 12 votes.\n\nAll electors' votes in 1800: Thomas Jefferson 12, Aaron Burr 12. Each elector cast two votes for president, so the votes add up to twice the number of electors.\n\nJefferson and Aaron Burr tied with 73 votes each, so the House of Representatives chose the president: Jefferson, on 17 February 1801. The 12th Amendment (1804) then gave electors separate votes for president and vice president.\n\nToday's state outlines, with Maine shown as part of Massachusetts and West Virginia as part of Virginia, as they were in the 1790s.\n\nSource: National Archives",
+   "legend": null
+  },
+  {
+   "name": "q4-squares-appear",
+   "question": "The Supreme Court, near the capital",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "q4-marbury",
+   "question": "The Supreme Court, near the capital",
+   "pass": true,
+   "failures": [],
+   "popup": "Marbury v. Madison (1803)\n\nQuestion: Could the Supreme Court order Secretary of State James Madison to deliver William Marbury's commission?\n\nRuling: Marbury had a right to his commission, but the law giving the Court power to issue that order was unconstitutional.\n\nWhy it matters: Judicial review: courts can decide whether the actions of the other branches are constitutional. \"A Law repugnant to the Constitution is void.\"\n\nWhy here: William Marbury asked the Supreme Court in Washington for an order to get his commission.\n\nSource",
+   "legend": null
+  },
+  {
+   "name": "q4-mcculloch",
+   "question": "The Supreme Court, near the capital",
+   "pass": true,
+   "failures": [],
+   "popup": "McCulloch v. Maryland (1819)\n\nQuestion: Could Congress charter a national bank, and could a state tax it?\n\nRuling: Congress could charter the bank, and Maryland's tax on it was unconstitutional and void.\n\nWhy it matters: Congress may use appropriate means to carry out its powers, and federal law is supreme over state law: \"the power to tax involves the power to destroy.\"\n\nWhy here: Maryland sued James McCulloch, a cashier at the Baltimore branch of the Bank of the United States, to collect a state tax on the bank.\n\nSource",
+   "legend": null
+  }
+ ]
+}
