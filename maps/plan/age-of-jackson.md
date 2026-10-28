@@ -13,7 +13,7 @@ Question for students: When did the United States gain the most land through tre
 | | |
 |---|---|
 | Standards | TX 8.5(H) (context for removal) |
-| Layers (existing) | "Indian Land Cessions in the United States", US Forest Service, MapServer/0 (apps.fs.usda.gov/arcx/rest/services/EDW/EDW_TribalCessionLands_01), 752 polygons from Royce's maps, five date fields, CC BY 4.0 per data.gov |
+| Layers (existing) | "Indian Land Cessions in the United States", US Forest Service, MapServer/0 (apps.fs.usda.gov/arcx/rest/services/EDW/EDW_TribalCessionLands_01), 718 polygons from Royce's maps (the Forest Service's metadata also quotes 752 and 718; the live layer has 718, one of them with no attributes), up to five schedule dates each, no use constraints in the metadata and CC BY 4.0 on the data.gov record |
 | Layers (new, small) | Era filter or three visible-range groups (before 1829, 1829–1837, after 1837) built from the date fields; a states layer for orientation |
 | What students use | Time filter or era groups, pop-ups (Arcade formats the dates so they read the same in every time zone), bookmarks (Southeast, Old Northwest, Plains) |
 | Data caveats | Boundaries are coarse; there is no acreage field, so students compare where and when, not how many acres; Royce compiled the maps in the 1890s from the federal government's viewpoint |
@@ -61,6 +61,6 @@ Question for students: What changed between the elections of 1800 and 1828, and 
 
 | Map | Data check | Spec | Build | Test | Lesson | Published |
 |---|---|---|---|---|---|---|
-| 1. Land cessions | done | – | – | – | – | – |
+| 1. Land cessions | done; copy script dry run passes (717 polygons, four known dates match) | – | – | – | – | – |
 | 2. Cherokee removal | done (key places layer open) | – | – | – | – | – |
 | 3. Election of 1828 and suffrage | electoral votes done; suffrage layer open | – | – | – | – | – |

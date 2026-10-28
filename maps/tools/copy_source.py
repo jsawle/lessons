@@ -74,13 +74,22 @@ def transform(feats, spec):
             v = p.get(find(fd["from"]))
             v = v.strip() if isinstance(v, str) else v
             if isinstance(v, str) and len(v) > fd.get("maxLength", 250):
-                v = v[: fd.get("maxLength", 250) - 1] + "…"; stats["truncated:" + fd["name"]] += 1
+                if fd.get("splitOn"):
+                    items, keep, sep = [x.strip() for x in v.split(fd["splitOn"]) if x.strip()], [], fd["splitOn"] + " "
+                    for i, it in enumerate(items):
+                        tail = f" and {len(items) - i - 1} more" if i < len(items) - 1 else ""
+                        if len(sep.join(keep + [it])) + len(tail) > fd.get("maxLength", 250): break
+                        keep.append(it)
+                    v = sep.join(keep) + (f" and {len(items) - len(keep)} more" if len(keep) < len(items) else "")
+                else:
+                    v = v[: fd.get("maxLength", 250) - 1] + "…"
+                stats["shortened:" + fd["name"]] += 1
             props[fd["name"]] = v if v not in ("", None) else None
         for lk in spec.get("links", []):
             props[lk["name"]] = next((p.get(k) for k in (find(s, True) for s in lk["firstOf"]) if k and p.get(k)), None)
         ds = [to_date(p.get(s)) for s in dsrc]; ds = sorted(d for d in ds if d)
         for d in ds:
-            if (d.hour, d.minute, d.second) != (0, 0, 0): stats["date not at midnight UTC"] += 1
+            if not (6 <= d.hour < 18): stats["date stored outside 06:00-18:00 UTC (it is read as a UTC date here, which is what the schedule gives)"] += 1
         props[dcfg["listField"]] = "; ".join(f"{MONTHS[d.month-1]} {d.day}, {d.year}" for d in ds) or None
         props[dcfg["isoField"]] = "; ".join(d.strftime("%Y-%m-%d") for d in ds) or None
         props[dcfg["firstYear"]] = ds[0].year if ds else None
@@ -90,6 +99,7 @@ def transform(feats, spec):
             props[ecfg["field"]] = next((b["name"] for b in ecfg["bands"] if y is not None and y <= b["max"]), "No date")
         g = f.get("geometry")
         if not g: stats["no geometry (dropped)"] += 1; continue
+        if spec.get("dropIfEmpty") and props.get(spec["dropIfEmpty"]) is None: stats[f"no {spec['dropIfEmpty']} (dropped)"] += 1; continue
         out.append({"type": "Feature", "properties": props, "geometry": {"type": g["type"], "coordinates": round_coords(g["coordinates"])}})
     return out, stats
 
