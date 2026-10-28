@@ -61,6 +61,6 @@ Question for students: What changed between the elections of 1800 and 1828, and 
 
 | Map | Data check | Spec | Build | Test | Lesson | Published |
 |---|---|---|---|---|---|---|
-| 1. Land cessions | done; copy script dry run passes (717 polygons, four known dates match) | – | – | – | – | – |
+| 1. Land cessions | done; data copied to GIS for Schools (v1.1, private, 717 polygons, four known dates match) | 0.1.0 written | waiting: the layer must be shared | – | – | – |
 | 2. Cherokee removal | done (key places layer open) | – | – | – | – | – |
 | 3. Election of 1828 and suffrage | electoral votes done; suffrage layer open | – | – | – | – | – |
