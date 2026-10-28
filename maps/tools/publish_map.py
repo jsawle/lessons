@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Map publish 1.0: puts a built, tested web map (maps/build/<id>/) into ArcGIS Online, signed in as you.
+"""Map publish 1.1: puts a built, tested web map (maps/build/<id>/) into ArcGIS Online, signed in as you.
 
 Runs on your own computer with the ArcGIS API for Python (pip install arcgis). It never asks for or takes a password:
 it uses a sign-in you set up yourself, one of
@@ -22,12 +22,20 @@ Usage, from the repo root:
 import argparse, datetime, hashlib, json, sys
 from pathlib import Path
 
-VERSION = "1.0"
+VERSION = "1.1"
 ROOT = Path(__file__).resolve().parents[2]
 
 
+def norm(o):
+    """ArcGIS Online saves 3375646.0 as 3375646. They mean the same, so whole-number floats are compared as integers."""
+    if isinstance(o, dict): return {k: norm(v) for k, v in o.items()}
+    if isinstance(o, list): return [norm(v) for v in o]
+    if isinstance(o, float) and o.is_integer(): return int(o)
+    return o
+
+
 def fp(obj):
-    return hashlib.sha1(json.dumps(obj, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")).hexdigest()
+    return hashlib.sha1(json.dumps(norm(obj), sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")).hexdigest()
 
 
 def load_build(build_dir):
