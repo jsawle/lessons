@@ -1,0 +1,603 @@
+{
+ "rubricVersion": "0.10.0",
+ "maps": [
+  {
+   "itemId": "942abfa36ef4dc0f11ecb0456388ba9d",
+   "title": "Land cessions to the United States, 1784 to 1894",
+   "owner": "build",
+   "auditedAt": "2026-10-28T18:27:17.339Z",
+   "appVersion": "0.10.0",
+   "rubricVersion": "0.10.0",
+   "modelVersions": {
+    "score roll-up": "1.0",
+    "pop-up classifier": "1.1",
+    "colour screening": "1.1",
+    "layer item merge": "1.0",
+    "citation screening": "1.0",
+    "split-layer detection": "1.0",
+    "effects screening": "1.0",
+    "render: data coverage": "1.1",
+    "render: basemap contrast": "1.1"
+   },
+   "render": {
+    "coverage": 0.1821,
+    "medianDeltaE2000": 28.79,
+    "failedLayers": [],
+    "suspendedLayers": [],
+    "settled": true,
+    "viewport": [
+     1024,
+     640
+    ],
+    "sdk": "4.31"
+   },
+   "standards": "General Cartographic Standards for MapMaker",
+   "tally": {
+    "fail": 0,
+    "warn": 2,
+    "info": 2,
+    "pass": 36,
+    "skip": 5
+   },
+   "verdict": "review",
+   "score": 97.4,
+   "grade": "A",
+   "sectionScores": {
+    "Map title & metadata": 94.7,
+    "Extent & scale": 100,
+    "Layers": 100,
+    "Pop-ups": 100,
+    "Visual effects & labels": 100,
+    "Accessibility": 100,
+    "Symbology & legend": 100,
+    "Rendered map": 100
+   },
+   "checks": [
+    {
+     "id": "meta.title.present",
+     "section": "Map title & metadata",
+     "name": "Title present and not a default",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"Land cessions to the United States, 1784 to 1894\""
+     ]
+    },
+    {
+     "id": "meta.title.length",
+     "section": "Map title & metadata",
+     "name": "Title length",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title length: 48"
+     ]
+    },
+    {
+     "id": "meta.title.abbrev",
+     "section": "Map title & metadata",
+     "name": "Title avoids unexplained abbreviations",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "title: \"Land cessions to the United States, 1784 to 1894\""
+     ]
+    },
+    {
+     "id": "meta.snippet",
+     "section": "Map title & metadata",
+     "name": "Summary (snippet) present",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "snippet: 141 chars"
+     ]
+    },
+    {
+     "id": "meta.description",
+     "section": "Map title & metadata",
+     "name": "Description present and substantive",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "description: 1330 chars"
+     ]
+    },
+    {
+     "id": "meta.tags",
+     "section": "Map title & metadata",
+     "name": "Tags",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "tags: MapMaker, US History, grade 8, Age of Jackson, Indian land cessions, web map"
+     ]
+    },
+    {
+     "id": "meta.credits",
+     "section": "Map title & metadata",
+     "name": "Credits / attribution",
+     "severity": "fail",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "credits: USDA Forest Service, Office of Tribal Relations, from maps by Charles C. Royce (Bureau of American Ethnology, 1896-1897); Esri."
+     ]
+    },
+    {
+     "id": "meta.citation",
+     "section": "Map title & metadata",
+     "name": "Data source cited",
+     "severity": "warn",
+     "provisional": true,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "credits: USDA Forest Service, Office of Tribal Relations, from maps by Charles C. Royce (Bureau of American Ethnology, 1896-1897); Esri."
+     ]
+    },
+    {
+     "id": "meta.category",
+     "section": "Map title & metadata",
+     "name": "Category assigned",
+     "severity": "warn",
+     "provisional": true,
+     "status": "warn",
+     "message": "No category assigned.",
+     "evidence": [
+      "categories: none"
+     ]
+    },
+    {
+     "id": "meta.license",
+     "section": "Map title & metadata",
+     "name": "Terms of use",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "licenseInfo: set"
+     ]
+    },
+    {
+     "id": "meta.thumbnail",
+     "section": "Map title & metadata",
+     "name": "Custom thumbnail",
+     "severity": "warn",
+     "provisional": true,
+     "status": "warn",
+     "message": "No custom thumbnail - the default will show in galleries.",
+     "evidence": [
+      "thumbnail: none"
+     ]
+    },
+    {
+     "id": "extent.initial",
+     "section": "Extent & scale",
+     "name": "Initial extent set and appropriate",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "extent: -13914936, 2753408 -> -7347086, 6446276 (wkid 3857)",
+      "width ~ 59 deg"
+     ]
+    },
+    {
+     "id": "extent.visrange",
+     "section": "Extent & scale",
+     "name": "Visibility ranges",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "0 of 3 feature layers have a visibility range"
+     ]
+    },
+    {
+     "id": "proj.explained",
+     "section": "Extent & scale",
+     "name": "Alternate projection explained",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "wkid 3857 (Web Mercator)"
+     ]
+    },
+    {
+     "id": "basemap.info",
+     "section": "Extent & scale",
+     "name": "Basemap",
+     "severity": "info",
+     "provisional": false,
+     "status": "info",
+     "message": "Basemap: Modern Antique.",
+     "evidence": [
+      "baseMap.title: Modern Antique",
+      "spatial reference wkid: 3857",
+      "World Hillshade",
+      "Modern Antique (no Labels)"
+     ]
+    },
+    {
+     "id": "layer.count",
+     "section": "Layers",
+     "name": "Layer count",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "3 operational layers"
+     ]
+    },
+    {
+     "id": "layer.reachable",
+     "section": "Layers",
+     "name": "All layers public and reachable",
+     "severity": "fail",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Cessions dated before 1830: ok",
+      "Cessions dated 1840 to 1894: ok",
+      "Cessions dated 1830 to 1839: ok"
+     ]
+    },
+    {
+     "id": "layer.title",
+     "section": "Layers",
+     "name": "Layer titles are plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "Cessions dated before 1830",
+      "Cessions dated 1840 to 1894",
+      "Cessions dated 1830 to 1839"
+     ]
+    },
+    {
+     "id": "layer.fields",
+     "section": "Layers",
+     "name": "Layer field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "field counts reasonable"
+     ]
+    },
+    {
+     "id": "layer.renderer",
+     "section": "Layers",
+     "name": "Symbology set in the map",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all 3 feature layer(s) have a renderer defined in the map"
+     ]
+    },
+    {
+     "id": "popup.configured",
+     "section": "Pop-ups",
+     "name": "Pop-ups configured (not default all-fields)",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "All 3 data layer(s) have an authored pop-up (Arcade / elements / fields / media / raster identify).",
+     "evidence": [
+      "Cessions dated before 1830: arcade",
+      "Cessions dated 1840 to 1894: arcade",
+      "Cessions dated 1830 to 1839: arcade"
+     ]
+    },
+    {
+     "id": "popup.metafields",
+     "section": "Pop-ups",
+     "name": "Metadata fields hidden",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no metadata fields visible"
+     ]
+    },
+    {
+     "id": "popup.aliases",
+     "section": "Pop-ups",
+     "name": "Fields renamed to plain language",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "visible fields have readable labels"
+     ]
+    },
+    {
+     "id": "popup.disabled",
+     "section": "Pop-ups",
+     "name": "Pop-ups switched off",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no data layer has its pop-up switched off"
+     ]
+    },
+    {
+     "id": "popup.many",
+     "section": "Pop-ups",
+     "name": "Pop-up field count",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "pop-ups within field-count guideline"
+     ]
+    },
+    {
+     "id": "effects.sparingly",
+     "section": "Visual effects & labels",
+     "name": "Effects used sparingly",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no layer effects"
+     ]
+    },
+    {
+     "id": "effects.recolour",
+     "section": "Visual effects & labels",
+     "name": "No colour-altering effects",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no colour-altering effects"
+     ]
+    },
+    {
+     "id": "fonts.max",
+     "section": "Visual effects & labels",
+     "name": "At most two fonts",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no map labels"
+     ]
+    },
+    {
+     "id": "labels.halo",
+     "section": "Visual effects & labels",
+     "name": "Label halos",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "all label classes have halos"
+     ]
+    },
+    {
+     "id": "a11y.cvd",
+     "section": "Accessibility",
+     "name": "Colours distinguishable with colour-vision deficiency",
+     "severity": "warn",
+     "provisional": false,
+     "status": "skip",
+     "message": "No classed feature renderers to assess (raster/single-symbol map).",
+     "evidence": []
+    },
+    {
+     "id": "a11y.contrast",
+     "section": "Accessibility",
+     "name": "Adjacent classes have sufficient colour contrast",
+     "severity": "warn",
+     "provisional": false,
+     "status": "skip",
+     "message": "No classed feature renderers to assess (raster/single-symbol map).",
+     "evidence": []
+    },
+    {
+     "id": "a11y.symbol-size",
+     "section": "Accessibility",
+     "name": "Symbols large enough on small screens",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "symbol sizes OK"
+     ]
+    },
+    {
+     "id": "a11y.label-size",
+     "section": "Accessibility",
+     "name": "Label text large enough",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "label sizes OK / no labels"
+     ]
+    },
+    {
+     "id": "a11y.opacity",
+     "section": "Accessibility",
+     "name": "Very transparent layers",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "opacities OK"
+     ]
+    },
+    {
+     "id": "a11y.colour-only",
+     "section": "Accessibility",
+     "name": "Many categories distinguished by colour alone",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "categorical class counts OK"
+     ]
+    },
+    {
+     "id": "sym.count-choropleth",
+     "section": "Symbology & legend",
+     "name": "Counts not mapped as choropleth",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no unnormalised count choropleths detected"
+     ]
+    },
+    {
+     "id": "sym.ramp-order",
+     "section": "Symbology & legend",
+     "name": "Class-break ramp reads sequential or diverging",
+     "severity": "warn",
+     "provisional": false,
+     "status": "skip",
+     "message": "No class-break renderers in map.",
+     "evidence": []
+    },
+    {
+     "id": "sym.unique-distinct",
+     "section": "Symbology & legend",
+     "name": "Categorical classes have distinct colours",
+     "severity": "warn",
+     "provisional": false,
+     "status": "skip",
+     "message": "No categorical renderers in map.",
+     "evidence": []
+    },
+    {
+     "id": "sym.prop-size",
+     "section": "Symbology & legend",
+     "name": "Proportional symbol sizes discernible",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "proportional symbol ranges OK / not used"
+     ]
+    },
+    {
+     "id": "legend.labels",
+     "section": "Symbology & legend",
+     "name": "Legend labels are readable and include units",
+     "severity": "fail",
+     "provisional": false,
+     "status": "skip",
+     "message": "No classed renderers whose legend labels can be read (raster/single-symbol map).",
+     "evidence": []
+    },
+    {
+     "id": "legend.entities",
+     "section": "Symbology & legend",
+     "name": "Colours that identify individuals are explained",
+     "severity": "warn",
+     "provisional": true,
+     "status": "info",
+     "message": "Each colour stands for one individual. The automatic legend lists the layer names; consider also saying in the description what a colour means.",
+     "evidence": [
+      "3 layers from one service, each filtered to one value (Cessions dated before 1830, Cessions dated 1840 to 1894, Cessions dated 1830 to 1839)"
+     ]
+    },
+    {
+     "id": "sym.diverging-note",
+     "section": "Symbology & legend",
+     "name": "Diverging ramp pivot explained",
+     "severity": "info",
+     "provisional": false,
+     "status": "pass",
+     "message": "",
+     "evidence": [
+      "no diverging ramps"
+     ]
+    },
+    {
+     "id": "render.coverage",
+     "section": "Rendered map",
+     "name": "Data visible at the saved extent",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "Data layers cover 18.2% of the viewport at the saved extent.",
+     "evidence": [
+      "data coverage: 18.2%",
+      "viewport 1024 x 640 px, 163840 pixels sampled (every 2nd), 29840 differ from the basemap alone",
+      "render time 25.7 s"
+     ]
+    },
+    {
+     "id": "render.contrast",
+     "section": "Rendered map",
+     "name": "Data stands out from the basemap",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "Data stands out from the basemap (median dE 28.8).",
+     "evidence": [
+      "median dE2000 data vs basemap: 28.8",
+      "25th percentile dE: 27.7",
+      "share of data pixels with dE < 8: 0%"
+     ]
+    },
+    {
+     "id": "render.layerviews",
+     "section": "Rendered map",
+     "name": "Layers draw at the saved extent",
+     "severity": "warn",
+     "provisional": false,
+     "status": "pass",
+     "message": "All visible layers drew at the saved extent.",
+     "evidence": [
+      "no failed or suspended layers"
+     ]
+    }
+   ]
+  }
+ ]
+}

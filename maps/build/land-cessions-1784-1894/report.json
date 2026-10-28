@@ -1,0 +1,39 @@
+{
+ "tool": "Map builder 1.1",
+ "spec": "maps/specs/land-cessions-1784-1894.json",
+ "specId": "land-cessions-1784-1894",
+ "specVersion": "0.2.0",
+ "built": "2026-10-28T18:25:59Z",
+ "webmapFingerprint": "942abfa36ef4dc0f11ecb0456388ba9d2bff8289",
+ "itemFingerprint": "77b52386326891b5e8e2f1b306ba8278c08ea55a",
+ "checked": [
+  "basemap is public and not CARTO",
+  "every source layer is readable and every field the spec uses exists"
+ ],
+ "warnings": [],
+ "tested": {
+  "tool": "Map test 1.0",
+  "when": "2026-10-28T18:27:17Z",
+  "timeZone": "America/Chicago",
+  "webmapFingerprint": "942abfa36ef4dc0f11ecb0456388ba9d2bff8289",
+  "pass": true,
+  "checks": [
+   {
+    "name": "legend-three-periods",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "cherokee-1835",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "choctaw-1830",
+    "pass": true,
+    "failures": []
+   }
+  ],
+  "checker": "test/checker.json"
+ }
+}
