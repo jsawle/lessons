@@ -1,0 +1,298 @@
+{
+ "operationalLayers": [
+  {
+   "id": "lyr234191f4186",
+   "title": "Cessions dated before 1830",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/land_cessions_royce_v1_1_0/FeatureServer/0",
+   "itemId": "fbefc5d9f79242d9a6b866b93f5a5af5",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": true,
+   "opacity": 1,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "symbol": {
+       "type": "esriSFS",
+       "style": "esriSFSSolid",
+       "color": [
+        86,
+        180,
+        233,
+        166
+       ],
+       "outline": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         31,
+         106,
+         153,
+         255
+        ],
+        "width": 0.8
+       }
+      }
+     }
+    },
+    "definitionExpression": "DatedBefore1830 = 1",
+    "minScale": 0,
+    "maxScale": 0
+   },
+   "popupInfo": {
+    "title": "{Tribe}",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": [],
+    "expressionInfos": [
+     {
+      "name": "present",
+      "title": "Nations today",
+      "returnType": "string",
+      "expression": "var p = $feature.PresentTribe;\nreturn IIf(IsEmpty(p), 'Not listed in the Forest Service data.', p);"
+     },
+     {
+      "name": "schedule",
+      "title": "Royce's schedule link text",
+      "returnType": "string",
+      "expression": "return IIf(IsEmpty($feature.ScheduleURL), '', \"Royce's schedule\");"
+     }
+    ]
+   }
+  },
+  {
+   "id": "lyr633183f393a",
+   "title": "Cessions dated 1840 to 1894",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/land_cessions_royce_v1_1_0/FeatureServer/0",
+   "itemId": "fbefc5d9f79242d9a6b866b93f5a5af5",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": true,
+   "opacity": 1,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "symbol": {
+       "type": "esriSFS",
+       "style": "esriSFSSolid",
+       "color": [
+        0,
+        158,
+        115,
+        166
+       ],
+       "outline": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         0,
+         90,
+         66,
+         255
+        ],
+        "width": 0.8
+       }
+      }
+     }
+    },
+    "definitionExpression": "Dated1840to1894 = 1",
+    "minScale": 0,
+    "maxScale": 0
+   },
+   "popupInfo": {
+    "title": "{Tribe}",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": [],
+    "expressionInfos": [
+     {
+      "name": "present",
+      "title": "Nations today",
+      "returnType": "string",
+      "expression": "var p = $feature.PresentTribe;\nreturn IIf(IsEmpty(p), 'Not listed in the Forest Service data.', p);"
+     },
+     {
+      "name": "schedule",
+      "title": "Royce's schedule link text",
+      "returnType": "string",
+      "expression": "return IIf(IsEmpty($feature.ScheduleURL), '', \"Royce's schedule\");"
+     }
+    ]
+   }
+  },
+  {
+   "id": "lyrf36aead630b",
+   "title": "Cessions dated 1830 to 1839",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/land_cessions_royce_v1_1_0/FeatureServer/0",
+   "itemId": "fbefc5d9f79242d9a6b866b93f5a5af5",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": true,
+   "opacity": 1,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "symbol": {
+       "type": "esriSFS",
+       "style": "esriSFSSolid",
+       "color": [
+        213,
+        94,
+        0,
+        179
+       ],
+       "outline": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         122,
+         53,
+         0,
+         255
+        ],
+        "width": 0.8
+       }
+      }
+     }
+    },
+    "definitionExpression": "Dated1830s = 1",
+    "minScale": 0,
+    "maxScale": 0
+   },
+   "popupInfo": {
+    "title": "{Tribe}",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": [],
+    "expressionInfos": [
+     {
+      "name": "present",
+      "title": "Nations today",
+      "returnType": "string",
+      "expression": "var p = $feature.PresentTribe;\nreturn IIf(IsEmpty(p), 'Not listed in the Forest Service data.', p);"
+     },
+     {
+      "name": "schedule",
+      "title": "Royce's schedule link text",
+      "returnType": "string",
+      "expression": "return IIf(IsEmpty($feature.ScheduleURL), '', \"Royce's schedule\");"
+     }
+    ]
+   }
+  }
+ ],
+ "baseMap": {
+  "title": "Modern Antique",
+  "baseMapLayers": [
+   {
+    "id": "basec527aa8b",
+    "title": "World Hillshade",
+    "opacity": 1,
+    "visibility": true,
+    "layerType": "ArcGISTiledMapServiceLayer",
+    "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+    "itemId": "1b243539f4514b6ba35e7d995890db1d"
+   },
+   {
+    "id": "base6e149572",
+    "title": "Modern Antique (no Labels)",
+    "opacity": 1,
+    "visibility": true,
+    "layerType": "VectorTileLayer",
+    "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json",
+    "itemId": "545f2e839f624600bbb092c3ad998bb8",
+    "blendMode": "multiply"
+   }
+  ]
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857
+ },
+ "authoringApp": "Map builder",
+ "authoringAppVersion": "1.1",
+ "version": "2.31",
+ "initialState": {
+  "viewpoint": {
+   "targetGeometry": {
+    "xmin": -13914936.3,
+    "ymin": 2753408.1,
+    "xmax": -7347086.4,
+    "ymax": 6446275.8,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  }
+ },
+ "bookmarks": [
+  {
+   "name": "The United States",
+   "extent": {
+    "xmin": -13914936.3,
+    "ymin": 2753408.1,
+    "xmax": -7347086.4,
+    "ymax": 6446275.8,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  },
+  {
+   "name": "The Southeast",
+   "extent": {
+    "xmin": -10352712.6,
+    "ymin": 3375646.0,
+    "xmax": -8905559.3,
+    "ymax": 4509031.4,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  },
+  {
+   "name": "The Old Northwest",
+   "extent": {
+    "xmin": -10352712.6,
+    "ymin": 4369640.5,
+    "xmax": -8905559.3,
+    "ymax": 6190443.8,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  },
+  {
+   "name": "The Plains and the West",
+   "extent": {
+    "xmin": -13914936.3,
+    "ymin": 3632749.1,
+    "xmax": -10352712.6,
+    "ymax": 6274861.4,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  }
+ ]
+}

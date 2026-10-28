@@ -1,32 +1,87 @@
 {
   "format": "Map spec 1.0",
   "id": "land-cessions-1784-1894",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "notes": "Age of Jackson slice, map 1 (maps/plan/age-of-jackson.md). Map first: no lesson yet. Data is the v1.1 copy made by Data copy 1.1.1 from maps/data/land-cessions-royce.json.",
   "dataSpec": "maps/data/land-cessions-royce.json",
   "item": {
     "title": "Land cessions to the United States, 1784 to 1894",
     "snippet": "Where and when the United States gained land from American Indian nations by treaty, statute and executive order, as Charles Royce mapped it.",
-    "description": "<p><b>Question:</b> Where and when did the United States gain land from American Indian nations through treaties, statutes and executive orders?</p><p><b>What the map shows:</b> Each shaded area is a cession from Charles Royce's <i>Indian Land Cessions in the United States</i> (1896-1897), digitized by the US Forest Service. There is one layer for each period: cessions with a date before 1830, in the 1830s (the years of the Indian Removal Act and the removal of the Southeastern nations) and from 1840 to 1894. Click an area for the nation named in the record, the date or dates, today's states, the nations that exist today and a link to the treaty text, statute or order.</p><p><b>Notes:</b> A cession with dates in two periods is in both layers; its pop-up lists every date. Royce compiled the maps in the 1890s from United States records, so they show how the federal government recorded each transaction. Many cessions were disputed or made under pressure. The boundaries are approximate, and the Forest Service says seven cession numbers have no area on the maps. The data are for information only, not for deciding title or boundaries.</p><p><b>Sources:</b> USDA Forest Service, Office of Tribal Relations, <i>Indian Land Cessions in the United States</i>, from maps by Charles C. Royce (Bureau of American Ethnology, 1896-1897); Esri basemap.</p><p><i>Version 0.1 (28 October 2026), draft.</i></p>",
-    "tags": ["MapMaker", "US History", "grade 8", "Age of Jackson", "Indian land cessions", "web map"],
+    "description": "<p><b>Question:</b> Where and when did the United States gain land from American Indian nations through treaties, statutes and executive orders?</p><p><b>What the map shows:</b> Each shaded area is a cession from Charles Royce's <i>Indian Land Cessions in the United States</i> (1896-1897), digitized by the US Forest Service. There is one layer for each period: cessions with a date before 1830, in the 1830s (the years of the Indian Removal Act and the removal of the Southeastern nations) and from 1840 to 1894. Click an area for the nation named in the record, the date or dates, today's states, the nations that exist today and a link to the treaty text, statute or order.</p><p><b>Notes:</b> A cession with dates in two periods is in both layers; its pop-up lists every date. Royce compiled the maps in the 1890s from United States records, so they show how the federal government recorded each transaction. Many cessions were disputed or made under pressure. The boundaries are approximate, and the Forest Service says seven cession numbers have no area on the maps. The data are for information only, not for deciding title or boundaries.</p><p><b>Sources:</b> USDA Forest Service, Office of Tribal Relations, <i>Indian Land Cessions in the United States</i>, from maps by Charles C. Royce (Bureau of American Ethnology, 1896-1897); Esri basemap.</p><p><i>Version 0.2 (28 October 2026), draft.</i></p>",
+    "tags": [
+      "MapMaker",
+      "US History",
+      "grade 8",
+      "Age of Jackson",
+      "Indian land cessions",
+      "web map"
+    ],
     "credits": "USDA Forest Service, Office of Tribal Relations, from maps by Charles C. Royce (Bureau of American Ethnology, 1896-1897); Esri.",
     "license": "Land cession data: a work of the US federal government (USDA Forest Service); the Forest Service metadata lists no use constraints, and the data.gov record for its tribal ceded lands data states Creative Commons Attribution (CC BY 4.0). Credit the USDA Forest Service when you reuse it. For information only; not legal documents. Facts and text written for this map are original."
   },
   "basemap": {
     "title": "Modern Antique",
     "layers": [
-      {"type": "tile", "title": "World Hillshade", "itemId": "1b243539f4514b6ba35e7d995890db1d",
-       "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer"},
-      {"type": "vectorTile", "title": "Modern Antique (no Labels)", "itemId": "545f2e839f624600bbb092c3ad998bb8", "blendMode": "multiply",
-       "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json"}
+      {
+        "type": "tile",
+        "title": "World Hillshade",
+        "itemId": "1b243539f4514b6ba35e7d995890db1d",
+        "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer"
+      },
+      {
+        "type": "vectorTile",
+        "title": "Modern Antique (no Labels)",
+        "itemId": "545f2e839f624600bbb092c3ad998bb8",
+        "blendMode": "multiply",
+        "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json"
+      }
     ]
   },
-  "view": {"extent": [-125.0, 24.0, -66.0, 50.0]},
+  "view": {
+    "extent": [
+      -125.0,
+      24.0,
+      -66.0,
+      50.0
+    ]
+  },
   "bookmarks": [
-    {"name": "The United States", "extent": [-125.0, 24.0, -66.0, 50.0]},
-    {"name": "The Southeast", "extent": [-93.0, 29.0, -80.0, 37.5]},
-    {"name": "The Old Northwest", "extent": [-93.0, 36.5, -80.0, 48.5]},
-    {"name": "The Plains and the West", "extent": [-125.0, 31.0, -93.0, 49.0]}
+    {
+      "name": "The United States",
+      "extent": [
+        -125.0,
+        24.0,
+        -66.0,
+        50.0
+      ]
+    },
+    {
+      "name": "The Southeast",
+      "extent": [
+        -93.0,
+        29.0,
+        -80.0,
+        37.5
+      ]
+    },
+    {
+      "name": "The Old Northwest",
+      "extent": [
+        -93.0,
+        36.5,
+        -80.0,
+        48.5
+      ]
+    },
+    {
+      "name": "The Plains and the West",
+      "extent": [
+        -125.0,
+        31.0,
+        -93.0,
+        49.0
+      ]
+    }
   ],
   "layers": [
     {
@@ -37,14 +92,32 @@
       },
       "visible": true,
       "filter": "Dated1830s = 1",
-      "symbol": {"type": "fill", "color": "#D55E00B3", "outline": {"color": "#7A3500", "width": 0.8}, "legendLabel": "Dated 1830 to 1839"},
+      "symbol": {
+        "type": "fill",
+        "color": "#D55E00B3",
+        "outline": {
+          "color": "#7A3500",
+          "width": 0.8
+        }
+      },
       "popup": {
         "title": "{Tribe}",
-        "html": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p>{expression/links}</p><p><i>Royce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>",
+        "html": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>",
         "expressions": {
-          "present": {"title": "Nations today", "arcade": "var p = $feature.PresentTribe;\nreturn IIf(IsEmpty(p), 'Not listed in the Forest Service data.', p);"},
-          "links": {"title": "Links", "arcade": "var a = '';\nif (!IsEmpty($feature.SourceURL)) { a += \"<a href='\" + $feature.SourceURL + \"' target='_blank' rel='nofollow ugc noopener noreferrer'>\" + $feature.SourceLabel + \"</a>\"; }\nif (!IsEmpty($feature.ScheduleURL)) { a += IIf(a == '', '', ' | ') + \"<a href='\" + $feature.ScheduleURL + \"' target='_blank' rel='nofollow ugc noopener noreferrer'>Royce's schedule</a>\"; }\nreturn a;"}
+          "present": {
+            "title": "Nations today",
+            "arcade": "var p = $feature.PresentTribe;\nreturn IIf(IsEmpty(p), 'Not listed in the Forest Service data.', p);"
+          },
+          "schedule": {
+            "title": "Royce's schedule link text",
+            "arcade": "return IIf(IsEmpty($feature.ScheduleURL), '', \"Royce's schedule\");"
+          }
         }
+      },
+      "visibleRange": {
+        "minScale": 0,
+        "maxScale": 0,
+        "why": "The hosted layer was published with a range of 1:29,513,518 to 1:9,722, which hides it at the whole-country view; 0 lifts both limits."
       }
     },
     {
@@ -55,14 +128,32 @@
       },
       "visible": true,
       "filter": "Dated1840to1894 = 1",
-      "symbol": {"type": "fill", "color": "#009E73A6", "outline": {"color": "#005A42", "width": 0.8}, "legendLabel": "Dated 1840 to 1894"},
+      "symbol": {
+        "type": "fill",
+        "color": "#009E73A6",
+        "outline": {
+          "color": "#005A42",
+          "width": 0.8
+        }
+      },
       "popup": {
         "title": "{Tribe}",
-        "html": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p>{expression/links}</p><p><i>Royce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>",
+        "html": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>",
         "expressions": {
-          "present": {"title": "Nations today", "arcade": "var p = $feature.PresentTribe;\nreturn IIf(IsEmpty(p), 'Not listed in the Forest Service data.', p);"},
-          "links": {"title": "Links", "arcade": "var a = '';\nif (!IsEmpty($feature.SourceURL)) { a += \"<a href='\" + $feature.SourceURL + \"' target='_blank' rel='nofollow ugc noopener noreferrer'>\" + $feature.SourceLabel + \"</a>\"; }\nif (!IsEmpty($feature.ScheduleURL)) { a += IIf(a == '', '', ' | ') + \"<a href='\" + $feature.ScheduleURL + \"' target='_blank' rel='nofollow ugc noopener noreferrer'>Royce's schedule</a>\"; }\nreturn a;"}
+          "present": {
+            "title": "Nations today",
+            "arcade": "var p = $feature.PresentTribe;\nreturn IIf(IsEmpty(p), 'Not listed in the Forest Service data.', p);"
+          },
+          "schedule": {
+            "title": "Royce's schedule link text",
+            "arcade": "return IIf(IsEmpty($feature.ScheduleURL), '', \"Royce's schedule\");"
+          }
         }
+      },
+      "visibleRange": {
+        "minScale": 0,
+        "maxScale": 0,
+        "why": "The hosted layer was published with a range of 1:29,513,518 to 1:9,722, which hides it at the whole-country view; 0 lifts both limits."
       }
     },
     {
@@ -73,27 +164,91 @@
       },
       "visible": true,
       "filter": "DatedBefore1830 = 1",
-      "symbol": {"type": "fill", "color": "#56B4E9A6", "outline": {"color": "#1F6A99", "width": 0.8}, "legendLabel": "Dated before 1830"},
+      "symbol": {
+        "type": "fill",
+        "color": "#56B4E9A6",
+        "outline": {
+          "color": "#1F6A99",
+          "width": 0.8
+        }
+      },
       "popup": {
         "title": "{Tribe}",
-        "html": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p>{expression/links}</p><p><i>Royce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>",
+        "html": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>",
         "expressions": {
-          "present": {"title": "Nations today", "arcade": "var p = $feature.PresentTribe;\nreturn IIf(IsEmpty(p), 'Not listed in the Forest Service data.', p);"},
-          "links": {"title": "Links", "arcade": "var a = '';\nif (!IsEmpty($feature.SourceURL)) { a += \"<a href='\" + $feature.SourceURL + \"' target='_blank' rel='nofollow ugc noopener noreferrer'>\" + $feature.SourceLabel + \"</a>\"; }\nif (!IsEmpty($feature.ScheduleURL)) { a += IIf(a == '', '', ' | ') + \"<a href='\" + $feature.ScheduleURL + \"' target='_blank' rel='nofollow ugc noopener noreferrer'>Royce's schedule</a>\"; }\nreturn a;"}
+          "present": {
+            "title": "Nations today",
+            "arcade": "var p = $feature.PresentTribe;\nreturn IIf(IsEmpty(p), 'Not listed in the Forest Service data.', p);"
+          },
+          "schedule": {
+            "title": "Royce's schedule link text",
+            "arcade": "return IIf(IsEmpty($feature.ScheduleURL), '', \"Royce's schedule\");"
+          }
         }
+      },
+      "visibleRange": {
+        "minScale": 0,
+        "maxScale": 0,
+        "why": "The hosted layer was published with a range of 1:29,513,518 to 1:9,722, which hides it at the whole-country view; 0 lifts both limits."
       }
     }
   ],
   "checks": [
-    {"name": "legend-three-periods", "question": "Where and when did the United States gain land?",
-     "do": {"bookmark": "The United States", "legend": true},
-     "expect": {"legendHas": ["Dated 1830 to 1839", "Dated 1840 to 1894", "Dated before 1830"]}},
-    {"name": "cherokee-1835", "question": "The Southeast in the 1830s",
-     "do": {"open": {"layer": "Cessions dated 1830 to 1839", "where": "Tribe='Cherokee' AND DatesISO LIKE '%1835-12-29%'"}},
-     "expect": {"popupHas": ["Cherokee", "December 29, 1835", "Treaty text"]}},
-    {"name": "choctaw-1830", "question": "The Southeast in the 1830s",
-     "do": {"open": {"layer": "Cessions dated 1830 to 1839", "where": "Tribe LIKE 'Choctaw%' AND DatesISO LIKE '%1830-09-27%'"}},
-     "expect": {"popupHas": ["Choctaw", "September 27, 1830"]}}
+    {
+      "name": "legend-three-periods",
+      "question": "Where and when did the United States gain land?",
+      "do": {
+        "bookmark": "The United States",
+        "legend": true
+      },
+      "expect": {
+        "legendHas": [
+          "Cessions dated 1830 to 1839",
+          "Cessions dated 1840 to 1894",
+          "Cessions dated before 1830"
+        ]
+      }
+    },
+    {
+      "name": "cherokee-1835",
+      "question": "The Southeast in the 1830s",
+      "do": {
+        "open": {
+          "layer": "Cessions dated 1830 to 1839",
+          "where": "Tribe='Cherokee' AND DatesISO LIKE '%1835-12-29%' AND State LIKE '%GA%'"
+        }
+      },
+      "expect": {
+        "popupHas": [
+          "Cherokee",
+          "December 29, 1835",
+          "AL; GA; NC; TN",
+          "Treaty text",
+          "Royce's schedule"
+        ]
+      }
+    },
+    {
+      "name": "choctaw-1830",
+      "question": "The Southeast in the 1830s",
+      "do": {
+        "open": {
+          "layer": "Cessions dated 1830 to 1839",
+          "where": "Tribe LIKE 'Choctaw%' AND DatesISO LIKE '%1830-09-27%'"
+        }
+      },
+      "expect": {
+        "popupHas": [
+          "Choctaw",
+          "September 27, 1830"
+        ]
+      }
+    }
   ],
-  "publish": {"org": "HNLEA4GfnbCFQZGa", "orgLabel": "GIS for Schools", "folder": "Map builds"}
+  "publish": {
+    "org": "HNLEA4GfnbCFQZGa",
+    "orgLabel": "GIS for Schools",
+    "folder": "Map builds",
+    "thumbnail": "resources/assets/screenshots/land-cessions-1784-1894.jpg"
+  }
 }

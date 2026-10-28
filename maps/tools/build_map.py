@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Map builder 1.0: turns a map spec (maps/specs/<id>.json, Map spec 1.0) into the web map ArcGIS Online stores.
+"""Map builder 1.1: turns a map spec (maps/specs/<id>.json, Map spec 1.0) into the web map ArcGIS Online stores.
 
 Reads only public ArcGIS Online content; signs in to nothing. For each spec it:
   - checks the spec against its lesson (layer names, which layers start off, bookmarks),
@@ -14,7 +14,7 @@ Exit code 1 if any spec has errors (nothing is written for that spec).
 import copy, datetime, hashlib, json, math, re, sys, urllib.parse, urllib.request
 from pathlib import Path
 
-VERSION = "1.0"
+VERSION = "1.1"
 SPEC_FORMAT = "Map spec 1.0"
 PORTAL = "https://www.arcgis.com/sharing/rest"
 ROOT = Path(__file__).resolve().parents[2]
@@ -199,8 +199,9 @@ def build(spec_path):
             ld["drawingInfo"]["labelingInfo"] = labels(lyr["labels"]); layer["showLabels"] = True
         if lyr.get("filter"): ld["definitionExpression"] = lyr["filter"]
         vr = lyr.get("visibleRange") or {}
-        if vr.get("minScale"): ld["minScale"] = vr["minScale"]
-        if vr.get("maxScale"): ld["maxScale"] = vr["maxScale"]
+        # A key that is present is written even when it is 0, so a spec can lift a scale limit set on the service itself.
+        if "minScale" in vr: ld["minScale"] = vr["minScale"]
+        if "maxScale" in vr: ld["maxScale"] = vr["maxScale"]
         layer["layerDefinition"] = ld
         if lyr.get("popupOff"): layer["disablePopup"] = True
         else: layer["popupInfo"] = popup(lyr["popup"])
