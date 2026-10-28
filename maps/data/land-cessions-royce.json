@@ -1,7 +1,7 @@
 {
   "format": "Data copy 1.0",
   "id": "land-cessions-royce",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "source": {
     "url": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_TribalCessionLands_01/MapServer/0"
   },
@@ -36,25 +36,6 @@
   ],
   "links": [
     {
-      "name": "TreatyURL",
-      "firstOf": [
-        "BdyPol_TribalCededLandsTable.date1link_kappler_treaty",
-        "BdyPol_TribalCededLandsTable.link_other_treaty"
-      ]
-    },
-    {
-      "name": "StatuteURL",
-      "firstOf": [
-        "BdyPol_TribalCededLandsTable.link_federal_statute"
-      ]
-    },
-    {
-      "name": "OrderURL",
-      "firstOf": [
-        "BdyPol_TribalCededLandsTable.link_executive_order"
-      ]
-    },
-    {
       "name": "ScheduleURL",
       "firstOf": [
         "BdyPol_TribalCededLandsTable.date1link_royce_schedule"
@@ -73,23 +54,6 @@
     "isoField": "DatesISO",
     "firstYear": "FirstYear",
     "lastYear": "LastYear"
-  },
-  "era": {
-    "field": "Era",
-    "bands": [
-      {
-        "name": "Before 1830",
-        "max": 1829
-      },
-      {
-        "name": "1830 to 1839",
-        "max": 1839
-      },
-      {
-        "name": "1840 to 1894",
-        "max": 9999
-      }
-    ]
   },
   "checks": [
     {
@@ -118,9 +82,9 @@
     }
   ],
   "item": {
-    "title": "Indian land cessions, 1784-1894 (copy for MapMaker lessons)",
+    "title": "Indian land cessions, 1784-1894 (copy for MapMaker lessons) v1.1",
     "snippet": "Land the United States acquired from American Indian nations by treaty, statute or order, 1784-1894, as mapped by Charles Royce and digitized by the US Forest Service.",
-    "description": "<p>A copy of the US Forest Service layer <em>Indian Land Cessions in the United States</em>, made for MapMaker US History lessons so a published map does not depend on the Forest Service's server. Each polygon is one area of a cession in Charles C. Royce's <em>Indian Land Cessions in the United States</em> (Bureau of American Ethnology, 18th Annual Report, 1896-1897). The Forest Service Office of Tribal Relations scanned, georeferenced and digitized Royce's 67 maps and joined his Schedule of Indian Land Cessions, so each polygon carries the tribe, the treaty, statute or order dates, and links to the treaty text.</p><p>Added in this copy: <em>FirstYear</em> and <em>LastYear</em> (from the schedule dates), <em>Era</em> (Before 1830, 1830 to 1839, 1840 to 1894, from the first date), a readable <em>Dates</em> list, and four link fields. Coordinates are rounded to five decimal places. Fields not needed for the lessons were left out.</p><p><strong>Read with care.</strong> Royce compiled his maps in the 1890s from the federal government's records, so they show the United States' view of each transaction. Many cessions were disputed or made under pressure. The boundaries are coarse (the Forest Service georeferenced against 1:2,000,000 base data), the Forest Service's own metadata says seven cession numbers have no spatial representation, and the data are for informational purposes only, not for deciding title, boundaries or jurisdiction.</p>",
+    "description": "<p>A copy of the US Forest Service layer <em>Indian Land Cessions in the United States</em>, made for MapMaker US History lessons so a published map does not depend on the Forest Service's server. Each polygon is one area of a cession in Charles C. Royce's <em>Indian Land Cessions in the United States</em> (Bureau of American Ethnology, 18th Annual Report, 1896-1897). The Forest Service Office of Tribal Relations scanned, georeferenced and digitized Royce's 67 maps and joined his Schedule of Indian Land Cessions, so each polygon carries the tribe, the treaty, statute or order dates, and links to the treaty text.</p><p>Added in this copy: <em>FirstYear</em> and <em>LastYear</em> (from the schedule dates), <em>DatedBefore1830</em>, <em>Dated1830s</em> and <em>Dated1840to1894</em> (1 if any of the polygon's schedule dates falls in that period, so a cession with dates in two periods is in both), <em>SourceURL</em> and <em>SourceLabel</em> (the treaty text, statute or executive order, whichever the Forest Service links), a readable <em>Dates</em> list, and a link to Royce's schedule. Coordinates are rounded to five decimal places. Fields not needed for the lessons were left out.</p><p><strong>Read with care.</strong> Royce compiled his maps in the 1890s from the federal government's records, so they show the United States' view of each transaction. Many cessions were disputed or made under pressure. The boundaries are coarse (the Forest Service georeferenced against 1:2,000,000 base data), the Forest Service's own metadata says seven cession numbers have no spatial representation, and the data are for informational purposes only, not for deciding title, boundaries or jurisdiction.</p>",
     "tags": [
       "US History",
       "Indian land cessions",
@@ -138,5 +102,47 @@
     "orgLabel": "GIS for Schools",
     "folder": "Map data"
   },
-  "dropIfEmpty": "CessNum"
+  "dropIfEmpty": "CessNum",
+  "primarySource": {
+    "urlField": "SourceURL",
+    "labelField": "SourceLabel",
+    "order": [
+      {
+        "from": [
+          "BdyPol_TribalCededLandsTable.date1link_kappler_treaty",
+          "BdyPol_TribalCededLandsTable.link_other_treaty"
+        ],
+        "label": "Treaty text"
+      },
+      {
+        "from": [
+          "BdyPol_TribalCededLandsTable.link_federal_statute"
+        ],
+        "label": "Federal statute"
+      },
+      {
+        "from": [
+          "BdyPol_TribalCededLandsTable.link_executive_order"
+        ],
+        "label": "Executive order"
+      }
+    ]
+  },
+  "eras": [
+    {
+      "field": "DatedBefore1830",
+      "from": 0,
+      "to": 1829
+    },
+    {
+      "field": "Dated1830s",
+      "from": 1830,
+      "to": 1839
+    },
+    {
+      "field": "Dated1840to1894",
+      "from": 1840,
+      "to": 9999
+    }
+  ]
 }

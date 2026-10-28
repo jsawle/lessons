@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Data copy 1.0: copies a public source layer into your ArcGIS Online organization as a hosted feature layer.
+"""Data copy 1.1: copies a public source layer into your ArcGIS Online organization as a hosted feature layer.
 
 Why: a published map should not depend on a service we do not control (it can move or change fields), and Map test
 runs where the agency's server may be out of reach. The copy keeps the source credited, keeps only the fields the map
@@ -20,7 +20,7 @@ import argparse, datetime, json, re, sys, urllib.parse, urllib.request
 from collections import Counter
 from pathlib import Path
 
-VERSION = "1.0"
+VERSION = "1.1"
 ROOT = Path(__file__).resolve().parents[2]
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 EPOCH = datetime.datetime(1970, 1, 1, tzinfo=datetime.timezone.utc)
@@ -66,7 +66,7 @@ def round_coords(c, nd=5):
 def transform(feats, spec):
     find = resolver(set().union(*[f["properties"].keys() for f in feats[:50]]))
     stats = Counter(); out = []
-    dcfg, ecfg = spec["dates"], spec.get("era")
+    dcfg = spec["dates"]
     dsrc = [find(n) for n in dcfg["from"]]
     for f in feats:
         p, props = f["properties"], {}
@@ -94,9 +94,14 @@ def transform(feats, spec):
         props[dcfg["isoField"]] = "; ".join(d.strftime("%Y-%m-%d") for d in ds) or None
         props[dcfg["firstYear"]] = ds[0].year if ds else None
         props[dcfg["lastYear"]] = ds[-1].year if ds else None
-        if ecfg:
-            y = props[dcfg["firstYear"]]
-            props[ecfg["field"]] = next((b["name"] for b in ecfg["bands"] if y is not None and y <= b["max"]), "No date")
+        for e in spec.get("eras", []):
+            props[e["field"]] = 1 if any(e["from"] <= d.year <= e["to"] for d in ds) else 0
+        ps = spec.get("primarySource")
+        if ps:
+            props[ps["urlField"]], props[ps["labelField"]] = None, None
+            for step in ps["order"]:
+                u = next((p.get(k) for k in (find(x, True) for x in step["from"]) if k and p.get(k)), None)
+                if u: props[ps["urlField"]], props[ps["labelField"]] = u, step["label"]; break
         g = f.get("geometry")
         if not g: stats["no geometry (dropped)"] += 1; continue
         if spec.get("dropIfEmpty") and props.get(spec["dropIfEmpty"]) is None: stats[f"no {spec['dropIfEmpty']} (dropped)"] += 1; continue
@@ -126,19 +131,21 @@ def main():
     out_dir = ROOT / "maps" / "data" / "build" / spec["id"]; out_dir.mkdir(parents=True, exist_ok=True)
     gj = out_dir / (spec["id"] + ".geojson")
     gj.write_text(json.dumps({"type": "FeatureCollection", "features": feats}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    ecfg = spec.get("era"); d = spec["dates"]
+    d = spec["dates"]
     summary = {"features": len(feats), "bytes": gj.stat().st_size,
                "firstYear": [min(f["properties"][d["firstYear"]] for f in feats if f["properties"][d["firstYear"]]),
                              max(f["properties"][d["firstYear"]] for f in feats if f["properties"][d["firstYear"]])],
                "noDate": sum(1 for f in feats if f["properties"][d["firstYear"]] is None),
-               "era": dict(Counter(f["properties"][ecfg["field"]] for f in feats)) if ecfg else None,
+               "eras": {e["field"]: sum(f["properties"][e["field"]] for f in feats) for e in spec.get("eras", [])},
+               "primarySource": dict(Counter(f["properties"].get(spec["primarySource"]["labelField"]) for f in feats)) if spec.get("primarySource") else None,
                "distinctCessions": len({f["properties"].get("CessNum") for f in feats}),
                "emptyByField": {fd["name"]: sum(1 for f in feats if f["properties"][fd["name"]] is None) for fd in spec["fields"]},
                "notes": dict(stats), "sample": [f["properties"] for f in feats[:3]]}
     (out_dir / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"  kept {len(feats)} features, {gj.stat().st_size/1e6:.1f} MB GeoJSON, {summary['distinctCessions']} distinct cessions")
     print(f"  first year of each cession: {summary['firstYear'][0]} to {summary['firstYear'][1]}; {summary['noDate']} without a date")
-    if ecfg: print("  eras:", summary["era"])
+    if summary["eras"]: print("  polygons with a date in each era (a polygon can be in more than one):", summary["eras"])
+    if summary["primarySource"]: print("  source link:", summary["primarySource"])
     print("  empty values per field:", {k: v for k, v in summary["emptyByField"].items() if v})
     for k, v in stats.items(): print(f"  note: {k} x{v}")
     print("  sample:", json.dumps(summary["sample"][0], ensure_ascii=False)[:600])
@@ -154,9 +161,9 @@ def main():
     gis = GIS(profile=args.profile); me = gis.users.me; org = gis.properties.get("id"); pub = spec["publish"]
     print(f"  signed in as {me.username} ({getattr(me, 'role', '')}) in {gis.properties.get('name')} ({org})")
     if org != pub["org"]: sys.exit(f"  REFUSED: the spec is for {pub.get('orgLabel', '')} ({pub['org']}); you are signed in to {org}. Nothing changed.")
-    kw = f"data:{spec['id']}"
+    kw = f"data:{spec['id']}@{spec['version']}"
     hits = [h for h in gis.content.search(query=f'owner:"{me.username}" AND typekeywords:"{kw}"', max_items=20) if kw in (h.typeKeywords or [])]
-    if hits: sys.exit("  REFUSED: a copy already exists: " + ", ".join(f"{h.id} ({h.type})" for h in hits) + ". Nothing changed.")
+    if hits: sys.exit("  REFUSED: a copy of this version already exists: " + ", ".join(f"{h.id} ({h.type})" for h in hits) + ". Nothing changed.")
 
     it = spec["item"]
     folders = gis.content.folders
