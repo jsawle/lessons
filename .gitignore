@@ -4,3 +4,4 @@ __pycache__/
 node_modules/
 sheets-out/
 vera-out/
+maps/data/build/
