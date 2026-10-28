@@ -1,0 +1,66 @@
+# Age of Jackson: three-map slice (draft 0.1, 28 Oct 2026)
+
+Purpose: run three new maps through the whole process (map first, then the inquiry lesson written from the built map, then the link back to the standards) to find out what the process still lacks before building a full year. Nothing here is built or published. Every map follows the usual route: spec, build, test, dry run, your OK, you run `--go`, never shared by the tool.
+
+Unit: The Age of Jackson (grade 8 US History). Standards confirmed so far: TX 8.5(G) (election of Jackson, expanded suffrage) and TX 8.5(H) (Cherokee removal: Indian Removal Act, Worcester v. Georgia, Trail of Tears). Florida and C3 codes for this unit are not yet confirmed and are not listed.
+
+Open decision: whether maps point at the agencies' own services or at copies in the GIS for Schools organization. Recommendation: copies (a service we do not control can move or change fields under a published map), with the source and licence credited in the layer and the item.
+
+## Map 1. Land cessions, 1784–1894
+
+Question for students: When did the United States gain the most land through treaties and cessions, and where?
+
+| | |
+|---|---|
+| Standards | TX 8.5(H) (context for removal) |
+| Layers (existing) | "Indian Land Cessions in the United States", US Forest Service, MapServer/0 (apps.fs.usda.gov/arcx/rest/services/EDW/EDW_TribalCessionLands_01), 752 polygons from Royce's maps, five date fields, CC BY 4.0 per data.gov |
+| Layers (new, small) | Era filter or three visible-range groups (before 1829, 1829–1837, after 1837) built from the date fields; a states layer for orientation |
+| What students use | Time filter or era groups, pop-ups (Arcade formats the dates so they read the same in every time zone), bookmarks (Southeast, Old Northwest, Plains) |
+| Data caveats | Boundaries are coarse; there is no acreage field, so students compare where and when, not how many acres; Royce compiled the maps in the 1890s from the federal government's viewpoint |
+| To fact-check | The date fields against the treaty record for the Southeast cessions; wording of any statement that a cession was "by treaty" (several were disputed or signed under pressure) |
+| Sensitive framing | Say who recorded the data and from whose viewpoint; use "cession" as the dataset's term and note that it hides disagreement |
+
+## Map 2. Cherokee removal, 1828–1839
+
+Question for students: Why were the Cherokee removed from the Southeast, and how did the law, the land and the route fit together?
+
+| | |
+|---|---|
+| Standards | TX 8.5(H) |
+| Layers (existing) | The Cherokee cession polygons from Map 1 (filtered); National Park Service Trail of Tears National Historic Trail (TRTE_NHT FeatureServer, designated alignment); "Landmark Supreme Court cases" in our own organization, which already holds Cherokee Nation v. Georgia (1831) and Worcester v. Georgia (1832) |
+| Layers (new, small) | Key places (for example New Echota, Red Clay, the start and end points of the removal): no source layer found, so this would be a small hand-built point layer with each place and coordinate sourced from the National Park Service or the Cherokee Nation |
+| What students use | Layer toggles, pop-ups (case rulings, place notes), bookmarks (Georgia and Tennessee; the route to Indian Territory) |
+| Data caveats | The trail layer is the designated alignment, an approximation; the detachments took several routes and did not all follow it |
+| To fact-check | Indian Removal Act date and vote; Treaty of New Echota (1835): who signed and the objections to it; dates and place names for the key-places layer; the loss-of-life figure, if the lesson uses one (give the source and the range) |
+| Sensitive framing | Cherokee voices and sources stay central; the lesson does not treat removal as inevitable |
+
+## Map 3. The election of 1828 and the right to vote
+
+Question for students: What changed between the elections of 1800 and 1828, and did "more voters" mean "more voters everywhere"?
+
+| | |
+|---|---|
+| Standards | TX 8.5(G) |
+| Layers (existing pattern) | Our "Election of 1796 / 1800" layer (MM_US_Electoral_Votes_1796_1800, 16 states, same fields and notes) |
+| Layers (new) | An 1828 version of that layer with all 24 states (adds AL, IL, IN, LA, MS, MO, OH and Maine as its own state). Electoral votes by state: Jackson 178, Adams 83; National Archives, archives.gov/electoral-college/1828, matches Wikipedia's table. Split states (Maine 1/8, Maryland 5/6, New York 20/16) shown as split pies as in the pilot |
+| Layers (new, needs research) | How electors were chosen in 1828 (popular vote in 22 states; legislature in Delaware and South Carolina) and which states still had property or taxpaying requirements for white men. The tables found (Keyssar, reproduced by the University of Wisconsin) give 1820 and 1830, not 1828, and list their own counts inconsistently (8 states with a requirement in 1830, 7 in the list). This layer must come from state constitutions and primary sources, not from those tables alone |
+| What students use | Pies and legend (as in the pilot), a comparison against the 1800 map, pop-ups with the state's rule on electors and voting |
+| Data caveats | Modern state outlines, with Maine shown as its own state and West Virginia still part of Virginia; popular-vote totals by state are a later addition (a possible source is the Tufts "A New Nation Votes" collection, not yet checked); the right to vote excluded women, most free Black men in many states, and enslaved people, and the map has to show that, not only "expanded suffrage" |
+| To fact-check | Every state's elector method and voting rule in 1828; the claim "expanded suffrage" against what each state's law actually allowed; Maryland's and New York's district counts |
+| Sensitive framing | "Expanded suffrage" applied to white men; the map should let students see who was still left out |
+
+## Process gaps this slice is meant to expose
+
+1. Map first: choose the map, check the data and licence, then write the spec. No lesson text exists until the map has been built and has passed Map test.
+2. The lesson is then written from the map (what students can see and do), with its standards linked back into the lesson file and the spec's `lesson` field, and Map test re-run.
+3. A fact-check step sits between the lesson draft and the final test. It is not drawn in the workflow graphic yet, and it has no tool; for now it is a checklist per map (the "To fact-check" rows above).
+4. Persona review is still not wired to Map test output.
+5. The map list (unit, candidate standards, data status, build status) does not exist yet beyond this file.
+
+## Status
+
+| Map | Data check | Spec | Build | Test | Lesson | Published |
+|---|---|---|---|---|---|---|
+| 1. Land cessions | done | – | – | – | – | – |
+| 2. Cherokee removal | done (key places layer open) | – | – | – | – | – |
+| 3. Election of 1828 and suffrage | electoral votes done; suffrage layer open | – | – | – | – | – |
