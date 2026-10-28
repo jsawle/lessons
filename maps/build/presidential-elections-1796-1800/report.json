@@ -1,0 +1,60 @@
+{
+ "tool": "Map builder 1.0",
+ "spec": "maps/specs/presidential-elections-1796-1800.json",
+ "specId": "presidential-elections-1796-1800",
+ "specVersion": "1.0.0",
+ "built": "2026-10-28T09:23:29Z",
+ "webmapFingerprint": "2d887313b249d5155fb0b4594c2d704d6d246cff",
+ "itemFingerprint": "fbf538ada29a1531035167a6c5d25df63bbb699c",
+ "checked": [
+  "layers, start visibility and bookmarks match the lesson",
+  "basemap is public and not CARTO",
+  "every source layer is readable and every field the spec uses exists"
+ ],
+ "warnings": [],
+ "tested": {
+  "tool": "Map test 1.0",
+  "when": "2026-10-28T09:27:25Z",
+  "timeZone": "America/Chicago",
+  "webmapFingerprint": "2d887313b249d5155fb0b4594c2d704d6d246cff",
+  "pass": true,
+  "checks": [
+   {
+    "name": "q1-legend",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "q1-pennsylvania",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "q2-pennsylvania",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "q3-new-york",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "q4-squares-appear",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "q4-marbury",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "q4-mcculloch",
+    "pass": true,
+    "failures": []
+   }
+  ],
+  "checker": "test/checker.json"
+ }
+}

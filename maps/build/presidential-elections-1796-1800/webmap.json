@@ -1,0 +1,408 @@
+{
+ "operationalLayers": [
+  {
+   "id": "lyrcb3a7e53dc3",
+   "title": "Election of 1796: electors' votes",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Electoral_Votes_1796_1800/FeatureServer/0",
+   "itemId": "d125b07d377c4282af37bf3296788b91",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": true,
+   "opacity": 1,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "pieChart",
+      "attributes": [
+       {
+        "field": "Adams1796",
+        "label": "John Adams (Federalist)",
+        "color": [
+         230,
+         159,
+         0,
+         255
+        ]
+       },
+       {
+        "field": "Jefferson1796",
+        "label": "Thomas Jefferson (Democratic-Republican)",
+        "color": [
+         0,
+         114,
+         178,
+         255
+        ]
+       }
+      ],
+      "defaultColor": [
+       170,
+       170,
+       170,
+       255
+      ],
+      "defaultLabel": "Other",
+      "holePercentage": 0,
+      "othersCategory": {
+       "color": [
+        170,
+        170,
+        170,
+        255
+       ],
+       "label": "Other",
+       "threshold": 0
+      },
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSSolid",
+       "color": [
+        255,
+        255,
+        255,
+        255
+       ],
+       "width": 1
+      },
+      "size": 18,
+      "visualVariables": [
+       {
+        "type": "sizeInfo",
+        "field": "Electors",
+        "minDataValue": 3,
+        "maxDataValue": 21,
+        "minSize": 18,
+        "maxSize": 44,
+        "legendOptions": {
+         "title": "Electors"
+        }
+       }
+      ],
+      "backgroundFillSymbol": {
+       "type": "esriSFS",
+       "style": "esriSFSSolid",
+       "color": [
+        250,
+        248,
+        240,
+        150
+       ],
+       "outline": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         90,
+         90,
+         90,
+         255
+        ],
+        "width": 0.8
+       }
+      }
+     }
+    }
+   },
+   "popupInfo": {
+    "title": "{State} in 1796: {Electors} electors",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p>In the pie: John Adams (Federalist), {expression/adams}; Thomas Jefferson (Democratic-Republican), {expression/jefferson}.</p><p>All electors' votes in 1796: {Votes1796}. Each elector cast two votes for president, so the votes add up to twice the number of electors.</p><p>{Note}</p><p><a href='https://www.archives.gov/electoral-college/1796' target='_blank' rel='nofollow ugc noopener noreferrer'>Source: National Archives</a></p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": [],
+    "expressionInfos": [
+     {
+      "name": "adams",
+      "title": "Adams votes",
+      "returnType": "string",
+      "expression": "var v = $feature.Adams1796;\nreturn v + IIf(v == 1, ' vote', ' votes');"
+     },
+     {
+      "name": "jefferson",
+      "title": "Jefferson votes",
+      "returnType": "string",
+      "expression": "var v = $feature.Jefferson1796;\nreturn v + IIf(v == 1, ' vote', ' votes');"
+     }
+    ]
+   }
+  },
+  {
+   "id": "lyr955fed4e12c",
+   "title": "Election of 1800: electors' votes",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Electoral_Votes_1796_1800/FeatureServer/0",
+   "itemId": "d125b07d377c4282af37bf3296788b91",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": false,
+   "opacity": 1,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "pieChart",
+      "attributes": [
+       {
+        "field": "Adams1800",
+        "label": "John Adams (Federalist)",
+        "color": [
+         230,
+         159,
+         0,
+         255
+        ]
+       },
+       {
+        "field": "Jefferson1800",
+        "label": "Thomas Jefferson (Democratic-Republican)",
+        "color": [
+         0,
+         114,
+         178,
+         255
+        ]
+       }
+      ],
+      "defaultColor": [
+       170,
+       170,
+       170,
+       255
+      ],
+      "defaultLabel": "Other",
+      "holePercentage": 0,
+      "othersCategory": {
+       "color": [
+        170,
+        170,
+        170,
+        255
+       ],
+       "label": "Other",
+       "threshold": 0
+      },
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSSolid",
+       "color": [
+        255,
+        255,
+        255,
+        255
+       ],
+       "width": 1
+      },
+      "size": 18,
+      "visualVariables": [
+       {
+        "type": "sizeInfo",
+        "field": "Electors",
+        "minDataValue": 3,
+        "maxDataValue": 21,
+        "minSize": 18,
+        "maxSize": 44,
+        "legendOptions": {
+         "title": "Electors"
+        }
+       }
+      ],
+      "backgroundFillSymbol": {
+       "type": "esriSFS",
+       "style": "esriSFSSolid",
+       "color": [
+        250,
+        248,
+        240,
+        150
+       ],
+       "outline": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         90,
+         90,
+         90,
+         255
+        ],
+        "width": 0.8
+       }
+      }
+     }
+    }
+   },
+   "popupInfo": {
+    "title": "{State} in 1800: {Electors} electors",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p>In the pie: John Adams (Federalist), {expression/adams}; Thomas Jefferson (Democratic-Republican), {expression/jefferson}.</p><p>All electors' votes in 1800: {Votes1800}. Each elector cast two votes for president, so the votes add up to twice the number of electors.</p><p>Jefferson and Aaron Burr tied with 73 votes each, so the House of Representatives chose the president: Jefferson, on 17 February 1801. The 12th Amendment (1804) then gave electors separate votes for president and vice president.</p><p>{Note}</p><p><a href='https://www.archives.gov/electoral-college/1800' target='_blank' rel='nofollow ugc noopener noreferrer'>Source: National Archives</a></p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": [],
+    "expressionInfos": [
+     {
+      "name": "adams",
+      "title": "Adams votes",
+      "returnType": "string",
+      "expression": "var v = $feature.Adams1800;\nreturn v + IIf(v == 1, ' vote', ' votes');"
+     },
+     {
+      "name": "jefferson",
+      "title": "Jefferson votes",
+      "returnType": "string",
+      "expression": "var v = $feature.Jefferson1800;\nreturn v + IIf(v == 1, ' vote', ' votes');"
+     }
+    ]
+   }
+  },
+  {
+   "id": "lyr374ebddf7d5",
+   "title": "Landmark Supreme Court cases, 1803 and 1819",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/MM_US_Supreme_Court_Cases_1803_1857/FeatureServer/0",
+   "itemId": "8b3b0b6964eb434fa5408fa12efa0c42",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": true,
+   "opacity": 1,
+   "showLabels": true,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "symbol": {
+       "type": "esriSMS",
+       "style": "esriSMSSquare",
+       "color": [
+        204,
+        121,
+        167,
+        255
+       ],
+       "size": 12,
+       "angle": 0,
+       "xoffset": 0,
+       "yoffset": 0,
+       "outline": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         40,
+         40,
+         40,
+         255
+        ],
+        "width": 1
+       }
+      },
+      "label": "Supreme Court case"
+     },
+     "labelingInfo": [
+      {
+       "labelExpressionInfo": {
+        "expression": "$feature.CaseName + ' (' + $feature.CaseYear + ')'"
+       },
+       "labelPlacement": "esriServerPointLabelPlacementAboveCenter",
+       "symbol": {
+        "type": "esriTS",
+        "color": [
+         40,
+         40,
+         40,
+         255
+        ],
+        "font": {
+         "family": "Noto Sans",
+         "size": 10,
+         "weight": "bold"
+        },
+        "horizontalAlignment": "center",
+        "verticalAlignment": "baseline",
+        "haloColor": [
+         255,
+         255,
+         255,
+         255
+        ],
+        "haloSize": 1.5
+       },
+       "minScale": 0,
+       "maxScale": 0,
+       "repeatLabel": false
+      }
+     ]
+    },
+    "definitionExpression": "CaseYear <= 1819",
+    "minScale": 6000000
+   },
+   "popupInfo": {
+    "title": "{CaseName} ({CaseYear})",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p><b>Question:</b> {Question}</p><p><b>Ruling:</b> {Ruling}</p><p><b>Why it matters:</b> {Principle}</p><p><b>Why here:</b> {WhyHere}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source</a></p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": []
+   }
+  }
+ ],
+ "baseMap": {
+  "title": "Modern Antique",
+  "baseMapLayers": [
+   {
+    "id": "basec527aa8b",
+    "title": "World Hillshade",
+    "opacity": 1,
+    "visibility": true,
+    "layerType": "ArcGISTiledMapServiceLayer",
+    "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+    "itemId": "1b243539f4514b6ba35e7d995890db1d"
+   },
+   {
+    "id": "base6e149572",
+    "title": "Modern Antique (no Labels)",
+    "opacity": 1,
+    "visibility": true,
+    "layerType": "VectorTileLayer",
+    "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json",
+    "itemId": "545f2e839f624600bbb092c3ad998bb8",
+    "blendMode": "multiply"
+   }
+  ]
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857
+ },
+ "authoringApp": "Map builder",
+ "authoringAppVersion": "1.0",
+ "version": "2.31",
+ "initialState": {
+  "viewpoint": {
+   "targetGeometry": {
+    "xmin": -10241393.2,
+    "ymin": 3375646.0,
+    "xmax": -7347086.4,
+    "ymax": 6040565.2,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  }
+ },
+ "bookmarks": [
+  {
+   "name": "The sixteen states",
+   "extent": {
+    "xmin": -10241393.2,
+    "ymin": 3375646.0,
+    "xmax": -7347086.4,
+    "ymax": 6040565.2,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  }
+ ]
+}
