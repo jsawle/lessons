@@ -67,7 +67,7 @@
     {
       "where": "Student sheet, Q4 'Explain why' (answer space)",
       "what": "Q4 asks for three facts (nation, date, kind of document) for each of three areas, then an explanation. The sheet text shows one writing line under the question, the same as every other question.",
-      "whyItMatters": "Pairs copying from the projector, or from a pop-up their partner reads out, need somewhere to put nine short facts. Without a table, the answers get crammed and become hard to mark.",
+      "whyItMatters": "Pairs copying from the projector, or from a pop-up the other student in the pair reads out, need somewhere to put nine short facts. Without a table, the answers get crammed and become hard to mark.",
       "severity": "minor",
       "suggestedChange": "Give Q4 a small 3-row table (Place | Nation | Date | Kind of document) above the writing lines for the explanation.",
       "needsLiveMap": false,
