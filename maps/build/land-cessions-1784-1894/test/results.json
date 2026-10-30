@@ -2,7 +2,7 @@
  "tool": "Map test 1.0",
  "timeZone": "America/Chicago",
  "sdk": "ArcGIS Maps SDK for JavaScript 4.34",
- "webmapFingerprint": "af29df2c35bf72cf980913b340fd0b1b114c6670",
+ "webmapFingerprint": "f5cc40b6b709a76adce8c43c0573a4c004a9d54e",
  "results": [
   {
    "name": "notice-before-1830",
@@ -25,7 +25,7 @@
    "question": "Explain why: open a cession in the Southeast dated in the 1830s",
    "pass": true,
    "failures": [],
-   "popup": "Cherokee\n\nDate or dates: December 29, 1835\n\nToday's states: AL; GA; NC; TN\n\nNations today: Cherokee Nation, Oklahoma; Eastern Band of Cherokee Indians of North Carolina; Eastern Band of Cherokee Indians, North Carolina; United Keetoowah Band of Cherokee Indians in Oklahoma\n\nTreaty text\n\nRoyce's schedule\n\nRoyce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.",
+   "popup": "Cherokee\n\nDate or dates: December 29, 1835\n\nToday's states: AL; GA; NC; TN\n\nNations today: Cherokee Nation, Oklahoma; Eastern Band of Cherokee Indians of North Carolina; Eastern Band of Cherokee Indians, North Carolina; United Keetoowah Band of Cherokee Indians in Oklahoma\n\nTreaty text\n\nRoyce's schedule\n\nRoyce compiled this from United States records (published 1899), so it shows how the federal government recorded the transaction. The boundary is approximate.",
    "legend": null
   },
   {
@@ -33,7 +33,7 @@
    "question": "Explain why: open a cession in the Southeast dated in the 1830s",
    "pass": true,
    "failures": [],
-   "popup": "Choctaw\n\nDate or dates: November 16, 1805; September 27, 1830\n\nToday's states: AL\n\nNations today: Choctaw Nation of Oklahoma; Jena Band of Choctaw Indians, Louisiana; Mississippi Band of Choctaw Indians, Mississippi\n\nTreaty text\n\nRoyce's schedule\n\nRoyce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.",
+   "popup": "Choctaw\n\nDate or dates: November 16, 1805; September 27, 1830\n\nToday's states: AL\n\nNations today: Choctaw Nation of Oklahoma; Jena Band of Choctaw Indians, Louisiana; Mississippi Band of Choctaw Indians, Mississippi\n\nTreaty text\n\nRoyce's schedule\n\nRoyce compiled this from United States records (published 1899), so it shows how the federal government recorded the transaction. The boundary is approximate.",
    "legend": null
   },
   {

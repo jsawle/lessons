@@ -1,0 +1,452 @@
+{
+  "$schema": "../../resources/schema/lesson.schema.json",
+  "formatVersion": "1.9",
+  "id": "land-cessions-1784-1894",
+  "contentVersion": "0.2.0",
+  "status": "draft",
+  "updated": "2026-10-30",
+  "reviewed": null,
+  "title": "Land Cessions and Indian Removal, 1784–1894",
+  "summary": "Turn on one period at a time to watch American Indian land cessions spread across the United States, predict where the next ones will be, and explain why the 1830s cessions are where they are. The map is Charles Royce's record of cessions, so students also ask whose view it shows.",
+  "subject": "History",
+  "course": "US History",
+  "unit": "Age of Jackson",
+  "alsoFits": [
+    "Westward expansion and Manifest Destiny"
+  ],
+  "grade": "8",
+  "subjects": [
+    "US History",
+    "Geography"
+  ],
+  "time": "45 to 50 minutes, or 5–12 per question",
+  "studentLogin": "Not needed to explore the map",
+  "map": {
+    "webmapId": "fd8f742aec1c4a8a9648cd20dafffe11",
+    "about": "This map shows the land the United States gained from American Indian nations by treaty, act of Congress or executive order between 1784 and 1894, from the records Charles Royce compiled for the federal government (published 1899). There is one layer for each period: before 1830, the 1830s and 1840 to 1894. Only the cessions dated before 1830 are on when the map opens; students turn on the later periods themselves. Each area's pop-up gives the nation named in the record, the date or dates, today's states and the nations that exist today, and most link to the treaty, statute or executive order.",
+    "bookmarks": [
+      "The United States",
+      "The Southeast",
+      "The Old Northwest",
+      "The Plains and the West"
+    ],
+    "layers": [
+      {
+        "name": "Cessions dated 1840 to 1894",
+        "shows": "Green areas: cessions with a date from 1840 to 1894. Off when the map opens.",
+        "source": "USDA Forest Service, from Charles C. Royce's maps and schedule (Bureau of American Ethnology, 1899)",
+        "offAtStart": true
+      },
+      {
+        "name": "Cessions dated 1830 to 1839",
+        "shows": "Orange areas: cessions with a date in the 1830s, the decade of the Indian Removal Act. Off when the map opens.",
+        "source": "USDA Forest Service, from Charles C. Royce's maps and schedule (Bureau of American Ethnology, 1899)",
+        "offAtStart": true
+      },
+      {
+        "name": "Cessions dated before 1830",
+        "shows": "Light blue areas: cessions with a date from 1784 to 1829.",
+        "source": "USDA Forest Service, from Charles C. Royce's maps and schedule (Bureau of American Ethnology, 1899)"
+      }
+    ]
+  },
+  "knownIssues": [
+    {
+      "where": "Creek cession of March 24, 1832 (Alabama), pop-up",
+      "note": "Nations today reads \"Not listed in the Forest Service data.\" The source data has no present-day nation for this cession. Question 6 uses it as a source question; the answer notes name nations that exist today.",
+      "status": "open",
+      "date": "2026-10-30"
+    },
+    {
+      "where": "Areas along the Mississippi River",
+      "note": "The boundaries are coarse along rivers: Vicksburg falls just outside the cession Royce shows it in. No question depends on which side of a line a riverside town falls (checked 30 Oct 2026, maps/data/checks/).",
+      "status": "open",
+      "date": "2026-10-30"
+    },
+    {
+      "where": "Areas with more than one date",
+      "note": "Royce lists every treaty that concerns an area, and the layers use any of its dates, so an area can appear in an earlier layer than its cession. Central Florida (Seminole) is light blue because the 1823 treaty set it aside as a reservation; it was ceded in 1832. Some Kansas areas carry the date they were assigned to a nation moved west. Reading the map and questions 3 and 4 say so.",
+      "status": "open",
+      "date": "2026-10-30"
+    },
+    {
+      "where": "Cherokee cession of December 29, 1835, pop-up",
+      "note": "Nations today lists the Eastern Band of Cherokee Indians twice, spelled two ways; it is one nation.",
+      "status": "open",
+      "date": "2026-10-30"
+    },
+    {
+      "where": "56 areas, 40 of them in California (dated 1851)",
+      "note": "No link to a treaty, statute or order in the pop-up: the Forest Service data has none.",
+      "status": "open",
+      "date": "2026-10-30"
+    }
+  ],
+  "inquiry": {
+    "compellingQuestion": {
+      "en": "How did the United States gain American Indian land between 1784 and 1894, and why did the pattern change in the 1830s?"
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "title": {
+          "en": "Notice: before 1830"
+        },
+        "task": "With only Cessions dated before 1830 on, describe where the United States had gained land and which parts of the map are still empty.",
+        "tools": [
+          "bookmarks",
+          "legend"
+        ],
+        "core": false,
+        "minutes": 8,
+        "frontOfClass": [
+          "Open The United States bookmark. Only the light blue layer is on.",
+          "Open the legend: light blue is cessions dated before 1830.",
+          "Ask: where are the light blue areas, east or west of the Mississippi River, north or south?",
+          "Ask: which parts of the map are still empty?"
+        ],
+        "steps": [
+          {
+            "en": "Open The United States bookmark."
+          },
+          {
+            "en": "Open the legend and find the light blue areas: cessions dated before 1830."
+          }
+        ],
+        "ask": {
+          "en": "Where had the United States gained land through cessions before 1830? Which parts of the map are still empty?"
+        },
+        "lines": 3,
+        "answer": {
+          "where": "Cessions dated before 1830 layer, The United States bookmark. Light blue covers most of Ohio, Indiana, Illinois, Missouri, Arkansas and Florida, much of Alabama, Georgia and Tennessee, southern Michigan, the south and west of Mississippi, parts of Pennsylvania and New York, and land west of Missouri and Arkansas (today's Kansas and Oklahoma).",
+          "accept": "Names a region with cessions (the Ohio valley, much of the lower South, the land just west of the Mississippi) and an empty one: the whole West, the upper Mississippi and upper Great Lakes (Wisconsin, Minnesota, Iowa, northern Michigan), pockets in the Southeast (northwest Georgia, east-central Alabama, northern and central Mississippi) and the Atlantic coast.",
+          "text": "New England and the states from New Jersey to South Carolina are empty or nearly empty because Royce's record starts with the federal government in 1784: land taken in colonial times, or by the states, isn't on this map. Central Florida is light blue because an 1823 treaty set it aside as a Seminole reservation, not because it was ceded then (see question 4). Both are questions about the source, which question 6 comes back to."
+        }
+      },
+      {
+        "id": "q2",
+        "title": {
+          "en": "Predict"
+        },
+        "task": "Before turning on the next layer, students predict where the cessions of the 1830s will be and give a reason. They write the prediction down first.",
+        "tools": [
+          "bookmarks"
+        ],
+        "core": false,
+        "minutes": 5,
+        "frontOfClass": [
+          "Keep only Cessions dated before 1830 on.",
+          "Ask: where do you expect the cessions of the 1830s to be?",
+          "Ask: why there? Have students write the prediction down before anyone turns on the next layer."
+        ],
+        "steps": [
+          {
+            "en": "Keep only Cessions dated before 1830 on."
+          },
+          {
+            "en": "Look at the empty parts of the map, east and west of the Mississippi River."
+          },
+          {
+            "en": "Write your prediction before you turn on any other layer."
+          }
+        ],
+        "ask": {
+          "en": "Where do you expect the cessions of the 1830s to be? Why there?"
+        },
+        "fill": {
+          "en": "I predict the 1830s cessions will be in ______________ because ______________."
+        },
+        "lines": 2,
+        "answer": {
+          "accept": "Any prediction with a reason drawn from question 1: for example, the empty pockets in the Southeast surrounded by earlier cessions, the land next to the Great Lakes, or the West. Predictions are checked in question 3, not marked right or wrong here."
+        }
+      },
+      {
+        "id": "q3",
+        "title": {
+          "en": "Reveal: the 1830s"
+        },
+        "task": "Turn on Cessions dated 1830 to 1839 and compare the orange areas with the prediction. Use The Southeast and The Old Northwest bookmarks.",
+        "tools": [
+          "layers",
+          "bookmarks",
+          "legend"
+        ],
+        "core": false,
+        "minutes": 8,
+        "frontOfClass": [
+          "In Map layers, turn on Cessions dated 1830 to 1839.",
+          "Ask: where are the orange areas? Was your prediction right?",
+          "Open The Southeast bookmark, then The Old Northwest.",
+          "Ask: what do the orange areas in the Southeast have in common with the empty pockets you found in question 1?"
+        ],
+        "steps": [
+          {
+            "en": "In Map layers, turn on Cessions dated 1830 to 1839."
+          },
+          {
+            "en": "Open The Southeast bookmark, then The Old Northwest bookmark."
+          },
+          {
+            "en": "Compare the orange areas with your prediction."
+          }
+        ],
+        "ask": {
+          "en": "Where were the cessions of the 1830s? Was your prediction right? What do the orange areas in the Southeast have in common with the empty pockets you found before 1830?"
+        },
+        "lines": 3,
+        "answer": {
+          "where": "Cessions dated 1830 to 1839 layer, with The Southeast and The Old Northwest bookmarks. Orange fills most of the empty pockets in the Southeast: northern and east-central Mississippi, east-central and northeastern Alabama with strips along the Mississippi border, northwest Georgia, and corners of Tennessee and North Carolina. It also covers central Florida, which was already light blue. In the north it covers most of Wisconsin, much of Iowa, northern Michigan and northern Indiana. About four tenths of the orange is west of the Mississippi, in Iowa, Missouri, Kansas, Nebraska and Oklahoma.",
+          "accept": "Says the 1830s cessions are in the Southeast and around the upper Mississippi and Great Lakes, and that in the Southeast they fill the gaps left between earlier cessions; compares this with the prediction.",
+          "text": "Some orange areas in Kansas and Oklahoma were land assigned to nations moved west, which they ceded later; their pop-ups list more than one date. No question depends on them."
+        }
+      },
+      {
+        "id": "q4",
+        "title": {
+          "en": "Explain why"
+        },
+        "task": "Open orange cessions in the Southeast and read the nation, the date and the kind of document; use the Indian Removal Act (1830), in Before you start, to explain the pattern.",
+        "tools": [
+          "bookmarks",
+          "popups",
+          "layers"
+        ],
+        "core": true,
+        "minutes": 12,
+        "frontOfClass": [
+          "Make sure Cessions dated 1830 to 1839 is on, and open The Southeast bookmark.",
+          "Click the large orange area in east-central Mississippi (around Kosciusko or Philadelphia) and read the pop-up: the nation, the date and the link.",
+          "Click two more orange areas: east-central Alabama (around Talladega) and northwest Georgia (around Rome).",
+          "Ask: which nations, which years, and what kind of document?",
+          "Ask: the Indian Removal Act was signed in May 1830. How might it explain why these cessions came in the 1830s, and why here?"
+        ],
+        "steps": [
+          {
+            "en": "Make sure Cessions dated 1830 to 1839 is on, and open The Southeast bookmark."
+          },
+          {
+            "en": "Click three orange areas: east-central Mississippi (around Kosciusko), east-central Alabama (around Talladega) and northwest Georgia (around Rome)."
+          },
+          {
+            "en": "For each, write down the nation, the date and the kind of document the link names."
+          }
+        ],
+        "ask": {
+          "en": "Which nations, which years and what kind of document? Using the Indian Removal Act in Before you start, why might these cessions have come in the 1830s, and why here?"
+        },
+        "lines": 5,
+        "answer": {
+          "where": "Cessions dated 1830 to 1839 layer, The Southeast bookmark, pop-ups. East-central Mississippi: Choctaw, September 27, 1830 (Today's states: AL; MS). East-central Alabama: Creek, March 24, 1832. Northwest Georgia: Cherokee, December 29, 1835 (AL; GA; NC; TN). Others students may open: Chickasaw, October 20, 1832 (northern Mississippi; AL; MS; TN); Seminole, central Florida, September 18, 1823 and May 9, 1832. Each of these links reads Treaty text. A student who clicks Jackson, Mississippi gets a light blue Choctaw cession of 1820, not the 1830 one.",
+          "accept": "Connects the dates to the Indian Removal Act: after May 1830 the President could negotiate removal treaties with nations east of the Mississippi, and within about five years the Choctaw, Creek, Chickasaw and Cherokee had ceded the last of their land in the Southeast. Explains why here: these were the nations' remaining homelands, surrounded by land already ceded and by settlers who wanted it. Strong answers say the treaties were made under pressure and note that the map alone can't show why; the Act is the evidence.",
+          "text": "Two dates on one area don't always mean two cessions: Royce lists every treaty that concerns an area. The Seminole area in central Florida was set aside as a reservation in 1823 and ceded in 1832. The Treaty of New Echota (December 1835) was signed by the minority Treaty Party; Principal Chief John Ross, the Cherokee government and most Cherokees opposed it, and 3,352 Cherokees signed an 1836 petition asking the Senate not to ratify it (National Archives, DocsTeach). The National Archives says Jackson's administration negotiated almost 70 removal treaties, and nearly 50,000 people were moved to Indian Territory."
+        }
+      },
+      {
+        "id": "q5",
+        "title": {
+          "en": "Reveal: 1840 to 1894"
+        },
+        "task": "Turn on Cessions dated 1840 to 1894 and describe how the pattern changed, using The Plains and the West bookmark.",
+        "tools": [
+          "layers",
+          "bookmarks",
+          "legend"
+        ],
+        "core": false,
+        "minutes": 7,
+        "frontOfClass": [
+          "In Map layers, turn on Cessions dated 1840 to 1894.",
+          "Open The United States bookmark, then The Plains and the West.",
+          "Ask: where are the green areas, and how is that different from the 1830s?",
+          "Ask: which parts of the country have no cessions at all, and why might that be?"
+        ],
+        "steps": [
+          {
+            "en": "In Map layers, turn on Cessions dated 1840 to 1894."
+          },
+          {
+            "en": "Open The United States bookmark, then The Plains and the West bookmark."
+          }
+        ],
+        "ask": {
+          "en": "How did the pattern change after 1840? Which parts of the country have no cessions at all on this map?"
+        },
+        "lines": 3,
+        "answer": {
+          "where": "Cessions dated 1840 to 1894 layer. Green covers almost all of the West: the Plains, the Rocky Mountains, the Southwest, California and the Pacific Northwest, and Minnesota. It also covers most of today's Oklahoma, where nations moved from the East later ceded land again. Still empty or nearly empty: New England, New Jersey to South Carolina (apart from parts of Pennsylvania and New York), most of Kentucky, most of Louisiana, eastern Texas and part of North Dakota.",
+          "accept": "Says the cessions moved west of the Mississippi and across the whole West after 1840; notes the empty East and links it to the record starting in 1784.",
+          "text": "Texas is a different case: when it joined the United States in 1845 it kept its public lands, so the federal government didn't make cessions there the way it did elsewhere (Texas State Library and Archives)."
+        }
+      },
+      {
+        "id": "q6",
+        "title": {
+          "en": "Question the source"
+        },
+        "task": "Read the note at the end of a pop-up and the Nations today line for two cessions, including the Creek cession of 1832, and ask whose view of these transactions the map shows.",
+        "tools": [
+          "popups"
+        ],
+        "core": false,
+        "minutes": 7,
+        "frontOfClass": [
+          "Click the Cherokee cession in northwest Georgia and read the note in italics at the end of the pop-up.",
+          "Ask: who recorded these cessions, when, and from whose records?",
+          "Click the Creek cession in east-central Alabama and read Nations today.",
+          "Ask: what is missing here, and what might the nations named in the pop-ups say about the same transactions?"
+        ],
+        "steps": [
+          {
+            "en": "Click the Cherokee cession in northwest Georgia and read the note in italics at the end of the pop-up."
+          },
+          {
+            "en": "Click the Creek cession in east-central Alabama (around Talladega) and read Nations today."
+          }
+        ],
+        "ask": {
+          "en": "Who recorded these cessions, and from whose records? What is missing from the Creek pop-up? What might the nations named in the pop-ups say about the same transactions?"
+        },
+        "lines": 4,
+        "answer": {
+          "where": "Pop-up note: Royce compiled this from United States records (published 1899), so it shows how the federal government recorded the transaction, and the boundary is approximate. The Creek cession of March 24, 1832 reads \"Not listed in the Forest Service data\" under Nations today.",
+          "accept": "Says the map is a federal record, compiled decades later, so it shows transactions as the United States recorded them; notes that the Creek pop-up leaves out a nation that exists today (the Muscogee (Creek) Nation in Oklahoma is one), a gap in the modern data; suggests that the nations might describe some cessions as forced, disputed or signed by people who did not speak for them, and that their own records would tell a different story.",
+          "text": "Royce's schedule (linked in each pop-up) is a federal document from 1899. The layer was digitized by the USDA Forest Service, which says the data are for information only, not for deciding title or boundaries."
+        }
+      }
+    ],
+    "final": {
+      "teacher": "Students answer the compelling question with evidence from all three layers and at least two pop-ups, then write one \"why\" question the map raised for them. Accept answers that describe the pattern over time (the Ohio valley, much of the South and the land just west of the Mississippi before 1830; the Southeast and the upper Mississippi and Great Lakes in the 1830s; the West after 1840), connect the 1830s to the Indian Removal Act with dates from the pop-ups, and say that the map is a federal record. The students' own questions are a good place to start the next lesson, for example on the Trail of Tears.",
+      "student": {
+        "en": "Answer the big question using evidence from all three layers and at least two pop-ups. Then write one \"why\" question this map raises for you."
+      },
+      "tools": [
+        "layers",
+        "popups"
+      ]
+    }
+  },
+  "objectives": [
+    "Describe where the United States had gained American Indian land before 1830, using the Cessions dated before 1830 layer and the legend.",
+    "Make a prediction about the next period from the map, then turn on the 1830s layer and test it.",
+    "Read the nation, date and kind of document in the pop-ups of three 1830s cessions in the Southeast.",
+    "Explain the 1830s pattern in the Southeast using the Indian Removal Act (1830) as evidence.",
+    "Evaluate the map as a source: who recorded the cessions, when, and whose view is missing."
+  ],
+  "discussion": [
+    "Your prediction in question 2: what did you base it on, and what did the 1830s layer show that you didn't expect?",
+    "The map shows where and when, but not why. What other evidence would you need to explain a single cession, such as the Cherokee cession of 1835?",
+    "Royce called these areas cessions. Is cession a fair word for all of them? What other words might the nations named in the pop-ups use?"
+  ],
+  "differentiation": {
+    "support": "Do questions 1 and 3 from the front with the legend open, and give pairs the three places to click in question 4 (around Kosciusko, Mississippi; Talladega, Alabama; Rome, Georgia) marked on a printed screenshot.",
+    "stretch": "Open the Treaty text link for the Cherokee cession of 1835 and find one article about moving west; compare it with what the pop-up and Before you start say."
+  },
+  "resources": [
+    {
+      "title": "Jackson's Message to Congress on Indian Removal (1830)",
+      "url": "https://www.archives.gov/milestone-documents/jacksons-message-to-congress-on-indian-removal",
+      "source": "National Archives"
+    },
+    {
+      "title": "On Exhibit: the Indian Removal Act",
+      "url": "https://prologue.blogs.archives.gov/2017/03/16/on-exhibit-the-indian-removal-act",
+      "source": "National Archives"
+    },
+    {
+      "title": "Analyzing the Petition Against the Treaty of New Echota",
+      "url": "https://docsteach.org/lesson/analyzing-the-petition-against-the-treaty-of-new-echota/",
+      "source": "National Archives (DocsTeach)"
+    },
+    {
+      "title": "Worcester v. Georgia, 31 U.S. 515 (1832)",
+      "url": "https://www.loc.gov/item/usrep031515",
+      "source": "Library of Congress"
+    },
+    {
+      "title": "Indian Land Cessions in the United States (Royce, 1899), maps and schedule",
+      "url": "https://archive.org/details/annualreportofbu218smit",
+      "source": "Internet Archive"
+    },
+    {
+      "title": "Joint Resolution for Annexing Texas to the United States (1845)",
+      "url": "https://www.tsl.texas.gov/ref/abouttx/annexation/march1845.html",
+      "source": "Texas State Library and Archives Commission"
+    }
+  ],
+  "assessment": {
+    "evidence": "Strong answers use all three layers in order (where light blue, orange and green fall), pop-up names and dates for at least two 1830s Southeast cessions (Choctaw, September 27, 1830; Creek, March 24, 1832; Cherokee, December 29, 1835), the Indian Removal Act of May 1830, and the pop-up note on who recorded the map.",
+    "exemplar": "The United States gained American Indian land mostly by treaty, and the cessions moved across the map in a clear order. With only the light blue layer on, the cessions before 1830 cover Ohio, Indiana, Illinois, Missouri and much of the lower South, but there are empty pockets in Mississippi, east-central Alabama and northwest Georgia. When I turned on the orange 1830s layer, those pockets filled in. The pop-ups show the Choctaw cession on September 27, 1830, the Creek on March 24, 1832 and the Cherokee on December 29, 1835, and each link says Treaty text. The Indian Removal Act of May 1830 let the President make removal treaties with nations east of the Mississippi, so within five years the last homelands in the Southeast were ceded. After 1840 the green layer covers almost the whole West. The pop-up note says Royce compiled the map from United States records, so it is the federal government's record, and the nations might call these cessions forced rather than agreed. The Creek pop-up also leaves out a nation that exists today."
+  },
+  "studentSupport": {
+    "beforeYouStart": {
+      "en": "A cession is land one side gives up to another, usually by treaty. On May 28, 1830, President Andrew Jackson signed the Indian Removal Act, which let the President make treaties to move American Indian nations living east of the Mississippi River to land in the West. This map comes from records Charles Royce compiled from federal government documents; the government published them in 1899."
+    },
+    "readingTheMap": {
+      "en": "There is one layer for each period: light blue for cessions dated before 1830, orange for the 1830s and green for 1840 to 1894; use the legend. Only the light blue layer is on when the map opens: turn on the others in Map layers when a question asks. Some areas have more than one date and show in more than one layer. The earlier date can be the treaty that set the land aside, not the one that took it, so read every date in the pop-up. The same land can appear in several layers, so a bigger colored area doesn't always mean more land was taken then. Boundaries are approximate."
+    },
+    "tips": [
+      "popups"
+    ],
+    "reflection": {
+      "en": "Turning the layers on one at a time, what did you notice about how the cessions spread that you might have missed on a finished map?"
+    }
+  },
+  "teacherNotes": {
+    "beforeClass": "The map opens with only Cessions dated before 1830 on. Students turn on the 1830s layer in question 3 and the 1840 to 1894 layer in question 5; question 2's prediction works best before the later layers are on. The map has no place names on the cessions; the basemap shows today's states and cities, which the questions use to say where to click.",
+    "misconceptions": [
+      {
+        "claim": "Empty parts of the map, such as New England and Virginia, were never American Indian land.",
+        "response": "Royce's record starts in 1784. Land taken in colonial times, or by the states, isn't on this map."
+      },
+      {
+        "claim": "Two dates in a pop-up mean the land was ceded twice.",
+        "response": "Royce lists every treaty that concerns an area. In central Florida, the 1823 treaty set the land aside as a Seminole reservation and the 1832 treaty ceded it."
+      },
+      {
+        "claim": "A cession means a nation chose to sell its land.",
+        "response": "Many cessions were made under pressure or disputed; the map is the federal government's record of them, as the pop-up note says."
+      },
+      {
+        "claim": "A bigger colored area means more land was taken in that period.",
+        "response": "The same land can appear in more than one layer: most of Oklahoma is light blue, orange and green, because Royce lists every treaty that concerns an area. The basemap's projection also makes northern areas look larger than southern ones."
+      }
+    ],
+    "keyWords": [
+      "cession",
+      "treaty",
+      "Indian Removal Act",
+      "removal",
+      "sovereignty",
+      "primary source"
+    ]
+  },
+  "standards": [
+    {
+      "code": "C3 D2.His.14.6-8",
+      "text": "Explain multiple causes and effects of events and developments in the past"
+    },
+    {
+      "code": "C3 D2.Geo.2.6-8",
+      "text": "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions, and changes in their environmental characteristics."
+    },
+    {
+      "code": "TX 8.5(H)",
+      "text": "Analyze the reasons for the removal and resettlement of Cherokee Indians during the Jacksonian era, including the Indian Removal Act, Worcester v. Georgia, and the Trail of Tears (partial: this lesson covers the reasons and the Indian Removal Act; Worcester v. Georgia is a resource only, and the Trail of Tears is the next map)."
+    },
+    {
+      "code": "TX 8.10(A)",
+      "text": "Locate places and regions directly related to major eras and turning points in the United States during the 17th, 18th, and 19th centuries"
+    },
+    {
+      "code": "FL SS.8.A.4.4",
+      "text": "Discuss the impact of westward expansion on cultural practices and migration patterns of Native Americans, African slave populations and other minority groups (partial: the migration of Native Americans; not cultural practices)."
+    }
+  ],
+  "languages": {
+    "en": {
+      "status": "draft",
+      "note": "English draft 0.2.0, revised after an independent fact-check (30 Oct 2026). A Spanish version follows once the English is reviewed."
+    }
+  }
+}

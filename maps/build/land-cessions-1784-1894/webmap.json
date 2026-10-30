@@ -44,7 +44,7 @@
     "popupElements": [
      {
       "type": "text",
-      "text": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>"
+      "text": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce compiled this from United States records (published 1899), so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>"
      }
     ],
     "showAttachments": false,
@@ -109,7 +109,7 @@
     "popupElements": [
      {
       "type": "text",
-      "text": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>"
+      "text": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce compiled this from United States records (published 1899), so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>"
      }
     ],
     "showAttachments": false,
@@ -174,7 +174,7 @@
     "popupElements": [
      {
       "type": "text",
-      "text": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>"
+      "text": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce compiled this from United States records (published 1899), so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>"
      }
     ],
     "showAttachments": false,
