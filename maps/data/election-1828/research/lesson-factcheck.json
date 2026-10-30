@@ -1,0 +1,173 @@
+{
+  "lesson": "/home/claude/lessons/maps/lessons/election-1828-right-to-vote.json (contentVersion 0.1.0)",
+  "checked": "2026-10-30",
+  "problems": [
+    {
+      "severity": "high",
+      "quote": "The newer western states had no property or tax rule for white men, but all of them shut out free Black men: voting was opened to more white men at the same time as Black men were kept out.",
+      "where": "q4.answer.accept (c); same claim in assessment.exemplar: \"every newer western state shut them out\"",
+      "issue": "Wrong under the lesson's own definition of newer states (q2 step: west of the Appalachians). Tennessee is a newer western state where free Black men could vote (light on the map). Ohio, Mississippi and Louisiana are newer western states that had a tax rule (middle), so 'had no property or tax rule' is also wrong as a general statement. A student who notices Tennessee would be marked against a false key.",
+      "evidence": "geojson: Tennessee BlackMen 'Could vote' ('Could vote until 1834'); Ohio, Mississippi, Louisiana WhiteMen 'Had to pay a tax (or serve in the militia)'. Only IN, IL, AL, MO (the four named in q4 ask c) and KY fit both halves.",
+      "fix": "Accept (c): \"Indiana, Illinois, Alabama and Missouri had no property or tax rule for white men, but all four shut out free Black men. Tennessee is the exception among the newer states: free Black men could vote there until 1834.\" Exemplar: replace \"every newer western state shut them out\" with \"newer states like Indiana, Illinois, Alabama and Missouri shut them out\"."
+    },
+    {
+      "severity": "high",
+      "quote": "New York's 1821 constitution and 1826 amendment removed the rules for white men only",
+      "where": "q4.answer.text",
+      "issue": "The 1821 constitution did not remove the rules for white men; it replaced the freehold rule with a tax, militia or road-labour rule. The 1826 amendment removed those. More importantly, the 1821 constitution is what created the $250 rule for Black men (before 1821 all voters faced the same property rules), so 'removed the rules for white men only' understates what happened and the source the lesson cites (Galie's article title: 'the constitutionalizing of racial discrimination') makes that the point.",
+      "evidence": "rules-north.json NY whiteMenDetail: 'Between 1822 and 1826 the 1821 constitution had required paying a state or county tax, militia service, or highway labour'; NY other: 'Before 1821, New York had property requirements for all voters.' 50constitutions.org section-id-146696: 1826 amendment abolishes qualifications 'other than persons of color'.",
+      "fix": "\"New York's 1821 constitution eased the rules for white men and set a new $250 property rule for Black men only; the 1826 amendment then removed the remaining rules for white men but left the $250 rule in place.\""
+    },
+    {
+      "severity": "high",
+      "quote": "Virginia's property rule lasted until 1830.",
+      "where": "q3.answer.text (and the Virginia pop-up: 'law of 1785, in force until 1830')",
+      "issue": "Misleading: a reader will take it that Virginia dropped property qualifications in 1830. The 1830 constitution kept a freehold route ($25 freehold) and added leaseholders and tax-paying householders; it relaxed the rule, it did not end it. The research file says the same.",
+      "evidence": "West Virginia Archives and History (archive.wvculture.org/History/government/182930cc.html): the convention 'agreed to lessen the requirements of a freehold, and to extend the suffrage to leaseholders and housekeepers who paid taxes'; suffrage went to those with 'a $25 freehold ... a five-year leasehold of an annual rental value of $20' and 'all tax-paying housekeepers who were heads of families'. rules-south.json Virginia other: 'relaxed the freehold rule to admit some leaseholders and taxpaying householders; that change took effect only from 1830.'",
+      "fix": "\"Virginia's 1785 property rule was still in force in 1828; a new constitution in 1830 loosened it, letting some renters and taxpaying heads of households vote too.\" Consider the same wording in the Virginia pop-up (data change, so bump the data version)."
+    },
+    {
+      "severity": "medium",
+      "quote": "Virginia and Rhode Island still required property, and ten states required a tax payment or militia service.",
+      "where": "teacherNotes.misconceptions[0].response",
+      "issue": "Overstated and too uniform. (1) The ten 'middle' states do not all require 'a tax payment or militia service': Connecticut also accepts a $7 freehold, Ohio accepts road work, New Jersey's law still named property and the tax route was practice, and Delaware's rule was for state elections only (its voters did not choose electors). (2) North Carolina required 50 acres for state Senate voters; Keyssar counts North Carolina as a property state until 1854, so a reviewer could say three states required property, not two.",
+      "evidence": "geojson WhiteMenRule for CT, OH, NJ, DE, NC; factcheck.json general: 'Several pay a tax states really mean tax OR something else'; factcheck NC: 'Keyssar Table A.3 counts NC as a property state until 1854 because of the Senate freehold.'",
+      "fix": "\"Virginia and Rhode Island still required property. In ten more states a man had to pay a tax or meet a similar rule (militia service, road work, or a little land), and in North Carolina only landowners could vote for the state Senate.\""
+    },
+    {
+      "severity": "medium",
+      "quote": "(a) Virginia and Rhode Island.",
+      "where": "q3.answer.accept (a); also q3 frontOfClass 'which two states are dark?' and ask (a) 'Which two states made white men own property?'",
+      "issue": "Students who read North Carolina's pop-up ('voters for the state Senate had to own 50 acres') can fairly answer North Carolina. The question as worded ('made white men own property') does not limit itself to the shading.",
+      "evidence": "geojson North Carolina WhiteMenRule.",
+      "fix": "Ask (a): \"Which two states are shaded dark (had to own property)?\" Accept: add \"Also accept North Carolina if the student cites the 50-acre rule for state Senate voters in its pop-up.\""
+    },
+    {
+      "severity": "medium",
+      "quote": "(b) Mostly the newer states in the West and South (Kentucky, Tennessee, Indiana, Illinois, Alabama, Missouri), plus some northern states (Maine, New Hampshire, Vermont, New York, Maryland).",
+      "where": "q3.answer.accept (b)",
+      "issue": "'Mostly' is not supported: the newer western states are 6 of the 12 light states (5 northern-listed plus South Carolina make the other 6). Maryland is a slave state usually counted as Southern or border, not northern.",
+      "evidence": "geojson WhiteMen 'No property or tax rule': AL, IL, IN, KY, ME, MD, MO, NH, NY, SC, TN, VT (12).",
+      "fix": "\"About half are newer states west of the Appalachians (Kentucky, Tennessee, Indiana, Illinois, Alabama, Missouri); the rest are in the North and East (Maine, New Hampshire, Vermont, New York) plus Maryland and South Carolina.\""
+    },
+    {
+      "severity": "medium",
+      "quote": "in 1825 only 298 Black New Yorkers met the $250 requirement (Albany Law Review, citing Field)",
+      "where": "q4.answer.text (pop-up: 'In 1825 only 298 Black New Yorkers qualified.')",
+      "issue": "(1) Without a denominator, students can read '298 Black New Yorkers' as the number of Black people in the state. (2) The attribution omits the author; the article is by Peter J. Galie, and footnote 61 cites both Field (1982, p. 37) and Galie's own 1996 book, so 'citing Field' is accurate but incomplete. rules-north.json says '(Galie, citing Field)'. (3) The research notes the 'nearly 6,000' denominator was not checked against Field.",
+      "evidence": "Albany Law Review vol. 87 no. 4 (2023-24), Peter J. Galie: 'In 1825, only 298 of the nearly 6,000 free adult Black New Yorkers met the requirement.' fn. 61: Field, The Politics of Race in New York 37 (1982); Galie, Ordered Liberty 77 (1996). rules-north.json NY notes: 'Check the denominator ... against Field (1982) before using it.'",
+      "fix": "\"In 1825 only 298 of nearly 6,000 free adult Black New Yorkers met the $250 requirement (Peter J. Galie, Albany Law Review, 2024, citing Phyllis Field).\" If the denominator can't be checked, use \"only 298 Black men in the whole state\"."
+    },
+    {
+      "severity": "medium",
+      "quote": "free Black men could vote in only six states",
+      "where": "q5.answer.accept (b), final.teacher, assessment.exemplar, differentiation.support",
+      "issue": "A reviewer can challenge it: in New York Black men who met the $250 rule could legally vote (298 did qualify), and Pennsylvania's law did not bar them. The map's six are the states where they could vote on the same terms as white men.",
+      "evidence": "geojson: NY and PA BlackMen 'Only with extra rules, or kept out in practice'.",
+      "fix": "\"free Black men could vote on the same terms as white men in only six states\" (exemplar can keep the following New York sentence as the contrast)."
+    },
+    {
+      "severity": "medium",
+      "quote": "State names are labeled above the pies.",
+      "where": "teacherNotes.beforeClass",
+      "issue": "None of the three map layers has labels; the names come from the World Terrain Reference basemap. They are modern labels, several are hidden under pies (Pennsylvania, Virginia, Ohio, Maryland, Delaware, New Jersey, Connecticut, Rhode Island, New Hampshire; 'MAIN' is cut off), and the basemap also labels states that were territories or unorganised land in 1828 (Michigan, Arkansas, Florida, Wisconsin, Iowa, Kansas, Texas), which a grade 8 student could take for 1828 states.",
+      "evidence": "build/election-1828-right-to-vote/webmap.json: no labelingInfo on any operational layer; basemap layers include 'World Terrain Reference'. Screenshots test/notice-votes.jpg and test/reveal-black-men.jpg.",
+      "fix": "Either add a label class for State on the votes layer, or change the note to: \"State names come from the modern basemap; some sit under the pies, and it also names places that were not yet states in 1828 (for example Michigan, Arkansas and Florida). Click a state to see its name.\""
+    },
+    {
+      "severity": "medium",
+      "quote": "In both rule layers, light means fewer limits and dark means more.",
+      "where": "studentSupport.readingTheMap; layer 'shows' descriptions",
+      "issue": "Student misread risk: the light class (RGB 255,242,204 at 200 alpha) is almost the same colour as the Modern Antique basemap, so light states (Tennessee, North Carolina, New England) look unshaded, as if they had no data. Confirmed in test/reveal-black-men.jpg.",
+      "evidence": "webmap.json uniqueValueInfos: 'No property or tax rule' and 'Could vote' both [255,242,204,200].",
+      "fix": "Map change: give the light class a visible tint and outline that differs from the basemap (check contrast for accessibility). Until then, add to readingTheMap: \"Light states can look like the background; click one to check.\""
+    },
+    {
+      "severity": "low",
+      "quote": "All orange: Connecticut, Delaware, ... (a) New England and nearby states (New Jersey, Delaware). (b) The South and the West, plus Pennsylvania.",
+      "where": "q1.answer.where and accept",
+      "issue": "Delaware and Maryland (Adams 6 of 11) are slave states often counted as Southern or border; saying 'the South' went to Jackson without that exception invites challenge. Also Q1 asks which part 'voted' for Adams, but Delaware's and South Carolina's electors were chosen by the legislature, not voters; students meet this only in q5.",
+      "evidence": "geojson: DE Adams 3, ElectorsChosenBy 'The state legislature'; MD Jackson 5, Adams 6.",
+      "fix": "Accept (a): \"New England, plus New Jersey, Delaware and most of Maryland's electors.\" (b): \"The South (except Delaware and Maryland) and the West, plus Pennsylvania and most of New York's electors.\" Optionally say 'whose electors voted mostly for Adams' in the ask."
+    },
+    {
+      "severity": "low",
+      "quote": "Each pop-up ends: \"Women could not vote in any state in 1828.\"",
+      "where": "q5.answer.text; q6 step 'Read the sentence about women at the end of any pop-up'",
+      "issue": "The women sentence is not the last line: the 'Source for the votes: National Archives' link follows it, and it shares an italic line with the outlines note.",
+      "evidence": "webmap.json popup text: '<p><i>{Note} Women could not vote in any state in 1828.</i></p><p><a ...>Source for the votes: National Archives</a></p>'",
+      "fix": "\"Near the end of each pop-up: ...\" and \"Read the sentence about women near the end of any pop-up.\""
+    },
+    {
+      "severity": "low",
+      "quote": "(b) Who is not shown on this map at all? ... (b) Women, enslaved people, and people in the territories",
+      "where": "q6.ask (b) and accept (b)",
+      "issue": "Women are mentioned in every pop-up and step 2 sends students to that sentence, so 'not shown at all' contradicts the task. Enslaved people are never mentioned on the map, which is the stronger answer.",
+      "evidence": "Popup template text (webmap.json).",
+      "fix": "Ask: \"Which groups have no layer of their own on this map?\" Accept: \"Women (mentioned only in a sentence), enslaved people (not mentioned at all), and people in the territories, who couldn't vote for president.\""
+    },
+    {
+      "severity": "low",
+      "quote": "Using the map, who had gained the right to vote by 1828, and who had not? ... enslaved people could not vote",
+      "where": "q5.ask (b) / accept (b)",
+      "issue": "Nothing on the map or in the pop-ups mentions enslaved people, so that part of the accept line is background knowledge, not 'using the map'. Fine to accept, but the key implies the map shows it.",
+      "evidence": "Popup template and geojson fields have no reference to enslaved people.",
+      "fix": "Add \"(from what they already know; the map doesn't mention enslaved people)\" after that clause, or use it as a lead-in to q6."
+    },
+    {
+      "severity": "low",
+      "quote": "Light (no rule): ... Tennessee ... and South Carolina for state elections.",
+      "where": "q3.answer.where / accept (b)",
+      "issue": "Reviewer pushback likely: Tennessee (freehold OR six months' residence) and South Carolina (freehold OR six months' residence) are classed 'no rule' from the constitutional text, but Keyssar lists both in his property table with residency alternatives. The fact-check advised a footnote; the lesson states them as plain 'no rule'.",
+      "evidence": "factcheck.json Tennessee and general: 'Keyssar lists both in his property table with alternatives. Footnote them.'",
+      "fix": "Add to q3 text: \"Tennessee and South Carolina let a man vote if he owned land or had lived in the area six months, so no property was needed.\""
+    },
+    {
+      "severity": "low",
+      "quote": "Open the source link in New York's pop-up and find the words that set the $250 rule",
+      "where": "differentiation.stretch",
+      "issue": "The linked 50 Constitutions page shows the voting clause in several versions (1822, 1826, 1846, 1864), and the $250 wording appears in more than one, so students may quote the 1846 or 1864 text.",
+      "evidence": "50constitutions.org/ny/constitution/section-id-146696: '$250' text in the January 15, 1822 version (spelled 'colour') and in the 1846 and 1864 versions.",
+      "fix": "\"... find the words that set the $250 rule in the 1822 version (spelled 'colour'), and compare them with the 1826 version for white men.\""
+    },
+    {
+      "severity": "low",
+      "quote": "Legend: John Quincy Adams / Andrew Jackson / Other",
+      "where": "Map (not lesson text); affects q1 'Open the legend'",
+      "issue": "The pie renderer shows a grey 'Other' entry in the legend although no electors went to anyone else; students may ask who 'Other' was.",
+      "evidence": "webmap.json pieChart othersCategory/defaultLabel 'Other'; test/results.json legend text.",
+      "fix": "Remove the Other category from the pie renderer, or add to q1 front of class: \"Ignore 'Other' in the legend; no electors voted for anyone else.\""
+    }
+  ],
+  "verified": [
+    "Electoral totals Jackson 178, Adams 83: National Archives archives.gov/electoral-college/1828 ('Winner: 178', 'Main Opponent: 83'); also sums of the 24 geojson rows and built.json totals.",
+    "Split states and numbers: New York Jackson 20 / Adams 16, Maryland 5 / 6, Maine 1 / 8 (geojson and National Archives).",
+    "All-Adams list (CT, DE, MA, NH, NJ, RI, VT) and all-Jackson list (AL, GA, IL, IN, KY, LA, MS, MO, NC, OH, SC, TN, VA, PA) match the data exactly.",
+    "White men classes: dark VA, RI; middle (10) MA, CT, NJ, PA, DE, NC, GA, OH, MS, LA; light (12) ME, NH, VT, NY, MD, KY, TN, IN, IL, AL, MO, SC - all match the geojson. 'Ten states' in the misconception is the correct count of the middle class.",
+    "Free Black men classes: light ME, NH, VT, MA, NC (until 1835), TN (until 1834); middle NY, PA; dark the other 16 - match the geojson.",
+    "New York rule for Black men ($250 freehold, taxed on it, three years a citizen; 1821 constitution) and no rule for white men after the 1826 amendment: geojson, rules-north.json, 50constitutions.org (1826 amendment abolishes qualifications 'other than persons of color'; ratified Nov. 6, 1826).",
+    "Pennsylvania: race-neutral 1790 constitution, Black men blocked in practice (Philadelphia among places), shut out by the 1838 constitution - geojson and factcheck.json.",
+    "South Carolina and Delaware electors chosen by the state legislature in 1828; Delaware and South Carolina white-men rules are for state elections only - geojson, factcheck.json general (only DE and SC had no popular vote, per UCSB American Presidency Project).",
+    "Indiana: no property or tax rule; Constitution of 1816 allowed only white men - geojson.",
+    "Massachusetts 1821 amendment replaced the property rule with a taxpaying rule - geojson, rules-north.json (50constitutions; Keyssar Table A.3 '1780 | 1821').",
+    "New Jersey ended women's voting in 1807: Library of Congress, 'New Jersey Women Gain, Then Lose the Vote' ('ending in 1807 with a state law restricting the vote' to 'free, white, male citizens'); NPS article in resources.",
+    "Women could not vote in any state in 1828: research (Minor v. Happersett; each state's text) and every pop-up carries the sentence.",
+    "People in territories could not vote for president: US Constitution Art. II, sec. 1 gives electors to states only ('Each State shall appoint ...'); the map notes territories are not shown.",
+    "'Often called a victory for the common man' is a fair description of a common view: DPLA exhibition 'Outsiders' says Jackson's elections 'redefined the role of the \"common\" (white) man in American politics'; Humanities Texas teacher guide asks how accurate 'the era of the \"common man\"' label is. The lesson frames it as a claim to test, which suits.",
+    "Albany Law Review source: Peter J. Galie, vol. 87 no. 4 (2023-24), 'In 1825, only 298 of the nearly 6,000 free adult Black New Yorkers met the requirement', fn. 61 citing Field (1982) p. 37 and Galie (1996) p. 77.",
+    "beforeYouStart: electors chose the president; each state set voting rules; some states required land or a tax - consistent with National Archives and the data.",
+    "map.about and layer descriptions: two rule layers off at start, votes layer on, pie size by Electors (3-36), blue Jackson [0,114,178] and orange Adams [230,159,0], shading order light/middle/dark - match webmap.json.",
+    "Bookmarks 'The 24 states of 1828' and 'New England and New York' exist in the webmap.",
+    "TX 8.5(G): 'explain the impact of the election of Andrew Jackson, including expanded suffrage' - verbatim, Cornell LII 19 TAC 113.20 (current version, implemented from 2024-25).",
+    "TX 8.10(A): 'locate places and regions directly related to major eras and turning points in the United States during the 17th, 18th, and 19th centuries' - verbatim, Cornell LII.",
+    "C3 D2.Civ.2.6-8: 'Explain specific roles played by citizens (such as voters, jurors, taxpayers, members of the armed forces, petitioners, protesters, and office-holders).' - Smithsonian Learning Lab standards page (secondary copy; NCSS PDF not reachable).",
+    "Preachy wording: none found. Teacher-facing lines are ordinary answer-key and front-of-class directions; the Virginia note is framed as an option ('you may want to'). 'Strong answers say expanded suffrage meant more white men' steers toward one conclusion, but it is supported by the data; soften to 'Strong answers often note...' if you want it more open."
+  ],
+  "couldNotVerify": [
+    "C3 D2.His.14.6-8 wording: NCSS C3 PDF was blocked; a web search matched the exact phrase 'Explain multiple causes and effects of events and developments in the past' to D2.His.14.6-8 in secondary copies, but I did not read it in the primary document.",
+    "The 'nearly 6,000' denominator in Galie's 298 figure against Field (1982) itself; the research file also flags this as unchecked.",
+    "Exact end dates: free Black men in North Carolina lost the vote through the 1835 convention's amendments (ratified late 1835, in force 1836) and in Tennessee through the 1834 constitution (adopted by convention 1834; I believe ratified by voters in March 1835). The lesson's 1835/1834 match the data and common usage, but I could not confirm ratification dates from a state source (the Tennessee SOS civics page doesn't give them).",
+    "When Virginia's property/tax qualifications finally ended (commonly given as the 1851 constitution); the WV Archives page confirms only the 1830 terms.",
+    "Rules for the states the fact-check itself could not read from primary text (Delaware 1792, Louisiana 1812, Missouri 1820, South Carolina 1810, Rhode Island 1822, New Jersey 1807 taxpayer clause, the NC statute on who voted for electors). The lesson does not lean on their details beyond the classes."
+  ]
+}

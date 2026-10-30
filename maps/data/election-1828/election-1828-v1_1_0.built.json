@@ -1,0 +1,14 @@
+{
+ "tool": "Election 1828 data builder 1.0",
+ "when": "2026-10-30T17:55:45Z",
+ "sha1": "a0b1a41a5c8a097c9c69e347e0c6c8adfdfdc6b4",
+ "features": 24,
+ "naturalEarth": {
+  "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_admin_1_states_provinces.geojson",
+  "sha1": "9dc46fc9dc36cf322dd14c245ef18be8fbf97ed0"
+ },
+ "totals": {
+  "Jackson": 178,
+  "Adams": 83
+ }
+}

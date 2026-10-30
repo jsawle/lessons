@@ -1,26 +1,108 @@
 {
   "format": "Data publish 1.0",
   "id": "election-1828",
-  "version": "1.0.0",
-  "file": "maps/data/election-1828/election-1828-v1_0_0.geojson",
+  "version": "1.1.0",
+  "file": "maps/data/election-1828/election-1828-v1_1_0.geojson",
   "expectFeatures": 24,
   "note": "Today's state outlines, with West Virginia shown as part of Virginia, as it was in 1828. Territories are not shown.",
   "checks": [
-    {"name": "New York split 20 Jackson, 16 Adams", "where": {"Abbr": "NY"}, "expect": {"Jackson1828": 20, "Adams1828": 16, "Electors": 36}},
-    {"name": "Maryland split 5 Jackson, 6 Adams", "where": {"Abbr": "MD"}, "expect": {"Jackson1828": 5, "Adams1828": 6}},
-    {"name": "Maine split 1 Jackson, 8 Adams", "where": {"Abbr": "ME"}, "expect": {"Jackson1828": 1, "Adams1828": 8}},
-    {"name": "Pennsylvania 28 Jackson", "where": {"Abbr": "PA"}, "expect": {"Jackson1828": 28, "Adams1828": 0}},
-    {"name": "South Carolina electors chosen by the legislature", "where": {"Abbr": "SC"}, "expect": {"ElectorsChosenBy": "The state legislature"}},
-    {"name": "Virginia: white men had to own property", "where": {"Abbr": "VA"}, "expect": {"WhiteMen": "Had to own property"}},
-    {"name": "Tennessee: free Black men could vote", "where": {"Abbr": "TN"}, "expect": {"BlackMen": "Could vote"}}
+    {
+      "name": "New York split 20 Jackson, 16 Adams",
+      "where": {
+        "Abbr": "NY"
+      },
+      "expect": {
+        "Jackson1828": 20,
+        "Adams1828": 16,
+        "Electors": 36
+      }
+    },
+    {
+      "name": "Maryland split 5 Jackson, 6 Adams",
+      "where": {
+        "Abbr": "MD"
+      },
+      "expect": {
+        "Jackson1828": 5,
+        "Adams1828": 6
+      }
+    },
+    {
+      "name": "Maine split 1 Jackson, 8 Adams",
+      "where": {
+        "Abbr": "ME"
+      },
+      "expect": {
+        "Jackson1828": 1,
+        "Adams1828": 8
+      }
+    },
+    {
+      "name": "Pennsylvania 28 Jackson",
+      "where": {
+        "Abbr": "PA"
+      },
+      "expect": {
+        "Jackson1828": 28,
+        "Adams1828": 0
+      }
+    },
+    {
+      "name": "South Carolina electors chosen by the legislature",
+      "where": {
+        "Abbr": "SC"
+      },
+      "expect": {
+        "ElectorsChosenBy": "The state legislature"
+      }
+    },
+    {
+      "name": "Virginia: white men had to own property",
+      "where": {
+        "Abbr": "VA"
+      },
+      "expect": {
+        "WhiteMen": "Had to own property"
+      }
+    },
+    {
+      "name": "Tennessee: free Black men could vote",
+      "where": {
+        "Abbr": "TN"
+      },
+      "expect": {
+        "BlackMen": "Could vote"
+      }
+    },
+    {
+      "name": "Virginia: 1830 loosened, not ended",
+      "where": {
+        "Abbr": "VA"
+      },
+      "expect": {
+        "WhiteMenRule": "Had to own 25 acres with a house, 50 acres of unimproved land, or a town lot with a house (law of 1785). A new constitution in 1830 loosened the rule."
+      }
+    }
   ],
   "item": {
-    "title": "Election of 1828 and the right to vote, by state (data for lessons) v1.0",
+    "title": "Election of 1828 and the right to vote, by state (data for lessons) v1.1",
     "snippet": "Electoral votes for Andrew Jackson and John Quincy Adams in 1828, how each state chose its electors, and who could vote there, for the 24 states of 1828.",
     "description": "<p>One polygon for each of the 24 states in the election of 1828, made for US History map lessons. Electoral votes are from the National Archives (archives.gov/electoral-college/1828). How each state chose its presidential electors, and who could vote there (property and tax rules for white men, and whether free Black men could vote), were researched from state constitutions and laws and checked independently; each state's main source is in RulesSource and RulesSourceURL.</p><p>Women could not vote in any state in 1828 (New Jersey ended women's voting in 1807). Today's state outlines from Natural Earth, with West Virginia shown as part of Virginia; territories are not shown.</p>",
-    "tags": ["US History", "election of 1828", "Andrew Jackson", "suffrage", "right to vote", "Age of Jackson", "grade 8"],
+    "tags": [
+      "US History",
+      "election of 1828",
+      "Andrew Jackson",
+      "suffrage",
+      "right to vote",
+      "Age of Jackson",
+      "grade 8"
+    ],
     "credits": "Electoral votes: National Archives. Voting rules: state constitutions and laws as cited in each record. Outlines: Natural Earth (public domain).",
     "license": "Facts from public records; state outlines from Natural Earth (public domain). Text written for this layer is original."
   },
-  "publish": {"org": "HNLEA4GfnbCFQZGa", "orgLabel": "GIS for Schools", "folder": "Map data"}
+  "publish": {
+    "org": "HNLEA4GfnbCFQZGa",
+    "orgLabel": "GIS for Schools",
+    "folder": "Map data"
+  }
 }

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Map builder 1.2: turns a map spec (maps/specs/<id>.json, Map spec 1.0) into the web map ArcGIS Online stores.
+"""Map builder 1.3: turns a map spec (maps/specs/<id>.json, Map spec 1.0) into the web map ArcGIS Online stores.
 
 Reads only public ArcGIS Online content; signs in to nothing. For each spec it:
   - checks the spec against its lesson (layer names, which layers start off, bookmarks),
@@ -14,7 +14,7 @@ Exit code 1 if any spec has errors (nothing is written for that spec).
 import copy, datetime, hashlib, json, math, re, sys, urllib.parse, urllib.request
 from pathlib import Path
 
-VERSION = "1.2"
+VERSION = "1.3"
 SPEC_FORMAT = "Map spec 1.0"
 PORTAL = "https://www.arcgis.com/sharing/rest"
 ROOT = Path(__file__).resolve().parents[2]
@@ -89,9 +89,11 @@ def symbol(s, errors):
         other = s.get("other", {"label": "Other", "color": "#AAAAAA"})
         r = {"type": "pieChart",
              "attributes": [{"field": a["field"], "label": a["label"], "color": color(a["color"])} for a in s["slices"]],
-             "defaultColor": color(other["color"]), "defaultLabel": other["label"], "holePercentage": s.get("hole", 0),
-             "othersCategory": {"color": color(other["color"]), "label": other["label"], "threshold": 0},
+             "holePercentage": s.get("hole", 0),
              "outline": line(s.get("outline", {"color": "#FFFFFF", "width": 1})), "size": z["from"][1], "visualVariables": [vv]}
+        if other:  # "other": false leaves the Other slice and its legend entry out (when every vote is in a named slice)
+            r.update({"defaultColor": color(other["color"]), "defaultLabel": other["label"],
+                      "othersCategory": {"color": color(other["color"]), "label": other["label"], "threshold": 0}})
         if s.get("background"):
             b = s["background"]
             r["backgroundFillSymbol"] = {"type": "esriSFS", "style": "esriSFSSolid", "color": color(b["color"])}

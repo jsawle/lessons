@@ -1,0 +1,75 @@
+{
+  "persona": "S3",
+  "findings": [
+    {
+      "where": "Map, Free Black men and the vote, 1828 layer: Jackson pies on 'could not vote' states (Ohio, Indiana, Illinois, Kentucky, Virginia, Missouri, the Deep South, the Jackson half of Maryland). Seen in reveal-black-men.jpg and reveal-black-men-deuteranopia-simulated.jpg",
+      "what": "Jackson blue #0072B2 sits on dark purple #5E3C99. In the deuteranopia simulation both come out as almost the same mid blue (sampled: Virginia pie 59,101,173 and Virginia fill 80,105,161; lightness contrast about 1.06:1). The pies show only as a thin white ring and the smaller ones (Illinois, Missouri, Louisiana, Mississippi, Alabama) all but disappear. Even with normal vision the lightness contrast is only about 1.04:1.",
+      "whyItMattersToEli": "Purple and blue both look blue to Eli, so in this layer the Jackson pies in 12 states (11 plus the Jackson half of Maryland) blend into the shading. He loses where Jackson won and how big each pie is just when he has to compare who could vote with who won (question 4 and the final answer, which uses all three layers).",
+      "severity": "high",
+      "suggestedChange": "Move the 'could not vote' class off the blue-purple hues: for example a neutral grey ramp (cream, mid grey, dark grey), which stays clear of both blue and orange pies, or keep purple but give the pies a thick dark-and-white outline. A light hatch on the 'could not vote' class would also give a cue that does not depend on colour.",
+      "needsLiveMap": false,
+      "quote": "turn on Free Black men and the vote, 1828"
+    },
+    {
+      "where": "Map, White men and the vote, 1828 layer: Adams pies on 'pay a tax' states (Connecticut, Massachusetts, New Jersey, Delaware). reveal-white-men.jpg and the deuteranopia version",
+      "what": "Adams orange #E69F00 sits on 'pay a tax' #E8A15B, which is nearly the same hue and lightness (sampled lightness contrast about 1.07:1 in both views). In the simulation the pie is mustard and the fill is khaki, and they differ only in saturation. Only the thin white pie outline separates them.",
+      "whyItMattersToEli": "Eli's cue for telling things apart is lightness, and here there is none. In New England, where pies cover most of each small state, he can hardly tell where the pie ends and the shading starts, or which shade the state has underneath.",
+      "severity": "medium",
+      "suggestedChange": "Make the middle 'pay a tax' class clearly darker or lighter than the Adams orange, or move the White men ramp away from orange (for example a grey or brown-grey ramp). Alternatively, thicken the pie outline in a dark colour.",
+      "needsLiveMap": false,
+      "quote": "Use the legend: light means no property or tax rule, middle means had to pay a tax, dark means had to own property."
+    },
+    {
+      "where": "Map, White men layer: Rhode Island (dark, 'had to own property')",
+      "what": "Rhode Island is tiny and its Adams pie covers almost all of it. In the pictures no dark shading can be seen there. Virginia is the only state that clearly shows as dark.",
+      "whyItMattersToEli": "Question 3a asks for two dark states. Eli is told to judge by lightness, and the second dark state is hidden under a pie, so he can only find one. He may decide he is misreading the shades because of his colour vision.",
+      "severity": "medium",
+      "suggestedChange": "Offset the Rhode Island pie (and Delaware's) into the sea with a leader line, or add a small text label such as 'RI: own property'. Hatching the 'own property' class would also help.",
+      "needsLiveMap": true,
+      "quote": "Which two states made white men own property?"
+    },
+    {
+      "where": "Pop-ups (all states)",
+      "what": "The pop-up gives the rule in words but never names the map class it is shaded as. Per popups.txt, the shading class is not among the pop-up lines. South Carolina is the clearest case: its text mentions owning 50 acres, yet it is shaded 'no property or tax rule'.",
+      "whyItMattersToEli": "The shade is the only way to tell the class on the map, so Eli has no way that does not rely on colour to check whether a state is light, middle or dark. Where the text and the shade seem to disagree (South Carolina, Tennessee, New Jersey), he cannot tell whether he has misread the colour.",
+      "severity": "medium",
+      "suggestedChange": "Add one line to each pop-up, e.g. 'On the map: middle shade, had to pay a tax' for White men and the same for Free Black men, matching the legend wording.",
+      "needsLiveMap": false,
+      "quote": "Click a dark state and a light state and read White men in each pop-up."
+    },
+    {
+      "where": "Map, selected state highlight (south-carolina.jpg, tennessee.jpg, virginia.jpg)",
+      "what": "The cyan selection highlight tints the state's fill while its pop-up is open. Purple South Carolina turns mid blue, cream Tennessee turns mint, and brown Virginia turns grey-green.",
+      "whyItMattersToEli": "When Eli clicks a state to check its shade against the legend, the state he clicked no longer looks like any legend swatch. With his colour vision the tinted fills are even harder to match.",
+      "severity": "low",
+      "suggestedChange": "Set the highlight to an outline only, with no fill or a fill of 0 opacity, so the class shading stays true while the pop-up is open.",
+      "needsLiveMap": false,
+      "quote": "Find the light states (could vote)."
+    },
+    {
+      "where": "Legend panel",
+      "what": "The pie legend fills the top of the panel. Below it only the heading of the shading legend ('White men and the vote, 1828' / 'Free Black men and the vote, 1828') shows, and the swatches have to be scrolled to. The pictures do not show the shading swatches or their labels.",
+      "whyItMattersToEli": "Eli depends on the legend's words and their light-to-dark order more than other students do. On a Chromebook screen, a legend he has to scroll is easy to miss, and he may not realise the swatches are there.",
+      "severity": "low",
+      "suggestedChange": "Check on a Chromebook that each swatch has its text label and that the swatches run light to dark. Consider adding 'scroll the legend to see the shading key' to the sheet step, or shrinking the pie legend.",
+      "needsLiveMap": true,
+      "quote": "Use the legend"
+    },
+    {
+      "where": "Student sheet, question 1 step 3",
+      "what": "'two-color pies' picks out the split states by colour alone. Everywhere else the sheet pairs a colour with a name (blue = Jackson, orange = Adams).",
+      "whyItMattersToEli": "Blue and orange stay distinct for Eli (orange looks mustard to him), so this one is minor. Still, naming by colour alone is the habit he has to work around, and on the tiny Maine pie the second colour is a sliver.",
+      "severity": "low",
+      "suggestedChange": "Write 'Click the pies split between Jackson and Adams (New York, Maryland, Maine)' or 'the pies with two parts'.",
+      "needsLiveMap": false,
+      "quote": "Click the two-color pies"
+    }
+  ],
+  "works": [
+    "Blue vs orange pies are a colour-blind-safe pair: in the deuteranopia simulation they stay blue vs yellow and are easy to tell apart, and the legend names each candidate.",
+    "Each shading layer uses clear light / middle / dark lightness steps that survive the deuteranopia simulation (cream, khaki, olive for White men; cream, pale blue, mid blue for Free Black men).",
+    "The student sheet and the teacher's 'From the front' steps describe the shading as light / middle / dark with its meaning, never as 'the red one' or 'the purple states', and 'light means fewer limits' is consistent across both layers.",
+    "Layers are turned on one at a time, so Eli never has to separate two shading ramps at once.",
+    "State names are labelled on the map and the pop-ups give the full rule in words, so the answers can be checked from text."
+  ]
+}

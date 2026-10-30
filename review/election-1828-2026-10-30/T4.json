@@ -1,0 +1,139 @@
+{
+  "persona": "T4",
+  "findings": [
+    {
+      "where": "Map labels (all layers) vs steps in Q1, Q3, Q4, Q5, Q6",
+      "what": "In the pictures at the opening extent, several states the sheet names have no visible label. The big pies cover the Pennsylvania label (only an 'S' shows) and the Virginia label. Delaware, New Jersey, Connecticut, Rhode Island, New Hampshire and Maryland show no label, and Maine's label is cut off ('MAIN'). The steps say 'Click Pennsylvania', 'Click South Carolina and Delaware', and the answers need Maryland (Q1c), Rhode Island (Q3a) and New Hampshire (Q4a).",
+      "whyItMattersToAna": "Many of her English learners are newer arrivals who don't yet know where US states are. When the label isn't on the map, the only way to find a state is to click around and read pop-up titles. Delaware is the hardest: it is tiny and has no label.",
+      "severity": "slows it down",
+      "suggestedChange": "Put state labels above or beside the pies so the pies don't cover them, or make labels show at the bookmark zoom. In the steps, add a short location hint: 'Delaware (the small state south of New Jersey)', 'Pennsylvania (the big blue pie next to New York)'. Or add a Mid-Atlantic bookmark for Q5 and Q6.",
+      "needsLiveMap": true,
+      "quote": "Click South Carolina and Delaware and read Who chose the electors."
+    },
+    {
+      "where": "Q4 step 2 and the Free Black men layer colours",
+      "what": "In this layer the 'light' class is cream, the 'middle' class is light purple (lavender) and the 'dark' class is dark purple. The sheet says 'Find the light states (could vote)'. To a student, the lavender states (New York, Pennsylvania) look 'light' too.",
+      "whyItMattersToAna": "English learners follow the literal word. 'Light' could mean the light purple states, which leads to the wrong six states in Q4(a). The legend that would settle it sits below the fold (see the next finding).",
+      "severity": "slows it down",
+      "suggestedChange": "Name the colour as well as the class, or quote the legend label: 'Find the cream (palest) states: Could vote.' Say 'light purple' for the middle class. Do the same in Q3 (cream / orange-tan / dark brown).",
+      "needsLiveMap": false,
+      "quote": "Find the light states (could vote)."
+    },
+    {
+      "where": "Legend panel, Q3 step 2 and Q4",
+      "what": "In the pictures the pie legend fills the legend panel. Only the title of the shading legend ('White men and the vote, 1828' or 'Free Black men and the vote, 1828') shows at the bottom, so its classes are out of view. The sheet says 'Use the legend' and doesn't say to scroll inside the legend.",
+      "whyItMattersToAna": "Her students match the sheet's words to the words on screen. If they can't see the legend's class labels, they can't check what 'middle' or 'dark' means, and they will ask her.",
+      "severity": "slows it down",
+      "suggestedChange": "Add 'scroll down in the legend to see this layer's colours' to Q3 step 2. Or collapse or shrink the pie legend once the rule layers are on.",
+      "needsLiveMap": true,
+      "quote": "Use the legend: light means no property or tax rule, middle means had to pay a tax, dark means had to own property."
+    },
+    {
+      "where": "Pop-ups: Tennessee and South Carolina 'White men' (light, 'no rule' states); Q3 step 3",
+      "what": "Both states are shaded 'No property or tax rule', but their pop-up text opens with a property condition. Tennessee: 'Own land in the county, or have lived there six months ... so no property was needed.' South Carolina: 'own 50 acres or a town lot, or have lived in the district six months'. Q3 tells students to click 'a light state' and read White men.",
+      "whyItMattersToAna": "An English learner reads the first words ('Own land', 'own 50 acres') and concludes that property was required, which contradicts the shading. The 'or ... so no property was needed' logic is hard to decode in a second language.",
+      "severity": "slows it down",
+      "suggestedChange": "Lead with the meaning: 'No property needed. A man could vote if he had lived in the county six months (or if he owned land there).' Same pattern for South Carolina.",
+      "needsLiveMap": false,
+      "quote": "Own land in the county, or have lived there six months (Constitution of 1796), so no property was needed."
+    },
+    {
+      "where": "Pop-ups students are sent to (New York, Pennsylvania, Indiana, Delaware, Rhode Island, any 'light' state)",
+      "what": "The pop-ups use dense legal and source-hedging language: 'McPherson v. Blacker, 1892', 'one 1892 court opinion says by districts', 'sons of voters aged 21 or 22 were excused', 'Philadelphia among them', 'from historians' accounts; the text of the law wasn't found', 'the clause wasn't checked in the original', 'paupers', 'unimproved land', 'enrolled in the militia'.",
+      "whyItMattersToAna": "Students read at least seven pop-ups. The source hedges and court citations sit in the same sentences as the facts students need, so English learners can't tell the answer from the caveat. This is the main reading load in a 60-minute lesson.",
+      "severity": "slows it down",
+      "suggestedChange": "Keep one plain fact sentence per field. Move hedges and court citations into a separate 'About the sources' line at the end of the pop-up, above the Source link. For example, New York 'Who chose the electors: Voters, by districts.' and then 'Note: the district electors chose two more (McPherson v. Blacker, 1892).'",
+      "needsLiveMap": false,
+      "quote": "Voters, statewide (a law of 1824 set this; one 1892 court opinion says by districts)."
+    },
+    {
+      "where": "Key words (lesson page and teacher notes) vs student sheet and pop-ups",
+      "what": "The key words list has 'property requirement', 'taxpayer' and 'Jacksonian democracy', but none of these appears on the student sheet or in the pop-ups. Words students do have to understand are missing from the list: 'the common man', 'expanded', 'split', 'militia', 'constitution', 'amendment', 'shut out', 'in practice'. 'Legislature' is in Q5's expected answer and the pop-ups, but the sheet doesn't define it. Only 'suffrage' is defined.",
+      "whyItMattersToAna": "She pre-teaches vocabulary from the key words list. As written, she would pre-teach words her students never meet and leave out the ones that block them in the pop-ups and questions.",
+      "severity": "slows it down",
+      "suggestedChange": "Change the key words to the words students actually meet: elector, suffrage, legislature, property, tax, militia, constitution or amendment, 'the common man' (an ordinary man, not rich). Add a short glossary box on the sheet under Before you start, with one plain line each.",
+      "needsLiveMap": false,
+      "quote": "Key words: suffrage, elector, property requirement, taxpayer, legislature, Jacksonian democracy."
+    },
+    {
+      "where": "Student sheet, Before you start",
+      "what": "Background says 'own land', but the legend, steps and questions all say 'own property'. Nothing tells students these mean the same thing here.",
+      "whyItMattersToAna": "English learners treat different words as different ideas. 'Land' and 'property' aren't obviously the same, and 'property' is the word on the map.",
+      "severity": "minor",
+      "suggestedChange": "Write 'Some states made men own property (land or a house) or pay a tax to vote.'",
+      "needsLiveMap": false,
+      "quote": "Some states made men own land or pay a tax to vote."
+    },
+    {
+      "where": "Student sheet, Your answer",
+      "what": "The whole big question, including its own question mark, is placed inside a longer instruction sentence ('...where you lived?, using evidence...').",
+      "whyItMattersToAna": "This is a hard sentence to parse in a second language: the instruction is split by a 23-word embedded question ending in '?,'. Students may lose what they are being asked to do.",
+      "severity": "minor",
+      "suggestedChange": "Split it up: 'Answer the big question (at the top of page 1). Use evidence from all three layers and at least two pop-ups. Then write one \"why\" question about the map.' Add a sentence frame: 'In 1828, who could vote depended on ___. For example, in ___ ...'",
+      "needsLiveMap": false,
+      "quote": "Answer the big question, Andrew Jackson's election in 1828 is often called a victory for the common man. Who could vote in 1828, and did it depend on where you lived?, using evidence"
+    },
+    {
+      "where": "Q6(c)",
+      "what": "The question has a garden-path structure. 'What else would you need to know how many people actually voted' reads first as 'what else would you need to know', and then 'how many people' doesn't fit.",
+      "whyItMattersToAna": "English learners parse word by word. The missing 'in order to' / 'to find out' makes the question confusing and hard to translate.",
+      "severity": "minor",
+      "suggestedChange": "Write 'What other information would you need to find out how many people really voted in 1828?'",
+      "needsLiveMap": false,
+      "quote": "What else would you need to know how many people actually voted in 1828?"
+    },
+    {
+      "where": "Looking back",
+      "what": "The prompt is one long sentence: an opening participle phrase, a 'who could vote' clause, and a 'that a list ... would not show' relative clause.",
+      "whyItMattersToAna": "With three clauses in one sentence, English learners can't tell what the question asks. It is also hard to translate cleanly.",
+      "severity": "minor",
+      "suggestedChange": "Write 'You turned on the rule layers one at a time. What did you learn about who could vote? Why can't a list of election results show this?'",
+      "needsLiveMap": false,
+      "quote": "Turning on the rules one layer at a time, what did you notice about who could vote that a list of election results would not show?"
+    },
+    {
+      "where": "Q3(c), Q4(b), Q5(b), Q6(a)",
+      "what": "Only Q2 has a sentence frame ('I predict ___ because ___'). The compare and explain questions have none. Q5(b) also uses 'expanded' and the past perfect 'had gained' with no support.",
+      "whyItMattersToAna": "Her English learners can often see the pattern on the map but stall when writing the comparison. Frames are the usual support she would add by hand.",
+      "severity": "slows it down",
+      "suggestedChange": "Add short frames. Q4(b): 'In New York, white men ___, but Black men ___.' Q5(b): 'By 1828, ___ could vote, but ___ could not.' Gloss 'expanded (grew to include more people)'.",
+      "needsLiveMap": false,
+      "quote": "Using the map, who had gained the right to vote by 1828, and who had not?"
+    },
+    {
+      "where": "Legend, Election of 1828: electors' votes",
+      "what": "The pie legend lists a grey 'Other' category that no state has.",
+      "whyItMattersToAna": "Literal readers look for grey pies and wonder what they missed.",
+      "severity": "minor",
+      "suggestedChange": "Remove 'Other' from the pie legend.",
+      "needsLiveMap": false,
+      "quote": "Other"
+    }
+  ],
+  "works": [
+    "The pop-up field labels on the map ('Who chose the electors', 'White men', 'Free Black men') match the words the steps tell students to read. Students can match the sheet to the screen.",
+    "The layer names on the sheet match the legend headers on the map exactly ('White men and the vote, 1828', 'Free Black men and the vote, 1828').",
+    "'Before you start' is short, in plain sentences, and defines suffrage and electors before they are used.",
+    "The sheet repeats what light, middle and dark mean, so students aren't fully dependent on the legend.",
+    "The steps are concrete ('Click the two-color pies', 'the sentence about women at the end of any pop-up'), and the 'Appalachian Mountains' in Q2 is labelled on the basemap.",
+    "Q2's 'I predict ___ because ___' frame, the 1-of-2 tip, and the Support idea of giving pairs a list of the six states all help English learners."
+  ],
+  "notesForSpanish": [
+    "The map and pop-ups stay in English. Keep every layer, bookmark, legend and pop-up label in English exactly as it appears on screen ('White men and the vote, 1828', 'The 24 states of 1828', 'Who chose the electors', 'Map layers', 'Legend'), with a Spanish gloss in parentheses after it, so students can still match the sheet to the screen.",
+    "'Elector' is a false friend: in everyday Spanish 'elector' means any voter. Use 'compromisario' or 'miembro del Colegio Electoral', and define it once in Antes de empezar. Keep 'votantes' for voters.",
+    "'Free Black men': 'libre' means not enslaved, never 'gratis'. Use one term throughout, for example 'hombres negros libres', and don't use 'de color'. Spanish doesn't capitalise 'negro'; decide whether to follow Spanish style or match the English capital B, and be consistent.",
+    "Virginia's pop-up quotes 'free negroes or mulattoes' from the 1785 law. If the sheet refers to it, keep the English quote as a primary-source quotation and add a teacher-facing note, rather than translating it into modern Spanish terms that carry different connotations.",
+    "Use one word for 'rule' in the sense of requirement ('requisito de propiedad', 'requisito de impuestos'). Don't switch between 'regla', 'ley' and 'requisito'. 'No property or tax rule' means 'sin requisito de propiedad ni de impuestos'.",
+    "Keep 'property' and 'land' distinct and consistent: 'propiedad (tierras o una casa)' for property, 'tierras' for land, 'acres' for acres (the pop-ups use acres).",
+    "'Legislature': 'legislatura' can mean a term of office in some varieties of Spanish. Use 'la asamblea legislativa del estado' or 'el poder legislativo estatal'.",
+    "'Pies': avoid 'pasteles' or 'pays'. Use 'círculos' or 'gráficos circulares', with '(pies)' once. 'Pop-up': 'ventana emergente (pop-up)'. 'Bookmark': 'marcador (Bookmark)'. 'Click': 'haz clic'.",
+    "'Light / middle / dark' should be 'claro / intermedio / oscuro'. Also name the colour (crema, morado claro, morado oscuro; crema, naranja, marrón), because the English legend labels won't help Spanish readers.",
+    "'The common man': 'el hombre común' works, but keep it in quotation marks as a claim people made, and gloss it as '(una persona común, no rica)'.",
+    "'Split their electors': 'dividieron sus votos electorales entre los dos candidatos', not just 'dividieron'.",
+    "Q3(c) 'Did Jackson win only in states with no rule?': put 'solo' or 'solamente' so it modifies the states, not Jackson. '¿Ganó Jackson solamente en los estados sin requisito?'",
+    "Q5(b) 'had gained' becomes 'habían obtenido'. 'Expanded suffrage' is 'se amplió el sufragio (más personas podían votar)'.",
+    "Fix the English for 'Your answer', Q6(c) and Looking back before translating (see findings); a literal translation will carry over the same confusing structure.",
+    "Phrasal verbs on the sheet and in the pop-ups ('shut out', 'kept out', 'kept ... from voting', 'turn on/off'): render them as 'excluyó', 'impidieron votar', 'activa/desactiva (turn on/off)'. Consider a small English-Spanish word box for the pop-up words students will read in English: own, property, tax, militia, constitution, amendment, statewide, by districts, shut out, could not vote.",
+    "Spanish runs about 20 to 30 per cent longer than English. Check that the sheet still fits on two pages with writing space."
+  ]
+}

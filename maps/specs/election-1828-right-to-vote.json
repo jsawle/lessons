@@ -1,11 +1,12 @@
 {
   "format": "Map spec 1.0",
   "id": "election-1828-right-to-vote",
-  "version": "0.3.0",
+  "version": "0.4.0",
+  "lesson": "maps/lessons/election-1828-right-to-vote.json",
   "item": {
     "title": "The election of 1828 and the right to vote",
     "snippet": "How each state's electors voted in 1828, how each state chose them, and who could vote there: property and tax rules for white men, and whether free Black men could vote.",
-    "description": "<p><b>Question:</b> Andrew Jackson's victory in 1828 is often called a win for the common man. Who could vote in 1828, and did that differ from state to state?</p><p><b>What the map shows:</b> A pie on each of the 24 states shows how its electors voted: Andrew Jackson or John Quincy Adams, with bigger pies for more electors. The map opens on the votes. Two more layers, off when it opens, show who could vote in each state: whether white men had to own property or pay a tax, and whether free Black men could vote. Click a state for the votes, how its electors were chosen, the rules and the sources.</p><p><b>Notes:</b> Women could not vote in any state in 1828. Today's state outlines, with West Virginia shown as part of Virginia; territories are not shown. The rules were researched from state constitutions and laws and checked independently; where a rule rests on historians' accounts or sources differ, the pop-up says so.</p><p><b>Sources:</b> National Archives (Electoral College results, 1828); state constitutions and laws as cited in each pop-up; Natural Earth (state outlines); Esri basemap.</p><p><i>Version 0.3 (30 October 2026), draft.</i></p>",
+    "description": "<p><b>Question:</b> Andrew Jackson's victory in 1828 is often called a win for the common man. Who could vote in 1828, and did that differ from state to state?</p><p><b>What the map shows:</b> A pie on each of the 24 states shows how its electors voted: Andrew Jackson or John Quincy Adams, with bigger pies for more electors. The map opens on the votes. Two more layers, off when it opens, show who could vote in each state: whether white men had to own property or pay a tax, and whether free Black men could vote. Click a state for the votes, how its electors were chosen, the rules and the sources.</p><p><b>Notes:</b> Women could not vote in any state in 1828. Today's state outlines, with West Virginia shown as part of Virginia; territories are not shown. The rules were researched from state constitutions and laws and checked independently; where a rule rests on historians' accounts or sources differ, the pop-up says so.</p><p><b>Sources:</b> National Archives (Electoral College results, 1828); state constitutions and laws as cited in each pop-up; Natural Earth (state outlines); Esri basemap.</p><p><i>Version 0.4 (30 October 2026), draft.</i></p>",
     "tags": [
       "US History",
       "election of 1828",
@@ -72,6 +73,15 @@
         -66.5,
         47.6
       ]
+    },
+    {
+      "name": "The Middle Atlantic",
+      "extent": [
+        -80.5,
+        37.5,
+        -73.0,
+        42.2
+      ]
     }
   ],
   "layers": [
@@ -119,10 +129,7 @@
             "width": 0.8
           }
         },
-        "other": {
-          "label": "Other",
-          "color": "#AAAAAA"
-        }
+        "other": false
       },
       "popup": {
         "title": "{State} in 1828: {Electors} electors",
@@ -160,21 +167,21 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  255,
-                  242,
-                  204,
-                  200
+                  247,
+                  247,
+                  247,
+                  210
                 ],
                 "outline": {
                   "type": "esriSLS",
                   "style": "esriSLSSolid",
                   "color": [
-                    90,
-                    90,
-                    90,
+                    40,
+                    40,
+                    40,
                     255
                   ],
-                  "width": 0.8
+                  "width": 1
                 }
               }
             },
@@ -185,21 +192,21 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  201,
-                  160,
-                  220,
-                  200
+                  166,
+                  166,
+                  166,
+                  210
                 ],
                 "outline": {
                   "type": "esriSLS",
                   "style": "esriSLSSolid",
                   "color": [
-                    90,
-                    90,
-                    90,
+                    40,
+                    40,
+                    40,
                     255
                   ],
-                  "width": 0.8
+                  "width": 1
                 }
               }
             },
@@ -210,21 +217,21 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  94,
-                  60,
-                  153,
-                  200
+                  77,
+                  77,
+                  77,
+                  210
                 ],
                 "outline": {
                   "type": "esriSLS",
                   "style": "esriSLSSolid",
                   "color": [
-                    90,
-                    90,
-                    90,
+                    40,
+                    40,
+                    40,
                     255
                   ],
-                  "width": 0.8
+                  "width": 1
                 }
               }
             }
@@ -239,21 +246,21 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      255,
-                      242,
-                      204,
-                      200
+                      247,
+                      247,
+                      247,
+                      210
                     ],
                     "outline": {
                       "type": "esriSLS",
                       "style": "esriSLSSolid",
                       "color": [
-                        90,
-                        90,
-                        90,
+                        40,
+                        40,
+                        40,
                         255
                       ],
-                      "width": 0.8
+                      "width": 1
                     }
                   },
                   "values": [
@@ -268,21 +275,21 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      201,
-                      160,
-                      220,
-                      200
+                      166,
+                      166,
+                      166,
+                      210
                     ],
                     "outline": {
                       "type": "esriSLS",
                       "style": "esriSLSSolid",
                       "color": [
-                        90,
-                        90,
-                        90,
+                        40,
+                        40,
+                        40,
                         255
                       ],
-                      "width": 0.8
+                      "width": 1
                     }
                   },
                   "values": [
@@ -297,21 +304,21 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      94,
-                      60,
-                      153,
-                      200
+                      77,
+                      77,
+                      77,
+                      210
                     ],
                     "outline": {
                       "type": "esriSLS",
                       "style": "esriSLSSolid",
                       "color": [
-                        90,
-                        90,
-                        90,
+                        40,
+                        40,
+                        40,
                         255
                       ],
-                      "width": 0.8
+                      "width": 1
                     }
                   },
                   "values": [
@@ -323,7 +330,8 @@
               ]
             }
           ]
-        }
+        },
+        "why": "Gray, light to dark, so the shading stays apart from the blue and orange pies for readers with red-green colour vision deficiency (persona review, 30 Oct 2026)."
       },
       "popup": {
         "title": "{State} in 1828: {Electors} electors",
@@ -361,21 +369,21 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  255,
-                  242,
-                  204,
-                  200
+                  247,
+                  247,
+                  247,
+                  210
                 ],
                 "outline": {
                   "type": "esriSLS",
                   "style": "esriSLSSolid",
                   "color": [
-                    90,
-                    90,
-                    90,
+                    40,
+                    40,
+                    40,
                     255
                   ],
-                  "width": 0.8
+                  "width": 1
                 }
               }
             },
@@ -386,21 +394,21 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  232,
-                  161,
-                  91,
-                  200
+                  166,
+                  166,
+                  166,
+                  210
                 ],
                 "outline": {
                   "type": "esriSLS",
                   "style": "esriSLSSolid",
                   "color": [
-                    90,
-                    90,
-                    90,
+                    40,
+                    40,
+                    40,
                     255
                   ],
-                  "width": 0.8
+                  "width": 1
                 }
               }
             },
@@ -411,21 +419,21 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  140,
-                  59,
-                  12,
-                  200
+                  77,
+                  77,
+                  77,
+                  210
                 ],
                 "outline": {
                   "type": "esriSLS",
                   "style": "esriSLSSolid",
                   "color": [
-                    90,
-                    90,
-                    90,
+                    40,
+                    40,
+                    40,
                     255
                   ],
-                  "width": 0.8
+                  "width": 1
                 }
               }
             }
@@ -440,21 +448,21 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      255,
-                      242,
-                      204,
-                      200
+                      247,
+                      247,
+                      247,
+                      210
                     ],
                     "outline": {
                       "type": "esriSLS",
                       "style": "esriSLSSolid",
                       "color": [
-                        90,
-                        90,
-                        90,
+                        40,
+                        40,
+                        40,
                         255
                       ],
-                      "width": 0.8
+                      "width": 1
                     }
                   },
                   "values": [
@@ -469,21 +477,21 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      232,
-                      161,
-                      91,
-                      200
+                      166,
+                      166,
+                      166,
+                      210
                     ],
                     "outline": {
                       "type": "esriSLS",
                       "style": "esriSLSSolid",
                       "color": [
-                        90,
-                        90,
-                        90,
+                        40,
+                        40,
+                        40,
                         255
                       ],
-                      "width": 0.8
+                      "width": 1
                     }
                   },
                   "values": [
@@ -498,21 +506,21 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      140,
-                      59,
-                      12,
-                      200
+                      77,
+                      77,
+                      77,
+                      210
                     ],
                     "outline": {
                       "type": "esriSLS",
                       "style": "esriSLSSolid",
                       "color": [
-                        90,
-                        90,
-                        90,
+                        40,
+                        40,
+                        40,
                         255
                       ],
-                      "width": 0.8
+                      "width": 1
                     }
                   },
                   "values": [
@@ -524,7 +532,8 @@
               ]
             }
           ]
-        }
+        },
+        "why": "Gray, light to dark, so the shading stays apart from the blue and orange pies for readers with red-green colour vision deficiency (persona review, 30 Oct 2026)."
       },
       "popup": {
         "title": "{State} in 1828: {Electors} electors",
@@ -580,6 +589,7 @@
           "Andrew Jackson, 20 votes",
           "John Quincy Adams, 16 votes",
           "$250",
+          "only 298",
           "Women could not vote"
         ]
       }
@@ -617,7 +627,8 @@
       "expect": {
         "popupHas": [
           "Virginia in 1828: 24 electors",
-          "Had to own 25 acres"
+          "Had to own 25 acres",
+          "loosened"
         ]
       }
     },
@@ -678,6 +689,40 @@
           "Tennessee in 1828",
           "Could vote",
           "1834"
+        ]
+      }
+    },
+    {
+      "name": "delaware",
+      "question": "Explain why: the legislature chose",
+      "do": {
+        "bookmark": "The Middle Atlantic",
+        "open": {
+          "layer": "Election of 1828: electors' votes",
+          "where": "Abbr='DE'"
+        }
+      },
+      "expect": {
+        "popupHas": [
+          "Delaware in 1828: 3 electors",
+          "The state legislature",
+          "for state elections"
+        ]
+      }
+    },
+    {
+      "name": "georgia",
+      "question": "Explain why: first popular vote",
+      "do": {
+        "open": {
+          "layer": "Election of 1828: electors' votes",
+          "where": "Abbr='GA'"
+        }
+      },
+      "expect": {
+        "popupHas": [
+          "Georgia in 1828: 9 electors",
+          "for the first time"
         ]
       }
     }

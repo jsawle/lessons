@@ -1,0 +1,103 @@
+{
+  "persona": "T3",
+  "findings": [
+    {
+      "where": "Map (24 states view, all three pictures) and Teacher notes > Before class",
+      "what": "Several states the questions name have no visible label at the starting view: Virginia's label is covered by its pie (only an 'S' shows), and Pennsylvania, Ohio, Tennessee, North Carolina, Maryland, Delaware, New Jersey, Connecticut, Rhode Island and New Hampshire show no state name. The teacher notes say every state is labeled.",
+      "whyItMatters": "When Luis projects and the class follows on paper, students can only name states they can read on the screen. Q3(a) wants the two dark states (Virginia, plus Rhode Island, which is tiny), and the big question wants the tax states. So every answer waits for Luis to click each state and read out its name.",
+      "severity": "slows it down",
+      "suggestedChange": "Place state labels so the pies don't cover them (offset them, or put them in a halo below the pie), at least for the states the questions name. Correct the teacher note, or add a printed outline map of the 24 states with names to the sheet so pairs can mark the shading as Luis reveals it.",
+      "needsLiveMap": false,
+      "quote": "State names are labeled above the pies."
+    },
+    {
+      "where": "Q1 Notice: the result (From the front step 2 and sheet step 1; notice-votes.jpg)",
+      "what": "With the legend open, as the step says, the legend panel covers the Maine coast: Maine's pie sits against the panel edge and its label is cut to 'MAIN'. Maine's pie is 8 orange to 1 blue, so from a distance it looks all orange. Maryland's split pie is small and has no label.",
+      "whyItMatters": "Q1(c) asks for the three split states. Two of them, Maine and Maryland, are the hardest things to see on a projected screen, so students at the back with paper will say 'only New York'.",
+      "severity": "slows it down",
+      "suggestedChange": "In From the front, close the legend after reading it, or open the New England and New York bookmark for Maine, then click Maine and Maryland. Or name the three split states as a teacher step ('click New York, Maryland and Maine') and ask students what is different about them.",
+      "needsLiveMap": false,
+      "quote": "Open the legend: blue is Andrew Jackson, orange is John Quincy Adams"
+    },
+    {
+      "where": "Q3 and Q4 From the front step 2 (legend), reveal-white-men.jpg and reveal-black-men.jpg",
+      "what": "The legend panel shows the pie legend first. The shading key for the layer just turned on sits below it, and in the pictures only its title is visible ('White men and the vote, 1828'). The step says 'Open the legend: light is…' but the key Luis needs isn't on the screen until he scrolls inside the panel.",
+      "whyItMatters": "Luis is the only one at the device. If the legend shown is the wrong one, the reveal moment stalls while he looks for the shading key, and the class sees only pie symbols.",
+      "severity": "minor",
+      "suggestedChange": "Add 'scroll down in the legend to White men and the vote, 1828' to the step, or set the legend so the pie legend can collapse or the shading layers come first. The sheet's own light/middle/dark key already covers paper users.",
+      "needsLiveMap": false,
+      "quote": "Open the legend: light is no property or tax rule, middle is had to pay a tax, dark is had to own property."
+    },
+    {
+      "where": "Q5 Explain why (Delaware), Q3 (Rhode Island): clicking small states",
+      "what": "Delaware and Rhode Island are tiny at the 24 states view and sit under or beside other states' pies (Maryland and New Jersey near Delaware; Connecticut and Massachusetts near Rhode Island). No bookmark covers Delaware, and Q3 doesn't send students to the New England bookmark for Rhode Island.",
+      "whyItMatters": "Students on phones or shared Chromebooks will tap the wrong state or the neighbouring pie, or get a '1 of 2' pop-up, and lose minutes in a 45-minute period. From the front, Luis has to zoom by hand.",
+      "severity": "slows it down",
+      "suggestedChange": "Add a 'Middle Atlantic' bookmark (Delaware, Maryland, New Jersey, Pennsylvania) and put it in the Q5 and Q6 steps. In Q3 add 'open the New England and New York bookmark to find Rhode Island'.",
+      "needsLiveMap": true,
+      "quote": "Click South Carolina and Delaware and read Who chose the electors."
+    },
+    {
+      "where": "Inquiry intro and Q4 'If you only do one'",
+      "what": "Q4 is billed as reaching the big question on its own in 15 minutes, but Q4(c) compares 'this layer and the last one' (the white men layer from Q3), and the big question asks for evidence from all three layers.",
+      "whyItMatters": "On a day with no cart, or a short period, Luis reaches for the one-question option. As written, it still depends on Q3, and students can't meet the big question's evidence rule.",
+      "severity": "slows it down",
+      "suggestedChange": "In Q4 From the front, add a step to turn White men back on briefly for the comparison. In the intro, say what the big question asks for when only Q4 is done (for example, evidence from two layers and New York's pop-up).",
+      "needsLiveMap": false,
+      "quote": "The one marked If you only do one gets to the big question on its own in about 15 minutes."
+    },
+    {
+      "where": "Timing for 45-minute periods (two-part option)",
+      "what": "Part 1 (Q1 to 4) adds up to 36 minutes. Part 2 lists Q5 (8) and Q6 (6), but the big question and Looking back have no time given.",
+      "whyItMatters": "Luis books the cart a week ahead and needs to know whether Part 2 needs devices at all. Q5 and Q6 are pop-up reading he can do from the projector, so Day 2 might not need the cart if he knew the writing time.",
+      "severity": "minor",
+      "suggestedChange": "Give a time for the big question and Looking back. Note that Q5, Q6 and the big question can run from one projected screen with students writing on paper, so a second cart booking is optional.",
+      "needsLiveMap": false,
+      "quote": "About 60 minutes, or two parts: questions 1 to 4, then 5, 6 and the big question"
+    },
+    {
+      "where": "Q5 Explain why: front-of-class step vs student sheet",
+      "what": "The front step for Indiana says to read when its constitution was written. The sheet says to read White men and Free Black men.",
+      "whyItMatters": "When Luis projects and pairs follow the paper, he and the sheet ask for different things, and students write the wrong detail.",
+      "severity": "minor",
+      "suggestedChange": "Make both say the same thing, for example 'Click Indiana and read White men and Free Black men (Constitution of 1816)'.",
+      "needsLiveMap": false,
+      "quote": "Click Indiana and read when its constitution was written."
+    },
+    {
+      "where": "South Carolina pop-up, White men line (used in Q3 'click a light state')",
+      "what": "South Carolina is shaded light (no property or tax rule), but its pop-up starts 'own 50 acres or a town lot'. The 'or lived in the district six months' alternative comes after, with no wrap-up. Tennessee's pop-up says outright 'so no property was needed'; South Carolina's doesn't.",
+      "whyItMatters": "Pairs who click South Carolina as their light state will read a property rule and decide the map is wrong. On one screen, that becomes a whole-class detour.",
+      "severity": "minor",
+      "suggestedChange": "Add to South Carolina's pop-up: '…so a man with no property could vote if he had lived there six months.'",
+      "needsLiveMap": false,
+      "quote": "For state elections: own 50 acres or a town lot, or have lived in the district six months (1810 amendment)."
+    },
+    {
+      "where": "Pop-up selection highlight (virginia.jpg, south-carolina.jpg, tennessee.jpg)",
+      "what": "Clicking a state replaces its shading with a highlight colour while the pop-up is open. Dark-brown Virginia turns grey-green, South Carolina turns blue, Tennessee turns turquoise.",
+      "whyItMatters": "Q3 says 'click a dark state'. On the projector, the class sees the state change to a new colour that isn't in the legend, which confuses students reading shading from paper.",
+      "severity": "minor",
+      "suggestedChange": "Use an outline-only selection highlight on the rule layers so the fill stays visible, or add a sheet tip: 'A clicked state is outlined in blue-green; close the pop-up to see its shading again.'",
+      "needsLiveMap": true,
+      "quote": "Click a dark state and a light state and read White men in each pop-up."
+    },
+    {
+      "where": "Support and stretch > Stretch (New York source link)",
+      "what": "The stretch task depends on opening an outside source site from the pop-up. The lesson's sources include Avalon, NCpedia, 50 Constitutions and similar sites, any of which district filtering may block.",
+      "whyItMatters": "In Luis's district, the extension task for a fast pair may simply not load.",
+      "severity": "minor",
+      "suggestedChange": "Quote the exact words of New York's 1821 $250 clause in the teacher notes, so the stretch can be done from print.",
+      "needsLiveMap": true,
+      "quote": "Open the source link in New York's pop-up and find the words that set the $250 rule"
+    }
+  ],
+  "works": [
+    "Every question has From the front steps, so the whole lesson can be taught from one projected screen.",
+    "Predict (Q2) is done on paper before any layer is turned on, which suits pairs without a device.",
+    "The sheet's Reading the map key (blue/orange pies; light means fewer limits, dark means more) lets paper-only students read the projected shading.",
+    "Each state's pop-up is the same from any layer, so Q5 and Q6 work whatever layers are on, which suits Day 2 of a split.",
+    "The two-part split fits 45-minute periods better than one 60-minute block.",
+    "The pop-ups are rich enough to read aloud (New York's $250 and 298 qualified; Pennsylvania's law vs practice). The note about the language in Virginia's quoted law prepares the teacher before students read it."
+  ]
+}

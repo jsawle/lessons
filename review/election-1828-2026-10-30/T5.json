@@ -1,0 +1,102 @@
+{
+  "persona": "T5",
+  "findings": [
+    {
+      "where": "Answer notes Q4 accept (c) and the level-4 model answer (answer page and Word teacher notes)",
+      "what": "The key says every newer western state shut free Black men out. The map shows Tennessee light (could vote until 1834), and the sheet's Q2 defines newer states as those west of the Appalachians, which includes Tennessee. Q4(c) only works because it names four states and leaves out Tennessee. Q3 accept (b) also says the light states are 'mostly' newer western ones, but the list is 6 western and 6 eastern (ME, NH, VT, NY, MD, SC).",
+      "whyItMatters": "The model answer is the text Ruth would show a reviewer as the 'right' answer, and it contradicts the map. A careful student will catch it, and so will a reviewer. That undermines a lesson whose whole point is reading evidence carefully.",
+      "severity": "slows it down",
+      "suggestion": "Model answer: 'every newer western state except Tennessee (until 1834) shut them out'. Q4 accept (c): add 'Tennessee is the exception until 1834'. Q3 accept (b): 'about half in the newer West and South, half in the North and East'.",
+      "needsLiveMap": false,
+      "quote": "every newer western state shut them out",
+      "evidence": "popups.txt Tennessee: 'Free Black men: Could vote until 1834 ... [shading: Could vote]'; reveal-black-men.jpg shows Tennessee light; the lesson's own Q4 accept (a) lists Tennessee."
+    },
+    {
+      "where": "Standards table (TX 8.5(G)) against what the questions actually ask",
+      "what": "The code and wording are correct for the 2022 text. But the lesson covers only who could vote, the 'expanded suffrage' half. It never touches the 'impact of the election of Andrew Jackson'. Most of the suffrage changes it maps (Maryland 1810, Massachusetts 1821, New York 1826) came before 1828, so they are conditions for the election, not effects of it. No question covers what the election changed: more states letting voters choose electors (the pop-ups already show Georgia, Louisiana and Vermont 'for the first time'), much higher turnout, or the new mass party politics.",
+      "whyItMatters": "Ruth checks whether a lesson really meets the TEKS it claims. As written, it meets half of 8.5(G), and a district reviewer comparing it with the scope and sequence would see that.",
+      "severity": "slows it down",
+      "suggestion": "Add a short step to Q5, or a teacher note: 'Click Georgia, Louisiana and Vermont and read Who chose the electors. What changed between 1824 and 1828?' Add a sourced turnout note to the teacher notes (1828: 57.6% of voting-age population, American Presidency Project; 1824 about 27%, often cited). Alternatively, label 8.5(G) as 'partly: expanded suffrage'.",
+      "needsLiveMap": false,
+      "quote": "Explain the impact of the election of Andrew Jackson, including expanded suffrage",
+      "evidence": "TEA, Grade 8 Social Studies Assessed Curriculum (revised Aug 2026), (5)(G) 'explain the impact of the election of Andrew Jackson, including expanded suffrage'; American Presidency Project turnout table, 1828 = 57.6% VAP (https://www.presidency.ucsb.edu/data/turnout.php); Henretta (Macmillan) fig. 10.1: 1824 turnout 27%."
+    },
+    {
+      "where": "Answer notes Q5 accept (b) ('Strong answers say expanded suffrage meant more white men'), the model answer's conclusion, and the compelling question",
+      "what": "The inquiry tests the 'common man' claim, but the evidence on the map is almost all about limits, and the key steers strong answers to one verdict. The claim itself is not attributed ('often called'). Who called it that, and why, is never given: Jackson's supporters at the time, and later historians such as Schlesinger. The positive side (property rules dropped in most states, more states letting voters choose electors, turnout roughly doubling) is not something students are asked to weigh. Discussion question 3 is balanced, but the rubric and model answer are not.",
+      "whyItMatters": "Ruth's district reviews materials on sensitive topics after parent complaints. An inquiry where only one conclusion earns the top score is the easiest thing to attack, from either direction: 'it debunks Jackson' or 'it lets a racist system off'. It is much easier to defend if both cases are named and any well-evidenced judgment can reach level 4.",
+      "severity": "slows it down",
+      "suggestion": "Change 'Strong answers say expanded suffrage meant more white men' to 'Strong answers weigh both: more white men, many without property, could vote and choose electors, while women, enslaved people and most free Black men could not.' Add one teacher-notes line attributing the 'common man' phrase. Let the model answer acknowledge the real expansion before qualifying it.",
+      "needsLiveMap": false,
+      "quote": "Strong answers say expanded suffrage meant more white men.",
+      "evidence": "The pop-ups already contain the 'expansion' evidence (Georgia, Louisiana and Vermont: 'Voters, statewide, for the first time'), but no question or accept line uses it."
+    },
+    {
+      "where": "Pop-ups for Pennsylvania and New York, 'Source for the rules' line",
+      "what": "The two most sensitive claims on the map are not supported by the source the pop-up cites. Pennsylvania's 'officials kept Black men from voting' cites only the Constitution of 1790, Art. III, sec. 1, which says nothing about practice. New York's 'In 1825 only 298 Black New Yorkers qualified' cites only the 1821 constitution and the 1826 amendment. The teacher notes credit Albany Law Review/Field for the 298 figure, but students and parents reading the pop-up don't see that.",
+      "whyItMatters": "Ruth needs every claim on race and voting to be traceable to a source she can show a parent. 'The cited source doesn't say that' is exactly the objection a reviewer makes.",
+      "severity": "slows it down",
+      "suggestion": "Add the secondary source to each pop-up's source line: for New York, 'Albany Law Review, citing Field'; for Pennsylvania, a historian's account of the 1838 convention or Hobbs v. Fogg (1837).",
+      "needsLiveMap": false,
+      "quote": "in many places, Philadelphia among them, officials kept Black men from voting",
+      "evidence": "popups.txt Pennsylvania: 'Source for the rules: Constitution of 1790, Art. III, sec. 1'; New York: 'Source for the rules: Constitution of 1821, Art. II, sec. 1, and the 1826 amendment'."
+    },
+    {
+      "where": "Student-facing pop-ups for Louisiana, Missouri, North Carolina, Rhode Island, Illinois, Missouri (electors) and Indiana",
+      "what": "Several pop-ups tell students the research isn't finished: 'the text wasn't checked', 'the clause wasn't checked in the original', 'isn't confirmed', 'the text of the law wasn't found', and 'one 1892 court opinion says by districts'. Some of these can be checked. The Missouri 1820 and Louisiana 1812 constitutions are readily available, and Louisiana's 'land' is the alternative of having bought land from the United States.",
+      "whyItMatters": "Being honest about uncertainty is good. But on a map Ruth may have to defend, 'wasn't checked' reads to a reviewer as unvetted material, and it invites 'then why is the state shaded?'",
+      "severity": "minor",
+      "suggestion": "Check the clauses that can be checked and remove those notes. Keep honest notes only where the record really is unclear, worded as a historical gap ('historians disagree' or 'no copy of the law survives'), not as an unfinished task.",
+      "needsLiveMap": false,
+      "quote": "some sources also mention land, and the text wasn't checked",
+      "evidence": "popups.txt Louisiana, Missouri, North Carolina, Rhode Island, Illinois, Indiana lines."
+    },
+    {
+      "where": "Teacher notes, Q3 Notes",
+      "what": "'Virginia's property rule lasted until 1830' suggests the property requirement ended in 1830. The 1830 constitution only loosened it: it added leaseholders and tax-paying heads of households but kept property-based qualifications. Virginia did not drop them for white men until the 1850-51 constitution. The pop-up wording ('law of 1785, in force until 1830') is accurate; the teacher note is not.",
+      "whyItMatters": "This is a factual slip in the teacher's own reference, and Ruth may repeat it to the class.",
+      "severity": "minor",
+      "suggestion": "'Virginia's 1785 property rule was in force until 1830, when a new constitution loosened it; property and tax rules for white men did not end until 1851.'",
+      "needsLiveMap": false,
+      "quote": "Virginia's property rule lasted until 1830",
+      "evidence": "Virginia Places, 'Disfranchisement in Virginia' (virginiaplaces.org/government/disfranchisement.html): the 1830 constitution relaxed the requirements and added leaseholders and tax-paying housekeepers."
+    },
+    {
+      "where": "Discussion question 2 (New York)",
+      "what": "It asks 'Why might a state do both at once?' about raising a racial property bar while dropping it for white men, but the teacher notes give no sourced background for answering it.",
+      "whyItMatters": "This is the most charged question in the lesson. Without a sourced note, Ruth has to field speculation about race unprepared, and she can't point a parent to what the lesson intended.",
+      "severity": "minor",
+      "suggestion": "Add a two-sentence sourced note on the 1821 New York convention debates, for example the arguments delegates gave and the party politics historians point to (Field), so teachers have a factual anchor.",
+      "needsLiveMap": false,
+      "quote": "Why might a state do both at once?",
+      "evidence": ""
+    },
+    {
+      "where": "The 24 states of 1828 bookmark with the legend open (notice-votes.jpg); teacher notes 'Before class'",
+      "what": "The teacher notes say 'State names are labeled above the pies', but at the opening view many states have no visible label: Pennsylvania, Ohio, Virginia, North Carolina, Tennessee, Maryland, Delaware, New Jersey, Connecticut, Rhode Island and New Hampshire. Maryland, one of the three split states Q1(c) asks for, has no label. The open legend panel covers half of Maine's split pie. On the rule layers, the shading legend sits below the pie legend and students must scroll the panel to reach it, which the sheet doesn't say.",
+      "whyItMatters": "Q1 and Q3 slow down while students hunt for unlabeled states and the hidden legend, and the teacher notes promise something the map doesn't deliver.",
+      "severity": "slows it down",
+      "suggestion": "Shift the bookmark extent or legend placement so Maine is clear. Check label collisions at Chromebook size. Add 'scroll down in the legend to see the shading' to Q3 and Q4. Soften the note to 'click a pie to see the state's name'.",
+      "needsLiveMap": true,
+      "quote": "State names are labeled above the pies.",
+      "evidence": "notice-votes.jpg: Maine pie clipped at the legend edge ('MAIN'); no labels on PA, OH, VA, NC, TN, MD, DE, NJ, CT, RI, NH. reveal-white-men.jpg: legend shows only the layer title 'White men and the vote, 1828', with the classes below the fold."
+    },
+    {
+      "where": "Standards table: TEKS the lesson does address but doesn't list",
+      "what": "8.10(A) (locate places and regions) is a thin fit. The lesson's real skill work is TEKS social studies skills: using primary sources (Virginia 1785 law, New York 1821 constitution) and law versus practice (Pennsylvania).",
+      "whyItMatters": "Ruth plans against the TEKS. Listing the skills expectations the lesson actually practises makes it easier to justify the 60 minutes in her scope and sequence.",
+      "severity": "minor",
+      "suggestion": "Add the TEKS skills-strand expectations for primary/secondary sources and for points of view or historical context. They are 8.29 in the 2019 text; confirm the letters in the 2022-amended text.",
+      "needsLiveMap": false,
+      "quote": "TX 8.10(A)",
+      "evidence": "TEA Grade 8 Assessment Eligible TEKS (rev. Jan 2024) lists 8.29(A) 'differentiate between, locate, and use valid primary and secondary sources' and 8.29(D) 'identify bias and points of view created by the historical context'; the McGraw Hill SRP update form for the 2022 TEKS cites 29(E)/(F) source evaluation."
+    }
+  ],
+  "works": [
+    "TX 8.5(G) code and wording are correct for the 2022-amended §113.20: adding 5(B), the Fugitive Slave Act of 1793, moved Jackson/suffrage from (F) to (G). Verified against the TEA Assessed Curriculum (rev. Aug 2026) and the McGraw Hill 2022-TEKS SRP form. 8.10(A) wording matches.",
+    "Election facts check out: Jackson 178, Adams 83; splits in NY (20-16), MD (5-6) and ME (1-8); SC and DE legislatures chose the electors; Black men lost the vote in NC in 1835 and TN in 1834; PA 1838; NJ ended women's voting in 1807.",
+    "Every state's pop-up states the rule and its source, separates what the law said from what happened (Pennsylvania), and tells students that women could vote nowhere. That is factual, not editorial, tone on race and voting.",
+    "The teacher notes warn teachers before students read Virginia's 1785 quote ('free negroes or mulattoes'), framed as a primary source. That is what Ruth would want in hand for a parent conversation.",
+    "Predict-then-reveal structure, the 'if you only do one' option, and discussion question 3 ('Who would agree, and who might not?') give a genuinely open inquiry."
+  ]
+}
