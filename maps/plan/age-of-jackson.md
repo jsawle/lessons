@@ -1,6 +1,6 @@
 # Age of Jackson: three-map slice (draft 0.3, 30 Oct 2026)
 
-Purpose: run three new maps through the whole process (map first, then the inquiry lesson written from the built map, then the link back to the standards) to find out what the process still lacks before building a full year. Map 1 is built, tested and published (private), with a draft lesson; Maps 2 and 3 are not started. Every map follows the usual route: spec, build, test, dry run, your OK, you run `--go`, never shared by the tool.
+Purpose: run three new maps through the whole process (map first, then the inquiry lesson written from the built map, then the link back to the standards) to find out what the process still lacks before building a full year. Map 1 is built, tested and published (private), with a draft lesson; Map 3 is built and published (private), lesson not yet written; Map 2 is not started. Every map follows the usual route: spec, build, test, dry run, your OK, you run `--go`, never shared by the tool.
 
 Unit: The Age of Jackson (grade 8 US History). Standards confirmed so far: TX 8.5(G) (election of Jackson, expanded suffrage) and TX 8.5(H) (Cherokee removal: Indian Removal Act, Worcester v. Georgia, Trail of Tears). Florida and C3 codes for this unit are not yet confirmed and are not listed.
 
@@ -88,4 +88,4 @@ Map 1 draft sequence (questions only; answers and sources come with the lesson a
 |---|---|---|---|---|---|---|
 | 1. Land cessions | done; data copied to GIS for Schools (v1.1, item fbefc5d9f79242d9a6b866b93f5a5af5, public, 717 polygons, four known dates match) | 0.5.0 (opens on before 1830; students reveal the 1830s, then 1840 to 1894; state names, cities and rivers labeled on top) | 4e1f60ecd473 | pass, 6 checks, Web Map Auditor 98.5 (30 Oct) | draft 0.3.0, English, fact-checked and persona-reviewed (`review/land-cessions-2026-10-30.md`) (`maps/lessons/land-cessions-1784-1894.json`); not in the catalogue until the map is shared | 30 Oct, Map publish 1.1, item fd8f742aec1c4a8a9648cd20dafffe11, private, updated to 0.5.0, read-back matches |
 | 2. Cherokee removal | done (key places layer open) | – | – | – | – | – |
-| 3. Election of 1828 and suffrage | electoral votes done; suffrage layer open | – | – | – | – | – |
+| 3. Election of 1828 and suffrage | done: data election-1828 1.0.0 (2da7379e3fdb41d396c6ad49b6f73fef, public), 24 states, votes from the National Archives, voting rules researched and fact-checked (`maps/data/election-1828/`) | 0.2.0 | d4278cc56634 | pass, 7 checks, Web Map Auditor 98.8 (30 Oct) | not written | 30 Oct, item 1bd912453059450dac83074ea42e5424, private, read-back matches |
