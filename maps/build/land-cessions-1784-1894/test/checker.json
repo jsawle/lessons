@@ -2,10 +2,10 @@
  "rubricVersion": "0.7.1",
  "maps": [
   {
-   "itemId": "af29df2c35bf72cf980913b340fd0b1b",
+   "itemId": "f5cc40b6b709a76adce8c43c0573a4c0",
    "title": "Land cessions to the United States, 1784 to 1894",
    "owner": "build",
-   "auditedAt": "2026-10-30T12:55:27.026Z",
+   "auditedAt": "2026-10-30T13:04:37.700Z",
    "rubricVersion": "0.7.1",
    "standards": "General Cartographic Standards for MapMaker",
    "tally": {
@@ -85,7 +85,7 @@
      "status": "pass",
      "message": "",
      "evidence": [
-      "description: 1490 chars"
+      "description: 1531 chars"
      ]
     },
     {
@@ -109,7 +109,7 @@
      "status": "pass",
      "message": "",
      "evidence": [
-      "credits: USDA Forest Service, Office of Tribal Relations, from maps by Charles C. Royce (Bureau of American Ethnology, 1896-1897); Esri."
+      "credits: USDA Forest Service, Office of Tribal Relations, from maps by Charles C. Royce (Bureau of American Ethnology, 1899); Esri."
      ]
     },
     {
