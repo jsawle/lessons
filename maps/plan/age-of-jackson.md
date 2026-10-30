@@ -86,6 +86,6 @@ Map 1 draft sequence (questions only; answers and sources come with the lesson a
 
 | Map | Data check | Spec | Build | Test | Lesson | Published |
 |---|---|---|---|---|---|---|
-| 1. Land cessions | done; data copied to GIS for Schools (v1.1, item fbefc5d9f79242d9a6b866b93f5a5af5, public, 717 polygons, four known dates match) | 0.2.0 | 942abfa36ef4 | pass, 3 checks, Web Map Auditor 97.4 (28 Oct) | not written | 30 Oct, Map publish 1.1, item fd8f742aec1c4a8a9648cd20dafffe11, private, read-back matches |
+| 1. Land cessions | done; data copied to GIS for Schools (v1.1, item fbefc5d9f79242d9a6b866b93f5a5af5, public, 717 polygons, four known dates match) | 0.3.0 (opens on before 1830; students reveal the 1830s, then 1840 to 1894) | af29df2c35bf | pass, 5 checks, Web Map Auditor 98.5 (30 Oct) | not written | 30 Oct, Map publish 1.1, item fd8f742aec1c4a8a9648cd20dafffe11, private, updated to 0.3.0 with a backup of Jason's Map Viewer save, read-back matches |
 | 2. Cherokee removal | done (key places layer open) | – | – | – | – | – |
 | 3. Election of 1828 and suffrage | electoral votes done; suffrage layer open | – | – | – | – | – |
