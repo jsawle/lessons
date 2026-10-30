@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Map publish 1.1: puts a built, tested web map (maps/build/<id>/) into ArcGIS Online, signed in as you.
+"""Map publish 1.2: puts a built, tested web map (maps/build/<id>/) into ArcGIS Online, signed in as you.
 
 Runs on your own computer with the ArcGIS API for Python (pip install arcgis). It never asks for or takes a password:
 it uses a sign-in you set up yourself, one of
@@ -13,6 +13,7 @@ What it does, and won't do:
   - It refuses to run if you're signed in to a different organization from the one the spec names.
   - It creates the web map in the spec's folder, or (with --update) replaces the one it made before, after saving a
     backup of that item's data and details in maps/build/<id>/backup/.
+  - It refuses to create a second web map from the same spec: use --update to replace the existing one.
   - It never shares: the item stays private until you share it yourself.
   - After writing, it reads the item back and checks it matches the build.
 
@@ -22,7 +23,7 @@ Usage, from the repo root:
 import argparse, datetime, hashlib, json, sys
 from pathlib import Path
 
-VERSION = "1.1"
+VERSION = "1.2"
 ROOT = Path(__file__).resolve().parents[2]
 
 
@@ -112,7 +113,7 @@ def main():
     action = f"replace item {target.id} ({target.title})" if target else f"create a new web map in folder '{pub['folder']}'"
     print(f"  would {action}: '{props['title']}', {len(webmap['operationalLayers'])} layers, not shared")
     if existing and not args.update:
-        print(f"  note: {len(existing)} item(s) from this spec already exist ({', '.join(e.id for e in existing)}); --update replaces the first")
+        sys.exit(f"  REFUSED: a web map from this spec already exists ({', '.join(e.id for e in existing)}). Use --update to replace it. Nothing changed.")
     if not args.go:
         print("  dry run: nothing changed. Add --go to do it."); return
 

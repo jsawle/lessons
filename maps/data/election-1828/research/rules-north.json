@@ -1,0 +1,238 @@
+{
+  "meta": {
+    "topic": "Who could vote in the presidential election of November 1828: eleven northern and mid-Atlantic states",
+    "compiled": "2026-10-30",
+    "method": "Every quote below was pulled from the cited page by a web-fetch tool that summarises pages. Some come from OCR scans (Maine resolve, Delaware petition, Maryland statute). Check each quote against the page before you publish. Avalon Project and HathiTrust could not be reached from this session, so other transcriptions of the same primary texts were used.",
+    "keySources": {
+      "mcpherson": "McPherson v. Blacker, 146 U.S. 1 (1892), U.S. Supreme Court. Its historical survey of how states appointed electors from 1788 to 1832 is used for elector methods.",
+      "keyssar": "Alexander Keyssar, The Right to Vote, Tables A.1, A.3 and A.5, as reproduced in a University of Wisconsin course text. Table A.4 (taxpaying) was not available.",
+      "ucsb": "American Presidency Project (UC Santa Barbara), 1828 results by state: shows which states held a popular vote.",
+      "nara": "National Archives, 1828 Electoral College results: electoral votes by state. A split vote shows the state used districts."
+    }
+  },
+  "states": [
+    {
+      "state": "Maine",
+      "electorMethod": "popular vote by districts, plus 2 at-large",
+      "electorMethodDetail": "A resolve of the Maine legislature (February 1828) set the method. Voters chose one elector in each congressional district and two electors at large statewide, on the first Monday of November 1828. The result split 8 Adams, 1 Jackson, which fits a district system.",
+      "whiteMenRule": "none",
+      "whiteMenDetail": "Male US citizen, aged 21 or over, resident in the state for 3 months. No property or tax requirement. Paupers, persons under guardianship and 'Indians not taxed' were excluded (Constitution of 1820, Art. II, sec. 1).",
+      "blackMen": "yes",
+      "blackMenDetail": "The 1820 constitution has no racial qualification, and Keyssar's Table A.5 does not list Maine among states that excluded voters by race.",
+      "women": "Could not vote. The constitution says 'Every male citizen'.",
+      "other": "Paupers (people receiving public poor relief), persons under guardianship, and 'Indians not taxed' could not vote. Soldiers and students did not gain a voting residence by being stationed or studying in a town.",
+      "sources": [
+        {"url": "https://legislature.maine.gov/uploads/originals/const1820.pdf", "quote": "Every male citizen of the United States of the age of twenty-one years and upwards, excepting paupers; persons under guardianship, and Indians not taxed, having his residence established in this State for the term of three months", "supports": "white men rule; no race clause; exclusions (Constitution of 1820, Art. II, sec. 1)"},
+        {"url": "https://lldc.mainelegislature.org/Open/Laws/1828/1828_RES_c023.pdf", "quote": "one in each District within this State ... two Electors, to be chosen at large in the State", "supports": "elector method in 1828 (Resolves of 1828, ch. XXIII; OCR text)"},
+        {"url": "https://law.resource.org/pub/us/case/reporter/US/146/146.US.1.1.170.html", "quote": "in Maine in 1820, 1824, and 1828", "supports": "district method in 1828 (McPherson v. Blacker)"},
+        {"url": "https://www.archives.gov/electoral-college/1828", "quote": "Maine 9: Jackson 1, Adams 8", "supports": "split electoral vote (table values, not a sentence)"},
+        {"url": "https://wisc.pb.unizin.org/ls261/chapter/table-a-1/", "quote": "Maine not listed in Table A.5 (racial exclusions)", "supports": "no race exclusion (paraphrase of table content)"}
+      ],
+      "confidence": "high",
+      "notes": "The elector method comes from the 1828 resolve itself, and McPherson and the split vote back it up. The suffrage rule comes from the constitution text."
+    },
+    {
+      "state": "New Hampshire",
+      "electorMethod": "popular vote statewide (general ticket)",
+      "electorMethodDetail": "The people chose electors. McPherson's survey of 1804 to 1832 does not name New Hampshire among the district or legislature states, and all 8 electoral votes went to Adams. No 1828 New Hampshire statute was found.",
+      "whiteMenRule": "none",
+      "whiteMenDetail": "Every male inhabitant aged 21 or over could vote, except paupers and men excused from paying taxes at their own request (Constitution of 1792, Part II, sec. XXVIII). No property qualification. The 1784 constitution's poll-tax requirement was dropped in 1792. Office-holders, not voters, needed property.",
+      "blackMen": "yes",
+      "blackMenDetail": "There is no racial word in the voter clause, and Keyssar's Table A.5 does not list New Hampshire.",
+      "women": "Could not vote. The constitution says 'every male inhabitant'.",
+      "other": "Paupers were excluded. Men who had asked to be excused from paying taxes were also excluded.",
+      "sources": [
+        {"url": "https://founding.com/founders-library/government-documents/american-state-and-local-government-documents/state-constitutions/new-hampshire-constitution-of-1792/", "quote": "every male inhabitant of each town and parish with town privileges ... of twenty-one years of age and upward, excepting paupers and persons excused from paying taxes at their own request", "supports": "white men rule; Black men (Constitution of 1792, sec. XXVIII)"},
+        {"url": "https://www.annenbergclassroom.org/timeline_event/new-hampshire-eliminates-property-requirement/", "quote": "New Hampshire becomes the first state to eliminate the rule that only property owners and taxpayers could vote.", "supports": "no property or tax requirement after 1792"},
+        {"url": "https://wisc.pb.unizin.org/ls261/chapter/table-a-1/", "quote": "New Hampshire 1784 (C): Payment of poll tax", "supports": "the 1784 rule that 1792 replaced (Keyssar Table A.1, paraphrased row)"},
+        {"url": "https://law.resource.org/pub/us/case/reporter/US/146/146.US.1.1.170.html", "quote": "In 1824 the electors were chosen by popular vote, by districts, and by general ticket, in all the states excepting Delaware, Georgia, Louisiana, New York, South Carolina, and Vermont", "supports": "popular choice of electors (McPherson v. Blacker)"},
+        {"url": "https://presidency.ucsb.edu/statistics/elections/1828", "quote": "New Hampshire total 44,035; Jackson 20,212; Adams 23,823; electoral 0/8", "supports": "popular vote held; all electors to one candidate (table values)"}
+      ],
+      "confidence": "high",
+      "notes": "The suffrage rule is high confidence. 'General ticket' is inferred: no source names New Hampshire as a district state, and the electoral vote was unanimous. I found no 1828 statute to quote. An 1835 summary attributed to Tocqueville's appendix says 'any man can vote who is not on the pauper list', which agrees."
+    },
+    {
+      "state": "Vermont",
+      "electorMethod": "popular vote statewide (general ticket)",
+      "electorMethodDetail": "1828 was the first time Vermont's voters (freemen) chose the electors. The legislature had chosen them through 1824. A statewide popular vote is recorded (32,833 votes) and all 7 electors went to Adams. No source found names the method 'general ticket', and the Vermont statute was not found.",
+      "whiteMenRule": "none",
+      "whiteMenDetail": "Every man aged 21 or over who had lived in the state for one year, was 'of a quiet and peaceable behaviour' and took the Freeman's Oath (Constitution of 1793, Ch. II, sec. 21). No property or tax requirement.",
+      "blackMen": "yes",
+      "blackMenDetail": "There is no racial word in the voter clause, and Keyssar's Table A.5 does not list Vermont.",
+      "women": "Could not vote. The constitution says 'Every man'.",
+      "other": "Voters had to take the Freeman's Oath. Students may be interested that 1828 was Vermont's first popular vote for president.",
+      "sources": [
+        {"url": "https://sos.vermont.gov/vsara/learn/constitution/1793-constitution", "quote": "Every man of the full age of twenty one years, having resided in this State for the space of one whole year next before the election of Representatives, and is of a quiet and peaceable behaviour", "supports": "white men rule; Black men (Constitution of 1793, Ch. II, sec. 21; Vermont State Archives)"},
+        {"url": "https://law.resource.org/pub/us/case/reporter/US/146/146.US.1.1.170.html", "quote": "Delaware, Georgia, Louisiana, New York, South Carolina, and Vermont, where they were still chosen by the legislature", "supports": "legislature chose electors in 1824, so 1828 was a change (McPherson v. Blacker)"},
+        {"url": "https://elections.lib.tufts.edu/catalog/c821gm32p", "quote": "in 1820 the Vermont legislature held separate elections for each of the eight slots", "supports": "earlier method was the legislature (A New Nation Votes, Tufts)"},
+        {"url": "https://presidency.ucsb.edu/statistics/elections/1828", "quote": "Vermont total 32,833; Jackson 8,350; Adams 24,363; electoral 0/7", "supports": "a popular vote was held in 1828 (table values)"}
+      ],
+      "confidence": "medium",
+      "notes": "Suffrage: high. A popular vote in 1828: high (McPherson shows the legislature chose in 1824; UCSB records 1828 vote totals; Wikipedia points to the CQ Guide to U.S. Elections for 'first time by popular vote', which was not checked directly). Statewide general ticket rather than districts: medium, because no Vermont statute was found."
+    },
+    {
+      "state": "Massachusetts",
+      "electorMethod": "popular vote statewide (general ticket)",
+      "electorMethodDetail": "McPherson says Massachusetts returned to the general ticket in 1824 and names no later change. It does not list Massachusetts among the 1828 district states. All 15 electoral votes went to Adams.",
+      "whiteMenRule": "taxpaying",
+      "whiteMenDetail": "1821 Amendment Art. III: male citizen aged 21 or over, resident for 1 year in the state and 6 months in the town. He must have paid any state or county tax assessed on him within the previous 2 years, or be exempted from taxation by law. This replaced the 1780 property qualification (£3 annual income from a freehold or an estate worth £60).",
+      "blackMen": "yes",
+      "blackMenDetail": "No racial word appears in the 1780 constitution or the 1821 amendment, and Keyssar's Table A.5 does not list Massachusetts.",
+      "women": "Could not vote. The amendment says 'Every male citizen'.",
+      "other": "Paupers and persons under guardianship were excluded. A man's tax could have been paid by his parent, master or guardian.",
+      "sources": [
+        {"url": "https://50constitutions.org/ma/constitution/section-id-50582", "quote": "Every male citizen of twenty-one years of age and upwards, excepting paupers and persons under guardianship", "supports": "white men rule; exclusions (1821 Amendment Art. III)"},
+        {"url": "https://50constitutions.org/ma/constitution/section-id-50582", "quote": "and who shall have paid, by himself or his parent, master or guardian, any state or county tax which shall, within two years next preceding such election, have been assessed upon him", "supports": "taxpaying requirement"},
+        {"url": "https://wisc.pb.unizin.org/ls261/chapter/table-a-1/", "quote": "Massachusetts: adopted 1780; terminated 1821", "supports": "property requirement ended in 1821 (Keyssar Table A.3, paraphrased)"},
+        {"url": "https://law.resource.org/pub/us/case/reporter/US/146/146.US.1.1.170.html", "quote": "returned to the general ticket system in 1824", "supports": "elector method (McPherson v. Blacker)"},
+        {"url": "https://www.archives.gov/electoral-college/1828", "quote": "Massachusetts 15: Adams 15", "supports": "unanimous electoral vote (table values)"}
+      ],
+      "confidence": "high",
+      "notes": "Suffrage is high confidence, but the 1821 text came from the 50 Constitutions transcription (University of Wisconsin), not the official state site. The method rests on McPherson and is not directly stated for 1828. An 1835 summary attributed to Tocqueville still gives the pre-1821 property rule, so it is out of date and should not be used."
+    },
+    {
+      "state": "Rhode Island",
+      "electorMethod": "popular vote statewide (general ticket)",
+      "electorMethodDetail": "The voters (freemen) chose electors by popular vote. Rhode Island is not among McPherson's district or legislature states, 3,580 popular votes are recorded, and all 4 electoral votes went to Adams.",
+      "whiteMenRule": "property",
+      "whiteMenDetail": "Rhode Island still ran under its 1663 colonial charter and had no state constitution until 1842. A voter (a 'freeman') had to own land (a freehold) worth $134, or land with a yearly rental value of $7, under a 1798 law. The eldest son of a qualified freeholder could also vote. There was no taxpaying alternative for landless men.",
+      "blackMen": "no",
+      "blackMenDetail": "Several Rhode Island history sources say a law of 1822 inserted the word 'white' into the voting qualification, so Black men lost the vote. Black property owners had been able to vote before that. The vote was restored by the 1842 constitution. I did not find the text of the 1822 act.",
+      "women": "Could not vote. Only freemen voted, and women were not admitted as freemen. No source found suggests otherwise.",
+      "other": "Rhode Island's freehold rule shut out many working men, which helped lead to the Dorr Rebellion of 1841-42. An 1834 reform address complained that the vote passed only to a landowner's 'first-born son'.",
+      "sources": [
+        {"url": "https://www.rihs.org/mssinv/Mss214sg14.htm", "quote": "Eventually the value amount became fixed at $134.00 ... only those meeting the set amount of value, and their eldest sons, were qualified to vote.", "supports": "property rule; eldest sons (Rhode Island Historical Society)"},
+        {"url": "https://hd.housedivided.dickinson.edu/node/9029", "quote": "fixed at $134, or yearly value of $7", "supports": "1798 freehold value (c. 1851 description, House Divided, Dickinson College)"},
+        {"url": "https://www.americanyawp.com/reader/democracy-in-america/rhode-islanders-protest-property-restrictions-on-voting-1834/", "quote": "a sort of virtue is transmitted from the land-owner, but it reaches no farther than the first-born son", "supports": "eldest-son rule (1834 primary document)"},
+        {"url": "https://blackpast.org/timeline-state/rhode-island", "quote": "the state legislature inserted the word \"white\" into the voting requirement", "supports": "1822 exclusion of Black men (paraphrased by the fetch tool; check exact wording)"},
+        {"url": "https://library.providence.edu/dorr/articles/marcus-gadson-on-the-dorr-rebellion/", "quote": "Black men could vote if they possessed the required amount of property, but they were disenfranchised in 1822.", "supports": "Black men voted before 1822, excluded 1822 (Providence College Dorr Rebellion project)"},
+        {"url": "https://library.providence.edu/dorr/wp-content/uploads/sites/2/2026/02/Dr.-Erik-J.-Chaput-on-Race-and-the-Dorr-Rebellion-Transcript.pdf", "quote": "Black Rhode Islanders had been disenfranchised since 1822", "supports": "1822 exclusion (historian Erik J. Chaput)"}
+      ],
+      "confidence": "medium",
+      "notes": "Property rule: medium-high, from secondary sources only; I did not read the 1798 statute. 1822 exclusion: medium, because three secondary sources agree but I did not find the act's text. Sources partly disagree: the reproduction of Keyssar's Table A.5 that I checked does not list Rhode Island among race-exclusion states, which fits Keyssar's book only if the table is incomplete. Check the book itself. The 1835 Tocqueville-attributed summary gives 'landed property to the amount of $133', a near match."
+    },
+    {
+      "state": "Connecticut",
+      "electorMethod": "popular vote statewide (general ticket)",
+      "electorMethodDetail": "Connecticut is not among McPherson's district or legislature states for 1824 to 1828, a popular vote of 19,378 is recorded, and all 8 electoral votes went to Adams.",
+      "whiteMenRule": "property",
+      "whiteMenDetail": "Constitution of 1818, Art. VI, sec. 2. A white male US citizen, aged 21, resident in his town for 6 months, of 'good moral character', who took the elector's oath, qualified in one of three ways: (a) he owned a freehold worth $7 a year; (b) he had served one year in the militia or been excused from it by law; or (c) he had paid a state tax within the year. Taxpaying and militia service were therefore real alternatives to property. Keyssar still counts Connecticut as a property-qualification state until 1845.",
+      "blackMen": "no",
+      "blackMenDetail": "A statute of 1814 added the word 'white' to the freeman law, and the 1818 constitution (Art. VI, sec. 2) made 'white male citizen' a constitutional requirement. Art. VI, sec. 1 kept the vote for everyone already admitted a freeman before 1818. Whether any Black men admitted before 1814 kept voting under that clause was not found.",
+      "women": "Could not vote. The constitution says 'white male citizen'.",
+      "other": "Voters needed 'a good moral character' and had to take an oath. Conviction for bribery, forgery, perjury, duelling, fraudulent bankruptcy, theft or another 'infamous' crime took the vote away (sec. 3).",
+      "sources": [
+        {"url": "https://portal.ct.gov/sots/register-manual/section-i/1818-constitution-of-the-state-of-connecticut", "quote": "Every white male citizen of the United States, who shall have gained a settlement in this state, attained the age of twenty-one years", "supports": "race exclusion; white men rule (Art. VI, sec. 2; CT Secretary of the State)"},
+        {"url": "https://portal.ct.gov/sots/register-manual/section-i/1818-constitution-of-the-state-of-connecticut", "quote": "and have a freehold estate of the yearly value of seven dollars in this state; or having been enrolled in the militia, shall have performed military duty therein", "supports": "property qualification with militia alternative"},
+        {"url": "https://portal.ct.gov/sots/register-manual/section-i/1818-constitution-of-the-state-of-connecticut", "quote": "or shall have paid a state tax within the year next preceding the time he shall present himself for such admission; and shall sustain a good moral character", "supports": "taxpaying alternative; moral character"},
+        {"url": "https://www.ctexplored.org/constitution-of-1818-rights-for-all/", "quote": "inserted the word \"white\" into the freeman statute", "supports": "1814 statutory exclusion (Connecticut Explored, Fall 2018)"},
+        {"url": "https://wisc.pb.unizin.org/ls261/chapter/table-a-1/", "quote": "Connecticut: 1818 taxpaying and militia service alternatives added; terminated 1845; race exclusion adopted 1818", "supports": "Keyssar Tables A.3 and A.5 (paraphrased rows)"},
+        {"url": "https://law.resource.org/pub/us/case/reporter/US/146/146.US.1.1.170.html", "quote": "the district method obtained in Kentucky until 1824; in Tennessee and Maryland until 1832; in Indiana in 1824 and 1828", "supports": "Connecticut not a district state (McPherson v. Blacker)"}
+      ],
+      "confidence": "high",
+      "notes": "Sources disagree on the date of exclusion: Keyssar dates it to 1818 (the constitution), while Connecticut Explored dates the statute to 1814. Both can be right, so the map could say 'excluded by law 1814; by constitution 1818'. Classification: 'property' follows Keyssar and the requested scheme, but in practice a white man without land could qualify through militia service or a state tax. The legend should say so, or the map could use 'property, tax or militia'."
+    },
+    {
+      "state": "New York",
+      "electorMethod": "popular vote by districts; 2 at-large chosen by the district electors",
+      "electorMethodDetail": "Voters chose one elector in each district, and those elected district electors then chose the 2 at-large electors. The result split 20 Jackson, 16 Adams. This was New York's first popular choice of electors; the legislature had chosen them in 1824.",
+      "whiteMenRule": "none",
+      "whiteMenDetail": "A constitutional amendment ratified on November 6, 1826 abolished the tax, militia and highway-labour qualifications for everyone except 'persons of color'. From then on, any male citizen aged 21 who had lived 1 year in the state and 6 months in the county could vote. Between 1822 and 1826 the 1821 constitution had required paying a state or county tax, militia service, or highway labour.",
+      "blackMen": "restricted",
+      "blackMenDetail": "Under the 1821 constitution (Art. II, sec. 1), which the 1826 amendment left in place for 'persons of color', a 'man of colour' had to have been a citizen of the state for 3 years. He also had to have owned, for a year, a freehold worth $250 clear of debts, and to have been rated and paid tax on it. In 1825 only 298 Black New Yorkers met the requirement (Galie, citing Field).",
+      "women": "Could not vote. The constitution and amendment say 'male citizen'.",
+      "other": "The 1826 amendment was ratified by 127,077 votes to 3,215. Before 1821, New York had property requirements for all voters.",
+      "sources": [
+        {"url": "https://albionalumni.org/chevrons/cons/nyscon21.html", "quote": "but no man of colour, unless he shall have been for three years a citizen of this state", "supports": "restriction on Black men (1821 Constitution Art. II, sec. 1; transcription)"},
+        {"url": "https://albionalumni.org/chevrons/cons/nyscon21.html", "quote": "shall be seized and possessed of a freehold estate of the value of two hundred and fifty dollars, over and above all debts and incumbrances charged thereon", "supports": "$250 freehold for Black men"},
+        {"url": "https://50constitutions.org/ny/constitution/section-id-146696", "quote": "other than persons of color, be, and the same is hereby abolished", "supports": "1826 amendment removed qualifications for white men only"},
+        {"url": "https://50constitutions.org/ny/constitution/section-id-146696", "quote": "Every male citizen of the age of twenty-one years, who shall have been an inhabitant of this state one year next preceding any election, and for the last six months a resident of the county", "supports": "white men rule in 1828; ratified Nov. 6, 1826 (127,077 to 3,215)"},
+        {"url": "https://law.resource.org/pub/us/case/reporter/US/146/146.US.1.1.170.html", "quote": "In New York the electors were elected in 1828 by districts, the district electors choosing the electors at large.", "supports": "elector method (McPherson v. Blacker)"},
+        {"url": "https://www.albanylawreview.org/api/v1/articles/127457-the-1821-constitutional-convention-and-the-constitutionalizing-of-racial-discrimination-in-new-york.pdf", "quote": "In 1825, only 298 of the nearly 6,000 free adult Black New Yorkers met the requirement.", "supports": "practice: very few Black men qualified (Peter J. Galie, Albany Law Review)"}
+      ],
+      "confidence": "high",
+      "notes": "Check the denominator in Galie's figure of 298 out of 'nearly 6,000' against Field (1982) before using it. The 1821 constitution took effect at the end of 1822, so the 1821 tax/militia rules applied only in 1823-1826."
+    },
+    {
+      "state": "New Jersey",
+      "electorMethod": "popular vote statewide (general ticket)",
+      "electorMethodDetail": "New Jersey is not among McPherson's district or legislature states for 1824 to 1828, a popular vote of 45,570 is recorded, and all 8 electoral votes went to Adams.",
+      "whiteMenRule": "property",
+      "whiteMenDetail": "The 1776 constitution's '£50 proclamation money, clear estate' wording stayed in force, with 12 months' residence in the county. The 1807 act of November 16, 1807 limited voting to free white male citizens aged 21. Historian Richard McCormick says it also extended the vote 'to all taxpayers, regardless of the size of their estate'. Keyssar calls this a 'taxpaying alternative'. In practice, any white male taxpayer could vote.",
+      "blackMen": "no",
+      "blackMenDetail": "Excluded by the act of November 16, 1807, which required voters to be 'a free, white, male citizen'. A constitution did not exclude them until 1844.",
+      "women": "Could not vote. Some property-owning women (and Black men) had voted under the 1776 constitution's 'all inhabitants' wording until the 1807 act limited voting to white male citizens.",
+      "other": "New Jersey is the only state here where women had voted before 1828 (1776 to 1807).",
+      "sources": [
+        {"url": "https://teachingamericanhistory.org/document/voter-qualification-law/", "quote": "unless such person be a free, white, male citizen of this state", "supports": "1807 exclusion of Black men and women (act of Nov. 16, 1807)"},
+        {"url": "https://teachinglegalhistory.unl.edu/s/oer/item/1016", "quote": "of the age of twenty-one years, worthy fifty pounds proclamation money, clear estate", "supports": "property wording retained (the transcription reads 'worthy')"},
+        {"url": "https://dspace.njstatelib.org/bitstreams/26abaf9a-613f-4a26-839d-c292135970e0/download", "quote": "to extend the franchise to all taxpayers, regardless of the size of their estate.", "supports": "taxpaying alternative (R. P. McCormick, Suffrage and the Constitution, 1947, NJ State Library)"},
+        {"url": "https://wisc.pb.unizin.org/ls261/chapter/table-a-1/", "quote": "New Jersey: 1807 taxpaying alternative added; terminated 1844; race exclusion 1807, 1844 by constitution", "supports": "Keyssar Tables A.3 and A.5 (paraphrased rows)"},
+        {"url": "https://www.loc.gov/exhibitions/women-fight-for-the-vote/about-this-exhibition/seneca-falls-and-building-a-movement-1776-1890/early-feminist-inspirations/new-jersey-women-gain-then-lose-the-vote/", "quote": "ending in 1807 with a state law restricting the vote to free, white, male citizens", "supports": "women excluded in 1807 (Library of Congress)"},
+        {"url": "https://www.nps.gov/articles/voting-rights-in-nj-before-the-15th-and-19th.htm", "quote": "In 1807, the state legislature restricted suffrage (voting rights) to tax-paying, white male citizens.", "supports": "taxpaying in effect (National Park Service)"}
+      ],
+      "confidence": "high",
+      "notes": "I did not find the exact clause of the 1807 act that treats taxpayers as qualified; that rests on McCormick, Keyssar and the NPS. Classification: 'property' follows Keyssar, but in effect the rule was taxpaying, and a map label of 'taxpaying' could be defended. Pick one and explain it in the legend. Discard The Green Papers' 'by whom electors were appointed' page: it lists New Jersey and Pennsylvania as legislature in 1828, which conflicts with the recorded 1828 popular votes."
+    },
+    {
+      "state": "Pennsylvania",
+      "electorMethod": "popular vote statewide (general ticket)",
+      "electorMethodDetail": "Pennsylvania is not among McPherson's district or legislature states for 1824 to 1828, a popular vote of 152,220 is recorded, and all 28 electoral votes went to Jackson.",
+      "whiteMenRule": "taxpaying",
+      "whiteMenDetail": "Constitution of 1790, Art. III, sec. 1: any 'freeman' aged 21 who had lived in the state for 2 years and, within that time, paid a state or county tax assessed at least 6 months before the election. Sons of qualified electors aged 21 to 22 could vote without paying tax.",
+      "blackMen": "restricted",
+      "blackMenDetail": "In law the 1790 constitution had no racial word, so Black freemen who paid taxes were not excluded. In practice it depended on local officials. Black men voted in some counties (Bucks, York, Dauphin, Cumberland, Juniata, Westmoreland, Allegheny), but in Philadelphia officials refused to assess Black residents for tax, which kept them from voting. One study concludes most Black men in the state could not vote. Formal exclusion came later: Hobbs v. Fogg (decided 1837-38) and the 1838 constitution, which added 'white'.",
+      "women": "Could not vote. Only 'freemen' are named, and no source found records women voting.",
+      "other": "The tax had to have been assessed at least 6 months before the election.",
+      "sources": [
+        {"url": "https://www.paconstitution.org/texts-of-the-constitution/1790-2/", "quote": "every freeman of the age of twenty-one years, having resided in the state two years next before the election, and within that time paid a state or county tax", "supports": "taxpaying rule (Constitution of 1790, Art. III, sec. 1)"},
+        {"url": "https://www.paconstitution.org/texts-of-the-constitution/1790-2/", "quote": "the sons of persons qualified as aforesaid, between the ages of twenty-one and twenty-two years, shall be entitled to vote, although they shall not have paid taxes", "supports": "sons exception"},
+        {"url": "https://tupjournals.temple.edu/index.php/commonwealth/article/view/457/506", "quote": "Blacks voted in Bucks, York, Dauphin, Cumberland, Juniata, Westmoreland and Allegheny Counties", "supports": "Black men voted in some counties (D. A. Latzko, citing Price 1976)"},
+        {"url": "https://tupjournals.temple.edu/index.php/commonwealth/article/view/457/506", "quote": "the majority of black men in Pennsylvania were not able to vote", "supports": "practice was restrictive"},
+        {"url": "https://wisc.pb.unizin.org/ls261/chapter/table-a-1/", "quote": "Pennsylvania: race exclusion adopted 1838", "supports": "formal exclusion came after 1828 (Keyssar Table A.5, paraphrased)"}
+      ],
+      "confidence": "high",
+      "notes": "White men rule: high. For Black men, 'restricted' here means the barrier was in practice, not in the extra legal requirements the scheme describes, because the law was race-neutral in 1828. You might prefer 'yes (in law), often blocked in practice'. Use a distinct symbol or footnote rather than the same 'restricted' as New York, whose restriction was in law."
+    },
+    {
+      "state": "Delaware",
+      "electorMethod": "legislature",
+      "electorMethodDetail": "The state legislature chose Delaware's 3 electors, and voters had no direct say; all three went to Adams. This was one of only two states (with South Carolina) whose legislatures still chose electors in 1828.",
+      "whiteMenRule": "taxpaying",
+      "whiteMenDetail": "Constitution of 1792 (in force until 1831): every white freeman aged 21 who had lived in the state 2 years and paid a state or county tax assessed 6 months before the election. Sons of qualified voters aged 21 to 22 could vote without paying tax. This only mattered for state and local elections, since voters did not choose presidential electors.",
+      "blackMen": "no",
+      "blackMenDetail": "Excluded by the Constitution of 1792 ('every white free man'). Keyssar dates Delaware's racial exclusion to 1792.",
+      "women": "Could not vote. The constitution says 'white freeman'.",
+      "other": "Delaware ended its property qualification in 1792 and replaced it with taxpaying.",
+      "sources": [
+        {"url": "https://presidency.ucsb.edu/statistics/elections/1828", "quote": "3 electors chosen by state legislature and awarded to John Quincy Adams.", "supports": "elector method (American Presidency Project)"},
+        {"url": "https://law.resource.org/pub/us/case/reporter/US/146/146.US.1.1.170.html", "quote": "in all the states excepting Delaware, Georgia, Louisiana, New York, South Carolina, and Vermont, where they were still chosen by the legislature", "supports": "legislature in 1824 (McPherson); no change to 1828 noted"},
+        {"url": "https://archivesfiles.delaware.gov/markers/pdfs/SC-017-07.pdf", "quote": "every white free man of the age of twenty-one years, having resided in the state two years next before such election", "supports": "race exclusion; residence (constitution quoted in an undated Sussex County petition, Delaware Public Archives; OCR)"},
+        {"url": "https://archivesfiles.delaware.gov/markers/pdfs/SC-017-07.pdf", "quote": "paid a state or county tax, which shall have been assessed six months before the election", "supports": "taxpaying rule"},
+        {"url": "https://wisc.pb.unizin.org/ls261/chapter/table-a-1/", "quote": "Delaware: property adopted 1734, terminated 1792; race exclusion adopted 1792", "supports": "Keyssar Tables A.3 and A.5 (paraphrased rows)"}
+      ],
+      "confidence": "medium",
+      "notes": "Elector method: high. Suffrage: medium-high, because I could not open the 1792 constitution itself (the Avalon page was unreachable). The wording comes from an undated petition in the Delaware Public Archives that quotes 'the constitution', which agrees with Keyssar's dates and with the 1835 summary ('only necessary qualification ... paying the taxes'). Check against Thorpe vol. 1 (Delaware 1792, Art. IV, sec. 1)."
+    },
+    {
+      "state": "Maryland",
+      "electorMethod": "popular vote by districts",
+      "electorMethodDetail": "Voters chose electors by districts; McPherson says Maryland used them until 1832. The 11 electors split 6 Adams, 5 Jackson. No at-large electors were found. The number of electors per district was not checked.",
+      "whiteMenRule": "none",
+      "whiteMenDetail": "Constitutional amendment of the 1809 session, confirmed in 1810: every free white male citizen over 21 who had lived 12 months in the state and 6 months in the county, 'and no other', could vote. Keyssar dates the end of property requirements to 1801 for state elections and 1810 for all elections.",
+      "blackMen": "no",
+      "blackMenDetail": "Excluded by constitutional amendment: Keyssar dates the racial exclusion to 1801, written into the constitution again by the 1810 amendment ('every free white male citizen ... and no other').",
+      "women": "Could not vote. The amendment says 'free white male citizen'.",
+      "other": "None found that was well sourced.",
+      "sources": [
+        {"url": "https://msa.maryland.gov/megafile/msa/speccol/sc2900/sc2908/000001/000192/html/am192--33.html", "quote": "every free white male citizen of this state, above twenty-one years of age, and no other", "supports": "race exclusion; no property (Acts of Nov. 1809 ch. 83, confirmed 1810 ch. 33; Archives of Maryland vol. 192)"},
+        {"url": "https://msa.maryland.gov/megafile/msa/speccol/sc2900/sc2908/000001/000192/html/am192--33.html", "quote": "resided twelve months within this state and six months in the county", "supports": "residence"},
+        {"url": "https://wisc.pb.unizin.org/ls261/chapter/table-a-1/", "quote": "Maryland: 1801 requirement dropped for state elections; terminated 1810; race exclusion adopted 1801, 1810 by constitutional amendment", "supports": "Keyssar Tables A.3 and A.5 (paraphrased rows)"},
+        {"url": "https://law.resource.org/pub/us/case/reporter/US/146/146.US.1.1.170.html", "quote": "in Tennessee and Maryland until 1832", "supports": "district method (McPherson v. Blacker)"},
+        {"url": "https://www.archives.gov/electoral-college/1828", "quote": "Maryland 11: Jackson 5, Adams 6", "supports": "split electoral vote (table values)"}
+      ],
+      "confidence": "high",
+      "notes": "Sources disagree, with an outdated source: the 1835 summary attributed to Tocqueville says Maryland voters needed 'fifty acres of land', but the 1810 amendment had already removed that, so the summary should be ignored. The text of the 1801/1802 amendment itself was not read; that date rests on Keyssar."
+    }
+  ]
+}
