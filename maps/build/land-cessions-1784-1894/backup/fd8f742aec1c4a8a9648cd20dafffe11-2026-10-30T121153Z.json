@@ -1,0 +1,389 @@
+{
+ "item": "fd8f742aec1c4a8a9648cd20dafffe11",
+ "properties": {
+  "title": "Land cessions to the United States, 1784 to 1894",
+  "snippet": "Where and when the United States gained land from American Indian nations by treaty, statute and executive order, as Charles Royce mapped it.",
+  "description": "<p><b>Question:</b> Where and when did the United States gain land from American Indian nations through treaties, statutes and executive orders?</p><p><b>What the map shows:</b> Each shaded area is a cession from Charles Royce's <i>Indian Land Cessions in the United States</i> (1896-1897), digitized by the US Forest Service. There is one layer for each period: cessions with a date before 1830, in the 1830s (the years of the Indian Removal Act and the removal of the Southeastern nations) and from 1840 to 1894. Click an area for the nation named in the record, the date or dates, today's states, the nations that exist today and a link to the treaty text, statute or order.</p><p><b>Notes:</b> A cession with dates in two periods is in both layers; its pop-up lists every date. Royce compiled the maps in the 1890s from United States records, so they show how the federal government recorded each transaction. Many cessions were disputed or made under pressure. The boundaries are approximate, and the Forest Service says seven cession numbers have no area on the maps. The data are for information only, not for deciding title or boundaries.</p><p><b>Sources:</b> USDA Forest Service, Office of Tribal Relations, <i>Indian Land Cessions in the United States</i>, from maps by Charles C. Royce (Bureau of American Ethnology, 1896-1897); Esri basemap.</p><p><i>Version 0.2 (28 October 2026), draft.</i></p>",
+  "tags": [
+   "MapMaker",
+   "US History",
+   "grade 8",
+   "Age of Jackson",
+   "Indian land cessions",
+   "web map"
+  ],
+  "accessInformation": "USDA Forest Service, Office of Tribal Relations, from maps by Charles C. Royce (Bureau of American Ethnology, 1896-1897); Esri.",
+  "licenseInfo": "Land cession data: a work of the US federal government (USDA Forest Service); the Forest Service metadata lists no use constraints, and the data.gov record for its tribal ceded lands data states Creative Commons Attribution (CC BY 4.0). Credit the USDA Forest Service when you reuse it. For information only; not legal documents. Facts and text written for this map are original.",
+  "typeKeywords": [
+   "ArcGIS API for JavaScript",
+   "ArcGIS Online",
+   "Explorer Web Map",
+   "Map",
+   "Online Map",
+   "spec:land-cessions-1784-1894",
+   "specVersion:0.2.0",
+   "Web Map"
+  ],
+  "extent": [
+   [
+    -135.22656231352053,
+    13.123743749243001
+   ],
+   [
+    -55.77343731354164,
+    56.8317665016455
+   ]
+  ]
+ },
+ "data": {
+  "operationalLayers": [
+   {
+    "id": "lyr234191f4186",
+    "opacity": 1,
+    "title": "Cessions dated before 1830",
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/land_cessions_royce_v1_1_0/FeatureServer/0",
+    "visibility": true,
+    "itemId": "fbefc5d9f79242d9a6b866b93f5a5af5",
+    "layerType": "ArcGISFeatureLayer",
+    "layerDefinition": {
+     "minScale": 0,
+     "maxScale": 0,
+     "definitionExpression": "DatedBefore1830 = 1",
+     "drawingInfo": {
+      "renderer": {
+       "type": "simple",
+       "symbol": {
+        "type": "esriSFS",
+        "color": [
+         86,
+         180,
+         233,
+         166
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "color": [
+          31,
+          106,
+          153,
+          255
+         ],
+         "width": 0.8,
+         "style": "esriSLSSolid"
+        },
+        "style": "esriSFSSolid"
+       }
+      }
+     }
+    },
+    "popupInfo": {
+     "popupElements": [
+      {
+       "type": "text",
+       "text": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>"
+      }
+     ],
+     "description": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>",
+     "expressionInfos": [
+      {
+       "name": "present",
+       "title": "Nations today",
+       "expression": "var p = $feature.PresentTribe;\nreturn IIf(IsEmpty(p), 'Not listed in the Forest Service data.', p);",
+       "returnType": "string"
+      },
+      {
+       "name": "schedule",
+       "title": "Royce's schedule link text",
+       "expression": "return IIf(IsEmpty($feature.ScheduleURL), '', \"Royce's schedule\");",
+       "returnType": "string"
+      }
+     ],
+     "fieldInfos": [],
+     "title": "{Tribe}"
+    }
+   },
+   {
+    "id": "lyrf36aead630b",
+    "opacity": 1,
+    "title": "Cessions dated 1830 to 1839",
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/land_cessions_royce_v1_1_0/FeatureServer/0",
+    "visibility": false,
+    "itemId": "fbefc5d9f79242d9a6b866b93f5a5af5",
+    "layerType": "ArcGISFeatureLayer",
+    "layerDefinition": {
+     "minScale": 0,
+     "maxScale": 0,
+     "definitionExpression": "Dated1830s = 1",
+     "drawingInfo": {
+      "renderer": {
+       "type": "simple",
+       "symbol": {
+        "type": "esriSFS",
+        "color": [
+         213,
+         94,
+         0,
+         179
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "color": [
+          122,
+          53,
+          0,
+          255
+         ],
+         "width": 0.8,
+         "style": "esriSLSSolid"
+        },
+        "style": "esriSFSSolid"
+       }
+      }
+     }
+    },
+    "popupInfo": {
+     "popupElements": [
+      {
+       "type": "text",
+       "text": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>"
+      }
+     ],
+     "description": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>",
+     "expressionInfos": [
+      {
+       "name": "present",
+       "title": "Nations today",
+       "expression": "var p = $feature.PresentTribe;\nreturn IIf(IsEmpty(p), 'Not listed in the Forest Service data.', p);",
+       "returnType": "string"
+      },
+      {
+       "name": "schedule",
+       "title": "Royce's schedule link text",
+       "expression": "return IIf(IsEmpty($feature.ScheduleURL), '', \"Royce's schedule\");",
+       "returnType": "string"
+      }
+     ],
+     "fieldInfos": [],
+     "title": "{Tribe}"
+    }
+   },
+   {
+    "id": "lyr633183f393a",
+    "opacity": 1,
+    "title": "Cessions dated 1840 to 1894",
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/land_cessions_royce_v1_1_0/FeatureServer/0",
+    "visibility": false,
+    "itemId": "fbefc5d9f79242d9a6b866b93f5a5af5",
+    "layerType": "ArcGISFeatureLayer",
+    "layerDefinition": {
+     "minScale": 0,
+     "maxScale": 0,
+     "definitionExpression": "Dated1840to1894 = 1",
+     "drawingInfo": {
+      "renderer": {
+       "type": "simple",
+       "symbol": {
+        "type": "esriSFS",
+        "color": [
+         0,
+         158,
+         115,
+         166
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "color": [
+          0,
+          90,
+          66,
+          255
+         ],
+         "width": 0.8,
+         "style": "esriSLSSolid"
+        },
+        "style": "esriSFSSolid"
+       }
+      }
+     }
+    },
+    "popupInfo": {
+     "popupElements": [
+      {
+       "type": "text",
+       "text": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>"
+      }
+     ],
+     "description": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce mapped this in the 1890s from United States records, so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>",
+     "expressionInfos": [
+      {
+       "name": "present",
+       "title": "Nations today",
+       "expression": "var p = $feature.PresentTribe;\nreturn IIf(IsEmpty(p), 'Not listed in the Forest Service data.', p);",
+       "returnType": "string"
+      },
+      {
+       "name": "schedule",
+       "title": "Royce's schedule link text",
+       "expression": "return IIf(IsEmpty($feature.ScheduleURL), '', \"Royce's schedule\");",
+       "returnType": "string"
+      }
+     ],
+     "fieldInfos": [],
+     "title": "{Tribe}"
+    }
+   }
+  ],
+  "baseMap": {
+   "baseMapLayers": [
+    {
+     "id": "basec527aa8b",
+     "opacity": 1,
+     "title": "World Hillshade",
+     "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+     "visibility": true,
+     "itemId": "1b243539f4514b6ba35e7d995890db1d",
+     "layerType": "ArcGISTiledMapServiceLayer"
+    },
+    {
+     "id": "base6e149572",
+     "opacity": 1,
+     "title": "Modern Antique (no Labels)",
+     "visibility": true,
+     "itemId": "545f2e839f624600bbb092c3ad998bb8",
+     "layerType": "VectorTileLayer",
+     "blendMode": "multiply",
+     "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json"
+    }
+   ],
+   "title": "Modern Antique"
+  },
+  "authoringApp": "ArcGISMapViewer",
+  "authoringAppVersion": "2026.2",
+  "bookmarks": [
+   {
+    "name": "The United States",
+    "extent": {
+     "spatialReference": {
+      "latestWkid": 3857,
+      "wkid": 102100
+     },
+     "xmin": -13914936.3,
+     "ymin": 2753408.1,
+     "xmax": -7347086.4,
+     "ymax": 6446275.8
+    },
+    "viewpoint": {
+     "rotation": 0,
+     "targetGeometry": {
+      "spatialReference": {
+       "latestWkid": 3857,
+       "wkid": 102100
+      },
+      "xmin": -13914936.3,
+      "ymin": 2753408.1,
+      "xmax": -7347086.4,
+      "ymax": 6446275.8
+     }
+    }
+   },
+   {
+    "name": "The Southeast",
+    "extent": {
+     "spatialReference": {
+      "latestWkid": 3857,
+      "wkid": 102100
+     },
+     "xmin": -10352712.6,
+     "ymin": 3375646,
+     "xmax": -8905559.3,
+     "ymax": 4509031.4
+    },
+    "viewpoint": {
+     "rotation": 0,
+     "targetGeometry": {
+      "spatialReference": {
+       "latestWkid": 3857,
+       "wkid": 102100
+      },
+      "xmin": -10352712.6,
+      "ymin": 3375646,
+      "xmax": -8905559.3,
+      "ymax": 4509031.4
+     }
+    }
+   },
+   {
+    "name": "The Old Northwest",
+    "extent": {
+     "spatialReference": {
+      "latestWkid": 3857,
+      "wkid": 102100
+     },
+     "xmin": -10352712.6,
+     "ymin": 4369640.5,
+     "xmax": -8905559.3,
+     "ymax": 6190443.8
+    },
+    "viewpoint": {
+     "rotation": 0,
+     "targetGeometry": {
+      "spatialReference": {
+       "latestWkid": 3857,
+       "wkid": 102100
+      },
+      "xmin": -10352712.6,
+      "ymin": 4369640.5,
+      "xmax": -8905559.3,
+      "ymax": 6190443.8
+     }
+    }
+   },
+   {
+    "name": "The Plains and the West",
+    "extent": {
+     "spatialReference": {
+      "latestWkid": 3857,
+      "wkid": 102100
+     },
+     "xmin": -13914936.3,
+     "ymin": 3632749.1,
+     "xmax": -10352712.6,
+     "ymax": 6274861.4
+    },
+    "viewpoint": {
+     "rotation": 0,
+     "targetGeometry": {
+      "spatialReference": {
+       "latestWkid": 3857,
+       "wkid": 102100
+      },
+      "xmin": -13914936.3,
+      "ymin": 3632749.1,
+      "xmax": -10352712.6,
+      "ymax": 6274861.4
+     }
+    }
+   }
+  ],
+  "initialState": {
+   "viewpoint": {
+    "targetGeometry": {
+     "spatialReference": {
+      "latestWkid": 3857,
+      "wkid": 102100
+     },
+     "xmin": -15053352.058465984,
+     "ymin": 1473873.241250263,
+     "xmax": -6208670.641534019,
+     "ymax": 7725810.658749737
+    }
+   }
+  },
+  "spatialReference": {
+   "latestWkid": 3857,
+   "wkid": 102100
+  },
+  "timeZone": "system",
+  "version": "2.37"
+ }
+}
