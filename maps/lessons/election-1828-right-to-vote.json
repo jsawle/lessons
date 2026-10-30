@@ -1,0 +1,418 @@
+{
+  "$schema": "../../resources/schema/lesson.schema.json",
+  "formatVersion": "1.9",
+  "id": "election-1828-right-to-vote",
+  "contentVersion": "0.1.0",
+  "status": "draft",
+  "updated": "2026-10-30",
+  "reviewed": null,
+  "title": "The Election of 1828 and the Right to Vote",
+  "summary": "See how each state's electors voted in 1828, then turn on who could vote there: the property and tax rules for white men, and whether free Black men could vote. Students test the idea that Jackson's election was a victory for the common man against the rules state by state.",
+  "subject": "History",
+  "course": "US History",
+  "unit": "Age of Jackson",
+  "grade": "8",
+  "subjects": [
+    "US History",
+    "Civics",
+    "Geography"
+  ],
+  "time": "About 60 minutes, or two parts: questions 1 to 4, then 5, 6 and the big question",
+  "studentLogin": "Not needed to explore the map",
+  "map": {
+    "webmapId": "1bd912453059450dac83074ea42e5424",
+    "about": "This map shows the presidential election of 1828 in the 24 states of that year. A pie on each state shows how its electors voted, for Andrew Jackson or John Quincy Adams, with bigger pies for more electors. Two layers, off when the map opens, show who could vote in each state: whether white men had to own property or pay a tax, and whether free Black men could vote. Each state's pop-up gives the votes, how its electors were chosen, the rules and their sources.",
+    "bookmarks": [
+      "The 24 states of 1828",
+      "New England and New York"
+    ],
+    "layers": [
+      {
+        "name": "Election of 1828: electors' votes",
+        "shows": "A pie on each of the 24 states: electors' votes for Andrew Jackson (blue) and John Quincy Adams (orange), with bigger pies for more electors. The pop-up gives the votes, who chose the electors and both voting rules, with sources.",
+        "source": "National Archives (Electoral College results, 1828); state outlines from Natural Earth"
+      },
+      {
+        "name": "Free Black men and the vote, 1828",
+        "shows": "Each state shaded by whether free Black men could vote: light, could vote; middle, only with extra rules or kept out in practice; dark, could not vote. Off when the map opens.",
+        "source": "State constitutions and laws, as cited in each pop-up",
+        "offAtStart": true
+      },
+      {
+        "name": "White men and the vote, 1828",
+        "shows": "Each state shaded by its rule for white men: light, no property or tax rule; middle, had to pay a tax (or serve in the militia); dark, had to own property. Off when the map opens.",
+        "source": "State constitutions and laws, as cited in each pop-up",
+        "offAtStart": true
+      }
+    ]
+  },
+  "knownIssues": [
+    {
+      "where": "Pop-ups, several states",
+      "note": "Some rules rest on historians' accounts rather than the law's own text, or sources differ; the pop-up says so (North Carolina's rule for electors, Rhode Island's 1822 law, Louisiana's and Missouri's clauses, how Illinois and Missouri chose electors).",
+      "status": "open",
+      "date": "2026-10-30"
+    },
+    {
+      "where": "Virginia pop-up",
+      "note": "Quotes the 1785 law's own words, \"free negroes or mulattoes\", as a primary source. Teacher notes say so.",
+      "status": "open",
+      "date": "2026-10-30"
+    }
+  ],
+  "inquiry": {
+    "compellingQuestion": {
+      "en": "Andrew Jackson's election in 1828 is often called a victory for the common man. Who could vote in 1828, and did it depend on where you lived?"
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "title": {
+          "en": "Notice: the result"
+        },
+        "task": "With only the votes layer on, find which states voted for Jackson and which for Adams, and the states that split.",
+        "tools": [
+          "bookmarks",
+          "legend",
+          "popups"
+        ],
+        "core": false,
+        "minutes": 8,
+        "frontOfClass": [
+          "Open The 24 states of 1828 bookmark.",
+          "Open the legend: blue is Andrew Jackson, orange is John Quincy Adams, and bigger pies mean more electors.",
+          "Ask: which part of the country voted mostly for Adams, and which for Jackson?",
+          "Click the pie on New York and read the votes.",
+          "Ask: which states split their electors between the two?"
+        ],
+        "steps": [
+          {
+            "en": "Open The 24 states of 1828 bookmark and open the legend."
+          },
+          {
+            "en": "Find the blue pies (Andrew Jackson) and the orange pies (John Quincy Adams)."
+          },
+          {
+            "en": "Click the two-color pies and read the votes in each pop-up."
+          }
+        ],
+        "ask": {
+          "en": "(a) Which part of the country voted mostly for Adams? (b) Which part voted mostly for Jackson? (c) Which three states split their electors?"
+        },
+        "lines": 3,
+        "answer": {
+          "where": "Election of 1828: electors' votes layer, legend and pop-ups. All orange: Connecticut, Delaware, Massachusetts, New Hampshire, New Jersey, Rhode Island and Vermont. All blue: the South and the West (Alabama, Georgia, Illinois, Indiana, Kentucky, Louisiana, Mississippi, Missouri, North Carolina, Ohio, South Carolina, Tennessee, Virginia) and Pennsylvania. Split: New York (Jackson 20, Adams 16), Maryland (Jackson 5, Adams 6) and Maine (Jackson 1, Adams 8).",
+          "accept": "(a) New England and nearby states (New Jersey, Delaware). (b) The South and the West, plus Pennsylvania. (c) New York, Maryland and Maine.",
+          "text": "Totals, not on the map: Jackson 178, Adams 83 (National Archives)."
+        }
+      },
+      {
+        "id": "q2",
+        "title": {
+          "en": "Predict"
+        },
+        "task": "Before turning on the voting-rule layers, students predict where white men had to own property or pay a tax to vote, and where free Black men could vote, with a reason. They write the prediction down first.",
+        "tools": [
+          "bookmarks"
+        ],
+        "core": false,
+        "minutes": 5,
+        "frontOfClass": [
+          "Keep only Election of 1828: electors' votes on.",
+          "Ask: in which states do you think white men still had to own property or pay a tax to vote? Older states on the coast, or newer states in the West?",
+          "Ask: where do you think free Black men could vote? Have students write their predictions before anyone turns on a layer."
+        ],
+        "steps": [
+          {
+            "en": "Keep only Election of 1828: electors' votes on."
+          },
+          {
+            "en": "Look at which states are old (on the Atlantic coast) and which are newer (west of the Appalachian Mountains)."
+          },
+          {
+            "en": "Write your predictions before you turn on any other layer."
+          }
+        ],
+        "ask": {
+          "en": "(a) Where do you think white men still had to own property or pay a tax to vote? (b) Where do you think free Black men could vote? Give a reason for each."
+        },
+        "fill": {
+          "en": "I predict ______________ because ______________."
+        },
+        "lines": 2,
+        "answer": {
+          "accept": "Any prediction with a reason, for example that the older coastal states kept older rules, or that newer western states were more open. Predictions are checked in questions 3 and 4, not marked right or wrong here."
+        }
+      },
+      {
+        "id": "q3",
+        "title": {
+          "en": "Reveal: white men"
+        },
+        "task": "Turn on White men and the vote, 1828 and compare the shading with the prediction and with the votes.",
+        "tools": [
+          "layers",
+          "legend",
+          "popups"
+        ],
+        "core": false,
+        "minutes": 8,
+        "frontOfClass": [
+          "In Map layers, turn on White men and the vote, 1828.",
+          "Open the legend: light is no property or tax rule, middle is had to pay a tax, dark is had to own property.",
+          "Ask: which two states are dark? Where are most of the light states?",
+          "Ask: did Jackson win only in states with no rule?"
+        ],
+        "steps": [
+          {
+            "en": "In Map layers, turn on White men and the vote, 1828."
+          },
+          {
+            "en": "Use the legend: light means no property or tax rule, middle means had to pay a tax, dark means had to own property."
+          },
+          {
+            "en": "Click a dark state and a light state and read White men in each pop-up."
+          }
+        ],
+        "ask": {
+          "en": "(a) Which two states made white men own property? (b) Where are most of the light states (no rule)? (c) Did Jackson win only in states with no rule? Was your prediction right?"
+        },
+        "lines": 3,
+        "answer": {
+          "where": "White men and the vote, 1828 layer. Dark (had to own property): Virginia and Rhode Island. Light (no rule): Maine, New Hampshire, Vermont, New York, Maryland, Kentucky, Tennessee, Indiana, Illinois, Alabama and Missouri, and South Carolina for state elections. Middle (pay a tax): Massachusetts, Connecticut, New Jersey, Pennsylvania, Delaware, North Carolina, Georgia, Ohio, Mississippi and Louisiana.",
+          "accept": "(a) Virginia and Rhode Island. (b) Mostly the newer states in the West and South (Kentucky, Tennessee, Indiana, Illinois, Alabama, Missouri), plus some northern states (Maine, New Hampshire, Vermont, New York, Maryland). (c) No: Jackson won Virginia, where white men had to own property, and several tax states; Adams won states with no rule (Vermont, New Hampshire, most of Maine) as well as Rhode Island. The rules and the result don't line up neatly.",
+          "text": "New York's rule for white men changed in 1826, and Virginia's property rule lasted until 1830. Delaware's and South Carolina's rules were for state elections: their legislatures chose the electors."
+        }
+      },
+      {
+        "id": "q4",
+        "title": {
+          "en": "Reveal: free Black men"
+        },
+        "task": "Turn off the white men layer and turn on Free Black men and the vote, 1828; compare with question 3.",
+        "tools": [
+          "layers",
+          "legend",
+          "popups",
+          "bookmarks"
+        ],
+        "core": true,
+        "minutes": 15,
+        "frontOfClass": [
+          "In Map layers, turn off White men and the vote, 1828 and turn on Free Black men and the vote, 1828.",
+          "Open the legend: light is could vote, middle is only with extra rules or kept out in practice, dark is could not vote.",
+          "Ask: in which states could free Black men vote?",
+          "Open the New England and New York bookmark and click New York. Read White men and Free Black men.",
+          "Ask: compare the newer western states in this layer and the last one. What do you notice?"
+        ],
+        "steps": [
+          {
+            "en": "In Map layers, turn off White men and the vote, 1828 and turn on Free Black men and the vote, 1828."
+          },
+          {
+            "en": "Find the light states (could vote). Then open the New England and New York bookmark and click New York."
+          },
+          {
+            "en": "Read White men and Free Black men in New York's pop-up."
+          }
+        ],
+        "ask": {
+          "en": "(a) Name the states where free Black men could vote. (b) How were New York's rules for white men and for Black men different? (c) Compare the newer western states (Indiana, Illinois, Alabama, Missouri) in this layer and the last one. What do you notice?"
+        },
+        "lines": 4,
+        "answer": {
+          "where": "Free Black men and the vote, 1828 layer and pop-ups. Light (could vote): Maine, New Hampshire, Vermont, Massachusetts, North Carolina (until 1835) and Tennessee (until 1834). Middle: New York (had to own property worth $250, pay tax on it and have been a citizen for three years) and Pennsylvania (the law didn't mention race, but in many places officials kept Black men from voting). Dark (could not vote): the other 16 states.",
+          "accept": "(a) Maine, New Hampshire, Vermont, Massachusetts, North Carolina and Tennessee. (b) White men in New York had no property or tax rule after 1826, but Black men had to own $250 of property. (c) The newer western states had no property or tax rule for white men, but all of them shut out free Black men: voting was opened to more white men at the same time as Black men were kept out.",
+          "text": "New York's 1821 constitution and 1826 amendment removed the rules for white men only; in 1825 only 298 Black New Yorkers met the $250 requirement (Albany Law Review, citing Field). Free Black men lost the vote in North Carolina in 1835 and in Tennessee in 1834."
+        }
+      },
+      {
+        "id": "q5",
+        "title": {
+          "en": "Explain why"
+        },
+        "task": "Read the pop-ups for South Carolina and Delaware (the legislature chose electors) and one newer western state; explain what \"expanded suffrage\" meant in 1828, and for whom.",
+        "tools": [
+          "popups"
+        ],
+        "core": false,
+        "minutes": 8,
+        "frontOfClass": [
+          "Click South Carolina and read Who chose the electors. Then click Delaware.",
+          "Ask: did voters in these states choose the president's electors?",
+          "Click Indiana and read when its constitution was written.",
+          "Ask: in 1828, who had gained the right to vote, and who had not?"
+        ],
+        "steps": [
+          {
+            "en": "Click South Carolina and Delaware and read Who chose the electors."
+          },
+          {
+            "en": "Click Indiana and read White men and Free Black men."
+          }
+        ],
+        "ask": {
+          "en": "(a) Who chose the electors in South Carolina and Delaware? (b) Textbooks say suffrage expanded in the Age of Jackson. Using the map, who had gained the right to vote by 1828, and who had not?"
+        },
+        "lines": 4,
+        "answer": {
+          "where": "Pop-ups. South Carolina and Delaware: the state legislature chose the electors, so voters had no direct say. Indiana: no property or tax rule for white men; its Constitution of 1816 allowed only white men.",
+          "accept": "(a) The state legislature. (b) Many white men who owned no land could now vote, especially in the newer western states and after changes in states such as New York (1826) and Massachusetts (1821); but women could vote nowhere, free Black men could vote in only six states, enslaved people could not vote, and in two states voters didn't choose the electors at all. Strong answers say expanded suffrage meant more white men.",
+          "text": "Each pop-up ends: \"Women could not vote in any state in 1828.\" New Jersey had ended women's voting in 1807."
+        }
+      },
+      {
+        "id": "q6",
+        "title": {
+          "en": "Question the source"
+        },
+        "task": "Students ask what the map can and can't show: it shows the rules in law, not who actually voted.",
+        "tools": [
+          "popups"
+        ],
+        "core": false,
+        "minutes": 6,
+        "frontOfClass": [
+          "Click Pennsylvania and read Free Black men.",
+          "Ask: what is the difference between what the law said and what happened?",
+          "Ask: what would you need, besides this map, to know how many people actually voted in 1828?"
+        ],
+        "steps": [
+          {
+            "en": "Click Pennsylvania and read Free Black men."
+          },
+          {
+            "en": "Read the sentence about women at the end of any pop-up."
+          }
+        ],
+        "ask": {
+          "en": "(a) In Pennsylvania, how was what happened different from what the law said? (b) Who is not shown on this map at all? (c) What else would you need to know how many people actually voted in 1828?"
+        },
+        "lines": 3,
+        "answer": {
+          "where": "Pennsylvania pop-up: the constitution didn't mention race, but in many places, Philadelphia among them, officials kept Black men from voting; a new constitution shut them out in 1838. Every pop-up: women could not vote in any state in 1828.",
+          "accept": "(a) The law allowed Black men to vote, but officials kept many from voting. (b) Women, enslaved people, and people in the territories, who couldn't vote for president. (c) Popular vote counts by state, newspapers, poll records or diaries: the map shows the rules, not who turned out."
+        }
+      }
+    ],
+    "final": {
+      "teacher": "Students answer with evidence from all three layers and at least two pop-ups, then write one \"why\" question the map raised. Accept answers that say who could vote depended on the state, name the property and tax states (Virginia and Rhode Island; the tax states), note that free Black men could vote in only six states and women in none, and judge the 'common man' claim: more white men could vote, but many others could not.",
+      "student": {
+        "en": "Answer the big question, Andrew Jackson's election in 1828 is often called a victory for the common man. Who could vote in 1828, and did it depend on where you lived?, using evidence from all three layers and at least two pop-ups. Then write one \"why\" question this map raises for you."
+      },
+      "tools": [
+        "layers",
+        "popups"
+      ]
+    }
+  },
+  "objectives": [
+    "Describe the result of the 1828 election by region using the pies, legend and pop-ups.",
+    "Make and test a prediction about where white men had to own property or pay a tax to vote.",
+    "Compare the rules for white men and for free Black men in the same states, including New York.",
+    "Explain what expanded suffrage meant in 1828 and for whom, using evidence from the pop-ups.",
+    "Distinguish what the law said from what happened, using Pennsylvania as an example."
+  ],
+  "discussion": [
+    "Your predictions in question 2: what did you base them on, and what surprised you?",
+    "New York removed the property rule for white men but kept one for Black men. Why might a state do both at once?",
+    "Is 'a victory for the common man' a fair way to describe 1828? Who would agree, and who might not?"
+  ],
+  "differentiation": {
+    "support": "Do questions 1, 3 and 4 from the front with the legend open, and give pairs a list of the six states where free Black men could vote to check on the map.",
+    "stretch": "Open the source link in New York's pop-up and find the words that set the $250 rule; compare them with the rule for white men."
+  },
+  "resources": [
+    {
+      "title": "1828 Electoral College Results",
+      "url": "https://www.archives.gov/electoral-college/1828",
+      "source": "National Archives"
+    },
+    {
+      "title": "New York Constitution of 1821 and the 1826 amendment",
+      "url": "https://50constitutions.org/ny/constitution/section-id-146696",
+      "source": "50 Constitutions project"
+    },
+    {
+      "title": "Constitution of North Carolina, 1776 (Arts. VII and VIII)",
+      "url": "https://avalon.law.yale.edu/18th_century/nc07.asp",
+      "source": "Avalon Project, Yale Law School"
+    },
+    {
+      "title": "Voting Rights in New Jersey before the 15th and 19th Amendments",
+      "url": "https://www.nps.gov/articles/voting-rights-in-nj-before-the-15th-and-19th.htm",
+      "source": "National Park Service"
+    }
+  ],
+  "assessment": {
+    "evidence": "Strong answers use the pies (Adams in New England, Jackson in the South and West, three split states), the white men layer (Virginia and Rhode Island property, the tax states, the light western states), the free Black men layer (six states, New York's $250 rule) and the pop-ups' note on women.",
+    "exemplar": "Who could vote in 1828 depended a lot on where you lived. In the votes layer, Adams won New England and Jackson won the South and the West, but the voting rules don't follow that split. When I turned on the white men layer, Virginia and Rhode Island were dark, so a white man there had to own property, while in newer states like Indiana, Illinois and Alabama there was no property or tax rule. Jackson won Virginia anyway. The free Black men layer showed that free Black men could vote in only six states, and every newer western state shut them out. New York's pop-up says white men had no property rule after 1826, but Black men had to own $250 of property. Every pop-up also says women could not vote in any state. So 1828 was a victory for more white men, but not for everyone the common man might include."
+  },
+  "studentSupport": {
+    "beforeYouStart": {
+      "en": "In 1828, Americans did not vote for the president directly. Each state chose electors, and the electors voted for president. Andrew Jackson ran against President John Quincy Adams. Each state made its own rules about who could vote. Some states made men own land or pay a tax to vote. Suffrage means the right to vote."
+    },
+    "readingTheMap": {
+      "en": "Blue pies: electors for Andrew Jackson. Orange pies: John Quincy Adams. Bigger pies mean more electors. Only the pies are on at the start; turn on the other layers in Map layers when a question asks. In both rule layers, light means fewer limits and dark means more. Click a state to read its votes, its rules and the sources; scroll to see all of the pop-up."
+    },
+    "tips": [
+      "popups"
+    ],
+    "reflection": {
+      "en": "Turning on the rules one layer at a time, what did you notice about who could vote that a list of election results would not show?"
+    }
+  },
+  "teacherNotes": {
+    "beforeClass": "The map opens with only Election of 1828: electors' votes on. Students turn on White men and the vote, 1828 in question 3 and Free Black men and the vote, 1828 in question 4; question 2's prediction works best before those layers are on. State names are labeled above the pies. Virginia's pop-up quotes the 1785 law's own words, \"free negroes or mulattoes\", as a primary source; you may want to say so before students read it.",
+    "misconceptions": [
+      {
+        "claim": "In 1828 every white man could vote.",
+        "response": "Virginia and Rhode Island still required property, and ten states required a tax payment or militia service."
+      },
+      {
+        "claim": "Jackson won because the states with the most open rules voted for him.",
+        "response": "The map doesn't show that: Jackson won Virginia, a property state, and Adams won states with no property or tax rule."
+      },
+      {
+        "claim": "Voters chose the electors in every state.",
+        "response": "In South Carolina and Delaware the state legislature chose them."
+      },
+      {
+        "claim": "If the law allowed it, people could vote.",
+        "response": "In Pennsylvania the law didn't mention race, but officials kept many Black men from voting."
+      }
+    ],
+    "keyWords": [
+      "suffrage",
+      "elector",
+      "property requirement",
+      "taxpayer",
+      "legislature",
+      "Jacksonian democracy"
+    ]
+  },
+  "standards": [
+    {
+      "code": "C3 D2.His.14.6-8",
+      "text": "Explain multiple causes and effects of events and developments in the past"
+    },
+    {
+      "code": "C3 D2.Civ.2.6-8",
+      "text": "Explain specific roles played by citizens (such as voters, jurors, taxpayers, members of the armed forces, petitioners, protesters, and office-holders)."
+    },
+    {
+      "code": "TX 8.5(G)",
+      "text": "Explain the impact of the election of Andrew Jackson, including expanded suffrage"
+    },
+    {
+      "code": "TX 8.10(A)",
+      "text": "Locate places and regions directly related to major eras and turning points in the United States during the 17th, 18th, and 19th centuries"
+    }
+  ],
+  "languages": {
+    "en": {
+      "status": "draft",
+      "note": "English draft 0.1.0 (30 Oct 2026); fact-check and persona review to follow. A Spanish version follows once the English is reviewed."
+    }
+  }
+}
