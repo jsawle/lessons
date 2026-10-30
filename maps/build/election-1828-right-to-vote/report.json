@@ -2,10 +2,10 @@
  "tool": "Map builder 1.2",
  "spec": "maps/specs/election-1828-right-to-vote.json",
  "specId": "election-1828-right-to-vote",
- "specVersion": "0.2.0",
- "built": "2026-10-30T15:14:31Z",
- "webmapFingerprint": "d4278cc5663441f8d9b2dee74601c6db23988ded",
- "itemFingerprint": "93dd6d4427b10d2595aa2ef7065bc30aec7f318e",
+ "specVersion": "0.3.0",
+ "built": "2026-10-30T17:36:52Z",
+ "webmapFingerprint": "ab0a9f3763996af215747e39f44324f6aa5d7953",
+ "itemFingerprint": "7298aa9629e9df2d70184c4fd71bfd43b178da8f",
  "checked": [
   "basemap is public and not CARTO",
   "every source layer is readable and every field the spec uses exists"
@@ -13,9 +13,9 @@
  "warnings": [],
  "tested": {
   "tool": "Map test 1.0",
-  "when": "2026-10-30T15:16:00Z",
+  "when": "2026-10-30T17:38:17Z",
   "timeZone": "America/Chicago",
-  "webmapFingerprint": "d4278cc5663441f8d9b2dee74601c6db23988ded",
+  "webmapFingerprint": "ab0a9f3763996af215747e39f44324f6aa5d7953",
   "pass": true,
   "checks": [
    {

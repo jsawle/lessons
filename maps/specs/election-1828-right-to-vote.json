@@ -1,11 +1,11 @@
 {
   "format": "Map spec 1.0",
   "id": "election-1828-right-to-vote",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "item": {
     "title": "The election of 1828 and the right to vote",
     "snippet": "How each state's electors voted in 1828, how each state chose them, and who could vote there: property and tax rules for white men, and whether free Black men could vote.",
-    "description": "<p><b>Question:</b> Andrew Jackson's victory in 1828 is often called a win for the common man. Who could vote in 1828, and did that differ from state to state?</p><p><b>What the map shows:</b> A pie on each of the 24 states shows how its electors voted: Andrew Jackson or John Quincy Adams, with bigger pies for more electors. The map opens on the votes. Two more layers, off when it opens, show who could vote in each state: whether white men had to own property or pay a tax, and whether free Black men could vote. Click a state for the votes, how its electors were chosen, the rules and the sources.</p><p><b>Notes:</b> Women could not vote in any state in 1828. Today's state outlines, with West Virginia shown as part of Virginia; territories are not shown. The rules were researched from state constitutions and laws and checked independently; where a rule rests on historians' accounts or sources differ, the pop-up says so.</p><p><b>Sources:</b> National Archives (Electoral College results, 1828); state constitutions and laws as cited in each pop-up; Natural Earth (state outlines); Esri basemap.</p><p><i>Version 0.2 (30 October 2026), draft.</i></p>",
+    "description": "<p><b>Question:</b> Andrew Jackson's victory in 1828 is often called a win for the common man. Who could vote in 1828, and did that differ from state to state?</p><p><b>What the map shows:</b> A pie on each of the 24 states shows how its electors voted: Andrew Jackson or John Quincy Adams, with bigger pies for more electors. The map opens on the votes. Two more layers, off when it opens, show who could vote in each state: whether white men had to own property or pay a tax, and whether free Black men could vote. Click a state for the votes, how its electors were chosen, the rules and the sources.</p><p><b>Notes:</b> Women could not vote in any state in 1828. Today's state outlines, with West Virginia shown as part of Virginia; territories are not shown. The rules were researched from state constitutions and laws and checked independently; where a rule rests on historians' accounts or sources differ, the pop-up says so.</p><p><b>Sources:</b> National Archives (Electoral College results, 1828); state constitutions and laws as cited in each pop-up; Natural Earth (state outlines); Esri basemap.</p><p><i>Version 0.3 (30 October 2026), draft.</i></p>",
     "tags": [
       "US History",
       "election of 1828",
@@ -48,20 +48,20 @@
   },
   "view": {
     "extent": [
-      -95.0,
-      24.5,
-      -66.0,
-      48.0
+      -92.5,
+      27.0,
+      -66.5,
+      47.5
     ]
   },
   "bookmarks": [
     {
       "name": "The 24 states of 1828",
       "extent": [
-        -95.0,
-        24.5,
-        -66.0,
-        48.0
+        -92.5,
+        27.0,
+        -66.5,
+        47.5
       ]
     },
     {
@@ -101,11 +101,11 @@
           "legendTitle": "Electors",
           "from": [
             3,
-            18
+            12
           ],
           "to": [
             36,
-            48
+            36
           ]
         },
         "outline": {
