@@ -17,7 +17,7 @@ Question for students: When did the United States gain the most land through tre
 | Layers (new, small) | Era filter or three visible-range groups (before 1829, 1829–1837, after 1837) built from the date fields; a states layer for orientation |
 | What students use | Time filter or era groups, pop-ups (Arcade formats the dates so they read the same in every time zone), bookmarks (Southeast, Old Northwest, Plains) |
 | Data caveats | Boundaries are coarse; there is no acreage field, so students compare where and when, not how many acres; Royce compiled the maps in the 1890s from the federal government's viewpoint |
-| To fact-check | The date fields against the treaty record for the Southeast cessions; wording of any statement that a cession was "by treaty" (several were disputed or signed under pressure) |
+| To fact-check | Dates: 25 sampled cessions match Royce's schedule (30 Oct, `maps/data/checks/land-cessions-royce-dates-2026-10-30.md`); boundaries against Royce's plates still to do. The date fields against the treaty record for the Southeast cessions; wording of any statement that a cession was "by treaty" (several were disputed or signed under pressure) |
 | Sensitive framing | Say who recorded the data and from whose viewpoint; use "cession" as the dataset's term and note that it hides disagreement |
 
 ## Map 2. Cherokee removal, 1828–1839
