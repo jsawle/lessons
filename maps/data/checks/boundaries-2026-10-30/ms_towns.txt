@@ -1,0 +1,28 @@
+Hernando, MS | 178
+Holly Springs, MS | 178
+Ripley, MS | 178
+Booneville, MS | 178
+New Albany, MS | 178
+Oxford, MS | 178
+Pontotoc, MS | 178
+Houston, MS | 178
+Senatobia, MS | 178
+Batesville, MS | 178
+Water Valley, MS | 178
+Grenada, MS | 156
+Carrollton, MS | 156
+Winona, MS | 156
+Greenwood, MS | 156
+Kosciusko, MS | 156
+Louisville, MS | 156
+Philadelphia, MS | 156
+Starkville, MS | 156
+Macon, MS | 156
+Carthage, MS | 156
+Decatur, MS | 156
+Clarksdale, MS | 156
+Greenville, MS | 115
+Vicksburg, MS | 115
+Jackson, MS | 115
+Raymond, MS | 115
+Yazoo City, MS | 115
