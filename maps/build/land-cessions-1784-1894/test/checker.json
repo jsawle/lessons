@@ -1,56 +1,31 @@
 {
- "rubricVersion": "0.10.0",
+ "rubricVersion": "0.7.1",
  "maps": [
   {
-   "itemId": "942abfa36ef4dc0f11ecb0456388ba9d",
+   "itemId": "af29df2c35bf72cf980913b340fd0b1b",
    "title": "Land cessions to the United States, 1784 to 1894",
    "owner": "build",
-   "auditedAt": "2026-10-28T18:27:17.339Z",
-   "appVersion": "0.10.0",
-   "rubricVersion": "0.10.0",
-   "modelVersions": {
-    "score roll-up": "1.0",
-    "pop-up classifier": "1.1",
-    "colour screening": "1.1",
-    "layer item merge": "1.0",
-    "citation screening": "1.0",
-    "split-layer detection": "1.0",
-    "effects screening": "1.0",
-    "render: data coverage": "1.1",
-    "render: basemap contrast": "1.1"
-   },
-   "render": {
-    "coverage": 0.1821,
-    "medianDeltaE2000": 28.79,
-    "failedLayers": [],
-    "suspendedLayers": [],
-    "settled": true,
-    "viewport": [
-     1024,
-     640
-    ],
-    "sdk": "4.31"
-   },
+   "auditedAt": "2026-10-30T12:08:25.317Z",
+   "rubricVersion": "0.7.1",
    "standards": "General Cartographic Standards for MapMaker",
    "tally": {
     "fail": 0,
-    "warn": 2,
-    "info": 2,
-    "pass": 36,
+    "warn": 1,
+    "info": 1,
+    "pass": 31,
     "skip": 5
    },
    "verdict": "review",
-   "score": 97.4,
+   "score": 98.5,
    "grade": "A",
    "sectionScores": {
-    "Map title & metadata": 94.7,
+    "Map title & metadata": 97.1,
     "Extent & scale": 100,
     "Layers": 100,
     "Pop-ups": 100,
     "Visual effects & labels": 100,
     "Accessibility": 100,
-    "Symbology & legend": 100,
-    "Rendered map": 100
+    "Symbology & legend": 100
    },
    "checks": [
     {
@@ -110,7 +85,7 @@
      "status": "pass",
      "message": "",
      "evidence": [
-      "description: 1330 chars"
+      "description: 1488 chars"
      ]
     },
     {
@@ -135,30 +110,6 @@
      "message": "",
      "evidence": [
       "credits: USDA Forest Service, Office of Tribal Relations, from maps by Charles C. Royce (Bureau of American Ethnology, 1896-1897); Esri."
-     ]
-    },
-    {
-     "id": "meta.citation",
-     "section": "Map title & metadata",
-     "name": "Data source cited",
-     "severity": "warn",
-     "provisional": true,
-     "status": "pass",
-     "message": "",
-     "evidence": [
-      "credits: USDA Forest Service, Office of Tribal Relations, from maps by Charles C. Royce (Bureau of American Ethnology, 1896-1897); Esri."
-     ]
-    },
-    {
-     "id": "meta.category",
-     "section": "Map title & metadata",
-     "name": "Category assigned",
-     "severity": "warn",
-     "provisional": true,
-     "status": "warn",
-     "message": "No category assigned.",
-     "evidence": [
-      "categories: none"
      ]
     },
     {
@@ -259,8 +210,8 @@
      "message": "",
      "evidence": [
       "Cessions dated before 1830: ok",
-      "Cessions dated 1840 to 1894: ok",
-      "Cessions dated 1830 to 1839: ok"
+      "Cessions dated 1830 to 1839: ok",
+      "Cessions dated 1840 to 1894: ok"
      ]
     },
     {
@@ -273,8 +224,8 @@
      "message": "",
      "evidence": [
       "Cessions dated before 1830",
-      "Cessions dated 1840 to 1894",
-      "Cessions dated 1830 to 1839"
+      "Cessions dated 1830 to 1839",
+      "Cessions dated 1840 to 1894"
      ]
     },
     {
@@ -311,8 +262,8 @@
      "message": "All 3 data layer(s) have an authored pop-up (Arcade / elements / fields / media / raster identify).",
      "evidence": [
       "Cessions dated before 1830: arcade",
-      "Cessions dated 1840 to 1894: arcade",
-      "Cessions dated 1830 to 1839: arcade"
+      "Cessions dated 1830 to 1839: arcade",
+      "Cessions dated 1840 to 1894: arcade"
      ]
     },
     {
@@ -337,18 +288,6 @@
      "message": "",
      "evidence": [
       "visible fields have readable labels"
-     ]
-    },
-    {
-     "id": "popup.disabled",
-     "section": "Pop-ups",
-     "name": "Pop-ups switched off",
-     "severity": "info",
-     "provisional": false,
-     "status": "pass",
-     "message": "",
-     "evidence": [
-      "no data layer has its pop-up switched off"
      ]
     },
     {
@@ -534,18 +473,6 @@
      "evidence": []
     },
     {
-     "id": "legend.entities",
-     "section": "Symbology & legend",
-     "name": "Colours that identify individuals are explained",
-     "severity": "warn",
-     "provisional": true,
-     "status": "info",
-     "message": "Each colour stands for one individual. The automatic legend lists the layer names; consider also saying in the description what a colour means.",
-     "evidence": [
-      "3 layers from one service, each filtered to one value (Cessions dated before 1830, Cessions dated 1840 to 1894, Cessions dated 1830 to 1839)"
-     ]
-    },
-    {
      "id": "sym.diverging-note",
      "section": "Symbology & legend",
      "name": "Diverging ramp pivot explained",
@@ -555,46 +482,6 @@
      "message": "",
      "evidence": [
       "no diverging ramps"
-     ]
-    },
-    {
-     "id": "render.coverage",
-     "section": "Rendered map",
-     "name": "Data visible at the saved extent",
-     "severity": "warn",
-     "provisional": false,
-     "status": "pass",
-     "message": "Data layers cover 18.2% of the viewport at the saved extent.",
-     "evidence": [
-      "data coverage: 18.2%",
-      "viewport 1024 x 640 px, 163840 pixels sampled (every 2nd), 29840 differ from the basemap alone",
-      "render time 25.7 s"
-     ]
-    },
-    {
-     "id": "render.contrast",
-     "section": "Rendered map",
-     "name": "Data stands out from the basemap",
-     "severity": "warn",
-     "provisional": false,
-     "status": "pass",
-     "message": "Data stands out from the basemap (median dE 28.8).",
-     "evidence": [
-      "median dE2000 data vs basemap: 28.8",
-      "25th percentile dE: 27.7",
-      "share of data pixels with dE < 8: 0%"
-     ]
-    },
-    {
-     "id": "render.layerviews",
-     "section": "Rendered map",
-     "name": "Layers draw at the saved extent",
-     "severity": "warn",
-     "provisional": false,
-     "status": "pass",
-     "message": "All visible layers drew at the saved extent.",
-     "evidence": [
-      "no failed or suspended layers"
      ]
     }
    ]

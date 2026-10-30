@@ -66,12 +66,12 @@
    }
   },
   {
-   "id": "lyr633183f393a",
-   "title": "Cessions dated 1840 to 1894",
+   "id": "lyrf36aead630b",
+   "title": "Cessions dated 1830 to 1839",
    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/land_cessions_royce_v1_1_0/FeatureServer/0",
    "itemId": "fbefc5d9f79242d9a6b866b93f5a5af5",
    "layerType": "ArcGISFeatureLayer",
-   "visibility": true,
+   "visibility": false,
    "opacity": 1,
    "layerDefinition": {
     "drawingInfo": {
@@ -81,18 +81,18 @@
        "type": "esriSFS",
        "style": "esriSFSSolid",
        "color": [
+        213,
+        94,
         0,
-        158,
-        115,
-        166
+        179
        ],
        "outline": {
         "type": "esriSLS",
         "style": "esriSLSSolid",
         "color": [
+         122,
+         53,
          0,
-         90,
-         66,
          255
         ],
         "width": 0.8
@@ -100,7 +100,7 @@
       }
      }
     },
-    "definitionExpression": "Dated1840to1894 = 1",
+    "definitionExpression": "Dated1830s = 1",
     "minScale": 0,
     "maxScale": 0
    },
@@ -131,12 +131,12 @@
    }
   },
   {
-   "id": "lyrf36aead630b",
-   "title": "Cessions dated 1830 to 1839",
+   "id": "lyr633183f393a",
+   "title": "Cessions dated 1840 to 1894",
    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/land_cessions_royce_v1_1_0/FeatureServer/0",
    "itemId": "fbefc5d9f79242d9a6b866b93f5a5af5",
    "layerType": "ArcGISFeatureLayer",
-   "visibility": true,
+   "visibility": false,
    "opacity": 1,
    "layerDefinition": {
     "drawingInfo": {
@@ -146,18 +146,18 @@
        "type": "esriSFS",
        "style": "esriSFSSolid",
        "color": [
-        213,
-        94,
         0,
-        179
+        158,
+        115,
+        166
        ],
        "outline": {
         "type": "esriSLS",
         "style": "esriSLSSolid",
         "color": [
-         122,
-         53,
          0,
+         90,
+         66,
          255
         ],
         "width": 0.8
@@ -165,7 +165,7 @@
       }
      }
     },
-    "definitionExpression": "Dated1830s = 1",
+    "definitionExpression": "Dated1840to1894 = 1",
     "minScale": 0,
     "maxScale": 0
    },
