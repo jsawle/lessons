@@ -2,10 +2,10 @@
  "rubricVersion": "0.7.1",
  "maps": [
   {
-   "itemId": "d4278cc5663441f8d9b2dee74601c6db",
+   "itemId": "ab0a9f3763996af215747e39f44324f6",
    "title": "The election of 1828 and the right to vote",
    "owner": "build",
-   "auditedAt": "2026-10-30T15:15:59.949Z",
+   "auditedAt": "2026-10-30T17:38:17.202Z",
    "rubricVersion": "0.7.1",
    "standards": "General Cartographic Standards for MapMaker",
    "tally": {
@@ -145,8 +145,8 @@
      "status": "pass",
      "message": "",
      "evidence": [
-      "extent: -10575352, 2814455 -> -7347086, 6106855 (wkid 3857)",
-      "width ~ 29 deg"
+      "extent: -10297053, 3123472 -> -7402746, 6024072 (wkid 3857)",
+      "width ~ 26 deg"
      ]
     },
     {
