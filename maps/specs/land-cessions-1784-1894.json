@@ -1,13 +1,13 @@
 {
   "format": "Map spec 1.0",
   "id": "land-cessions-1784-1894",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "notes": "Age of Jackson slice, map 1 (maps/plan/age-of-jackson.md). Map first: no lesson yet. Data is the v1.1 copy made by Data copy 1.1.1 from maps/data/land-cessions-royce.json.",
   "dataSpec": "maps/data/land-cessions-royce.json",
   "item": {
     "title": "Land cessions to the United States, 1784 to 1894",
     "snippet": "Where and when the United States gained land from American Indian nations by treaty, statute and executive order, as Charles Royce mapped it.",
-    "description": "<p><b>Question:</b> Where and when did the United States gain land from American Indian nations through treaties, statutes and executive orders?</p><p><b>What the map shows:</b> Each shaded area is a cession from Charles Royce's <i>Indian Land Cessions in the United States</i> (1896-1897), digitized by the US Forest Service. There is one layer for each period: cessions with a date before 1830, in the 1830s (the years of the Indian Removal Act and the removal of the Southeastern nations) and from 1840 to 1894. Click an area for the nation named in the record, the date or dates, today's states, the nations that exist today and a link to the treaty text, statute or order.</p><p><b>Notes:</b> A cession with dates in two periods is in both layers; its pop-up lists every date. Royce compiled the maps in the 1890s from United States records, so they show how the federal government recorded each transaction. Many cessions were disputed or made under pressure. The boundaries are approximate, and the Forest Service says seven cession numbers have no area on the maps. The data are for information only, not for deciding title or boundaries.</p><p><b>Sources:</b> USDA Forest Service, Office of Tribal Relations, <i>Indian Land Cessions in the United States</i>, from maps by Charles C. Royce (Bureau of American Ethnology, 1896-1897); Esri basemap.</p><p><i>Version 0.2 (28 October 2026), draft.</i></p>",
+    "description": "<p><b>Question:</b> Where and when did the United States gain land from American Indian nations through treaties, statutes and executive orders?</p><p><b>What the map shows:</b> Each shaded area is a cession from Charles Royce's <i>Indian Land Cessions in the United States</i> (1896-1897), digitized by the US Forest Service. There is one layer for each period: cessions with a date before 1830, in the 1830s (the years of the Indian Removal Act and the removal of the Southeastern nations) and from 1840 to 1894. The map opens with only the cessions dated before 1830 turned on; turn on the 1830s and then 1840 to 1894 in the layer list to see how the cessions built up. Click an area for the nation named in the record, the date or dates, today's states, the nations that exist today and a link to the treaty text, statute or order.</p><p><b>Notes:</b> A cession with dates in two periods is in both layers; its pop-up lists every date. Royce compiled the maps in the 1890s from United States records, so they show how the federal government recorded each transaction. Many cessions were disputed or made under pressure. The boundaries are approximate, and the Forest Service says seven cession numbers have no area on the maps. The data are for information only, not for deciding title or boundaries.</p><p><b>Sources:</b> USDA Forest Service, Office of Tribal Relations, <i>Indian Land Cessions in the United States</i>, from maps by Charles C. Royce (Bureau of American Ethnology, 1896-1897); Esri basemap.</p><p><i>Version 0.3 (30 October 2026), draft.</i></p>",
     "tags": [
       "MapMaker",
       "US History",
@@ -85,18 +85,18 @@
   ],
   "layers": [
     {
-      "title": "Cessions dated 1830 to 1839",
+      "title": "Cessions dated 1840 to 1894",
       "source": {
         "itemId": "fbefc5d9f79242d9a6b866b93f5a5af5",
         "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/land_cessions_royce_v1_1_0/FeatureServer/0"
       },
-      "visible": true,
-      "filter": "Dated1830s = 1",
+      "visible": false,
+      "filter": "Dated1840to1894 = 1",
       "symbol": {
         "type": "fill",
-        "color": "#D55E00B3",
+        "color": "#009E73A6",
         "outline": {
-          "color": "#7A3500",
+          "color": "#005A42",
           "width": 0.8
         }
       },
@@ -121,18 +121,18 @@
       }
     },
     {
-      "title": "Cessions dated 1840 to 1894",
+      "title": "Cessions dated 1830 to 1839",
       "source": {
         "itemId": "fbefc5d9f79242d9a6b866b93f5a5af5",
         "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/land_cessions_royce_v1_1_0/FeatureServer/0"
       },
-      "visible": true,
-      "filter": "Dated1840to1894 = 1",
+      "visible": false,
+      "filter": "Dated1830s = 1",
       "symbol": {
         "type": "fill",
-        "color": "#009E73A6",
+        "color": "#D55E00B3",
         "outline": {
-          "color": "#005A42",
+          "color": "#7A3500",
           "width": 0.8
         }
       },
@@ -195,23 +195,52 @@
   ],
   "checks": [
     {
-      "name": "legend-three-periods",
-      "question": "Where and when did the United States gain land?",
+      "name": "notice-before-1830",
+      "question": "Notice: where had the United States gained land before 1830?",
       "do": {
         "bookmark": "The United States",
         "legend": true
       },
       "expect": {
         "legendHas": [
-          "Cessions dated 1830 to 1839",
-          "Cessions dated 1840 to 1894",
           "Cessions dated before 1830"
+        ],
+        "drawnAtScale": [
+          "Cessions dated before 1830"
+        ],
+        "hiddenAtScale": [
+          "Cessions dated 1830 to 1839",
+          "Cessions dated 1840 to 1894"
+        ]
+      }
+    },
+    {
+      "name": "reveal-1830s",
+      "question": "Reveal: where were the cessions of the 1830s?",
+      "do": {
+        "bookmark": "The United States",
+        "on": [
+          "Cessions dated 1830 to 1839"
+        ],
+        "legend": true
+      },
+      "expect": {
+        "legendHas": [
+          "Cessions dated before 1830",
+          "Cessions dated 1830 to 1839"
+        ],
+        "drawnAtScale": [
+          "Cessions dated before 1830",
+          "Cessions dated 1830 to 1839"
+        ],
+        "hiddenAtScale": [
+          "Cessions dated 1840 to 1894"
         ]
       }
     },
     {
       "name": "cherokee-1835",
-      "question": "The Southeast in the 1830s",
+      "question": "Explain why: open a cession in the Southeast dated in the 1830s",
       "do": {
         "open": {
           "layer": "Cessions dated 1830 to 1839",
@@ -230,7 +259,7 @@
     },
     {
       "name": "choctaw-1830",
-      "question": "The Southeast in the 1830s",
+      "question": "Explain why: open a cession in the Southeast dated in the 1830s",
       "do": {
         "open": {
           "layer": "Cessions dated 1830 to 1839",
@@ -241,6 +270,29 @@
         "popupHas": [
           "Choctaw",
           "September 27, 1830"
+        ]
+      }
+    },
+    {
+      "name": "reveal-1840-1894",
+      "question": "Reveal: how did the pattern change after 1840?",
+      "do": {
+        "bookmark": "The United States",
+        "on": [
+          "Cessions dated 1840 to 1894"
+        ],
+        "legend": true
+      },
+      "expect": {
+        "legendHas": [
+          "Cessions dated before 1830",
+          "Cessions dated 1830 to 1839",
+          "Cessions dated 1840 to 1894"
+        ],
+        "drawnAtScale": [
+          "Cessions dated before 1830",
+          "Cessions dated 1830 to 1839",
+          "Cessions dated 1840 to 1894"
         ]
       }
     }

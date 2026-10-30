@@ -2,10 +2,10 @@
  "tool": "Map builder 1.1",
  "spec": "maps/specs/land-cessions-1784-1894.json",
  "specId": "land-cessions-1784-1894",
- "specVersion": "0.2.0",
- "built": "2026-10-28T18:25:59Z",
- "webmapFingerprint": "942abfa36ef4dc0f11ecb0456388ba9d2bff8289",
- "itemFingerprint": "77b52386326891b5e8e2f1b306ba8278c08ea55a",
+ "specVersion": "0.3.0",
+ "built": "2026-10-30T12:07:06Z",
+ "webmapFingerprint": "af29df2c35bf72cf980913b340fd0b1b114c6670",
+ "itemFingerprint": "79d39a4203dfa514524c44c932a68303d97a1bd5",
  "checked": [
   "basemap is public and not CARTO",
   "every source layer is readable and every field the spec uses exists"
@@ -13,13 +13,18 @@
  "warnings": [],
  "tested": {
   "tool": "Map test 1.0",
-  "when": "2026-10-28T18:27:17Z",
+  "when": "2026-10-30T12:08:25Z",
   "timeZone": "America/Chicago",
-  "webmapFingerprint": "942abfa36ef4dc0f11ecb0456388ba9d2bff8289",
+  "webmapFingerprint": "af29df2c35bf72cf980913b340fd0b1b114c6670",
   "pass": true,
   "checks": [
    {
-    "name": "legend-three-periods",
+    "name": "notice-before-1830",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "reveal-1830s",
     "pass": true,
     "failures": []
    },
@@ -30,6 +35,11 @@
    },
    {
     "name": "choctaw-1830",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "reveal-1840-1894",
     "pass": true,
     "failures": []
    }
