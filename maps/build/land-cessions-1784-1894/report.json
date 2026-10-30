@@ -1,11 +1,11 @@
 {
- "tool": "Map builder 1.1",
+ "tool": "Map builder 1.2",
  "spec": "maps/specs/land-cessions-1784-1894.json",
  "specId": "land-cessions-1784-1894",
- "specVersion": "0.4.0",
- "built": "2026-10-30T13:03:34Z",
- "webmapFingerprint": "f5cc40b6b709a76adce8c43c0573a4c004a9d54e",
- "itemFingerprint": "65e9abeb7df30fdf4a2f23bc14b2720dce05c4ac",
+ "specVersion": "0.5.0",
+ "built": "2026-10-30T13:24:27Z",
+ "webmapFingerprint": "4e1f60ecd473016dd561db9f76259c707ebe0f51",
+ "itemFingerprint": "cf54973ee1662e2869ee771ed3c318342aebf3f7",
  "checked": [
   "layers, start visibility and bookmarks match the lesson",
   "basemap is public and not CARTO",
@@ -14,9 +14,9 @@
  "warnings": [],
  "tested": {
   "tool": "Map test 1.0",
-  "when": "2026-10-30T13:04:37Z",
+  "when": "2026-10-30T13:25:42Z",
   "timeZone": "America/Chicago",
-  "webmapFingerprint": "f5cc40b6b709a76adce8c43c0573a4c004a9d54e",
+  "webmapFingerprint": "4e1f60ecd473016dd561db9f76259c707ebe0f51",
   "pass": true,
   "checks": [
    {
@@ -41,6 +41,11 @@
    },
    {
     "name": "reveal-1840-1894",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "creek-1832",
     "pass": true,
     "failures": []
    }

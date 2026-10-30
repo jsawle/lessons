@@ -1,0 +1,146 @@
+{
+  "persona": "T4",
+  "findings": [
+    {
+      "where": "Student sheet, all questions (On the map steps); lesson page From the front",
+      "what": "Layer, bookmark, tool and pop-up field names are run into the sentence as plain text, with nothing to mark them (no bold, no quotes). 'The' is part of the bookmark name, so a step reads 'Open The Southeast bookmark, then The Old Northwest bookmark.' Pop-up labels appear the same way ('read Nations today').",
+      "why": "An English learner matching words on the sheet to words on the screen has to work out where a name starts and stops. 'Open The United States bookmark' looks like a grammar mistake, and 'read Nations today' could be taken as 'read about nations today'. Marking the names is the cheapest way to help ELs match steps to the map, and it tells the translator which words to leave in English.",
+      "severity": "slows it down",
+      "suggestion": "Put every on-screen name in bold (or quotes) on the sheet and lesson page: **The Southeast**, **Map layers**, **Cessions dated 1830 to 1839**, **Nations today**, **Treaty text**. Use exactly the same rule in the Spanish sheet.",
+      "needsLiveMap": false,
+      "quote": "Open The Southeast bookmark, then The Old Northwest bookmark."
+    },
+    {
+      "where": "Student sheet, Questions; lesson page Tools lines",
+      "what": "The sheet names tools (Map layers, Bookmarks, Legend) but gives no picture of them. In the map pictures the tools seem to be icon-only buttons: a list icon at top right, a '>>' button on the legend panel, and no visible Bookmarks button.",
+      "why": "If the only English word for a tool is a tooltip, an EL can't match 'In Map layers' to anything on screen. Small icons next to the tool names would let students follow the steps without reading English.",
+      "severity": "slows it down",
+      "suggestion": "Add a tiny icon next to each tool name the first time the sheet uses it (Map layers, Legend, Bookmarks, pop-up arrows), or add a one-line 'Tools' strip with icons under Reading the map. Check the icons and tooltips on the live app.",
+      "needsLiveMap": true,
+      "quote": "In Map layers, turn on Cessions dated 1830 to 1839."
+    },
+    {
+      "where": "Student sheet, Explain why (Q4), step 3 and Answer",
+      "what": "Students are told to write down 'the nation' and 'the kind of document the link names'. The pop-up has no 'Nation' label: the nation is the title. Nothing on the pop-up is called 'kind of document' either: it's the first link, 'Treaty text'. That link sits right above a second link, 'Royce's schedule'.",
+      "why": "ELs read for the words in the question. When those words aren't on the pop-up they stall or copy the wrong thing (for example 'Royce's schedule', or the Nations today list instead of the title). The 'kind of document' wording is a long reduced relative clause, which is hard to parse.",
+      "severity": "slows it down",
+      "suggestion": "Say where each answer is: 'Write down: the nation (the name at the top of the pop-up), the date (Date or dates) and the kind of document (the first link, for example Treaty text).' A three-column mini table (Place | Nation | Date | Document) would also cut the writing load.",
+      "needsLiveMap": false,
+      "quote": "For each, write down the nation, the date and the kind of document the link names."
+    },
+    {
+      "where": "Student sheet, Question the source (Q6), step 1; map pop-ups",
+      "what": "In both pop-up pictures the italic note is cut off at the bottom of the pop-up ('Royce compiled this from United States records' and then nothing). Students have to scroll inside the pop-up to read it. The sheet also relies on the word 'italics'.",
+      "why": "Many ELs won't know 'italics', and won't know they need to scroll inside a pop-up. They will read half a sentence and miss 'federal government' and 'approximate', which are the point of Q6.",
+      "severity": "slows it down",
+      "suggestion": "Write: 'Scroll down to the bottom of the pop-up and read the last sentence (in slanted letters, called italics).' Also think about putting the note higher in the pop-up, or shortening it so it fits without scrolling.",
+      "needsLiveMap": true,
+      "quote": "read the note in italics at the end of the pop-up"
+    },
+    {
+      "where": "Student sheet, Reading the map",
+      "what": "This is one dense paragraph of six sentences with several abstract ideas: overlapping layers, an earlier date that may not be the cession, and area not equalling amount. It uses the phrasal verb 'set the land aside' and the vague pronoun 'then'.",
+      "why": "This is the heaviest reading on the sheet, and it comes before any map work. ELs will either skip it or get stuck on it. The overlap and two-date ideas only matter in a few places (Florida, Oklahoma), so most of it can wait until a student meets it.",
+      "severity": "slows it down",
+      "suggestion": "Turn it into 3 or 4 short bullets: 'Light blue = before 1830. Orange = 1830s. Green = 1840 to 1894.' / 'Only light blue is on at the start.' / 'Some places have two dates. Read all the dates.' / 'Lines are not exact.' Move 'set aside' and 'bigger area' to the teacher notes, or to a small tip where it is needed.",
+      "needsLiveMap": false,
+      "quote": "The earlier date can be the treaty that set the land aside, not the one that took it, so read every date in the pop-up."
+    },
+    {
+      "where": "Student sheet (no word box); Teacher notes, Key words",
+      "what": "Key words are listed only for teachers. The student sheet defines 'cession', but it uses 'treaty' inside that definition without defining it. 'Sovereignty' and 'primary source' are listed as key words but are never used on the sheet or in any question. Words the sheet does lean on ('federal', 'compiled', 'transactions', 'pattern', 'nation', 'pockets') aren't supported.",
+      "why": "Ana pre-teaches the key words, so a list that doesn't match what students read wastes her prep time. ELs also get no help with the words that actually block them.",
+      "severity": "slows it down",
+      "suggestion": "Add a short word box to the student sheet (cession, treaty, nation, removal, federal, record) with plain one-line meanings. Either use 'sovereignty' and 'primary source' in a question or drop them from Key words. Define treaty: 'a written agreement between nations'.",
+      "needsLiveMap": false,
+      "quote": "cession, treaty, Indian Removal Act, removal, sovereignty, primary source"
+    },
+    {
+      "where": "Student sheet, Notice (Q1), Reveal: the 1830s (Q3), Explain why (Q4) and Question the source (Q6) Answer lines",
+      "what": "Each Answer line stacks two or three questions in one run of text. Only Q2 has a sentence frame ('I predict ... because ...'). The helpful scaffold for Q1 on the lesson page (east or west of the Mississippi, north or south) isn't on the student sheet.",
+      "why": "Stacked questions are hard for ELs to separate, so they answer one and skip the rest. The Q2 frame shows that frames work in this format, and frames on Q1, Q3 and Q4 would help her ELs write evidence-based answers.",
+      "severity": "slows it down",
+      "suggestion": "Split each Answer into labelled parts (a, b, c) with a line each, and add frames: Q1 'Before 1830, cessions were mostly ___ (east/west) of the Mississippi River, in ___. Empty parts: ___.' Q3 'The orange areas in the Southeast fill ___.' Q4 'The ___ ceded land in ___ by a ___. This was ___ years after the Indian Removal Act.'",
+      "needsLiveMap": false,
+      "quote": "Which parts of the map are still empty?"
+    },
+    {
+      "where": "Student sheet, Reveal: the 1830s (Q3), Answer",
+      "what": "Q1 asks which parts are 'empty'. Q3 then refers back to 'the empty pockets you found before 1830', a metaphor students haven't seen before.",
+      "why": "'Pockets' is idiomatic. ELs may read it literally, or not realise it means the same gaps they described in Q1. Using the same plain word again keeps the link between the two questions clear.",
+      "severity": "minor",
+      "suggestion": "Use 'the empty gaps (holes) you found in question 1', and use 'gaps' in Q1 too.",
+      "needsLiveMap": false,
+      "quote": "What do the orange areas in the Southeast have in common with the empty pockets you found before 1830?"
+    },
+    {
+      "where": "Student sheet, Question the source (Q6), Answer",
+      "what": "The final question combines a modal hypothetical ('might ... say'), a vague referent ('the nations named in the pop-ups') and an abstract noun ('transactions', which is used nowhere else on the sheet).",
+      "why": "This is the hardest sentence on the sheet for ELs to understand, and one of the hardest to translate. 'Transactions' suggests buying and selling, which works against the lesson's point that many cessions weren't free choices.",
+      "severity": "slows it down",
+      "suggestion": "'How might Cherokee or Creek people describe these treaties? Would they use the word cession? What word might they use?'",
+      "needsLiveMap": false,
+      "quote": "What might the nations named in the pop-ups say about the same transactions?"
+    },
+    {
+      "where": "Student sheet, Explain why (Q4), step 2; Notice (Q1) and Reveal 1840 to 1894 (Q5) answers",
+      "what": "Students find the places to click by small-town names (Kosciusko, Talladega, Rome), and they answer Q1 and Q5 with state or region names. In the United States view pictures, no state names, state lines or city names can be seen on the basemap. I can't see whether the towns are labelled at The Southeast bookmark zoom.",
+      "why": "Newcomer ELs often don't know US state locations, and 'Kosciusko' is hard to read and pronounce. If the labels aren't on screen at the bookmark zoom, these students can't find the right shapes. Clicking just off target gives a different Choctaw pop-up (1820, or 1805 and 1830).",
+      "severity": "slows it down",
+      "suggestion": "Check on the live map that Kosciusko, Talladega and Rome are labelled at The Southeast bookmark. Either way, put a small labelled screenshot (or 'the big orange shape in the middle of Mississippi') on the sheet for everyone, not only as a Support option. You could also add a states reference layer or a basemap with labels.",
+      "needsLiveMap": true,
+      "quote": "Click three orange areas: east-central Mississippi (around Kosciusko), east-central Alabama (around Talladega) and northwest Georgia (around Rome)."
+    },
+    {
+      "where": "Teacher notes (Word), Before class; lesson page Student activity",
+      "what": "The teacher notes say the lesson includes a student sheet 'in English and Spanish', and the catalogue and How these lessons work pages say the same. The lesson page only offers 'Download Word (English)', and the AI prompt says 'Languages: student sheets in English.'",
+      "why": "Ana plans around the Spanish sheet. These are known draft gaps, but the teacher notes say the Spanish sheet exists, so she'd go looking for a file that isn't there.",
+      "severity": "minor",
+      "suggestion": "Until the Spanish sheet ships, make the Before class text for this lesson say 'English (Spanish coming)', or generate it from the languages that actually exist.",
+      "needsLiveMap": false,
+      "quote": "The lesson includes the map, a two-page Word student sheet in English and Spanish, and these teacher notes."
+    },
+    {
+      "where": "Student sheet, Before you start",
+      "what": "This section has two long sentences: one with a relative clause and a causative ('which let the President make treaties to move American Indian nations living east of ...'), and one with a reduced relative clause ('records Charles Royce compiled from ...'). Q4 later points students back to it by its heading ('Using the Indian Removal Act in Before you start').",
+      "why": "The Act is the evidence for the 'If you only do one' question, so ELs must understand it. Long embedded clauses hide the key facts (1830, east of the Mississippi, move west).",
+      "severity": "minor",
+      "suggestion": "Split it into short sentences: 'A treaty is a written agreement. In 1830, President Andrew Jackson signed the Indian Removal Act. This law let the President make treaties to move American Indian nations from east of the Mississippi River to the West.' 'Charles Royce collected (compiled) these records from US government papers. They were published in 1899.'",
+      "needsLiveMap": false,
+      "quote": "This map comes from records Charles Royce compiled from federal government documents; the government published them in 1899."
+    },
+    {
+      "where": "Map pop-ups, Today's states",
+      "what": "States are given as postal codes separated by semicolons.",
+      "why": "Newcomer ELs may not know AL, MS, GA, NC and TN. That is small here, because Q4 doesn't ask for states, but it adds decoding work.",
+      "severity": "minor",
+      "suggestion": "Spell the states out in the pop-up (Alabama; Mississippi), or add a one-line key on the sheet.",
+      "needsLiveMap": false,
+      "quote": "Today's states: AL; MS"
+    }
+  ],
+  "works": [
+    "Layer names on the sheet match the legend in the map pictures exactly (Cessions dated before 1830 / 1830 to 1839 / 1840 to 1894), and each colour is named next to its layer.",
+    "One layer at a time, in a fixed order, is a good structure for ELs: each step adds one colour and one idea.",
+    "The Q2 sentence frame ('I predict ... because ...') is exactly the kind of support ELs need.",
+    "Defining 'cession' at the top, and the tip about '1 of 2' in pop-ups, both help before students get stuck.",
+    "The three target pop-ups say the same things in the same order (title, Date or dates, Today's states, Nations today, Treaty text), so once students read one they can read the others.",
+    "The orange and light blue colours stay distinct in the red-green colour-deficiency simulation, so colour isn't a barrier.",
+    "Many key words have Spanish cognates (cession/cesión, treaty/tratado, federal, nation/nación, legend/leyenda), which helps Spanish-speaking ELs."
+  ],
+  "notesForSpanish": [
+    "Keep every on-screen name in English, exactly as on the map, in bold, with the Spanish in brackets once: **The Southeast** (el sureste), **Map layers** (capas), **Cessions dated 1830 to 1839** (cesiones de 1830 a 1839), **Nations today**, **Treaty text**, **Royce's schedule**. Don't translate the bookmark or layer names in the steps themselves.",
+    "Check the live app in a Spanish-language browser: ArcGIS Instant Apps may show the tool labels (Map layers, Legend, Bookmarks, Zoom to) in Spanish while the layer, bookmark and pop-up field names stay English. The sheet should match whichever labels students actually see.",
+    "'Royce's schedule' means a list or table of cessions, not a timetable: use 'lista' or 'registro', not 'horario'. In the Stretch task, 'article' means a section of the treaty (artículo).",
+    "'Removal' / 'Indian Removal Act': use a phrase that keeps the idea of forced moving (for example 'traslado forzoso'; the law is usually called 'Ley de Traslado Forzoso de los Indios' or 'Ley de Remoción de los Indios'), and keep the English name next to it. Avoid a word that only means 'move' (mudanza).",
+    "'Empty pockets' means 'huecos' or 'zonas vacías', never 'bolsillos'.",
+    "'Set the land aside' (as a reservation) means 'reservó' or 'apartó la tierra' (como reserva). Don't confuse it with 'ceded'.",
+    "'Transactions' in Q6: avoid 'transacciones' (it sounds like a sale). Use 'estos tratados' or 'estos acuerdos', to keep the lesson's question of whether these were real agreements.",
+    "'Nation(s)' means 'nación/naciones' (a political people), not 'país'. 'American Indian' could be 'indígenas estadounidenses' or 'pueblos indígenas de Estados Unidos'; follow the English sheet's choice to use the specific nation names wherever possible.",
+    "Pop-up dates stay in English (September 27, 1830). Either tell students to copy them as shown or give the month names once (September = septiembre, etc.), so they can match the sheet to the screen.",
+    "Translate the sheet's structure labels in a set way and use them every time: Big question (Pregunta principal), Before you start (Antes de empezar), Reading the map (Cómo leer el mapa), On the map (En el mapa), Answer (Responde), Looking back (Mirando atrás). Q4 refers to 'Before you start' by name, so the Spanish heading and that reference must match.",
+    "'East-central', 'northwest' and similar: use 'el centro-este de Misisipi' and 'el noroeste de Georgia'. Keep the English town names (Kosciusko, Talladega, Rome) as they appear on the basemap, and write the state names the Spanish way only in the explanation (Misisipi, Alabama, Georgia).",
+    "'Compiled' means 'recopiló'. 'Federal government records' means 'registros del gobierno federal'. 'Boundaries are approximate' means 'los límites son aproximados'. These are cognates, so keep them plain.",
+    "If the English sheet changes (bold names, sentence frames, a word box, the Q6 rewrite), translate the new version, not this draft."
+  ]
+}

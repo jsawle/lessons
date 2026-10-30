@@ -1,0 +1,39 @@
+{
+  "persona": "S3",
+  "findings": [
+    {
+      "where": "Student sheet, Reading the map and questions 3-5; teacher From the front for questions 3 and 5",
+      "what": "In the steps, layers are named by colour only: 'orange areas', 'green areas', 'light blue'. The layer names, which use dates, appear in the 'turn on' step but not where students are told to look at or compare areas. In the deuteranopia simulation, orange (#D55E00) looks mustard/olive and green (#009E73) looks neutral grey-brown. Eli has no reliable way to know which of his two colours the teacher means by 'green'. Olive-mustard is a colour he may well have learned to call green.",
+      "whyItMatters": "In question 5, when all three layers are on and the teacher asks 'where are the green areas?', Eli may look at the 1830s areas instead. To be sure, he has to work it out from the legend or by toggling layers, while classmates simply look.",
+      "severity": "slows it down",
+      "suggestedChange": "Pair every colour word with the layer's date name, e.g. 'the orange areas (Cessions dated 1830 to 1839)' and 'the green areas (Cessions dated 1840 to 1894)'. In From the front, add a line suggesting the teacher name the layer or period ('the 1840 to 1894 layer') as well as the colour.",
+      "needsLiveMap": false,
+      "quote": "Ask: where are the green areas, and how is that different from the 1830s?"
+    },
+    {
+      "where": "Map, all three layers on (question 5 and the final answer), overlap areas in Iowa, Kansas, Oklahoma and the upper Mississippi",
+      "what": "Where the 1840-1894 layer overlaps the 1830s layer, the colours mix. In the simulation these mixes come out dark olive-brown, which falls between Eli's mustard (1830s) and grey (1840-1894). Overlaps with light blue come out a blue-grey. The striped Kansas/Oklahoma area is very hard to sort into periods by colour.",
+      "whyItMatters": "Eli cannot use colour to tell whether an overlap area is 1830s, 1840-94 or both. Question 5 and the final answer ask him to describe the pattern from all three layers.",
+      "severity": "slows it down",
+      "suggestedChange": "Give one layer a non-colour cue. For example, use a diagonal hatch or a dashed outline for Cessions dated 1840 to 1894, or a thicker outline for the 1830s, so overlaps show as pattern over fill. Alternatively, add one line to Reading the map: 'If you can't tell which period an area is, turn the other layers off in Map layers, or click it and read the date.'",
+      "needsLiveMap": true,
+      "quote": "where periods overlap the colours mix"
+    },
+    {
+      "where": "Legend (all screenshots)",
+      "what": "All three legend entries use the same plain filled swatch, told apart by colour alone. There is no pattern, outline style or lightness step that would separate them without hue. The date labels are clear, but matching a swatch to the map still depends on colour.",
+      "whyItMatters": "With two layers on, this works for Eli: blue and mustard are clearly different in the simulation. With three layers on, he must match a small grey swatch and a small mustard swatch to map areas whose overlaps blend the two.",
+      "severity": "minor",
+      "suggestedChange": "If a hatch or outline style is added to a layer (see the previous finding), it shows in the legend automatically. Also consider a clearer lightness order, such as light blue lightest, then orange, then a darker green, so the periods also step in lightness.",
+      "needsLiveMap": false,
+      "quote": "Open the legend and find the light blue areas"
+    }
+  ],
+  "works": [
+    "Layer names use dates, not colours ('Cessions dated 1830 to 1839'), so Eli can always find the right layer in Map layers.",
+    "The palette is colour-blind-aware: in the simulation, light blue (periwinkle) and orange (mustard) stay clearly different, so questions 1-4 work for Eli. Those questions have only those two layers on.",
+    "All three colours stand out from the pale basemap in the simulation, so 'which parts are still empty' is easy to answer.",
+    "Question 4 names places to click (Kosciusko, Talladega, Rome), and pop-ups give the date as text. Eli can check he has the right cession without relying on colour.",
+    "Turning layers on one at a time means Eli only has to separate two colours until question 5."
+  ]
+}

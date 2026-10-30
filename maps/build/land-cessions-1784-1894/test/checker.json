@@ -2,10 +2,10 @@
  "rubricVersion": "0.7.1",
  "maps": [
   {
-   "itemId": "f5cc40b6b709a76adce8c43c0573a4c0",
+   "itemId": "4e1f60ecd473016dd561db9f76259c70",
    "title": "Land cessions to the United States, 1784 to 1894",
    "owner": "build",
-   "auditedAt": "2026-10-30T13:04:37.700Z",
+   "auditedAt": "2026-10-30T13:25:41.957Z",
    "rubricVersion": "0.7.1",
    "standards": "General Cartographic Standards for MapMaker",
    "tally": {
@@ -185,7 +185,8 @@
       "baseMap.title: Modern Antique",
       "spatial reference wkid: 3857",
       "World Hillshade",
-      "Modern Antique (no Labels)"
+      "Modern Antique (no Labels)",
+      "World Terrain Reference"
      ]
     },
     {

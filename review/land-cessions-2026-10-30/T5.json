@@ -1,0 +1,143 @@
+{
+ "persona": "T5",
+ "findings": [
+  {
+   "where": "Lesson page and answer page, Standards table (TX 8.5(H) row); Question 4 Explain why",
+   "what": "The 8.5(H) note claims the lesson covers 'the reasons' for Cherokee removal, but students are given no evidence about reasons. The only cause offered is the Indian Removal Act, which is the legal means, not a reason. Reasons (settler demand for land, Georgia's claims over Cherokee land, cotton, Jackson's stated arguments) appear only in the teacher's accept-answers line ('settlers who wanted it'), and the answer page itself admits 'the map alone can't show why'. C3 D2.His.14 'multiple causes' has the same gap. The Old Northwest bookmark (Q3) shows 1830s cessions the Removal Act framing doesn't explain (e.g. the Sauk and Fox cession after the 1832 Black Hawk War), so the 'multiple causes' opportunity is there but unused.",
+   "why": "Ruth checks whether the lesson really addresses the TEKS it lists. 8.5(H) is 'analyze the reasons'; a district reviewer comparing the claim with the student sheet would find the reasons missing, and she would have to supply her own sources before using it.",
+   "severity": "slows it down",
+   "suggestedChange": "Either (a) add a short paired-source box to Q4 on the student sheet: 2-3 sentences from Jackson's December 1830 message to Congress (his stated reasons) and 2-3 from the 1836 Cherokee petition against New Echota (both already in Further reading), and ask students to list the reasons each gives; or (b) reword the note to 'partial: this lesson covers the Indian Removal Act and where the removal treaties fell; the reasons are in the linked sources'. Optionally add one Old Northwest pop-up to Q3/Q4 so students see a second cause (war) alongside the Act.",
+   "needsLiveMap": false,
+   "quote": "partial: this lesson covers the reasons and the Indian Removal Act",
+   "evidence": "TEKS 8.5(H) wording 'analyze the reasons for the removal and resettlement of Cherokee Indians during the Jacksonian era' (TEA, STAAR/SST Grade 8 assessed curriculum, https://tea2.tea.texas.gov/data-reports/staar/sst-8-social-studies-assessed-curriculum.pdf). Answer page Q4: 'the map alone can't show why; the Act is the evidence.'"
+  },
+  {
+   "where": "Student sheet Question 6 (Question the source); answer page Q6 'Accept answers that' and the level-4 model answer; Discussion question 3",
+   "what": "Students are asked what the nations 'might say' about the treaties, but the lesson gives them nothing the nations actually said. The accept line and model answer then reward a set conclusion ('forced rather than agreed'). The documented facts that would ground it (Treaty of New Echota signed by a minority Treaty Party; 3,352 Cherokees petitioned the Senate; NARA's account of forced removal) sit only in the teacher notes.",
+   "why": "This is the part a district reviewer reads most closely, and the problem shows from both directions. One complaint is that the lesson leads students to a predetermined view by asking them to imagine other people's opinions. The opposite complaint is that it reduces documented coercion to something the nations 'might call' it. Ruth can defend documents; speculation is harder to defend.",
+   "severity": "slows it down",
+   "suggestedChange": "Replace the speculative prompt with a short source set on the sheet: the Act's own words (nations 'as may choose to exchange'), one sentence from Jackson's 1830 message, and one from the 1836 Cherokee petition (DocsTeach). Ask: 'What does each source say about whether the Cherokee agreed? How does the map's federal record compare?' Change the model answer to cite the evidence (e.g. 'the Cherokee government did not sign the 1835 treaty, and 3,352 Cherokees petitioned against it') rather than 'the nations might call these cessions forced'.",
+   "needsLiveMap": false,
+   "quote": "the nations might call these cessions forced rather than agreed",
+   "evidence": "DocsTeach (National Archives), Cherokee petition protesting the New Echota treaty, 1836, 3,352 signers; Treaty Party signed; Principal Chief did not sign: https://docsteach.org/documents/document/cherokee-petition-protest-new-echota-treaty. DocsTeach, Indian Removal Act (Act text 'choose to exchange'): https://www.docsteach.org/documents/document/indian-removal-act"
+  },
+  {
+   "where": "Answer page and Word teacher notes, Q5 Reveal: 1840 to 1894, Notes (Texas); map picture reveal-1840-1894.jpg",
+   "what": "The note says the federal government 'didn't make cessions there' (Texas) 'the way it did elsewhere', but the 1840-1894 picture shows green covering most of central and western Texas. Only 'eastern Texas' is listed as empty. The lesson doesn't say what the Texas green areas are. It also says nothing about the Republic of Texas forcing the Cherokee out of East Texas in 1839, which is Cherokee removal (8.5(H)) on Texas soil and would not appear in a federal record.",
+   "why": "Texas students will click their own state first. The teacher note as written seems to contradict what they see, and Ruth would have to work out the Texas pop-ups herself. The 1839 Texas Cherokee story is the most local way into 8.5(H) for her class, and adding it as a fact with a state source is easy to defend.",
+   "severity": "slows it down",
+   "suggestedChange": "Check the Texas pop-ups on the live map, then reword: 'Texas kept its public lands when it joined in 1845 (Joint Resolution). The green areas in Texas are later treaties in which [nations/dates from the pop-ups] gave up their claims; they are in the federal record even though the land belonged to Texas.' Add a teacher note: 'The Republic of Texas forced the Cherokee out of East Texas in 1839; that removal was by Texas, not the United States, so it is not on this map (Texas General Land Office).'",
+   "needsLiveMap": true,
+   "quote": "the federal government didn't make cessions there the way it did elsewhere",
+   "evidence": "Map picture reveal-1840-1894.jpg (green over most of Texas). Joint Resolution for Annexing Texas (1845), already cited in the lesson. Texas GLO education resource, conflict with the Cherokees 1839: https://glo.texas.gov/glo-education/resources/background-information-conflict-with-the-cherokees-1.pdf"
+  },
+  {
+   "where": "Lesson page Student activity (button) and AI prompt 'Languages'; vs Teacher notes Word 'Before class', How these lessons work, Lessons catalogue",
+   "what": "The teacher notes, the How these lessons work page and the catalogue all promise a student sheet 'in English and Spanish', but the lesson page offers only 'Download Word (English)' and the prompt says 'Languages: student sheets in English.'",
+   "why": "Many Texas classes include emergent bilingual students. Ruth plans on the promised Spanish sheet and finds there isn't one. A promise that isn't kept also weakens the materials' credibility with a reviewer.",
+   "severity": "slows it down",
+   "suggestedChange": "Publish the Spanish sheet, or correct the teacher notes and the shared pages to say English only for this lesson.",
+   "needsLiveMap": false,
+   "quote": "a two-page Word student sheet in English and Spanish",
+   "evidence": "Teacher notes (Word) Before class; lesson page '[Button: Download Word (English)]'; prompt 'Languages: student sheets in English.'"
+  },
+  {
+   "where": "Standards table, TX 8.5(H) row (lesson page, answer page, teacher notes); Lessons catalogue",
+   "what": "The 8.5(H) note says 'the Trail of Tears is the next map', but the Grade 8 catalogue has no Trail of Tears lesson. The Age of Jackson has only this lesson, followed by Roads, Trails, and Rails West.",
+   "why": "Ruth's planning for 8.5(H) assumes the remaining part is covered by a follow-on map. If it isn't there, she has a coverage gap that her scope and sequence won't show.",
+   "severity": "slows it down",
+   "suggestedChange": "Link the Trail of Tears map if it exists; otherwise write 'the Trail of Tears is not yet covered by a map in this set' and point to a primary-source resource (e.g. National Archives or NPS Trail of Tears materials).",
+   "needsLiveMap": false,
+   "quote": "the Trail of Tears is the next map",
+   "evidence": "About-page catalogue: Age of Jackson lists only 'Land Cessions and Indian Removal, 1784–1894'."
+  },
+  {
+   "where": "Lesson page (stated as shareable with students): 'Answering the compelling question' and 'Common misunderstandings'",
+   "what": "The lesson page says answers are kept off it so it can be shared with students, but it includes the accept-answers summary for Q1, Q3 and Q5. Its Common misunderstandings also answer Q5's 'why might that be' ('Royce's record starts in 1784') and Q6.",
+   "why": "If Ruth shares the page, as invited, students can copy the pattern answers without using the map. A reviewer would also find that the page doesn't do what it says.",
+   "severity": "slows it down",
+   "suggestedChange": "On the lesson page, keep only the task line for the compelling question and move the 'Accept answers that...' text and the Common misunderstandings to the answer page and teacher notes.",
+   "needsLiveMap": false,
+   "quote": "Accept answers that describe the pattern over time (the Ohio valley, much of the South",
+   "evidence": "Lesson page Teacher notes > Answers: 'kept off this page, so it can be shared with students'."
+  },
+  {
+   "where": "Before class note; Q4 Explain why and Q6 click instructions (Kosciusko, Talladega, Rome); all map pictures",
+   "what": "The questions rely on basemap city names to say where to click, but none of the supplied pictures shows any state lines or city or state names, at either the US view or the zoomed pop-up views.",
+   "why": "If the cities aren't labelled at The Southeast bookmark, students can't find 'around Talladega' and the 'If you only do one' question stalls. That costs Ruth class time she budgeted at 12 minutes.",
+   "severity": "slows it down",
+   "suggestedChange": "Check labels at The Southeast bookmark on Chromebook-size screens; if missing, add a reference (labels) layer or a basemap with labels, or put the three click spots on the student sheet as a small marked screenshot (the Support idea already suggests this; make it standard).",
+   "needsLiveMap": true,
+   "quote": "the basemap shows today's states and cities, which the questions use to say where to click",
+   "evidence": "map/notice-before-1830.jpg, reveal-1830s.jpg, cherokee-1835.jpg: no place labels visible."
+  },
+  {
+   "where": "Student sheet Q6 step 1; map picture cherokee-1835.jpg",
+   "what": "The italic source note, which is the evidence Q6 depends on, is cut off at the bottom of the pop-up and needs scrolling. The step doesn't say so.",
+   "why": "Students will report 'there's no note' and Q6 stalls. It is small but predictable.",
+   "severity": "minor",
+   "suggestedChange": "Change the step to 'scroll to the end of the pop-up and read the note in italics'.",
+   "needsLiveMap": true,
+   "quote": "read the note in italics at the end of the pop-up",
+   "evidence": "cherokee-1835.jpg shows the note truncated after 'Royce compiled this from United States records'."
+  },
+  {
+   "where": "Map pop-ups: Cherokee (near Rome, GA and Fort Payne, AL), Nations today",
+   "what": "The Eastern Band of Cherokee Indians appears twice, under two slightly different names.",
+   "why": "A duplicated nation name in the one pop-up every class opens looks careless, and in a lesson that teaches respect for the nations, a reviewer or a Cherokee family could notice.",
+   "severity": "minor",
+   "suggestedChange": "De-duplicate the Nations today list (data or pop-up expression).",
+   "needsLiveMap": false,
+   "quote": "Eastern Band of Cherokee Indians of North Carolina; Eastern Band of Cherokee Indians, North Carolina",
+   "evidence": "map/popups.txt; cherokee-1835.jpg"
+  },
+  {
+   "where": "Answer page Q4 'Accept answers that' and Q6 notes; pop-ups' Nations today lines",
+   "what": "The accept line says the four nations 'had ceded the last of their land in the Southeast', yet the pop-ups students read list the Mississippi Band of Choctaw and the Eastern Band of Cherokee, which are still in the Southeast. The lesson never explains that. For the Creek gap, the note names only the Muscogee (Creek) Nation; the Poarch Band of Creek Indians, a federally recognized tribe in Alabama itself, isn't mentioned.",
+   "why": "Students will ask 'if they were all removed, why are there Choctaw in Mississippi?' A one-line factual answer keeps the lesson accurate and balanced without editorialising.",
+   "severity": "minor",
+   "suggestedChange": "Add a teacher note: 'Not everyone left. Some Choctaw stayed in Mississippi under the 1830 treaty; Cherokee who stayed in North Carolina are today's Eastern Band.' In Q6 notes, list the Poarch Band of Creek Indians (Alabama) with the Muscogee (Creek) Nation.",
+   "needsLiveMap": false,
+   "quote": "had ceded the last of their land in the Southeast",
+   "evidence": "map/popups.txt (Kosciusko and Rome pop-ups)."
+  },
+  {
+   "where": "Standards table and header chips (all pages)",
+   "what": "The TX codes don't say which TEKS they refer to. On June 26, 2026, the SBOE adopted new social studies TEKS in which Grade 8 becomes a Texas history course (§113.23), to be implemented in 2032-33, so 'TX 8.5(H)' will become ambiguous. The lesson's sourcing question (Q6) also fits the current skills expectation on bias and point of view (8.29), which isn't listed.",
+   "why": "Ruth plans against §113.20 (adopted 2022) and a district scope and sequence. A precise citation makes the alignment easy to defend, and listing the skills standard shows that Q6 serves a standard rather than an agenda.",
+   "severity": "minor",
+   "suggestedChange": "Label as 'TEKS §113.20 (adopted 2022) 8.5(H), 8.10(A)' and consider adding the 8.29 skills expectation on identifying bias and points of view created by the historical context (verify code against the TAC text).",
+   "needsLiveMap": false,
+   "quote": "TX 8.10(A) | Framework: Texas TEKS",
+   "evidence": "TEA 19 TAC Ch. 113 page lists '§113.20. Social Studies, Grade 8, Adopted 2022' (https://tea.texas.gov/about-tea/laws-and-rules/texas-administrative-code/19-tac-chapter-113); SBOE news on the June 26, 2026 adoption (https://sboe.texas.gov/state-board-of-education/sboe-news/texas-state-board-of-education-adopts-new-social-studies-standards-and-required-literature-reading-list); adopted rule text with Grade 8 §113.23 and 2032-2033 implementation (https://tea.texas.gov/laws-and-rules/sboe-rules-tac/sboe-adopted/26-10-113.pdf). 8.29 code from an unofficial index (commonplanner.com), so it needs checking."
+  },
+  {
+   "where": "Answer page and teacher notes, rubric, Accuracy row",
+   "what": "The shared rubric's Accuracy row asks whether 'winners' match the map, which fits a battle lesson but not this one.",
+   "why": "In a removal lesson, a reviewer could read 'winners' as a careless or loaded word.",
+   "severity": "minor",
+   "suggestedChange": "Use lesson-specific wording here: 'Dates, nations, places and documents match the map.'",
+   "needsLiveMap": false,
+   "quote": "Dates, places, winners, numbers and distances match the map.",
+   "evidence": ""
+  },
+  {
+   "where": "Lessons catalogue (about-page.txt)",
+   "what": "The intro says 'Ten lessons', but the line below says '11 lessons' and 11 are listed.",
+   "why": "A small inconsistency, but it's the first page a reviewer sees.",
+   "severity": "minor",
+   "suggestedChange": "Change it to 'Eleven lessons'.",
+   "needsLiveMap": false,
+   "quote": "Ten lessons that teach Grade 8 US History with maps",
+   "evidence": ""
+  }
+ ],
+ "works": [
+  "The TEKS codes and wording are right for the current standards: 8.5(H) and 8.10(A) match TEA's text, and the 'partial' notes honestly say what isn't covered (Worcester v. Georgia, Trail of Tears).",
+  "The dates check out against the treaties: Dancing Rabbit Creek 9/27/1830, Cusseta 3/24/1832, New Echota 12/29/1835, Pontotoc 10/20/1832, Moultrie Creek 1823 / Payne's Landing 1832, Doak's Stand 1820, Mount Dexter 1805, and the Indian Removal Act on May 28, 1830.",
+  "The teacher-note facts are sourced and accurate: New Echota signed by the Treaty Party, the 3,352-signature petition, NARA's 'almost 70 removal treaties' and 'nearly 50,000' people, Texas keeping its public lands in 1845. Further reading is primary and official (NARA, LOC, TSLAC, Royce via Internet Archive).",
+  "Sensitive wording is mostly factual and neutral. The pop-up note frames the map as the federal record; the Common misunderstandings section heads off 'cession means they chose to sell' and 'empty means never Indian land'; and Nations today names the nations that exist now.",
+  "The structure suits Ruth's planning: predict-then-reveal, timed questions with one marked 'If you only do one', exact steps for the front of the class, and a separate answer page with a rubric and model answer.",
+  "The three period colours stay distinguishable in the deuteranopia simulation, and the legend names each period."
+ ]
+}
