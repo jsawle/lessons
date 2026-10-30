@@ -91,7 +91,9 @@ for lid in IDS:
         + "\n\n--- Text inside the embedded prompt box ---\n" + ai_prompt(lid),
         "=== ANSWER PAGE (separate Hub page for teachers) ===\n" + page_text(PAGES[lid + "-teacher"]),
         "=== STUDENT SHEET, ENGLISH (Word file) ===\n" + docx_text(f"{sheets}-student-sheet-en.docx"),
+    ] + ([
         "=== STUDENT SHEET, SPANISH (Word file) ===\n" + docx_text(f"{sheets}-student-sheet-es.docx"),
+    ] if os.path.exists(f"{sheets}-student-sheet-es.docx") else []) + [
         "=== TEACHER NOTES (Word file) ===\n" + docx_text(f"{sheets}-teacher-notes-en.docx"),
     ])
     open(f"{OUT}/teacher-{lid}.txt", "w").write(teacher)
@@ -103,6 +105,7 @@ for lid in IDS:
                "Bookmarks: " + ("; ".join(m.get("bookmarks", [])) or "none") + "\nLayers:\n"
                + "\n".join(f"- {l['name']}{' (off when the map opens)' if l.get('offAtStart') else ''}: {l['shows']}" for l in m["layers"]))
     for lang, name in (("en", "ENGLISH"), ("es", "SPANISH")):
+        if not os.path.exists(f"{sheets}-student-sheet-{lang}.docx"): continue
         open(f"{OUT}/student-{lang}-{lid}.txt", "w").write(
             f"=== STUDENT SHEET ({name}) ===\n" + docx_text(f"{sheets}-student-sheet-{lang}.docx") + "\n\n=== " + mapdesc)
 
