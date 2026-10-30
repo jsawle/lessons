@@ -1,0 +1,312 @@
+{
+ "format": "Voting rules 1828",
+ "version": "1.0.0",
+ "checked": "Researched from state constitutions, laws and historians (two researchers, 30 Oct 2026), then fact-checked independently: 71 quotes checked, 67 verbatim; no disagreements on the three classes except North Carolina's rule for white men (marked unsure in its text).",
+ "classes": {
+  "electorsChosenBy": [
+   "Voters",
+   "The state legislature"
+  ],
+  "whiteMen": [
+   "No property or tax rule",
+   "Had to pay a tax (or serve in the militia)",
+   "Had to own property"
+  ],
+  "blackMen": [
+   "Could vote",
+   "Only with extra rules, or kept out in practice",
+   "Could not vote"
+  ]
+ },
+ "women": "Women could not vote in any state in 1828; New Jersey ended women's voting in 1807.",
+ "states": [
+  {
+   "abbr": "ME",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, by districts, with two electors chosen statewide (state resolve of 1828).",
+   "whiteMen": "No property or tax rule",
+   "whiteMenRule": "No property or tax rule; paupers could not vote (Constitution of 1820).",
+   "blackMen": "Could vote",
+   "blackMenRule": "Could vote on the same terms as white men.",
+   "source": "Constitution of 1820, Art. II",
+   "sourceUrl": "https://legislature.maine.gov/uploads/originals/const1820.pdf",
+   "confidence": "high"
+  },
+  {
+   "abbr": "NH",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, statewide.",
+   "whiteMen": "No property or tax rule",
+   "whiteMenRule": "No property or tax rule since 1792; paupers could not vote (Constitution of 1792).",
+   "blackMen": "Could vote",
+   "blackMenRule": "Could vote on the same terms as white men.",
+   "source": "Constitution of 1792",
+   "sourceUrl": "https://founding.com/founders-library/government-documents/american-state-and-local-government-documents/state-constitutions/new-hampshire-constitution-of-1792/",
+   "confidence": "high"
+  },
+  {
+   "abbr": "VT",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, statewide, for the first time (the legislature chose in 1824).",
+   "whiteMen": "No property or tax rule",
+   "whiteMenRule": "No property or tax rule (Constitution of 1793).",
+   "blackMen": "Could vote",
+   "blackMenRule": "Could vote on the same terms as white men.",
+   "source": "Constitution of 1793, Ch. II, sec. 21 (Vermont State Archives)",
+   "sourceUrl": "https://sos.vermont.gov/vsara/learn/constitution/1793-constitution",
+   "confidence": "medium"
+  },
+  {
+   "abbr": "MA",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, statewide.",
+   "whiteMen": "Had to pay a tax (or serve in the militia)",
+   "whiteMenRule": "Had to have paid a state or county tax within two years (1821 amendment, which ended the property rule).",
+   "blackMen": "Could vote",
+   "blackMenRule": "Could vote on the same terms as white men.",
+   "source": "Amendment of 1821, Art. III",
+   "sourceUrl": "https://50constitutions.org/ma/constitution/section-id-50582",
+   "confidence": "high"
+  },
+  {
+   "abbr": "RI",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, statewide.",
+   "whiteMen": "Had to own property",
+   "whiteMenRule": "Had to own land worth $134, or be the eldest son of a man who did (rules from colonial times, kept until 1842).",
+   "blackMen": "Could not vote",
+   "blackMenRule": "Shut out by a state law of 1822 (from historians' accounts; the text of the law wasn't found).",
+   "source": "Rhode Island Historical Society; Providence College Dorr Rebellion project",
+   "sourceUrl": "https://www.rihs.org/mssinv/Mss214sg14.htm",
+   "confidence": "medium"
+  },
+  {
+   "abbr": "CT",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, statewide.",
+   "whiteMen": "Had to pay a tax (or serve in the militia)",
+   "whiteMenRule": "Had to own land worth $7 a year, or have served a year in the militia, or have paid a state tax within the year (Constitution of 1818).",
+   "blackMen": "Could not vote",
+   "blackMenRule": "Shut out by a state law of 1814, then by the Constitution of 1818, which allowed only white men.",
+   "source": "Constitution of 1818, Art. VI, sec. 2 (Connecticut Secretary of the State)",
+   "sourceUrl": "https://portal.ct.gov/sots/register-manual/section-i/1818-constitution-of-the-state-of-connecticut",
+   "confidence": "high"
+  },
+  {
+   "abbr": "NY",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, by districts; the district electors then chose two more (McPherson v. Blacker, 1892).",
+   "whiteMen": "No property or tax rule",
+   "whiteMenRule": "No property or tax rule for white men since an 1826 amendment.",
+   "blackMen": "Only with extra rules, or kept out in practice",
+   "blackMenRule": "Had to own property worth $250, pay tax on it and have been a citizen for three years (Constitution of 1821). In 1825 only 298 Black New Yorkers qualified.",
+   "source": "Constitution of 1821, Art. II, sec. 1, and the 1826 amendment",
+   "sourceUrl": "https://50constitutions.org/ny/constitution/section-id-146696",
+   "confidence": "high"
+  },
+  {
+   "abbr": "NJ",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, statewide.",
+   "whiteMen": "Had to pay a tax (or serve in the militia)",
+   "whiteMenRule": "The law still named property, but in practice men who paid a tax could vote (act of 1807, as historians describe its use).",
+   "blackMen": "Could not vote",
+   "blackMenRule": "Shut out, with women, by a state law of 1807, which allowed only free white men.",
+   "source": "Voter qualification law of 1807; National Park Service",
+   "sourceUrl": "https://www.nps.gov/articles/voting-rights-in-nj-before-the-15th-and-19th.htm",
+   "confidence": "high"
+  },
+  {
+   "abbr": "PA",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, statewide.",
+   "whiteMen": "Had to pay a tax (or serve in the militia)",
+   "whiteMenRule": "Had to have paid a state or county tax within two years; sons of voters aged 21 or 22 were excused (Constitution of 1790).",
+   "blackMen": "Only with extra rules, or kept out in practice",
+   "blackMenRule": "The constitution didn't mention race, but in many places, Philadelphia among them, officials kept Black men from voting. A new constitution shut them out in 1838.",
+   "source": "Constitution of 1790, Art. III, sec. 1",
+   "sourceUrl": "https://www.paconstitution.org/texts-of-the-constitution/1790-2/",
+   "confidence": "high"
+  },
+  {
+   "abbr": "DE",
+   "electorsChosenBy": "The state legislature",
+   "electorMethod": "The state legislature; voters had no direct say in choosing the president's electors.",
+   "whiteMen": "Had to pay a tax (or serve in the militia)",
+   "whiteMenRule": "For state elections: had to have paid a state or county tax.",
+   "blackMen": "Could not vote",
+   "blackMenRule": "Allowed only white men (Constitution of 1792, as quoted in a Delaware archives document).",
+   "source": "American Presidency Project (1828 election); Delaware Public Archives",
+   "sourceUrl": "https://www.presidency.ucsb.edu/statistics/elections/1828",
+   "confidence": "medium"
+  },
+  {
+   "abbr": "MD",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, by districts.",
+   "whiteMen": "No property or tax rule",
+   "whiteMenRule": "No property or tax rule since 1810.",
+   "blackMen": "Could not vote",
+   "blackMenRule": "Shut out by a law of 1801, confirmed in 1810, which allowed only free white men.",
+   "source": "Laws of Maryland (Archives of Maryland), and Keyssar, The Right to Vote",
+   "sourceUrl": "https://msa.maryland.gov/megafile/msa/speccol/sc2900/sc2908/000001/000192/html/am192--33.html",
+   "confidence": "high"
+  },
+  {
+   "abbr": "VA",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, statewide.",
+   "whiteMen": "Had to own property",
+   "whiteMenRule": "Had to own 25 acres with a house, 50 acres of unimproved land, or a town lot with a house (law of 1785, in force until 1830).",
+   "blackMen": "Could not vote",
+   "blackMenRule": "The 1785 law excluded \"free negroes or mulattoes\".",
+   "source": "Act of 1785 (Hening, Statutes at Large, vol. 12)",
+   "sourceUrl": "https://usgenwebsites.org/vagenweb/hening/vol12-06.htm",
+   "confidence": "high"
+  },
+  {
+   "abbr": "NC",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, statewide.",
+   "whiteMen": "Had to pay a tax (or serve in the militia)",
+   "whiteMenRule": "Voters for the state House of Commons had to have paid public taxes; voters for the state Senate had to own 50 acres. Which rule applied to electors isn't confirmed.",
+   "blackMen": "Could vote",
+   "blackMenRule": "Could vote until 1835, when the state shut them out.",
+   "source": "Constitution of 1776, Arts. VII and VIII; NCpedia",
+   "sourceUrl": "https://www.ncpedia.org/node/2248",
+   "confidence": "medium"
+  },
+  {
+   "abbr": "SC",
+   "electorsChosenBy": "The state legislature",
+   "electorMethod": "The state legislature, as it did until 1860; voters had no direct say in choosing the president's electors.",
+   "whiteMen": "No property or tax rule",
+   "whiteMenRule": "For state elections: own 50 acres or a town lot, or have lived in the district six months (1810 amendment).",
+   "blackMen": "Could not vote",
+   "blackMenRule": "The constitution allowed only free white men (Constitution of 1790).",
+   "source": "American Presidency Project; South Carolina Encyclopedia",
+   "sourceUrl": "https://www.scencyclopedia.org/sce/?p=3172",
+   "confidence": "high"
+  },
+  {
+   "abbr": "GA",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, statewide, for the first time (the legislature chose in 1824).",
+   "whiteMen": "Had to pay a tax (or serve in the militia)",
+   "whiteMenRule": "Had to have paid all taxes due (Constitution of 1798).",
+   "blackMen": "Could not vote",
+   "blackMenRule": "Free Black men were not treated as citizens, so they could not vote; the clause itself doesn't say white.",
+   "source": "Constitution of 1798, Art. IV, sec. 1; Cooper v. Savannah (1848)",
+   "sourceUrl": "https://www.georgiahistory.com/wp-content/uploads/2026/08/voting-in-georgia.pdf",
+   "confidence": "medium"
+  },
+  {
+   "abbr": "KY",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, statewide (by districts until 1824).",
+   "whiteMen": "No property or tax rule",
+   "whiteMenRule": "No property or tax rule; voters voted aloud, not on paper (Constitution of 1799).",
+   "blackMen": "Could not vote",
+   "blackMenRule": "Shut out by the Constitution of 1799.",
+   "source": "Kentucky Secretary of State, constitutional history",
+   "sourceUrl": "https://web.sos.ky.gov/ofx/timeline?id=4",
+   "confidence": "medium"
+  },
+  {
+   "abbr": "TN",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, by districts.",
+   "whiteMen": "No property or tax rule",
+   "whiteMenRule": "Own land in the county, or have lived there six months (Constitution of 1796), so no property was needed.",
+   "blackMen": "Could vote",
+   "blackMenRule": "Could vote until 1834, when a new constitution shut them out.",
+   "source": "Constitution of 1796, Art. III, sec. 1",
+   "sourceUrl": "https://founding.com/founders-library/government-documents/american-state-and-local-government-documents/state-constitutions/tennessee-constitution-of-1796/",
+   "confidence": "high"
+  },
+  {
+   "abbr": "OH",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, statewide.",
+   "whiteMen": "Had to pay a tax (or serve in the militia)",
+   "whiteMenRule": "Had to have paid a state or county tax, or worked on the public roads (Constitution of 1802).",
+   "blackMen": "Could not vote",
+   "blackMenRule": "The Constitution of 1802 allowed only white men.",
+   "source": "Constitution of 1802, Art. IV (transcription)",
+   "sourceUrl": "https://sites.rootsweb.com/~ohcscott/OhioConstitution.html",
+   "confidence": "high"
+  },
+  {
+   "abbr": "IN",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, statewide (a law of 1824 set this; one 1892 court opinion says by districts).",
+   "whiteMen": "No property or tax rule",
+   "whiteMenRule": "No property or tax rule (Constitution of 1816).",
+   "blackMen": "Could not vote",
+   "blackMenRule": "The Constitution of 1816 allowed only white men.",
+   "source": "Constitution of 1816, Art. VI, sec. 1 (Indiana Archives and Records Administration)",
+   "sourceUrl": "https://www.in.gov/iara/2778.htm",
+   "confidence": "medium"
+  },
+  {
+   "abbr": "IL",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters (by districts in 1824; the method in 1828 isn't confirmed).",
+   "whiteMen": "No property or tax rule",
+   "whiteMenRule": "No property or tax rule; men living in the state who weren't citizens could vote too (Constitution of 1818).",
+   "blackMen": "Could not vote",
+   "blackMenRule": "The Constitution of 1818 allowed only white men.",
+   "source": "Constitution of 1818, Art. II, sec. 27",
+   "sourceUrl": "https://cite.case.law/ill/3/377/",
+   "confidence": "medium"
+  },
+  {
+   "abbr": "AL",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, statewide.",
+   "whiteMen": "No property or tax rule",
+   "whiteMenRule": "No property or tax rule (Constitution of 1819).",
+   "blackMen": "Could not vote",
+   "blackMenRule": "The Constitution of 1819 allowed only white men.",
+   "source": "Constitution of 1819, Art. III, sec. 5",
+   "sourceUrl": "https://avalon.law.yale.edu/19th_century/ala1819.asp",
+   "confidence": "high"
+  },
+  {
+   "abbr": "MS",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, statewide.",
+   "whiteMen": "Had to pay a tax (or serve in the militia)",
+   "whiteMenRule": "Had to be enrolled in the militia or have paid a state or county tax (Constitution of 1817).",
+   "blackMen": "Could not vote",
+   "blackMenRule": "The Constitution of 1817 allowed only white men.",
+   "source": "Constitution of 1817, Art. III, sec. 1 (Mississippi Department of Archives and History)",
+   "sourceUrl": "https://mshistorynow.mdah.ms.gov/issue/mississippi-constitution-of-1817",
+   "confidence": "high"
+  },
+  {
+   "abbr": "LA",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters, statewide, for the first time (the legislature chose until 1824).",
+   "whiteMen": "Had to pay a tax (or serve in the militia)",
+   "whiteMenRule": "Had to have paid a state tax (Constitution of 1812; some sources also mention land, and the text wasn't checked).",
+   "blackMen": "Could not vote",
+   "blackMenRule": "The Constitution of 1812 allowed only free white men.",
+   "source": "64 Parishes (Louisiana Endowment for the Humanities)",
+   "sourceUrl": "https://64parishes.org/entry/louisiana-constitutions",
+   "confidence": "medium"
+  },
+  {
+   "abbr": "MO",
+   "electorsChosenBy": "Voters",
+   "electorMethod": "Voters (by districts in 1824; the method in 1828 isn't confirmed).",
+   "whiteMen": "No property or tax rule",
+   "whiteMenRule": "No property or tax rule (Constitution of 1820; the clause wasn't checked in the original).",
+   "blackMen": "Could not vote",
+   "blackMenRule": "The Constitution of 1820 allowed only free white men.",
+   "source": "Keyssar, The Right to Vote (tables); Missouri State Parks",
+   "sourceUrl": "https://mostateparks.com/sites/mostateparks/files/SecondCrisis_FinalCompromise.pdf",
+   "confidence": "medium"
+  }
+ ]
+}

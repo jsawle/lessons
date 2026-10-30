@@ -1,0 +1,348 @@
+{
+  "meta": {
+    "checked": "2026-10-30",
+    "method": "Independent re-check of rules-north.json and rules-south.json. Bash/curl had no web egress (every host refused by the proxy), so all pages were read with WebFetch, asking for exact strings rather than summaries. WebFetch is itself a model reader, so 'verbatim: true' means the tool reported the exact string present; it is strong but not byte-level proof. Blocked or unusable: avalon.law.yale.edu (403), en.wikisource.org (not on allowlist); Britannica not used. Tufts 'A New Nation Votes' ends at 1825, so it has no 1828 returns."
+  },
+  "states": [
+    {
+      "state": "Maine",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": [],
+      "evidence": [
+        {"url": "https://lldc.mainelegislature.org/Open/Laws/1828/1828_RES_c023.pdf", "quote": "shall be chosen at large out of the whole State, two Electors of President and Vice President ... and one in each District within this State (Resolves 1828 ch. XXIII; OCR)"},
+        {"url": "https://legislature.maine.gov/uploads/originals/const1820.pdf", "quote": "excepting. paupers; persons under guardianship, and Indiaus not taxed, having his residence established in this State for the term of three months (OCR artifacts in original scan)"},
+        {"url": "https://law.resource.org/pub/us/case/reporter/US/146/146.US.1.1.170.html", "quote": "in Maine in 1820, 1824, and 1828"}
+      ]
+    },
+    {
+      "state": "New Hampshire",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": ["Minor: Sec. XXXI adds a tax-assessment condition for residents of unincorporated plantations only; does not change the 'none' class."],
+      "evidence": [
+        {"url": "https://founding.com/founders-library/government-documents/american-state-and-local-government-documents/state-constitutions/new-hampshire-constitution-of-1792/", "quote": "every male inhabitant of each town and parish with town privileges ... of twenty-one years of age and upward, excepting paupers and persons excused from paying taxes at their own request"},
+        {"url": "https://www.presidency.ucsb.edu/statistics/elections/1828", "quote": "New Hampshire 44,035 total votes (table row)"}
+      ]
+    },
+    {
+      "state": "Vermont",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": ["'First popular vote in 1828' is an inference (McPherson lists Vermont as legislature in 1824; UCSB has 1828 returns). Sound, but no Vermont statute was found by me either."],
+      "evidence": [
+        {"url": "https://press-pubs.uchicago.edu/founders/print_documents/a2_1_2-3s6.html", "quote": "In 1824 the electors were chosen by popular vote, by districts, and by general ticket, in all the States excepting Delaware, Georgia, Louisiana, New York, South Carolina, and Vermont"},
+        {"url": "https://sos.vermont.gov/vsara/learn/constitution/1793-constitution", "quote": "Every man of the full age of twenty one years, having resided in this State for the space of one whole year next before the election of Representatives, and is of a quiet and peaceable behaviour"},
+        {"url": "https://www.presidency.ucsb.edu/statistics/elections/1828", "quote": "Vermont 32,833 total votes (table row)"}
+      ]
+    },
+    {
+      "state": "Massachusetts",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": [],
+      "evidence": [
+        {"url": "https://50constitutions.org/ma/constitution/section-id-50582", "quote": "and who shall have paid, by himself or his parent, master or guardian, any state or county tax, which shall, within two years next preceding such election, have been assessed upon him"},
+        {"url": "https://press-pubs.uchicago.edu/founders/print_documents/a2_1_2-3s6.html", "quote": "returned to the general ticket system in 1824, (Mass. Resolves, 1824, p. 40.)"},
+        {"url": "https://wisc.pb.unizin.org/ls261/chapter/table-a-1/", "quote": "Keyssar Table A.3 row: Massachusetts | 1780 | 1821"}
+      ]
+    },
+    {
+      "state": "Rhode Island",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": [
+        "C rests only on secondary sources (BlackPast, Providence College Dorr project, Chaput); the 1822 act's text was not found by me either.",
+        "The UW reproduction of Keyssar Table A.5 does NOT list Rhode Island; the 1822 exclusion is therefore not backed by Keyssar as reproduced. Check the printed book before citing Keyssar for it.",
+        "The BlackPast quote in the file is not verbatim (page says: 'In 1822 the state legislature added “white” to the requirement to vote.')."
+      ],
+      "evidence": [
+        {"url": "https://www.rihs.org/mssinv/Mss214sg14.htm", "quote": "Eventually the value amount became fixed at $134.00 ... only those meeting the set amount of value, and their eldest sons, were qualified to vote."},
+        {"url": "https://hd.housedivided.dickinson.edu/node/9029", "quote": "In 1798, the freehold qualification was fixed at $134, or yearly value of $7. (Hayward's Gazetteer, 1854)"},
+        {"url": "https://blackpast.org/timeline-state/rhode-island", "quote": "In 1822 the state legislature added “white” to the requirement to vote."},
+        {"url": "https://library.providence.edu/dorr/articles/marcus-gadson-on-the-dorr-rebellion/", "quote": "Earlier in the 19th century, Black men could vote if they possessed the required amount of property, but they were disenfranchised in 1822."},
+        {"url": "https://wisc.pb.unizin.org/ls261/chapter/table-a-1/", "quote": "Rhode Island appears in Tables A.1 and A.3 only, not in A.5 (as reproduced)"}
+      ]
+    },
+    {
+      "state": "Connecticut",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": [
+        "Classification conflict inside the data: rules-north.json has whiteMenRule 'property', but the map will show 'pay a tax'. The map choice is defensible (the 1818 constitution's own text lets a man qualify by a $7/yr freehold OR militia duty OR paying a state tax), but the JSON value should be changed to match, and the legend should say 'tax or militia'.",
+        "C: Art. VI sec. 1 grandfathered everyone already admitted a freeman before 1818; Black men admitted before the 1814 statute (Connecticut Explored names admissions in 1799 and 1803) may in principle have kept the vote. 'Could not vote' is right as the rule, but a footnote is safer."
+      ],
+      "evidence": [
+        {"url": "https://portal.ct.gov/sots/register-manual/section-i/1818-constitution-of-the-state-of-connecticut", "quote": "and have a freehold estate of the yearly value of seven dollars in this state; or having been enrolled in the militia, shall have performed military duty therein"},
+        {"url": "https://portal.ct.gov/sots/register-manual/section-i/1818-constitution-of-the-state-of-connecticut", "quote": "or shall have paid a state tax within the year next preceding the time he shall present himself for such admission"},
+        {"url": "https://wisc.pb.unizin.org/ls261/chapter/table-a-1/", "quote": "Connecticut | 1715 | 1818: taxpaying and militia service alternatives added | 1845"},
+        {"url": "https://www.ctexplored.org/constitution-of-1818-rights-for-all/", "quote": "In 1814 the Connecticut legislature inserted the word “white” into the freeman statute."}
+      ]
+    },
+    {
+      "state": "New York",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": ["Nuance for the detail text: voters chose the 34 district electors; the 2 at-large electors were chosen by those electors, not by voters. 'Voters' is still the right class for the map."],
+      "evidence": [
+        {"url": "https://law.resource.org/pub/us/case/reporter/US/146/146.US.1.1.170.html", "quote": "In New York the electors were elected in 1828 by districts, the district electors choosing the electors at large."},
+        {"url": "https://50constitutions.org/ny/constitution/section-id-146696", "quote": "other than persons of color, be, and the same is hereby abolished (ratified Nov. 6, 1826, 127,077 to 3,215)"},
+        {"url": "https://albionalumni.org/chevrons/cons/nyscon21.html", "quote": "shall be seized and possessed of a freehold estate of the value of two hundred and fifty dollars, over and above all debts and incumbrances charged thereon"}
+      ]
+    },
+    {
+      "state": "New Jersey",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": [
+        "Classification conflict inside the data: rules-north.json has whiteMenRule 'property'; the map will show 'pay a tax'. Defensible but weaker than Connecticut: the constitution's £50 'clear estate' wording stayed, and the taxpayer route rests on McCormick (who says it came 'by a process of legislative interpretation', i.e. practice), Keyssar ('1807: taxpaying alternative added') and the NPS. Neither I nor the researcher found a statute clause saying taxpayers count as worth £50; the TAH and UNL transcriptions reproduce only section 1 of the 1807 act. Legend should say 'in practice'.",
+        "The 'worthy fifty pounds' wording is from the UNL transcription; TAH reads 'worth fifty pounds'. Use 'worth'."
+      ],
+      "evidence": [
+        {"url": "https://teachingamericanhistory.org/document/voter-qualification-law/", "quote": "unless such person be a free, white, male citizen of this state ... of the age of twenty-one years, worth fifty pounds proclamation money, clear estate"},
+        {"url": "https://dspace.njstatelib.org/bitstreams/26abaf9a-613f-4a26-839d-c292135970e0/download", "quote": "By a process of \"legislative interpretation\" these provisions were altered in 1807 ... to extend the franchise to all taxpayers, regardless of the size of their estate"},
+        {"url": "https://www.nps.gov/articles/voting-rights-in-nj-before-the-15th-and-19th.htm", "quote": "In 1807, the state legislature restricted suffrage (voting rights) to tax-paying, white male citizens."},
+        {"url": "https://wisc.pb.unizin.org/ls261/chapter/table-a-1/", "quote": "New Jersey | 1776 | 1807: taxpaying alternative added | 1844"}
+      ]
+    },
+    {
+      "state": "Pennsylvania",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": ["C: placing Pennsylvania in 'restricted' is defensible only because the category includes 'blocked in practice'. The law was race-neutral in 1828; give it a footnote or distinct symbol so students don't read it as a legal rule like New York's."],
+      "evidence": [
+        {"url": "https://www.paconstitution.org/texts-of-the-constitution/1790-2/", "quote": "every freeman of the age of twenty-one years, having resided in the state two years next before the election, and within that time paid a state or county tax (no 'white' in Art. III)"},
+        {"url": "https://tupjournals.temple.edu/index.php/commonwealth/article/view/457/506", "quote": "the officials refused to assess blacks for the purpose of taxation, thereby denying them the right to vote"},
+        {"url": "https://tupjournals.temple.edu/index.php/commonwealth/article/view/457/506", "quote": "the majority of black men in Pennsylvania were not able to vote"}
+      ]
+    },
+    {
+      "state": "Delaware",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": [
+        "The 1792 constitution text itself could not be opened (Avalon 403, Wikisource blocked). B and C rest on Keyssar plus the Delaware Archives petition.",
+        "The file misdescribes the petition: it says the petition quotes 'the constitution', but the page attributes those voter qualifications to 'the laws of the land'; the only constitutional words it quotes are 'all elections shull be free and equal'. The petition is undated.",
+        "Legend note: the white-men rule applied to state elections only, since Delaware voters did not choose electors in 1828."
+      ],
+      "evidence": [
+        {"url": "https://www.presidency.ucsb.edu/statistics/elections/1828", "quote": "3 electors chosen by state legislature and awarded to John Quincy Adams"},
+        {"url": "https://archivesfiles.delaware.gov/markers/pdfs/SC-017-07.pdf", "quote": "every white free man of the age of twenty-one years, having resided in the state two years next before such election ... paid a state or county tax, which shall have been assessed six months before the election (OCR)"},
+        {"url": "https://wisc.pb.unizin.org/ls261/chapter/table-a-1/", "quote": "Delaware | 1734 | 1792 (Table A.3); Delaware | 1792 (Table A.5)"}
+      ]
+    },
+    {
+      "state": "Maryland",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": ["The file says Keyssar dates the 1801 exclusion to a constitutional amendment; Keyssar's note actually reads '1801 by statute; 1810 by const'l amend't'. Wording fix only."],
+      "evidence": [
+        {"url": "https://msa.maryland.gov/megafile/msa/speccol/sc2900/sc2908/000001/000192/html/am192--33.html", "quote": "every free white male citizen of this state, above twenty-one years of age, and no other"},
+        {"url": "https://press-pubs.uchicago.edu/founders/print_documents/a2_1_2-3s6.html", "quote": "the district method obtained in Kentucky until 1824; in Tennessee and Maryland until 1832"},
+        {"url": "https://wisc.pb.unizin.org/ls261/chapter/table-a-1/", "quote": "Maryland | 1801 | 1801 by statute; 1810 by const'l amend't (Table A.5)"}
+      ]
+    },
+    {
+      "state": "Virginia",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": ["Minor detail: the 1785 act's 25-acre option is '25 acres of land, with a house ... and a plantation thereon'; the act also let a man qualify through land held by his tenant. Doesn't change the class."],
+      "evidence": [
+        {"url": "https://usgenwebsites.org/vagenweb/hening/vol12-06.htm", "quote": "Every male citizen (other than free negroes or mulattoes) of this commonwealth, aged twenty-one years, ... twenty-five acres of land, with a house, ... and a plantation thereon, or fifty acres of unimproved land"},
+        {"url": "https://encyclopediavirginia.org/primary-documents/the-constitution-of-virginia-1776/", "quote": "The right of suffrage in the election of members for both Houses shall remain as exercised at present"}
+      ]
+    },
+    {
+      "state": "North Carolina",
+      "A": "agree", "B": "unsure", "C": "agree",
+      "problems": [
+        "B: neither I nor the researcher found the statute saying which electorate voted for presidential electors (the 'House of Commons' taxpaying electorate or the Senate freeholders). 'Taxpaying' is the most likely answer (the wider electorate was the one used for statewide popular elections), but it is unverified. The 1828 Tarboro notice gives the date and the district-residence rule but says nothing about voter qualifications. Keyssar Table A.3 counts NC as a property state until 1854 because of the Senate freehold.",
+        "C 'yes': supported (NCpedia; Weeks: 'they enjoyed the suffrage up to 1835')."
+      ],
+      "evidence": [
+        {"url": "https://newspapers.digitalnc.org/lccn/sn92073983/1828-10-03/ed-1/seq-2/", "quote": "the election will be held on the 2d Thurs day (13th) November, for fifteen electors one of whom shall actually reside within each of the elec toral districts (OCR)"},
+        {"url": "https://ncpedia.org/node/2248", "quote": "However, free blacks who had been previously allowed to vote were now disfranchised."},
+        {"url": "https://sites.ncleg.gov/library/wp-content/uploads/sites/5/2023/01/NC-Constitution-Amendments-1835-1862.pdf", "quote": "No free Negro, free mulatto, or free person of mixed blood, descended from Negro ancestors to the fourth generation ... shall vote for members of the senate or house of commons."},
+        {"url": "https://digital.lib.ecu.edu/encore/jp2/00000010/00010354/00010354.txt", "quote": "they enjoyed the suffrage up to 1835, when the constitution was changed (Weeks 1894, on North Carolina)"},
+        {"url": "https://wisc.pb.unizin.org/ls261/?p=99", "quote": "North Carolina | 1776 (C) | Freehold of 50 acres (for Senate) | Paid public taxes (for House)"}
+      ]
+    },
+    {
+      "state": "South Carolina",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": ["The 1810 amendment text was not read (also not by the researcher). 'None' rests on Keyssar ('1810: taxpaying and residency alternatives') and the CCPL, which agree. The CCPL calls 1810 a legislative 'policy' of universal suffrage, not an amendment. Legend: state elections only."],
+      "evidence": [
+        {"url": "https://www.presidency.ucsb.edu/statistics/elections/1828", "quote": "11 electors chosen by state legislature and awarded to Andrew Jackson"},
+        {"url": "https://press-pubs.uchicago.edu/founders/print_documents/a2_1_2-3s6.html", "quote": "After 1832 electors were chosen by general ticket in all the States excepting South Carolina, ... where the legislature chose them up to and including 1860."},
+        {"url": "https://www.ccpl.org/charleston-time-machine/advent-black-suffrage-south-carolina", "quote": "allowed all white males aged twenty-one and above to vote without qualifications regarding wealth, property"}
+      ]
+    },
+    {
+      "state": "Georgia",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": ["C: the 1798 voter clause has no racial word ('white' appears elsewhere in the 1798 text, in apportionment and other clauses, not the suffrage clause). The exclusion rests on free people of color not being treated as citizens (Cooper v. Savannah, 1848; Weeks). Correct for the map, but the source note should not imply the 1798 clause said 'white'."],
+      "evidence": [
+        {"url": "https://founding.com/founders-library/government-documents/american-state-and-local-government-documents/state-constitutions/georgia-constitution-of-1798/", "quote": "The electors of members of the general assembly shall be citizens and inhabitants of this state, and shall have attained the age of twenty-one years, and have paid all taxes which may have been required of them"},
+        {"url": "https://guncite.com/court/state/4ga72.html", "quote": "Free persons of color have never been recognized here as citizens; they are not entitled to bear arms, vote for members of the legislature (Cooper v. Savannah, 4 Ga. 68, 72 (1848))"},
+        {"url": "https://press-pubs.uchicago.edu/founders/print_documents/a2_1_2-3s6.html", "quote": "excepting Delaware, Georgia, Louisiana, New York, South Carolina, and Vermont (1824 legislature states)"}
+      ]
+    },
+    {
+      "state": "Kentucky",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": ["Detail only: 'statewide in 1828' is still unsourced beyond the Wikipedia table (the Kentucky state page is silent). The unanimous 14-0 electoral vote despite Adams getting 44.5% fits a general ticket. This does not affect the map, because (A) only shows voters vs legislature."],
+      "evidence": [
+        {"url": "https://web.sos.ky.gov/ofx/timeline?id=4", "quote": "every free male citizen (negroes, mulattoes, and Indians excepted)"},
+        {"url": "https://web.sos.ky.gov/ofx/timeline?id=4", "quote": "the votes shall be personally and publicly given, viva voce. (Art. VI sec. 16)"},
+        {"url": "https://www.presidency.ucsb.edu/statistics/elections/1828", "quote": "Kentucky 70,776 total; Jackson 39,308 (14 electoral); Adams 31,468 (table row)"}
+      ]
+    },
+    {
+      "state": "Tennessee",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": ["B: 'none' is correct from the text (freehold OR six months' residence), but Keyssar lists Tennessee in the property table ('1796 (with residency alternative)') and Weeks says 'all freeholders'. Expect pushback; a footnote helps."],
+      "evidence": [
+        {"url": "https://founding.com/founders-library/government-documents/american-state-and-local-government-documents/state-constitutions/tennessee-constitution-of-1796/", "quote": "and every freeman, being an inhabitant of any one county in the State six months immediately preceding the day of election"},
+        {"url": "https://gutenberg.org/cache/epub/67473/pg67473-images.html", "quote": "Free negroes voted in Tennessee until 1834."},
+        {"url": "https://press-pubs.uchicago.edu/founders/print_documents/a2_1_2-3s6.html", "quote": "in Tennessee and Maryland until 1832"}
+      ]
+    },
+    {
+      "state": "Ohio",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": [],
+      "evidence": [
+        {"url": "https://sites.rootsweb.com/~ohcscott/OhioConstitution.html", "quote": "and who have paid or are charged with a State or county tax"},
+        {"url": "https://sites.rootsweb.com/~ohcscott/OhioConstitution.html", "quote": "who are compelled to labor on the roads of their respective townships or counties"}
+      ]
+    },
+    {
+      "state": "Indiana",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": ["The researcher's 'statewide' is better supported than McPherson. Thomason: a general-ticket law was 'passed and signed into law on 14 January 1824'; Tufts records the 1824 contest as type 'General' with statewide per-elector totals (from Riker & Thornbrough). McPherson's 'in Indiana in 1824 and 1828' (districts) appears to be an error. I found no source for an Indiana return to districts by 1828, but I also did not see the 1828 Indiana statute. This does not affect the map."],
+      "evidence": [
+        {"url": "https://press-pubs.uchicago.edu/founders/print_documents/a2_1_2-3s6.html", "quote": "in Indiana in 1824 and 1828; in Illinois in 1820 and 1824; and in Maine in 1820, 1824 and 1828."},
+        {"url": "https://digital.library.unt.edu/ark:/67531/metadc2775/m2/1/high_res_d/dissertation.pdf", "quote": "a resolution for selection of electors on a general ticket was passed and signed into law on 14 January 1824"},
+        {"url": "https://elections.lib.tufts.edu/catalog/dr26xz91v", "quote": "Type: General; Jonathan MacCarty (Jackson) 7,444 statewide; ref. Riker & Thornbrough, Indiana Election Returns 1816-1851"},
+        {"url": "https://www.in.gov/iara/2778.htm", "quote": "every white male Citizen of the united States, of the age of twenty-one years and upwards, who has resided in the State, one year immediately preceeding such election"}
+      ]
+    },
+    {
+      "state": "Illinois",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": ["Detail only: 'statewide in 1828' is unverified (rests on McPherson's 'in Illinois in 1820 and 1824' and the Wikipedia table; the Illinois state page is silent). Not a map issue."],
+      "evidence": [
+        {"url": "https://cite.case.law/ill/3/377/", "quote": "In all elections all white male inhabitants, above the age of twenty-one years, having resided in the State six months next preceding the election, shall enjoy the right of an elector."}
+      ]
+    },
+    {
+      "state": "Alabama",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": ["Avalon (the cited source) was unreachable for me; I confirmed the sec. 5 wording from a secondary transcription (suffrage-universel.be) only."],
+      "evidence": [
+        {"url": "https://suffrage-universel.be/us/usvoalal.htm", "quote": "Every white male person of the age of twenty-one years, or upwards (1819, Art. III sec. 5)"},
+        {"url": "https://digital.library.unt.edu/ark:/67531/metadc2775/m2/1/high_res_d/dissertation.pdf", "quote": "Alabama and Indiana adopted the general ticket method for the 1824 election."}
+      ]
+    },
+    {
+      "state": "Mississippi",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": [],
+      "evidence": [
+        {"url": "https://mshistorynow.mdah.ms.gov/issue/mississippi-constitution-of-1817", "quote": "and shall be enrolled in the militia thereof, except exempted by law from military service; or, having the aforesaid qualifications of citizenship and residence, shall have paid a State or county tax"}
+      ]
+    },
+    {
+      "state": "Louisiana",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": ["The 1812 constitution text was not readable by me either. 'Taxpaying' rests on 64 Parishes. Country Roads Magazine says land AND property taxes were required, so sources conflict. My recollection of Art. II sec. 8 (taxpaying, with a land-purchaser proviso) matches the researcher's, but that is memory, not a source. Verify against Thorpe vol. III before publishing."],
+      "evidence": [
+        {"url": "https://64parishes.org/entry/louisiana-constitutions", "quote": "Any adult free, taxpaying, white, male, American citizen who had resided in the territory a year or more could vote"},
+        {"url": "https://countryroadsmagazine.com/art-and-culture/history/the-louisiana-constitution-of-1812/", "quote": "reserved the right to vote and run for office to white men who owned land and paid property taxes (conflicting secondary source)"},
+        {"url": "https://www.presidency.ucsb.edu/statistics/elections/1828", "quote": "Louisiana 8,687 total votes (table row)"}
+      ]
+    },
+    {
+      "state": "Missouri",
+      "A": "agree", "B": "agree", "C": "agree",
+      "problems": ["The 1820 constitution's suffrage clause was not read by me either (no reachable transcription found). B and C rest on Keyssar (race exclusion 1821; Missouri absent from the property table) and the clause wording comes from memory. Statewide method in 1828: Thomason confirms the switch away from districts after 1824 but gives no date. Not a map issue."],
+      "evidence": [
+        {"url": "https://digital.library.unt.edu/ark:/67531/metadc2775/m2/1/high_res_d/dissertation.pdf", "quote": "push the Missouri legislature to change from selection of electors by district to a general ticket"},
+        {"url": "https://wisc.pb.unizin.org/ls261/chapter/table-a-1/", "quote": "Missouri | 1821 (Table A.5)"}
+      ]
+    }
+  ],
+  "quotesChecked": [
+    {"state": "Maine", "url": "https://law.resource.org/pub/us/case/reporter/US/146/146.US.1.1.170.html", "verbatim": true, "note": "'in Maine in 1820, 1824, and 1828'"},
+    {"state": "Maine", "url": "https://lldc.mainelegislature.org/Open/Laws/1828/1828_RES_c023.pdf", "verbatim": true, "note": "Both fragments present (OCR)."},
+    {"state": "Maine", "url": "https://legislature.maine.gov/uploads/originals/const1820.pdf", "verbatim": true, "note": "Matches allowing for OCR artifacts ('Indiaus', 'excepting.')."},
+    {"state": "New Hampshire", "url": "https://law.resource.org/pub/us/case/reporter/US/146/146.US.1.1.170.html", "verbatim": true, "note": "'In 1824 the electors were chosen by popular vote, by districts, and by general ticket' present."},
+    {"state": "New Hampshire", "url": "https://founding.com/founders-library/government-documents/american-state-and-local-government-documents/state-constitutions/new-hampshire-constitution-of-1792/", "verbatim": true, "note": "Ellipsis replaces ', and places unincorporated, in this State,'."},
+    {"state": "Vermont", "url": "https://sos.vermont.gov/vsara/learn/constitution/1793-constitution", "verbatim": true, "note": ""},
+    {"state": "Vermont", "url": "https://elections.lib.tufts.edu/catalog/c821gm32p", "verbatim": true, "note": "Note [2]."},
+    {"state": "Massachusetts", "url": "https://50constitutions.org/ma/constitution/section-id-50582", "verbatim": false, "note": "Near-verbatim: the source has a comma after 'tax' ('any state or county tax, which shall'). First quote ('Every male citizen ... guardianship') is verbatim."},
+    {"state": "Massachusetts", "url": "https://press-pubs.uchicago.edu/founders/print_documents/a2_1_2-3s6.html", "verbatim": true, "note": "'returned to the general ticket system in 1824'"},
+    {"state": "Rhode Island", "url": "https://www.rihs.org/mssinv/Mss214sg14.htm", "verbatim": true, "note": "Both fragments present; page gives no 1798 date."},
+    {"state": "Rhode Island", "url": "https://hd.housedivided.dickinson.edu/node/9029", "verbatim": true, "note": "Source is Hayward's Gazetteer (1854), not c.1851."},
+    {"state": "Rhode Island", "url": "https://blackpast.org/timeline-state/rhode-island", "verbatim": false, "note": "Page says: 'In 1822 the state legislature added “white” to the requirement to vote.' Same meaning, different words."},
+    {"state": "Rhode Island", "url": "https://library.providence.edu/dorr/articles/marcus-gadson-on-the-dorr-rebellion/", "verbatim": true, "note": "Exact substring; the sentence begins 'Earlier in the 19th century,'."},
+    {"state": "Rhode Island", "url": "https://library.providence.edu/dorr/wp-content/uploads/sites/2/2026/02/Dr.-Erik-J.-Chaput-on-Race-and-the-Dorr-Rebellion-Transcript.pdf", "verbatim": true, "note": ""},
+    {"state": "Connecticut", "url": "https://portal.ct.gov/sots/register-manual/section-i/1818-constitution-of-the-state-of-connecticut", "verbatim": true, "note": "All three Art. VI sec. 2 fragments present."},
+    {"state": "Connecticut", "url": "https://www.ctexplored.org/constitution-of-1818-rights-for-all/", "verbatim": true, "note": ""},
+    {"state": "Connecticut", "url": "https://wisc.pb.unizin.org/ls261/chapter/table-a-1/", "verbatim": false, "note": "Labelled as a paraphrase; the content matches the table rows (A.3: '1818: taxpaying and militia service alternatives added | 1845'; A.5: 1818)."},
+    {"state": "New York", "url": "https://albionalumni.org/chevrons/cons/nyscon21.html", "verbatim": true, "note": "Both fragments present."},
+    {"state": "New York", "url": "https://50constitutions.org/ny/constitution/section-id-146696", "verbatim": true, "note": "Both fragments present; ratification Nov. 6, 1826, 127,077 to 3,215 confirmed."},
+    {"state": "New York", "url": "https://law.resource.org/pub/us/case/reporter/US/146/146.US.1.1.170.html", "verbatim": true, "note": ""},
+    {"state": "New York", "url": "https://www.albanylawreview.org/api/v1/articles/127457-the-1821-constitutional-convention-and-the-constitutionalizing-of-racial-discrimination-in-new-york.pdf", "verbatim": true, "note": "Footnote 61 cites Field (1982) p.37 and Galie (1996) p.77."},
+    {"state": "New Jersey", "url": "https://teachingamericanhistory.org/document/voter-qualification-law/", "verbatim": true, "note": "Page reproduces only the preamble and section 1; no taxpayer clause."},
+    {"state": "New Jersey", "url": "https://teachinglegalhistory.unl.edu/s/oer/item/1016", "verbatim": true, "note": "'worthy' is in this transcription; TAH reads 'worth'."},
+    {"state": "New Jersey", "url": "https://dspace.njstatelib.org/bitstreams/26abaf9a-613f-4a26-839d-c292135970e0/download", "verbatim": true, "note": "But McCormick says the change came 'by a process of \"legislative interpretation\"'; he quotes no statute clause."},
+    {"state": "New Jersey", "url": "https://www.nps.gov/articles/voting-rights-in-nj-before-the-15th-and-19th.htm", "verbatim": true, "note": ""},
+    {"state": "Pennsylvania", "url": "https://www.paconstitution.org/texts-of-the-constitution/1790-2/", "verbatim": true, "note": "Both quotes present; no 'white' in Art. III."},
+    {"state": "Pennsylvania", "url": "https://tupjournals.temple.edu/index.php/commonwealth/article/view/457/506", "verbatim": true, "note": "Both quotes present (citing Price 1976, 1973)."},
+    {"state": "Delaware", "url": "https://www.presidency.ucsb.edu/statistics/elections/1828", "verbatim": true, "note": "No trailing period on the page."},
+    {"state": "Delaware", "url": "https://archivesfiles.delaware.gov/markers/pdfs/SC-017-07.pdf", "verbatim": true, "note": "Phrases present (OCR), but the petition attributes them to 'the laws of the land', not the constitution, and it is undated. The file's description is wrong."},
+    {"state": "Maryland", "url": "https://msa.maryland.gov/megafile/msa/speccol/sc2900/sc2908/000001/000192/html/am192--33.html", "verbatim": true, "note": "Both quotes present; 1809 ch. 83, confirmed 1810 ch. 33."},
+    {"state": "Virginia", "url": "https://press-pubs.uchicago.edu/founders/print_documents/a2_1_2-3s6.html", "verbatim": true, "note": ""},
+    {"state": "Virginia", "url": "https://usgenwebsites.org/vagenweb/hening/vol12-06.htm", "verbatim": true, "note": "Present, with ellipses. The omitted text includes tenant and 'plantation thereon' wording."},
+    {"state": "Virginia", "url": "https://encyclopediavirginia.org/primary-documents/the-constitution-of-virginia-1776/", "verbatim": true, "note": ""},
+    {"state": "Virginia", "url": "https://wisc.pb.unizin.org/ls261/?p=99", "verbatim": true, "note": "'Freehold of 50 acres or town lot with house'"},
+    {"state": "Virginia", "url": "https://digital.lib.ecu.edu/encore/jp2/00000010/00010354/00010354.txt", "verbatim": true, "note": "'They were disfranchised for the first time in 1723.'"},
+    {"state": "North Carolina", "url": "https://newspapers.digitalnc.org/lccn/sn92073983/1828-10-03/ed-1/seq-2/", "verbatim": true, "note": "Matches allowing for OCR spacing ('elec toral')."},
+    {"state": "North Carolina", "url": "https://www.ncpedia.org/history/1776-1860/age-of-jefferson", "verbatim": true, "note": "Page calls it the 1811 law; repealed after 1812."},
+    {"state": "North Carolina", "url": "https://ncpedia.org/node/2248", "verbatim": true, "note": ""},
+    {"state": "North Carolina", "url": "https://sites.ncleg.gov/library/wp-content/uploads/sites/5/2023/01/NC-Constitution-Amendments-1835-1862.pdf", "verbatim": true, "note": ""},
+    {"state": "North Carolina", "url": "https://wisc.pb.unizin.org/ls261/?p=99", "verbatim": true, "note": "'Paid public taxes (for House)'"},
+    {"state": "North Carolina", "url": "https://digital.library.unt.edu/ark:/67531/metadc2775/m2/1/high_res_d/dissertation.pdf", "verbatim": false, "note": "Labelled paraphrase of Table 1; the readable part of the PDF holds Table 1 only to 1820, and Table 10 (1824-32) was not in the extracted text."},
+    {"state": "South Carolina", "url": "https://www.presidency.ucsb.edu/statistics/elections/1828", "verbatim": true, "note": ""},
+    {"state": "South Carolina", "url": "https://press-pubs.uchicago.edu/founders/print_documents/a2_1_2-3s6.html", "verbatim": true, "note": "'where the legislature chose them up to and including 1860.'"},
+    {"state": "South Carolina", "url": "https://www.scencyclopedia.org/sce/?p=3172", "verbatim": true, "note": "Both quotes present."},
+    {"state": "South Carolina", "url": "https://www.ccpl.org/charleston-time-machine/advent-black-suffrage-south-carolina", "verbatim": true, "note": "Page calls 1810 a legislative 'policy', not an amendment."},
+    {"state": "South Carolina", "url": "https://www.law.cornell.edu/supremecourt/text/88/162", "verbatim": true, "note": "Minor v. Happersett, quoting the SC constitution."},
+    {"state": "South Carolina", "url": "https://wisc.pb.unizin.org/ls261/?p=99", "verbatim": true, "note": "'Or paid taxes of 3 shillings'"},
+    {"state": "South Carolina", "url": "https://digital.lib.ecu.edu/encore/jp2/00000010/00010354/00010354.txt", "verbatim": true, "note": "'The law of 1716 was the first to insert the word white.'"},
+    {"state": "Georgia", "url": "https://founding.com/founders-library/government-documents/american-state-and-local-government-documents/state-constitutions/georgia-constitution-of-1798/", "verbatim": true, "note": "All three quotes present."},
+    {"state": "Georgia", "url": "https://guncite.com/court/state/4ga72.html", "verbatim": true, "note": ""},
+    {"state": "Georgia", "url": "https://wisc.pb.unizin.org/ls261/?p=99", "verbatim": true, "note": "'Paid all taxes of previous year'"},
+    {"state": "Georgia", "url": "https://digital.library.unt.edu/ark:/67531/metadc2775/m2/1/high_res_d/dissertation.pdf", "verbatim": true, "note": "'chose their electors through legislative selection' (about 1824)."},
+    {"state": "Kentucky", "url": "https://web.sos.ky.gov/ofx/timeline?id=4", "verbatim": true, "note": "All three quotes present; viva voce is Art. VI sec. 16."},
+    {"state": "Kentucky", "url": "https://press-pubs.uchicago.edu/founders/print_documents/a2_1_2-3s6.html", "verbatim": true, "note": ""},
+    {"state": "Kentucky", "url": "https://digital.library.unt.edu/ark:/67531/metadc2775/m2/1/high_res_d/dissertation.pdf", "verbatim": true, "note": "Six-states sentence present; it describes 1824."},
+    {"state": "Tennessee", "url": "https://founding.com/founders-library/government-documents/american-state-and-local-government-documents/state-constitutions/tennessee-constitution-of-1796/", "verbatim": true, "note": "Both quotes present; no 'white'."},
+    {"state": "Tennessee", "url": "https://gutenberg.org/cache/epub/67473/pg67473-images.html", "verbatim": true, "note": ""},
+    {"state": "Tennessee", "url": "https://wisc.pb.unizin.org/ls261/?p=99", "verbatim": true, "note": "'(with residency alternative)'"},
+    {"state": "Tennessee", "url": "https://digital.lib.ecu.edu/encore/jp2/00000010/00010354/00010354.txt", "verbatim": true, "note": "Fragment of 'the constitution of 1834 restricted suffrage to white men'."},
+    {"state": "Ohio", "url": "https://sites.rootsweb.com/~ohcscott/OhioConstitution.html", "verbatim": true, "note": "Both quotes present."},
+    {"state": "Ohio", "url": "https://www.presidency.ucsb.edu/statistics/elections/1828", "verbatim": true, "note": "Table values match."},
+    {"state": "Indiana", "url": "https://www.in.gov/iara/2778.htm", "verbatim": true, "note": "Includes the original spelling 'preceeding'."},
+    {"state": "Indiana", "url": "https://press-pubs.uchicago.edu/founders/print_documents/a2_1_2-3s6.html", "verbatim": true, "note": "'in Indiana in 1824 and 1828'"},
+    {"state": "Indiana", "url": "https://digital.library.unt.edu/ark:/67531/metadc2775/m2/1/high_res_d/dissertation.pdf", "verbatim": true, "note": "'Alabama and Indiana adopted the general ticket method for the 1824 election.'"},
+    {"state": "Indiana", "url": "https://elections.lib.tufts.edu/catalog/dr26xz91v", "verbatim": true, "note": "Labelled paraphrase; Jackson electors 7,443-7,444 confirmed (the researcher's '7,418' lower bound was not checked)."},
+    {"state": "Illinois", "url": "https://cite.case.law/ill/3/377/", "verbatim": true, "note": "The page does not show the year; 1840 is from elsewhere."},
+    {"state": "Mississippi", "url": "https://mshistorynow.mdah.ms.gov/issue/mississippi-constitution-of-1817", "verbatim": true, "note": "Both quotes present."},
+    {"state": "Louisiana", "url": "https://64parishes.org/entry/louisiana-constitutions", "verbatim": true, "note": "No land-purchaser alternative mentioned."},
+    {"state": "Louisiana", "url": "https://www.presidency.ucsb.edu/statistics/elections/1828", "verbatim": true, "note": "Table values match."},
+    {"state": "All", "url": "https://www.law.cornell.edu/supremecourt/text/88/162", "verbatim": true, "note": "'In all, save perhaps New Jersey, this right was only bestowed upon men and not upon all of them.'"},
+    {"state": "All", "url": "https://www.archives.gov/electoral-college/1828", "verbatim": true, "note": "Table values match for Maine 1/8, Maryland 5/6, Massachusetts 15, Delaware 3."}
+  ],
+  "general": [
+    "(A) agrees for all 24 states: only Delaware and South Carolina had no popular vote in 1828. UCSB marks only those two as 'chosen by state legislature', and Wikipedia (citing Howe 2007) says the same. McPherson's list of legislature states in 1824 (Delaware, Georgia, Louisiana, New York, South Carolina, Vermont) shrank to two by 1828, because Georgia, Louisiana and Vermont have 1828 popular returns and New York used districts.",
+    "The district-vs-statewide doubts (Indiana, Kentucky, Illinois, Missouri) don't affect the map, which only shows voters vs legislature. Indiana: the evidence favours statewide (Thomason: general-ticket law of 14 Jan 1824; Tufts 1824 type 'General'); McPherson's 'Indiana in 1824 and 1828' looks wrong.",
+    "Data/map mismatch to fix before publishing: rules-north.json still has whiteMenRule 'property' for Connecticut and New Jersey, while the map is to show them as 'pay a tax'. Connecticut: strongly defensible from the 1818 constitution's own text (freehold OR militia OR state tax). New Jersey: defensible only as 'in practice' (McCormick: 'legislative interpretation'; Keyssar; NPS); no statute clause has been found. Label the legend accordingly.",
+    "Several 'pay a tax' states really mean 'tax OR something else': Connecticut (militia), Mississippi (militia), Ohio (road labor), Pennsylvania and Delaware (sons aged 21-22 exempt). Massachusetts also counts men exempted from tax by law. The legend wording 'had to pay a tax (or serve in the militia, or road labor)' covers these.",
+    "Edge cases in 'none': Tennessee (freehold OR 6 months' residence) and South Carolina (freehold OR 6 months' district residence, 1810) are correct from the constitutional text, but Keyssar lists both in his property table with alternatives. Footnote them.",
+    "Delaware and South Carolina: the white-men rule shown is for state elections only, since voters did not choose electors there. The legend should say so.",
+    "Pennsylvania in 'restricted' (blocked in practice) differs from New York (restricted in law); give it a distinct mark or footnote.",
+    "Keyssar (as reproduced at UW) has no Rhode Island race-exclusion row; the 1822 exclusion rests on secondary sources only. I agree with the classification but couldn't confirm it from a primary text.",
+    "(D) women: agree. Minor v. Happersett quote verified; New Jersey's 1807 act is verified (TAH, LOC/NPS).",
+    "Not verified by me (primary text unreachable or not found): Delaware 1792 constitution, Louisiana 1812 Art. II sec. 8, Missouri 1820 Art. III sec. 10, South Carolina 1810 amendment, Rhode Island 1822 act, New Jersey 1807 taxpayer clause, and the North Carolina statute naming who voted for electors. Avalon was blocked (403), Wikisource was not allowed, and Tufts has nothing after 1825."
+  ]
+}

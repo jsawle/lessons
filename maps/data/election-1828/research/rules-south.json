@@ -1,0 +1,644 @@
+{
+  "meta": {
+    "topic": "Rules for the November 1828 presidential election, 13 southern and western states",
+    "compiled": "2026-10-30",
+    "caveat": "Quotes were captured through an automated page reader and should be spot-checked against each URL before publication. 'Thomason' = Lisa Thomason, Jacksonian Democracy and the Electoral College, PhD diss., University of North Texas, 2001. 'Keyssar' = Alexander Keyssar, The Right to Vote, appendix tables, as reproduced on a University of Wisconsin course page. 'McPherson' = McPherson v. Blacker, 146 U.S. 1 (1892), via The Founders' Constitution (U. Chicago Press). Wikipedia is used only as a pointer."
+  },
+  "states": [
+    {
+      "state": "Virginia",
+      "electorMethod": "popular vote, statewide general ticket",
+      "electorMethodDetail": "Voters chose all 24 electors on a single statewide ticket. Virginia adopted the general ticket in 1800 and kept it. Result: Jackson 26,854, Adams 12,070 (UCSB).",
+      "whiteMenRule": "property",
+      "whiteMenDetail": "Freehold (land ownership) required. Under the 1776 constitution the right of suffrage 'shall remain as exercised at present', i.e. set by statute. The 1785 election act (still the basis in 1828) required a male citizen aged 21+ to have a freehold estate in 25 acres with a house, or 50 acres of unimproved land, or a town lot (or part) with a house, held six months (unless inherited, etc.). No taxpaying alternative until the 1830 constitution. These rules applied to elections of the House of Delegates and Senate; the same freeholders voted for presidential electors (presumed - the elector statute itself was not checked).",
+      "blackMen": "no",
+      "blackMenDetail": "Excluded by statute. The 1785 act limits voters to 'Every male citizen (other than free negroes or mulattoes)'. Virginia had excluded free Black men since colonial acts of 1723 (Weeks) / 1762 (Keyssar Table A.5).",
+      "women": "No. Women could not vote in this state in 1828; the suffrage clause is limited to men (see whiteMenDetail quote). The US Supreme Court in Minor v. Happersett (1875) reviewed early state constitutions and found the vote 'only bestowed upon men' everywhere except possibly New Jersey (not one of these 13 states).",
+      "other": "Virginia's 1829-30 constitutional convention (after the 1828 election) relaxed the freehold rule to admit some leaseholders and taxpaying householders; that change took effect only from 1830.",
+      "sources": [
+        {
+          "url": "https://press-pubs.uchicago.edu/founders/print_documents/a2_1_2-3s6.html",
+          "quote": "until some uniform mode of choosing a President and Vice-President",
+          "supports": "McPherson v. Blacker on Virginia's 1799-1800 act adopting the general ticket (fragment of the act's title as quoted)"
+        },
+        {
+          "url": "https://digital.library.unt.edu/ark:/67531/metadc2775/m2/1/high_res_d/dissertation.pdf",
+          "quote": "Virginia: Switched from district to general ticket in 1800 [paraphrase of Table 1, not verbatim]",
+          "supports": "general ticket; Thomason, Jacksonian Democracy and the Electoral College, UNT PhD diss. 2001"
+        },
+        {
+          "url": "https://encyclopediavirginia.org/primary-documents/the-constitution-of-virginia-1776/",
+          "quote": "The right of suffrage in the election of members for both Houses shall remain as exercised at present",
+          "supports": "1776 constitution left suffrage to existing law"
+        },
+        {
+          "url": "https://usgenwebsites.org/vagenweb/hening/vol12-06.htm",
+          "quote": "Every male citizen (other than free negroes or mulattoes) of this commonwealth, aged twenty-one years ... twenty-five acres of land, with a house ... or fifty acres of unimproved land",
+          "supports": "1785 act (Hening vol. 12, ch. LV, p.120): freehold rule and exclusion of free Black men"
+        },
+        {
+          "url": "https://usgenwebsites.org/vagenweb/hening/vol12-06.htm",
+          "quote": "or a lot or part of a lot of land in a city or town established by act of general assembly with a house thereon",
+          "supports": "town-lot alternative"
+        },
+        {
+          "url": "https://archive.wvculture.org/History/government/182930cc.html",
+          "quote": "twenty-five acres of improved or fifty acres of unimproved land",
+          "supports": "WV Archives: 1785 law still defined the freehold at the 1829-30 convention"
+        },
+        {
+          "url": "https://wisc.pb.unizin.org/ls261/?p=99",
+          "quote": "Freehold of 50 acres or town lot with house",
+          "supports": "Keyssar Table A.1 (via UW course page) - property rule"
+        },
+        {
+          "url": "https://digital.lib.ecu.edu/encore/jp2/00000010/00010354/00010354.txt",
+          "quote": "They were disfranchised for the first time in 1723.",
+          "supports": "long-standing exclusion of free Black men (Weeks, Political Science Quarterly 1894)"
+        },
+        {
+          "url": "https://www.law.cornell.edu/supremecourt/text/88/162",
+          "quote": "In all, save perhaps New Jersey, this right was only bestowed upon men and not upon all of them.",
+          "supports": "women could not vote (all states)"
+        }
+      ],
+      "confidence": "high",
+      "notes": "Freehold rule and racial exclusion are clear in the 1785 statute text. I did not find the text of the 1819 revised code to confirm word-for-word re-enactment, but the WV Archives account of the 1829 convention treats the 1785 definitions as still in force. The Library of Virginia summary gives slightly different acreage (100 acres unsettled or 25/50 with house) - that is the older 1736 act; the 1785 act's 25 improved/50 unimproved is the one in force in 1828. The WV Archives page also claims Virginia was the only state with strict freehold suffrage in 1829; that is doubtful (Rhode Island kept a freehold rule until 1842) so it is not used. The elector-selection statute's own voter-qualification wording was not checked."
+    },
+    {
+      "state": "North Carolina",
+      "electorMethod": "popular vote, statewide general ticket",
+      "electorMethodDetail": "All 15 electors on one statewide ticket, but each elector had to live in a different electoral district (a 1828 Tarboro newspaper notice: 'fifteen electors one of whom shall actually reside within each of the electoral districts'). General ticket in use since 1816, after the legislature itself chose electors in 1812 (an unpopular law repealed afterwards). Election held Thursday 13 Nov 1828.",
+      "whiteMenRule": "taxpaying",
+      "whiteMenDetail": "1776 constitution: voters for the House of Commons had to be freemen 21+, resident in the county 12 months, who 'shall have paid public taxes' (taxpaying). Voters for the state Senate also needed a 50-acre freehold in the county (property). For presidential electors I could NOT find the statute; the taxpaying (Commons) rule is the most likely one but is unverified.",
+      "blackMen": "yes",
+      "blackMenDetail": "The 1776 constitution says 'freemen' with no racial bar, and free Black men who met the same tax (and, for the Senate, freehold) rules voted until the 1835 amendments, which provided that no free Negro or free person of mixed blood 'shall vote for members of the senate or house of commons'.",
+      "women": "No. Women could not vote in this state in 1828; the suffrage clause is limited to men (see whiteMenDetail quote). The US Supreme Court in Minor v. Happersett (1875) reviewed early state constitutions and found the vote 'only bestowed upon men' everywhere except possibly New Jersey (not one of these 13 states).",
+      "other": "The governor was chosen by the legislature until 1835. Free Black men in North Carolina could still vote in 1828 - one of few southern states (with Tennessee) where this was so.",
+      "sources": [
+        {
+          "url": "https://newspapers.digitalnc.org/lccn/sn92073983/1828-10-03/ed-1/seq-2/",
+          "quote": "for fifteen electors one of whom shall actually reside within each of the electoral districts",
+          "supports": "1828 general ticket with district residence rule (Tarborough Free Press, 3 Oct 1828, via DigitalNC OCR)"
+        },
+        {
+          "url": "https://digital.library.unt.edu/ark:/67531/metadc2775/m2/1/high_res_d/dissertation.pdf",
+          "quote": "North Carolina: General ticket from 1816 onward, after legislative selection in 1812 [paraphrase of Table 1, not verbatim]",
+          "supports": "general ticket since 1816"
+        },
+        {
+          "url": "https://www.ncpedia.org/history/1776-1860/age-of-jefferson",
+          "quote": "The assembly repealed it after the 1812 election.",
+          "supports": "legislative choice only in 1812"
+        },
+        {
+          "url": "https://avalon.law.yale.edu/18th_century/nc07.asp",
+          "quote": "and shall have paid public taxes shall be entitled to vote for members of the House of Commons for the county in which he resides.",
+          "supports": "Art. VIII taxpaying rule for Commons"
+        },
+        {
+          "url": "https://avalon.law.yale.edu/18th_century/nc07.asp",
+          "quote": "and possessed of a freehold within the same county of fifty acres of land for six months next before, and at the day of election",
+          "supports": "Art. VII 50-acre freehold for Senate voters"
+        },
+        {
+          "url": "https://ncpedia.org/node/2248",
+          "quote": "free blacks who had been previously allowed to vote were now disfranchised",
+          "supports": "free Black men voted until 1835 (NCpedia, Convention of 1835)"
+        },
+        {
+          "url": "https://sites.ncleg.gov/library/wp-content/uploads/sites/5/2023/01/NC-Constitution-Amendments-1835-1862.pdf",
+          "quote": "No free Negro, free mulatto, or free person of mixed blood, descended from Negro ancestors to the fourth generation",
+          "supports": "1835 exclusion clause (Art. I, sec. 3)"
+        },
+        {
+          "url": "https://wisc.pb.unizin.org/ls261/?p=99",
+          "quote": "Paid public taxes (for House)",
+          "supports": "Keyssar Table A.1 (via UW course page)"
+        },
+        {
+          "url": "https://www.law.cornell.edu/supremecourt/text/88/162",
+          "quote": "In all, save perhaps New Jersey, this right was only bestowed upon men and not upon all of them.",
+          "supports": "women could not vote (all states)"
+        }
+      ],
+      "confidence": "medium",
+      "notes": "High confidence on the constitutional rules and on free Black voting before 1835. Medium overall because I could not find the statute saying which voters (Commons taxpayers or Senate freeholders) could vote for presidential electors; I believe it was the Commons (taxpaying) electorate but did not verify it. The 1828 newspaper lists the Jackson electors by district number, which could be misread as a district election; the same notice shows all 15 were elected together."
+    },
+    {
+      "state": "South Carolina",
+      "electorMethod": "legislature",
+      "electorMethodDetail": "The General Assembly chose all 11 electors (all for Jackson). There was no popular vote for president in South Carolina in 1828; the legislature kept this power through 1860.",
+      "whiteMenRule": "none",
+      "whiteMenDetail": "Applies to elections of the state legislature (which then chose the electors). The 1790 constitution required a 50-acre freehold or town lot, or payment of a 3-shilling tax; an 1810 amendment let every free white man 21+ (two years' state residence) vote with either a freehold or six months' residence in the election district, so no property or tax was needed in 1828.",
+      "blackMen": "no",
+      "blackMenDetail": "Excluded. The 1790 constitution's suffrage clause is limited to 'every free white man' (Keyssar dates the exclusion in the constitution to 1790; Weeks traces the word 'white' to a 1716 colonial law).",
+      "women": "No. Women could not vote in this state in 1828; the suffrage clause is limited to men (see whiteMenDetail quote). The US Supreme Court in Minor v. Happersett (1875) reviewed early state constitutions and found the vote 'only bestowed upon men' everywhere except possibly New Jersey (not one of these 13 states).",
+      "other": "Ordinary South Carolinians had no direct vote for president at all in 1828; their influence came only through electing state legislators.",
+      "sources": [
+        {
+          "url": "https://www.presidency.ucsb.edu/statistics/elections/1828",
+          "quote": "11 electors chosen by state legislature and awarded to Andrew Jackson",
+          "supports": "legislature chose electors in 1828"
+        },
+        {
+          "url": "https://press-pubs.uchicago.edu/founders/print_documents/a2_1_2-3s6.html",
+          "quote": "where the legislature chose them up to and including 1860.",
+          "supports": "legislative choice through 1860 (McPherson v. Blacker)"
+        },
+        {
+          "url": "https://www.scencyclopedia.org/sce/?p=3172",
+          "quote": "elected holders of all major offices, including the governor, presidential electors, U.S. senators",
+          "supports": "SC Encyclopedia (Constitutions entry): legislature elected electors under 1790 constitution"
+        },
+        {
+          "url": "https://www.scencyclopedia.org/sce/?p=3172",
+          "quote": "Voting was limited to white males, each of whom could vote in any district where he owned fifty acres of land.",
+          "supports": "1790 rule"
+        },
+        {
+          "url": "https://wisc.pb.unizin.org/ls261/?p=99",
+          "quote": "Freehold of 50 acres or town lot ... Or paid taxes of 3 shillings",
+          "supports": "Keyssar Table A.1; Table A.3 dates a residency alternative to 1810 (via UW course page)"
+        },
+        {
+          "url": "https://www.ccpl.org/charleston-time-machine/advent-black-suffrage-south-carolina",
+          "quote": "allowed all white males aged twenty-one and above to vote without qualifications regarding wealth, property",
+          "supports": "1810 change (Charleston County Public Library)"
+        },
+        {
+          "url": "https://www.law.cornell.edu/supremecourt/text/88/162",
+          "quote": "every free white man of the age of twenty-one years, being a citizen of the State",
+          "supports": "constitutional wording quoted by the Supreme Court"
+        },
+        {
+          "url": "https://digital.lib.ecu.edu/encore/jp2/00000010/00010354/00010354.txt",
+          "quote": "The law of 1716 was the first to insert the word white",
+          "supports": "colonial origin of racial exclusion (as summarized)"
+        },
+        {
+          "url": "https://www.law.cornell.edu/supremecourt/text/88/162",
+          "quote": "In all, save perhaps New Jersey, this right was only bestowed upon men and not upon all of them.",
+          "supports": "women could not vote (all states)"
+        }
+      ],
+      "confidence": "high",
+      "notes": "Legislative choice of electors is certain. I did not read the 1810 amendment text itself (Cooper's Statutes at Large vol. 1, p.193 lists it but the scan text was not reachable); the 'none' classification rests on Keyssar's table and the Charleston County Public Library account, which agree. Medium-high on the exact wording of the 1810 residence rules."
+    },
+    {
+      "state": "Georgia",
+      "electorMethod": "popular vote, statewide general ticket",
+      "electorMethodDetail": "1828 was the first time Georgia voters chose electors; the legislature had chosen them through 1824. 9 electors, Jackson 19,362 vs Adams 642 (UCSB).",
+      "whiteMenRule": "taxpaying",
+      "whiteMenDetail": "1798 constitution, Art. IV sec. 1: voters must be citizens and inhabitants, 21+, who 'have paid all taxes which may have been required of them' for the year before the election, and resided six months in the county. No property requirement (dropped in 1789).",
+      "blackMen": "no",
+      "blackMenDetail": "Excluded. The 1777 constitution limited the vote to white men (Keyssar dates the exclusion to 1777). The 1798 text does not say 'white' but requires citizenship, and free people of color were not treated as citizens: Georgia's Supreme Court (Cooper v. Savannah, 1848) said they were never recognized as citizens and were not entitled to vote for the legislature.",
+      "women": "No. Women could not vote in this state in 1828; the suffrage clause is limited to men (see whiteMenDetail quote). The US Supreme Court in Minor v. Happersett (1875) reviewed early state constitutions and found the vote 'only bestowed upon men' everywhere except possibly New Jersey (not one of these 13 states).",
+      "other": "Under the 1798 constitution as written, the governor was elected by the legislature.",
+      "sources": [
+        {
+          "url": "https://www.presidency.ucsb.edu/statistics/elections/1828",
+          "quote": "Georgia | 20,004 | 19,362 (96.8%) | 9 | 642 (3.2%)",
+          "supports": "popular vote held in 1828 (table row)"
+        },
+        {
+          "url": "https://digital.library.unt.edu/ark:/67531/metadc2775/m2/1/high_res_d/dissertation.pdf",
+          "quote": "chose their electors through legislative selection",
+          "supports": "legislature chose electors in 1824"
+        },
+        {
+          "url": "https://founding.com/founders-library/government-documents/american-state-and-local-government-documents/state-constitutions/georgia-constitution-of-1798/",
+          "quote": "and shall have attained the age of twenty-one years, and have paid all taxes which may have been required of them",
+          "supports": "1798 Art. IV sec. 1 taxpaying rule (Claremont Institute transcription)"
+        },
+        {
+          "url": "https://founding.com/founders-library/government-documents/american-state-and-local-government-documents/state-constitutions/georgia-constitution-of-1798/",
+          "quote": "The electors of members of the general assembly shall be citizens and inhabitants of this state",
+          "supports": "citizenship requirement"
+        },
+        {
+          "url": "https://founding.com/founders-library/government-documents/american-state-and-local-government-documents/state-constitutions/georgia-constitution-of-1798/",
+          "quote": "The governor shall be elected by the general assembly",
+          "supports": "1798 Art. II sec. 2 (as originally written)"
+        },
+        {
+          "url": "https://www.georgiahistory.com/wp-content/uploads/2026/08/voting-in-georgia.pdf",
+          "quote": "White voters be current on all taxes owed to the state before being allowed to vote",
+          "supports": "Georgia Historical Society summary of 1798 rule"
+        },
+        {
+          "url": "https://wisc.pb.unizin.org/ls261/?p=99",
+          "quote": "Paid all taxes of previous year",
+          "supports": "Keyssar Table A.1 (1789 rule); Table A.5 dates racial exclusion to 1777 (via UW course page)"
+        },
+        {
+          "url": "https://guncite.com/court/state/4ga72.html",
+          "quote": "Free persons of color have never been recognized here as citizens; they are not entitled to bear arms, vote for members of the legislature",
+          "supports": "Cooper v. Savannah, 4 Ga. 68, 72 (1848)"
+        },
+        {
+          "url": "https://www.law.cornell.edu/supremecourt/text/88/162",
+          "quote": "In all, save perhaps New Jersey, this right was only bestowed upon men and not upon all of them.",
+          "supports": "women could not vote (all states)"
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Suffrage rule: high confidence. Elector method: medium - the switch from legislative choice (1824) to a popular general ticket (1828) is shown by Thomason and by the existence of statewide popular returns, but I did not find the Georgia statute. Wikipedia points to a Oct 1824 referendum approving popular choice of electors after 1824 (not independently verified). Black exclusion after 1789 rests on citizenship, not an explicit 'white' clause in 1798."
+    },
+    {
+      "state": "Kentucky",
+      "electorMethod": "popular vote, statewide general ticket",
+      "electorMethodDetail": "14 electors, all for Jackson (Jackson 39,308, Adams 31,468 per UCSB). Kentucky had used districts through 1824 and used a statewide ticket in 1828.",
+      "whiteMenRule": "none",
+      "whiteMenDetail": "1799 constitution, Art. II sec. 8: every free male citizen 21+ who had resided in the state two years, or in the county or town one year, could vote. No property or tax requirement. Voting was viva voce (spoken aloud), Art. VI sec. 16.",
+      "blackMen": "no",
+      "blackMenDetail": "Excluded by the 1799 constitution: 'every free male citizen (negroes, mulattoes, and Indians excepted)'. The 1792 constitution had no racial bar.",
+      "women": "No. Women could not vote in this state in 1828; the suffrage clause is limited to men (see whiteMenDetail quote). The US Supreme Court in Minor v. Happersett (1875) reviewed early state constitutions and found the vote 'only bestowed upon men' everywhere except possibly New Jersey (not one of these 13 states).",
+      "other": "Voters announced their choice out loud at the polls (viva voce) rather than using a secret ballot.",
+      "sources": [
+        {
+          "url": "https://press-pubs.uchicago.edu/founders/print_documents/a2_1_2-3s6.html",
+          "quote": "the district method obtained in Kentucky until 1824",
+          "supports": "districts ended after 1824 (McPherson v. Blacker)"
+        },
+        {
+          "url": "https://digital.library.unt.edu/ark:/67531/metadc2775/m2/1/high_res_d/dissertation.pdf",
+          "quote": "Six states – Illinois, Kentucky, Maine, Maryland, Missouri, and Tennessee – used the district method.",
+          "supports": "districts in 1824"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/1828_United_States_presidential_election",
+          "quote": "Each elector chosen by voters statewide",
+          "supports": "Wikipedia table (pointer only): Kentucky statewide in 1828"
+        },
+        {
+          "url": "https://web.sos.ky.gov/ofx/timeline?id=4",
+          "quote": "every free male citizen (negroes, mulattoes, and Indians excepted)",
+          "supports": "1799 constitution racial exclusion (Kentucky Secretary of State)"
+        },
+        {
+          "url": "https://web.sos.ky.gov/ofx/timeline?id=4",
+          "quote": "resided in the State two years, or the county or town in which he offers to vote one year next preceding the election",
+          "supports": "residence rule"
+        },
+        {
+          "url": "https://web.sos.ky.gov/ofx/timeline?id=4",
+          "quote": "the votes shall be personally and publicly given, viva voce.",
+          "supports": "voice voting"
+        },
+        {
+          "url": "https://filsonhistorical.omeka.net/exhibits/show/presidential-elections/the-evolution-of-voting-in-ky",
+          "quote": "free male citizens of the age of twenty-one years, having resided in the State two years",
+          "supports": "1792 rule had no racial bar or property (Filson Historical Society)"
+        },
+        {
+          "url": "https://www.law.cornell.edu/supremecourt/text/88/162",
+          "quote": "In all, save perhaps New Jersey, this right was only bestowed upon men and not upon all of them.",
+          "supports": "women could not vote (all states)"
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Suffrage: high confidence (constitutional text). Elector method: medium - McPherson v. Blacker and Thomason show districts through 1824 and Wikipedia says statewide in 1828, but I did not find the Kentucky act making the change."
+    },
+    {
+      "state": "Tennessee",
+      "electorMethod": "popular vote by districts",
+      "electorMethodDetail": "State divided into 11 electoral districts, one elector chosen by the voters of each district; no at-large electors. Tennessee used districts until 1832. All 11 went to Jackson (Jackson 44,293, Adams 2,240 per UCSB).",
+      "whiteMenRule": "none",
+      "whiteMenDetail": "1796 constitution, Art. III sec. 1: a freeman 21+ could vote if he owned a freehold in the county, OR if he had been an inhabitant of any one county for six months before the election. Because of the residence alternative, no property or tax was required (Keyssar lists Tennessee's freehold rule 'with residency alternative').",
+      "blackMen": "yes",
+      "blackMenDetail": "The 1796 constitution says 'freeman' with no racial bar, and free Black men voted under the same rules until the 1834 constitution limited the vote to free white men (exclusion effective 1834/35).",
+      "women": "No. Women could not vote in this state in 1828; the suffrage clause is limited to men (see whiteMenDetail quote). The US Supreme Court in Minor v. Happersett (1875) reviewed early state constitutions and found the vote 'only bestowed upon men' everywhere except possibly New Jersey (not one of these 13 states).",
+      "other": "Andrew Jackson's home state; he won about 95 percent of the popular vote.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/1828_United_States_presidential_election",
+          "quote": "State is divided into electoral districts, with one elector chosen per district by the voters of that district",
+          "supports": "Wikipedia table (pointer only): Maryland and Tennessee used districts"
+        },
+        {
+          "url": "https://press-pubs.uchicago.edu/founders/print_documents/a2_1_2-3s6.html",
+          "quote": "in Tennessee and Maryland until 1832",
+          "supports": "district method through 1832 (McPherson v. Blacker)"
+        },
+        {
+          "url": "https://founding.com/founders-library/government-documents/american-state-and-local-government-documents/state-constitutions/tennessee-constitution-of-1796/",
+          "quote": "and every freeman, being an inhabitant of any one county in the State six months immediately preceding the day of election",
+          "supports": "residence alternative to freehold (Art. III sec. 1)"
+        },
+        {
+          "url": "https://founding.com/founders-library/government-documents/american-state-and-local-government-documents/state-constitutions/tennessee-constitution-of-1796/",
+          "quote": "Every freeman of the age of twenty-one years and upwards, possessing a freehold in the county wherein he may vote",
+          "supports": "freehold route"
+        },
+        {
+          "url": "https://wisc.pb.unizin.org/ls261/?p=99",
+          "quote": "(with residency alternative)",
+          "supports": "Keyssar Table A.3 entry for Tennessee 1796 (via UW course page)"
+        },
+        {
+          "url": "https://gutenberg.org/cache/epub/67473/pg67473-images.html",
+          "quote": "Free negroes voted in Tennessee until 1834.",
+          "supports": "Patterson, The Negro in Tennessee 1790-1865 (Univ. of Texas Bulletin, 1922)"
+        },
+        {
+          "url": "https://digital.lib.ecu.edu/encore/jp2/00000010/00010354/00010354.txt",
+          "quote": "restricted suffrage to white men",
+          "supports": "1834 constitution exclusion (Weeks 1894, as quoted)"
+        },
+        {
+          "url": "https://www.law.cornell.edu/supremecourt/text/88/162",
+          "quote": "In all, save perhaps New Jersey, this right was only bestowed upon men and not upon all of them.",
+          "supports": "women could not vote (all states)"
+        }
+      ],
+      "confidence": "high",
+      "notes": "Some secondary sources say landowners only could vote in 1796 Tennessee (teachtnhistory.org; Tocqueville's 1832 appendix says 'he must possess some property'; Weeks says 'all freeholders'). The constitution's own text gives a six-month residence alternative, so I classify it 'none'. One site (dsi.mtsu.edu, publisher unclear) dates the Black exclusion to '1835'; the constitution was adopted 1834 and ratified March 1835. The district method is supported by McPherson and Wikipedia; I did not read the Tennessee statute."
+    },
+    {
+      "state": "Ohio",
+      "electorMethod": "popular vote, statewide general ticket",
+      "electorMethodDetail": "16 electors on one statewide ticket; general ticket used since 1804. Very close: Jackson 67,596, Adams 63,453 (UCSB).",
+      "whiteMenRule": "taxpaying",
+      "whiteMenDetail": "1802 constitution, Art. IV sec. 1: white male inhabitants 21+, resident one year, 'who have paid or are charged with a State or county tax'. Sec. 5: men compelled to labor on the public roads (road labor) also qualified. No property requirement.",
+      "blackMen": "no",
+      "blackMenDetail": "Excluded by the 1802 constitution ('white male inhabitants'). Keyssar dates it 1803, the year Ohio became a state.",
+      "women": "No. Women could not vote in this state in 1828; the suffrage clause is limited to men (see whiteMenDetail quote). The US Supreme Court in Minor v. Happersett (1875) reviewed early state constitutions and found the vote 'only bestowed upon men' everywhere except possibly New Jersey (not one of these 13 states).",
+      "other": "Ohio was the closest of these 13 states in 1828.",
+      "sources": [
+        {
+          "url": "https://digital.library.unt.edu/ark:/67531/metadc2775/m2/1/high_res_d/dissertation.pdf",
+          "quote": "Ohio: General ticket from 1804 onward [paraphrase of Table 1, not verbatim]",
+          "supports": "general ticket"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/1828_United_States_presidential_election",
+          "quote": "Each elector chosen by voters statewide",
+          "supports": "Wikipedia table (pointer only)"
+        },
+        {
+          "url": "https://sites.rootsweb.com/~ohcscott/OhioConstitution.html",
+          "quote": "all white male inhabitants above the age of twenty-one years, having resided in the State one year next preceding the election, and who have paid or are charged with a State or county tax",
+          "supports": "Art. IV sec. 1 (transcription on a genealogy site; matches standard text)"
+        },
+        {
+          "url": "https://sites.rootsweb.com/~ohcscott/OhioConstitution.html",
+          "quote": "who are compelled to labor on the roads of their respective townships or counties",
+          "supports": "Art. IV sec. 5 road-labor alternative"
+        },
+        {
+          "url": "https://www.presidency.ucsb.edu/statistics/elections/1828",
+          "quote": "Ohio | 131,049 | 67,596 (51.6%) | 16 | 63,453 (48.4%)",
+          "supports": "result"
+        },
+        {
+          "url": "https://www.law.cornell.edu/supremecourt/text/88/162",
+          "quote": "In all, save perhaps New Jersey, this right was only bestowed upon men and not upon all of them.",
+          "supports": "women could not vote (all states)"
+        }
+      ],
+      "confidence": "high",
+      "notes": "Constitution text was read from a RootsWeb transcription; it matches the standard Thorpe text as far as I know, but a check against an official copy (e.g. Ohio History Connection) would make this airtight."
+    },
+    {
+      "state": "Indiana",
+      "electorMethod": "popular vote, statewide general ticket",
+      "electorMethodDetail": "5 electors chosen statewide (Jackson 22,201, Adams 17,009 per UCSB). Indiana adopted the general ticket in January 1824.",
+      "whiteMenRule": "none",
+      "whiteMenDetail": "1816 constitution, Art. VI sec. 1: every white male citizen of the United States, 21+, resident in the state one year, could vote in his county (soldiers of the US army excepted). No property or tax requirement.",
+      "blackMen": "no",
+      "blackMenDetail": "Excluded by the 1816 constitution ('every white male Citizen').",
+      "women": "No. Women could not vote in this state in 1828; the suffrage clause is limited to men (see whiteMenDetail quote). The US Supreme Court in Minor v. Happersett (1875) reviewed early state constitutions and found the vote 'only bestowed upon men' everywhere except possibly New Jersey (not one of these 13 states).",
+      "other": "",
+      "sources": [
+        {
+          "url": "https://digital.library.unt.edu/ark:/67531/metadc2775/m2/1/high_res_d/dissertation.pdf",
+          "quote": "Alabama and Indiana adopted the general ticket method for the 1824 election.",
+          "supports": "general ticket from 1824"
+        },
+        {
+          "url": "https://elections.lib.tufts.edu/catalog/dr26xz91v",
+          "quote": "[paraphrase] statewide per-elector totals, Jackson electors 7,418-7,444; data from Riker & Thornbrough, Indiana Election Returns",
+          "supports": "1824 returns are statewide per elector, consistent with a general ticket (A New Nation Votes)"
+        },
+        {
+          "url": "https://press-pubs.uchicago.edu/founders/print_documents/a2_1_2-3s6.html",
+          "quote": "in Indiana in 1824 and 1828",
+          "supports": "DISAGREES: McPherson v. Blacker (1892) lists Indiana as using districts in 1824 and 1828"
+        },
+        {
+          "url": "https://www.in.gov/iara/2778.htm",
+          "quote": "every white male Citizen of the united States, of the age of twenty-one years and upwards, who has resided in the State, one year immediately preceeding such election",
+          "supports": "Art. VI sec. 1 (Indiana Archives and Records Administration)"
+        },
+        {
+          "url": "https://www.law.cornell.edu/supremecourt/text/88/162",
+          "quote": "In all, save perhaps New Jersey, this right was only bestowed upon men and not upon all of them.",
+          "supports": "women could not vote (all states)"
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Sources disagree on the elector method. McPherson v. Blacker (US Supreme Court 1892) says Indiana used districts in 1824 and 1828; Thomason's dissertation (2001), Tufts' 1824 returns and Wikipedia (citing Riker & Thornbrough 1960) all point to a statewide general ticket. I weight the later, return-based scholarship more, but I did not read the Indiana statute. McPherson may have confused Indiana with Illinois. Suffrage rule is high confidence."
+    },
+    {
+      "state": "Illinois",
+      "electorMethod": "popular vote, statewide general ticket",
+      "electorMethodDetail": "3 electors, all for Jackson (Jackson 9,560, Adams 4,662 per UCSB). Illinois had used districts in 1820 and 1824 (1824 split 2 Jackson, 1 Adams); for 1828 the electors appear to have been chosen statewide.",
+      "whiteMenRule": "none",
+      "whiteMenDetail": "1818 constitution, Art. II sec. 27: all white male inhabitants over 21 who had resided in the state six months before the election. No property or tax requirement, and no citizenship requirement: the Illinois Supreme Court later held that 'inhabitants' included unnaturalized immigrants.",
+      "blackMen": "no",
+      "blackMenDetail": "Excluded by the 1818 constitution ('white male inhabitants').",
+      "women": "No. Women could not vote in this state in 1828; the suffrage clause is limited to men (see whiteMenDetail quote). The US Supreme Court in Minor v. Happersett (1875) reviewed early state constitutions and found the vote 'only bestowed upon men' everywhere except possibly New Jersey (not one of these 13 states).",
+      "other": "Immigrants who were not yet US citizens could vote in Illinois if they had lived there six months (Spragins v. Houghton, Ill. 1840, interpreting the 1818 constitution).",
+      "sources": [
+        {
+          "url": "https://press-pubs.uchicago.edu/founders/print_documents/a2_1_2-3s6.html",
+          "quote": "in Illinois in 1820 and 1824",
+          "supports": "districts in 1820 and 1824 only (McPherson v. Blacker), implying not in 1828"
+        },
+        {
+          "url": "https://elections.lib.tufts.edu/catalog/s7526c85p",
+          "quote": "Illinois 1824 Electoral College, District 1",
+          "supports": "1824 district election (A New Nation Votes)"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/1828_United_States_presidential_election",
+          "quote": "Each elector chosen by voters statewide",
+          "supports": "Wikipedia table (pointer only): statewide in 1828"
+        },
+        {
+          "url": "https://cite.case.law/ill/3/377/",
+          "quote": "all white male inhabitants, above the age of twenty-one years, having resided in the State six months",
+          "supports": "Art. II sec. 27 as quoted by the Illinois Supreme Court; court held unnaturalized resident could vote"
+        },
+        {
+          "url": "https://www.law.cornell.edu/supremecourt/text/88/162",
+          "quote": "In all, save perhaps New Jersey, this right was only bestowed upon men and not upon all of them.",
+          "supports": "women could not vote (all states)"
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Suffrage: high confidence. Elector method: medium-low - districts in 1824 are certain; statewide in 1828 rests on McPherson's wording (districts only 'in 1820 and 1824') and the Wikipedia table. Thomason says Illinois changed method sometime in 1824-1832 but the year was not in the part I could read. I did not find the Illinois statute. Flag for fact-checking."
+    },
+    {
+      "state": "Alabama",
+      "electorMethod": "popular vote, statewide general ticket",
+      "electorMethodDetail": "5 electors on a statewide ticket (Jackson 16,736, Adams 1,878 per UCSB). Alabama adopted the general ticket for 1824 (the legislature had chosen electors in 1820).",
+      "whiteMenRule": "none",
+      "whiteMenDetail": "1819 constitution, Art. III sec. 5: every white male person 21+, a US citizen, resident one year in the state and the last three months in the county, city or town. No property or tax requirement (regular soldiers and sailors excluded).",
+      "blackMen": "no",
+      "blackMenDetail": "Excluded by the 1819 constitution ('Every white male person').",
+      "women": "No. Women could not vote in this state in 1828; the suffrage clause is limited to men (see whiteMenDetail quote). The US Supreme Court in Minor v. Happersett (1875) reviewed early state constitutions and found the vote 'only bestowed upon men' everywhere except possibly New Jersey (not one of these 13 states).",
+      "other": "",
+      "sources": [
+        {
+          "url": "https://digital.library.unt.edu/ark:/67531/metadc2775/m2/1/high_res_d/dissertation.pdf",
+          "quote": "Alabama and Indiana adopted the general ticket method for the 1824 election.",
+          "supports": "general ticket"
+        },
+        {
+          "url": "https://avalon.law.yale.edu/19th_century/ala1819.asp",
+          "quote": "Every white male person of the age of twenty-one years, or upwards, who shall be a citizen of the United States, and shall have resided in this State one year",
+          "supports": "Art. III sec. 5 (Avalon Project)"
+        },
+        {
+          "url": "https://avalon.law.yale.edu/19th_century/ala1819.asp",
+          "quote": "and the last three months within the county, city, or town, in which he offers to vote, shall be deemed a qualified elector",
+          "supports": "residence rule"
+        },
+        {
+          "url": "https://www.law.cornell.edu/supremecourt/text/88/162",
+          "quote": "In all, save perhaps New Jersey, this right was only bestowed upon men and not upon all of them.",
+          "supports": "women could not vote (all states)"
+        }
+      ],
+      "confidence": "high",
+      "notes": "Elector method rests on Thomason and the Wikipedia table; statute not read."
+    },
+    {
+      "state": "Mississippi",
+      "electorMethod": "popular vote, statewide general ticket",
+      "electorMethodDetail": "3 electors on a statewide ticket (Jackson 6,763, Adams 1,581 per UCSB). General ticket in use by 1820.",
+      "whiteMenRule": "taxpaying",
+      "whiteMenDetail": "1817 constitution, Art. III sec. 1: every free white male 21+, US citizen, resident one year in the state and six months in the county, who was enrolled in the militia (unless exempt), OR who had paid a state or county tax. Militia enrollment was an alternative to taxpaying, so most adult white men qualified. No property requirement.",
+      "blackMen": "no",
+      "blackMenDetail": "Excluded by the 1817 constitution ('Every free, white male person').",
+      "women": "No. Women could not vote in this state in 1828; the suffrage clause is limited to men (see whiteMenDetail quote). The US Supreme Court in Minor v. Happersett (1875) reviewed early state constitutions and found the vote 'only bestowed upon men' everywhere except possibly New Jersey (not one of these 13 states).",
+      "other": "",
+      "sources": [
+        {
+          "url": "https://digital.library.unt.edu/ark:/67531/metadc2775/m2/1/high_res_d/dissertation.pdf",
+          "quote": "Mississippi: General ticket by 1820 [paraphrase of Table 1, not verbatim]",
+          "supports": "general ticket"
+        },
+        {
+          "url": "https://mshistorynow.mdah.ms.gov/issue/mississippi-constitution-of-1817",
+          "quote": "Every free, white male person of the age of twenty-one years or upwards, who shall be a citizen of the United States",
+          "supports": "Art. III sec. 1 (Mississippi Dept of Archives and History)"
+        },
+        {
+          "url": "https://mshistorynow.mdah.ms.gov/issue/mississippi-constitution-of-1817",
+          "quote": "and shall be enrolled in the militia thereof, except exempted by law from military service; or, having the aforesaid qualifications of citizenship and residence, shall have paid a State or county tax",
+          "supports": "militia OR taxpaying"
+        },
+        {
+          "url": "https://www.law.cornell.edu/supremecourt/text/88/162",
+          "quote": "In all, save perhaps New Jersey, this right was only bestowed upon men and not upon all of them.",
+          "supports": "women could not vote (all states)"
+        }
+      ],
+      "confidence": "high",
+      "notes": "Classified 'taxpaying' because the constitution names a tax requirement, but militia enrollment was a full alternative; a map could label it 'taxpaying or militia service'."
+    },
+    {
+      "state": "Louisiana",
+      "electorMethod": "popular vote, statewide general ticket",
+      "electorMethodDetail": "1828 was the first popular vote for president in Louisiana; the legislature had chosen electors from 1812 through 1824. 5 electors, close result: Jackson 4,605, Adams 4,082 (UCSB).",
+      "whiteMenRule": "taxpaying",
+      "whiteMenDetail": "1812 constitution (Art. II sec. 8): free white male US citizens 21+, resident one year in the county, who had paid a state tax in the six months before the election. As far as I know (not verified from the text) men who had bought land from the United States could vote without the tax. No general property requirement for voters.",
+      "blackMen": "no",
+      "blackMenDetail": "Excluded by the 1812 constitution ('free white male'); Keyssar dates the exclusion to 1812.",
+      "women": "No. Women could not vote in this state in 1828; the suffrage clause is limited to men (see whiteMenDetail quote). The US Supreme Court in Minor v. Happersett (1875) reviewed early state constitutions and found the vote 'only bestowed upon men' everywhere except possibly New Jersey (not one of these 13 states).",
+      "other": "",
+      "sources": [
+        {
+          "url": "https://digital.library.unt.edu/ark:/67531/metadc2775/m2/1/high_res_d/dissertation.pdf",
+          "quote": "chose their electors through legislative selection",
+          "supports": "legislature chose electors in 1824"
+        },
+        {
+          "url": "https://www.presidency.ucsb.edu/statistics/elections/1828",
+          "quote": "Louisiana | 8,687 | 4,605 (53.0%) | 5 | 4,082 (47.0%)",
+          "supports": "popular vote held in 1828"
+        },
+        {
+          "url": "https://64parishes.org/entry/louisiana-constitutions",
+          "quote": "Any adult free, taxpaying, white, male, American citizen who had resided in the territory a year or more could vote",
+          "supports": "64 Parishes (Louisiana Endowment for the Humanities): taxpaying rule"
+        },
+        {
+          "url": "https://wisc.pb.unizin.org/ls261/?p=99",
+          "quote": "Table A.5 lists Louisiana racial exclusion: 1812 (paraphrase)",
+          "supports": "Keyssar via UW course page"
+        },
+        {
+          "url": "https://www.law.cornell.edu/supremecourt/text/88/162",
+          "quote": "In all, save perhaps New Jersey, this right was only bestowed upon men and not upon all of them.",
+          "supports": "women could not vote (all states)"
+        }
+      ],
+      "confidence": "medium",
+      "notes": "I could not read the 1812 constitution's text (archive.org copies were blocked), so the clause wording, the six-month tax window and the land-purchaser alternative are from secondary summaries and my background knowledge - verify against Thorpe vol. III or the National Archives original. Country Roads Magazine says voters had to own land AND pay property taxes; 64 Parishes says only taxpaying; I follow 64 Parishes. The legislature-to-popular switch is supported by Thomason (1824) and the existence of 1828 returns; the statute was not read."
+    },
+    {
+      "state": "Missouri",
+      "electorMethod": "popular vote, statewide general ticket",
+      "electorMethodDetail": "3 electors, all for Jackson (Jackson 8,232, Adams 3,422 per UCSB). Missouri used districts in 1824; after the 1824 House vote controversy the legislature switched to a general ticket.",
+      "whiteMenRule": "none",
+      "whiteMenDetail": "1820 constitution (Art. III sec. 10): free white male US citizens 21+, resident one year in the state and the last three months in the county or district. No property or tax requirement for voters. (Clause wording from background knowledge, not read from the text.)",
+      "blackMen": "no",
+      "blackMenDetail": "Excluded by the 1820 constitution ('free white male citizen'); Keyssar dates it 1821, the year of admission.",
+      "women": "No. Women could not vote in this state in 1828; the suffrage clause is limited to men (see whiteMenDetail quote). The US Supreme Court in Minor v. Happersett (1875) reviewed early state constitutions and found the vote 'only bestowed upon men' everywhere except possibly New Jersey (not one of these 13 states).",
+      "other": "The 1820 constitution also told the legislature to pass laws keeping free Black people from moving into the state; Congress objected, and Missouri was admitted in 1821 only after promising not to enforce it (the 'second Missouri Compromise').",
+      "sources": [
+        {
+          "url": "https://digital.library.unt.edu/ark:/67531/metadc2775/m2/1/high_res_d/dissertation.pdf",
+          "quote": "Six states – Illinois, Kentucky, Maine, Maryland, Missouri, and Tennessee – used the district method.",
+          "supports": "districts in 1824; Thomason also says the legislature later switched to a general ticket"
+        },
+        {
+          "url": "https://elections.lib.tufts.edu/catalog/02870w02v",
+          "quote": "Missouri 1824 Electoral College, District 3",
+          "supports": "1824 district election (A New Nation Votes)"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/1828_United_States_presidential_election",
+          "quote": "Each elector chosen by voters statewide",
+          "supports": "Wikipedia table (pointer only): statewide in 1828"
+        },
+        {
+          "url": "https://wisc.pb.unizin.org/ls261/?p=99",
+          "quote": "Table A.5 lists Missouri racial exclusion: 1821 (paraphrase)",
+          "supports": "Keyssar via UW course page"
+        },
+        {
+          "url": "https://www.contextus.org/Tocqueville%2C_Democracy_in_America_(1835)%2C_Appendix_to_Part_II%2C_Appendix_H",
+          "quote": "the conditions of voting have no reference to the property of the elector",
+          "supports": "1832 summary appended to Tocqueville (no property rule; this source has errors for other states)"
+        },
+        {
+          "url": "https://mostateparks.Com/sites/mostateparks/files/SecondCrisis_FinalCompromise.pdf",
+          "quote": "solemn public act",
+          "supports": "Missouri State Parks: free-Black exclusion clause and 1821 compromise"
+        },
+        {
+          "url": "https://www.law.cornell.edu/supremecourt/text/88/162",
+          "quote": "In all, save perhaps New Jersey, this right was only bestowed upon men and not upon all of them.",
+          "supports": "women could not vote (all states)"
+        }
+      ],
+      "confidence": "medium",
+      "notes": "I could not get the 1820 constitution's text from an archive or official source, so the exact clause and residence periods come from background knowledge backed by Keyssar's table and the Tocqueville appendix. Verify against Thorpe vol. IV or the National Archives copy (catalog.archives.gov/id/306384). The switch to a general ticket is from Thomason's dissertation (no date given) and the Wikipedia table; Missouri statute not read."
+    }
+  ]
+}
