@@ -1,0 +1,64 @@
+{
+ "tool": "Map test 1.0",
+ "timeZone": "America/Chicago",
+ "sdk": "ArcGIS Maps SDK for JavaScript 4.34",
+ "webmapFingerprint": "d4278cc5663441f8d9b2dee74601c6db23988ded",
+ "results": [
+  {
+   "name": "notice-votes",
+   "question": "Notice: the result of 1828",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": "Election of 1828: electors' votes\n\tJohn Quincy Adams\n\n\tAndrew Jackson\n\n\tOther\nElectors\n\t> 36\n\n\t28\n\n\t20\n\n\t10\n\n\t< 3"
+  },
+  {
+   "name": "new-york",
+   "question": "A split state",
+   "pass": true,
+   "failures": [],
+   "popup": "New York in 1828: 36 electors\n\nIn the pie: Andrew Jackson, 20 votes; John Quincy Adams, 16 votes.\n\nWho chose the electors: Voters, by districts; the district electors then chose two more (McPherson v. Blacker, 1892).\n\nWhite men: No property or tax rule for white men since an 1826 amendment.\n\nFree Black men: Had to own property worth $250, pay tax on it and have been a citizen for three years (Constitution of 1821). In 1825 only 298 Black New Yorkers qualified.\n\nSource for the rules: Constitution of 1821, Art. II, sec. 1, and the 1826 amendment\n\nToday's state outlines, with West Virginia shown as part of Virginia, as it was in 1828. Territories are not shown. Women could not vote in any state in 1828.\n\nSource for the votes: National Archives",
+   "legend": null
+  },
+  {
+   "name": "reveal-white-men",
+   "question": "Reveal: white men",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": "Election of 1828: electors' votes\n\tJohn Quincy Adams\n\n\tAndrew Jackson\n\n\tOther\nElectors\n\t> 36\n\n\t28\n\n\t20\n\n\t10\n\n\t< 3\nWhite men and the vote, 1828\nWhite men\n\tNo property or tax rule\n\n\tHad to pay a tax (or serve in the militia)\n\n\tHad to own property"
+  },
+  {
+   "name": "virginia",
+   "question": "Explain why: Virginia",
+   "pass": true,
+   "failures": [],
+   "popup": "Virginia in 1828: 24 electors\n\nIn the pie: Andrew Jackson, 24 votes; John Quincy Adams, 0 votes.\n\nWho chose the electors: Voters, statewide.\n\nWhite men: Had to own 25 acres with a house, 50 acres of unimproved land, or a town lot with a house (law of 1785, in force until 1830).\n\nFree Black men: The 1785 law excluded \"free negroes or mulattoes\".\n\nSource for the rules: Act of 1785 (Hening, Statutes at Large, vol. 12)\n\nToday's state outlines, with West Virginia shown as part of Virginia, as it was in 1828. Territories are not shown. Women could not vote in any state in 1828.\n\nSource for the votes: National Archives",
+   "legend": null
+  },
+  {
+   "name": "reveal-black-men",
+   "question": "Reveal: free Black men",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": "Election of 1828: electors' votes\n\tJohn Quincy Adams\n\n\tAndrew Jackson\n\n\tOther\nElectors\n\t> 36\n\n\t28\n\n\t20\n\n\t10\n\n\t< 3\nFree Black men and the vote, 1828\nFree Black men\n\tCould vote\n\n\tOnly with extra rules, or kept out in practice\n\n\tCould not vote"
+  },
+  {
+   "name": "south-carolina",
+   "question": "Question the source: no popular vote",
+   "pass": true,
+   "failures": [],
+   "popup": "South Carolina in 1828: 11 electors\n\nIn the pie: Andrew Jackson, 11 votes; John Quincy Adams, 0 votes.\n\nWho chose the electors: The state legislature, as it did until 1860; voters had no direct say in choosing the president's electors.\n\nWhite men: For state elections: own 50 acres or a town lot, or have lived in the district six months (1810 amendment).\n\nFree Black men: The constitution allowed only free white men (Constitution of 1790).\n\nSource for the rules: American Presidency Project; South Carolina Encyclopedia\n\nToday's state outlines, with West Virginia shown as part of Virginia, as it was in 1828. Territories are not shown. Women could not vote in any state in 1828.\n\nSource for the votes: National Archives",
+   "legend": null
+  },
+  {
+   "name": "tennessee",
+   "question": "Free Black men who could vote",
+   "pass": true,
+   "failures": [],
+   "popup": "Tennessee in 1828: 11 electors\n\nIn the pie: Andrew Jackson, 11 votes; John Quincy Adams, 0 votes.\n\nWho chose the electors: Voters, by districts.\n\nWhite men: Own land in the county, or have lived there six months (Constitution of 1796), so no property was needed.\n\nFree Black men: Could vote until 1834, when a new constitution shut them out.\n\nSource for the rules: Constitution of 1796, Art. III, sec. 1\n\nToday's state outlines, with West Virginia shown as part of Virginia, as it was in 1828. Territories are not shown. Women could not vote in any state in 1828.\n\nSource for the votes: National Archives",
+   "legend": null
+  }
+ ]
+}

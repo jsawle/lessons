@@ -1,11 +1,11 @@
 {
   "format": "Map spec 1.0",
   "id": "election-1828-right-to-vote",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "item": {
     "title": "The election of 1828 and the right to vote",
     "snippet": "How each state's electors voted in 1828, how each state chose them, and who could vote there: property and tax rules for white men, and whether free Black men could vote.",
-    "description": "<p><b>Question:</b> Andrew Jackson's victory in 1828 is often called a win for the common man. Who could vote in 1828, and did that differ from state to state?</p><p><b>What the map shows:</b> A pie on each of the 24 states shows how its electors voted: Andrew Jackson or John Quincy Adams, with bigger pies for more electors. The map opens on the votes. Two more layers, off when it opens, show who could vote in each state: whether white men had to own property or pay a tax, and whether free Black men could vote. Click a state for the votes, how its electors were chosen, the rules and the sources.</p><p><b>Notes:</b> Women could not vote in any state in 1828. Today's state outlines, with West Virginia shown as part of Virginia; territories are not shown. The rules were researched from state constitutions and laws and checked independently; where a rule rests on historians' accounts or sources differ, the pop-up says so.</p><p><b>Sources:</b> National Archives (Electoral College results, 1828); state constitutions and laws as cited in each pop-up; Natural Earth (state outlines); Esri basemap.</p><p><i>Version 0.1 (30 October 2026), draft.</i></p>",
+    "description": "<p><b>Question:</b> Andrew Jackson's victory in 1828 is often called a win for the common man. Who could vote in 1828, and did that differ from state to state?</p><p><b>What the map shows:</b> A pie on each of the 24 states shows how its electors voted: Andrew Jackson or John Quincy Adams, with bigger pies for more electors. The map opens on the votes. Two more layers, off when it opens, show who could vote in each state: whether white men had to own property or pay a tax, and whether free Black men could vote. Click a state for the votes, how its electors were chosen, the rules and the sources.</p><p><b>Notes:</b> Women could not vote in any state in 1828. Today's state outlines, with West Virginia shown as part of Virginia; territories are not shown. The rules were researched from state constitutions and laws and checked independently; where a rule rests on historians' accounts or sources differ, the pop-up says so.</p><p><b>Sources:</b> National Archives (Electoral College results, 1828); state constitutions and laws as cited in each pop-up; Natural Earth (state outlines); Esri basemap.</p><p><i>Version 0.2 (30 October 2026), draft.</i></p>",
     "tags": [
       "US History",
       "election of 1828",
@@ -35,6 +35,14 @@
         "itemId": "545f2e839f624600bbb092c3ad998bb8",
         "blendMode": "multiply",
         "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json"
+      },
+      {
+        "type": "vectorTile",
+        "title": "World Terrain Reference",
+        "itemId": "14fbc125ccc9488888b014db09f35f67",
+        "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/14fbc125ccc9488888b014db09f35f67/resources/styles/root.json",
+        "reference": true,
+        "why": "State names above the pies and shading, so the lesson can name states."
       }
     ]
   },
@@ -118,7 +126,7 @@
       },
       "popup": {
         "title": "{State} in 1828: {Electors} electors",
-        "html": "<p>In the pie: Andrew Jackson, {expression/jackson}; John Quincy Adams, {expression/adams}.</p><p><b>Who chose the electors:</b> {ElectorMethod}</p><p><b>White men:</b> {WhiteMen}. {WhiteMenRule}</p><p><b>Free Black men:</b> {BlackMen}. {BlackMenRule}</p><p><a href='{RulesSourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source for the rules: {RulesSource}</a></p><p><i>{Note} Women could not vote in any state in 1828.</i></p><p><a href='{VotesSourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source for the votes: National Archives</a></p>",
+        "html": "<p>In the pie: Andrew Jackson, {expression/jackson}; John Quincy Adams, {expression/adams}.</p><p><b>Who chose the electors:</b> {ElectorMethod}</p><p><b>White men:</b> {WhiteMenRule}</p><p><b>Free Black men:</b> {BlackMenRule}</p><p><a href='{RulesSourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source for the rules: {RulesSource}</a></p><p><i>{Note} Women could not vote in any state in 1828.</i></p><p><a href='{VotesSourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source for the votes: National Archives</a></p>",
         "expressions": {
           "jackson": {
             "title": "Jackson votes",
@@ -319,7 +327,7 @@
       },
       "popup": {
         "title": "{State} in 1828: {Electors} electors",
-        "html": "<p>In the pie: Andrew Jackson, {expression/jackson}; John Quincy Adams, {expression/adams}.</p><p><b>Who chose the electors:</b> {ElectorMethod}</p><p><b>White men:</b> {WhiteMen}. {WhiteMenRule}</p><p><b>Free Black men:</b> {BlackMen}. {BlackMenRule}</p><p><a href='{RulesSourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source for the rules: {RulesSource}</a></p><p><i>{Note} Women could not vote in any state in 1828.</i></p><p><a href='{VotesSourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source for the votes: National Archives</a></p>",
+        "html": "<p>In the pie: Andrew Jackson, {expression/jackson}; John Quincy Adams, {expression/adams}.</p><p><b>Who chose the electors:</b> {ElectorMethod}</p><p><b>White men:</b> {WhiteMenRule}</p><p><b>Free Black men:</b> {BlackMenRule}</p><p><a href='{RulesSourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source for the rules: {RulesSource}</a></p><p><i>{Note} Women could not vote in any state in 1828.</i></p><p><a href='{VotesSourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source for the votes: National Archives</a></p>",
         "expressions": {
           "jackson": {
             "title": "Jackson votes",
@@ -520,7 +528,7 @@
       },
       "popup": {
         "title": "{State} in 1828: {Electors} electors",
-        "html": "<p>In the pie: Andrew Jackson, {expression/jackson}; John Quincy Adams, {expression/adams}.</p><p><b>Who chose the electors:</b> {ElectorMethod}</p><p><b>White men:</b> {WhiteMen}. {WhiteMenRule}</p><p><b>Free Black men:</b> {BlackMen}. {BlackMenRule}</p><p><a href='{RulesSourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source for the rules: {RulesSource}</a></p><p><i>{Note} Women could not vote in any state in 1828.</i></p><p><a href='{VotesSourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source for the votes: National Archives</a></p>",
+        "html": "<p>In the pie: Andrew Jackson, {expression/jackson}; John Quincy Adams, {expression/adams}.</p><p><b>Who chose the electors:</b> {ElectorMethod}</p><p><b>White men:</b> {WhiteMenRule}</p><p><b>Free Black men:</b> {BlackMenRule}</p><p><a href='{RulesSourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source for the rules: {RulesSource}</a></p><p><i>{Note} Women could not vote in any state in 1828.</i></p><p><a href='{VotesSourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source for the votes: National Archives</a></p>",
         "expressions": {
           "jackson": {
             "title": "Jackson votes",
@@ -609,8 +617,7 @@
       "expect": {
         "popupHas": [
           "Virginia in 1828: 24 electors",
-          "Had to own property",
-          "25 acres"
+          "Had to own 25 acres"
         ]
       }
     },

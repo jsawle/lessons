@@ -1,0 +1,642 @@
+{
+ "operationalLayers": [
+  {
+   "id": "lyr968001ceec5",
+   "title": "White men and the vote, 1828",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/election_1828_v1_0_0/FeatureServer/0",
+   "itemId": "2da7379e3fdb41d396c6ad49b6f73fef",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": false,
+   "opacity": 1,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "uniqueValue",
+      "field1": "WhiteMen",
+      "defaultLabel": "Not a state in 1828",
+      "uniqueValueInfos": [
+       {
+        "value": "No property or tax rule",
+        "label": "No property or tax rule",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          255,
+          242,
+          204,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           90,
+           90,
+           90,
+           255
+          ],
+          "width": 0.8
+         }
+        }
+       },
+       {
+        "value": "Had to pay a tax (or serve in the militia)",
+        "label": "Had to pay a tax (or serve in the militia)",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          232,
+          161,
+          91,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           90,
+           90,
+           90,
+           255
+          ],
+          "width": 0.8
+         }
+        }
+       },
+       {
+        "value": "Had to own property",
+        "label": "Had to own property",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          140,
+          59,
+          12,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           90,
+           90,
+           90,
+           255
+          ],
+          "width": 0.8
+         }
+        }
+       }
+      ],
+      "uniqueValueGroups": [
+       {
+        "heading": "White men",
+        "classes": [
+         {
+          "label": "No property or tax rule",
+          "symbol": {
+           "type": "esriSFS",
+           "style": "esriSFSSolid",
+           "color": [
+            255,
+            242,
+            204,
+            200
+           ],
+           "outline": {
+            "type": "esriSLS",
+            "style": "esriSLSSolid",
+            "color": [
+             90,
+             90,
+             90,
+             255
+            ],
+            "width": 0.8
+           }
+          },
+          "values": [
+           [
+            "No property or tax rule"
+           ]
+          ]
+         },
+         {
+          "label": "Had to pay a tax (or serve in the militia)",
+          "symbol": {
+           "type": "esriSFS",
+           "style": "esriSFSSolid",
+           "color": [
+            232,
+            161,
+            91,
+            200
+           ],
+           "outline": {
+            "type": "esriSLS",
+            "style": "esriSLSSolid",
+            "color": [
+             90,
+             90,
+             90,
+             255
+            ],
+            "width": 0.8
+           }
+          },
+          "values": [
+           [
+            "Had to pay a tax (or serve in the militia)"
+           ]
+          ]
+         },
+         {
+          "label": "Had to own property",
+          "symbol": {
+           "type": "esriSFS",
+           "style": "esriSFSSolid",
+           "color": [
+            140,
+            59,
+            12,
+            200
+           ],
+           "outline": {
+            "type": "esriSLS",
+            "style": "esriSLSSolid",
+            "color": [
+             90,
+             90,
+             90,
+             255
+            ],
+            "width": 0.8
+           }
+          },
+          "values": [
+           [
+            "Had to own property"
+           ]
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   },
+   "popupInfo": {
+    "title": "{State} in 1828: {Electors} electors",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p>In the pie: Andrew Jackson, {expression/jackson}; John Quincy Adams, {expression/adams}.</p><p><b>Who chose the electors:</b> {ElectorMethod}</p><p><b>White men:</b> {WhiteMenRule}</p><p><b>Free Black men:</b> {BlackMenRule}</p><p><a href='{RulesSourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source for the rules: {RulesSource}</a></p><p><i>{Note} Women could not vote in any state in 1828.</i></p><p><a href='{VotesSourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source for the votes: National Archives</a></p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": [],
+    "expressionInfos": [
+     {
+      "name": "jackson",
+      "title": "Jackson votes",
+      "returnType": "string",
+      "expression": "var v = $feature.Jackson1828;\nreturn v + IIf(v == 1, ' vote', ' votes');"
+     },
+     {
+      "name": "adams",
+      "title": "Adams votes",
+      "returnType": "string",
+      "expression": "var v = $feature.Adams1828;\nreturn v + IIf(v == 1, ' vote', ' votes');"
+     }
+    ]
+   }
+  },
+  {
+   "id": "lyr975102d0aaf",
+   "title": "Free Black men and the vote, 1828",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/election_1828_v1_0_0/FeatureServer/0",
+   "itemId": "2da7379e3fdb41d396c6ad49b6f73fef",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": false,
+   "opacity": 1,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "uniqueValue",
+      "field1": "BlackMen",
+      "defaultLabel": "Not a state in 1828",
+      "uniqueValueInfos": [
+       {
+        "value": "Could vote",
+        "label": "Could vote",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          255,
+          242,
+          204,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           90,
+           90,
+           90,
+           255
+          ],
+          "width": 0.8
+         }
+        }
+       },
+       {
+        "value": "Only with extra rules, or kept out in practice",
+        "label": "Only with extra rules, or kept out in practice",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          201,
+          160,
+          220,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           90,
+           90,
+           90,
+           255
+          ],
+          "width": 0.8
+         }
+        }
+       },
+       {
+        "value": "Could not vote",
+        "label": "Could not vote",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          94,
+          60,
+          153,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           90,
+           90,
+           90,
+           255
+          ],
+          "width": 0.8
+         }
+        }
+       }
+      ],
+      "uniqueValueGroups": [
+       {
+        "heading": "Free Black men",
+        "classes": [
+         {
+          "label": "Could vote",
+          "symbol": {
+           "type": "esriSFS",
+           "style": "esriSFSSolid",
+           "color": [
+            255,
+            242,
+            204,
+            200
+           ],
+           "outline": {
+            "type": "esriSLS",
+            "style": "esriSLSSolid",
+            "color": [
+             90,
+             90,
+             90,
+             255
+            ],
+            "width": 0.8
+           }
+          },
+          "values": [
+           [
+            "Could vote"
+           ]
+          ]
+         },
+         {
+          "label": "Only with extra rules, or kept out in practice",
+          "symbol": {
+           "type": "esriSFS",
+           "style": "esriSFSSolid",
+           "color": [
+            201,
+            160,
+            220,
+            200
+           ],
+           "outline": {
+            "type": "esriSLS",
+            "style": "esriSLSSolid",
+            "color": [
+             90,
+             90,
+             90,
+             255
+            ],
+            "width": 0.8
+           }
+          },
+          "values": [
+           [
+            "Only with extra rules, or kept out in practice"
+           ]
+          ]
+         },
+         {
+          "label": "Could not vote",
+          "symbol": {
+           "type": "esriSFS",
+           "style": "esriSFSSolid",
+           "color": [
+            94,
+            60,
+            153,
+            200
+           ],
+           "outline": {
+            "type": "esriSLS",
+            "style": "esriSLSSolid",
+            "color": [
+             90,
+             90,
+             90,
+             255
+            ],
+            "width": 0.8
+           }
+          },
+          "values": [
+           [
+            "Could not vote"
+           ]
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   },
+   "popupInfo": {
+    "title": "{State} in 1828: {Electors} electors",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p>In the pie: Andrew Jackson, {expression/jackson}; John Quincy Adams, {expression/adams}.</p><p><b>Who chose the electors:</b> {ElectorMethod}</p><p><b>White men:</b> {WhiteMenRule}</p><p><b>Free Black men:</b> {BlackMenRule}</p><p><a href='{RulesSourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source for the rules: {RulesSource}</a></p><p><i>{Note} Women could not vote in any state in 1828.</i></p><p><a href='{VotesSourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source for the votes: National Archives</a></p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": [],
+    "expressionInfos": [
+     {
+      "name": "jackson",
+      "title": "Jackson votes",
+      "returnType": "string",
+      "expression": "var v = $feature.Jackson1828;\nreturn v + IIf(v == 1, ' vote', ' votes');"
+     },
+     {
+      "name": "adams",
+      "title": "Adams votes",
+      "returnType": "string",
+      "expression": "var v = $feature.Adams1828;\nreturn v + IIf(v == 1, ' vote', ' votes');"
+     }
+    ]
+   }
+  },
+  {
+   "id": "lyr20c2df6d284",
+   "title": "Election of 1828: electors' votes",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/election_1828_v1_0_0/FeatureServer/0",
+   "itemId": "2da7379e3fdb41d396c6ad49b6f73fef",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": true,
+   "opacity": 1,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "pieChart",
+      "attributes": [
+       {
+        "field": "Adams1828",
+        "label": "John Quincy Adams",
+        "color": [
+         230,
+         159,
+         0,
+         255
+        ]
+       },
+       {
+        "field": "Jackson1828",
+        "label": "Andrew Jackson",
+        "color": [
+         0,
+         114,
+         178,
+         255
+        ]
+       }
+      ],
+      "defaultColor": [
+       170,
+       170,
+       170,
+       255
+      ],
+      "defaultLabel": "Other",
+      "holePercentage": 0,
+      "othersCategory": {
+       "color": [
+        170,
+        170,
+        170,
+        255
+       ],
+       "label": "Other",
+       "threshold": 0
+      },
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSSolid",
+       "color": [
+        255,
+        255,
+        255,
+        255
+       ],
+       "width": 1
+      },
+      "size": 18,
+      "visualVariables": [
+       {
+        "type": "sizeInfo",
+        "field": "Electors",
+        "minDataValue": 3,
+        "maxDataValue": 36,
+        "minSize": 18,
+        "maxSize": 48,
+        "legendOptions": {
+         "title": "Electors"
+        }
+       }
+      ],
+      "backgroundFillSymbol": {
+       "type": "esriSFS",
+       "style": "esriSFSSolid",
+       "color": [
+        250,
+        248,
+        240,
+        0
+       ],
+       "outline": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         90,
+         90,
+         90,
+         255
+        ],
+        "width": 0.8
+       }
+      }
+     }
+    }
+   },
+   "popupInfo": {
+    "title": "{State} in 1828: {Electors} electors",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p>In the pie: Andrew Jackson, {expression/jackson}; John Quincy Adams, {expression/adams}.</p><p><b>Who chose the electors:</b> {ElectorMethod}</p><p><b>White men:</b> {WhiteMenRule}</p><p><b>Free Black men:</b> {BlackMenRule}</p><p><a href='{RulesSourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source for the rules: {RulesSource}</a></p><p><i>{Note} Women could not vote in any state in 1828.</i></p><p><a href='{VotesSourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>Source for the votes: National Archives</a></p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": [],
+    "expressionInfos": [
+     {
+      "name": "jackson",
+      "title": "Jackson votes",
+      "returnType": "string",
+      "expression": "var v = $feature.Jackson1828;\nreturn v + IIf(v == 1, ' vote', ' votes');"
+     },
+     {
+      "name": "adams",
+      "title": "Adams votes",
+      "returnType": "string",
+      "expression": "var v = $feature.Adams1828;\nreturn v + IIf(v == 1, ' vote', ' votes');"
+     }
+    ]
+   }
+  }
+ ],
+ "baseMap": {
+  "title": "Modern Antique",
+  "baseMapLayers": [
+   {
+    "id": "basec527aa8b",
+    "title": "World Hillshade",
+    "opacity": 1,
+    "visibility": true,
+    "layerType": "ArcGISTiledMapServiceLayer",
+    "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+    "itemId": "1b243539f4514b6ba35e7d995890db1d"
+   },
+   {
+    "id": "base6e149572",
+    "title": "Modern Antique (no Labels)",
+    "opacity": 1,
+    "visibility": true,
+    "layerType": "VectorTileLayer",
+    "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json",
+    "itemId": "545f2e839f624600bbb092c3ad998bb8",
+    "blendMode": "multiply"
+   },
+   {
+    "id": "base886623ba",
+    "title": "World Terrain Reference",
+    "opacity": 1,
+    "visibility": true,
+    "layerType": "VectorTileLayer",
+    "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/14fbc125ccc9488888b014db09f35f67/resources/styles/root.json",
+    "itemId": "14fbc125ccc9488888b014db09f35f67",
+    "isReference": true
+   }
+  ]
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857
+ },
+ "authoringApp": "Map builder",
+ "authoringAppVersion": "1.2",
+ "version": "2.31",
+ "initialState": {
+  "viewpoint": {
+   "targetGeometry": {
+    "xmin": -10575351.6,
+    "ymin": 2814454.7,
+    "xmax": -7347086.4,
+    "ymax": 6106854.8,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  }
+ },
+ "bookmarks": [
+  {
+   "name": "The 24 states of 1828",
+   "extent": {
+    "xmin": -10575351.6,
+    "ymin": 2814454.7,
+    "xmax": -7347086.4,
+    "ymax": 6106854.8,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  },
+  {
+   "name": "New England and New York",
+   "extent": {
+    "xmin": -8961219.0,
+    "ymin": 4924240.6,
+    "xmax": -7402746.1,
+    "ymax": 6040565.2,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  }
+ ]
+}

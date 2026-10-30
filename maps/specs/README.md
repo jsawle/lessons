@@ -54,3 +54,4 @@ It asks for the password and keeps it in Keychain (Mac) or Credential Manager (W
 |---|---|---|---|
 | `presidential-elections-1796-1800.json` | 1.0.0 | Presidential Elections, 1796 and 1800 | Pilot: the lesson's map with fixes B8 and B9 and 10 pt case labels. Published private 28 Oct (2ba7a7dc315a4d65a3f4b4cb879e4e2a) with Map publish 1.0, whose read-back flagged whole-number floats; 1.1 compares those by value |
 | `land-cessions-1784-1894.json` | 0.5.0 | `maps/lessons/land-cessions-1784-1894.json` (draft 0.3.0) | Published private 30 Oct (fd8f742aec1c4a8a9648cd20dafffe11); opens on cessions before 1830 so students reveal the later periods; read-back matches |
+| `election-1828-right-to-vote.json` | 0.2.0 | none yet (Age of Jackson, Map 3) | Data: election-1828 1.0.0 (2da7379e3fdb41d396c6ad49b6f73fef, public), built with Data publish 1.0; map built and tested 30 Oct, not yet published |

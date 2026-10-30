@@ -1,0 +1,59 @@
+{
+ "tool": "Map builder 1.2",
+ "spec": "maps/specs/election-1828-right-to-vote.json",
+ "specId": "election-1828-right-to-vote",
+ "specVersion": "0.2.0",
+ "built": "2026-10-30T15:14:31Z",
+ "webmapFingerprint": "d4278cc5663441f8d9b2dee74601c6db23988ded",
+ "itemFingerprint": "93dd6d4427b10d2595aa2ef7065bc30aec7f318e",
+ "checked": [
+  "basemap is public and not CARTO",
+  "every source layer is readable and every field the spec uses exists"
+ ],
+ "warnings": [],
+ "tested": {
+  "tool": "Map test 1.0",
+  "when": "2026-10-30T15:16:00Z",
+  "timeZone": "America/Chicago",
+  "webmapFingerprint": "d4278cc5663441f8d9b2dee74601c6db23988ded",
+  "pass": true,
+  "checks": [
+   {
+    "name": "notice-votes",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "new-york",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "reveal-white-men",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "virginia",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "reveal-black-men",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "south-carolina",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "tennessee",
+    "pass": true,
+    "failures": []
+   }
+  ],
+  "checker": "test/checker.json"
+ }
+}
