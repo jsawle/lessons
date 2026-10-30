@@ -1,6 +1,6 @@
-# Age of Jackson: three-map slice (draft 0.1, 28 Oct 2026)
+# Age of Jackson: three-map slice (draft 0.2, 30 Oct 2026)
 
-Purpose: run three new maps through the whole process (map first, then the inquiry lesson written from the built map, then the link back to the standards) to find out what the process still lacks before building a full year. Nothing here is built or published. Every map follows the usual route: spec, build, test, dry run, your OK, you run `--go`, never shared by the tool.
+Purpose: run three new maps through the whole process (map first, then the inquiry lesson written from the built map, then the link back to the standards) to find out what the process still lacks before building a full year. Map 1 is built, tested and published (private); Maps 2 and 3 are not started. Every map follows the usual route: spec, build, test, dry run, your OK, you run `--go`, never shared by the tool.
 
 Unit: The Age of Jackson (grade 8 US History). Standards confirmed so far: TX 8.5(G) (election of Jackson, expanded suffrage) and TX 8.5(H) (Cherokee removal: Indian Removal Act, Worcester v. Georgia, Trail of Tears). Florida and C3 codes for this unit are not yet confirmed and are not listed.
 
@@ -61,6 +61,6 @@ Question for students: What changed between the elections of 1800 and 1828, and 
 
 | Map | Data check | Spec | Build | Test | Lesson | Published |
 |---|---|---|---|---|---|---|
-| 1. Land cessions | done; data copied to GIS for Schools (v1.1, private, 717 polygons, four known dates match) | 0.1.0 written | waiting: the layer must be shared | – | – | – |
+| 1. Land cessions | done; data copied to GIS for Schools (v1.1, item fbefc5d9f79242d9a6b866b93f5a5af5, public, 717 polygons, four known dates match) | 0.2.0 | 942abfa36ef4 | pass, 3 checks, Web Map Auditor 97.4 (28 Oct) | not written | 30 Oct, Map publish 1.1, item fd8f742aec1c4a8a9648cd20dafffe11, private, read-back matches |
 | 2. Cherokee removal | done (key places layer open) | – | – | – | – | – |
 | 3. Election of 1828 and suffrage | electoral votes done; suffrage layer open | – | – | – | – | – |
