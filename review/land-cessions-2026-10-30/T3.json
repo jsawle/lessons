@@ -1,0 +1,94 @@
+{
+  "persona": "T3",
+  "findings": [
+    {
+      "where": "Student sheet (Word), top: 'Open the map' line",
+      "what": "The printed sheet names the map but gives no web address, short link or QR code. The full address appears only in the teacher notes, where it is a long appid/webmap URL (over 100 characters) that nobody would type on a phone.",
+      "whyItMatters": "Luis's students on phones, and pairs who get a Chromebook late, start from the paper sheet. Printed, the link does nothing, so they cannot reach the map unless he writes a URL on the board.",
+      "severity": "stops the lesson",
+      "suggestedChange": "Print a short link and a QR code next to 'Open the map' on the sheet, and put the same short link on the lesson page so it can be projected.",
+      "needsLiveMap": false,
+      "quote": "Open the map: Land Cessions and Indian Removal, 1784–1894"
+    },
+    {
+      "where": "Student sheet, all questions; Lesson page / Teacher notes, Support and stretch and Before class",
+      "what": "Every question starts with 'On the map:' and needs the live map. There is no paper version: no printed pictures of the three layers, and none of the pop-up facts (nation, date, document) that Q4 and Q6 depend on. The only offline help is a Support tip telling the teacher to mark a printed screenshot himself. Nothing says what to do if the map, the Hub page or the Treaty text / Royce's schedule links are filtered or slow, or suggests checking them on a student Chromebook on the school network before class.",
+      "whyItMatters": "If the map is blocked or slow, or there aren't enough devices, pairs working from paper have nothing to answer from, and the lesson only works if he can project. Making his own screenshots takes prep time he may not have.",
+      "severity": "stops the lesson",
+      "suggestedChange": "Add an optional printable 'map pages' sheet: the three layer views (before 1830, 1830s, 1840–1894) with state outlines, Kosciusko, Talladega and Rome marked, plus small cards with the text of the three Q4 pop-ups and the italic note. The lesson already has map pictures and pop-up text it could use. Add one Before class line: open the map, a pop-up link and the lesson page on a student device on the school network a few days ahead; if anything is blocked, use the printed map pages.",
+      "needsLiveMap": false,
+      "quote": "marked on a printed screenshot"
+    },
+    {
+      "where": "Lesson page / Teacher notes, Before class (About this map); Q1, Q4, Q5",
+      "what": "The notes say the basemap shows today's states and cities, and the questions rely on them (name the states with cessions, click near Kosciusko, Talladega, Rome). In the picture of the map as it opens (The United States bookmark), no state lines or city names can be seen, only coastlines and terrain. They may appear when zoomed in to The Southeast; that can't be checked from the pictures.",
+      "whyItMatters": "From the projector, students at the back can't say which states are light blue in Q1 or which parts are empty in Q5 without state outlines. If the town names don't show at the Southeast bookmark, Luis can't find the Q4 click spots in front of the class either.",
+      "severity": "slows it down",
+      "suggestedChange": "Use a basemap (or add a reference layer) that shows state boundaries and labels at the United States bookmark, and check that Kosciusko, Talladega and Rome are labelled at The Southeast bookmark. If they aren't, describe the click spots by state and position only (for example, 'the orange block in the middle of Mississippi').",
+      "needsLiveMap": true,
+      "quote": "the basemap shows today's states and cities, which the questions use to say where to click"
+    },
+    {
+      "where": "Map: The United States bookmark (Q1, Q2, Q5)",
+      "what": "In the picture, The United States bookmark shows all of North America and Central America. The cessions fill only about the middle third of the screen, and the Southeast 'empty pockets' that Q1–Q3 build on are small.",
+      "whyItMatters": "When students follow from the projector, the pockets they are meant to notice and predict from are hard to see from their seats. Luis would have to zoom by hand, and then the bookmark steps no longer match.",
+      "severity": "slows it down",
+      "suggestedChange": "Tighten The United States bookmark to the lower 48 states, or add a 'The East' bookmark for Q1–Q2 so the Southeast pockets fill the screen.",
+      "needsLiveMap": true,
+      "quote": "Open The United States bookmark. Only the light blue layer is on."
+    },
+    {
+      "where": "Lesson page, Inquiry intro and Q4 'Explain why (If you only do one)'",
+      "what": "The intro says the 'If you only do one' question reaches the big question on its own in about 15 minutes, but Q4 is labelled about 12 minutes. Q4 also covers only the 1830s Southeast, while the big question is about 1784–1894 and the final task asks for evidence from all three layers.",
+      "whyItMatters": "If Luis has only part of a period and does just Q4, his students can't answer the big question the way the sheet asks, and the timing he plans around doesn't match.",
+      "severity": "slows it down",
+      "suggestedChange": "Make the times agree. Either describe Q4 as getting to the 'why the 1830s' half of the big question, or add a 15-minute route that includes a 2-minute front-of-class flip through all three layers before Q4. Tell students on that route to answer using the layers they saw.",
+      "needsLiveMap": false,
+      "quote": "The one marked If you only do one gets to the big question on its own in about 15 minutes."
+    },
+    {
+      "where": "Lesson page header and Inquiry (timings)",
+      "what": "The six questions add up to about 47 minutes (8+5+8+12+7+7), before the written answer to the big question, the Looking back reflection, and handing out and logging into the Chromebooks. The lesson says 45 to 50 minutes and suggests no shorter route through the questions.",
+      "whyItMatters": "In a 45-minute period with a cart to hand out and collect, the full sequence won't fit. Luis has to work out what to cut himself.",
+      "severity": "slows it down",
+      "suggestedChange": "Add a suggested 45-minute route (for example Q1, Q2, Q3 and Q4 from the front, then Q5 as a 2-minute reveal and the written answer) and a two-period split (Q1–Q4 on day 1; Q5, Q6 and the big-question answer on day 2).",
+      "needsLiveMap": false,
+      "quote": "45 to 50 minutes, or 5–12 per question"
+    },
+    {
+      "where": "Lesson page, Student activity (download button) vs Teacher notes, Before class; catalogue and How these lessons work",
+      "what": "The teacher notes, the catalogue and the How these lessons work page promise the student sheet in English and Spanish, but this lesson page only offers 'Download Word (English)', and the lesson file says student sheets are in English.",
+      "whyItMatters": "In Luis's school some students may need the Spanish sheet. He'd plan on it from the catalogue, then find it isn't there when he goes to print.",
+      "severity": "slows it down",
+      "suggestedChange": "Add the Spanish sheet. Until then, change the teacher notes and catalogue text to say Spanish is not yet available for this lesson.",
+      "needsLiveMap": false,
+      "quote": "a two-page Word student sheet in English and Spanish"
+    },
+    {
+      "where": "Student sheet, Q4 'Explain why' (answer space)",
+      "what": "Q4 asks for three facts (nation, date, kind of document) for each of three areas, then an explanation. The sheet text shows one writing line under the question, the same as every other question.",
+      "whyItMatters": "Pairs copying from the projector, or from a pop-up their partner reads out, need somewhere to put nine short facts. Without a table, the answers get crammed and become hard to mark.",
+      "severity": "minor",
+      "suggestedChange": "Give Q4 a small 3-row table (Place | Nation | Date | Kind of document) above the writing lines for the explanation.",
+      "needsLiveMap": false,
+      "quote": "For each, write down the nation, the date and the kind of document the link names."
+    },
+    {
+      "where": "Student sheet and Lesson page, Q6 'Question the source' (first step)",
+      "what": "In the Cherokee and Choctaw pop-up pictures, the italic note at the end is cut off at the bottom of the pop-up, and the pop-up covers most of the map. Students must scroll inside the pop-up to read it, and the sheet doesn't say so.",
+      "whyItMatters": "On a projector Luis has to scroll it himself. Students on phones may stop at the cut-off line and miss 'so it shows how the federal government recorded the transaction', which is the point of Q6.",
+      "severity": "minor",
+      "suggestedChange": "Add 'scroll down to the end of the pop-up' to the step, and print the full note on the sheet (for example in Before you start) so students on paper can answer Q6 too.",
+      "needsLiveMap": false,
+      "quote": "read the note in italics at the end of the pop-up"
+    }
+  ],
+  "works": [
+    "No login or account is needed, which suits a shared Chromebook cart and phones.",
+    "Every question has 'From the front' steps with exact clicks, so the lesson can be taught from one projected screen with the class following on paper.",
+    "The Predict question works fully on paper, and it is written down before the reveal, which suits mixed devices.",
+    "Q4 asks for the kind of document the link names, not for the link to be opened, so a filtered treaty site doesn't block the main question.",
+    "The three layer colours stay distinct in the red-green colour-deficiency simulation and in order on the projected legend.",
+    "Per-question times and the answer notes (including the Jackson, Mississippi 1820 trap and the common misunderstandings) make it easy to split across two short periods and to correct students quickly."
+  ]
+}

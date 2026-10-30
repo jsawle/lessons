@@ -44,7 +44,7 @@
     "popupElements": [
      {
       "type": "text",
-      "text": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce compiled this from United States records (published 1899), so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>"
+      "text": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {expression/states}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce compiled this from United States records (published 1899), so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>"
      }
     ],
     "showAttachments": false,
@@ -54,13 +54,19 @@
       "name": "present",
       "title": "Nations today",
       "returnType": "string",
-      "expression": "var p = $feature.PresentTribe;\nreturn IIf(IsEmpty(p), 'Not listed in the Forest Service data.', p);"
+      "expression": "var p = $feature.PresentTribe;\nreturn IIf(IsEmpty(p), 'Not listed in this map\\'s data.', p);"
      },
      {
       "name": "schedule",
       "title": "Royce's schedule link text",
       "returnType": "string",
       "expression": "return IIf(IsEmpty($feature.ScheduleURL), '', \"Royce's schedule\");"
+     },
+     {
+      "name": "states",
+      "title": "Today's states",
+      "returnType": "string",
+      "expression": "var n = Dictionary('AL', 'Alabama', 'AZ', 'Arizona', 'AR', 'Arkansas', 'CA', 'California', 'CO', 'Colorado', 'CT', 'Connecticut', 'DE', 'Delaware', 'FL', 'Florida', 'GA', 'Georgia', 'ID', 'Idaho', 'IL', 'Illinois', 'IN', 'Indiana', 'IA', 'Iowa', 'KS', 'Kansas', 'KY', 'Kentucky', 'LA', 'Louisiana', 'ME', 'Maine', 'MD', 'Maryland', 'MA', 'Massachusetts', 'MI', 'Michigan', 'MN', 'Minnesota', 'MS', 'Mississippi', 'MO', 'Missouri', 'MT', 'Montana', 'NE', 'Nebraska', 'NV', 'Nevada', 'NH', 'New Hampshire', 'NJ', 'New Jersey', 'NM', 'New Mexico', 'NY', 'New York', 'NC', 'North Carolina', 'ND', 'North Dakota', 'OH', 'Ohio', 'OK', 'Oklahoma', 'OR', 'Oregon', 'PA', 'Pennsylvania', 'RI', 'Rhode Island', 'SC', 'South Carolina', 'SD', 'South Dakota', 'TN', 'Tennessee', 'TX', 'Texas', 'UT', 'Utah', 'VT', 'Vermont', 'VA', 'Virginia', 'WA', 'Washington', 'WV', 'West Virginia', 'WI', 'Wisconsin', 'WY', 'Wyoming', 'AK', 'Alaska', 'HI', 'Hawaii');\nvar s = $feature.State;\nif (IsEmpty(s)) { return ''; }\nvar out = [];\nfor (var i in Split(s, ';')) { var c = Trim(Split(s, ';')[i]); Push(out, IIf(HasKey(n, c), n[c], c)); }\nreturn Concatenate(out, ', ');"
      }
     ]
    }
@@ -109,7 +115,7 @@
     "popupElements": [
      {
       "type": "text",
-      "text": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce compiled this from United States records (published 1899), so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>"
+      "text": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {expression/states}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce compiled this from United States records (published 1899), so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>"
      }
     ],
     "showAttachments": false,
@@ -119,13 +125,19 @@
       "name": "present",
       "title": "Nations today",
       "returnType": "string",
-      "expression": "var p = $feature.PresentTribe;\nreturn IIf(IsEmpty(p), 'Not listed in the Forest Service data.', p);"
+      "expression": "var p = $feature.PresentTribe;\nreturn IIf(IsEmpty(p), 'Not listed in this map\\'s data.', p);"
      },
      {
       "name": "schedule",
       "title": "Royce's schedule link text",
       "returnType": "string",
       "expression": "return IIf(IsEmpty($feature.ScheduleURL), '', \"Royce's schedule\");"
+     },
+     {
+      "name": "states",
+      "title": "Today's states",
+      "returnType": "string",
+      "expression": "var n = Dictionary('AL', 'Alabama', 'AZ', 'Arizona', 'AR', 'Arkansas', 'CA', 'California', 'CO', 'Colorado', 'CT', 'Connecticut', 'DE', 'Delaware', 'FL', 'Florida', 'GA', 'Georgia', 'ID', 'Idaho', 'IL', 'Illinois', 'IN', 'Indiana', 'IA', 'Iowa', 'KS', 'Kansas', 'KY', 'Kentucky', 'LA', 'Louisiana', 'ME', 'Maine', 'MD', 'Maryland', 'MA', 'Massachusetts', 'MI', 'Michigan', 'MN', 'Minnesota', 'MS', 'Mississippi', 'MO', 'Missouri', 'MT', 'Montana', 'NE', 'Nebraska', 'NV', 'Nevada', 'NH', 'New Hampshire', 'NJ', 'New Jersey', 'NM', 'New Mexico', 'NY', 'New York', 'NC', 'North Carolina', 'ND', 'North Dakota', 'OH', 'Ohio', 'OK', 'Oklahoma', 'OR', 'Oregon', 'PA', 'Pennsylvania', 'RI', 'Rhode Island', 'SC', 'South Carolina', 'SD', 'South Dakota', 'TN', 'Tennessee', 'TX', 'Texas', 'UT', 'Utah', 'VT', 'Vermont', 'VA', 'Virginia', 'WA', 'Washington', 'WV', 'West Virginia', 'WI', 'Wisconsin', 'WY', 'Wyoming', 'AK', 'Alaska', 'HI', 'Hawaii');\nvar s = $feature.State;\nif (IsEmpty(s)) { return ''; }\nvar out = [];\nfor (var i in Split(s, ';')) { var c = Trim(Split(s, ';')[i]); Push(out, IIf(HasKey(n, c), n[c], c)); }\nreturn Concatenate(out, ', ');"
      }
     ]
    }
@@ -174,7 +186,7 @@
     "popupElements": [
      {
       "type": "text",
-      "text": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {State}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce compiled this from United States records (published 1899), so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>"
+      "text": "<p><b>Date or dates:</b> {Dates}</p><p><b>Today's states:</b> {expression/states}</p><p><b>Nations today:</b> {expression/present}</p><p><a href='{SourceURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{SourceLabel}</a></p><p><a href='{ScheduleURL}' target='_blank' rel='nofollow ugc noopener noreferrer'>{expression/schedule}</a></p><p><i>Royce compiled this from United States records (published 1899), so it shows how the federal government recorded the transaction. The boundary is approximate.</i></p>"
      }
     ],
     "showAttachments": false,
@@ -184,13 +196,19 @@
       "name": "present",
       "title": "Nations today",
       "returnType": "string",
-      "expression": "var p = $feature.PresentTribe;\nreturn IIf(IsEmpty(p), 'Not listed in the Forest Service data.', p);"
+      "expression": "var p = $feature.PresentTribe;\nreturn IIf(IsEmpty(p), 'Not listed in this map\\'s data.', p);"
      },
      {
       "name": "schedule",
       "title": "Royce's schedule link text",
       "returnType": "string",
       "expression": "return IIf(IsEmpty($feature.ScheduleURL), '', \"Royce's schedule\");"
+     },
+     {
+      "name": "states",
+      "title": "Today's states",
+      "returnType": "string",
+      "expression": "var n = Dictionary('AL', 'Alabama', 'AZ', 'Arizona', 'AR', 'Arkansas', 'CA', 'California', 'CO', 'Colorado', 'CT', 'Connecticut', 'DE', 'Delaware', 'FL', 'Florida', 'GA', 'Georgia', 'ID', 'Idaho', 'IL', 'Illinois', 'IN', 'Indiana', 'IA', 'Iowa', 'KS', 'Kansas', 'KY', 'Kentucky', 'LA', 'Louisiana', 'ME', 'Maine', 'MD', 'Maryland', 'MA', 'Massachusetts', 'MI', 'Michigan', 'MN', 'Minnesota', 'MS', 'Mississippi', 'MO', 'Missouri', 'MT', 'Montana', 'NE', 'Nebraska', 'NV', 'Nevada', 'NH', 'New Hampshire', 'NJ', 'New Jersey', 'NM', 'New Mexico', 'NY', 'New York', 'NC', 'North Carolina', 'ND', 'North Dakota', 'OH', 'Ohio', 'OK', 'Oklahoma', 'OR', 'Oregon', 'PA', 'Pennsylvania', 'RI', 'Rhode Island', 'SC', 'South Carolina', 'SD', 'South Dakota', 'TN', 'Tennessee', 'TX', 'Texas', 'UT', 'Utah', 'VT', 'Vermont', 'VA', 'Virginia', 'WA', 'Washington', 'WV', 'West Virginia', 'WI', 'Wisconsin', 'WY', 'Wyoming', 'AK', 'Alaska', 'HI', 'Hawaii');\nvar s = $feature.State;\nif (IsEmpty(s)) { return ''; }\nvar out = [];\nfor (var i in Split(s, ';')) { var c = Trim(Split(s, ';')[i]); Push(out, IIf(HasKey(n, c), n[c], c)); }\nreturn Concatenate(out, ', ');"
      }
     ]
    }
@@ -217,6 +235,16 @@
     "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json",
     "itemId": "545f2e839f624600bbb092c3ad998bb8",
     "blendMode": "multiply"
+   },
+   {
+    "id": "base886623ba",
+    "title": "World Terrain Reference",
+    "opacity": 1,
+    "visibility": true,
+    "layerType": "VectorTileLayer",
+    "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/14fbc125ccc9488888b014db09f35f67/resources/styles/root.json",
+    "itemId": "14fbc125ccc9488888b014db09f35f67",
+    "isReference": true
    }
   ]
  },
@@ -225,7 +253,7 @@
   "latestWkid": 3857
  },
  "authoringApp": "Map builder",
- "authoringAppVersion": "1.1",
+ "authoringAppVersion": "1.2",
  "version": "2.31",
  "initialState": {
   "viewpoint": {

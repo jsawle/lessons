@@ -1,0 +1,162 @@
+{
+  "persona": "S1",
+  "findings": [
+    {
+      "where": "Reading the map (before Questions)",
+      "what": "Jordan meets a 6-sentence block of rules before any task. The two hardest ideas (an earlier date can be the treaty that set land aside; the same land in several layers so bigger colour is not more land) are abstract and have no example. Jordan skims or skips it, then later writes the wrong date from a two-date pop-up (e.g. the Choctaw pop-up showing 'November 16, 1805; September 27, 1830').",
+      "whyItMatters": "Jordan gives up when instructions are long; the warning that matters most is buried in the middle and has no picture or example.",
+      "severity": "slows it down",
+      "suggestion": "Cut to 3 short bullets (colours, only blue is on at first, turn others on when asked). Move the two-date warning to the step where it is needed, with one example: 'Some pop-ups show two dates, like 1805; 1830. Write both.'",
+      "needsLiveMap": false,
+      "quote": "The earlier date can be the treaty that set the land aside, not the one that took it"
+    },
+    {
+      "where": "Notice: before 1830, Answer; also Explain why step 2 and Reveal 1840-1894",
+      "what": "The United States bookmark (notice-before-1830.jpg) shows all of North America with no state lines or state/town names readable. Jordan has to say 'where' land was gained but cannot name places from the map, and later has to find Kosciusko, Talladega and Rome, which are not labelled in any picture.",
+      "whyItMatters": "Jordan cannot answer 'where' in words without knowing state names, and cannot find small towns by name on an unlabelled map; this is where Jordan would put a hand up.",
+      "severity": "slows it down",
+      "suggestion": "Use a basemap or reference layer with state boundaries and names, and add a small marker or label for Kosciusko, Talladega and Rome (or say 'the orange area in the middle of Mississippi'). Give a word bank of state/region names for the Notice answer.",
+      "needsLiveMap": true,
+      "quote": "Click three orange areas: east-central Mississippi (around Kosciusko), east-central Alabama (around Talladega) and northwest Georgia (around Rome)."
+    },
+    {
+      "where": "Notice: before 1830, Answer",
+      "what": "'Which parts of the map are still empty?' The map shows Canada, Mexico and the Caribbean too, all empty. Jordan could answer 'Canada' or 'everything in the West' and miss the small white gaps inside the blue in the Southeast.",
+      "whyItMatters": "The Reveal question later depends on those Southeast gaps, so a fair but different reading here breaks the next section.",
+      "severity": "slows it down",
+      "suggestion": "Ask two concrete things: 'Name one big empty area in the United States. Now look in the Southeast (Mississippi, Alabama, Georgia): find the white gaps inside the blue.'",
+      "needsLiveMap": false,
+      "quote": "Which parts of the map are still empty?"
+    },
+    {
+      "where": "Reveal: the 1830s, Answer",
+      "what": "The question refers to 'the empty pockets you found before 1830', but no earlier step told Jordan to look for pockets in the Southeast; Predict pointed Jordan at 'the empty parts... east and west of the Mississippi River'. Jordan has nothing written to compare with.",
+      "whyItMatters": "Jordan will think they missed something and either stop or guess.",
+      "severity": "slows it down",
+      "suggestion": "Add the Southeast-gaps step to Notice (see above), or reword here: 'Go back to the white gaps inside the blue in the Southeast. Did orange fill them?'",
+      "needsLiveMap": false,
+      "quote": "What do the orange areas in the Southeast have in common with the empty pockets you found before 1830?"
+    },
+    {
+      "where": "Predict, step 2",
+      "what": "Jordan is told to look east and west of the Mississippi River, but the river is not labelled in the picture and is mostly hidden under the light blue areas.",
+      "whyItMatters": "Jordan cannot use 'east' and 'west' of a line they cannot see.",
+      "severity": "minor",
+      "suggestion": "Say where it is ('the long river running down the middle of the country to the Gulf of Mexico') or turn on a labelled rivers layer.",
+      "needsLiveMap": true,
+      "quote": "Look at the empty parts of the map, east and west of the Mississippi River."
+    },
+    {
+      "where": "Reveal: the 1830s, step 2",
+      "what": "'The Old Northwest' sounds like the northwest of the map (Washington/Oregon), but the bookmark goes to the Great Lakes area. Nothing on the sheet explains the name.",
+      "whyItMatters": "Jordan may think the bookmark is broken or the wrong place.",
+      "severity": "minor",
+      "suggestion": "Add a gloss: 'The Old Northwest (today's Ohio, Indiana, Illinois, Michigan, Wisconsin)'.",
+      "needsLiveMap": false,
+      "quote": "Open The Southeast bookmark, then The Old Northwest bookmark."
+    },
+    {
+      "where": "Reveal: the 1830s and Reveal: 1840 to 1894 (map colours)",
+      "what": "Where layers overlap the colours mix: a grey-green patch in Michigan in reveal-1830s.jpg and darker green patches in Iowa/Oklahoma in reveal-1840-1894.jpg. The legend shows only three plain colours.",
+      "whyItMatters": "Jordan will ask 'what is the grey bit?' and may not link it to the 'more than one layer' sentence in Reading the map.",
+      "severity": "minor",
+      "suggestion": "Add one line: 'A darker or mixed colour means two layers overlap there. Click it to see both dates.'",
+      "needsLiveMap": false,
+      "quote": "Some areas have more than one date and show in more than one layer."
+    },
+    {
+      "where": "Explain why, step 3",
+      "what": "'the kind of document the link names' is a confusing phrase. The answer is just the link word 'Treaty text', but Jordan may click the link and get lost in a long treaty, or not know what 'kind of document' means.",
+      "whyItMatters": "Jordan may open a long legal text and lose the thread or run out of time.",
+      "severity": "slows it down",
+      "suggestion": "'Write the words on the first blue link (for example: Treaty text). You do not need to open it.' Give a 3-row table: Nation | Date | Link word.",
+      "needsLiveMap": false,
+      "quote": "For each, write down the nation, the date and the kind of document the link names."
+    },
+    {
+      "where": "Explain why and Question the source (pop-ups)",
+      "what": "The italic note is cut off at the bottom of the pop-up in both pop-up pictures ('Royce compiled this from United States records' then nothing). Jordan has to scroll inside the pop-up to read it. The pop-up also covers most of the Southeast at the US view.",
+      "whyItMatters": "Jordan may think the note is just that one line and answer 'Who recorded these?' from half a sentence.",
+      "severity": "slows it down",
+      "suggestion": "Tell Jordan to scroll down inside the pop-up, or shorten the note so it fits; consider opening the pop-up docked to the side.",
+      "needsLiveMap": true,
+      "quote": "read the note in italics at the end of the pop-up"
+    },
+    {
+      "where": "Question the source, step 2 and Answer",
+      "what": "The Creek pop-up says 'Not listed in the Forest Service data.' The sheet never mentions the Forest Service; it says Royce and federal government documents. Jordan may answer 'Who recorded these cessions?' with 'the Forest Service'.",
+      "whyItMatters": "Two different record-keepers with no explanation mixes up the main 'who wrote this' idea of the section.",
+      "severity": "slows it down",
+      "suggestion": "Explain in Before you start: 'Royce made the maps; a government agency (the Forest Service) added the list of nations today.' Or change the pop-up text to 'Nations today: not listed in this data.'",
+      "needsLiveMap": false,
+      "quote": "Nations today: Not listed in the Forest Service data."
+    },
+    {
+      "where": "Question the source, step 1 (Cherokee pop-up)",
+      "what": "The Nations today list shows what look like the same nation twice: 'Eastern Band of Cherokee Indians of North Carolina; Eastern Band of Cherokee Indians, North Carolina'.",
+      "whyItMatters": "Jordan reads carefully word by word and will think it is a mistake or a different group, and slow down.",
+      "severity": "minor",
+      "suggestion": "Remove the duplicate in the data, or check whether both entries are really separate.",
+      "needsLiveMap": false,
+      "quote": "Eastern Band of Cherokee Indians of North Carolina; Eastern Band of Cherokee Indians, North Carolina"
+    },
+    {
+      "where": "Question the source, Answer",
+      "what": "'What might the nations named in the pop-ups say about the same transactions?' is abstract and uses 'transactions'. Jordan does not know what kind of answer is wanted.",
+      "whyItMatters": "Likely blank or 'I don't know' from Jordan, though the idea is within reach with a frame.",
+      "severity": "slows it down",
+      "suggestion": "Give a frame: 'The Cherokee might say the treaty was ___ because ___.' Replace 'transactions' with 'land deals' or 'treaties'.",
+      "needsLiveMap": false,
+      "quote": "What might the nations named in the pop-ups say about the same transactions?"
+    },
+    {
+      "where": "All Answer prompts (writing lines)",
+      "what": "Most Answer prompts hold 2-4 questions (Explain why asks for three nations, three dates, three documents and two 'why' parts) but each has one writing line. Only Predict gives a sentence frame.",
+      "whyItMatters": "Jordan asks 'do I write one line or a paragraph?' and does not know when an answer is complete; checking 'how much to write' is one of Jordan's tests.",
+      "severity": "slows it down",
+      "suggestion": "Split multi-part prompts into numbered a/b lines, say how much ('1-2 sentences'), and add frames like the Predict one (e.g. Reveal 1840: 'Before 1840 most cessions were in the ___. After 1840 they were in the ___.').",
+      "needsLiveMap": false,
+      "quote": "Answer: Where were the cessions of the 1830s? Was your prediction right? What do the orange areas in the Southeast have in common with the empty pockets you found before 1830?"
+    },
+    {
+      "where": "Your answer (final task) and whole sheet timing",
+      "what": "The final task says 'Answer the big question' but the big question is at the top of page 1, so Jordan must scroll back. The sheet has 7 answer sections plus a final paragraph and no time guide; for Jordan this is unlikely to fit one lesson (I can't confirm the period length).",
+      "whyItMatters": "Jordan may run out of time before the final answer, which is the one that pulls everything together.",
+      "severity": "slows it down",
+      "suggestion": "Repeat the big question in the final task, give rough minutes per section, and mark Looking back or Question the source as optional/extension if time is short.",
+      "needsLiveMap": false,
+      "quote": "Your answer: Answer the big question using evidence from all three layers and at least two pop-ups."
+    }
+  ],
+  "hardWords": [
+    "cession / cessions",
+    "treaty",
+    "compiled",
+    "federal",
+    "approximate",
+    "boundaries",
+    "transactions",
+    "pattern",
+    "evidence",
+    "set the land aside",
+    "the kind of document the link names",
+    "italics",
+    "east-central",
+    "The Old Northwest",
+    "the Plains",
+    "empty pockets",
+    "Royce's schedule (schedule = list here)",
+    "Forest Service data",
+    "Nations today",
+    "Kosciusko, Talladega (hard to read aloud)",
+    "a finished map"
+  ],
+  "works": [
+    "Layer names, bookmark names and colours on the sheet match the legend in the pictures exactly (light blue, orange, green), so 'turn on Cessions dated 1830 to 1839' is easy to follow.",
+    "Turning on one layer at a time gives a clear 'wow' moment: the 1840-1894 picture makes the change to the West obvious even for a weak reader.",
+    "The Predict sentence frame ('I predict ... because ...') tells Jordan exactly what to write.",
+    "Steps are short and numbered under 'On the map'; the '1 of 2' pop-up tip is short and useful.",
+    "Pop-up labels are plain ('Date or dates', 'Today's states', 'Nations today') and the three target pop-ups give a nation, a date and 'Treaty text', so the Explain why table can be filled.",
+    "The Creek 'Not listed' line gives Jordan a concrete, findable answer for 'What is missing?'."
+  ]
+}

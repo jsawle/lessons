@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Map builder 1.1: turns a map spec (maps/specs/<id>.json, Map spec 1.0) into the web map ArcGIS Online stores.
+"""Map builder 1.2: turns a map spec (maps/specs/<id>.json, Map spec 1.0) into the web map ArcGIS Online stores.
 
 Reads only public ArcGIS Online content; signs in to nothing. For each spec it:
   - checks the spec against its lesson (layer names, which layers start off, bookmarks),
@@ -14,7 +14,7 @@ Exit code 1 if any spec has errors (nothing is written for that spec).
 import copy, datetime, hashlib, json, math, re, sys, urllib.parse, urllib.request
 from pathlib import Path
 
-VERSION = "1.1"
+VERSION = "1.2"
 SPEC_FORMAT = "Map spec 1.0"
 PORTAL = "https://www.arcgis.com/sharing/rest"
 ROOT = Path(__file__).resolve().parents[2]
@@ -216,6 +216,7 @@ def build(spec_path):
         else: errors.append(f"basemap layer type {b['type']!r}")
         if b.get("itemId"): bl["itemId"] = b["itemId"]
         if b.get("blendMode"): bl["blendMode"] = b["blendMode"]
+        if b.get("reference"): bl["isReference"] = True  # drawn above the map's own layers (labels, boundaries)
         base["baseMapLayers"].append(bl)
 
     webmap = {"operationalLayers": op, "baseMap": base, "spatialReference": {"wkid": 102100, "latestWkid": 3857},

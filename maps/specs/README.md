@@ -5,7 +5,7 @@ A map spec describes one web map in plain JSON: its item details, basemap, openi
 | Step | Tool | Where it runs | What it does |
 |---|---|---|---|
 | 1. Write | `maps/specs/<id>.json` (Map spec 1.0) | here | Describe the map; `checks` lists what students do and must see |
-| 2. Build | `python3 maps/tools/build_map.py maps/specs/<id>.json` (Map builder 1.1) | anywhere | Checks the spec against its lesson, the layers' fields and the basemap (no CARTO, public sources); writes `maps/build/<id>/webmap.json`, `item.json`, `report.json` |
+| 2. Build | `python3 maps/tools/build_map.py maps/specs/<id>.json` (Map builder 1.2) | anywhere | Checks the spec against its lesson, the layers' fields and the basemap (no CARTO, public sources); writes `maps/build/<id>/webmap.json`, `item.json`, `report.json` |
 | 3. Test | `node maps/tools/test_map.mjs maps/build/<id> --checker <mapchecker>/index.html` (Map test 1.0) | anywhere with Chromium | Draws the build with the Maps SDK 4.34 in US Central time, runs every check, flags long decimals and dates with times, runs the MapMaker Web Map Auditor; records a pass in `report.json` |
 | 4. Publish | `python maps/tools/publish_map.py maps/build/<id> --profile NAME [--go]` (Map publish 1.1) | your computer, signed in by you | Dry run first; refuses a changed or untested build or the wrong organization; creates the item in the spec's folder (or `--update` replaces it, with a backup); never shares; reads the item back to check it |
 | 5. Release | ArcGIS Online | you | Look at it in Map Viewer and the Atlas app, then share it |
@@ -19,7 +19,7 @@ A map spec describes one web map in plain JSON: its item details, basemap, openi
   "version": "1.0.0",                              // this map's version; bump it on every change
   "lesson": "resources/lessons/<id>.json",         // optional: the builder checks layer names, start visibility and bookmarks against it
   "item": {"title", "snippet", "description", "tags", "credits", "license"},
-  "basemap": {"title", "layers": [{"type": "tile" | "vectorTile", "title", "itemId", "url" | "styleUrl", "blendMode"?}]},
+  "basemap": {"title", "layers": [{"type": "tile" | "vectorTile", "title", "itemId", "url" | "styleUrl", "blendMode"?, "reference"?}]},  // reference: true draws the layer above the map's own layers (labels)
   "view": {"extent": [west, south, east, north]},  // degrees
   "bookmarks": [{"name", "extent": [west, south, east, north]}],
   "layers": [                                      // top of the layer list first
