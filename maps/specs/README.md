@@ -33,6 +33,8 @@ A map spec describes one web map in plain JSON: its item details, basemap, openi
 }
 ```
 
+Maps that build up over time open with only the first layer on (`"visible": false` on the rest), and their `checks` follow each reveal in order, so the lesson can ask students to notice, predict, reveal and then ask why (see `maps/plan/age-of-jackson.md`, "How students meet each map"). The layer list's order is the legend's order.
+
 Colours are `#RRGGBB` or `#RRGGBBAA`. `"symbol": {"type": "raw", "renderer": {...}}` takes any ArcGIS renderer as it is. Date fields go in pop-ups through Arcade (`Text(ChangeTimeZone($feature.Date, 'UTC'), 'MMMM D, Y')`), so they read the same in every time zone; the builder warns otherwise.
 
 ## Signing in on your computer

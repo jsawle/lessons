@@ -1,4 +1,4 @@
-# Age of Jackson: three-map slice (draft 0.2, 30 Oct 2026)
+# Age of Jackson: three-map slice (draft 0.3, 30 Oct 2026)
 
 Purpose: run three new maps through the whole process (map first, then the inquiry lesson written from the built map, then the link back to the standards) to find out what the process still lacks before building a full year. Map 1 is built, tested and published (private); Maps 2 and 3 are not started. Every map follows the usual route: spec, build, test, dry run, your OK, you run `--go`, never shared by the tool.
 
@@ -48,6 +48,31 @@ Question for students: What changed between the elections of 1800 and 1828, and 
 | Data caveats | Modern state outlines, with Maine shown as its own state and West Virginia still part of Virginia; popular-vote totals by state are a later addition (a possible source is the Tufts "A New Nation Votes" collection, not yet checked); the right to vote excluded women, most free Black men in many states, and enslaved people, and the map has to show that, not only "expanded suffrage" |
 | To fact-check | Every state's elector method and voting rule in 1828; the claim "expanded suffrage" against what each state's law actually allowed; Maryland's and New York's district counts |
 | Sensitive framing | "Expanded suffrage" applied to white men; the map should let students see who was still left out |
+
+## How students meet each map: reveal, then ask why
+
+Agreed 30 Oct 2026, from Map 1. A map opens with only the earliest layer on, and students turn on the next period themselves, so they watch the pattern build rather than read it finished. Each step leaves room for the question the map can't answer on its own: why there, why then. Every map spec and every inquiry lesson in this slice follows the same sequence:
+
+1. **Notice.** One layer on. What is there, and where?
+2. **Predict.** Before turning on the next layer: where do you expect the next change, and why?
+3. **Reveal.** Turn it on. What changed? How does it compare with your prediction?
+4. **Explain why.** What else was happening at that time that might explain it? Students use evidence the map links to (pop-ups, treaty and statute texts) and sources the lesson provides; the map itself shows what, where and when, not why.
+5. **Question the source.** Who made this map, when, and from whose records? Whose view is missing?
+6. **Their own question.** Each student writes one "why" question the map raised for them.
+
+What this means for the tools: the spec's `visible` settings open the map on the first layer only; the spec's `checks` follow the steps (one check per reveal); the lesson's questions follow steps 1 to 6, with `map.about` saying which layers are off when the map opens. A map that has no sequence in time or space (a single snapshot) skips steps 2 and 3.
+
+Map 1 draft sequence (questions only; answers and sources come with the lesson and its fact-check):
+
+| Step | Layers on | Question |
+|---|---|---|
+| Notice | Before 1830 | Where had the United States gained land through cessions before 1830? Which parts of the map are still empty? |
+| Predict | Before 1830 | Where do you expect the cessions of the 1830s to be? Why there? |
+| Reveal | + 1830 to 1839 | Where were the cessions of the 1830s? Was your prediction right? |
+| Explain why | + 1830 to 1839 | Open a cession in the Southeast dated in the 1830s. Which nation, which year, and what kind of document? What was happening in the United States around 1830 that might explain the pattern? |
+| Reveal | + 1840 to 1894 | How did the pattern change after 1840? |
+| Question the source | All | Who recorded these cessions, and when? What might the nations named in the pop-ups say about the same transactions? |
+| Their own question | All | Write one "why" question this map raises for you. |
 
 ## Process gaps this slice is meant to expose
 
