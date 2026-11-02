@@ -1,21 +1,22 @@
 {
- "tool": "Map builder 1.2",
+ "tool": "Map builder 1.3",
  "spec": "maps/specs/election-1828-right-to-vote.json",
  "specId": "election-1828-right-to-vote",
- "specVersion": "0.3.0",
- "built": "2026-10-30T17:36:52Z",
- "webmapFingerprint": "ab0a9f3763996af215747e39f44324f6aa5d7953",
- "itemFingerprint": "7298aa9629e9df2d70184c4fd71bfd43b178da8f",
+ "specVersion": "0.4.0",
+ "built": "2026-11-02T09:28:14Z",
+ "webmapFingerprint": "33582a61b2745e38e3aed4d1c26c9402c0a0eaba",
+ "itemFingerprint": "5ff2b4660ee5c448c165a39a582a558f34650442",
  "checked": [
+  "layers, start visibility and bookmarks match the lesson",
   "basemap is public and not CARTO",
   "every source layer is readable and every field the spec uses exists"
  ],
  "warnings": [],
  "tested": {
   "tool": "Map test 1.0",
-  "when": "2026-10-30T17:38:17Z",
+  "when": "2026-11-02T09:30:05Z",
   "timeZone": "America/Chicago",
-  "webmapFingerprint": "ab0a9f3763996af215747e39f44324f6aa5d7953",
+  "webmapFingerprint": "33582a61b2745e38e3aed4d1c26c9402c0a0eaba",
   "pass": true,
   "checks": [
    {
@@ -50,6 +51,16 @@
    },
    {
     "name": "tennessee",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "delaware",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "georgia",
     "pass": true,
     "failures": []
    }
