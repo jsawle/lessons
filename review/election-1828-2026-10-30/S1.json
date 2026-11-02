@@ -1,0 +1,190 @@
+{
+  "persona": "S1",
+  "findings": [
+    {
+      "where": "Reading the map (before the questions)",
+      "what": "Five separate instructions (pie colours, pie size, layers start off, light/dark meaning, click and scroll) are packed into one paragraph. Jordan skims it and goes straight to Question 1, so the key rule 'light means fewer limits' and 'scroll to see all of the pop-up' get missed.",
+      "whyItMatters": "Jordan gives up when instructions are long. Later questions depend on knowing to scroll the pop-up (the women sentence, sources) and what light/dark means.",
+      "severity": "slows it down",
+      "suggestedChange": "Split into 4-5 short bullets, each one idea, e.g. '- Blue = Jackson. Orange = Adams.' '- Big pie = more electors.' '- Light colour = fewer limits. Dark = more limits.' '- Scroll down inside the pop-up to read it all.'",
+      "needsLiveMap": false,
+      "quote": "Only the pies are on at the start; turn on the other layers in Map layers when a question asks."
+    },
+    {
+      "where": "Notice, question (c): which three states split their electors",
+      "what": "New York's split pie is easy to see. Maryland's is small and sits among other small pies near Washington. Maine's pie is at the far top right and is partly covered by the open legend panel (notice-votes.jpg). Its split is 1 vs 8, so the blue slice is a sliver. Jordan finds two and hunts for the third.",
+      "whyItMatters": "Jordan may write only New York and Maryland, or give up looking. Same problem later: in reveal-black-men.jpg, Maine (a 'could vote' state) is hidden behind the legend, so Jordan will probably leave it out of Free Black men (a).",
+      "severity": "slows it down",
+      "suggestedChange": "Have the bookmark or initial extent leave room for Maine beside the legend, or tell students to close the legend after reading it. Or add a hint: 'Look closely in the far north-east too.'",
+      "needsLiveMap": true,
+      "quote": "Which three states split their electors?"
+    },
+    {
+      "where": "Notice, questions (a) and (b): 'Which part of the country'",
+      "what": "The map doesn't name any regions, so Jordan can only say 'the top right' or 'the bottom'. The answer the sheet wants is probably New England/North-East and the South and West, but Jordan may not know those terms.",
+      "whyItMatters": "Jordan won't know if 'top right' counts as an answer, and will stop to ask.",
+      "severity": "minor",
+      "suggestedChange": "Give a small word bank: 'New England (north-east), the South, the West (past the mountains)'.",
+      "needsLiveMap": false,
+      "quote": "Which part of the country voted mostly for Adams?"
+    },
+    {
+      "where": "Predict, answer frame",
+      "what": "The sheet asks for two predictions, (a) and (b), each with a reason, but gives only one 'I predict ___ because ___' frame and one writing line.",
+      "whyItMatters": "Jordan fills the one frame and thinks the question is finished, so (b) gets skipped.",
+      "severity": "minor",
+      "suggestedChange": "Give two frames: '(a) I predict ___ because ___.' and '(b) I predict ___ because ___.'",
+      "needsLiveMap": false,
+      "quote": "I predict                because               ."
+    },
+    {
+      "where": "Reveal: white men, step 2 (use the legend)",
+      "what": "With the legend open, the pie legend fills the panel. Only the heading 'White men and the vote, 1828' shows at the bottom (reveal-white-men.jpg), and the shading key is below it, so you have to scroll. The sheet doesn't say to scroll the legend.",
+      "whyItMatters": "Jordan looks at the legend, sees only pies, and thinks there's no key for the colours. The meanings are written on the sheet, but Jordan doesn't get to check them on the map.",
+      "severity": "slows it down",
+      "suggestedChange": "Add 'scroll down in the legend' to step 2, or have the pie legend collapsed or shorter so the shading key shows without scrolling.",
+      "needsLiveMap": true,
+      "quote": "Use the legend: light means no property or tax rule, middle means had to pay a tax, dark means had to own property."
+    },
+    {
+      "where": "Reveal: white men, step 3 and question (b), South Carolina and Connecticut pop-ups",
+      "what": "South Carolina is shaded light ('No property or tax rule'), but its pop-up says 'own 50 acres or a town lot, or have lived in the district six months'. Connecticut is middle (tax), but its pop-up begins 'Had to own land worth $7 a year'. Jordan reads 'own 50 acres' and 'own land' and decides these are property states. Tennessee's pop-up says 'so no property was needed', which helps, but South Carolina and Connecticut give no such explanation. South Carolina's also starts 'For state elections'.",
+      "whyItMatters": "The pop-up text seems to say the opposite of the colour. Jordan gets confused about which source to trust and may give South Carolina or Connecticut as an answer to 'Which two states made white men own property?'",
+      "severity": "slows it down",
+      "suggestedChange": "End South Carolina's and Connecticut's text the way Tennessee's ends: '...so you did not have to own land' / '...so paying a tax was enough'. Or open with the plain rule: 'No property rule: living there six months was enough.'",
+      "needsLiveMap": false,
+      "quote": "For state elections: own 50 acres or a town lot, or have lived in the district six months (1810 amendment)."
+    },
+    {
+      "where": "Reveal: white men, question (a): which two states made white men own property",
+      "what": "Virginia is the large dark state and is easy to spot. Rhode Island is tiny, unlabelled and covered by Adams pies near Providence (reveal-white-men.jpg), so its dark shading is very hard to see.",
+      "whyItMatters": "Jordan finds Virginia but not the second state, and may guess a nearby state instead.",
+      "severity": "slows it down",
+      "suggestedChange": "Tell students to use the New England and New York bookmark for this question, or add 'one is very small, zoom in on New England'.",
+      "needsLiveMap": true,
+      "quote": "Which two states made white men own property?"
+    },
+    {
+      "where": "Several steps that name a state (Delaware, Pennsylvania, Rhode Island, Indiana)",
+      "what": "In the pictures, many eastern states have no visible label. Pennsylvania's label is covered by its pie (only an 'S' shows), and Virginia, Maryland, Delaware, New Jersey, Connecticut, Rhode Island and New Hampshire are unlabelled. Delaware is a sliver next to Maryland's and its own small pies. Jordan doesn't know where Delaware is.",
+      "whyItMatters": "'Click Delaware' turns into guessing and wrong clicks on a Chromebook trackpad, which uses up time and patience.",
+      "severity": "slows it down",
+      "suggestedChange": "Make labels show above the pies at the bookmark scale, add a small locator hint on the sheet ('Delaware: the small state just east of Maryland, by the orange pie'), or add a bookmark for the Mid-Atlantic.",
+      "needsLiveMap": true,
+      "quote": "Click South Carolina and Delaware and read Who chose the electors."
+    },
+    {
+      "where": "Reveal: free Black men, question (a)",
+      "what": "Step 2 says to find the light states. New York and Pennsylvania are a middle lilac colour, and New York is the state the sheet then asks about. Jordan doesn't know whether middle states count as 'could vote'. The light cream shading also looks a lot like the beige basemap, so the light states can look like they have no data.",
+      "whyItMatters": "Jordan is unsure what to include and asks, or gives an incomplete list (Maine is also hidden behind the legend; see above).",
+      "severity": "minor",
+      "suggestedChange": "Say 'Name the light states (could vote). Do not count the middle ones yet.' Think about a light fill that stands out more from the basemap.",
+      "needsLiveMap": false,
+      "quote": "Name the states where free Black men could vote."
+    },
+    {
+      "where": "Reveal: free Black men, question (c): compare western states across both layers",
+      "what": "Step 1 told Jordan to turn White men off. To compare, Jordan has to remember the earlier colours or turn the layer back on, and the sheet doesn't say to do that.",
+      "whyItMatters": "Jordan can't see 'the last one' any more, so this becomes a memory test or an extra toggle Jordan isn't told about.",
+      "severity": "slows it down",
+      "suggestedChange": "Add a step: 'Turn White men back on, then off again, to compare.' Or give the pattern as a choice: 'In the white men layer these states were light. In this layer they are ___.'",
+      "needsLiveMap": false,
+      "quote": "Compare the newer western states (Indiana, Illinois, Alabama, Missouri) in this layer and the last one."
+    },
+    {
+      "where": "Explain why, question (b): who had gained the right to vote by 1828",
+      "what": "'Gained' means change over time, but the step sends Jordan to Indiana, whose pop-up only gives the 1816 rule. The evidence of change is in other pop-ups ('since 1810' Maryland, 'since an 1826 amendment' New York, 'ended the property rule' Massachusetts), and the sheet doesn't point to them. The question also starts with a textbook claim that has two hard words, 'suffrage expanded' and 'Age of Jackson'.",
+      "whyItMatters": "Jordan can't find 'gained' anywhere in Indiana's pop-up and doesn't know what evidence to use.",
+      "severity": "slows it down",
+      "suggestedChange": "Change step 2 to point at New York or Massachusetts ('look for the word since or ended'). Rephrase: 'Books say more people got the vote in Jackson's time. Using the map: which men could vote by 1828? Which men still could not?'",
+      "needsLiveMap": false,
+      "quote": "Textbooks say suffrage expanded in the Age of Jackson. Using the map, who had gained the right to vote by 1828, and who had not?"
+    },
+    {
+      "where": "Question the source, question (c)",
+      "what": "The sentence is missing a word: 'What else would you need to know how many people actually voted'. Jordan rereads it and can't work out what it's asking.",
+      "whyItMatters": "Jordan reads below grade level, so a broken sentence stops the answer.",
+      "severity": "minor",
+      "suggestedChange": "'What else would you need to find out how many people really voted in 1828?'",
+      "needsLiveMap": false,
+      "quote": "What else would you need to know how many people actually voted in 1828?"
+    },
+    {
+      "where": "Question the source, step 2 (sentence about women)",
+      "what": "The women sentence is in italics at the very bottom of the pop-up, below the source link. In every picture the pop-up is cut off before it (new-york.jpg, virginia.jpg). Jordan has to scroll inside the pop-up box, which the sheet only mentions once at the top.",
+      "whyItMatters": "If Jordan doesn't scroll, there's no answer for (b).",
+      "severity": "minor",
+      "suggestedChange": "Repeat in step 2: 'Scroll to the bottom of the pop-up.'",
+      "needsLiveMap": false,
+      "quote": "Read the sentence about women at the end of any pop-up."
+    },
+    {
+      "where": "Your answer (final task)",
+      "what": "It's one long instruction: it repeats the whole big question, then asks for evidence from three layers and two pop-ups, then a 'why' question, with a single writing line and no length given.",
+      "whyItMatters": "This is the kind of long instruction where Jordan gives up. Jordan doesn't know how much to write or how to start.",
+      "severity": "slows it down",
+      "suggestedChange": "Break it into parts with starters and a length: 'Write 3-4 sentences.' 'In 1828, white men could vote in ___.' 'Free Black men could vote in ___ but not in ___.' 'So, it did / did not depend on where you lived because ___.' 'My why question: Why ___?'",
+      "needsLiveMap": false,
+      "quote": "using evidence from all three layers and at least two pop-ups. Then write one \"why\" question this map raises for you."
+    },
+    {
+      "where": "Whole sheet: how much to write, and time",
+      "what": "Every section has three or more sub-questions, often with several questions packed into one part (e.g. Reveal white men (c) has two). That's about 17 answers plus the final paragraph and Looking back, and each section gets one writing line.",
+      "whyItMatters": "Jordan doesn't know if one word or a sentence is expected, and won't finish in one class period. The Your answer task, which matters most, comes last and is the one likely to get cut.",
+      "severity": "slows it down",
+      "suggestedChange": "Mark a core path (e.g. Notice a-c, Reveal white men a, Reveal Black men a-b, Your answer) and put the rest as 'if you have time'. Show the expected length next to each part ('one word', 'one sentence').",
+      "needsLiveMap": false,
+      "quote": "Did Jackson win only in states with no rule? Was your prediction right?"
+    },
+    {
+      "where": "Pop-up wording (many states)",
+      "what": "The pop-ups use legal and old terms that the sheet doesn't explain: 'paupers', 'unimproved land', 'mulattoes', 'militia', 'amendment', 'Art. VI, sec. 2', 'McPherson v. Blacker, 1892', 'by districts', 'statewide'. New York's 'Who chose the electors' line is especially hard to follow.",
+      "whyItMatters": "Jordan stops on these words. The bold labels help Jordan find the right line, but some lines can't be read without help.",
+      "severity": "slows it down",
+      "suggestedChange": "Add a short word box on the sheet (militia = part-time state soldiers; pauper = very poor person on public help; amendment = a change to the rules). Move the case and article citations into the source line.",
+      "needsLiveMap": false,
+      "quote": "Voters, by districts; the district electors then chose two more (McPherson v. Blacker, 1892)."
+    },
+    {
+      "where": "Legend, pie section",
+      "what": "The legend shows a grey 'Other' pie colour, but no state has grey.",
+      "whyItMatters": "Jordan may look for grey pies and wonder if one was missed.",
+      "severity": "minor",
+      "suggestedChange": "Remove the 'Other' class from the pie legend.",
+      "needsLiveMap": true,
+      "quote": "Other"
+    }
+  ],
+  "hardWords": [
+    "electors",
+    "suffrage",
+    "legislature",
+    "common man",
+    "Age of Jackson",
+    "expanded",
+    "Appalachian",
+    "property",
+    "militia",
+    "amendment",
+    "constitution",
+    "paupers",
+    "unimproved land",
+    "mulattoes",
+    "qualified",
+    "statewide",
+    "by districts",
+    "in practice",
+    "excluded",
+    "citizen",
+    "colonial"
+  ],
+  "works": [
+    "Steps are numbered and short, and each one names the exact layer or bookmark to use.",
+    "The sheet defines 'suffrage' and explains electors in plain words before the questions.",
+    "Light = fewer limits and dark = more is the same in both rule layers, so Jordan learns it once.",
+    "The pop-ups have bold labels (Who chose the electors, White men, Free Black men) that match the words in the steps, so Jordan can find the right line quickly.",
+    "New York's pop-up shows white men and free Black men next to each other with no scrolling, and the difference is clear ($250 property, only 298 qualified).",
+    "The 'I predict ___ because ___' frame gives a starting point, and the Appalachian Mountains label on the map supports the old-vs-newer states step.",
+    "Blue and orange pies are easy to tell apart, and the tip about '1 of 2' pop-ups heads off a common confusion."
+  ]
+}

@@ -3,8 +3,8 @@
   {
    "id": "lyr968001ceec5",
    "title": "White men and the vote, 1828",
-   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/election_1828_v1_0_0/FeatureServer/0",
-   "itemId": "2da7379e3fdb41d396c6ad49b6f73fef",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/election_1828_v1_1_0/FeatureServer/0",
+   "itemId": "edb62b919c9a44bca6be425bcf047d38",
    "layerType": "ArcGISFeatureLayer",
    "visibility": false,
    "opacity": 1,
@@ -22,21 +22,21 @@
          "type": "esriSFS",
          "style": "esriSFSSolid",
          "color": [
-          255,
-          242,
-          204,
-          200
+          247,
+          247,
+          247,
+          210
          ],
          "outline": {
           "type": "esriSLS",
           "style": "esriSLSSolid",
           "color": [
-           90,
-           90,
-           90,
+           40,
+           40,
+           40,
            255
           ],
-          "width": 0.8
+          "width": 1
          }
         }
        },
@@ -47,21 +47,21 @@
          "type": "esriSFS",
          "style": "esriSFSSolid",
          "color": [
-          232,
-          161,
-          91,
-          200
+          166,
+          166,
+          166,
+          210
          ],
          "outline": {
           "type": "esriSLS",
           "style": "esriSLSSolid",
           "color": [
-           90,
-           90,
-           90,
+           40,
+           40,
+           40,
            255
           ],
-          "width": 0.8
+          "width": 1
          }
         }
        },
@@ -72,21 +72,21 @@
          "type": "esriSFS",
          "style": "esriSFSSolid",
          "color": [
-          140,
-          59,
-          12,
-          200
+          77,
+          77,
+          77,
+          210
          ],
          "outline": {
           "type": "esriSLS",
           "style": "esriSLSSolid",
           "color": [
-           90,
-           90,
-           90,
+           40,
+           40,
+           40,
            255
           ],
-          "width": 0.8
+          "width": 1
          }
         }
        }
@@ -101,21 +101,21 @@
            "type": "esriSFS",
            "style": "esriSFSSolid",
            "color": [
-            255,
-            242,
-            204,
-            200
+            247,
+            247,
+            247,
+            210
            ],
            "outline": {
             "type": "esriSLS",
             "style": "esriSLSSolid",
             "color": [
-             90,
-             90,
-             90,
+             40,
+             40,
+             40,
              255
             ],
-            "width": 0.8
+            "width": 1
            }
           },
           "values": [
@@ -130,21 +130,21 @@
            "type": "esriSFS",
            "style": "esriSFSSolid",
            "color": [
-            232,
-            161,
-            91,
-            200
+            166,
+            166,
+            166,
+            210
            ],
            "outline": {
             "type": "esriSLS",
             "style": "esriSLSSolid",
             "color": [
-             90,
-             90,
-             90,
+             40,
+             40,
+             40,
              255
             ],
-            "width": 0.8
+            "width": 1
            }
           },
           "values": [
@@ -159,21 +159,21 @@
            "type": "esriSFS",
            "style": "esriSFSSolid",
            "color": [
-            140,
-            59,
-            12,
-            200
+            77,
+            77,
+            77,
+            210
            ],
            "outline": {
             "type": "esriSLS",
             "style": "esriSLSSolid",
             "color": [
-             90,
-             90,
-             90,
+             40,
+             40,
+             40,
              255
             ],
-            "width": 0.8
+            "width": 1
            }
           },
           "values": [
@@ -217,8 +217,8 @@
   {
    "id": "lyr975102d0aaf",
    "title": "Free Black men and the vote, 1828",
-   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/election_1828_v1_0_0/FeatureServer/0",
-   "itemId": "2da7379e3fdb41d396c6ad49b6f73fef",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/election_1828_v1_1_0/FeatureServer/0",
+   "itemId": "edb62b919c9a44bca6be425bcf047d38",
    "layerType": "ArcGISFeatureLayer",
    "visibility": false,
    "opacity": 1,
@@ -236,21 +236,21 @@
          "type": "esriSFS",
          "style": "esriSFSSolid",
          "color": [
-          255,
-          242,
-          204,
-          200
+          247,
+          247,
+          247,
+          210
          ],
          "outline": {
           "type": "esriSLS",
           "style": "esriSLSSolid",
           "color": [
-           90,
-           90,
-           90,
+           40,
+           40,
+           40,
            255
           ],
-          "width": 0.8
+          "width": 1
          }
         }
        },
@@ -261,21 +261,21 @@
          "type": "esriSFS",
          "style": "esriSFSSolid",
          "color": [
-          201,
-          160,
-          220,
-          200
+          166,
+          166,
+          166,
+          210
          ],
          "outline": {
           "type": "esriSLS",
           "style": "esriSLSSolid",
           "color": [
-           90,
-           90,
-           90,
+           40,
+           40,
+           40,
            255
           ],
-          "width": 0.8
+          "width": 1
          }
         }
        },
@@ -286,21 +286,21 @@
          "type": "esriSFS",
          "style": "esriSFSSolid",
          "color": [
-          94,
-          60,
-          153,
-          200
+          77,
+          77,
+          77,
+          210
          ],
          "outline": {
           "type": "esriSLS",
           "style": "esriSLSSolid",
           "color": [
-           90,
-           90,
-           90,
+           40,
+           40,
+           40,
            255
           ],
-          "width": 0.8
+          "width": 1
          }
         }
        }
@@ -315,21 +315,21 @@
            "type": "esriSFS",
            "style": "esriSFSSolid",
            "color": [
-            255,
-            242,
-            204,
-            200
+            247,
+            247,
+            247,
+            210
            ],
            "outline": {
             "type": "esriSLS",
             "style": "esriSLSSolid",
             "color": [
-             90,
-             90,
-             90,
+             40,
+             40,
+             40,
              255
             ],
-            "width": 0.8
+            "width": 1
            }
           },
           "values": [
@@ -344,21 +344,21 @@
            "type": "esriSFS",
            "style": "esriSFSSolid",
            "color": [
-            201,
-            160,
-            220,
-            200
+            166,
+            166,
+            166,
+            210
            ],
            "outline": {
             "type": "esriSLS",
             "style": "esriSLSSolid",
             "color": [
-             90,
-             90,
-             90,
+             40,
+             40,
+             40,
              255
             ],
-            "width": 0.8
+            "width": 1
            }
           },
           "values": [
@@ -373,21 +373,21 @@
            "type": "esriSFS",
            "style": "esriSFSSolid",
            "color": [
-            94,
-            60,
-            153,
-            200
+            77,
+            77,
+            77,
+            210
            ],
            "outline": {
             "type": "esriSLS",
             "style": "esriSLSSolid",
             "color": [
-             90,
-             90,
-             90,
+             40,
+             40,
+             40,
              255
             ],
-            "width": 0.8
+            "width": 1
            }
           },
           "values": [
@@ -431,8 +431,8 @@
   {
    "id": "lyr20c2df6d284",
    "title": "Election of 1828: electors' votes",
-   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/election_1828_v1_0_0/FeatureServer/0",
-   "itemId": "2da7379e3fdb41d396c6ad49b6f73fef",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/election_1828_v1_1_0/FeatureServer/0",
+   "itemId": "edb62b919c9a44bca6be425bcf047d38",
    "layerType": "ArcGISFeatureLayer",
    "visibility": true,
    "opacity": 1,
@@ -462,24 +462,7 @@
         ]
        }
       ],
-      "defaultColor": [
-       170,
-       170,
-       170,
-       255
-      ],
-      "defaultLabel": "Other",
       "holePercentage": 0,
-      "othersCategory": {
-       "color": [
-        170,
-        170,
-        170,
-        255
-       ],
-       "label": "Other",
-       "threshold": 0
-      },
       "outline": {
        "type": "esriSLS",
        "style": "esriSLSSolid",
@@ -595,7 +578,7 @@
   "latestWkid": 3857
  },
  "authoringApp": "Map builder",
- "authoringAppVersion": "1.2",
+ "authoringAppVersion": "1.3",
  "version": "2.31",
  "initialState": {
   "viewpoint": {
@@ -632,6 +615,19 @@
     "ymin": 4924240.6,
     "xmax": -7402746.1,
     "ymax": 6040565.2,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  },
+  {
+   "name": "The Middle Atlantic",
+   "extent": {
+    "xmin": -8961219.0,
+    "ymin": 4509031.4,
+    "xmax": -8126322.8,
+    "ymax": 5190985.7,
     "spatialReference": {
      "wkid": 102100,
      "latestWkid": 3857
