@@ -88,8 +88,8 @@
     {
       "title": "Election of 1828: electors' votes",
       "source": {
-        "itemId": "2da7379e3fdb41d396c6ad49b6f73fef",
-        "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/election_1828_v1_0_0/FeatureServer/0"
+        "itemId": "edb62b919c9a44bca6be425bcf047d38",
+        "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/election_1828_v1_1_0/FeatureServer/0"
       },
       "visible": true,
       "symbol": {
@@ -149,8 +149,8 @@
     {
       "title": "Free Black men and the vote, 1828",
       "source": {
-        "itemId": "2da7379e3fdb41d396c6ad49b6f73fef",
-        "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/election_1828_v1_0_0/FeatureServer/0"
+        "itemId": "edb62b919c9a44bca6be425bcf047d38",
+        "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/election_1828_v1_1_0/FeatureServer/0"
       },
       "visible": false,
       "symbol": {
@@ -351,8 +351,8 @@
     {
       "title": "White men and the vote, 1828",
       "source": {
-        "itemId": "2da7379e3fdb41d396c6ad49b6f73fef",
-        "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/election_1828_v1_0_0/FeatureServer/0"
+        "itemId": "edb62b919c9a44bca6be425bcf047d38",
+        "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/election_1828_v1_1_0/FeatureServer/0"
       },
       "visible": false,
       "symbol": {
