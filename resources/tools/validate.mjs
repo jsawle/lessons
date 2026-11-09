@@ -73,6 +73,9 @@ for (const name of names) {
   }
 }
 
+// The same sentence in three or more lessons reads as a template: report it (checker 1.10).
+for (const r of MMR.repeated(lessons.map(([, l]) => l))) problems.push(`"${r.sentence}" appears in ${r.ids.length} lessons (${r.ids.join(", ")}): write it for each map.`);
+
 // The versions table in site.json must match the code it describes.
 const parts = (base.app && base.app.parts) || {};
 const codeVersions = { "Page renderer": MMR.VERSION.renderer, "Lesson file format": MMR.VERSION.format, "Checker": MMR.VERSION.checker,

@@ -1,10 +1,10 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.9",
+  "formatVersion": "1.10",
   "id": "we-the-people-1787-1791",
-  "contentVersion": "0.7.1",
+  "contentVersion": "0.8.0",
   "status": "draft",
-  "updated": "2026-10-22",
+  "updated": "2026-11-09",
   "reviewed": null,
   "title": "We the People: Representation and Ratification, 1787–1791",
   "sheetTitle": {
@@ -24,7 +24,7 @@
     "Government",
     "Data Literacy"
   ],
-  "time": "45 minutes, or 10–15 per question",
+  "time": "About 59 minutes: 49 for the questions and 10 to write the answer. One question on its own takes 10–15",
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "eba1ea7488624f3c88ef094167ed03ca",
@@ -71,19 +71,21 @@
       "date": "2026-10-15",
       "status": "open",
       "where": "Ratifying the Constitution, North Carolina (1788) pie and pop-up",
-      "note": "Sources disagree on this vote, not a map error. The layer follows its own source, the Center for the Study of the American Constitution's Documentary History of the Ratification: 2 August 1788, 83 for and 184 against. [NCpedia](https://www.ncpedia.org/government/convention-1788) gives 1 August 1788 and 184 to 84. Either way the substance holds: the Hillsborough convention neither ratified nor rejected the Constitution until amendments were considered, as the pop-up's note says."
+      "note": "Sources disagree on this vote, not a map error. The layer follows its own source, the Center for the Study of the American Constitution's Documentary History of the Ratification: 2 August 1788, 83 for and 184 against. [NCpedia](https://www.ncpedia.org/government/convention-1788) gives 1 August 1788 and 184 to 84. Either way the substance holds: the Hillsborough convention neither ratified nor rejected the Constitution until amendments were considered, as the pop-up's note says.",
+      "studentVisible": false
     },
     {
       "date": "2026-10-21",
       "status": "open",
       "where": "Population in 1790: free and enslaved (layer item credits)",
-      "note": "The layer item's own credits still cite Wikipedia's tabulation. The figures were verified against the Census Bureau's Return of the Whole Number of Persons (1791) and the 1793 House seats; the item credits should name those sources instead."
+      "note": "The layer item's own credits still cite Wikipedia's tabulation. The figures were verified against the Census Bureau's Return of the Whole Number of Persons (1791) and the 1793 House seats; the item credits should name those sources instead.",
+      "studentVisible": false
     }
   ],
   "inquiry": {
     "compellingQuestion": {
-      "en": "How did the Constitution balance large and small states, and how close did it come to being rejected?",
-      "es": "¿Cómo equilibró la Constitución a los estados grandes y pequeños, y qué tan cerca estuvo de ser rechazada?"
+      "en": "Who was counted in the new Constitution, and how close did it come to being rejected?",
+      "es": "¿A quiénes contó la nueva Constitución, y qué tan cerca estuvo de ser rechazada?"
     },
     "questions": [
       {
@@ -215,7 +217,7 @@
         "lines": 4,
         "answer": {
           "where": "House seats in 1793 layer. Labels and legend (darkest class, 13 to 19 seats): Virginia, VA: 19, the most of the 105 seats. Palest class (1 to 2 seats): Delaware, DE: 1, the fewest; Vermont, Rhode Island, Kentucky and Georgia have 2. Pop-up, third line: \"plus 2 senators, like every state\".",
-          "accept": "A good answer names Virginia (19) and Delaware (1), says every state had two senators, and explains the Great Compromise in its own words: House seats follow population, which suited the large states, while the equal Senate protected the small ones. The pop-up also gives the ratio, one seat for every 33,000 people counted."
+          "accept": "Names Virginia (19) and Delaware (1), says every state had two senators, and explains the Great Compromise in its own words: House seats follow population, which suited the large states, while the equal Senate protected the small ones. The pop-up also gives the ratio, one seat for every 33,000 people counted."
         }
       },
       {
@@ -262,7 +264,7 @@
         "lines": 3,
         "answer": {
           "where": "Population in 1790 or House seats in 1793 pop-up, the lines \"That gave … House seats in 1793\", \"If enslaved people had been counted in full\" and \"If they had not been counted at all\". Virginia: 19, 22, 13. South Carolina: 6, 7, 4. Seven states show a higher seat count under the clause than with no count, listed below.",
-          "accept": "A good answer gives Virginia 19, 22 and 13 (fill-in) and South Carolina 6, 7 and 4, names at least Virginia, North Carolina, Maryland and South Carolina as states that gained seats, and says that enslaved people were counted for seats but could not vote, so the gain went to the slaveholding states. The seven states gained 15 seats in all (105 instead of 90), Virginia alone 6.",
+          "accept": "Gives Virginia 19, 22 and 13 (fill-in) and South Carolina 6, 7 and 4, names at least Virginia, North Carolina, Maryland and South Carolina as states that gained seats, and says that enslaved people were counted for seats but could not vote, so the gain went to the slaveholding states. The seven states gained 15 seats in all (105 instead of 90), Virginia alone 6.",
           "table": {
             "caption": "States whose House seats changed with the three-fifths clause, from the pop-ups",
             "columns": [
@@ -365,7 +367,7 @@
         "lines": 3,
         "answer": {
           "where": "Ratifying the Constitution layer; legend: blue = voted to ratify, orange-red = voted against. Pop-up first line: Rhode Island 34 for, 32 against (label RI 13, May 29, 1790); New York 30–27 (NY 11, July 26, 1788); Massachusetts 187–168 (MA 6, February 6, 1788). By number of votes the next closest are Virginia 89–79 (VA 10) and New Hampshire 57–47 (NH 9, the ninth state, enough to put the Constitution into effect). North Carolina: the NC (1788) pie at Hillsborough, titled \"Did not ratify (first convention)\", 83 for, 184 against, with a note that a second convention ratified in November 1789; the NC 12 pie at Fayetteville, 194–77, November 21, 1789.",
-          "accept": "A good answer names Rhode Island, New York and Massachusetts (accept Virginia or New Hampshire if the student counts the gap in votes rather than the share), and explains that North Carolina's first convention did not ratify and a second one did more than a year later, after Congress had proposed the Bill of Rights. Sources differ on the exact 1788 vote and date; accept the pop-up's figures.",
+          "accept": "Names Rhode Island, New York and Massachusetts (accept Virginia or New Hampshire if the student counts the gap in votes rather than the share), and explains that North Carolina's first convention did not ratify and a second one did more than a year later, after Congress had proposed the Bill of Rights. Sources differ on the exact 1788 vote and date; accept the pop-up's figures.",
           "table": {
             "caption": "Every ratification vote on the map, from the pop-ups",
             "columns": [
@@ -471,10 +473,10 @@
       }
     ],
     "final": {
-      "teacher": "Students answer with evidence from at least two layers. Some ways to do it: a paragraph; sketch pins for James Madison, Alexander Hamilton, Patrick Henry and George Mason, each with a quote and the principle it argues about (sketches are not saved, so finish in one session or take a screenshot); or a short talk using the map.",
+      "teacher": "Students answer with evidence from at least two layers: one number about representation (House seats, senators or the three-fifths lines of a pop-up) and one ratification vote. A paragraph or a short talk using the map both work.",
       "student": {
-        "en": "Answer the big question using evidence from at least two layers on the map. You can write a paragraph, sketch on the map, or both.",
-        "es": "Responde la pregunta central con evidencia de al menos dos capas del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
+        "en": "Answer the big question. Use one number about seats in Congress and one ratification vote from the map.",
+        "es": "Responde la pregunta central. Usa un número sobre los escaños en el Congreso y una votación de ratificación del mapa."
       },
       "tools": [
         "sketch"
@@ -516,7 +518,7 @@
   ],
   "assessment": {
     "evidence": "Strong answers use the House seats in 1793 labels, legend and pop-ups (Virginia VA: 19, Delaware DE: 1, and 2 senators for every state), the three-fifths lines of a pop-up (Virginia 19 seats, 22 if counted in full, 13 if not counted), and the vote line of the Ratifying the Constitution pop-ups (Rhode Island 34–32 on May 29, 1790; New York 30–27; Massachusetts 187–168).",
-    "exemplar": "The Constitution balanced large and small states by giving each state House seats by population but the same two senators, and it came very close to being rejected in small Rhode Island and in big New York and Massachusetts. In the House seats in 1793 layer, the label and the darkest legend class show Virginia with 19 seats, the most, while the palest class shows Delaware with only 1, yet the pop-up for each says plus 2 senators, like every state. That suited the large states in the House and protected the small ones in the Senate. The Virginia pop-up also shows the three-fifths clause at work: 19 seats, but only 13 if enslaved people had not been counted, so slaveholding states gained seats for enslaved people, who could not vote. In the Ratifying the Constitution layer, the vote line of the pop-ups shows how close it was: Rhode Island 34 to 32 on May 29, 1790, New York 30 to 27 on July 26, 1788, and Massachusetts 187 to 168 on February 6, 1788. North Carolina even has two pies, because its first convention at Hillsborough in 1788 did not ratify and a second one did in November 1789. The pattern is that a small state like Delaware ratified first and unanimously, 30 to 0 on December 7, 1787, while the closest votes came in the smallest state, Rhode Island, and in two of the biggest, New York and Massachusetts, so the balance held, but only just."
+    "exemplar": "The Constitution counted people in two different ways, and it only just passed. Every state got two senators, but House seats followed population, so Virginia had 19 seats and Delaware had 1. Enslaved people were counted as three-fifths even though they could not vote. That gave Virginia 19 seats when it would have had 13 if enslaved people had not been counted, and South Carolina 6 where it would have had 4. So the extra seats went to slaveholding states. Ratification was close in some states. Rhode Island voted 34 to 32, New York 30 to 27 and Massachusetts 187 to 168. North Carolina's first convention did not ratify, and a second one did in November 1789. Delaware voted 30 to 0, so the fight was much harder in some states than in others."
   },
   "studentSupport": {
     "beforeYouStart": {
@@ -531,8 +533,8 @@
       "popups"
     ],
     "reflection": {
-      "en": "What did the map show you about the Constitution that you might not have noticed from reading alone?",
-      "es": "¿Qué te mostró el mapa sobre la Constitución que quizá no habrías notado solo con la lectura?"
+      "en": "Which number on this map surprised you most, and why?",
+      "es": "¿Qué número de este mapa te sorprendió más, y por qué?"
     }
   },
   "teacherNotes": {

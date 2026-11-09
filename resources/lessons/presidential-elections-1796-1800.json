@@ -1,16 +1,16 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.9",
+  "formatVersion": "1.10",
   "id": "presidential-elections-1796-1800",
-  "contentVersion": "0.7.2",
+  "contentVersion": "0.8.0",
   "status": "draft",
-  "updated": "2026-10-22",
+  "updated": "2026-11-09",
   "reviewed": null,
-  "title": "Political Parties and Federal Power, 1796–1819",
+  "title": "The First Political Parties, 1796–1800",
   "sheetTitle": {
-    "es": "Partidos políticos y poder federal, 1796–1819"
+    "es": "Los primeros partidos políticos, 1796–1800"
   },
-  "summary": "Compare how each state's electors voted in 1796 and 1800, see which states changed sides, and find two Supreme Court cases that shaped the new government. The elections of 1796 and 1800 show the first party divide; two Supreme Court cases, in 1803 and 1819, show how the new federal government's power was tested.",
+  "summary": "Compare how each state's electors voted in 1796 and 1800, see which states changed sides, and work out whether one state decided the election of 1800.",
   "subject": "History",
   "course": "US History",
   "unit": "The early republic",
@@ -21,11 +21,11 @@
     "Civics",
     "Geography"
   ],
-  "time": "45 minutes, or 10–15 per question",
+  "time": "About 57 minutes: 47 for the questions and 10 to write the answer. One question on its own takes 10–15",
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "6173219d9cd84812bcd4fed859b2c182",
-    "about": "This map compares the elections of 1796 and 1800 state by state: a pie on each of the sixteen states shows how its electors voted in the contests between John Adams (Federalist) and Thomas Jefferson (Democratic-Republican). The 1800 layer is off when the map opens, because the two sets of pies overlap. Two pink squares mark landmark Supreme Court cases that tested the new federal government's power: Marbury v. Madison (1803) in Washington, D.C., and McCulloch v. Maryland (1819) in Baltimore.",
+    "about": "This map compares the elections of 1796 and 1800 state by state: a pie on each of the sixteen states shows how its electors voted in the contests between John Adams (Federalist) and Thomas Jefferson (Democratic-Republican). The 1800 layer is off when the map opens, because the two sets of pies overlap. Two pink squares mark landmark Supreme Court cases that tested the new federal government's power: Marbury v. Madison (1803) in Washington, D.C., and McCulloch v. Maryland (1819) in Baltimore. This lesson's questions use the two election layers only.",
     "image": {
       "url": "https://jsawle.github.io/lessons/resources/assets/screenshots/presidential-elections-1796-1800.jpg",
       "alt": "The eastern United States in 1796, each state with a pie of electors' votes in orange and blue (bigger pies for more electors), and two pink squares, one labeled Marbury v. Madison (1803).",
@@ -206,59 +206,58 @@
       {
         "id": "q4",
         "title": {
-          "en": "The Supreme Court, near the capital",
-          "es": "La Corte Suprema, cerca de la capital"
+          "en": "Did one state decide the election?",
+          "es": "¿Decidió un solo estado la elección?"
         },
-        "task": "Click the two pink squares and read Why here to find what happened in each place; measure the straight-line distance between them and ask why both cases arose so close to the capital.",
+        "task": "With Election of 1800 on, students click New York and the split states, read the electors' votes, and work out what the result would have been if New York had voted as it did in 1796.",
         "tools": [
-          "popups",
-          "measure"
+          "layers",
+          "popups"
         ],
         "core": false,
-        "minutes": 12,
+        "minutes": 10,
         "frontOfClass": [
-          "Zoom in on the two pink squares near the capital.",
-          "Click Marbury v. Madison (1803) and read the Why here part of the pop-up.",
-          "Click McCulloch v. Maryland (1819) and read its Why here part.",
-          "Ask: what happened in each place to bring the case to the Court?",
-          "Open Measure and click from one square to the other for the straight-line distance in miles.",
-          "Ask: why might both cases have come from so near the capital?"
+          "In Map layers, make sure Election of 1800 is on and Election of 1796 is off.",
+          "Click New York and read its electors in the pop-up title: 12, all for Jefferson.",
+          "Give the class the totals, which are not on the map: Jefferson 73, Adams 65.",
+          "Ask: if New York's 12 electors had voted for Adams, as in 1796, what would the totals have been?",
+          "Click Maryland, Pennsylvania and North Carolina. Ask: which other states were close enough to change the result?"
         ],
         "steps": [
           {
-            "en": "Click the two pink squares: Marbury v. Madison (1803) and McCulloch v. Maryland (1819).",
-            "es": "Haz clic en los dos cuadrados rosados: Marbury v. Madison (1803) y McCulloch v. Maryland (1819)."
+            "en": "In Map layers, make sure Election of 1800 is on.",
+            "es": "En las capas del mapa (Map layers), comprueba que Election of 1800 esté activada."
           },
           {
-            "en": "Read the Why here part of each pop-up.",
-            "es": "Lee la parte Why here (por qué aquí) de cada ventana emergente."
+            "en": "Click New York and read how many electors it had and how they voted.",
+            "es": "Haz clic en Nueva York y lee cuántos electores tenía y cómo votaron."
           },
           {
-            "en": "Use Measure to find the straight-line distance between the two squares.",
-            "es": "Usa la herramienta de medir (Measure) para hallar la distancia en línea recta entre los dos cuadrados."
+            "en": "Click the two-color pies again and read how close each state was.",
+            "es": "Vuelve a hacer clic en los gráficos de dos colores y lee qué tan reñido estuvo cada estado."
           }
         ],
         "ask": {
-          "en": "What happened in each place to bring the case to the Court? How far apart are the two squares? Why might both cases have come from so near the national capital?",
-          "es": "¿Qué ocurrió en cada lugar para que el caso llegara a la Corte? ¿A qué distancia están los dos cuadrados? ¿Por qué crees que los dos casos surgieron tan cerca de la capital nacional?"
+          "en": "In 1800 Jefferson won 73 electors' votes and Adams 65. If New York had voted as it did in 1796, what would the totals have been? Which other states were close enough to change the result?",
+          "es": "En 1800 Jefferson obtuvo 73 votos de electores y Adams 65. Si Nueva York hubiera votado como en 1796, ¿cuáles habrían sido los totales? ¿Qué otros estados estuvieron lo bastante reñidos como para cambiar el resultado?"
         },
         "fill": {
-          "en": "Distance between the two cases: about ____ miles.",
-          "es": "Distancia entre los dos casos: unas ____ millas."
+          "en": "With New York: Adams ____, Jefferson ____.",
+          "es": "Con Nueva York: Adams ____, Jefferson ____."
         },
         "lines": 3,
         "answer": {
-          "where": "Landmark Supreme Court cases layer. Marbury v. Madison pop-up, Why here: William Marbury asked the Supreme Court in Washington for an order to get his commission. McCulloch v. Maryland pop-up, Why here: Maryland sued James McCulloch, cashier at the Baltimore branch of the Bank of the United States, to collect its tax on the bank. Measure tool, Baltimore square to Washington square: about 35 miles (accept 32 to 38).",
-          "accept": "Any sensible link between the places and federal power: the Court and the federal government sat in Washington, so a dispute over a federal appointment began there; the Bank of the United States had a branch in nearby Baltimore, and Maryland's tax on it set state law against federal law.",
-          "text": "The pop-ups also give the ruling and Why it matters: Marbury established judicial review (the pop-up quotes \"A Law repugnant to the Constitution is void\"); McCulloch held that Congress could charter the bank and that federal law is supreme over state law, so Maryland's tax was void. Marbury grew out of the change of party in 1801: Marbury was one of John Adams's last-minute appointments, and Jefferson's administration did not deliver his commission."
+          "where": "Election of 1800: electors' votes layer. New York pop-up title: 12 electors, all for Jefferson in 1800 (all for Adams in 1796). Moving those 12 gives Adams 65 + 12 = 77 and Jefferson 73 − 12 = 61. Split states, from the 1800 votes line: Maryland (Jefferson 5, Adams 5), Pennsylvania (Jefferson 8, Adams 7), North Carolina (Jefferson 8, Adams 4).",
+          "accept": "Adams 77, Jefferson 61: New York's switch was enough to decide the election. Maryland (5 to 5) and Pennsylvania (8 to 7) were the closest states. A swing of five electors anywhere would also have reversed the result (65 + 5 = 70 against 73 − 5 = 68), so accept either state with that reasoning.",
+          "text": "The totals are not on the map, so the question gives them. Each elector cast two votes, which is why Jefferson and Burr tied at 73; the pop-ups explain it."
         }
       }
     ],
     "final": {
-      "teacher": "Students answer with evidence from at least two layers. Some ways to do it: a paragraph; a sketch that marks each party's region (sketches are not saved, so students should screenshot or describe them); or sketch pins for the First Bank of the United States (Philadelphia, 1791) and Washington's Farewell Address (published in Philadelphia, 1796), with notes. Accept answers that name a region for each party, use the split states or New York's switch as evidence, and connect the parties to a dispute over federal power (the bank, the courts).",
+      "teacher": "Students answer with evidence from both election layers. Accept answers that name a region for each party and use the split states or New York's switch as evidence. A paragraph, or a sketch that marks each party's region (sketches are not saved, so students should screenshot or describe them), both work.",
       "student": {
-        "en": "Answer the big question using evidence from at least two layers on the map. You can write a paragraph, sketch on the map, or both.",
-        "es": "Responde la pregunta central con evidencia de al menos dos capas del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
+        "en": "Answer the big question. Name each party's region, and use one state that split or switched as your evidence.",
+        "es": "Responde la pregunta central. Nombra la región de cada partido y usa como evidencia un estado que se dividió o que cambió de bando."
       },
       "tools": [
         "sketch"
@@ -269,17 +268,17 @@
     "Use the pies and legend of the Election of 1796 layer to describe which regions voted mostly for Adams and which for Jefferson, and click the split states for their numbers.",
     "Switch between the 1796 and 1800 layers to find the state whose whole pie changed color and the states whose shares changed.",
     "Read the two-color pies in the Election of 1800 layer to identify the closest state.",
-    "Click the two Supreme Court case markers, read what happened in each place, and measure the straight-line distance between them.",
+    "Use New York's electors and the split states in the Election of 1800 layer to work out whether one state decided the election.",
     "Use the pattern of electors' votes across the sixteen states as evidence to describe where each party was strong in 1800."
   ],
   "discussion": [
     "Comparing the 1796 and 1800 pies, where did the Federalists hold on and where did they lose ground? What do those regions have in common on the map?",
     "In both elections a few states split their electors between the two candidates. Which states were they, and why might a state's electors not all vote the same way?",
-    "Marbury v. Madison and McCulloch v. Maryland both arose within a short distance of the capital. Using the distance you measured, why might the earliest tests of federal power have come from so close to Washington?"
+    "New York's 12 electors all changed sides between 1796 and 1800. What might make a whole state change its vote in four years, and what would you want to find out to check your idea?"
   ],
   "differentiation": {
     "support": "Do question 1 from the front with the legend open, and write the two candidates and their colors on the board before pairs click the split states.",
-    "stretch": "Using both election layers and the electors in each pop-up title, work out which states Adams would have needed to win in 1800, and what New York's switch was worth."
+    "stretch": "Click the pink square at Washington, D.C. and read the Marbury v. Madison pop-up. What did the change of party in 1801 have to do with this case?"
   },
   "resources": [
     {
@@ -299,8 +298,8 @@
     }
   ],
   "assessment": {
-    "evidence": "Strong answers use the pies and legend of the Election of 1796 and Election of 1800 layers (orange for Adams, blue for Jefferson) with numbers from the pop-up votes lines, such as New York's 12 electors switching from all Adams to all Jefferson, Maryland 7–4 then 5–5 and Pennsylvania 14–1 then 8–7, and the Why here parts of the Supreme Court pop-ups with a Measure distance of about 35 miles.",
-    "exemplar": "The first political parties divided the country by region: the Federalists held New England and the Democratic-Republicans held the South and the West, while the middle states were split and decided the result. In the Election of 1796 layer, the legend shows orange for John Adams and blue for Thomas Jefferson, and the pies for Massachusetts, Connecticut, New Hampshire, Rhode Island and Vermont are all orange, while Georgia, Kentucky, South Carolina and Tennessee are blue. The two-color pies are in the middle: the pop-up's 1796 votes line gives Maryland Adams 7, Jefferson 4, and Pennsylvania Jefferson 14, Adams 1. When I turned on the Election of 1800 layer, New York's whole pie changed from orange to blue, and its pop-up title shows 12 electors, more than the margin, so one state changed who won. Maryland's pop-up shows 5 to 5, the closest state, and Pennsylvania moved to 8 to 7, so the middle stayed contested while no New England state changed. The Landmark Supreme Court cases layer shows the divide went beyond elections: Why here says Marbury asked the Court in Washington for his commission and Maryland taxed the Bank's Baltimore branch, and Measure gives about 35 miles between the squares, so the first fights over federal power were next to the capital. The pattern held in both elections, but the parties only competed in a few states, so most states were not divided inside."
+    "evidence": "Strong answers use the pies and legend of the Election of 1796 and Election of 1800 layers (orange for Adams, blue for Jefferson) with numbers from the pop-ups, such as New York's 12 electors switching from all Adams to all Jefferson, Maryland 7–4 then 5–5 and Pennsylvania 14–1 then 8–7.",
+    "exemplar": "The first parties split the country by region. In 1796 every New England state voted for Adams, the Federalist. Georgia, Kentucky, South Carolina and Tennessee all voted for Jefferson. The states in the middle were divided. Maryland gave Adams 7 votes and Jefferson 4, and four years later it split 5 to 5. Pennsylvania went from 14 to 1 for Jefferson to 8 to 7. The biggest change was New York. All 12 of its electors voted for Adams in 1796 and all 12 voted for Jefferson in 1800. No New England state changed at all. So each party had a region it could count on, and the election was decided in a few states between them."
   },
   "studentSupport": {
     "beforeYouStart": {
@@ -308,15 +307,15 @@
       "es": "George Washington no pertenecía a ningún partido y, en 1796, cuando se preparaba para dejar la presidencia, advirtió a los estadounidenses contra los partidos. Para entonces ya se habían formado dos: los federalistas, encabezados por John Adams y Alexander Hamilton, y los demócrata-republicanos, encabezados por Thomas Jefferson y James Madison. Cada elector emitía dos votos para presidente, y quien quedaba en segundo lugar era vicepresidente."
     },
     "readingTheMap": {
-      "en": "The map has no place names: click a pie to see the state's name and its number of electors. Each pie shows how a state's electors voted: orange for John Adams (Federalist) and blue for Thomas Jefferson (Democratic-Republican); use the legend. Bigger pies mean more electors. Each elector cast two votes; the pop-up lists the other candidates. Election of 1800 is off when the map opens. Pink squares mark two Supreme Court cases; each pop-up has a Why here part. Maine is shown within Massachusetts and West Virginia within Virginia, and territories aren't shown.",
-      "es": "El mapa no tiene nombres de lugares: haz clic en un gráfico circular para ver el nombre del estado y su número de electores. Cada gráfico muestra cómo votaron los electores de un estado: naranja para John Adams (federalista) y azul para Thomas Jefferson (demócrata-republicano); usa la leyenda. Los gráficos más grandes indican más electores. Cada elector emitía dos votos; la ventana emergente muestra a los demás candidatos. La capa Election of 1800 está desactivada al abrir el mapa. Los cuadrados rosados marcan dos casos de la Corte Suprema; cada ventana emergente tiene una parte Why here (por qué aquí). Maine aparece dentro de Massachusetts y Virginia Occidental dentro de Virginia, y no se muestran los territorios."
+      "en": "The map has no place names: click a pie to see the state's name and its number of electors. Each pie shows how a state's electors voted: orange for John Adams (Federalist) and blue for Thomas Jefferson (Democratic-Republican); use the legend. Bigger pies mean more electors. Each elector cast two votes; the pop-up lists the other candidates. Election of 1800 is off when the map opens. Pink squares mark two Supreme Court cases; this lesson does not use them. Maine is shown within Massachusetts and West Virginia within Virginia, and territories aren't shown.",
+      "es": "El mapa no tiene nombres de lugares: haz clic en un gráfico circular para ver el nombre del estado y su número de electores. Cada gráfico muestra cómo votaron los electores de un estado: naranja para John Adams (federalista) y azul para Thomas Jefferson (demócrata-republicano); usa la leyenda. Los gráficos más grandes indican más electores. Cada elector emitía dos votos; la ventana emergente muestra a los demás candidatos. La capa Election of 1800 está desactivada al abrir el mapa. Los cuadrados rosados marcan dos casos de la Corte Suprema; esta lección no los usa. Maine aparece dentro de Massachusetts y Virginia Occidental dentro de Virginia, y no se muestran los territorios."
     },
     "tips": [
       "popups"
     ],
     "reflection": {
-      "en": "What did the map show you about the first political parties that you might not have noticed from reading alone?",
-      "es": "¿Qué te mostró el mapa sobre los primeros partidos políticos que quizá no habrías notado solo con la lectura?"
+      "en": "If you could have changed the result in one state in 1800, which would you pick, and why that one?",
+      "es": "Si hubieras podido cambiar el resultado en un solo estado en 1800, ¿cuál elegirías, y por qué ese?"
     }
   },
   "teacherNotes": {
@@ -352,24 +351,12 @@
       "text": "Explain the origin and development of American political parties"
     },
     {
-      "code": "TX 8.18(A)",
-      "text": "Identify the origin of judicial review"
-    },
-    {
-      "code": "TX 8.18(B)",
-      "text": "Summarize the issues, decisions, and significance of landmark Supreme Court cases, including Marbury v. Madison, McCulloch v. Maryland, and Gibbons v. Ogden"
-    },
-    {
       "code": "FL SS.8.A.3.13",
       "text": "Explain major domestic and international economic, military, political, and socio-cultural events of John Adams's presidency."
     },
     {
       "code": "FL SS.8.A.3.14",
       "text": "Explain major domestic and international economic, military, political, and socio-cultural events of Thomas Jefferson's presidency."
-    },
-    {
-      "code": "C3 D2.Civ.4.6-8",
-      "text": "Explain the powers and limits of the three branches of government, public officials, and bureaucracies at different levels in the United States and in other countries."
     }
   ],
   "languages": {

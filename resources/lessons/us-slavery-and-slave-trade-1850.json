@@ -1,10 +1,10 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.9",
+  "formatVersion": "1.10",
   "id": "us-slavery-and-slave-trade-1850",
-  "contentVersion": "0.8.2",
+  "contentVersion": "0.8.3",
   "status": "draft",
-  "updated": "2026-10-22",
+  "updated": "2026-11-09",
   "reviewed": null,
   "title": "US Slavery and Slave Trade, 1850",
   "sheetTitle": {
@@ -24,7 +24,7 @@
     "Civics",
     "Social Studies"
   ],
-  "time": "45 minutes, or 10–15 per question",
+  "time": "About 57 minutes: 47 for the questions and 10 to write the answer. One question on its own takes 10–15",
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "819f60a5a3344d958d24f505849abaaa",
@@ -77,25 +77,29 @@
       "where": "US States and Territories 1850 pop-up",
       "note": "The line \"It is recorded on the primary source as:\" shows a code number (for example 11) instead of the map's own wording.",
       "status": "open",
-      "date": "2026-10-12"
+      "date": "2026-10-12",
+      "studentVisible": true
     },
     {
       "where": "US States and Territories 1850",
       "note": "The layer has separate West Virginia and Oklahoma features. In 1850 West Virginia was part of Virginia (it became a state in 1863; its pop-up year is 1863), and Oklahoma was not a state or territory.",
       "status": "open",
-      "date": "2026-10-12"
+      "date": "2026-10-12",
+      "studentVisible": true
     },
     {
       "where": "US States and Territories 1850",
       "note": "Missouri is drawn twice, as two overlapping features: once under Slave states and once under Slave states and territories by compromise. Clicking it gives a pop-up that says 1 of 2.",
       "status": "open",
-      "date": "2026-10-15"
+      "date": "2026-10-15",
+      "studentVisible": true
     },
     {
       "where": "US States and Territories 1850 pop-up",
       "note": "Some pop-up years can puzzle students: Illinois gives 1848 (its new constitution, though it entered as a free state in 1818), Maine gives 1783 (when it was still part of Massachusetts), and New Jersey has no year, so its pop-up reads oddly.",
       "status": "open",
-      "date": "2026-10-15"
+      "date": "2026-10-15",
+      "studentVisible": true
     }
   ],
   "inquiry": {
@@ -217,7 +221,7 @@
         },
         "answer": {
           "where": "Missouri Compromise Line pop-up: title Missouri Compromise Line (36°30′ North), year Enacted 1820, and a note that the line divided future slave and free states west of the Mississippi and that Missouri was the exception because most of it lies north of the parallel. On the map, Missouri (green, slave state shades) sits almost entirely north of the line.",
-          "accept": "1820; Missouri. A good answer says Missouri was allowed in as a slave state even though it lies north of the line, so the line was a deal, not a rule that applied everywhere, and it set up the argument over every new state and territory. Mentioning Maine as the free state admitted at the same time is extra."
+          "accept": "1820; Missouri. Says Missouri was allowed in as a slave state even though it lies north of the line, so the line was a deal, not a rule that applied everywhere, and it set up the argument over every new state and territory. Mentioning Maine as the free state admitted at the same time is extra."
         }
       },
       {
@@ -266,7 +270,7 @@
         },
         "answer": {
           "where": "Internal Routes of the US Slave Trade, solid black lines (no pop-up). Reading them against the state pop-ups: several lines start in Virginia (one from near the Ohio border and one from Kentucky join them), one starts in North Carolina, and they run south and west to meet in central Alabama and at the Mississippi coast in Louisiana. They reach the coast at New Orleans and the Gulf (Louisiana, Alabama) and on the Atlantic off South Carolina.",
-          "accept": "A good answer names Virginia (and Kentucky or North Carolina) at one end and Alabama, Mississippi and Louisiana, with New Orleans on the Gulf, at the other, and says the lines join up as they head south and west toward the ports. From that pattern and from class, students should say enslaved people were moved from the older Upper South to the Deep South and the Gulf, where cotton and sugar plantations wanted labor; accept any direction argued from the map plus a reason."
+          "accept": "Names Virginia (and Kentucky or North Carolina) at one end and Alabama, Mississippi and Louisiana, with New Orleans on the Gulf, at the other, and says the lines join up as they head south and west toward the ports. From that pattern and from class, students should say enslaved people were moved from the older Upper South to the Deep South and the Gulf, where cotton and sugar plantations wanted labor; accept any direction argued from the map plus a reason."
         }
       },
       {
@@ -311,15 +315,15 @@
         },
         "answer": {
           "where": "Illinois, Indiana, and Ohio bookmark; Underground Railroad Approximate Routes (orange lines) and Cities (orange dots in the US, black dots in Canada; labels draw when zoomed in). Routes run north across Ohio, Indiana and Illinois to Lake Erie and the Detroit River, at Cleveland, Ashtabula, Toledo and Detroit, and on to the black dots at Chatham and Toronto (Ontario) and Montreal (Quebec).",
-          "accept": "North to the Great Lakes and across into Canada. A good answer gives two or three town names from the map and explains that freedom seekers were not safe in free states (after the Fugitive Slave Act of 1850 they could be captured and returned), so Canada, outside the United States, was the safer end of the route."
+          "accept": "North to the Great Lakes and across into Canada. Gives two or three town names from the map and explains that freedom seekers were not safe in free states (after the Fugitive Slave Act of 1850 they could be captured and returned), so Canada, outside the United States, was the safer end of the route."
         }
       }
     ],
     "final": {
       "teacher": "Students answer with evidence from at least two layers. Some ways to do it: a paragraph, a sketch that marks free and slave states and one route (sketches are not saved, so students should screenshot or describe them), or a short talk using the map.",
       "student": {
-        "en": "Answer the big question using evidence from at least two layers on the map. You can write a paragraph, sketch on the map, or both.",
-        "es": "Responde la pregunta central con evidencia de al menos dos capas del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
+        "en": "Answer the big question. Use one line on the map that divided the country and one route that crossed it.",
+        "es": "Responde la pregunta central. Usa una línea del mapa que dividía al país y una ruta que la cruzaba."
       },
       "tools": [
         "sketch"
@@ -361,7 +365,7 @@
   ],
   "assessment": {
     "evidence": "Strong answers use the four legend groups and state pop-up years from US States and Territories 1850 (Pennsylvania 1780, Virginia 1788), the line along the southern border of Pennsylvania and the Ohio River, the Missouri Compromise Line pop-up (Enacted 1820), the black Internal Routes of the US Slave Trade from Virginia to New Orleans, and the orange Underground Railroad routes north to Canada.",
-    "exemplar": "By 1850 slavery divided the United States into a free North and a slave South, with a line that every new state and every escape route had to cross. The legend for US States and Territories 1850 has four groups, and the pop-ups give each state's year: Pennsylvania 1780 in the Free states group and Virginia 1788 in the Slave states group. In the East the shade changes along the southern border of Pennsylvania and then the Ohio River, so a river marked the divide. The Missouri Compromise Line pop-up says Enacted 1820 and that Missouri was the exception because most of it lies north of the parallel, so the division was a deal, not a rule. With the Underground Railroad layer off, the black Internal Routes of the US Slave Trade start in Virginia and join up heading south and west to New Orleans, so enslaved people were moved from the Upper South to the Deep South for plantation labor. From the Illinois, Indiana, and Ohio bookmark, the orange Underground Railroad routes run north past Cleveland and Detroit to the black dots at Chatham and Toronto in Canada, because after the Fugitive Slave Act of 1850 free states were unsafe. One limit is that the layers were traced from a 1920 atlas, so the routes are approximate."
+    "exemplar": "By 1850 slavery split the country into a free North and a slave South. In the East the line between them runs along the southern border of Pennsylvania and then the Ohio River. In the West, the Missouri Compromise Line of 1820 was supposed to divide future free and slave states, but Missouri is a slave state that lies mostly north of it. So the line was a deal, not a rule that held everywhere. The black lines of the slave trade start in Virginia and North Carolina and come together in Alabama and at New Orleans. Enslaved people were forced south and west to the cotton and sugar country. The orange Underground Railroad routes go the other way, north across Ohio, Indiana and Illinois to Cleveland and Detroit. Many keep going to Chatham and Toronto in Canada, because after the Fugitive Slave Act of 1850 free states were not safe."
   },
   "studentSupport": {
     "beforeYouStart": {
@@ -376,8 +380,8 @@
       "popups"
     ],
     "reflection": {
-      "en": "What did the map show you about slavery in 1850 that you might not have noticed from reading alone?",
-      "es": "¿Qué te mostró el mapa sobre la esclavitud en 1850 que quizá no habrías notado solo con la lectura?"
+      "en": "Many routes north kept going into Canada. What does that tell you about the word \"free\" in \"free state\"?",
+      "es": "Muchas rutas hacia el norte seguían hasta Canadá. ¿Qué te dice eso sobre la palabra «libre» en «estado libre»?"
     }
   },
   "teacherNotes": {

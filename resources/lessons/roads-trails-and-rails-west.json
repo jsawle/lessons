@@ -1,10 +1,10 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.9",
+  "formatVersion": "1.10",
   "id": "roads-trails-and-rails-west",
-  "contentVersion": "0.7.2",
+  "contentVersion": "0.8.0",
   "status": "draft",
-  "updated": "2026-10-22",
+  "updated": "2026-11-09",
   "reviewed": null,
   "title": "Roads, Trails, and Rails West",
   "sheetTitle": {
@@ -24,7 +24,7 @@
     "Indigenous Studies",
     "Economics"
   ],
-  "time": "45 minutes, or 10–15 per question",
+  "time": "About 59 minutes: 49 for the questions and 10 to write the answer. One question on its own takes 10–15",
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "3ec83a9d66454ade8aead0a64872d931",
@@ -67,13 +67,15 @@
       "where": "Trails West pop-up (Oregon)",
       "note": "Gives the years 1840 to 1860, then says many travelers were \"fleeing the American Civil War (1861-1865)\", which began after that period.",
       "status": "open",
-      "date": "2026-10-12"
+      "date": "2026-10-12",
+      "studentVisible": true
     },
     {
       "where": "Trails West pop-up (Mormon Pioneer)",
       "note": "The description ends mid-sentence.",
       "status": "open",
-      "date": "2026-10-15"
+      "date": "2026-10-15",
+      "studentVisible": true
     }
   ],
   "inquiry": {
@@ -96,7 +98,7 @@
         "core": false,
         "minutes": 10,
         "frontOfClass": [
-          "Open the legend and show the seven trail colours.",
+          "Open the legend and show the seven trail colors.",
           "Click the dotted Oregon trail line and read where it started and ended.",
           "Click the Santa Fe trail and read where it started.",
           "Click the Pony Express trail and read where it started.",
@@ -118,8 +120,8 @@
           }
         ],
         "ask": {
-          "en": "Where did each trail start and end? In which state do most of the trails start?",
-          "es": "¿Dónde empezaba y terminaba cada sendero? ¿En qué estado empiezan la mayoría de los senderos?"
+          "en": "Where did each trail start? In which state do most of them start, and why there? Use the Missouri River on the map.",
+          "es": "¿Dónde empezaba cada sendero? ¿En qué estado empieza la mayoría, y por qué allí? Usa el río Misuri del mapa."
         },
         "lines": 4,
         "answer": {
@@ -223,7 +225,7 @@
         },
         "answer": {
           "where": "Oregon Trail pop-up: about 2,000 miles (3,219 km); 300,000 to 400,000 people between 1840 and 1860. Measure tool, Independence to Portland: about 1,500 miles (accept 1,450 to 1,550).",
-          "accept": "The trail is about 500 miles longer than the straight line. A good answer says the dotted line bends to follow rivers (the pop-up names the Platte, North Platte, Snake and Columbia) for water and grass, and crosses the mountains through passes rather than straight over them."
+          "accept": "The trail is about 500 miles longer than the straight line. Says the dotted line bends to follow rivers (the pop-up names the Platte, North Platte, Snake and Columbia) for water and grass, and crosses the mountains through passes rather than straight over them."
         }
       },
       {
@@ -279,7 +281,7 @@
           "en": "From trails to rails",
           "es": "De los senderos a los rieles"
         },
-        "task": "Turn on the Railroads group in Map layers. Using the legend, which trails does the Union Pacific and Central Pacific line follow most closely? Click a thin gray railroad line to see when it was in operation (the thick transcontinental lines have no pop-up).",
+        "task": "Turn on the Railroads group in Map layers. Using the legend, which trails does the Union Pacific and Central Pacific line follow most closely? Click a thin gray railroad line near a trail, read when it was in operation, and compare the year with 1869, when the California Trail stopped being used (the thick transcontinental lines have no pop-up).",
         "tools": [
           "layers",
           "popups",
@@ -292,8 +294,8 @@
           "Open the legend and find Transcontinental Railroad (Union Pacific) and Transcontinental Railroad (Central Pacific).",
           "Trace the two thick lines from Omaha to Sacramento.",
           "Ask: which dotted trails do they follow most closely?",
-          "Click a thin gray railroad line and read the year it was in operation by.",
-          "Ask: what happened to the wagon trails once the railroad opened?"
+          "Click a thin gray railroad line near a trail and read the year it was in operation by.",
+          "Ask: was that before or after 1869, and what happened to the wagon trails once the railroad opened?"
         ],
         "steps": [
           {
@@ -305,25 +307,25 @@
             "es": "Usa la leyenda para encontrar las líneas Transcontinental Railroad (Union Pacific) y (Central Pacific)."
           },
           {
-            "en": "Click a thin gray railroad line and read when it was in operation by.",
-            "es": "Haz clic en una línea gris fina de ferrocarril y lee desde cuándo funcionaba."
+            "en": "Click a thin gray railroad line near one of the trails and read when it was in operation by.",
+            "es": "Haz clic en una línea gris fina de ferrocarril cerca de uno de los senderos y lee desde cuándo funcionaba."
           }
         ],
         "ask": {
-          "en": "Which trails do the Transcontinental Railroad lines follow most closely? By when was the gray railroad line in operation?",
-          "es": "¿Qué senderos siguen más de cerca las líneas del Transcontinental Railroad? ¿Desde cuándo funcionaba la línea gris de ferrocarril?"
+          "en": "Which trails do the Transcontinental Railroad lines follow most closely? Was your gray line in operation before or after 1869, when the California Trail stopped being used? What does that suggest?",
+          "es": "¿Qué senderos siguen más de cerca las líneas del Transcontinental Railroad? ¿Tu línea gris funcionaba antes o después de 1869, cuando dejó de usarse el California Trail? ¿Qué sugiere eso?"
         },
         "answer": {
-          "where": "Legend: Transcontinental Railroad (Union Pacific) and Transcontinental Railroad (Central Pacific) are thick colored lines running from Omaha across Nebraska, Wyoming, Utah and Nevada to Sacramento. Compare with the dotted California and Mormon Pioneer trails (and the Pony Express across Nevada). Railroads 1826 to 1911 pop-up: \"Railroad in operation by:\" followed by a year; any year the student reads is fine. The California Trail pop-up says the trail was used until 1869, when the transcontinental railroad was completed.",
-          "accept": "The California and Mormon Pioneer trails (also the Pony Express across Nevada). A good answer notes the railroad runs along the same river valleys and passes the wagon trails used, and gives a year read from a gray line's pop-up."
+          "where": "Legend: Transcontinental Railroad (Union Pacific) and Transcontinental Railroad (Central Pacific) are thick colored lines running from Omaha across Nebraska, Wyoming, Utah and Nevada to Sacramento. Compare with the dotted California and Mormon Pioneer trails (and the Pony Express across Nevada). Railroads 1826 to 1911 pop-up: \"Railroad in operation by:\" followed by a year. West of the Missouri River the layer's earliest lines are dated 1865 (Nebraska), 1867 (Wyoming), 1868 (Nevada) and 1869 (Utah); California and Texas have lines from the 1850s. The California Trail pop-up says the trail was used until 1869, when the transcontinental railroad was completed.",
+          "accept": "The California and Mormon Pioneer trails (also the Pony Express across Nevada). A year read from a gray line's pop-up, correctly placed before or after 1869. Most lines along the trails west of the Missouri River date from the late 1860s or later, so the railroads arrived as the wagon trails went out of use, and ran along the same river valleys and passes."
         }
       }
     ],
     "final": {
       "teacher": "Students answer with evidence from at least two layers. Some ways to do it: a paragraph, one journey sketched on the map with notes (sketches are not saved, so students should screenshot or describe them), or a short talk using the map.",
       "student": {
-        "en": "Answer the big question using evidence from at least two layers on the map. You can write a paragraph, sketch on the map, or both.",
-        "es": "Responde la pregunta central con evidencia de al menos dos capas del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
+        "en": "Answer the big question from two points of view: a settler on a trail, and a nation whose land it crossed. Use the map for both.",
+        "es": "Responde la pregunta central desde dos puntos de vista: el de un colono en un sendero y el de una nación cuyas tierras cruzaba. Usa el mapa para ambos."
       },
       "tools": [
         "sketch"
@@ -343,7 +345,7 @@
     "The Union Pacific and Central Pacific lines run close to the California and Mormon Pioneer trails. Why might the railroad builders have chosen the same route, and what happened to the trails once the railroad opened?"
   ],
   "differentiation": {
-    "support": "Do question 1 together from the front, and write the seven trail names with their legend colours on the board so students can find each line.",
+    "support": "Do question 1 together from the front, and write the seven trail names with their legend colors on the board so students can find each line.",
     "stretch": "With Indigenous Territories and Railroads both on, ask whether the Union Pacific and Central Pacific line crosses the same nations' lands as the trails, and what that meant for those nations."
   },
   "resources": [
@@ -365,7 +367,7 @@
   ],
   "assessment": {
     "evidence": "Strong answers use the Trails West pop-ups (the Oregon Trail's about 2,000 miles and 300,000 to 400,000 people, 1840 to 1860; the California Trail used until 1869), Measure from Independence to Portland (about 1,500 miles), nations named on the Indigenous Territories layer, and the legend's Transcontinental Railroad (Union Pacific) and (Central Pacific) lines beside the dotted trails.",
-    "exemplar": "Trails and then railroads turned the West into a route for hundreds of thousands of settlers heading to Oregon, California and Utah, at the cost of the Indigenous nations whose lands the routes crossed. In the Trails West layer, the Oregon Trail pop-up says the trail was about 2,000 miles long and 300,000 to 400,000 people used it between 1840 and 1860, starting from Independence, Missouri. Measure from Independence to Portland, Oregon, gives about 1,500 miles, so the dotted line is about 500 miles longer because it follows rivers like the Platte and the Snake for water and grass. With the Indigenous Territories layer on and zoomed in, the Oregon Trail runs through lands labeled for the Pawnee, Lakota, Cheyenne and Shoshone, so the land was not empty, and those wagons and animals meant lost grass and hunting grounds. With Railroads on, the legend's Transcontinental Railroad (Union Pacific) and (Central Pacific) lines run from Omaha to Sacramento beside the California and Mormon Pioneer trails, and the California Trail pop-up says it was used until 1869, when the railroad was completed. The change over time is that the railroad replaced the wagon trails but kept the same route, so the same nations faced the pressure again."
+    "exemplar": "The trails and railroads opened the West to settlers, but they ran through land where Indigenous nations already lived. The Oregon Trail pop-up says the trail was about 2,000 miles long and that 300,000 to 400,000 people traveled it between 1840 and 1860. A straight line from Independence, Missouri, to Portland, Oregon, is only about 1,500 miles, because the trail bends to follow rivers like the Platte and the Snake. When I turned on Indigenous Territories, the trail crossed the lands of the Pawnee, Lakota, Cheyenne and Shoshone, so the land was not empty. All those wagons and animals used up grass and hunting grounds. Later the Union Pacific and Central Pacific railroad ran close to the California and Mormon Pioneer trails. The California Trail was used until 1869, when the railroad was finished. For settlers the trip got faster. For the nations, more people kept coming."
   },
   "studentSupport": {
     "beforeYouStart": {
@@ -380,8 +382,8 @@
       "popups"
     ],
     "reflection": {
-      "en": "What did the map show you about the journey west that you might not have noticed from reading alone?",
-      "es": "¿Qué te mostró el mapa sobre el viaje al Oeste que quizá no habrías notado solo con la lectura?"
+      "en": "Pick one nation whose land a trail crossed. What would you want to ask someone who lived there in 1850?",
+      "es": "Elige una nación cuyas tierras cruzaba un sendero. ¿Qué te gustaría preguntarle a alguien que vivía allí en 1850?"
     }
   },
   "teacherNotes": {

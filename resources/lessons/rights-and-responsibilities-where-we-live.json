@@ -1,10 +1,10 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.9",
+  "formatVersion": "1.10",
   "id": "rights-and-responsibilities-where-we-live",
-  "contentVersion": "0.6.2",
+  "contentVersion": "0.7.0",
   "status": "draft",
-  "updated": "2026-10-22",
+  "updated": "2026-11-09",
   "reviewed": null,
   "title": "Rights and Responsibilities Where We Live",
   "sheetTitle": {
@@ -24,7 +24,7 @@
     "Government",
     "Geography"
   ],
-  "time": "45 minutes, or 10–15 per question",
+  "time": "About 59 minutes: 49 for the questions and 10 to write the answer. One question on its own takes 10–15",
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "59467ac7d7c64542acaa6a3e9c19ebf4",
@@ -57,7 +57,8 @@
       "date": "2026-10-15",
       "status": "open",
       "where": "National Register of Historic Places pop-up",
-      "note": "The pop-up shows the address, city, county and state but not the place's name: the Resource Name field (RESNAME) is hidden, so students see an address without a name. Being raised with the MapMaker team. Until it is fixed, students can follow the pop-up's National Archive Information link for the name, or read the name off the Topographic basemap when the building is labeled."
+      "note": "The pop-up shows the address, city, county and state but not the place's name: the Resource Name field (RESNAME) is hidden, so students see an address without a name. Being raised with the MapMaker team. Until it is fixed, students can follow the pop-up's National Archive Information link for the name, or read the name off the Topographic basemap when the building is labeled.",
+      "studentVisible": true
     }
   ],
   "inquiry": {
@@ -173,7 +174,7 @@
           "en": "Responsibilities",
           "es": "Responsabilidades"
         },
-        "task": "Students start from the courthouse or city hall they pinned in question 2, add pins for places where people carry out responsibilities as citizens (voting, jury service, paying taxes), and sort the responsibilities into required by law and voluntary.",
+        "task": "Students start from the courthouse or city hall they pinned in question 2 and add pins for places where people carry out responsibilities as citizens (voting, jury service, paying taxes). Which are required by law and which are voluntary is a question for the class discussion.",
         "tools": [
           "zoom",
           "sketch"
@@ -184,7 +185,7 @@
           "Return to the courthouse or city hall pinned in question 2.",
           "Add a Sketch pin and write next to it the responsibility people carry out there.",
           "Ask: where else in town do people vote, serve on a jury or pay taxes?",
-          "Ask: which of these responsibilities are required by law, and which are voluntary?"
+          "Hold for the discussion: which of these responsibilities are required by law, and which are voluntary?"
         ],
         "steps": [
           {
@@ -201,13 +202,13 @@
           }
         ],
         "ask": {
-          "en": "Which of these responsibilities are required by law, and which are voluntary?",
-          "es": "¿Cuáles de estas responsabilidades exige la ley y cuáles son voluntarias?"
+          "en": "Which places did you pin, and which responsibility do people carry out at each?",
+          "es": "¿Qué lugares marcaste y qué responsabilidad cumplen las personas en cada uno?"
         },
         "lines": 3,
         "answer": {
           "where": "Sketch pins on the student's map, usually at the courthouse (jury service), a polling place such as a school, library or church (voting), and a post office or tax office (paying taxes). There is no stored answer; check the screen or screenshot.",
-          "accept": "At least two pins with a responsibility each, and a sort that puts obeying laws, paying taxes, jury service when called and, for most men aged 18 through 25, Selective Service registration under required by law, and voting, staying informed, volunteering and attending community meetings under voluntary. Accept the point that voting is both a right and a responsibility, but no federal law requires it."
+          "accept": "At least two pins with a responsibility each. For the discussion: obeying laws, paying taxes, jury service when called and, for most men aged 18 through 25, Selective Service registration are required by law; voting, staying informed, volunteering and attending community meetings are voluntary. Accept the point that voting is both a right and a responsibility, but no federal law requires it."
         }
       },
       {
@@ -275,7 +276,7 @@
   },
   "objectives": [
     "Zoom to their own town, click inside their congressional district to read the representative's name, party and district number, and count the districts in their state.",
-    "Use the Topographic basemap labels to find four public places in their community and sketch a labelled pin on each with a right from the Bill of Rights that people use there.",
+    "Use the Topographic basemap labels to find four public places in their community and sketch a labeled pin on each with a right from the Bill of Rights that people use there.",
     "Add pins for places where people carry out responsibilities as citizens, and sort those responsibilities into required by law and voluntary.",
     "Turn on the National Register of Historic Places layer, identify the two listed places nearest the school using the pop-up address and the basemap, and connect one public building to a right or responsibility.",
     "Use the places they pinned as evidence to explain where in their community rights and responsibilities are exercised."
@@ -283,7 +284,8 @@
   "discussion": [
     "Looking at the pins you sketched, which rights and responsibilities had an obvious building on the basemap and which were hard to place? What does that tell you about where civic life happens?",
     "Your congressional district covers far more than your town. From the pop-up and the district outline, who else shares your representative, and how might their concerns differ from yours?",
-    "The National Register diamonds near your school mark places someone decided were worth preserving. Judging from the map, what kinds of places were chosen, and what kinds seem to be missing?"
+    "The National Register diamonds near your school mark places someone decided were worth preserving. Judging from the map, what kinds of places were chosen, and what kinds seem to be missing?",
+    "Which of the responsibilities you pinned are required by law, and which are voluntary? Is voting a right, a responsibility, or both?"
   ],
   "differentiation": {
     "support": "Zoom to the town from the front and do question 1 together, then give the class three public buildings from the basemap to start their pins.",
@@ -308,7 +310,7 @@
   ],
   "assessment": {
     "evidence": "Strong answers name places on the student's own map: the representative, party and district number from the Congressional districts (119th Congress) pop-up; public buildings the Topographic basemap labels at close zoom (courthouse, city hall, library, polling place) with the student's Sketch pins; and a National Register of Historic Places diamond identified by its pop-up address and legend type.",
-    "exemplar": "In my town, people use their rights and carry out their responsibilities mostly in a few public buildings near the center: the courthouse, the library and the school that serves as a polling place. When I zoomed in on the Topographic basemap until it labeled buildings, I put a Sketch pin on the county courthouse on Main Street, labeled with the right to a jury trial, because that is where trials happen and where people do jury service when called, which is required by law. My second pin is the public library two blocks away, labeled freedom of speech and the press, because anyone can read and share ideas there. My third pin is my school, our polling place, where people vote; voting is a right and a responsibility, but no federal law requires it. The Congressional districts pop-up named my representative, their party and our district number, and when I zoomed out the blue outline covered far more than my town, so my representative speaks for many other places too. With National Register of Historic Places on, the diamond nearest my school had a Main Street address in its pop-up and the legend showed it was a building; the basemap label said it was the old courthouse, so rights have been used in the same place for a long time. One limit is that the map only shows buildings, and some responsibilities, like obeying laws, happen everywhere."
+    "exemplar": "In my town, people use their rights and carry out their responsibilities in a few public buildings near the center. My first pin is the county courthouse. People have the right to a jury trial there, and serving on a jury when called is required by law. My second pin is the public library, where anyone can read and share ideas, so I labeled it freedom of speech and of the press. My third pin is my school, which is our polling place. Voting is a right and a responsibility, but no federal law requires it. The Congressional districts pop-up names the person who represents our district in the House of Representatives. One of the historic places near my school is the old courthouse, so people have used their rights in the same place for a long time."
   },
   "studentSupport": {
     "beforeYouStart": {

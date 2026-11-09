@@ -1,10 +1,10 @@
 {
   "$schema": "../../resources/schema/lesson.schema.json",
-  "formatVersion": "1.9",
+  "formatVersion": "1.10",
   "id": "election-1828-right-to-vote",
-  "contentVersion": "0.2.0",
+  "contentVersion": "0.3.0",
   "status": "draft",
-  "updated": "2026-10-30",
+  "updated": "2026-11-09",
   "reviewed": null,
   "title": "The Election of 1828 and the Right to Vote",
   "summary": "See how each state's electors voted in 1828, then turn on who could vote there: the property and tax rules for white men, and whether free Black men could vote. Students test the idea that Jackson's election was a victory for the common man against the rules state by state.",
@@ -17,7 +17,7 @@
     "Civics",
     "Geography"
   ],
-  "time": "About 60 minutes, or two parts: questions 1 to 4, then 5, 6 and the big question",
+  "time": "About 60 minutes over two class periods: questions 1 to 4, then 5, 6 and the big question",
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "1bd912453059450dac83074ea42e5424",
@@ -52,19 +52,22 @@
       "where": "Pop-ups, several states",
       "note": "Some rules rest on historians' accounts rather than the law's own text, or sources differ; the pop-up says so (North Carolina's rule for electors, Rhode Island's 1822 law, Louisiana's and Missouri's clauses, how Illinois and Missouri chose electors).",
       "status": "open",
-      "date": "2026-10-30"
+      "date": "2026-10-30",
+      "studentVisible": false
     },
     {
       "where": "State names",
       "note": "The names come from today's basemap: a few are under pies, and the basemap also names places that were territories in 1828 (Michigan, Arkansas, Florida). Clicking a state gives its name.",
       "status": "open",
-      "date": "2026-10-30"
+      "date": "2026-10-30",
+      "studentVisible": true
     },
     {
       "where": "Virginia pop-up",
       "note": "Quotes the 1785 law's own words, \"free negroes or mulattoes\", as a primary source. Teacher notes say so.",
       "status": "open",
-      "date": "2026-10-30"
+      "date": "2026-10-30",
+      "studentVisible": false
     }
   ],
   "inquiry": {
@@ -104,12 +107,12 @@
           }
         ],
         "ask": {
-          "en": "(a) Which part of the country voted mostly for Adams? (b) Which part voted mostly for Jackson? (c) Which three states split their electors?"
+          "en": "(a) Which parts of the country voted mostly for Adams, and which for Jackson? (b) Which three states split their electors?"
         },
         "lines": 3,
         "answer": {
           "where": "Election of 1828: electors' votes layer, legend and pop-ups. All orange: Connecticut, Delaware, Massachusetts, New Hampshire, New Jersey, Rhode Island and Vermont. All blue: the South and the West (Alabama, Georgia, Illinois, Indiana, Kentucky, Louisiana, Mississippi, Missouri, North Carolina, Ohio, South Carolina, Tennessee, Virginia) and Pennsylvania. Split: New York (Jackson 20, Adams 16), Maryland (Jackson 5, Adams 6) and Maine (Jackson 1, Adams 8).",
-          "accept": "(a) New England and nearby states (New Jersey, Delaware). (b) The South and the West (except Delaware and most of Maryland), plus Pennsylvania. (c) New York, Maryland and Maine.",
+          "accept": "(a) Adams: New England and nearby New Jersey and Delaware. Jackson: the South and the West, plus Pennsylvania. (b) New York, Maryland and Maine.",
           "text": "Totals, not on the map: Jackson 178, Adams 83 (National Archives)."
         }
       },
@@ -132,9 +135,6 @@
         "steps": [
           {
             "en": "Keep only Election of 1828: electors' votes on."
-          },
-          {
-            "en": "Look at which states are old (on the Atlantic coast) and which are newer (west of the Appalachian Mountains)."
           },
           {
             "en": "Write your predictions before you turn on any other layer."
@@ -238,7 +238,7 @@
         "title": {
           "en": "Explain why"
         },
-        "task": "Read the pop-ups for South Carolina and Delaware (the legislature chose electors) and Georgia (voters chose them for the first time); explain what \"expanded suffrage\" meant in 1828, and for whom.",
+        "task": "Read the pop-ups for South Carolina and Delaware (the legislature chose electors) and Georgia (voters chose them for the first time); explain what that meant for who could vote for president.",
         "tools": [
           "popups"
         ],
@@ -249,7 +249,7 @@
           "Ask: did voters in these states choose the president's electors?",
           "Click Georgia and read Who chose the electors.",
           "Ask: what changed in Georgia in 1828?",
-          "Ask: by 1828, who had gained the right to vote, and who had not?"
+          "Ask: in South Carolina and Delaware, could a man who met the voting rules vote for president?"
         ],
         "steps": [
           {
@@ -260,12 +260,12 @@
           }
         ],
         "ask": {
-          "en": "(a) Who chose the electors in South Carolina and Delaware? (b) What changed in Georgia in 1828? (c) Textbooks say suffrage expanded in the Age of Jackson. Using the map, who had gained the right to vote by 1828, and who had not?"
+          "en": "(a) Who chose the electors in South Carolina and Delaware? (b) What changed in Georgia in 1828? (c) In South Carolina and Delaware, could a man who met the voting rules vote for president? What does that add to your answer about who could vote?"
         },
         "lines": 4,
         "answer": {
           "where": "Pop-ups. South Carolina and Delaware: the state legislature chose the electors, so voters had no direct say. Georgia: voters chose the electors for the first time (the legislature chose in 1824); Louisiana's and Vermont's pop-ups say the same.",
-          "accept": "(a) The state legislature. (b) Voters chose the electors for the first time. (c) More white men could vote: the property rules had gone in many states (for example New York in 1826, Massachusetts in 1821), and in Georgia, Louisiana and Vermont voters chose the electors for the first time. But women could vote nowhere, free Black men could vote on the same terms as white men in only six states, and in two states voters didn't choose the electors. Students may add, from what they know, that enslaved people could not vote.",
+          "accept": "(a) The state legislature. (b) Voters chose the electors for the first time. (c) No: even men who could vote in state elections had no direct vote for president there, because the legislature chose the electors. So who could vote for president depended on how a state chose its electors as well as on its rules for voters. In Georgia, Louisiana and Vermont voters chose the electors for the first time in 1828, which is part of what expanded suffrage meant.",
           "text": "Every pop-up says: \"Women could not vote in any state in 1828.\" New Jersey had ended women's voting in 1807."
         }
       },

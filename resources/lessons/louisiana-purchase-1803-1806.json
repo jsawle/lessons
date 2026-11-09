@@ -1,10 +1,10 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.9",
+  "formatVersion": "1.10",
   "id": "louisiana-purchase-1803-1806",
-  "contentVersion": "0.7.2",
+  "contentVersion": "0.8.0",
   "status": "draft",
-  "updated": "2026-10-22",
+  "updated": "2026-11-09",
   "reviewed": null,
   "title": "The Louisiana Purchase and the Corps of Discovery, 1803–1806",
   "sheetTitle": {
@@ -24,7 +24,7 @@
     "Indigenous Studies",
     "Economics"
   ],
-  "time": "45 minutes, or 10–15 per question",
+  "time": "About 59 minutes: 49 for the questions and 10 to write the answer. One question on its own takes 10–15",
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "f8af7269e5c14e69b060d6184d04ff85",
@@ -89,7 +89,7 @@
           "popups",
           "legend"
         ],
-        "core": true,
+        "core": false,
         "minutes": 12,
         "frontOfClass": [
           "Open The Louisiana Purchase bookmark.",
@@ -138,7 +138,7 @@
           "popups",
           "zoom"
         ],
-        "core": false,
+        "core": true,
         "minutes": 15,
         "frontOfClass": [
           "In Map layers, turn on United States Watersheds.",
@@ -287,8 +287,8 @@
     "final": {
       "teacher": "Students answer with evidence from at least two layers. Accept answers that give the purchase's size and price from the pop-up and use the watersheds, rivers or trail as evidence of what the land offered (rivers to the Gulf, plains, a route west) and why New Orleans and the Mississippi mattered to western farmers. Some ways to do it: a paragraph; sketch pins for New Orleans and for two places on the trail, with notes (sketches are not saved, so students should screenshot or describe them); or a short talk using the map. The question of whose land this was is in Looking back: the map has no Native nations layer, so it is answered from Before you start (the Corps met more than 50 Tribal Nations) and reasoning, not from the map.",
       "student": {
-        "en": "Answer the big question using evidence from at least two layers. You can write a paragraph, sketch on the map, or both.",
-        "es": "Responde la pregunta central con evidencia de al menos dos capas. Puedes escribir un párrafo, dibujar en el mapa o ambas cosas."
+        "en": "Answer the big question. Use the rivers on the map and one fact from the Louisiana Purchase pop-up.",
+        "es": "Responde la pregunta central. Usa los ríos del mapa y un dato de la ventana emergente de la compra de Luisiana."
       },
       "tools": [
         "sketch"
@@ -330,7 +330,7 @@
   ],
   "assessment": {
     "evidence": "Strong answers use the Louisiana Purchase 1803 pop-up Notes (530,000,000 acres, $15 million) against the legend's green land of 1783, the United States Watersheds pop-ups (Ohio Region, Missouri Region) traced on the basemap to the Mississippi and New Orleans, the Biomes pop-up (Temperate Grasslands, Savannas & Shrublands) and a Measure distance from Pittsburgh to the Pacific of about 2,200 miles.",
-    "exemplar": "The Louisiana Purchase roughly doubled the United States and gave it the rivers western farmers depended on, and the Mississippi mattered because those rivers all reached the sea through New Orleans. At The Louisiana Purchase bookmark, the legend shows the green land of 1783 and the yellow purchase, and the yellow area is about the same size as the green. The Louisiana Purchase 1803 pop-up Notes say it was 530,000,000 acres, bought from France in 1803 for $15 million. When I turned on United States Watersheds, the two big brown outlines had pop-ups named Ohio Region and Missouri Region, and following those rivers on the basemap, both join the Mississippi, which reaches the Gulf of Mexico at New Orleans. That is why the port mattered: whoever held New Orleans could stop or tax farmers' crops on the way to market. At the Up the Missouri bookmark the Biomes pop-up reads Temperate Grasslands, Savannas & Shrublands, and the campsite symbols sit on the riverbanks, so the new land was open plains the Corps crossed by river. Measure from Pittsburgh to the trail's end at the mouth of the Columbia River gives about 2,200 miles, less than half the trail's 4,900 miles. One limit is that the trail leaves the yellow purchase at the Rockies, so the Pacific coast was not part of what the United States bought, and the map has no layer for the Native nations who governed most of this land."
+    "exemplar": "The Louisiana Purchase about doubled the United States, and the Mississippi mattered because it was the way to market for farmers in the West. On the map the yellow purchase is about the same size as the green land the country had in 1783. Its pop-up says it was 530,000,000 acres, bought from France in 1803 for $15 million. The watershed layer shows why the river mattered. The Ohio Region and the Missouri Region both drain into the Mississippi, which reaches the Gulf of Mexico at New Orleans. Whoever held New Orleans could stop or tax crops on their way to the sea. Lewis and Clark followed the Missouri across grasslands, and their trail leaves the purchase at the Rocky Mountains, so the Pacific coast was not part of it. The map has no layer for the Native nations who lived on this land."
   },
   "studentSupport": {
     "beforeYouStart": {
