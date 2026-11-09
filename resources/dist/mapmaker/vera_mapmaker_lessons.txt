@@ -1,11 +1,11 @@
 # MapMaker lessons on the Support Hub (questions, layers and sources)
-Built 2026-10-22 from the lesson files by the MapMaker resource pages, Vera knowledge builder 1.6. Do not edit by hand; edit the lesson files and rebuild.
+Built 2026-11-09 from the lesson files by the MapMaker resource pages, Vera knowledge builder 1.6. Do not edit by hand; edit the lesson files and rebuild.
 
 How to use this file: each lesson below has its own MapMaker map. When a teacher names one of these lessons (by title or lesson ID) and asks for new or different questions, base every question only on the bookmarks, layers and pop-up content listed for that lesson, and use bookmark and layer names exactly as written. If a request needs information that lesson's map does not show, say so plainly instead of inventing it. Use only the links listed for that lesson. The answers to the lessons' questions are not in this file: do not give them, and do not write student material that contains them.
 
 ### 1775–1776 Revolutionary Battles
 **Lesson ID:** revolutionary-battles-1775-1776
-**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** Road to revolution and the Revolution. **Time:** 45 minutes, or 10–15 per question.
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** Road to revolution and the Revolution. **Time:** About 62 minutes: 52 for the questions and 10 to write the answer. One question on its own takes 10–15.
 **MapMaker map:** [Open 1775–1776 Revolutionary Battles in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=bda07736a1b9425ea19fdde282088bd6)
 **Description:** Explore how the geography of North America shaped the first two years of the American Revolution, from the first shots at Lexington and Concord to Washington's attack on Trenton.
 **Subjects:** US History, Geography, Social Studies.
@@ -27,21 +27,21 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **How the student sheet explains the map's symbols:** Diamonds mark battles. A battle's pop-up gives its name, dates and story, but not the winner in words: the diamond's color shows the winner, so use the legend. Each diamond is placed at the battle's usual location, but the fighting covered a wider area: gray shaded areas show the battlefield, and areas with diagonal stripes show the core, where the fighting was heaviest. Zoom in to see white numbered circles: five turning points, numbered in the order they happened. The Key Port Cities layer has no pop-ups: the legend tells a major port from a smaller one.
 **Compelling question:** Why did the fighting move from Boston to New York, and then across New Jersey, in 1775–1776?
 **Questions already in this lesson:**
-1. Where did the war begin? On the map: Open the Massachusetts bookmark. Click the diamond at Lexington and Concord and read its dates. Open the legend and check which color shows who won. Click the Boston diamond and read its dates. Use Measure for the straight-line distance from Boston to Concord. Answer: When was Lexington and Concord fought, and who won? How long did the siege of Boston last? Measure the straight-line distance from Boston to Concord: ________ miles
+1. Where did the war begin? On the map: Open the Massachusetts bookmark. Click the diamond at Lexington and Concord and read its dates. Open the legend and check which color shows who won. Click the Boston diamond and read its dates. Use Measure for the straight-line distance from Boston to Concord. Answer: When was Lexington and Concord fought, and who won? How long did the siege of Boston last? How close to Boston did the war begin? Measure the straight-line distance from Boston to Concord: ________ miles
 2. Where was the fighting in 1775, and where in 1776? On the map: Zoom out until you can see every diamond, from Quebec to South Carolina. Click the diamonds and read each one's date line to see its year. Click the colony under each group of diamonds to read its name, and use the legend to see who won. Answer: Which colonies had battles in 1775? Which in 1776? What changed?
-3. Why New York? On the map: In Map layers, turn on Key Port Cities in the American Revolution 1775-1781 (inside Revolutionary War Battlefields). Use the legend to tell a Major Port City from a smaller Port. Find the major ports between Boston and Charleston. The layer has no pop-ups, so use the coastline and the battle diamonds nearby to name them. Use Measure from New York to Philadelphia and from New York to Boston. Answer: Boston and Charleston are major ports: which other major ports lie between them? Looking at the map, what could a navy based at New York reach? New York to Philadelphia: ________ miles. New York to Boston: ________ miles
-4. How did 1776 end? On the map: Zoom in on New York City until the numbered circles appear. Follow circles 4 and 5. Click the diamonds for Fort Washington, Fort Lee and Trenton. Read each one's dates, and use the legend to see who won. Use Measure for the distance from New York City to Trenton. Answer: When was each battle fought, and who won? Measure the distance from New York City to Trenton: ________ miles
-**Closing reflection already in this lesson:** What did the map show you about 1775–1776 that you might not have noticed from reading alone?
+3. Why New York? On the map: In Map layers, turn on Key Port Cities in the American Revolution 1775-1781 (inside Revolutionary War Battlefields). Use the legend to tell a Major Port City from a smaller Port. Find the major ports between Boston and Charleston. The layer has no pop-ups, so use the coastline and the battle diamonds nearby to name them. Use Measure from New York to Philadelphia and from New York to Boston. Answer: Boston and Charleston are major ports: which other major ports lie between them? Using the distances you measured, what could a navy based at New York reach? New York to Philadelphia: ________ miles. New York to Boston: ________ miles
+4. How did 1776 end? On the map: Zoom in on New York City until the numbered circles appear. Follow circles 4 and 5. Click the diamonds for Fort Washington, Fort Lee and Trenton. Read each one's dates, and use the legend to see who won. Use Measure for the distance from New York City to Trenton. Answer: When was each battle fought, and who won? How far from New York City had the fighting moved by the end of 1776? Measure the distance from New York City to Trenton: ________ miles
+**Closing reflection already in this lesson:** Trenton is one small American win after a run of British ones. Why do you think the map gives it its own turning point?
 **Answers:** not in this file. The answers are on the lesson's teacher page, for teachers only; do not give answers to the questions above, and do not write student material that contains them.
 **Key words:** siege, militia, Continental Army, Loyalist, harbor, campaign, retreat.
 **Standards:** TX 8.4(C); TX 8.10(A); TX 8.10(C); FL SS.8.A.3.6; C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.9.1, updated 2026-10-22.
+**Lesson content version:** 0.10.0, updated 2026-11-09.
 
 ### Roads, Trails, and Rails West
 **Lesson ID:** roads-trails-and-rails-west
-**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** Westward expansion and Manifest Destiny. **Time:** 45 minutes, or 10–15 per question.
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** Westward expansion and Manifest Destiny. **Time:** About 59 minutes: 49 for the questions and 10 to write the answer. One question on its own takes 10–15.
 **MapMaker map:** [Open Roads, Trails, and Rails West in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=3ec83a9d66454ade8aead0a64872d931)
 **Description:** Follow the trails settlers took west in the 1800s, see whose lands they crossed, and find out how railroads replaced the wagon trails.
 **Subjects:** US History, Geography, Indigenous Studies, Economics.
@@ -61,21 +61,21 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **How the student sheet explains the map's symbols:** Each trail is a dotted line in its own color; the legend names them, and clicking a trail opens its pop-up. City and state names are part of the basemap. Railroads and Indigenous Territories are off when the map opens: turn them on in Map layers. Thick colored lines are the transcontinental railroads, named in the legend, and thin gray lines are other railroads; only the thin gray lines have pop-ups. Each Indigenous nation's territory is shaded in its own color, and its name appears when you zoom in. The territories are approximate and aren't listed in the legend.
 **Compelling question:** How did trails and then railroads change the American West, and for whom?
 **Questions already in this lesson:**
-1. Where did the trails begin? On the map: Open the legend to see which color is which trail. Click three of the dotted trail lines. Read in each pop-up where the trail started and ended. Answer: Where did each trail start and end? In which state do most of the trails start?
+1. Where did the trails begin? On the map: Open the legend to see which color is which trail. Click three of the dotted trail lines. Read in each pop-up where the trail started and ended. Answer: Where did each trail start? In which state do most of them start, and why there? Use the Missouri River on the map.
 2. How far, and how many? On the map: Find the Oregon Trail's color in the legend. Click the Oregon Trail and read its length and how many people traveled it. Find Independence, Missouri, on the basemap, next to Kansas City. Use Measure for a straight line from Independence to Portland, Oregon. Answer: How long was the Oregon Trail, and how many people traveled it? Why is the trail longer than a straight line? Measure the straight-line distance from Independence, Missouri, to Portland, Oregon: ________ miles
 3. Whose land? On the map: In Map layers, turn on Indigenous Territories. Zoom in until the nations' names appear. Follow one trail from one end to the other. Find two nations whose land it crossed. Answer: Which two nations' land did the trail cross? Was the land the trail crossed empty? What might the trail have meant for the people who lived there?
-4. From trails to rails On the map: In Map layers, turn on Railroads. Use the legend to find the Transcontinental Railroad (Union Pacific) and (Central Pacific) lines. Click a thin gray railroad line and read when it was in operation by. Answer: Which trails do the Transcontinental Railroad lines follow most closely? By when was the gray railroad line in operation?
-**Closing reflection already in this lesson:** What did the map show you about the journey west that you might not have noticed from reading alone?
+4. From trails to rails On the map: In Map layers, turn on Railroads. Use the legend to find the Transcontinental Railroad (Union Pacific) and (Central Pacific) lines. Click a thin gray railroad line near one of the trails and read when it was in operation by. Answer: Which trails do the Transcontinental Railroad lines follow most closely? Was your gray line in operation before or after 1869, when the California Trail stopped being used? What does that suggest?
+**Closing reflection already in this lesson:** Pick one nation whose land a trail crossed. What would you want to ask someone who lived there in 1850?
 **Answers:** not in this file. The answers are on the lesson's teacher page, for teachers only; do not give answers to the questions above, and do not write student material that contains them.
 **Key words:** Manifest Destiny, emigrant, trail, transcontinental railroad, telegraph, Indigenous nation.
 **Standards:** TX 8.6(B); TX 8.6(C); TX 8.11(A); FL SS.8.A.4.1; C3 D2.Geo.7.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.7.2, updated 2026-10-22.
+**Lesson content version:** 0.8.0, updated 2026-11-09.
 
 ### US Slavery and Slave Trade, 1850
 **Lesson ID:** us-slavery-and-slave-trade-1850
-**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** Reform and the road to war. **Time:** 45 minutes, or 10–15 per question.
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** Reform and the road to war. **Time:** About 57 minutes: 47 for the questions and 10 to write the answer. One question on its own takes 10–15.
 **MapMaker map:** [Open US Slavery and Slave Trade, 1850 in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=819f60a5a3344d958d24f505849abaaa)
 **Description:** Compare free and slave states in 1850, follow the routes of the internal slave trade south, and trace the Underground Railroad north to freedom.
 **Subjects:** US History, Geography, Civics, Social Studies.
@@ -101,17 +101,17 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 2. The Missouri Compromise On the map: Find the Missouri Compromise Line (the gray dashed line). Click it and read its pop-up. Find the slave state that lies mostly north of the line. Answer: What year was the Missouri Compromise enacted? Slavery was banned north of the line in the Louisiana Territory: which slave state lies mostly north of it, and why does that matter?
 3. The internal slave trade On the map: In Map layers, turn off Underground Railroad Approximate Routes so the solid black lines of Internal Routes of the US Slave Trade stand out. Click the states where the lines begin and read their names. Click the states where the lines come together and read their names. Find where the lines reach the coast. Answer: Where do the lines reach the coast? The lines have no arrows: from the pattern and what you have learned, which way were enslaved people forced to move?
 4. Routes to freedom On the map: Open the Illinois, Indiana, and Ohio bookmark. Follow the orange Underground Railroad routes north from the Ohio River. Zoom in to read the names of the towns along them. Answer: Where do the routes lead? Why do you think many keep going past the free states?
-**Closing reflection already in this lesson:** What did the map show you about slavery in 1850 that you might not have noticed from reading alone?
+**Closing reflection already in this lesson:** Many routes north kept going into Canada. What does that tell you about the word "free" in "free state"?
 **Answers:** not in this file. The answers are on the lesson's teacher page, for teachers only; do not give answers to the questions above, and do not write student material that contains them.
 **Key words:** free state, slave state, Missouri Compromise, Fugitive Slave Act, Underground Railroad, freedom seeker, abolition.
 **Standards:** FL SS.8.A.5.2; TX 8.10(A); C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.8.2, updated 2026-10-22.
+**Lesson content version:** 0.8.3, updated 2026-11-09.
 
 ### Civil War Battlefields
 **Lesson ID:** civil-war-battlefields
-**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The Civil War. **Time:** 45 minutes, or 10–15 per question.
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The Civil War. **Time:** About 58 minutes: 48 for the questions and 10 to write the answer. One question on its own takes 10–15.
 **MapMaker map:** [Open Civil War Battlefields in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=7a06e8e2818941f99a3d40bb32e08118)
 **Description:** See how the United States was divided by 1863, compare the railroads of the North and the South, and find where the war's battles were fought.
 **Subjects:** US History, Geography, Civics, Economics.
@@ -131,23 +131,23 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 - Civil War Battlefields: Battle locations as diamonds colored by result (Union victory, Confederate victory, Inconclusive) and sized by casualties; gray circles are battles with no result recorded (Other). Each pop-up gives the battle's name and dates and a picture; it does not give the result. The diamonds disappear when you zoom in very close; source: American Battlefield Trust.
 **What students read before they start:** In November 1860, Abraham Lincoln was elected president. He opposed the spread of slavery into the western territories, and Southern slave states began to leave the Union to form the Confederate States of America. In April 1861, Confederate forces attacked Fort Sumter, a Union fort in South Carolina, and the Civil War began.
 **How the student sheet explains the map's symbols:** States are shaded by side in 1863: shades of blue for the Union and shades of brown for the Confederacy; open the legend to see which shade means which group. State names are written on the map. A white dashed line marks the boundary between the two sides. Thin dark gray lines are railroads built by 1863. Diamonds mark battles, colored by who won: use the legend to read the result, because a battle's pop-up gives its name and dates but not the result. White diamonds are Inconclusive and gray circles are Other. Bigger diamonds mean more soldiers were killed, wounded, captured or missing. Tan shaded areas show the land each battlefield covered, and areas with diagonal stripes show where the fighting was heaviest.
-**Compelling question:** How did the geography of a divided nation shape the Civil War, as the map shows the country in 1863?
+**Compelling question:** How did the geography of a divided nation shape the Civil War?
 **Questions already in this lesson:**
 1. A nation divided On the map: Open the legend and find the groups for U.S. Civil War States and Territories (1863). Match each state's shade to its group. Find the state on the map that did not exist in 1861 (the layer shows the country in 1863). Answer: Which states left the Union before the attack on Fort Sumter in April 1861? Which left after? Which slave states stayed in the Union? Which state on the map did not exist in 1861?
 2. The border states On the map: Zoom in to Washington, D.C., on the east coast between Maryland and Virginia. Find the two states that border it. Check each one's shade in the legend. Answer: Which two states border Washington, D.C.? What would have happened to the capital if Maryland had left the Union?
 3. Railroads, North and South On the map: Find the white dashed boundary between the Union and the Confederacy. In Map layers, turn U.S. Civil War States and Territories (1863) off to see the railroad lines better. Compare the railroads (thin dark gray lines) north and south of the boundary. Answer: Which side had more railroads? Why would railroads matter in a war?
 4. Where were the battles? On the map: Zoom to Virginia, then to Maryland and Pennsylvania. Click the tan shaded areas of two battlefields and read their names. Use the legend to find a battlefield in a Union state. Answer: Where were most battles fought? Name a battle fought in a state the legend shows as a Union state.
-**Closing reflection already in this lesson:** What did the map show you about the Civil War that you might not have noticed from reading alone?
+**Closing reflection already in this lesson:** Washington, D.C. sat on the boundary between the two sides. What might that have meant for the people who lived there?
 **Answers:** not in this file. The answers are on the lesson's teacher page, for teachers only; do not give answers to the questions above, and do not write student material that contains them.
 **Key words:** secession, Union, Confederacy, border state, Fort Sumter, battlefield, railroad network.
 **Standards:** FL SS.8.A.5.4; TX 8.10(A); TX 8.10(C); C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.7.2, updated 2026-10-22.
+**Lesson content version:** 0.7.3, updated 2026-11-09.
 
 ### The Battle of Vicksburg
 **Lesson ID:** the-battle-of-vicksburg
-**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The Civil War. **Time:** 45 minutes, or 10–15 per question.
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The Civil War. **Time:** About 59 minutes: 49 for the questions and 10 to write the answer. One question on its own takes 10–15.
 **MapMaker map:** [Open The Battle of Vicksburg in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=1ba8cd3fc75a49a497be1137fce4c032)
 **Description:** Follow Grant's 1863 march to Vicksburg along the Mississippi River, and see why taking the city split the Confederacy in two.
 **Subjects:** US History, Geography, Social Studies.
@@ -167,20 +167,20 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Compelling question:** Why did the Union need Vicksburg, and how did Grant take it?
 **Questions already in this lesson:**
 1. Why Vicksburg? On the map: Open The Battle of Vicksburg bookmark. Find Vicksburg, the yellow pin on the Mississippi River. Zoom in until the railroads appear and follow the line east from Vicksburg. Find Jackson, Mississippi, on the basemap (the state capital, east of Vicksburg). Answer: Why would both sides want Vicksburg?
-2. Grant's route On the map: Find the dark pins for Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend and Edwards. Check which side of the river each pin is on. Use Measure for the distance from Milliken's Bend to Bruinsburg Bend. Answer: Which side of the river is each place on? Why did Grant march south before crossing the river? Measure the distance from Milliken's Bend to Bruinsburg Bend: ________ miles
-3. The battles of May 1863 On the map: In Map layers, turn on Civil War Battlefields. Click the diamonds between Bruinsburg Bend and Vicksburg and read their dates. Click the diamonds east toward Jackson and read their dates. Answer: Which battles were fought between Bruinsburg Bend, Vicksburg and Jackson? List them in order by date.
+2. Grant's route On the map: Find the dark pins for Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend and Edwards. Check which side of the river each pin is on. Use Measure for the distance from Milliken's Bend to Bruinsburg Bend. Answer: Which side of the river is each place on? How far south of Milliken's Bend did Grant cross, and why did he not cross at Vicksburg itself? Measure the distance from Milliken's Bend to Bruinsburg Bend: ________ miles
+3. The battles of May 1863 On the map: In Map layers, turn on Civil War Battlefields. Click the diamonds between Bruinsburg Bend and Vicksburg and read their dates. Click the diamonds east toward Jackson and read their dates. Answer: Which battles were fought between Bruinsburg Bend, Vicksburg and Jackson? List them in order by date. Did Grant go straight to Vicksburg?
 4. Splitting the Confederacy On the map: Zoom out until you can see the Mississippi River from Memphis to the Gulf of Mexico. Keep Civil War Battlefields on and click the diamond at Port Hudson, in Louisiana south of Vicksburg. Read when the siege of Port Hudson ended. Read the state names on the basemap. Answer: When did Port Hudson end? Which states lie west of the river? What could the Union control once Vicksburg and Port Hudson had both fallen?
-**Closing reflection already in this lesson:** What did the map show you about the Vicksburg campaign that you might not have noticed from reading alone?
+**Closing reflection already in this lesson:** Grant crossed the river well south of the city he wanted. What does that tell you about Vicksburg?
 **Answers:** not in this file. The answers are on the lesson's teacher page, for teachers only; do not give answers to the questions above, and do not write student material that contains them.
 **Key words:** siege, campaign, bluff, gunboat, supply line, surrender.
 **Standards:** FL SS.8.A.5.1; TX 8.10(C); C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.7.2, updated 2026-10-22.
+**Lesson content version:** 0.8.0, updated 2026-11-09.
 
 ### We the People: Representation and Ratification, 1787–1791
 **Lesson ID:** we-the-people-1787-1791
-**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** Confederation and the Constitution. **Time:** 45 minutes, or 10–15 per question.
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** Confederation and the Constitution. **Time:** About 59 minutes: 49 for the questions and 10 to write the answer. One question on its own takes 10–15.
 **MapMaker map:** [Open We the People: Representation and Ratification, 1787–1791 in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=eba1ea7488624f3c88ef094167ed03ca)
 **Description:** See how House seats were shared out after the 1790 census, how the three-fifths clause changed the count, and how close each state's vote to ratify was.
 **Subjects:** US History, Civics, Government, Data Literacy.
@@ -198,29 +198,29 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 - Ratifying the Constitution, 1787–1791 (off when the map opens): A pie where each state's ratifying convention met: votes to ratify (blue) and against (orange-red), with bigger pies for more delegates. Labels give the state and the order it ratified (DE 1 to VT 14). Each pop-up gives the result, date and vote, where the convention met, and a note. North Carolina has two pies: its first convention, at Hillsborough in 1788 (label NC (1788)), did not ratify; source: Center for the Study of the American Constitution, University of Wisconsin–Madison (votes, dates and meeting places).
 **What students read before they start:** In 1787, delegates from twelve states met in Philadelphia and wrote the Constitution. Large and small states disagreed about how many votes each should have in Congress. They settled it with the Great Compromise, and with the Three-Fifths Compromise on how enslaved people were counted. The Constitution would take effect only when nine states had ratified it, each at a special convention.
 **How the student sheet explains the map's symbols:** The map has no place names: click a pie or a state to see its name in the pop-up title. Pies on the states show the people in 1790: blue for free, orange-red for enslaved, and bigger pies for more people. Three layers are off when the map opens. In House seats in 1793, darker blue means more seats, and each label gives the state's abbreviation and seats. In Ratifying the Constitution, each pie sits where a state's convention met: blue for votes to ratify, orange-red for votes against, and labels give the order each state ratified. Maine is shown within Massachusetts and West Virginia within Virginia.
-**Compelling question:** How did the Constitution balance large and small states, and how close did it come to being rejected?
+**Compelling question:** Who was counted in the new Constitution, and how close did it come to being rejected?
 **Questions already in this lesson:**
 1. Who lived where in 1790? On the map: Open The states in 1790 bookmark. Click the pies and read each pop-up. Read the first line of each pop-up, which gives the percentage enslaved. Answer: Which state had the most people? In which states were more than a quarter of the people enslaved?
 2. Seats in Congress On the map: In Map layers, turn on House seats in 1793. Read the labels: each gives the state and its seats, and darker blue means more seats. Click two states and read how many senators each had. Answer: Which state had the most seats in the House of Representatives, and which the fewest? How many senators did each of your two states have? Why do you think the House and the Senate are counted differently?
 3. The three-fifths clause On the map: Click Virginia and South Carolina. Read the seats in 1793 in each pop-up, then the last two lines: the seats if enslaved people had been counted in full, or not at all. Click other states and compare the same three numbers. Answer: Under the three-fifths clause, three of every five enslaved people were counted when House seats were shared out. How many seats did Virginia and South Carolina each have under the clause, and how many would each have had if enslaved people had been counted in full, or not at all? Which states gained seats by counting enslaved people, who could not vote? Virginia: ____ seats with the three-fifths clause; ____ if counted in full; ____ if not counted at all.
 4. How close was ratification? On the map: In Map layers, turn off Population in 1790 and House seats in 1793. Turn on Ratifying the Constitution. Click the pies and read the first line of each pop-up: the votes for and against. Find North Carolina and click both of its pies. Answer: Which three votes were closest? Why does North Carolina have two pies?
-**Closing reflection already in this lesson:** What did the map show you about the Constitution that you might not have noticed from reading alone?
+**Closing reflection already in this lesson:** Which number on this map surprised you most, and why?
 **Answers:** not in this file. The answers are on the lesson's teacher page, for teachers only; do not give answers to the questions above, and do not write student material that contains them.
 **Key words:** ratify, convention, census, apportionment, Great Compromise, three-fifths clause, Federalist, Anti-Federalist.
 **Standards:** TX 8.4(D); TX 8.17(A); FL SS.8.A.3.10; FL SS.8.A.3.11; C3 D2.Civ.5.6-8; C3 D2.Geo.2.6-8.
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.7.1, updated 2026-10-22.
+**Lesson content version:** 0.8.0, updated 2026-11-09.
 
 ### Rights and Responsibilities Where We Live
 **Lesson ID:** rights-and-responsibilities-where-we-live
-**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** Confederation and the Constitution. **Time:** 45 minutes, or 10–15 per question.
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** Confederation and the Constitution. **Time:** About 59 minutes: 49 for the questions and 10 to write the answer. One question on its own takes 10–15.
 **MapMaker map:** [Open Rights and Responsibilities Where We Live in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=59467ac7d7c64542acaa6a3e9c19ebf4)
 **Description:** Map the public places in your own community where people use the rights in the Bill of Rights and carry out their responsibilities as citizens, and find who represents your district in Congress.
 **Subjects:** US History, Civics, Government, Geography.
 **Learning objectives (students will):**
 - Zoom to their own town, click inside their congressional district to read the representative's name, party and district number, and count the districts in their state.
-- Use the Topographic basemap labels to find four public places in their community and sketch a labelled pin on each with a right from the Bill of Rights that people use there.
+- Use the Topographic basemap labels to find four public places in their community and sketch a labeled pin on each with a right from the Bill of Rights that people use there.
 - Add pins for places where people carry out responsibilities as citizens, and sort those responsibilities into required by law and voluntary.
 - Turn on the National Register of Historic Places layer, identify the two listed places nearest the school using the pop-up address and the basemap, and connect one public building to a right or responsibility.
 - Use the places they pinned as evidence to explain where in their community rights and responsibilities are exercised.
@@ -234,7 +234,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Questions already in this lesson:**
 1. Who represents us? On the map: Zoom to your town; the basemap has place names. Find the blue lines, which are the boundaries of congressional districts. Click inside your district and read the pop-up. Zoom out to see your whole state. Answer: Who represents your district in the House of Representatives, which party do they belong to, and what is the district's number? How many districts does your state have?
 2. Rights in public places On the map: Zoom in on your town until the basemap shows building names. Find four public places, not homes: a courthouse, city hall, library, place of worship, polling place or newspaper office. Use Sketch to put a pin on each one. Next to each pin, write a right from the Bill of Rights that people use there. Finish in one lesson or take a screenshot, because sketches are not saved. Answer: Which four places did you pin, and which right from the Bill of Rights do people use at each?
-3. Responsibilities On the map: Start at the courthouse or city hall you pinned. Add a pin at each place where people carry out a citizen's responsibility: voting, jury service, paying taxes. Next to each pin, write the responsibility. Answer: Which of these responsibilities are required by law, and which are voluntary?
+3. Responsibilities On the map: Start at the courthouse or city hall you pinned. Add a pin at each place where people carry out a citizen's responsibility: voting, jury service, paying taxes. Next to each pin, write the responsibility. Answer: Which places did you pin, and which responsibility do people carry out at each?
 4. History where we live On the map: In Map layers, turn on National Register of Historic Places. Zoom in until the diamonds appear and click the two nearest your school; the pop-up gives the address. Read the name from the basemap label under the diamond or the pop-up's National Archive Information link. Use the legend to tell a building from a district or a site. Answer: Is either a public building, such as a courthouse, post office, school or library? Which right or responsibility does it connect with?
 **Closing reflection already in this lesson:** What did the map show you about your own community that you hadn't noticed before?
 **Answers:** not in this file. The answers are on the lesson's teacher page, for teachers only; do not give answers to the questions above, and do not write student material that contains them.
@@ -242,19 +242,19 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** TX 8.19(B); TX 8.19(C); FL SS.8.CG.2.5; C3 D2.Civ.2.6-8; C3 D2.Civ.8.6-8; C3 D2.Geo.1.6-8.
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.6.2, updated 2026-10-22.
+**Lesson content version:** 0.7.0, updated 2026-11-09.
 
-### Political Parties and Federal Power, 1796–1819
+### The First Political Parties, 1796–1800
 **Lesson ID:** presidential-elections-1796-1800
-**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The early republic. **Time:** 45 minutes, or 10–15 per question.
-**MapMaker map:** [Open Political Parties and Federal Power, 1796–1819 in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=6173219d9cd84812bcd4fed859b2c182)
-**Description:** Compare how each state's electors voted in 1796 and 1800, see which states changed sides, and find two Supreme Court cases that shaped the new government. The elections of 1796 and 1800 show the first party divide; two Supreme Court cases, in 1803 and 1819, show how the new federal government's power was tested.
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The early republic. **Time:** About 57 minutes: 47 for the questions and 10 to write the answer. One question on its own takes 10–15.
+**MapMaker map:** [Open The First Political Parties, 1796–1800 in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=6173219d9cd84812bcd4fed859b2c182)
+**Description:** Compare how each state's electors voted in 1796 and 1800, see which states changed sides, and work out whether one state decided the election of 1800.
 **Subjects:** US History, Government, Civics, Geography.
 **Learning objectives (students will):**
 - Use the pies and legend of the Election of 1796 layer to describe which regions voted mostly for Adams and which for Jefferson, and click the split states for their numbers.
 - Switch between the 1796 and 1800 layers to find the state whose whole pie changed color and the states whose shares changed.
 - Read the two-color pies in the Election of 1800 layer to identify the closest state.
-- Click the two Supreme Court case markers, read what happened in each place, and measure the straight-line distance between them.
+- Use New York's electors and the split states in the Election of 1800 layer to work out whether one state decided the election.
 - Use the pattern of electors' votes across the sixteen states as evidence to describe where each party was strong in 1800.
 **Bookmarks in this map:** The sixteen states.
 **Layers in this map (exact name: what students see; source):**
@@ -262,24 +262,24 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 - Election of 1800: electors' votes (off when the map opens): The same for 1800. Each pop-up lists every candidate's votes and explains the Jefferson–Burr tie and the 12th Amendment, so no question asks for those; source: National Archives (Electoral College results); state outlines from Natural Earth.
 - Landmark Supreme Court cases, 1803 and 1819: Pink squares for Marbury v. Madison (1803, Washington, D.C.) and McCulloch v. Maryland (1819, Baltimore), labeled with the case name and year. Each pop-up gives the question, the ruling, why it matters and why it's placed there (Why here); source: National Archives (Milestone Documents).
 **What students read before they start:** George Washington belonged to no party, and in 1796, as he prepared to leave office, he warned Americans against parties. By then two had formed: the Federalists, led by John Adams and Alexander Hamilton, and the Democratic-Republicans, led by Thomas Jefferson and James Madison. Each elector cast two votes for president, and the runner-up became vice president.
-**How the student sheet explains the map's symbols:** The map has no place names: click a pie to see the state's name and its number of electors. Each pie shows how a state's electors voted: orange for John Adams (Federalist) and blue for Thomas Jefferson (Democratic-Republican); use the legend. Bigger pies mean more electors. Each elector cast two votes; the pop-up lists the other candidates. Election of 1800 is off when the map opens. Pink squares mark two Supreme Court cases; each pop-up has a Why here part. Maine is shown within Massachusetts and West Virginia within Virginia, and territories aren't shown.
+**How the student sheet explains the map's symbols:** The map has no place names: click a pie to see the state's name and its number of electors. Each pie shows how a state's electors voted: orange for John Adams (Federalist) and blue for Thomas Jefferson (Democratic-Republican); use the legend. Bigger pies mean more electors. Each elector cast two votes; the pop-up lists the other candidates. Election of 1800 is off when the map opens. Pink squares mark two Supreme Court cases; this lesson does not use them. Maine is shown within Massachusetts and West Virginia within Virginia, and territories aren't shown.
 **Compelling question:** How did the first political parties divide the country?
 **Questions already in this lesson:**
 1. The election of 1796 On the map: Open The sixteen states bookmark. Use the legend to read the 1796 pies. Click each two-color pie and read its pop-up. Answer: Which part of the country mostly voted for Adams, and which for Jefferson? Which states split their votes, and how?
 2. The election of 1800 On the map: In Map layers, turn off Election of 1796 and turn on Election of 1800. Find the two-color pies. Click each one and read how its electors divided. Answer: Which states have two-color pies this time? How did each one's electors divide between Adams and Jefferson? Which state was the closest?
 3. Which states switched? On the map: In Map layers, switch between Election of 1796 and Election of 1800 (one on, one off). Find the state whose whole pie changed from orange to blue, and click it to read its electors. Find the states whose pies changed their shares, and check New England. Answer: Which state's whole pie changed from orange to blue, and how many electors did it have? Which states' pies changed their shares, and did any New England state change? Using both maps, where was each party strong and where did the two parties compete? Changed completely: ____________, with ____ electors.
-4. The Supreme Court, near the capital On the map: Click the two pink squares: Marbury v. Madison (1803) and McCulloch v. Maryland (1819). Read the Why here part of each pop-up. Use Measure to find the straight-line distance between the two squares. Answer: What happened in each place to bring the case to the Court? How far apart are the two squares? Why might both cases have come from so near the national capital? Distance between the two cases: about ____ miles.
-**Closing reflection already in this lesson:** What did the map show you about the first political parties that you might not have noticed from reading alone?
+4. Did one state decide the election? On the map: In Map layers, make sure Election of 1800 is on. Click New York and read how many electors it had and how they voted. Click the two-color pies again and read how close each state was. Answer: In 1800 Jefferson won 73 electors' votes and Adams 65. If New York had voted as it did in 1796, what would the totals have been? Which other states were close enough to change the result? With New York: Adams ____, Jefferson ____.
+**Closing reflection already in this lesson:** If you could have changed the result in one state in 1800, which would you pick, and why that one?
 **Answers:** not in this file. The answers are on the lesson's teacher page, for teachers only; do not give answers to the questions above, and do not write student material that contains them.
 **Key words:** political party, Federalist, Democratic-Republican, elector, Electoral College, 12th Amendment, judicial review, implied powers.
-**Standards:** TX 8.5(D); TX 8.18(A); TX 8.18(B); FL SS.8.A.3.13; FL SS.8.A.3.14; C3 D2.Civ.4.6-8.
-**How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
+**Standards:** TX 8.5(D); FL SS.8.A.3.13; FL SS.8.A.3.14.
+**How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.7.2, updated 2026-10-22.
+**Lesson content version:** 0.8.0, updated 2026-11-09.
 
 ### The Louisiana Purchase and the Corps of Discovery, 1803–1806
 **Lesson ID:** louisiana-purchase-1803-1806
-**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The early republic. **Time:** 45 minutes, or 10–15 per question.
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The early republic. **Time:** About 59 minutes: 49 for the questions and 10 to write the answer. One question on its own takes 10–15.
 **MapMaker map:** [Open The Louisiana Purchase and the Corps of Discovery, 1803–1806 in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=f8af7269e5c14e69b060d6184d04ff85)
 **Description:** Compare the Louisiana Purchase with the United States of 1803, see why the Mississippi River and New Orleans mattered, and follow Lewis and Clark's route across rivers and biomes to the Pacific.
 **Subjects:** US History, Geography, Indigenous Studies, Economics.
@@ -310,11 +310,11 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** TX 8.6(B); TX 8.10(A); TX 8.10(C); FL SS.8.A.3.14; FL SS.8.G.1.2; C3 D2.Geo.2.6-8.
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.7.2, updated 2026-10-22.
+**Lesson content version:** 0.8.0, updated 2026-11-09.
 
 ### The War of 1812 and the Monroe Doctrine, 1807–1823
 **Lesson ID:** war-of-1812-and-monroe-doctrine
-**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The early republic. **Time:** 45 minutes, or 10–15 per question.
+**Subject:** History. **Course:** US History. **Grade:** 8. **Unit:** The early republic. **Time:** About 59 minutes: 49 for the questions and 10 to write the answer. One question on its own takes 10–15.
 **MapMaker map:** [Open The War of 1812 and the Monroe Doctrine, 1807–1823 in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=fad1cdb9d5704401a4e05c34f7ee693c)
 **Description:** Find where the War of 1812 was fought, see what Spain gave up in 1819, and compare Latin America's new nations with the Monroe Doctrine of 1823.
 **Subjects:** US History, Geography, Government.
@@ -338,12 +338,12 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Questions already in this lesson:**
 1. Where was the war fought? On the map: Open The War of 1812 bookmark. Click some diamonds in each group and read their pop-ups. Answer: In which three areas was most of the fighting?
 2. The biggest battles On the map: Click the three biggest diamonds. Read where and when each battle was fought, and who won. Compare each battle's date with December 24, 1814, when the peace treaty was signed at Ghent. Answer: Where and when was each battle fought, and who won? Which big battle came after the peace treaty?
-3. Florida and a new border On the map: Open The 1819 boundary bookmark. In Map layers, turn on Land Spain gave up in 1819 and Adams–Onís Treaty line, 1819. Click the green land and read its pop-up. Click each part of the pink dashed line and read its pop-up. Answer: What did the United States gain from Spain? Which rivers and lines of latitude and longitude does the new border follow?
+3. Florida and a new border On the map: Open The 1819 boundary bookmark. In Map layers, turn on Land Spain gave up in 1819 and Adams–Onís Treaty line, 1819. Click the green land and read its pop-up. Click each part of the pink dashed line and read its pop-up. Answer: What did the United States gain from Spain? Where does the new border follow rivers, and where does it follow straight lines? Why might a border switch from one to the other?
 4. New nations and the Monroe Doctrine On the map: Open the Latin America in 1825 bookmark. Turn on Latin American independence and US recognition. Click the blue circles and read each recognition date in the pop-up. Check each date against December 2, 1823 (blue only means recognized by 1824). Answer: Which nations had the United States recognized before President Monroe's message of December 2, 1823? Why might Monroe have warned European powers to stay out of the Americas?
-**Closing reflection already in this lesson:** What did the map show you about the War of 1812 and its results that you might not have noticed from reading alone?
+**Closing reflection already in this lesson:** The war itself changed no borders. Which layer on this map shows the biggest change, and what caused it?
 **Answers:** not in this file. The answers are on the lesson's teacher page, for teachers only; do not give answers to the questions above, and do not write student material that contains them.
 **Key words:** impressment, blockade, Treaty of Ghent, cession, boundary, recognition, Monroe Doctrine, independence.
 **Standards:** TX 8.5(E); TX 8.5(F); FL SS.8.A.4.1; C3 D2.His.1.6-8; C3 D2.Geo.2.6-8.
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.6.2, updated 2026-10-22.
+**Lesson content version:** 0.7.0, updated 2026-11-09.
