@@ -1,0 +1,89 @@
+{
+  "format": "Data publish 1.0",
+  "id": "slavery-1850-states",
+  "version": "0.1.0",
+  "file": "maps/data/slavery-1850/slavery-1850-states-v0_1_0.geojson",
+  "expectFeatures": 40,
+  "note": "31 states, the District of Columbia and 8 territory areas, late 1850. Virginia includes today's West Virginia.",
+  "checks": [
+    {
+      "name": "Virginia is one slave state",
+      "where": {
+        "Name": "Virginia"
+      },
+      "expect": {
+        "StatusOrder": 2,
+        "Kind": "State"
+      }
+    },
+    {
+      "name": "Missouri is one slave state",
+      "where": {
+        "Name": "Missouri"
+      },
+      "expect": {
+        "StatusOrder": 2,
+        "Admitted": 1821
+      }
+    },
+    {
+      "name": "California a free state, 1850",
+      "where": {
+        "Name": "California"
+      },
+      "expect": {
+        "StatusOrder": 1,
+        "Admitted": 1850
+      }
+    },
+    {
+      "name": "Indian Territory, not Oklahoma",
+      "where": {
+        "Name": "Indian Territory"
+      },
+      "expect": {
+        "StatusOrder": 4
+      }
+    },
+    {
+      "name": "Utah Territory left to settlers",
+      "where": {
+        "Name": "Utah Territory"
+      },
+      "expect": {
+        "StatusOrder": 4
+      }
+    },
+    {
+      "name": "Oregon Territory free",
+      "where": {
+        "Name": "Oregon Territory"
+      },
+      "expect": {
+        "StatusOrder": 3
+      }
+    }
+  ],
+  "item": {
+    "title": "Free and slave states and territories, 1850 (data for lessons) v0.1",
+    "snippet": "The 31 states, the District of Columbia and the territories of late 1850, in four groups: free state, slave state, free territory, territory open to slavery.",
+    "description": "<p>The states and territories of the United States in late 1850, after California's admission, made for US History map lessons. Each area has one of four groups and a one-sentence reason. Virginia includes today's West Virginia; Missouri is one area; the area the source labels Oklahoma is Indian Territory.</p><p>Outlines are from Esri's digitization of the 1850 plate in Harper's Atlas of American History (1920). That map classes each area by the law that made it free or slave; this layer uses four plain groups instead. Territory boundaries in the West were unsettled in 1850 and are approximate.</p>",
+    "tags": [
+      "US History",
+      "slavery",
+      "1850",
+      "Compromise of 1850",
+      "Missouri Compromise",
+      "free states",
+      "slave states",
+      "grade 8"
+    ],
+    "credits": "Outlines: Library of Congress and Esri (digitized from Harper's Atlas of American History, 1920). Status: acts of Congress and state admission records.",
+    "license": "Outlines digitized by Esri from a public-domain map (Harper's Atlas of American History, 1920; Library of Congress, loc.gov/item/32005827). Status text written for this layer is original."
+  },
+  "publish": {
+    "org": "HNLEA4GfnbCFQZGa",
+    "orgLabel": "GIS for Schools",
+    "folder": "Map data"
+  }
+}

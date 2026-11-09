@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "us-slavery-and-slave-trade-1850",
-  "contentVersion": "0.8.3",
+  "contentVersion": "0.8.4",
   "status": "draft",
   "updated": "2026-11-09",
   "reviewed": null,
@@ -89,9 +89,9 @@
     },
     {
       "where": "US States and Territories 1850",
-      "note": "Missouri is drawn twice, as two overlapping features: once under Slave states and once under Slave states and territories by compromise. Clicking it gives a pop-up that says 1 of 2.",
+      "note": "Missouri is drawn as two areas with different legend groups: the state as admitted in 1821 (Slave states) and its northwest corner, added in 1837 (Slave states and territories by compromise). The source atlas classes land by the law that applied to it, so this is the source's choice, not a drawing error, but clicking near the corner can give a pop-up that says 1 of 2. The replacement map (maps/plan/replacement-maps.md) shows Missouri as one state.",
       "status": "open",
-      "date": "2026-10-15",
+      "date": "2026-11-09",
       "studentVisible": true
     },
     {
@@ -176,7 +176,7 @@
               ]
             ]
           },
-          "text": "Historically there were 15 free and 15 slave states in 1850 (Iowa and California free, Texas slave). The legend groups split them by how they became free or slave, so the counts students get depend on which groups they add together; the reasoning matters more than the number.",
+          "text": "There were 15 free and 15 slave states until California was admitted as a free state on September 9, 1850; after that there were 16 free and 15 slave (Iowa and California free, Texas slave). The legend groups split them by how they became free or slave, so the counts students get depend on which groups they add together; the reasoning matters more than the number.",
           "accept": "One state correctly named for each of the four legend groups; two state years read from pop-ups; the eastern line described as the southern border of Pennsylvania and then the Ohio River. Do not mark on counts: the layer's groups make a count ambiguous."
         }
       },

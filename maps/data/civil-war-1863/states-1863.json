@@ -1,0 +1,256 @@
+{
+ "about": "The 35 states of mid-1863 and where each stood in the Civil War. Secession dates are the dates the ordinance was adopted (Tennessee: the date voters approved it, the date usually given). Fort Sumter was attacked on April 12, 1861. To fact-check before version 1.0: every date against the ordinances; West Virginia's and Kansas's admission dates.",
+ "groups": {
+  "1": "Union free state",
+  "2": "Union slave state (border state)",
+  "3": "Seceded before Fort Sumter (April 1861)",
+  "4": "Seceded after Fort Sumter (April 1861)"
+ },
+ "states": [
+  {
+   "abbr": "ME",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "NH",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "VT",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "MA",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "RI",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "CT",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "NY",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "NJ",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "PA",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "OH",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "IN",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "IL",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "MI",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "WI",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "MN",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "IA",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "KS",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": "Became a state on January 29, 1861."
+  },
+  {
+   "abbr": "CA",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "OR",
+   "group": 1,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "DE",
+   "group": 2,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "MD",
+   "group": 2,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "KY",
+   "group": 2,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "MO",
+   "group": 2,
+   "side": "Union",
+   "seceded": null,
+   "note": null
+  },
+  {
+   "abbr": "WV",
+   "group": 2,
+   "side": "Union",
+   "seceded": null,
+   "note": "Became a state on June 20, 1863. In 1861 it was part of Virginia, which seceded."
+  },
+  {
+   "abbr": "SC",
+   "group": 3,
+   "side": "Confederacy",
+   "seceded": "December 20, 1860",
+   "note": null
+  },
+  {
+   "abbr": "MS",
+   "group": 3,
+   "side": "Confederacy",
+   "seceded": "January 9, 1861",
+   "note": null
+  },
+  {
+   "abbr": "FL",
+   "group": 3,
+   "side": "Confederacy",
+   "seceded": "January 10, 1861",
+   "note": null
+  },
+  {
+   "abbr": "AL",
+   "group": 3,
+   "side": "Confederacy",
+   "seceded": "January 11, 1861",
+   "note": null
+  },
+  {
+   "abbr": "GA",
+   "group": 3,
+   "side": "Confederacy",
+   "seceded": "January 19, 1861",
+   "note": null
+  },
+  {
+   "abbr": "LA",
+   "group": 3,
+   "side": "Confederacy",
+   "seceded": "January 26, 1861",
+   "note": null
+  },
+  {
+   "abbr": "TX",
+   "group": 3,
+   "side": "Confederacy",
+   "seceded": "February 1, 1861",
+   "note": "The convention voted on February 1; voters approved it on February 23, 1861."
+  },
+  {
+   "abbr": "VA",
+   "group": 4,
+   "side": "Confederacy",
+   "seceded": "April 17, 1861",
+   "note": "The convention voted on April 17; voters approved it on May 23, 1861. Its western counties became West Virginia in 1863."
+  },
+  {
+   "abbr": "AR",
+   "group": 4,
+   "side": "Confederacy",
+   "seceded": "May 6, 1861",
+   "note": null
+  },
+  {
+   "abbr": "NC",
+   "group": 4,
+   "side": "Confederacy",
+   "seceded": "May 20, 1861",
+   "note": null
+  },
+  {
+   "abbr": "TN",
+   "group": 4,
+   "side": "Confederacy",
+   "seceded": "June 8, 1861",
+   "note": "The legislature voted on May 6; voters approved it on June 8, 1861."
+  }
+ ]
+}
