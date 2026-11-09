@@ -1,0 +1,33 @@
+{
+ "about": "The four route features of the source layer, renamed and described so the map can say which way people were moved. To fact-check before version 1.0: the two ship stories and the wording for the overland and sea routes.",
+ "routes": [
+  {
+   "oid": 1,
+   "name": "Overland routes of the slave trade",
+   "kind": "Slave trade within the United States",
+   "direction": "South and west",
+   "text": "Enslaved people were forced along these routes from the Upper South, such as Virginia and Maryland, to the cotton and sugar country of the Deep South."
+  },
+  {
+   "oid": 4,
+   "name": "Sea routes of the slave trade",
+   "kind": "Slave trade within the United States",
+   "direction": "South and west, by sea",
+   "text": "Ships carried enslaved people along the Atlantic and Gulf coasts from ports in the Upper South toward New Orleans."
+  },
+  {
+   "oid": 2,
+   "name": "Route of La Amistad, 1839",
+   "kind": "A ship's route",
+   "direction": "From Cuba north to Long Island, New York",
+   "text": "In 1839 Africans who had been enslaved illegally took over the ship La Amistad off Cuba. It reached Long Island, New York. In 1841 the Supreme Court ruled that they were free."
+  },
+  {
+   "oid": 3,
+   "name": "Route of the Creole, 1841",
+   "kind": "A ship's route",
+   "direction": "From Virginia south to Nassau, in the Bahamas",
+   "text": "In 1841 enslaved people being shipped from Virginia to New Orleans took over the ship Creole and sailed it to Nassau, in the British Bahamas, where most of them were freed."
+  }
+ ]
+}

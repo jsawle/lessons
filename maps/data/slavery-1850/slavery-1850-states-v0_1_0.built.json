@@ -1,0 +1,16 @@
+{
+ "tool": "Slavery 1850 data builder 1.0",
+ "when": "2026-11-09T22:13:39Z",
+ "sha1": "db64bb3049ca908310717d43fd137cc5546014e7",
+ "features": 40,
+ "source": {
+  "file": "source/states-1850-harpers.geojson",
+  "sha1": "52bbcba556095edeb6b9e13151c6e6e6ae87b401"
+ },
+ "byStatus": {
+  "Free state": 16,
+  "Slave state (and Washington, D.C.)": 16,
+  "Free territory": 4,
+  "Territory open to slavery": 4
+ }
+}

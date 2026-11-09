@@ -1,0 +1,344 @@
+{
+ "about": "The states and territories of late 1850 (after California's admission on September 9), in four plain groups, for a lesson map. Outlines are Esri's digitization of the 1850 plate in Harper's Atlas of American History (1920), a public-domain map in the Library of Congress (loc.gov/item/32005827). The source classes each area by the law that made it free or slave, in 16 classes; this table replaces those with four. To fact-check before version 1.0: every status and admission year; the wording for the territories; what the three small 'Unidentified' areas of the source were in 1850.",
+ "statuses": {
+  "1": "Free state",
+  "2": "Slave state (and Washington, D.C.)",
+  "3": "Free territory",
+  "4": "Territory open to slavery"
+ },
+ "units": [
+  {
+   "key": "ME",
+   "kind": "State",
+   "status": 1,
+   "admitted": 1820,
+   "basis": "Slavery was banned here.",
+   "note": "Admitted as a free state under the Missouri Compromise of 1820."
+  },
+  {
+   "key": "NH",
+   "kind": "State",
+   "status": 1,
+   "admitted": null,
+   "basis": "Slavery was banned here."
+  },
+  {
+   "key": "VT",
+   "kind": "State",
+   "status": 1,
+   "admitted": 1791,
+   "basis": "Slavery was banned here."
+  },
+  {
+   "key": "MA",
+   "kind": "State",
+   "status": 1,
+   "admitted": null,
+   "basis": "Slavery was banned here."
+  },
+  {
+   "key": "RI",
+   "kind": "State",
+   "status": 1,
+   "admitted": null,
+   "basis": "Slavery was banned here."
+  },
+  {
+   "key": "CT",
+   "kind": "State",
+   "status": 1,
+   "admitted": null,
+   "basis": "Slavery was banned here."
+  },
+  {
+   "key": "NY",
+   "kind": "State",
+   "status": 1,
+   "admitted": null,
+   "basis": "Slavery was banned here."
+  },
+  {
+   "key": "NJ",
+   "kind": "State",
+   "status": 1,
+   "admitted": null,
+   "basis": "Slavery was banned here."
+  },
+  {
+   "key": "PA",
+   "kind": "State",
+   "status": 1,
+   "admitted": null,
+   "basis": "Slavery was banned here."
+  },
+  {
+   "key": "OH",
+   "kind": "State",
+   "status": 1,
+   "admitted": 1803,
+   "basis": "Slavery was banned here."
+  },
+  {
+   "key": "IN",
+   "kind": "State",
+   "status": 1,
+   "admitted": 1816,
+   "basis": "Slavery was banned here."
+  },
+  {
+   "key": "IL",
+   "kind": "State",
+   "status": 1,
+   "admitted": 1818,
+   "basis": "Slavery was banned here."
+  },
+  {
+   "key": "MI",
+   "kind": "State",
+   "status": 1,
+   "admitted": 1837,
+   "basis": "Slavery was banned here."
+  },
+  {
+   "key": "WI",
+   "kind": "State",
+   "status": 1,
+   "admitted": 1848,
+   "basis": "Slavery was banned here."
+  },
+  {
+   "key": "IA",
+   "kind": "State",
+   "status": 1,
+   "admitted": 1846,
+   "basis": "Slavery was banned here."
+  },
+  {
+   "key": "CA",
+   "kind": "State",
+   "status": 1,
+   "admitted": 1850,
+   "basis": "Admitted as a free state on September 9, 1850, as part of the Compromise of 1850."
+  },
+  {
+   "key": "DE",
+   "kind": "State",
+   "status": 2,
+   "admitted": null,
+   "basis": "Slavery was legal here."
+  },
+  {
+   "key": "MD",
+   "kind": "State",
+   "status": 2,
+   "admitted": null,
+   "basis": "Slavery was legal here."
+  },
+  {
+   "key": "VA",
+   "kind": "State",
+   "status": 2,
+   "admitted": null,
+   "basis": "Slavery was legal here.",
+   "note": "Includes today's West Virginia, which was part of Virginia until 1863."
+  },
+  {
+   "key": "NC",
+   "kind": "State",
+   "status": 2,
+   "admitted": null,
+   "basis": "Slavery was legal here."
+  },
+  {
+   "key": "SC",
+   "kind": "State",
+   "status": 2,
+   "admitted": null,
+   "basis": "Slavery was legal here."
+  },
+  {
+   "key": "GA",
+   "kind": "State",
+   "status": 2,
+   "admitted": null,
+   "basis": "Slavery was legal here."
+  },
+  {
+   "key": "FL",
+   "kind": "State",
+   "status": 2,
+   "admitted": 1845,
+   "basis": "Slavery was legal here."
+  },
+  {
+   "key": "AL",
+   "kind": "State",
+   "status": 2,
+   "admitted": 1819,
+   "basis": "Slavery was legal here."
+  },
+  {
+   "key": "MS",
+   "kind": "State",
+   "status": 2,
+   "admitted": 1817,
+   "basis": "Slavery was legal here."
+  },
+  {
+   "key": "LA",
+   "kind": "State",
+   "status": 2,
+   "admitted": 1812,
+   "basis": "Slavery was legal here."
+  },
+  {
+   "key": "TX",
+   "kind": "State",
+   "status": 2,
+   "admitted": 1845,
+   "basis": "Slavery was legal here.",
+   "note": "Annexed as a slave state in 1845."
+  },
+  {
+   "key": "AR",
+   "kind": "State",
+   "status": 2,
+   "admitted": 1836,
+   "basis": "Slavery was legal here."
+  },
+  {
+   "key": "TN",
+   "kind": "State",
+   "status": 2,
+   "admitted": 1796,
+   "basis": "Slavery was legal here."
+  },
+  {
+   "key": "KY",
+   "kind": "State",
+   "status": 2,
+   "admitted": 1792,
+   "basis": "Slavery was legal here."
+  },
+  {
+   "key": "MO",
+   "kind": "State",
+   "status": 2,
+   "admitted": 1821,
+   "basis": "Slavery was legal here.",
+   "note": "Admitted as a slave state under the Missouri Compromise of 1820, although most of it lies north of the compromise line. The source map draws the northwest corner, added in 1837, separately; here it is part of the state."
+  },
+  {
+   "key": "DC",
+   "kind": "District",
+   "status": 2,
+   "name": "District of Columbia",
+   "admitted": null,
+   "basis": "Slavery was legal here. The Compromise of 1850 ended the slave trade in the District, but not slavery."
+  },
+  {
+   "key": "OR-T",
+   "kind": "Territory",
+   "status": 3,
+   "name": "Oregon Territory",
+   "admitted": null,
+   "basis": "Organized in 1848 with slavery banned."
+  },
+  {
+   "key": "MN-T",
+   "kind": "Territory",
+   "status": 3,
+   "name": "Minnesota Territory",
+   "admitted": null,
+   "basis": "Organized in 1849. Slavery was banned here."
+  },
+  {
+   "key": "UNORG",
+   "kind": "Territory",
+   "status": 3,
+   "name": "Unorganized territory",
+   "admitted": null,
+   "basis": "Closed to slavery by the Missouri Compromise of 1820, because it lies north of the compromise line."
+  },
+  {
+   "key": "UT-T",
+   "kind": "Territory",
+   "status": 4,
+   "name": "Utah Territory",
+   "admitted": null,
+   "basis": "Organized by the Compromise of 1850, which left slavery for the settlers to decide."
+  },
+  {
+   "key": "NM-T",
+   "kind": "Territory",
+   "status": 4,
+   "name": "New Mexico Territory",
+   "admitted": null,
+   "basis": "Organized by the Compromise of 1850, which left slavery for the settlers to decide."
+  },
+  {
+   "key": "IT",
+   "kind": "Territory",
+   "status": 4,
+   "name": "Indian Territory",
+   "admitted": null,
+   "basis": "Not an organized territory. Slavery was legal among several of the nations moved here in the 1830s.",
+   "note": "The source layer labels this area Oklahoma, a name not used in 1850."
+  },
+  {
+   "key": "X-FREE",
+   "kind": "Territory",
+   "status": 3,
+   "name": "Unorganized land (boundaries unsettled in 1850)",
+   "admitted": null,
+   "basis": "Shown as free on the source map (Harper's Atlas of American History, 1920)."
+  },
+  {
+   "key": "X-OPEN",
+   "kind": "Territory",
+   "status": 4,
+   "name": "Unorganized land (boundaries unsettled in 1850)",
+   "admitted": null,
+   "basis": "Shown as open to slavery on the source map (Harper's Atlas of American History, 1920)."
+  }
+ ],
+ "sourceObjectIds": {
+  "VA": [
+   49,
+   50
+  ],
+  "MO": [
+   15,
+   59
+  ],
+  "MN-T": [
+   14,
+   53
+  ],
+  "OR-T": [
+   6
+  ],
+  "UNORG": [
+   12
+  ],
+  "UT-T": [
+   23
+  ],
+  "NM-T": [
+   18
+  ],
+  "IT": [
+   20
+  ],
+  "DC": [
+   28
+  ],
+  "X-FREE": [
+   55,
+   57
+  ],
+  "X-OPEN": [
+   61
+  ]
+ }
+}

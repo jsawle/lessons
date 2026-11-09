@@ -1,0 +1,69 @@
+# Replacement maps: Civil War and Slavery 1850 (draft 0.1, 9 Nov 2026)
+
+Purpose: replace the two MapMaker-owned lesson maps whose defects block core questions with maps built in GIS for Schools through the usual route (data, spec, build, test, dry run, your OK, you run `--go`, never shared by the tool). From the curriculum review of 9 November 2026.
+
+Where this stands: the data for the layers that had the errors is built and passes its dry run. Nothing is online. The map specs come next and need the layers' item ids, so they wait for you to publish the data.
+
+## What the source layers turned out to be
+
+**US States and Territories 1850** is Esri's digitization of a plate in Harper's Atlas of American History (1920), a public-domain map in the Library of Congress. The plate classes each area by the law that made it free or slave, in 16 classes. That explains most of what the lesson logged as errors:
+
+- Missouri "drawn twice" is the state of 1821 and its northwest corner, added in 1837, in two classes. The two areas do not overlap.
+- The pop-up's year is the year of that law, not of statehood, which is why Illinois reads 1848 and Maine 1783.
+- West Virginia (1863) and "Oklahoma" are real anachronisms: today's outlines on an 1850 map.
+- Three small areas in today's Colorado and Wyoming are named "Unidentified".
+
+So the layer is a fair copy of its source, but the source answers a different question from the lesson's. The replacement keeps the outlines and gives each area one of four plain groups.
+
+**Civil War**: the states layer and the Union and Confederacy boundary are copyright National Geographic Society, and the battle points (the layer with the inverted victory legend) are copyright American Battlefield Trust. None of the three can go into an unbranded set, so they are replaced or left out, not copied.
+
+## Data built (dry run passed, not published)
+
+| Data | Version | Features | Made from | Check before 1.0 |
+|---|---|---|---|---|
+| `maps/data/civil-war-1863` | 0.1.0 | 35 states: 19 Union free, 5 Union slave (border), 7 seceded before Fort Sumter, 4 after | Natural Earth outlines and `states-1863.json` | Each secession date against the ordinance; West Virginia (June 20, 1863) and Kansas (January 29, 1861) |
+| `maps/data/slavery-1850` (`data.json`) | 0.1.0 | 40 areas: 16 free states, 15 slave states, the District of Columbia, 8 territory areas | The saved source layer and `units-1850.json` | Every status and admission year; the wording for Utah, New Mexico and Indian Territory; what the three "Unidentified" areas were |
+| `maps/data/slavery-1850` (`routes.data.json`) | 0.1.0 | 4 routes: overland, sea, La Amistad (1839), the Creole (1841), each with a direction and a short account | The saved source layer and `routes-1850.json` | The two ship accounts; the wording for the overland and sea routes |
+
+Known limits: the 1863 layer uses today's outlines and leaves out the territories and Nevada (a state from 1864); the 1850 layer keeps the source's outlines, so Texas has its later boundary and western territory lines are approximate.
+
+## Your steps
+
+1. Read the three tables (`states-1863.json`, `units-1850.json`, `routes-1850.json`) and say what to change. They are the history content, and they have not had an independent fact-check.
+2. Publish the data from your computer, dry run first:
+   ```
+   python maps/tools/publish_data.py maps/data/civil-war-1863/data.json --profile g4s-publisher --go
+   python maps/tools/publish_data.py maps/data/slavery-1850/data.json --profile g4s-publisher --go
+   python maps/tools/publish_data.py maps/data/slavery-1850/routes.data.json --profile g4s-publisher --go
+   ```
+3. Share the three layers publicly (the map builder warns otherwise) and pass on their item ids. The map specs are written, built and tested from those.
+
+## Proposed maps
+
+### The Civil War, 1863
+
+| Layer | Source | Notes |
+|---|---|---|
+| The states in the Civil War, 1863 | New (`civil-war-1863`) | Four groups; pop-up gives the side, the group and the secession date. Opens on. |
+| Civil War battlefields | National Park Service, American Battlefield Protection Program boundaries (public) | Pop-up gives the battle name, acres and state, which question 4 already uses. Replaces the battle points, so no victory legend. |
+| Railroads to 1863 | Jeremy Atack's historical railroads database (free to use with the citation) | Filtered to lines in operation by 1863; visible at the regional view (the current map hides them above 1:2,800,000). Off when the map opens, so students reveal it. |
+
+Not included: the Union and Confederacy boundary line (the shading shows it) and the battle points.
+
+### Slavery and the slave trade, 1850
+
+| Layer | Source | Notes |
+|---|---|---|
+| Free and slave states and territories, 1850 | New (`slavery-1850-states`) | Four groups; counts can be marked: 16 free states, 15 slave states. |
+| Missouri Compromise Line | Esri's digitization (public-domain source) | Pop-up on. |
+| Routes of the slave trade | New (`slavery-1850-routes`) | Arrowheads and a pop-up with the direction. The two ship routes off when the map opens. |
+| Underground Railroad routes and cities | Esri's digitization (public-domain source) | As now. |
+
+The current map uses an Albers basemap and river tiles owned by the MapMaker organization. The replacement would use the same basemap as the other GIS for Schools maps.
+
+## Open decisions
+
+1. **Copies or the MapMaker items** for the layers that need no correction (battlefield boundaries, railroads, Missouri Compromise Line, Underground Railroad). The earlier decision was copies in our own organization. Data copy (`copy_source.py`) was written for the land cessions layer and its date fields, so it may need a small change first.
+2. **Licence for the Esri digitizations.** Their items say only that the source map is in the public domain. Confirm they can be copied into GIS for Schools and offered to other channels.
+3. **Territories on the 1863 map.** Left out for now, as on the 1828 map. The current lesson has a Territories group in its legend but no question uses it.
+4. **The lessons.** Civil War Battlefields and US Slavery 1850 are rewritten from the new maps once they are built, map first, as in the Age of Jackson slice.

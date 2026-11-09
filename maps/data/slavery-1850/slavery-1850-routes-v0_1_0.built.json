@@ -1,0 +1,10 @@
+{
+ "tool": "Slavery 1850 data builder 1.0",
+ "when": "2026-11-09T22:13:39Z",
+ "sha1": "340655024870d642e0ba7d77ae9c44302352534e",
+ "features": 4,
+ "source": {
+  "file": "source/routes-1850-harpers.geojson",
+  "sha1": "36c77d6c53487e15d8c9630e1f16f1e319b8b990"
+ }
+}

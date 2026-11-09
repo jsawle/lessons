@@ -1,0 +1,16 @@
+{
+ "tool": "Civil War 1863 data builder 1.0",
+ "when": "2026-11-09T22:13:24Z",
+ "sha1": "969e6019eba35572e1bad6d84135d1ee41567a16",
+ "features": 35,
+ "naturalEarth": {
+  "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_admin_1_states_provinces.geojson",
+  "sha1": "9dc46fc9dc36cf322dd14c245ef18be8fbf97ed0"
+ },
+ "groups": {
+  "Union free state": 19,
+  "Union slave state (border state)": 5,
+  "Seceded before Fort Sumter (April 1861)": 7,
+  "Seceded after Fort Sumter (April 1861)": 4
+ }
+}
