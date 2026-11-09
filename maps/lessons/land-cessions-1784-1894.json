@@ -1,10 +1,10 @@
 {
   "$schema": "../../resources/schema/lesson.schema.json",
-  "formatVersion": "1.9",
+  "formatVersion": "1.10",
   "id": "land-cessions-1784-1894",
-  "contentVersion": "0.3.0",
+  "contentVersion": "0.4.0",
   "status": "draft",
-  "updated": "2026-10-30",
+  "updated": "2026-11-09",
   "reviewed": null,
   "title": "Land Cessions and Indian Removal, 1784–1894",
   "summary": "Turn on one period at a time to watch American Indian land cessions spread across the United States, predict where the next ones will be, and explain why the 1830s cessions are where they are. The map is Charles Royce's record of cessions, so students also ask whose view it shows.",
@@ -19,7 +19,7 @@
     "US History",
     "Geography"
   ],
-  "time": "About 60 minutes, or two parts: questions 1 to 4, then 5, 6 and the big question",
+  "time": "About 60 minutes over two class periods: questions 1 to 4, then 5, 6 and the big question",
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "fd8f742aec1c4a8a9648cd20dafffe11",
@@ -55,31 +55,36 @@
       "where": "Creek cession of March 24, 1832 (Alabama), pop-up",
       "note": "Nations today reads \"Not listed in this map's data.\" The Forest Service data has no present-day nation for any of the 13 Creek records. Question 6 uses it as a source question; the answer notes name nations that exist today.",
       "status": "open",
-      "date": "2026-10-30"
+      "date": "2026-10-30",
+      "studentVisible": true
     },
     {
       "where": "Areas along the Mississippi River",
       "note": "The boundaries are coarse along rivers: Vicksburg falls just outside the cession Royce shows it in. No question depends on which side of a line a riverside town falls (checked 30 Oct 2026, maps/data/checks/).",
       "status": "open",
-      "date": "2026-10-30"
+      "date": "2026-10-30",
+      "studentVisible": false
     },
     {
       "where": "Areas with more than one date",
       "note": "Royce lists every treaty that concerns an area, and the layers use any of its dates, so an area can appear in an earlier layer than its cession. Central Florida (Seminole) is light blue because the 1823 treaty set it aside as a reservation; it was ceded in 1832. Some Kansas areas carry the date they were assigned to a nation moved west. Reading the map and questions 3 and 4 say so.",
       "status": "open",
-      "date": "2026-10-30"
+      "date": "2026-10-30",
+      "studentVisible": true
     },
     {
       "where": "Cherokee cession of December 29, 1835, pop-up",
       "note": "Nations today lists the Eastern Band of Cherokee Indians twice, spelled two ways; it is one nation.",
       "status": "open",
-      "date": "2026-10-30"
+      "date": "2026-10-30",
+      "studentVisible": true
     },
     {
       "where": "56 areas, 40 of them in California (dated 1851)",
       "note": "No link to a treaty, statute or order in the pop-up: the Forest Service data has none.",
       "status": "open",
-      "date": "2026-10-30"
+      "date": "2026-10-30",
+      "studentVisible": true
     }
   ],
   "inquiry": {
@@ -237,7 +242,7 @@
           }
         ],
         "ask": {
-          "en": "(a) Fill in the nation, date and link words for each area. (b) Read the Indian Removal Act and Jackson's words in Before you start. Why might these cessions have come in the 1830s, and why here?"
+          "en": "(a) Fill in the nation, date and link words for each area. (b) In December 1830 Jackson told Congress that removal meant \"opening the whole territory between Tennessee on the north and Louisiana on the south to the settlement of the whites.\" Using his words and the Indian Removal Act (Before you start), why might these cessions have come in the 1830s, and why here?"
         },
         "lines": 5,
         "answer": {
@@ -389,7 +394,7 @@
   ],
   "assessment": {
     "evidence": "Strong answers use all three layers in order (where light blue, orange and green fall), pop-up names and dates for at least two 1830s Southeast cessions (Choctaw, September 27, 1830; Creek, March 24, 1832; Cherokee, December 29, 1835), the Indian Removal Act and Jackson's reason, and the pop-up's note on who recorded the map.",
-    "exemplar": "The United States gained American Indian land mostly by treaty, and the cessions moved across the map in a clear order. With only the light blue layer on, the cessions before 1830 cover Ohio, Indiana, Illinois, Missouri and much of the lower South, but there are empty pockets in Mississippi, east-central Alabama and northwest Georgia. When I turned on the orange 1830s layer, those pockets filled in. The pop-ups show the Choctaw cession on September 27, 1830, the Creek on March 24, 1832 and the Cherokee on December 29, 1835, and each link says Treaty text. The Indian Removal Act of May 1830 let the President make removal treaties with nations east of the Mississippi, and Jackson wanted the land between Tennessee and Louisiana opened to settlement, so within five years the nations' remaining homelands in the Southeast were ceded. After 1840 the green layer covers almost the whole West. The pop-up note says Royce compiled the map from United States records, so it is the federal government's record. The 1836 Cherokee petition says the treaty was made without the authority of the nation, so the map gives one side of a disputed agreement. The Creek pop-up also leaves out a nation that exists today."
+    "exemplar": "The United States gained most of this land by treaty, and the cessions moved across the map in order. Before 1830 the light blue covers Ohio, Indiana, Illinois, Missouri and much of the South, but there are gaps in Mississippi, Alabama and northwest Georgia. When I turned on the orange 1830s layer, those gaps filled in. The pop-ups show the Choctaw cession on September 27, 1830, the Creek on March 24, 1832 and the Cherokee on December 29, 1835. The Indian Removal Act of May 1830 let the President make removal treaties, and Jackson wanted that land opened to white settlers. After 1840 the green layer covers almost the whole West. The map was made from United States records, so it shows the government's side. In 1836 thousands of Cherokees signed a petition saying their treaty was made without the nation's authority."
   },
   "studentSupport": {
     "beforeYouStart": {

@@ -8,9 +8,33 @@
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  var VERSION = { renderer: "3.6", format: "1.9", checker: "1.9", knowledge: "1.6", prompt: "1.2" };
+  var VERSION = { renderer: "3.6", format: "1.10", checker: "1.10", knowledge: "1.6", prompt: "1.2" };
   var HEX32 = /^[0-9a-f]{32}$/i;
   var DATE = /^\d{4}-\d{2}-\d{2}$/;
+  var DISTANCE = /\b(how far|how close|distance|distances|miles|farther|longer than|shorter than)\b/i;
+  var BRITISH = /\b(coloured|colours?|travell(?:ed|ing|ers?)|labell(?:ed|ing)|centres?|neighbours?|harbours?|favour\w*|organis\w+|recognis\w+|defence|programmes?|kilometres?|metres?)\b/gi;
+
+  // Checker 1.10: sentences of eight or more words that students read (questions, final task, reflection, model answer)
+  // and that appear in three or more lessons. Returns [{sentence, ids}].
+  function repeated(lessons) {
+    var seen = {};
+    lessons.forEach(function (l) {
+      var texts = [];
+      ((l.inquiry || {}).questions || []).forEach(function (q) { if (q.ask) texts.push(q.ask.en); });
+      var fin = ((l.inquiry || {}).final || {}).student; if (fin) texts.push(fin.en);
+      var ref = (l.studentSupport || {}).reflection; if (ref) texts.push(ref.en);
+      if (l.assessment) texts.push(l.assessment.exemplar);
+      var mine = {};
+      texts.forEach(function (t) {
+        (String(t || "").match(/[^.?!]+[.?!]+/g) || []).forEach(function (sn) {
+          var key = sn.trim().toLowerCase().replace(/\s+/g, " ");
+          if (key.split(" ").length >= 8) mine[key] = sn.trim();
+        });
+      });
+      Object.keys(mine).forEach(function (k) { (seen[k] = seen[k] || { sentence: mine[k], ids: [] }).ids.push(l.id); });
+    });
+    return Object.keys(seen).map(function (k) { return seen[k]; }).filter(function (r) { return r.ids.length >= 3; });
+  }
 
   function esc(s) {
     return String(s == null ? "" : s)
@@ -322,6 +346,9 @@
       need(str(k.where) && str(k.note), "knownIssues[" + (i + 1) + "] needs where and note.");
       need(["open", "fixed"].indexOf(k.status) >= 0, "knownIssues[" + (i + 1) + "].status should be open or fixed.");
       need(DATE.test(k.date || ""), "knownIssues[" + (i + 1) + "].date should be a date.");
+      // Format 1.10: studentVisible marks an issue a student will see on the map. A lesson can't be reviewed while one is open.
+      need(k.studentVisible === undefined || typeof k.studentVisible === "boolean", "knownIssues[" + (i + 1) + "].studentVisible should be true or false.");
+      if (k.status === "open" && k.studentVisible === true) need(lesson.status === "draft", "knownIssues[" + (i + 1) + "] is open and students will see it (" + k.where + "): fix the map before the lesson is set to " + lesson.status + ".");
     });
     var inq = lesson.inquiry || {};
     lang(inq.compellingQuestion, "inquiry.compellingQuestion", langs);
@@ -344,6 +371,9 @@
       need(str(q.task), w + ": task (the teacher-facing version) is missing.");
       need(Array.isArray(q.tools) && q.tools.length > 0, w + ": list the map tools it uses.");
       (q.tools || []).forEach(function (t) { need(!!site.tools[t], w + ": unknown tool \"" + t + "\". Known tools: " + Object.keys(site.tools).join(", ") + "."); });
+      // Checker 1.10: a measurement has to be used. If the question lists Measure, its ask must be about the distance.
+      if ((q.tools || []).indexOf("measure") >= 0 && q.ask && str(q.ask.en)) need(DISTANCE.test(q.ask.en),
+        w + ": it uses Measure, but the question doesn't ask about the distance (how far, how close, distance, miles, longer than). Ask about it or drop the measurement.");
       var a = q.answer || {};
       need(str(a.where) || str(a.accept) || str(a.text) || (a.table && a.table.rows), w + ": answer notes need at least one of where (where on the map to find it), accept (what to accept), text or table.");
       need(str(a.where) || str(a.accept), w + ": answer notes should say where on the map the answer is found (where) or what to accept (accept), not only the answer itself.");
@@ -359,6 +389,10 @@
       need(Number.isInteger(q.minutes) && q.minutes >= 5 && q.minutes <= 30, w + ": minutes should be a whole number from 5 to 30.");
       need(Array.isArray(q.frontOfClass) && q.frontOfClass.length >= 2 && q.frontOfClass.every(str), w + ": frontOfClass needs at least two steps.");
     });
+    // Checker 1.10: the stated time has to cover the questions plus 10 minutes for the written answer.
+    var stated = parseInt((String(lesson.time || "").match(/\d+/) || [])[0], 10);
+    var total = (inq.questions || []).reduce(function (n, q) { return n + (Number.isInteger(q.minutes) ? q.minutes : 0); }, 0);
+    need(!isNaN(stated) && stated >= total + 10, "time should start with the whole lesson's minutes, at least " + (total + 10) + " (" + total + " for the questions plus 10 for the written answer); it says \"" + lesson.time + "\".");
     var diff = lesson.differentiation || {};
     need(str(diff.support) && str(diff.stretch), "differentiation needs support and stretch, one line each.");
     var fin = inq.final || {};
@@ -412,7 +446,19 @@
       need(str(asm.evidence) && asm.evidence.length >= 60 && asm.evidence.length <= 400, "assessment.evidence should be one or two sentences (60 to 400 characters) naming the layers, features, dates or numbers a strong answer uses.");
       need(str(asm.exemplar) && asm.exemplar.length >= 400 && asm.exemplar.length <= 1400, "assessment.exemplar should be a model answer of about 80 to 200 words (400 to 1400 characters).");
       need(!/\?/.test(asm.exemplar || ""), "assessment.exemplar should answer, not ask: no question marks.");
+      // Checker 1.10: a model answer a grade 8 student could have written: 160 words at most, and the evidence, not the clicks.
+      var words = String(asm.exemplar || "").trim().split(/\s+/).length;
+      need(words <= 160, "assessment.exemplar is " + words + " words; keep it to 160 or fewer, in a student's voice.");
+      need(!/by Measure|pop-up's/.test(asm.exemplar || ""), "assessment.exemplar should give the evidence, not the clicks: no \"by Measure\" or \"pop-up's\".");
     }
+    // Checker 1.10: US spelling in the English text.
+    var brit = {};
+    (function walk(v, k) {
+      if (typeof v === "string") (v.match(BRITISH) || []).forEach(function (m) { brit[m.toLowerCase()] = true; });
+      else if (Array.isArray(v)) v.forEach(function (x) { walk(x, k); });
+      else if (isObj(v)) Object.keys(v).forEach(function (key) { if (key !== "es") walk(v[key], key); });
+    })(lesson);
+    need(Object.keys(brit).length === 0, "British spellings in the English text: " + Object.keys(brit).join(", ") + ". Use US spelling.");
     var links = JSON.stringify(lesson).match(/\]\(([^)]+)\)/g) || [];
     links.forEach(function (m) { need(/^\]\(https:\/\//.test(m), "Links must start with https:// (found " + m.slice(2, -1) + ")."); });
     return errs;
@@ -422,5 +468,5 @@
     mergeSite: mergeSite, loadSite: loadSite, defaultLessons: defaultLessons, lessonsFileName: lessonsFileName, unfilled: unfilled,
     names: names, appName: appName, aOrAn: aOrAn, licence: licence, assistant: assistant,
     howToLinks: howToLinks, assistantUrl: assistantUrl, lessonEntry: lessonEntry, assistantFile: assistantFile, assistantFileName: assistantFileName, aiPrompt: aiPrompt, promptUrl: promptUrl,
-    unitList: unitList, unitIndex: unitIndex, skills: skills, instructionalModels: instructionalModels, sortStandards: sortStandards, standardPrefix: standardPrefix, standardLabel: standardLabel, check: check };
+    unitList: unitList, unitIndex: unitIndex, skills: skills, instructionalModels: instructionalModels, sortStandards: sortStandards, standardPrefix: standardPrefix, standardLabel: standardLabel, check: check, repeated: repeated };
 });

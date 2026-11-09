@@ -1,10 +1,10 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.9",
+  "formatVersion": "1.10",
   "id": "war-of-1812-and-monroe-doctrine",
-  "contentVersion": "0.6.2",
+  "contentVersion": "0.7.0",
   "status": "draft",
-  "updated": "2026-10-22",
+  "updated": "2026-11-09",
   "reviewed": null,
   "title": "The War of 1812 and the Monroe Doctrine, 1807–1823",
   "sheetTitle": {
@@ -23,7 +23,7 @@
     "Geography",
     "Government"
   ],
-  "time": "45 minutes, or 10–15 per question",
+  "time": "About 59 minutes: 49 for the questions and 10 to write the answer. One question on its own takes 10–15",
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "fad1cdb9d5704401a4e05c34f7ee693c",
@@ -80,13 +80,15 @@
       "where": "Battles of the War of 1812",
       "note": "The Victor field's labels are American Side Victory and British Side Victory for every battle, so Fort Mims shows as a British victory and Horseshoe Bend as a victory over the British; both were fought against Red Stick Creek forces, and Tippecanoe against the Shawnee-led confederacy. Raised with the MapMaker team: relabel as Side A / Side B or add an opponent field.",
       "status": "open",
-      "date": "2026-10-21"
+      "date": "2026-10-21",
+      "studentVisible": true
     },
     {
       "where": "Latin American independence and US recognition",
       "note": "The legend groups recognition as by 1824 or later, while question 4 asks about recognition before December 2, 1823; Brazil and Central America (1824) fall in the blue group. The pop-up date settles it. A three-way grouping (before the message, after it, later) would be clearer.",
       "status": "open",
-      "date": "2026-10-21"
+      "date": "2026-10-21",
+      "studentVisible": true
     }
   ],
   "inquiry": {
@@ -244,7 +246,7 @@
           "Click the green land and read the Notes in the pop-up.",
           "Ask: what did the United States gain from Spain?",
           "Click part 1 of the pink dashed line and read its description, then click the next parts going west.",
-          "Ask: which rivers and lines of latitude and longitude does the border follow?"
+          "Ask: where does the border follow rivers, where straight lines, and why might it switch?"
         ],
         "steps": [
           {
@@ -265,13 +267,13 @@
           }
         ],
         "ask": {
-          "en": "What did the United States gain from Spain? Which rivers and lines of latitude and longitude does the new border follow?",
-          "es": "¿Qué obtuvo Estados Unidos de España? ¿Qué ríos y qué líneas de latitud y longitud sigue la nueva frontera?"
+          "en": "What did the United States gain from Spain? Where does the new border follow rivers, and where does it follow straight lines? Why might a border switch from one to the other?",
+          "es": "¿Qué obtuvo Estados Unidos de España? ¿Dónde sigue la nueva frontera ríos y dónde sigue líneas rectas? ¿Por qué podría una frontera pasar de unos a otras?"
         },
         "lines": 3,
         "answer": {
           "where": "The 1819 boundary bookmark. Land Spain gave up in 1819 layer: green areas East Florida (Spanish Cession) 1819, West Florida (Spanish Cession) 1819 and Spanish Cession 1819; the Notes in each pop-up say the land came through the Adams-Onís Treaty and the United States assumed $5 million in claims instead of paying. Adams–Onís Treaty line, 1819 layer, pop-ups part 1 to part 7: the Sabine River north to 32° N; north to the Red River; the Red River west to 100° W; north along 100° W to the Arkansas River; the Arkansas upstream to its source; north to 42° N; west along 42° N to the Pacific.",
-          "accept": "Florida (East and West) gained from Spain, with the $5 million in claims if read; the border described using at least the Sabine, Red and Arkansas rivers, 100° W and 42° N, in order from the Gulf to the Pacific.",
+          "accept": "Florida (East and West) gained from Spain, with the $5 million in claims if read. Rivers: the Sabine, the Red and the Arkansas. Straight lines: north to the Red River, 100° W, north to 42° N, and 42° N to the Pacific. For why, accept any reasoned answer, for example that a river is a landmark both sides can find, and where no river ran the right way the treaty used lines of latitude and longitude.",
           "text": "The United States already held much of West Florida. The treaty was signed in 1819 and ratified in 1821. The line is drawn from the treaty's description and is approximate, as each pop-up's note says."
         }
       },
@@ -370,8 +372,8 @@
     "final": {
       "teacher": "Students answer with evidence from at least two layers. Some ways to do it: a paragraph; a sketch of the three war fronts and of the 1819 border and the area the Monroe Doctrine covered (sketches are not saved, so students should screenshot or describe them); or a short talk using the map. Accept answers that use the battles to show the war ended without gains, the 1819 layers to show the United States growing and fixing its border with Spain, and the independence layer to show the new nations the Monroe Doctrine spoke for.",
       "student": {
-        "en": "Answer the big question using evidence from at least two layers on the map. You can write a paragraph, sketch on the map, or both.",
-        "es": "Responde la pregunta central con evidencia de al menos dos capas del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
+        "en": "Answer the big question. Compare the country at the end of the war with the country in 1823, using one battle and one later layer.",
+        "es": "Responde la pregunta central. Compara el país al final de la guerra con el país en 1823, usando una batalla y una capa posterior."
       },
       "tools": [
         "sketch"
@@ -387,7 +389,7 @@
   ],
   "discussion": [
     "The battle diamonds cluster in three areas far apart. From the map, what was each side trying to control in each area, and why was none of them decisive?",
-    "The Battle of New Orleans was fought after the Treaty of Ghent was signed. Looking at where Ghent and New Orleans are, what does that gap tell you about how news travelled and how wars ended in 1815?",
+    "The Battle of New Orleans was fought after the Treaty of Ghent was signed. Looking at where Ghent and New Orleans are, what does that gap tell you about how news traveled and how wars ended in 1815?",
     "Most Latin American nations had declared independence before Monroe's 1823 message, and the United States recognized several of them. Comparing the dates on the map, was the Monroe Doctrine leading events or following them?"
   ],
   "differentiation": {
@@ -413,7 +415,7 @@
   ],
   "assessment": {
     "evidence": "Strong answers use the Battles of the War of 1812 pop-ups (Battle Victor, Total Casualties: Fort Erie 2,628; New Orleans, January 8, 1815, after the Treaty of Ghent of December 24, 1814), the Land Spain gave up in 1819 and Adams–Onís Treaty line pop-ups (East and West Florida; Sabine River, 100° W, 42° N) and the Latin American independence pop-ups (Mexico recognized December 12, 1822).",
-    "exemplar": "The War of 1812 did not change the United States' borders, but in the years after it the country fixed its boundary with Spain all the way to the Pacific and spoke for the new nations of Latin America, so by 1823 it was acting as the main power in the Americas. In the Battles of the War of 1812 layer, the biggest diamond is the Siege of Fort Erie in Ontario, with 2,628 casualties in the pop-up, and the legend shows blue American and red British victories on every front, from the Great Lakes to Chesapeake Bay and the Gulf Coast. The New Orleans pop-up gives January 8, 1815, after the Treaty of Ghent was signed on December 24, 1814, so it came after peace and the war ended without gains. At The 1819 boundary bookmark, the Land Spain gave up in 1819 pop-ups show East Florida and West Florida passing to the United States under the Adams-Onís Treaty, and the seven parts of the treaty line run from the Sabine River to 100° W and along 42° N to the Pacific. In the Latin American independence layer, the pop-ups show the United States recognized Mexico on December 12, 1822 and Chile on January 27, 1823, before Monroe's message of December 2, 1823, but Brazil only on May 26, 1824. So by 1823 the country had gone from fighting on its own borders to drawing a border to the Pacific and warning Europe away from the hemisphere, though Haiti, not recognized until 1862, shows the limit."
+    "exemplar": "The war itself changed little, but in the years after it the United States grew and began to speak for the Americas. The battles were in three areas: along the Great Lakes and the Canadian border, around Chesapeake Bay, and in the South near the Gulf Coast. One of the biggest battles, New Orleans, was fought on January 8, 1815, after the peace treaty was signed on December 24, 1814. In 1819 Spain gave up East and West Florida, and a new border followed the Sabine, Red and Arkansas rivers and then the line of 42° N to the Pacific. Before President Monroe's message of December 2, 1823, the United States had recognized four new nations, including Mexico on December 12, 1822. So the country went from fighting on its own borders to warning Europe to stay out of the Americas."
   },
   "studentSupport": {
     "beforeYouStart": {
@@ -428,8 +430,8 @@
       "popups"
     ],
     "reflection": {
-      "en": "What did the map show you about the War of 1812 and its results that you might not have noticed from reading alone?",
-      "es": "¿Qué te mostró el mapa sobre la guerra de 1812 y sus resultados que quizá no habrías notado solo con la lectura?"
+      "en": "The war itself changed no borders. Which layer on this map shows the biggest change, and what caused it?",
+      "es": "La guerra en sí no cambió ninguna frontera. ¿Qué capa de este mapa muestra el cambio más grande, y qué lo causó?"
     }
   },
   "teacherNotes": {

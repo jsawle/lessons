@@ -1,10 +1,10 @@
 {
   "$schema": "../schema/lesson.schema.json",
-  "formatVersion": "1.9",
+  "formatVersion": "1.10",
   "id": "civil-war-battlefields",
-  "contentVersion": "0.7.2",
+  "contentVersion": "0.7.3",
   "status": "draft",
-  "updated": "2026-10-22",
+  "updated": "2026-11-09",
   "reviewed": null,
   "title": "Civil War Battlefields",
   "sheetTitle": {
@@ -24,7 +24,7 @@
     "Civics",
     "Economics"
   ],
-  "time": "45 minutes, or 10–15 per question",
+  "time": "About 58 minutes: 48 for the questions and 10 to write the answer. One question on its own takes 10–15",
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "7a06e8e2818941f99a3d40bb32e08118",
@@ -74,25 +74,28 @@
       "where": "Civil War Core Areas pop-up",
       "note": "Uses the same text as the boundary layer, so it calls the core area \"the battlefield area\".",
       "status": "open",
-      "date": "2026-10-12"
+      "date": "2026-10-12",
+      "studentVisible": true
     },
     {
       "where": "Civil War Battlefields legend",
       "note": "The layer item's legend labels are inverted: Union victories are drawn with the symbol the legend calls \"Confederate Victory\", and Confederate victories with the \"Union Victory\" symbol (for example Gettysburg shows as a Confederate victory). The MapMaker team is correcting the item. No question in this lesson depends on the result of a battle.",
       "status": "open",
-      "date": "2026-10-15"
+      "date": "2026-10-15",
+      "studentVisible": true
     },
     {
       "where": "Civil War Battlefields pop-up",
       "note": "The American Battlefield Trust image in the battle pop-ups does not load; the name and dates still show.",
       "status": "open",
-      "date": "2026-10-15"
+      "date": "2026-10-15",
+      "studentVisible": true
     }
   ],
   "inquiry": {
     "compellingQuestion": {
-      "en": "How did the geography of a divided nation shape the Civil War, as the map shows the country in 1863?",
-      "es": "¿Cómo influyó la geografía de una nación dividida en la Guerra Civil, tal como el mapa muestra el país en 1863?"
+      "en": "How did the geography of a divided nation shape the Civil War?",
+      "es": "¿Cómo influyó la geografía de una nación dividida en la Guerra Civil?"
     },
     "questions": [
       {
@@ -205,7 +208,7 @@
         },
         "answer": {
           "where": "Zoom to the District of Columbia (a small unshaded area labeled on the States layer). Its neighbors are Maryland (legend: Union slave state, border state) and Virginia (legend: Slave state seceding after Fort Sumter). The white dashed Boundary between Union and Confederacy runs right past the capital.",
-          "accept": "Maryland and Virginia. A good answer uses the legend to say Virginia had seceded, so if Maryland had left too, Washington would have been surrounded by Confederate states and cut off from the rest of the Union."
+          "accept": "Maryland and Virginia. Uses the legend to say Virginia had seceded, so if Maryland had left too, Washington would have been surrounded by Confederate states and cut off from the rest of the Union."
         }
       },
       {
@@ -250,7 +253,7 @@
         },
         "answer": {
           "where": "Railroads 1826 to 1863 (static) layer and the Boundary between Union and Confederacy line (legend: white dashed). The lines are visibly denser north of the boundary, above all between the Mississippi River and the Atlantic coast. The map shows lines, not mileage.",
-          "accept": "The North (Union side). A good answer says a denser network let the Union move soldiers, food and weapons faster and farther, keep armies supplied, and shift troops between fronts; the South had fewer lines and gaps between them."
+          "accept": "The North (Union side). Says a denser network let the Union move soldiers, food and weapons faster and farther, keep armies supplied, and shift troops between fronts; the South had fewer lines and gaps between them."
         }
       },
       {
@@ -302,8 +305,8 @@
     "final": {
       "teacher": "Students answer with evidence from at least two layers. Some ways to do it: a paragraph, a sketch of the front line with notes (sketches are not saved, so students should screenshot or describe them), or a short talk using the map.",
       "student": {
-        "en": "Answer the big question using evidence from at least two layers on the map. You can write a paragraph, sketch on the map, or both.",
-        "es": "Responde la pregunta central con evidencia de al menos dos capas del mapa. Puedes escribir un párrafo, dibujar en el mapa o hacer ambas cosas."
+        "en": "Answer the big question. Choose the two things on the map that mattered most, and say why.",
+        "es": "Responde la pregunta central. Elige las dos cosas del mapa que más importaron y explica por qué."
       },
       "tools": [
         "sketch"
@@ -345,7 +348,7 @@
   ],
   "assessment": {
     "evidence": "Strong answers use the five legend groups of U.S. Civil War States and Territories (1863), including the border states and West Virginia (June 20, 1863), the white dashed Boundary between Union and Confederacy past Washington, D.C., the density of Railroads 1826 to 1863 (static) either side of it, and names and acres from the Civil War Battlefield Boundary pop-ups (Gettysburg 73,551 acres).",
-    "exemplar": "The geography of a divided nation shaped the Civil War by putting the Union capital right on the front line, giving the North a much denser railroad network, and making Virginia the place where most of the fighting happened. Zoomed to Washington, D.C., the legend shows Maryland as a Union slave state, a border state, and Virginia as a slave state seceding after Fort Sumter, with the white dashed Boundary between Union and Confederacy running right past the capital, so if Maryland had left too, Washington would have been surrounded. With the States layer off, the thin dark gray lines of Railroads 1826 to 1863 (static) are clearly denser north of the boundary, between the Mississippi River and the Atlantic coast, so the Union could move soldiers, food and weapons faster and farther. The Civil War Battlefield Boundary pop-ups put far more tan areas in Virginia than in any other state, between Washington and Richmond, while in Union states they give Antietam in Maryland at 34,937 acres and Gettysburg in Pennsylvania at 73,551 acres. The pattern is that the battles cluster along the boundary between the two capitals, but the map shows 1863, so West Virginia appears as a Union state even though in 1861 it was part of Virginia."
+    "exemplar": "Geography put the Union's capital on the front line and most of the fighting in Virginia. Washington, D.C. sits between Maryland and Virginia. Virginia left the Union after Fort Sumter, and Maryland was a slave state that stayed. If Maryland had left too, the capital would have been surrounded. Seven states left before Fort Sumter and four after, and five slave states stayed in the Union. The railroads show another difference. The lines are much closer together north of the boundary, so the Union could move soldiers and supplies faster. Most of the battlefields on the map are in Virginia, between the two sides' capitals. A few are in Union states, like Antietam in Maryland and Gettysburg in Pennsylvania. The map shows 1863, so West Virginia appears as a state even though it was part of Virginia in 1861."
   },
   "studentSupport": {
     "beforeYouStart": {
@@ -360,12 +363,12 @@
       "popups"
     ],
     "reflection": {
-      "en": "What did the map show you about the Civil War that you might not have noticed from reading alone?",
-      "es": "¿Qué te mostró el mapa sobre la Guerra Civil que quizá no habrías notado solo con la lectura?"
+      "en": "Washington, D.C. sat on the boundary between the two sides. What might that have meant for the people who lived there?",
+      "es": "Washington, D.C. estaba en el límite entre los dos bandos. ¿Qué pudo significar eso para las personas que vivían allí?"
     }
   },
   "teacherNotes": {
-    "beforeClass": "Every layer is on when the map opens and there are no bookmarks, so students zoom to Virginia, Washington, D.C., Maryland and Pennsylvania themselves. Battle pop-ups give the name and dates; the result is read from the legend.",
+    "beforeClass": "Every layer is on when the map opens and there are no bookmarks, so students zoom to Virginia, Washington, D.C., Maryland and Pennsylvania themselves. Battle pop-ups give the name and dates; the result is read from the legend. The map shows the country in 1863, so West Virginia appears as a state.",
     "misconceptions": [
       {
         "claim": "All slave states joined the Confederacy.",
