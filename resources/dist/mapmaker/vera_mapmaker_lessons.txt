@@ -107,7 +107,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** FL SS.8.A.5.2; TX 8.10(A); C3 D2.Geo.2.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.8.3, updated 2026-11-09.
+**Lesson content version:** 0.8.4, updated 2026-11-09.
 
 ### Civil War Battlefields
 **Lesson ID:** civil-war-battlefields
