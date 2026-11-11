@@ -38,10 +38,10 @@ Known limits: the 1863 layer uses today's outlines and leaves out the territorie
    ```
 3. Done on 11 November 2026: the three layers are shared publicly, and both map specs are written, built and tested.
 
-| Map | Spec | Build | Map test |
-|---|---|---|---|
-| The Civil War, 1863 | `maps/specs/civil-war-1863.json` 0.1.0 | 3ebc89341043 | pass, 9 checks, Web Map Auditor 98.8 (11 Nov) |
-| Slavery and the slave trade, 1850 | `maps/specs/slavery-1850.json` 0.1.0 | 877538a856f7 | pass, 9 checks, Web Map Auditor 97.6 (11 Nov) |
+| Map | Spec | Build | Map test | Published |
+|---|---|---|---|---|
+| The Civil War, 1863 | `maps/specs/civil-war-1863.json` 0.1.0 | 3ebc89341043 | pass, 9 checks, Web Map Auditor 98.8 (11 Nov) | item `a93738b1850a48308dc797a1cc8352be`, private, 11 Nov, read-back matches |
+| Slavery and the slave trade, 1850 | `maps/specs/slavery-1850.json` 0.1.0 | 877538a856f7 | pass, 9 checks, Web Map Auditor 97.6 (11 Nov) | item `cbee648b1f43455daae038b4bc64d6f4`, private, 11 Nov, read-back matches |
 
 Built as proposed below, with these differences: both maps open on the states layer only (plus the Missouri Compromise line), so students reveal the other layers; the battlefield core areas layer is left out; the routes have no arrowheads, because the digitized lines do not run in a consistent direction, so the pop-up gives the direction; the Civil War map keeps a reference label layer for cities and rivers, and the 1850 map names its states and territories from the data.
 
