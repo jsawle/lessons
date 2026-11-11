@@ -1,7 +1,7 @@
 {
  "tool": "Civil War 1863 data builder 1.0",
- "when": "2026-11-09T22:13:24Z",
- "sha1": "969e6019eba35572e1bad6d84135d1ee41567a16",
+ "when": "2026-11-11T15:04:54Z",
+ "sha1": "902160a25a79e55729d5ba6b1e36220d707d9854",
  "features": 35,
  "naturalEarth": {
   "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_admin_1_states_provinces.geojson",

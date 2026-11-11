@@ -1,4 +1,4 @@
-# Replacement maps: Civil War and Slavery 1850 (draft 0.1, 9 Nov 2026)
+# Replacement maps: Civil War and Slavery 1850 (draft 0.2, 11 Nov 2026)
 
 Purpose: replace the two MapMaker-owned lesson maps whose defects block core questions with maps built in GIS for Schools through the usual route (data, spec, build, test, dry run, your OK, you run `--go`, never shared by the tool). From the curriculum review of 9 November 2026.
 
@@ -11,7 +11,7 @@ Where this stands: the data for the layers that had the errors is built and pass
 - Missouri "drawn twice" is the state of 1821 and its northwest corner, added in 1837, in two classes. The two areas do not overlap.
 - The pop-up's year is the year of that law, not of statehood, which is why Illinois reads 1848 and Maine 1783.
 - West Virginia (1863) and "Oklahoma" are real anachronisms: today's outlines on an 1850 map.
-- Three small areas in today's Colorado and Wyoming are named "Unidentified".
+- Three small areas in today's Colorado and Wyoming are named "Unidentified". The fact-check worked out what they were: two are land Texas gave up in 1850, left outside any territory, and one was the eastern edge of Utah Territory (an inference from the Utah act's boundary; the digitized patch sits too far east).
 
 So the layer is a fair copy of its source, but the source answers a different question from the lesson's. The replacement keeps the outlines and gives each area one of four plain groups.
 
@@ -21,15 +21,15 @@ So the layer is a fair copy of its source, but the source answers a different qu
 
 | Data | Version | Features | Made from | Check before 1.0 |
 |---|---|---|---|---|
-| `maps/data/civil-war-1863` | 0.1.0 | 35 states: 19 Union free, 5 Union slave (border), 7 seceded before Fort Sumter, 4 after | Natural Earth outlines and `states-1863.json` | Each secession date against the ordinance; West Virginia (June 20, 1863) and Kansas (January 29, 1861) |
-| `maps/data/slavery-1850` (`data.json`) | 0.1.0 | 40 areas: 16 free states, 15 slave states, the District of Columbia, 8 territory areas | The saved source layer and `units-1850.json` | Every status and admission year; the wording for Utah, New Mexico and Indian Territory; what the three "Unidentified" areas were |
-| `maps/data/slavery-1850` (`routes.data.json`) | 0.1.0 | 4 routes: overland, sea, La Amistad (1839), the Creole (1841), each with a direction and a short account | The saved source layer and `routes-1850.json` | The two ship accounts; the wording for the overland and sea routes |
+| `maps/data/civil-war-1863` | 0.2.0 | 35 states: 19 Union free, 5 Union slave (border), 7 seceded before Fort Sumter, 4 after | Natural Earth outlines and `states-1863.json` | Each secession date against the ordinance; West Virginia (June 20, 1863) and Kansas (January 29, 1861) |
+| `maps/data/slavery-1850` (`data.json`) | 0.2.0 | 39 areas: 16 free states, 15 slave states, the District of Columbia, 7 territory areas | The saved source layer and `units-1850.json` | Every status and admission year; the wording for Utah, New Mexico and Indian Territory; what the three "Unidentified" areas were |
+| `maps/data/slavery-1850` (`routes.data.json`) | 0.2.0 | 4 routes: overland, sea, La Amistad (1839), the Creole (1841), each with a direction and a short account | The saved source layer and `routes-1850.json` | The two ship accounts; the wording for the overland and sea routes |
 
 Known limits: the 1863 layer uses today's outlines and leaves out the territories and Nevada (a state from 1864); the 1850 layer keeps the source's outlines, so Texas has its later boundary and western territory lines are approximate.
 
 ## Your steps
 
-1. Read the three tables (`states-1863.json`, `units-1850.json`, `routes-1850.json`) and say what to change. They are the history content, and they have not had an independent fact-check.
+1. Done on 11 November 2026: the three tables had an independent fact-check (`maps/data/checks/replacement-maps-factcheck-2026-11-11.md`). No date, year, status, group or count was wrong. Ten wording corrections were applied in version 0.2.0, the small area the source left unnamed on Utah Territory's eastern edge was joined to Utah Territory, and two sentences that could not be verified were dropped.
 2. Publish the data from your computer, dry run first:
    ```
    python maps/tools/publish_data.py maps/data/civil-war-1863/data.json --profile g4s-publisher --go

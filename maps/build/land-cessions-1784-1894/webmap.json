@@ -253,7 +253,7 @@
   "latestWkid": 3857
  },
  "authoringApp": "Map builder",
- "authoringAppVersion": "1.2",
+ "authoringAppVersion": "1.4",
  "version": "2.31",
  "initialState": {
   "viewpoint": {
