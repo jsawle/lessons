@@ -63,7 +63,7 @@ The current map uses an Albers basemap and river tiles owned by the MapMaker org
 
 ## Open decisions
 
-1. **Copies or the MapMaker items** for the layers that need no correction (battlefield boundaries, railroads, Missouri Compromise Line, Underground Railroad). The earlier decision was copies in our own organization. Data copy (`copy_source.py`) was written for the land cessions layer and its date fields, so it may need a small change first.
-2. **Licence for the Esri digitizations.** Their items say only that the source map is in the public domain. Confirm they can be copied into GIS for Schools and offered to other channels.
+1. **Copies or the MapMaker items.** Decided on 11 November 2026: the layers that need no correction (battlefield boundaries `8b2e2d492c124d1cacba0599d20639ae`, railroads `300106342f0f456381bac735c7962572`, Missouri Compromise Line `d68c728f32c4479b9bcd15a67db78b20`, Underground Railroad routes and cities `d8a604eef63e469189db303419718b5c`) are already public items in the MapMaker organization, so the replacement maps use them as they are, without copying.
+2. **Licence for the Esri digitizations.** Not needed while the maps use the MapMaker items. It comes back only if copies are made for other Atlas apps.
 3. **Territories on the 1863 map.** Left out for now, as on the 1828 map. The current lesson has a Territories group in its legend but no question uses it.
 4. **The lessons.** Civil War Battlefields and US Slavery 1850 are rewritten from the new maps once they are built, map first, as in the Age of Jackson slice.
