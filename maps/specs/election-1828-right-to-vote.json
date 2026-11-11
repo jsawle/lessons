@@ -1,7 +1,7 @@
 {
   "format": "Map spec 1.0",
   "id": "election-1828-right-to-vote",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "lesson": "maps/lessons/election-1828-right-to-vote.json",
   "item": {
     "title": "The election of 1828 and the right to vote",
@@ -207,9 +207,9 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  244,
-                  225,
-                  232,
+                  229,
+                  245,
+                  224,
                   225
                 ],
                 "outline": {
@@ -232,9 +232,9 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  224,
-                  163,
-                  184,
+                  161,
+                  217,
+                  155,
                   225
                 ],
                 "outline": {
@@ -257,9 +257,9 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  191,
-                  64,
-                  106,
+                  65,
+                  171,
+                  93,
                   225
                 ],
                 "outline": {
@@ -286,9 +286,9 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      244,
-                      225,
-                      232,
+                      229,
+                      245,
+                      224,
                       225
                     ],
                     "outline": {
@@ -315,9 +315,9 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      224,
-                      163,
-                      184,
+                      161,
+                      217,
+                      155,
                       225
                     ],
                     "outline": {
@@ -344,9 +344,9 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      191,
-                      64,
-                      106,
+                      65,
+                      171,
+                      93,
                       225
                     ],
                     "outline": {
@@ -371,7 +371,7 @@
             }
           ]
         },
-        "why": "Rose, light to dark, so the two rule layers can be told apart. Tested against the blue and orange pies with simulated red-green color vision deficiency: every step stays apart from both pie colors. (Violet was tried and dropped: the blue pies disappeared into it.)"
+        "why": "Green, light to dark, the same as the white men layer, so one rule covers both: darker green means more limits. Tested against the blue and orange pies with simulated red-green color vision deficiency: every step stays apart from both pie colors."
       },
       "popup": {
         "title": "{State} in 1828: {Electors} electors",

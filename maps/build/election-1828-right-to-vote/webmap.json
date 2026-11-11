@@ -236,9 +236,9 @@
          "type": "esriSFS",
          "style": "esriSFSSolid",
          "color": [
-          244,
-          225,
-          232,
+          229,
+          245,
+          224,
           225
          ],
          "outline": {
@@ -261,9 +261,9 @@
          "type": "esriSFS",
          "style": "esriSFSSolid",
          "color": [
-          224,
-          163,
-          184,
+          161,
+          217,
+          155,
           225
          ],
          "outline": {
@@ -286,9 +286,9 @@
          "type": "esriSFS",
          "style": "esriSFSSolid",
          "color": [
-          191,
-          64,
-          106,
+          65,
+          171,
+          93,
           225
          ],
          "outline": {
@@ -315,9 +315,9 @@
            "type": "esriSFS",
            "style": "esriSFSSolid",
            "color": [
-            244,
-            225,
-            232,
+            229,
+            245,
+            224,
             225
            ],
            "outline": {
@@ -344,9 +344,9 @@
            "type": "esriSFS",
            "style": "esriSFSSolid",
            "color": [
-            224,
-            163,
-            184,
+            161,
+            217,
+            155,
             225
            ],
            "outline": {
@@ -373,9 +373,9 @@
            "type": "esriSFS",
            "style": "esriSFSSolid",
            "color": [
-            191,
-            64,
-            106,
+            65,
+            171,
+            93,
             225
            ],
            "outline": {
