@@ -1,7 +1,7 @@
 {
   "format": "Map spec 1.0",
   "id": "election-1828-right-to-vote",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "lesson": "maps/lessons/election-1828-right-to-vote.json",
   "item": {
     "title": "The election of 1828 and the right to vote",
@@ -36,16 +36,9 @@
         "itemId": "545f2e839f624600bbb092c3ad998bb8",
         "blendMode": "multiply",
         "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json"
-      },
-      {
-        "type": "vectorTile",
-        "title": "World Terrain Reference",
-        "itemId": "14fbc125ccc9488888b014db09f35f67",
-        "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/14fbc125ccc9488888b014db09f35f67/resources/styles/root.json",
-        "reference": true,
-        "why": "State names above the pies and shading, so the lesson can name states."
       }
-    ]
+    ],
+    "why": "No reference label layer: the 24 states are named from the data, under each pie, so modern state and city names don't crowd the map."
   },
   "view": {
     "extent": [
@@ -120,13 +113,13 @@
         },
         "outline": {
           "color": "#FFFFFF",
-          "width": 1
+          "width": 1.5
         },
         "background": {
           "color": "#FAF8F000",
           "outline": {
-            "color": "#5A5A5A",
-            "width": 0.8
+            "color": "#6E6E6E",
+            "width": 1
           }
         },
         "other": false
@@ -144,7 +137,54 @@
             "arcade": "var v = $feature.Adams1828;\nreturn v + IIf(v == 1, ' vote', ' votes');"
           }
         }
-      }
+      },
+      "labels": [
+        {
+          "expression": "$feature.State",
+          "placement": "polygon",
+          "where": "Electors >= 20",
+          "yoffset": -27,
+          "color": "#2B2B2B",
+          "font": {
+            "size": 10,
+            "weight": "bold"
+          },
+          "halo": {
+            "color": "#FFFFFFE6",
+            "size": 1.5
+          }
+        },
+        {
+          "expression": "$feature.State",
+          "placement": "polygon",
+          "where": "Electors >= 9 AND Electors < 20",
+          "yoffset": -20,
+          "color": "#2B2B2B",
+          "font": {
+            "size": 10,
+            "weight": "bold"
+          },
+          "halo": {
+            "color": "#FFFFFFE6",
+            "size": 1.5
+          }
+        },
+        {
+          "expression": "$feature.State",
+          "placement": "polygon",
+          "where": "Electors < 9",
+          "yoffset": -15,
+          "color": "#2B2B2B",
+          "font": {
+            "size": 10,
+            "weight": "bold"
+          },
+          "halo": {
+            "color": "#FFFFFFE6",
+            "size": 1.5
+          }
+        }
+      ]
     },
     {
       "title": "Free Black men and the vote, 1828",
@@ -167,21 +207,21 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  247,
-                  247,
-                  247,
-                  210
+                  245,
+                  245,
+                  245,
+                  225
                 ],
                 "outline": {
                   "type": "esriSLS",
                   "style": "esriSLSSolid",
                   "color": [
-                    40,
-                    40,
-                    40,
+                    255,
+                    255,
+                    255,
                     255
                   ],
-                  "width": 1
+                  "width": 1.25
                 }
               }
             },
@@ -192,21 +232,21 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  166,
-                  166,
-                  166,
-                  210
+                  189,
+                  189,
+                  189,
+                  225
                 ],
                 "outline": {
                   "type": "esriSLS",
                   "style": "esriSLSSolid",
                   "color": [
-                    40,
-                    40,
-                    40,
+                    255,
+                    255,
+                    255,
                     255
                   ],
-                  "width": 1
+                  "width": 1.25
                 }
               }
             },
@@ -217,21 +257,21 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  77,
-                  77,
-                  77,
-                  210
+                  115,
+                  115,
+                  115,
+                  225
                 ],
                 "outline": {
                   "type": "esriSLS",
                   "style": "esriSLSSolid",
                   "color": [
-                    40,
-                    40,
-                    40,
+                    255,
+                    255,
+                    255,
                     255
                   ],
-                  "width": 1
+                  "width": 1.25
                 }
               }
             }
@@ -246,21 +286,21 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      247,
-                      247,
-                      247,
-                      210
+                      245,
+                      245,
+                      245,
+                      225
                     ],
                     "outline": {
                       "type": "esriSLS",
                       "style": "esriSLSSolid",
                       "color": [
-                        40,
-                        40,
-                        40,
+                        255,
+                        255,
+                        255,
                         255
                       ],
-                      "width": 1
+                      "width": 1.25
                     }
                   },
                   "values": [
@@ -275,21 +315,21 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      166,
-                      166,
-                      166,
-                      210
+                      189,
+                      189,
+                      189,
+                      225
                     ],
                     "outline": {
                       "type": "esriSLS",
                       "style": "esriSLSSolid",
                       "color": [
-                        40,
-                        40,
-                        40,
+                        255,
+                        255,
+                        255,
                         255
                       ],
-                      "width": 1
+                      "width": 1.25
                     }
                   },
                   "values": [
@@ -304,21 +344,21 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      77,
-                      77,
-                      77,
-                      210
+                      115,
+                      115,
+                      115,
+                      225
                     ],
                     "outline": {
                       "type": "esriSLS",
                       "style": "esriSLSSolid",
                       "color": [
-                        40,
-                        40,
-                        40,
+                        255,
+                        255,
+                        255,
                         255
                       ],
-                      "width": 1
+                      "width": 1.25
                     }
                   },
                   "values": [
@@ -331,7 +371,7 @@
             }
           ]
         },
-        "why": "Gray, light to dark, so the shading stays apart from the blue and orange pies for readers with red-green colour vision deficiency (persona review, 30 Oct 2026)."
+        "why": "Gray, light to dark, so the shading stays apart from the blue and orange pies for readers with red-green color vision deficiency. The darkest gray is a mid gray, so the pies and state names stay easy to read on it."
       },
       "popup": {
         "title": "{State} in 1828: {Electors} electors",
@@ -369,21 +409,21 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  247,
-                  247,
-                  247,
-                  210
+                  245,
+                  245,
+                  245,
+                  225
                 ],
                 "outline": {
                   "type": "esriSLS",
                   "style": "esriSLSSolid",
                   "color": [
-                    40,
-                    40,
-                    40,
+                    255,
+                    255,
+                    255,
                     255
                   ],
-                  "width": 1
+                  "width": 1.25
                 }
               }
             },
@@ -394,21 +434,21 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  166,
-                  166,
-                  166,
-                  210
+                  189,
+                  189,
+                  189,
+                  225
                 ],
                 "outline": {
                   "type": "esriSLS",
                   "style": "esriSLSSolid",
                   "color": [
-                    40,
-                    40,
-                    40,
+                    255,
+                    255,
+                    255,
                     255
                   ],
-                  "width": 1
+                  "width": 1.25
                 }
               }
             },
@@ -419,21 +459,21 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  77,
-                  77,
-                  77,
-                  210
+                  115,
+                  115,
+                  115,
+                  225
                 ],
                 "outline": {
                   "type": "esriSLS",
                   "style": "esriSLSSolid",
                   "color": [
-                    40,
-                    40,
-                    40,
+                    255,
+                    255,
+                    255,
                     255
                   ],
-                  "width": 1
+                  "width": 1.25
                 }
               }
             }
@@ -448,21 +488,21 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      247,
-                      247,
-                      247,
-                      210
+                      245,
+                      245,
+                      245,
+                      225
                     ],
                     "outline": {
                       "type": "esriSLS",
                       "style": "esriSLSSolid",
                       "color": [
-                        40,
-                        40,
-                        40,
+                        255,
+                        255,
+                        255,
                         255
                       ],
-                      "width": 1
+                      "width": 1.25
                     }
                   },
                   "values": [
@@ -477,21 +517,21 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      166,
-                      166,
-                      166,
-                      210
+                      189,
+                      189,
+                      189,
+                      225
                     ],
                     "outline": {
                       "type": "esriSLS",
                       "style": "esriSLSSolid",
                       "color": [
-                        40,
-                        40,
-                        40,
+                        255,
+                        255,
+                        255,
                         255
                       ],
-                      "width": 1
+                      "width": 1.25
                     }
                   },
                   "values": [
@@ -506,21 +546,21 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      77,
-                      77,
-                      77,
-                      210
+                      115,
+                      115,
+                      115,
+                      225
                     ],
                     "outline": {
                       "type": "esriSLS",
                       "style": "esriSLSSolid",
                       "color": [
-                        40,
-                        40,
-                        40,
+                        255,
+                        255,
+                        255,
                         255
                       ],
-                      "width": 1
+                      "width": 1.25
                     }
                   },
                   "values": [
@@ -533,7 +573,7 @@
             }
           ]
         },
-        "why": "Gray, light to dark, so the shading stays apart from the blue and orange pies for readers with red-green colour vision deficiency (persona review, 30 Oct 2026)."
+        "why": "Gray, light to dark, so the shading stays apart from the blue and orange pies for readers with red-green color vision deficiency. The darkest gray is a mid gray, so the pies and state names stay easy to read on it."
       },
       "popup": {
         "title": "{State} in 1828: {Electors} electors",
@@ -723,6 +763,25 @@
         "popupHas": [
           "Georgia in 1828: 9 electors",
           "for the first time"
+        ]
+      }
+    },
+    {
+      "name": "all-layers-on",
+      "question": "All three layers on together",
+      "do": {
+        "bookmark": "The 24 states of 1828",
+        "on": [
+          "White men and the vote, 1828",
+          "Free Black men and the vote, 1828"
+        ],
+        "legend": true
+      },
+      "expect": {
+        "drawnAtScale": [
+          "Election of 1828: electors' votes",
+          "White men and the vote, 1828",
+          "Free Black men and the vote, 1828"
         ]
       }
     }

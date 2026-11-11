@@ -1,11 +1,11 @@
 {
- "tool": "Map builder 1.3",
+ "tool": "Map builder 1.4",
  "spec": "maps/specs/election-1828-right-to-vote.json",
  "specId": "election-1828-right-to-vote",
- "specVersion": "0.4.0",
- "built": "2026-11-02T09:28:14Z",
- "webmapFingerprint": "33582a61b2745e38e3aed4d1c26c9402c0a0eaba",
- "itemFingerprint": "5ff2b4660ee5c448c165a39a582a558f34650442",
+ "specVersion": "0.5.0",
+ "built": "2026-11-11T14:34:33Z",
+ "webmapFingerprint": "98deac8d97c45871a2eb2c72c51da8505e673718",
+ "itemFingerprint": "8f367dc557e32321c5cb0664384691c3ac7b406f",
  "checked": [
   "layers, start visibility and bookmarks match the lesson",
   "basemap is public and not CARTO",
@@ -14,9 +14,9 @@
  "warnings": [],
  "tested": {
   "tool": "Map test 1.0",
-  "when": "2026-11-02T09:30:05Z",
+  "when": "2026-11-11T14:36:45Z",
   "timeZone": "America/Chicago",
-  "webmapFingerprint": "33582a61b2745e38e3aed4d1c26c9402c0a0eaba",
+  "webmapFingerprint": "98deac8d97c45871a2eb2c72c51da8505e673718",
   "pass": true,
   "checks": [
    {
@@ -61,6 +61,11 @@
    },
    {
     "name": "georgia",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "all-layers-on",
     "pass": true,
     "failures": []
    }
