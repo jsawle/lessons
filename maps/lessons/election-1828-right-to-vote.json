@@ -21,6 +21,7 @@
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "1bd912453059450dac83074ea42e5424",
+    "image": {"url": "https://jsawle.github.io/lessons/resources/assets/screenshots/election-1828-right-to-vote-opening.jpg", "alt": "The map as it opens: the 24 states of 1828, each with a circle sized by its number of electors and colored blue for Andrew Jackson or orange for John Quincy Adams.", "width": 1200, "height": 800},
     "about": "This map shows the presidential election of 1828 in the 24 states of that year. A pie on each state shows how its electors voted, for Andrew Jackson or John Quincy Adams, with bigger pies for more electors. Two layers, off when the map opens, show who could vote in each state: whether white men had to own property or pay a tax, and whether free Black men could vote. Each state's pop-up gives the votes, how its electors were chosen, the rules and their sources.",
     "bookmarks": [
       "The 24 states of 1828",
