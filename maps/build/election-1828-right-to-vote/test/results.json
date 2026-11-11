@@ -2,7 +2,7 @@
  "tool": "Map test 1.0",
  "timeZone": "America/Chicago",
  "sdk": "ArcGIS Maps SDK for JavaScript 4.34",
- "webmapFingerprint": "33582a61b2745e38e3aed4d1c26c9402c0a0eaba",
+ "webmapFingerprint": "98deac8d97c45871a2eb2c72c51da8505e673718",
  "results": [
   {
    "name": "notice-votes",
@@ -74,6 +74,14 @@
    "pass": true,
    "failures": [],
    "popup": "Georgia in 1828: 9 electors\n\nIn the pie: Andrew Jackson, 9 votes; John Quincy Adams, 0 votes.\n\nWho chose the electors: Voters, statewide, for the first time (the legislature chose in 1824).\n\nWhite men: Had to have paid all taxes due (Constitution of 1798).\n\nFree Black men: Free Black men were not treated as citizens, so they could not vote; the clause itself doesn't say white.\n\nSource for the rules: Constitution of 1798, Art. IV, sec. 1; Cooper v. Savannah (1848)\n\nToday's state outlines, with West Virginia shown as part of Virginia, as it was in 1828. Territories are not shown. Women could not vote in any state in 1828.\n\nSource for the votes: National Archives",
+   "legend": null
+  },
+  {
+   "name": "all-layers-on",
+   "question": "All three layers on together",
+   "pass": true,
+   "failures": [],
+   "popup": null,
    "legend": null
   }
  ]

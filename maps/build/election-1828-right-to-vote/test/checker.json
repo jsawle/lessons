@@ -2,10 +2,10 @@
  "rubricVersion": "0.7.1",
  "maps": [
   {
-   "itemId": "33582a61b2745e38e3aed4d1c26c9402",
+   "itemId": "98deac8d97c45871a2eb2c72c51da850",
    "title": "The election of 1828 and the right to vote",
    "owner": "build",
-   "auditedAt": "2026-11-02T09:30:05.213Z",
+   "auditedAt": "2026-11-11T14:36:45.715Z",
    "rubricVersion": "0.7.1",
    "standards": "General Cartographic Standards for MapMaker",
    "tally": {
@@ -185,8 +185,7 @@
       "baseMap.title: Modern Antique",
       "spatial reference wkid: 3857",
       "World Hillshade",
-      "Modern Antique (no Labels)",
-      "World Terrain Reference"
+      "Modern Antique (no Labels)"
      ]
     },
     {
@@ -336,7 +335,7 @@
      "status": "pass",
      "message": "",
      "evidence": [
-      "no map labels"
+      "Noto Sans"
      ]
     },
     {

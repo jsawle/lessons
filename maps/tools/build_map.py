@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Map builder 1.3: turns a map spec (maps/specs/<id>.json, Map spec 1.0) into the web map ArcGIS Online stores.
+"""Map builder 1.4: turns a map spec (maps/specs/<id>.json, Map spec 1.0) into the web map ArcGIS Online stores.
 
 Reads only public ArcGIS Online content; signs in to nothing. For each spec it:
   - checks the spec against its lesson (layer names, which layers start off, bookmarks),
@@ -14,7 +14,7 @@ Exit code 1 if any spec has errors (nothing is written for that spec).
 import copy, datetime, hashlib, json, math, re, sys, urllib.parse, urllib.request
 from pathlib import Path
 
-VERSION = "1.3"
+VERSION = "1.4"
 SPEC_FORMAT = "Map spec 1.0"
 PORTAL = "https://www.arcgis.com/sharing/rest"
 ROOT = Path(__file__).resolve().parents[2]
@@ -104,15 +104,22 @@ def symbol(s, errors):
 
 
 def labels(lb):
-    out = {"labelExpressionInfo": {"expression": lb["expression"]}, "labelPlacement": PLACEMENT[lb.get("placement", "above")],
-           "symbol": {"type": "esriTS", "color": color(lb.get("color", "#282828")),
-                      "font": {"family": lb.get("font", {}).get("family", "Noto Sans"), "size": lb.get("font", {}).get("size", 9),
-                               "weight": lb.get("font", {}).get("weight", "normal")},
-                      "horizontalAlignment": "center", "verticalAlignment": "baseline"},
-           "minScale": lb.get("minScale", 0), "maxScale": lb.get("maxScale", 0), "repeatLabel": False}
-    if lb.get("halo"): out["symbol"].update({"haloColor": color(lb["halo"]["color"]), "haloSize": lb["halo"].get("size", 1)})
-    if lb.get("overlap") is True: out["deconflictionStrategy"] = "none"
-    return [out]
+    """One label class, or a list of them. Each may have a "where" (which features it labels), a "yoffset" in points
+    (to sit a label under a pie or marker; negative is down) and placement "polygon" for an area's name."""
+    out_all = []
+    for one in (lb if isinstance(lb, list) else [lb]):
+        out = {"labelExpressionInfo": {"expression": one["expression"]}, "labelPlacement": PLACEMENT[one.get("placement", "above")],
+               "symbol": {"type": "esriTS", "color": color(one.get("color", "#282828")),
+                          "font": {"family": one.get("font", {}).get("family", "Noto Sans"), "size": one.get("font", {}).get("size", 9),
+                                   "weight": one.get("font", {}).get("weight", "normal")},
+                          "horizontalAlignment": "center", "verticalAlignment": "baseline"},
+               "minScale": one.get("minScale", 0), "maxScale": one.get("maxScale", 0), "repeatLabel": False}
+        if one.get("halo"): out["symbol"].update({"haloColor": color(one["halo"]["color"]), "haloSize": one["halo"].get("size", 1)})
+        if one.get("yoffset"): out["symbol"]["yoffset"] = one["yoffset"]
+        if one.get("where"): out["where"] = one["where"]
+        if one.get("overlap") is True: out["deconflictionStrategy"] = "none"
+        out_all.append(out)
+    return out_all
 
 
 def popup(pp):
@@ -133,7 +140,8 @@ def fields_used(lyr):
     for e in (pp.get("expressions") or {}).values():
         used += [("pop-up expression", f) for f in re.findall(r"\$feature\.([A-Za-z_][A-Za-z0-9_]*)", e["arcade"])]
     if lyr.get("labels"):
-        used += [("labels", f) for f in re.findall(r"\$feature\.([A-Za-z_][A-Za-z0-9_]*)", lyr["labels"]["expression"])]
+        for one in (lyr["labels"] if isinstance(lyr["labels"], list) else [lyr["labels"]]):
+            used += [("labels", f) for f in re.findall(r"\$feature\.([A-Za-z_][A-Za-z0-9_]*)", one["expression"])]
     s = lyr.get("symbol") or {}
     used += [("symbol", a["field"]) for a in s.get("slices", [])]
     if isinstance(s.get("size"), dict): used.append(("symbol size", s["size"]["field"]))
