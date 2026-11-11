@@ -1,8 +1,8 @@
 {
   "format": "Data publish 1.0",
   "id": "civil-war-1863",
-  "version": "0.1.0",
-  "file": "maps/data/civil-war-1863/civil-war-1863-v0_1_0.geojson",
+  "version": "0.2.0",
+  "file": "maps/data/civil-war-1863/civil-war-1863-v0_2_0.geojson",
   "expectFeatures": 35,
   "note": "Today's state outlines. The 35 states of mid-1863, with West Virginia as its own state (admitted June 20, 1863). Territories, and Nevada (a state from 1864), are not shown.",
   "checks": [
@@ -68,9 +68,9 @@
     }
   ],
   "item": {
-    "title": "The states in the Civil War, 1863 (data for lessons) v0.1",
+    "title": "The states in the Civil War, 1863 (data for lessons) v0.2",
     "snippet": "The 35 states of mid-1863: Union free states, Union slave states (border states), and the states that seceded before and after Fort Sumter, with the date each seceded.",
-    "description": "<p>One polygon for each of the 35 states of mid-1863, made for US History map lessons. Each state has its side (Union or Confederacy), one of four groups, and for the eleven states that seceded, the date. West Virginia, admitted on June 20, 1863, is its own state. Territories, and Nevada (a state from 1864), are not shown.</p><p>Secession dates are the dates each ordinance was adopted; for Tennessee, the date voters approved it. Today's state outlines from Natural Earth.</p>",
+    "description": "<p>One polygon for each of the 35 states of mid-1863, made for US History map lessons. Each state has its side (Union or Confederacy), one of four groups, and for the eleven states that seceded, the date. West Virginia, admitted on June 20, 1863, is its own state. Territories, and Nevada (a state from 1864), are not shown.</p><p>Secession dates are the dates each ordinance was adopted; for Tennessee, the date voters approved it. The side shown is the one each state joined, not who held its land in 1863. Today's state outlines from Natural Earth.</p>",
     "tags": [
       "US History",
       "Civil War",

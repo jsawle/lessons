@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Slavery 1850 data builder 1.0: turns the saved source layers (source/*.geojson, Esri's digitization of the 1850 plate in
+"""Slavery 1850 data builder 1.1: turns the saved source layers (source/*.geojson, Esri's digitization of the 1850 plate in
 Harper's Atlas of American History, 1920) into two lesson layers, using the tables next to this file.
 
-States and territories (units-1850.json): the source's 44 areas become 40. West Virginia is joined to Virginia, the two
-parts of Missouri and of Minnesota Territory are joined, "Oklahoma" becomes Indian Territory, and the source's 16 legal
+States and territories (units-1850.json): the source's 44 areas become 39. West Virginia is joined to Virginia, the two
+parts of Missouri and of Minnesota Territory are joined, the small area on Utah Territory's eastern edge is joined to it, "Oklahoma" becomes Indian Territory, and the source's 16 legal
 classes become four plain groups. Routes (routes-1850.json): the four route features get a name, a direction and a
 short account.
 
@@ -16,7 +16,7 @@ from pathlib import Path
 from shapely.geometry import shape, mapping
 from shapely.ops import unary_union
 
-VERSION = "1.0"
+VERSION = "1.1"
 HERE = Path(__file__).resolve().parent
 
 

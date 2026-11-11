@@ -1,5 +1,5 @@
 {
- "about": "The 35 states of mid-1863 and where each stood in the Civil War. Secession dates are the dates the ordinance was adopted (Tennessee: the date voters approved it, the date usually given). Fort Sumter was attacked on April 12, 1861. To fact-check before version 1.0: every date against the ordinances; West Virginia's and Kansas's admission dates.",
+ "about": "The 35 states of mid-1863 and where each stood in the Civil War. Secession dates are the dates the ordinance was adopted (Tennessee: the date voters approved it, the date usually given). Fort Sumter was attacked on April 12, 1861. Fact-checked on 11 November 2026 (maps/data/checks/replacement-maps-factcheck-2026-11-11.md).",
  "groups": {
   "1": "Union free state",
   "2": "Union slave state (border state)",
@@ -159,21 +159,21 @@
    "group": 2,
    "side": "Union",
    "seceded": null,
-   "note": null
+   "note": "Stayed in the Union after first declaring itself neutral in 1861. A rival pro-Confederate government also claimed the state."
   },
   {
    "abbr": "MO",
    "group": 2,
    "side": "Union",
    "seceded": null,
-   "note": null
+   "note": "Stayed in the Union. Its pro-Confederate governor and some lawmakers set up a rival government in 1861 that claimed to join the Confederacy."
   },
   {
    "abbr": "WV",
    "group": 2,
    "side": "Union",
    "seceded": null,
-   "note": "Became a state on June 20, 1863. In 1861 it was part of Virginia, which seceded."
+   "note": "Became a state on June 20, 1863. In 1861 it was part of Virginia, which seceded. Slavery was still legal here; the new state's constitution freed enslaved people only gradually."
   },
   {
    "abbr": "SC",
@@ -250,7 +250,7 @@
    "group": 4,
    "side": "Confederacy",
    "seceded": "June 8, 1861",
-   "note": "The legislature voted on May 6; voters approved it on June 8, 1861."
+   "note": "Voters approved secession on June 8, 1861. Union forces held much of the state from 1862."
   }
  ]
 }

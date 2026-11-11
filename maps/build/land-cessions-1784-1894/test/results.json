@@ -2,7 +2,7 @@
  "tool": "Map test 1.0",
  "timeZone": "America/Chicago",
  "sdk": "ArcGIS Maps SDK for JavaScript 4.34",
- "webmapFingerprint": "4e1f60ecd473016dd561db9f76259c707ebe0f51",
+ "webmapFingerprint": "8c327d4efd4b036f1cabf1926e2662eeb15c0ef6",
  "results": [
   {
    "name": "notice-before-1830",

@@ -1,8 +1,8 @@
 {
   "format": "Data publish 1.0",
   "id": "slavery-1850-routes",
-  "version": "0.1.0",
-  "file": "maps/data/slavery-1850/slavery-1850-routes-v0_1_0.geojson",
+  "version": "0.2.0",
+  "file": "maps/data/slavery-1850/slavery-1850-routes-v0_2_0.geojson",
   "expectFeatures": 4,
   "checks": [
     {
@@ -25,7 +25,7 @@
     }
   ],
   "item": {
-    "title": "Routes of the slave trade within the United States, 1850 (data for lessons) v0.1",
+    "title": "Routes of the slave trade, 1830-1850, and the ships La Amistad and Creole (data for lessons) v0.2",
     "snippet": "Overland and sea routes of the slave trade within the United States, and the routes of the ships La Amistad (1839) and Creole (1841), each with the direction people were moved.",
     "description": "<p>Four line features made for US History map lessons: the overland routes and the sea routes of the slave trade within the United States, and the routes of two ships, La Amistad (1839) and the Creole (1841). Each has a name, the direction people were moved, and a short account.</p><p>Lines are from Esri's digitization of the 1850 plate in Harper's Atlas of American History (1920) and are approximate.</p>",
     "tags": [
@@ -38,7 +38,7 @@
       "grade 8"
     ],
     "credits": "Lines: Library of Congress and Esri (digitized from Harper's Atlas of American History, 1920).",
-    "license": "Outlines digitized by Esri from a public-domain map (Harper's Atlas of American History, 1920; Library of Congress, loc.gov/item/32005827). Status text written for this layer is original."
+    "license": "Lines digitized by Esri from a public-domain map (Harper's Atlas of American History, 1920; Library of Congress, loc.gov/item/32005827). Route names and accounts written for this layer are original."
   },
   "publish": {
     "org": "HNLEA4GfnbCFQZGa",

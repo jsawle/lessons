@@ -1,10 +1,10 @@
 {
   "format": "Data publish 1.0",
   "id": "slavery-1850-states",
-  "version": "0.1.0",
-  "file": "maps/data/slavery-1850/slavery-1850-states-v0_1_0.geojson",
-  "expectFeatures": 40,
-  "note": "31 states, the District of Columbia and 8 territory areas, late 1850. Virginia includes today's West Virginia.",
+  "version": "0.2.0",
+  "file": "maps/data/slavery-1850/slavery-1850-states-v0_2_0.geojson",
+  "expectFeatures": 39,
+  "note": "31 states, the District of Columbia and 7 territory areas, late 1850. Virginia includes today's West Virginia.",
   "checks": [
     {
       "name": "Virginia is one slave state",
@@ -62,12 +62,31 @@
       "expect": {
         "StatusOrder": 3
       }
+    },
+    {
+      "name": "New Jersey: 236 people still counted as enslaved",
+      "where": {
+        "Name": "New Jersey"
+      },
+      "expect": {
+        "StatusOrder": 1,
+        "Basis": "An 1846 law abolished slavery here but kept the last enslaved people bound to their owners as 'apprentices'. The 1850 census still counted 236 people as enslaved."
+      }
+    },
+    {
+      "name": "Land given up by Texas is named",
+      "where": {
+        "Name": "Unorganized land given up by Texas"
+      },
+      "expect": {
+        "StatusOrder": 3
+      }
     }
   ],
   "item": {
-    "title": "Free and slave states and territories, 1850 (data for lessons) v0.1",
+    "title": "Free and slave states and territories, 1850 (data for lessons) v0.2",
     "snippet": "The 31 states, the District of Columbia and the territories of late 1850, in four groups: free state, slave state, free territory, territory open to slavery.",
-    "description": "<p>The states and territories of the United States in late 1850, after California's admission, made for US History map lessons. Each area has one of four groups and a one-sentence reason. Virginia includes today's West Virginia; Missouri is one area; the area the source labels Oklahoma is Indian Territory.</p><p>Outlines are from Esri's digitization of the 1850 plate in Harper's Atlas of American History (1920). That map classes each area by the law that made it free or slave; this layer uses four plain groups instead. Territory boundaries in the West were unsettled in 1850 and are approximate.</p>",
+    "description": "<p>The states and territories of the United States in late 1850, after California's admission, made for US History map lessons. Each area has one of four groups and a one-sentence reason. Virginia includes today's West Virginia; Missouri is one area; the area the source labels Oklahoma is Indian Territory.</p><p>Outlines are from Esri's digitization of the 1850 plate in Harper's Atlas of American History (1920). That map classes each area by the law that made it free or slave; this layer uses four plain groups instead. Boundaries in the West are drawn as on the 1920 map and are approximate.</p>",
     "tags": [
       "US History",
       "slavery",
