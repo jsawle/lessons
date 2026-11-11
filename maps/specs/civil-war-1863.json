@@ -1,11 +1,12 @@
 {
   "format": "Map spec 1.0",
   "id": "civil-war-1863",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "lesson": "resources/lessons/civil-war-battlefields.json",
   "item": {
     "title": "The Civil War, 1863",
     "snippet": "The 35 states of mid-1863 by side and by when they seceded, with Civil War battlefields and the railroads in operation by 1863.",
-    "description": "<p><b>Question:</b> Which states stayed in the Union and which seceded, and where was the Civil War fought?</p><p><b>What the map shows:</b> Each of the 35 states of mid-1863 is shaded by its side: Union free states, Union slave states (the border states), states that seceded before the attack on Fort Sumter in April 1861 and states that seceded after it. Click a state for its side and, if it seceded, the date. Two more layers are off when the map opens: the battlefields of the Civil War, and the railroads in operation by 1863. Turn them on in the layer list. Click a battlefield for its name, state and size.</p><p><b>Notes:</b> State outlines are today's. Territories, and Nevada (a state from 1864), are not shaded. The side shown is the one each state joined, not who held its land in 1863. Battlefields are the study areas mapped by the National Park Service's American Battlefield Protection Program; each area is the land where a battle was fought, not a single point, and the layer does not say who won. Railroads are drawn from the regional view inward.</p><p><b>Sources:</b> States: the ordinances of secession and acts of admission, fact-checked 11 November 2026; outlines from Natural Earth. Battlefields: National Park Service, American Battlefield Protection Program. Railroads: Jeremy Atack, Historical Geographic Information Systems database of U.S. Railroads. Esri basemap.</p><p><i>Version 0.1 (11 November 2026), draft.</i></p>",
+    "description": "<p><b>Question:</b> Which states stayed in the Union and which seceded, and where was the Civil War fought?</p><p><b>What the map shows:</b> Each of the 35 states of mid-1863 is shaded by its side: Union free states, Union slave states (the border states), states that seceded before the attack on Fort Sumter in April 1861 and states that seceded after it. Click a state for its side and, if it seceded, the date. Two more layers are off when the map opens: the battlefields of the Civil War, and the railroads in operation by 1863. Turn them on in the layer list. Click a battlefield for its name, state and size.</p><p><b>Notes:</b> State outlines are today's. Territories, and Nevada (a state from 1864), are not shaded. The side shown is the one each state joined, not who held its land in 1863. Battlefields are the study areas mapped by the National Park Service's American Battlefield Protection Program; each area is the land where a battle was fought, not a single point, and the layer does not say who won. A few areas in the West were fights between United States troops and Native nations in the war years; two, Sand Creek in Colorado and Bear River in Idaho, were massacres of Native people, and their pop-ups say so. Railroads are drawn from the regional view inward.</p><p><b>Sources:</b> States: the ordinances of secession and acts of admission, fact-checked 11 November 2026; outlines from Natural Earth. Battlefields: National Park Service, American Battlefield Protection Program. Railroads: Jeremy Atack, Historical Geographic Information Systems database of U.S. Railroads. Esri basemap.</p><p><i>Version 0.1.1 (11 November 2026), draft.</i></p>",
     "tags": [
       "US History",
       "Civil War",
@@ -103,19 +104,23 @@
       },
       "popup": {
         "title": "{expression/name}",
-        "html": "<p>A Civil War battlefield in {expression/state}.</p><p>The area mapped is about {expression/acres} acres.</p><p><i>The area is the land where the battle was fought, as mapped by the National Park Service. This layer does not say who won.</i></p>",
+        "html": "<p>{expression/what}</p><p>The area mapped is about {expression/acres} acres.</p><p><i>{expression/note}</i></p>",
         "expressions": {
           "name": {
             "title": "Battle",
             "arcade": "return Proper(Lower($feature.NAME));"
           },
-          "state": {
-            "title": "State",
-            "arcade": "return $feature.STATE;"
-          },
           "acres": {
             "title": "Acres",
             "arcade": "return Text(Round($feature.Acres, -2), '#,###');"
+          },
+          "what": {
+            "title": "What happened here",
+            "arcade": "var n = Upper(Trim($feature.NAME));\nif (n == 'SAND CREEK') { return 'The site of the Sand Creek Massacre, in ' + $feature.STATE + '. In November 1864 United States volunteer troops attacked a Cheyenne and Arapaho village here.'; }\nif (n == 'BEAR RIVER') { return 'The site of the Bear River Massacre, in ' + $feature.STATE + '. In January 1863 United States volunteer troops attacked a Northwestern Shoshone village here.'; }\nreturn 'A Civil War battlefield in ' + $feature.STATE + '.';"
+          },
+          "note": {
+            "title": "Note",
+            "arcade": "var n = Upper(Trim($feature.NAME));\nif (n == 'SAND CREEK' || n == 'BEAR RIVER') { return 'The National Park Service maps this area with its Civil War battlefields. It was an attack on a village, not a battle.'; }\nreturn 'The area is the land where the battle was fought, as mapped by the National Park Service. This layer does not say who won.';"
           }
         }
       },
@@ -442,6 +447,40 @@
           "Seceded after Fort Sumter",
           "June 8, 1861",
           "Union forces held much of the state"
+        ]
+      }
+    },
+    {
+      "name": "sand-creek",
+      "question": "A site that was not a battle",
+      "do": {
+        "open": {
+          "layer": "Civil War battlefields",
+          "where": "NAME='SAND CREEK'"
+        }
+      },
+      "expect": {
+        "popupHas": [
+          "Sand Creek Massacre",
+          "Cheyenne and Arapaho",
+          "not a battle"
+        ]
+      }
+    },
+    {
+      "name": "bear-river",
+      "question": "A site that was not a battle",
+      "do": {
+        "open": {
+          "layer": "Civil War battlefields",
+          "where": "NAME='BEAR RIVER'"
+        }
+      },
+      "expect": {
+        "popupHas": [
+          "Bear River Massacre",
+          "Northwestern Shoshone",
+          "not a battle"
         ]
       }
     }

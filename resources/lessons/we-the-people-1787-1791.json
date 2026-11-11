@@ -2,9 +2,9 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "we-the-people-1787-1791",
-  "contentVersion": "0.8.0",
+  "contentVersion": "0.8.1",
   "status": "draft",
-  "updated": "2026-11-09",
+  "updated": "2026-11-11",
   "reviewed": null,
   "title": "We the People: Representation and Ratification, 1787–1791",
   "sheetTitle": {
@@ -80,6 +80,20 @@
       "where": "Population in 1790: free and enslaved (layer item credits)",
       "note": "The layer item's own credits still cite Wikipedia's tabulation. The figures were verified against the Census Bureau's Return of the Whole Number of Persons (1791) and the 1793 House seats; the item credits should name those sources instead.",
       "studentVisible": false
+    },
+    {
+      "date": "2026-11-11",
+      "status": "open",
+      "where": "Ratifying the Constitution pop-ups (the date in the vote line)",
+      "note": "The pop-up shows each ratification date as a date and time in the computer's time zone, so in the United States it reads the evening before: Delaware shows 12/6/1787, 6:09 PM in Central time; the correct date is December 7, 1787. The vote counts are right. The answer notes give the correct dates.",
+      "studentVisible": true
+    },
+    {
+      "date": "2026-11-11",
+      "status": "open",
+      "where": "Population in 1790 pop-ups (the percentage enslaved)",
+      "note": "Some percentages show with many decimal places, for example Virginia (39.099998474121094%) and Maryland (32.20000076293945%). The rounded figures in the answer notes are correct.",
+      "studentVisible": true
     }
   ],
   "inquiry": {
@@ -171,7 +185,8 @@
                 "25.5%"
               ]
             ]
-          }
+          },
+          "text": "The pop-up shows some percentages with many decimal places (Virginia reads 39.099998474121094%, Maryland 32.20000076293945%); accept the rounded figure."
         }
       },
       {
@@ -216,7 +231,7 @@
         },
         "lines": 4,
         "answer": {
-          "where": "House seats in 1793 layer. Labels and legend (darkest class, 13 to 19 seats): Virginia, VA: 19, the most of the 105 seats. Palest class (1 to 2 seats): Delaware, DE: 1, the fewest; Vermont, Rhode Island, Kentucky and Georgia have 2. Pop-up, third line: \"plus 2 senators, like every state\".",
+          "where": "House seats in 1793 layer. Labels and legend (darkest class, 13 to 19 seats): Virginia, VA: 19, the most of the 105 seats. Palest class (1 to 2 seats): Delaware, DE: 1, the fewest; Vermont, Rhode Island, Kentucky and Georgia have 2. Pop-up, second paragraph: \"plus 2 senators, like every state\".",
           "accept": "Names Virginia (19) and Delaware (1), says every state had two senators, and explains the Great Compromise in its own words: House seats follow population, which suited the large states, while the equal Senate protected the small ones. The pop-up also gives the ratio, one seat for every 33,000 people counted."
         }
       },
@@ -226,14 +241,14 @@
           "en": "The three-fifths clause",
           "es": "La cláusula de los tres quintos"
         },
-        "task": "Students click Virginia and South Carolina and read the last two lines of each pop-up, which give the seats each would have had if enslaved people had been counted in full or not at all, and compare them with the actual seats. Then they look for other states where the two numbers differ.",
+        "task": "Students click Virginia and South Carolina and read the paragraph of each pop-up that begins \"If enslaved people had been counted in full\", which gives the seats each would have had if enslaved people had been counted in full or not at all, and compare them with the actual seats. Then they look for other states where the two numbers differ.",
         "tools": [
           "popups"
         ],
         "core": false,
         "minutes": 12,
         "frontOfClass": [
-          "Click Virginia's pie and read its seats in 1793, then the last two lines of the pop-up.",
+          "Click Virginia's pie and read its seats in 1793, then the paragraph that begins \"If enslaved people had been counted in full\".",
           "Click South Carolina's pie and read the same three numbers.",
           "Ask: how many seats would each have had if enslaved people had been counted in full, or not at all?",
           "Click two more states and compare the same three numbers.",
@@ -245,8 +260,8 @@
             "es": "Haz clic en Virginia y en Carolina del Sur."
           },
           {
-            "en": "Read the seats in 1793 in each pop-up, then the last two lines: the seats if enslaved people had been counted in full, or not at all.",
-            "es": "Lee los escaños de 1793 en cada ventana emergente y luego las dos últimas líneas: los escaños si se hubiera contado a todas las personas esclavizadas, o a ninguna."
+            "en": "Read the seats in 1793 in each pop-up, then the paragraph that begins \"If enslaved people had been counted in full\": it gives the seats with a full count, and with no count at all.",
+            "es": "Lee los escaños de 1793 en cada ventana emergente y luego el párrafo que empieza con \"If enslaved people had been counted in full\": da los escaños si se hubiera contado a todas las personas esclavizadas, y si no se hubiera contado a ninguna."
           },
           {
             "en": "Click other states and compare the same three numbers.",
@@ -263,7 +278,7 @@
         },
         "lines": 3,
         "answer": {
-          "where": "Population in 1790 or House seats in 1793 pop-up, the lines \"That gave … House seats in 1793\", \"If enslaved people had been counted in full\" and \"If they had not been counted at all\". Virginia: 19, 22, 13. South Carolina: 6, 7, 4. Seven states show a higher seat count under the clause than with no count, listed below.",
+          "where": "Population in 1790 or House seats in 1793 pop-up, the sentence \"That gave … House seats in 1793\" and the third paragraph, which begins \"If enslaved people had been counted in full\" and goes on to the count if they had not been counted at all. A note about state outlines and a line of source links come after it. Virginia: 19, 22, 13. South Carolina: 6, 7, 4. Seven states show a higher seat count under the clause than with no count, listed below.",
           "accept": "Gives Virginia 19, 22 and 13 (fill-in) and South Carolina 6, 7 and 4, names at least Virginia, North Carolina, Maryland and South Carolina as states that gained seats, and says that enslaved people were counted for seats but could not vote, so the gain went to the slaveholding states. The seven states gained 15 seats in all (105 instead of 90), Virginia alone 6.",
           "table": {
             "caption": "States whose House seats changed with the three-fifths clause, from the pop-ups",
@@ -468,7 +483,8 @@
                 "January 10, 1791"
               ]
             ]
-          }
+          },
+          "text": "The pop-up shows each date as a date and time in the computer's time zone, so in the United States it reads the evening before (Delaware shows 12/6/1787, not December 7). The dates given here are the correct ones, so a date one day early read from the pop-up is not a student error. The vote counts are not affected."
         }
       }
     ],

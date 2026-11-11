@@ -2,9 +2,9 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "revolutionary-battles-1775-1776",
-  "contentVersion": "0.10.0",
+  "contentVersion": "0.10.1",
   "status": "draft",
-  "updated": "2026-11-09",
+  "updated": "2026-11-11",
   "reviewed": null,
   "title": "1775–1776 Revolutionary Battles",
   "sheetTitle": {
@@ -52,7 +52,7 @@
       },
       {
         "name": "Thirteen British Colonies",
-        "shows": "Colony areas and borders in 1763. The pop-up gives the colony's name.",
+        "shows": "Colony areas and borders in 1763, with each colony's name printed on the map. Colonies have no pop-up.",
         "source": "National Geographic Society and Virginia Geographic Alliance, from the Historical Atlas of the United States (1988)"
       },
       {
@@ -62,7 +62,7 @@
       },
       {
         "name": "Key Port Cities in the American Revolution 1775-1781",
-        "shows": "Ports that supplied armies and moved troops, from New England to the Caribbean and Britain. The legend separates a Major Port City (larger symbol) from a smaller Port. The layer has no pop-ups and no labels.",
+        "shows": "Ports that supplied armies and moved troops, from New England to the Caribbean and Britain. The legend separates a Major Port City (larger symbol) from a smaller Port. Each pop-up gives the port's name; the layer has no labels.",
         "source": "Jay Feyerabend, [master's thesis](https://commons.lib.jmu.edu/masters202029/74), James Madison University (2021)",
         "offAtStart": true
       }
@@ -74,6 +74,27 @@
       "status": "open",
       "where": "Turning Points layer, circles 1 and 3 to 5",
       "note": "Circle 1 (Lexington and Concord) gives Victor: Britain; it was an American victory, as the Revolutionary War Battles legend shows. The layer's Notes field on circles 3 to 5 holds the next circle's text and is cut off mid-sentence; the pop-up shows the Battle_details field instead, which is correct. The MapMaker team is correcting the layer. Until then, use the Battle_details text in the pop-up and the Battles legend for the winner.",
+      "studentVisible": true
+    },
+    {
+      "date": "2026-11-11",
+      "status": "open",
+      "where": "Thirteen British Colonies layer",
+      "note": "Clicking a colony opens no pop-up, and clicking a colony border opens a list of data fields. Each colony's name is printed on the map instead; Quebec is not labeled. The lesson's steps use the printed names.",
+      "studentVisible": true
+    },
+    {
+      "date": "2026-11-11",
+      "status": "open",
+      "where": "Revolutionary War Battles layer, zoomed out",
+      "note": "The diamonds disappear when the map is zoomed out past about 1:16 million. On a small screen that happens before every diamond from Quebec to South Carolina fits in view, so question 2 asks students to zoom out one step and drag the map instead.",
+      "studentVisible": true
+    },
+    {
+      "date": "2026-11-11",
+      "status": "open",
+      "where": "Turning Points circles 2 to 5",
+      "note": "When the numbered circles show, they sit on top of the Bunker Hill, Brooklyn, Fort Washington and Trenton diamonds. A click opens the circle's pop-up first; the arrow in the pop-up reaches the battle. The diamond's color shows again when the map is zoomed out until the circles disappear.",
       "studentVisible": true
     }
   ],
@@ -139,9 +160,9 @@
           "es": "Mide la distancia en línea recta de Boston a Concord: ________ millas"
         },
         "answer": {
-          "where": "Massachusetts bookmark. Lexington and Concord pop-up, the date line under the title: April 19, 1775. Legend (Revolutionary War Battles): blue diamond = American Victory, red = British Victory. Boston pop-up: April 19, 1775 to March 17, 1776, about 11 months. Measure tool, Boston to Concord: about 16 miles (accept 15 to 17).",
+          "where": "Massachusetts bookmark. Lexington and Concord pop-up, the date line under the title: April 19, 1775. Legend (Revolutionary War Battles): blue diamond = American Victory, red = British Victory. Boston pop-up: April 19, 1775 to March 17, 1776, about 11 months. Measure tool, from the Boston diamond to the Lexington and Concord diamond: about 17 miles (accept 15 to 18). The Lexington and Concord pop-up's account says Concord is 20 miles northwest of Boston; accept that if a student quotes it.",
           "text": "Use the Revolutionary War Battles legend for the result.",
-          "accept": "The date, the winner and about 11 months, and the point that the war began about 16 miles from Boston, a short march from the British army's base."
+          "accept": "The date, the winner and about 11 months, and the point that the war began about 17 miles from Boston, a short march from the British army's base."
         }
       },
       {
@@ -150,7 +171,7 @@
           "en": "Where was the fighting in 1775, and where in 1776?",
           "es": "¿Dónde se combatió en 1775 y dónde se combatió en 1776?"
         },
-        "task": "Zoom out until all 21 diamonds show, from Quebec to South Carolina. Click each one, read its dates, and sort the battles into two lists by year. Use the legend for the winner. Which colonies saw fighting each year, and what changed?",
+        "task": "Zoom out one step from the Massachusetts bookmark and drag the map from Quebec to South Carolina to find all 21 diamonds (they disappear if you zoom out too far). Click each one, read its dates, and sort the battles into two lists by year. Use the legend for the winner. Which colonies saw fighting each year, and what changed?",
         "tools": [
           "zoom",
           "popups",
@@ -159,7 +180,7 @@
         "core": true,
         "minutes": 15,
         "frontOfClass": [
-          "Zoom out until all 21 diamonds show, from Quebec to South Carolina.",
+          "Zoom out one step from the Massachusetts bookmark and drag the map from Quebec to South Carolina to show all 21 diamonds. If they disappear, zoom in one step.",
           "Click the Bunker Hill diamond and read the date line.",
           "Click the Brooklyn diamond and read the date line.",
           "Open the legend and check the color of each of those two diamonds.",
@@ -168,16 +189,16 @@
         ],
         "steps": [
           {
-            "en": "Zoom out until you can see every diamond, from Quebec to South Carolina.",
-            "es": "Aléjate hasta ver todos los rombos, desde Quebec hasta Carolina del Sur."
+            "en": "Zoom out one step from the Massachusetts bookmark. Drag the map from Quebec in the north to South Carolina in the south to find all 21 diamonds. If the diamonds disappear, you have zoomed out too far: zoom in one step.",
+            "es": "Aléjate un paso desde el marcador Massachusetts. Arrastra el mapa desde Quebec, en el norte, hasta Carolina del Sur, en el sur, para encontrar los 21 rombos. Si los rombos desaparecen, te alejaste demasiado: acércate un paso."
           },
           {
             "en": "Click the diamonds and read each one's date line to see its year.",
             "es": "Haz clic en los rombos y lee la línea de la fecha de cada uno para saber su año."
           },
           {
-            "en": "Click the colony under each group of diamonds to read its name, and use the legend to see who won.",
-            "es": "Haz clic en la colonia que está debajo de cada grupo de rombos para leer su nombre, y usa la leyenda para ver quién ganó."
+            "en": "Read the colony's name printed on the map under each group of diamonds (colonies have no pop-up, and Quebec is not labeled). Use the legend to see who won.",
+            "es": "Lee el nombre de la colonia impreso en el mapa debajo de cada grupo de rombos (las colonias no tienen ventana emergente y Quebec no tiene etiqueta). Usa la leyenda para ver quién ganó."
           }
         ],
         "ask": {
@@ -186,7 +207,7 @@
         },
         "lines": 5,
         "answer": {
-          "where": "Revolutionary War Battles layer, zoomed out to the whole east coast: 21 diamonds. Each pop-up's date line gives the year; the diamond color and the legend give the winner. The colony comes from the Thirteen British Colonies layer or the pop-up's account.",
+          "where": "Revolutionary War Battles layer, one zoom step out from the Massachusetts bookmark and dragged along the coast: 21 diamonds. Each pop-up's date line gives the year; the diamond color and the legend give the winner. The colony comes from the names printed on the map by the Thirteen British Colonies layer, or from the pop-up's account; Quebec is not labeled.",
           "accept": "Names Massachusetts, New York and Virginia, and Quebec (a British province, not one of the thirteen colonies), for 1775 and adds North Carolina, South Carolina, New Jersey and Rhode Island for 1776, and says that the fighting began around Boston and then spread along the coast, with most battles from August 1776 in New York and New Jersey, where the British won nearly all of them.",
           "table": {
             "caption": "Battles on the map by year and winner (from the pop-up dates and the legend)",
@@ -207,7 +228,8 @@
                 "Brooklyn, Valcour Island, Pell's Point, White Plains, Fort Washington (New York); Fort Lee, Mount Holly (New Jersey); Newport (Rhode Island)"
               ]
             ]
-          }
+          },
+          "text": "Clicking a colony opens nothing, and clicking a colony border opens a list of data fields (FID, LEFT_FID and others) that no question uses."
         }
       },
       {
@@ -216,7 +238,7 @@
           "en": "Why New York?",
           "es": "¿Por qué Nueva York?"
         },
-        "task": "Turn on Key Port Cities (it sits inside the Revolutionary War Battlefields group). Students use the legend to tell a Major Port City from a smaller Port, name the major ports between Boston and Charleston (the layer has no pop-ups, so the battle diamonds and the coastline help), measure New York to Philadelphia and New York to Boston, and say what a navy based at New York could reach.",
+        "task": "Turn on Key Port Cities in Map layers. Students use the legend to tell a Major Port City from a smaller Port, click the major ports between Boston and Charleston to read their names, measure New York to Philadelphia and New York to Boston, and say what a navy based at New York could reach.",
         "tools": [
           "layers",
           "legend",
@@ -227,7 +249,7 @@
         "core": false,
         "minutes": 15,
         "frontOfClass": [
-          "In Map layers, open Revolutionary War Battlefields and turn on Key Port Cities in the American Revolution 1775-1781.",
+          "In Map layers, turn on Key Port Cities in the American Revolution 1775-1781.",
           "Open the legend and show the larger symbol for a Major Port City and the smaller one for a Port.",
           "Ask: Boston and Charleston are major ports; which other major ports lie between them?",
           "Use Measure from New York to Philadelphia.",
@@ -236,8 +258,8 @@
         ],
         "steps": [
           {
-            "en": "In Map layers, turn on Key Port Cities in the American Revolution 1775-1781 (inside Revolutionary War Battlefields).",
-            "es": "En las capas del mapa (Map layers), activa Key Port Cities in the American Revolution 1775-1781 (ciudades portuarias clave; está dentro de Revolutionary War Battlefields)."
+            "en": "In Map layers, turn on Key Port Cities in the American Revolution 1775-1781.",
+            "es": "En las capas del mapa (Map layers), activa Key Port Cities in the American Revolution 1775-1781 (ciudades portuarias clave)."
           },
           {
             "en": "Use the legend to tell a Major Port City from a smaller Port.",
@@ -248,8 +270,8 @@
             "es": "Busca los puertos principales entre Boston y Charleston."
           },
           {
-            "en": "The layer has no pop-ups, so use the coastline and the battle diamonds nearby to name them.",
-            "es": "La capa no tiene ventanas emergentes, así que usa la costa y los rombos de batallas cercanos para nombrarlos."
+            "en": "Click each major port to read its name in the pop-up.",
+            "es": "Haz clic en cada puerto principal para leer su nombre en la ventana emergente."
           },
           {
             "en": "Use Measure from New York to Philadelphia and from New York to Boston.",
@@ -266,9 +288,9 @@
         },
         "lines": 4,
         "answer": {
-          "where": "Key Port Cities layer, legend: larger symbol = Major Port City, smaller = Port. Five major ports: Boston, New York, Philadelphia, Norfolk and Charleston, so the three between Boston and Charleston are New York, Philadelphia and Norfolk. The layer has no pop-ups or labels: New York sits by the Brooklyn diamond, Norfolk by the Great Bridge diamond, and Philadelphia is up the Delaware River south-west of Trenton. Measure tool: New York to Philadelphia about 80 miles (accept 75 to 85); New York to Boston about 190 miles (accept 180 to 200).",
+          "where": "Key Port Cities layer, legend: larger symbol = Major Port City, smaller = Port. Five major ports: Boston, New York, Philadelphia, Norfolk and Charleston, so the three between Boston and Charleston are New York, Philadelphia and Norfolk. The layer has no labels, but each port's pop-up gives its name in bold (for example New York, NY and Norfolk, VA). Measure tool: New York to Philadelphia about 80 miles (accept 75 to 85); New York to Boston about 190 miles (accept 180 to 200).",
           "accept": "Names at least New York and Philadelphia, gives both distances within range, and uses the map to say that New York is a major port in the middle of the coast, about 80 miles from Philadelphia and 190 from Boston by Measure, so a navy based there could reach the other big ports and cut New England off from the colonies to the south.",
-          "text": "Accept Norfolk if a student works it out; it is the hardest to name without labels. Background for teachers: [Battle of Brooklyn, American Battlefield Trust](https://www.battlefields.org/learn/revolutionary-war/battles/brooklyn)."
+          "text": "Background for teachers: [Battle of Brooklyn, American Battlefield Trust](https://www.battlefields.org/learn/revolutionary-war/battles/brooklyn)."
         }
       },
       {
@@ -277,7 +299,7 @@
           "en": "How did 1776 end?",
           "es": "¿Cómo terminó 1776?"
         },
-        "task": "Zoom in near New York City until the numbered turning points show, and follow circles 4 and 5. Click the diamonds for Fort Washington, Fort Lee and Trenton, and read the dates and the winner from the legend. Measure the distance from New York City to Trenton.",
+        "task": "Zoom in near New York City until the numbered turning points show, and follow circles 4 and 5. Click the diamonds for Fort Washington, Fort Lee and Trenton, and read the dates and the winner from the legend. Measure the distance from the Brooklyn diamond (New York City) to Trenton.",
         "tools": [
           "zoom",
           "popups",
@@ -289,10 +311,10 @@
         "frontOfClass": [
           "Zoom in on New York City until the numbered Turning Points circles appear.",
           "Click circle 4 and read the Battle details text.",
-          "Click the diamonds for Fort Washington and Fort Lee and read their dates.",
-          "Click circle 5, then the Trenton diamond, and read its date.",
-          "Open the legend and check the color of each diamond.",
-          "Use Measure for the distance from New York City to Trenton.",
+          "Click the diamond for Fort Lee and read its dates. Circle 4 covers the Fort Washington diamond: click the circle and use the arrow in the pop-up (2 of 2) to reach the battle.",
+          "Click circle 5, read its Battle details text, then use the arrow in the pop-up (2 of 2) to reach the Trenton battle and read its date.",
+          "Zoom out until the circles disappear, open the legend and check the color of each diamond.",
+          "Use Measure for the distance from the Brooklyn diamond (New York City) to Trenton.",
           "Ask: how far from New York City had the fighting moved, and how did 1776 end for Washington's army?"
         ],
         "steps": [
@@ -305,16 +327,16 @@
             "es": "Sigue los círculos 4 y 5."
           },
           {
-            "en": "Click the diamonds for Fort Washington, Fort Lee and Trenton.",
-            "es": "Haz clic en los rombos de Fort Washington, Fort Lee y Trenton."
+            "en": "Click the diamonds for Fort Washington, Fort Lee and Trenton. A numbered circle covers the Fort Washington and Trenton diamonds: click the circle and use the arrow in the pop-up to reach the battle (2 of 2).",
+            "es": "Haz clic en los rombos de Fort Washington, Fort Lee y Trenton. Un círculo numerado cubre los rombos de Fort Washington y Trenton: haz clic en el círculo y usa la flecha de la ventana emergente para llegar a la batalla (2 de 2)."
           },
           {
-            "en": "Read each one's dates, and use the legend to see who won.",
-            "es": "Lee las fechas de cada uno y usa la leyenda para ver quién ganó."
+            "en": "Read each one's dates, and use the legend to see who won. To see the color of a covered diamond, zoom out until the circles disappear.",
+            "es": "Lee las fechas de cada uno y usa la leyenda para ver quién ganó. Para ver el color de un rombo cubierto, aléjate hasta que los círculos desaparezcan."
           },
           {
-            "en": "Use Measure for the distance from New York City to Trenton.",
-            "es": "Usa la herramienta de medir (Measure) para la distancia de la ciudad de Nueva York a Trenton."
+            "en": "Use Measure for the distance from the Brooklyn diamond (New York City) to Trenton.",
+            "es": "Usa la herramienta de medir (Measure) para la distancia del rombo de Brooklyn (ciudad de Nueva York) a Trenton."
           }
         ],
         "ask": {
@@ -326,7 +348,7 @@
           "es": "Mide la distancia de la ciudad de Nueva York a Trenton: ________ millas"
         },
         "answer": {
-          "where": "Turning Points circles 4 (Fall of New York City, 1776, Victor: Britain) and 5 (Washington Strikes Back, 1776, Victor: United States); the pop-up's Battle details text tells the story of each. Revolutionary War Battles pop-ups: Fort Washington, November 16, 1776, and Fort Lee, November 20, 1776, red = British Victory; Trenton, December 26, 1776, blue = American Victory. Measure tool, New York City to Trenton: about 52 miles (accept 48 to 56).",
+          "where": "Turning Points circles 4 (Fall of New York City, 1776, Victor: Britain) and 5 (Washington Strikes Back, 1776, Victor: United States); the pop-up's Battle details text tells the story of each. Revolutionary War Battles pop-ups: Fort Washington, November 16, 1776, and Fort Lee, November 20, 1776, red = British Victory; Trenton, December 26, 1776, blue = American Victory. Measure tool, from the Brooklyn diamond (New York City) to Trenton: about 52 miles (accept 48 to 56). From the Fort Washington or Fort Lee diamonds it is about 61 miles; accept that if a student measured from there. Circles 4 and 5 sit on the Fort Washington and Trenton diamonds, so a click opens the circle first and the battle is the second pop-up.",
           "accept": "The three dates and winners, and about 52 miles: by December 26, 1776 the fighting had moved across New Jersey to Trenton."
         }
       }
@@ -386,8 +408,8 @@
       "es": "Soldados británicos salieron de Boston para apoderarse de las armas que los colonos habían guardado en Concord. Los combates que siguieron dieron inicio a la Revolución estadounidense. Durante los dos años siguientes, el ejército y la armada británicos y el nuevo Ejército Continental, dirigido por George Washington, lucharon por las ciudades, los ríos y los puertos de las colonias."
     },
     "readingTheMap": {
-      "en": "Diamonds mark battles. A battle's pop-up gives its name, dates and story, but not the winner in words: the diamond's color shows the winner, so use the legend. Each diamond is placed at the battle's usual location, but the fighting covered a wider area: gray shaded areas show the battlefield, and areas with diagonal stripes show the core, where the fighting was heaviest. Zoom in to see white numbered circles: five turning points, numbered in the order they happened. The Key Port Cities layer has no pop-ups: the legend tells a major port from a smaller one.",
-      "es": "Los rombos marcan las batallas. La ventana emergente de una batalla da su nombre, sus fechas y su historia, pero no dice quién ganó: el color del rombo muestra al ganador, así que usa la leyenda. Cada rombo está en el lugar donde se suele situar la batalla, pero los combates ocuparon un área mayor: las zonas grises muestran el campo de batalla y las zonas rayadas, el núcleo, donde la lucha fue más intensa. Acércate para ver círculos blancos numerados: cinco momentos decisivos, numerados en el orden en que ocurrieron. La capa Key Port Cities (ciudades portuarias clave) no tiene ventanas emergentes: la leyenda distingue un puerto principal de uno menor."
+      "en": "Diamonds mark battles. A battle's pop-up gives its name, dates and story, but not the winner in words: the diamond's color shows the winner, so use the legend. Each diamond is placed at the battle's usual location, but the fighting covered a wider area: gray shaded areas show the battlefield, and areas with diagonal stripes show the core, where the fighting was heaviest. Zoom in to see white numbered circles: five turning points, numbered in the order they happened. In the Key Port Cities layer, click a port to see its name; the legend tells a major port from a smaller one.",
+      "es": "Los rombos marcan las batallas. La ventana emergente de una batalla da su nombre, sus fechas y su historia, pero no dice quién ganó: el color del rombo muestra al ganador, así que usa la leyenda. Cada rombo está en el lugar donde se suele situar la batalla, pero los combates ocuparon un área mayor: las zonas grises muestran el campo de batalla y las zonas rayadas, el núcleo, donde la lucha fue más intensa. Acércate para ver círculos blancos numerados: cinco momentos decisivos, numerados en el orden en que ocurrieron. En la capa Key Port Cities (ciudades portuarias clave), haz clic en un puerto para ver su nombre; la leyenda distingue un puerto principal de uno menor."
     },
     "tips": [
       "popups"

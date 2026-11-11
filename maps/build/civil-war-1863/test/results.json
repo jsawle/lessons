@@ -2,7 +2,7 @@
  "tool": "Map test 1.0",
  "timeZone": "America/Chicago",
  "sdk": "ArcGIS Maps SDK for JavaScript 4.34",
- "webmapFingerprint": "3ebc89341043fd2624f930f7a751a0728dd938a4",
+ "webmapFingerprint": "ae45b7d10addf6e2a68406a85cf055a42a1228d0",
  "results": [
   {
    "name": "notice-sides",
@@ -74,6 +74,22 @@
    "pass": true,
    "failures": [],
    "popup": "Tennessee in 1863\n\nSeceded after Fort Sumter (April 1861)\n\nSide: Confederacy. Seceded: June 8, 1861.\n\nVoters approved secession on June 8, 1861. Union forces held much of the state from 1862.",
+   "legend": null
+  },
+  {
+   "name": "sand-creek",
+   "question": "A site that was not a battle",
+   "pass": true,
+   "failures": [],
+   "popup": "Sand Creek\n\nThe site of the Sand Creek Massacre, in CO. In November 1864 United States volunteer troops attacked a Cheyenne and Arapaho village here.\n\nThe area mapped is about 55,800 acres.\n\nThe National Park Service maps this area with its Civil War battlefields. It was an attack on a village, not a battle.",
+   "legend": null
+  },
+  {
+   "name": "bear-river",
+   "question": "A site that was not a battle",
+   "pass": true,
+   "failures": [],
+   "popup": "Bear River\n\nThe site of the Bear River Massacre, in ID. In January 1863 United States volunteer troops attacked a Northwestern Shoshone village here.\n\nThe area mapped is about 3,600 acres.\n\nThe National Park Service maps this area with its Civil War battlefields. It was an attack on a village, not a battle.",
    "legend": null
   }
  ]

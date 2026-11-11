@@ -2,9 +2,9 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "roads-trails-and-rails-west",
-  "contentVersion": "0.8.0",
+  "contentVersion": "0.8.1",
   "status": "draft",
-  "updated": "2026-11-09",
+  "updated": "2026-11-11",
   "reviewed": null,
   "title": "Roads, Trails, and Rails West",
   "sheetTitle": {
@@ -56,7 +56,7 @@
       },
       {
         "name": "Indigenous Territories",
-        "shows": "Approximate territories of Indigenous nations, from a community-made map, each shaded in its own color with the nation's name appearing when zoomed in. Not listed in the legend. No pop-up.",
+        "shows": "Approximate territories of Indigenous nations, from a community-made map, each shaded in its own color with the nation's name appearing when zoomed in. Not listed in the legend. Click a territory to read the nation's name in the pop-up.",
         "source": "Native Land Digital",
         "offAtStart": true
       }
@@ -190,7 +190,7 @@
         "core": false,
         "minutes": 12,
         "frontOfClass": [
-          "Click the Oregon trail line and read its length and how many people used it.",
+          "Click the Oregon trail line in Idaho or Oregon, where it runs alone, and read its length and how many people used it.",
           "Zoom in on Kansas City and find Independence, Missouri, on the basemap.",
           "Use Measure in miles from Independence to Portland, Oregon.",
           "Ask: how much longer is the trail than the straight line?",
@@ -203,8 +203,8 @@
             "es": "Busca el color del sendero de Oregón en la leyenda."
           },
           {
-            "en": "Click the Oregon Trail and read its length and how many people traveled it.",
-            "es": "Haz clic en el sendero de Oregón y lee su longitud y cuántas personas lo recorrieron."
+            "en": "Click the Oregon Trail and read its length and how many people traveled it. Check that the pop-up's title says Oregon Trail: where trails share a route, another trail may open first, so use the arrow or click the line in Idaho or Oregon.",
+            "es": "Haz clic en el sendero de Oregón y lee su longitud y cuántas personas lo recorrieron. Comprueba que el título de la ventana emergente diga Oregon Trail: donde varios senderos comparten ruta puede abrirse primero otro sendero, así que usa la flecha o haz clic en la línea en Idaho u Oregón."
           },
           {
             "en": "Find Independence, Missouri, on the basemap, next to Kansas City.",
@@ -262,8 +262,8 @@
             "es": "Sigue un sendero de un extremo al otro."
           },
           {
-            "en": "Find two nations whose land it crossed.",
-            "es": "Busca dos naciones cuyas tierras cruzaba."
+            "en": "Find two nations whose land it crossed: read the names on the map or click the shading.",
+            "es": "Busca dos naciones cuyas tierras cruzaba: lee los nombres en el mapa o haz clic en el sombreado."
           }
         ],
         "ask": {
@@ -271,7 +271,7 @@
           "es": "¿Las tierras de qué dos naciones cruzaba el sendero? ¿Estaba vacía la tierra que cruzaba el sendero? ¿Qué pudo significar el sendero para las personas que vivían allí?"
         },
         "answer": {
-          "where": "Indigenous Territories layer (off at start; names draw when zoomed in). Any trail runs through a continuous patchwork of shaded territories from Missouri to the coast; for example the Oregon Trail crosses lands labeled for the Kaw, Pawnee, Lakota, Cheyenne, Arapaho, Shoshone, Nez Perce and others. Accept any two names read from the map.",
+          "where": "Indigenous Territories layer (off at start; names draw when zoomed in, and a click on the shading opens a pop-up with the nation's name). Any trail runs through a continuous patchwork of shaded territories from Missouri to the coast; for example the Oregon Trail crosses lands labeled Kaw / Kansa, Pawnee, Očhéthi Šakówiŋ (the Sioux nations, including the Lakota), Cheyenne, Arapaho, Eastern Shoshone, Shoshone-Bannock, and Cayuse, Umatilla and Walla Walla. Accept any two names read from the map.",
           "accept": "No, the land was not empty: the layer shows nations' territories along the whole trail. For the second part, a good answer reasons from the map that hundreds of thousands of travelers, their wagons and animals crossed these lands, so it could mean lost hunting grounds and grass, disease, pressure on water, forts and settlements along the route, and later loss of the land itself; any reasoned effect, positive or negative, that connects the trail to the people living there is acceptable."
         }
       },
@@ -367,7 +367,7 @@
   ],
   "assessment": {
     "evidence": "Strong answers use the Trails West pop-ups (the Oregon Trail's about 2,000 miles and 300,000 to 400,000 people, 1840 to 1860; the California Trail used until 1869), Measure from Independence to Portland (about 1,500 miles), nations named on the Indigenous Territories layer, and the legend's Transcontinental Railroad (Union Pacific) and (Central Pacific) lines beside the dotted trails.",
-    "exemplar": "The trails and railroads opened the West to settlers, but they ran through land where Indigenous nations already lived. The Oregon Trail pop-up says the trail was about 2,000 miles long and that 300,000 to 400,000 people traveled it between 1840 and 1860. A straight line from Independence, Missouri, to Portland, Oregon, is only about 1,500 miles, because the trail bends to follow rivers like the Platte and the Snake. When I turned on Indigenous Territories, the trail crossed the lands of the Pawnee, Lakota, Cheyenne and Shoshone, so the land was not empty. All those wagons and animals used up grass and hunting grounds. Later the Union Pacific and Central Pacific railroad ran close to the California and Mormon Pioneer trails. The California Trail was used until 1869, when the railroad was finished. For settlers the trip got faster. For the nations, more people kept coming."
+    "exemplar": "The trails and railroads opened the West to settlers, but they ran through land where Indigenous nations already lived. The Oregon Trail pop-up says the trail was about 2,000 miles long and that 300,000 to 400,000 people traveled it between 1840 and 1860. A straight line from Independence, Missouri, to Portland, Oregon, is only about 1,500 miles, because the trail bends to follow rivers like the Platte and the Snake. When I turned on Indigenous Territories, the trail crossed the lands of the Pawnee, Očhéthi Šakówiŋ, Cheyenne and Shoshone, so the land was not empty. All those wagons and animals used up grass and hunting grounds. Later the Union Pacific and Central Pacific railroad ran close to the California and Mormon Pioneer trails. The California Trail was used until 1869, when the railroad was finished. For settlers the trip got faster. For the nations, more people kept coming."
   },
   "studentSupport": {
     "beforeYouStart": {
@@ -375,8 +375,8 @@
       "es": "En el siglo XIX, cientos de miles de personas del este de Estados Unidos viajaron al Oeste en carretas, en busca de tierras de cultivo, oro o un lugar donde practicar su religión libremente. Un viaje por uno de los senderos podía durar meses. Más adelante en ese siglo, se construyeron ferrocarriles a través del Oeste."
     },
     "readingTheMap": {
-      "en": "Each trail is a dotted line in its own color; the legend names them, and clicking a trail opens its pop-up. City and state names are part of the basemap. Railroads and Indigenous Territories are off when the map opens: turn them on in Map layers. Thick colored lines are the transcontinental railroads, named in the legend, and thin gray lines are other railroads; only the thin gray lines have pop-ups. Each Indigenous nation's territory is shaded in its own color, and its name appears when you zoom in. The territories are approximate and aren't listed in the legend.",
-      "es": "Cada sendero es una línea punteada de un color distinto; la leyenda indica sus nombres, y al hacer clic en un sendero se abre su ventana emergente. Los nombres de ciudades y estados forman parte del mapa base. Las capas Railroads e Indigenous Territories están desactivadas al abrir el mapa: actívalas en las capas del mapa (Map layers). Las líneas gruesas de colores son los ferrocarriles transcontinentales, con sus nombres en la leyenda, y las líneas grises finas son otros ferrocarriles; solo las líneas grises finas tienen ventana emergente. El territorio de cada nación indígena tiene su propio color, y su nombre aparece al acercarte. Los territorios son aproximados y no aparecen en la leyenda."
+      "en": "Each trail is a dotted line in its own color; the legend names them, and clicking a trail opens its pop-up. City and state names are part of the basemap. Railroads and Indigenous Territories are off when the map opens: turn them on in Map layers. Thick colored lines are the transcontinental railroads, named in the legend, and thin gray lines are other railroads; of the railroads, only the thin gray lines have pop-ups. Each Indigenous nation's territory is shaded in its own color; its name appears when you zoom in, or when you click the shading. The territories are approximate and aren't listed in the legend.",
+      "es": "Cada sendero es una línea punteada de un color distinto; la leyenda indica sus nombres, y al hacer clic en un sendero se abre su ventana emergente. Los nombres de ciudades y estados forman parte del mapa base. Las capas Railroads e Indigenous Territories están desactivadas al abrir el mapa: actívalas en las capas del mapa (Map layers). Las líneas gruesas de colores son los ferrocarriles transcontinentales, con sus nombres en la leyenda, y las líneas grises finas son otros ferrocarriles; de los ferrocarriles, solo las líneas grises finas tienen ventana emergente. El territorio de cada nación indígena tiene su propio color; su nombre aparece al acercarte o al hacer clic en el sombreado. Los territorios son aproximados y no aparecen en la leyenda."
     },
     "tips": [
       "popups"

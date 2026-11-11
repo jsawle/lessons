@@ -2,9 +2,9 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "war-of-1812-and-monroe-doctrine",
-  "contentVersion": "0.7.0",
+  "contentVersion": "0.7.1",
   "status": "draft",
-  "updated": "2026-11-09",
+  "updated": "2026-11-11",
   "reviewed": null,
   "title": "The War of 1812 and the Monroe Doctrine, 1807–1823",
   "sheetTitle": {
@@ -27,7 +27,7 @@
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "fad1cdb9d5704401a4e05c34f7ee693c",
-    "about": "This map spans North and South America. It shows national borders in 1800, with the United States shaded pink, and 52 battles from 1811 to 1815, most from the War of 1812 itself, with battlefield land. Three layers, off when the map opens, add the land Spain gave up in 1819, the Adams–Onís Treaty line, and ten Latin American nations labeled with the year each became independent, with symbols showing whether the United States recognized them by 1824 or later.",
+    "about": "This map spans North and South America. It shows national borders in 1800, with the United States shaded pink, and 52 battles from 1811 to 1815, most from the War of 1812 itself, with battlefield land that appears when you zoom in close. Three layers, off when the map opens, add the land Spain gave up in 1819, the Adams–Onís Treaty line, and ten Latin American nations labeled with the year each became independent, with symbols showing whether the United States recognized them by 1824 or later.",
     "image": {
       "url": "https://jsawle.github.io/lessons/resources/assets/screenshots/war-of-1812-and-monroe-doctrine.jpg",
       "alt": "North America and the Caribbean with the borders of 1800, the United States shaded pink, and the battles of the War of 1812 as blue and red diamonds of different sizes.",
@@ -53,7 +53,7 @@
       },
       {
         "name": "Battlefield Boundaries: War of 1812",
-        "shows": "The land each battlefield covered (tan) and its core area (lighter tan). Each pop-up gives the battle and its size in acres.",
+        "shows": "The land each battlefield covered (tan) and its core area (lighter tan). It draws only when zoomed in close to a battle. Each pop-up gives the battle and its size in acres.",
         "source": "National Park Service, American Battlefield Protection Program"
       },
       {
@@ -64,7 +64,7 @@
       },
       {
         "name": "Battles of the War of 1812",
-        "shows": "52 battles from 1811 to 1815 as diamonds: blue for an American victory, red for a British victory, gray if inconclusive; bigger diamonds mean more casualties. Each pop-up gives the dates, the victor, total casualties, a casualties chart, the leaders on each side and a short account. The legend labels every opponent of the United States as British, but some battles were fought against Native nations: Tippecanoe (the Shawnee-led confederacy), Fort Mims and Horseshoe Bend (Red Stick Creeks). The pop-up's leaders and story say who fought.",
+        "shows": "52 battles from 1811 to 1815 as diamonds: blue for an American victory, red for a British victory, gray if inconclusive; bigger diamonds mean more casualties. Each pop-up gives the dates, the victor, total casualties, a short account and a casualties chart; it does not show the state or the leaders. The legend labels every opponent of the United States as British, but some battles were fought against Native nations: Tippecanoe (the Shawnee-led confederacy), Fort Mims and Horseshoe Bend (Red Stick Creeks). The pop-up's account says who fought.",
         "source": "American Battlefield Trust (War of 1812 Battles map)"
       },
       {
@@ -88,6 +88,20 @@
       "note": "The legend groups recognition as by 1824 or later, while question 4 asks about recognition before December 2, 1823; Brazil and Central America (1824) fall in the blue group. The pop-up date settles it. A three-way grouping (before the message, after it, later) would be clearer.",
       "status": "open",
       "date": "2026-10-21",
+      "studentVisible": true
+    },
+    {
+      "where": "Battles of the War of 1812 pop-up",
+      "note": "The pop-up does not show the state where a battle was fought, and the basemap has no place names, so students work out where a battle was from the coastline, the lakes and the pop-up's account. Raised with the MapMaker team: add the state to the pop-up.",
+      "status": "open",
+      "date": "2026-11-11",
+      "studentVisible": true
+    },
+    {
+      "where": "Latin American independence and US recognition pop-up (US recognition date)",
+      "note": "The pop-up shows each recognition date as a date and time in the computer's time zone, so in the United States it reads the evening before: Mexico shows 12/11/1822, 6:09 PM in Central time; the correct date is December 12, 1822. The answer notes give the correct dates.",
+      "status": "open",
+      "date": "2026-11-11",
       "studentVisible": true
     }
   ],
@@ -114,8 +128,8 @@
         "frontOfClass": [
           "Open The War of 1812 bookmark.",
           "Open the legend: blue for an American victory, red for British, gray if inconclusive, and bigger diamonds for more casualties.",
-          "Click a diamond near the Great Lakes and read the battle name and State Name in the pop-up.",
-          "Click a diamond in each of the other clusters and read where it was fought.",
+          "Click a diamond near the Great Lakes and read the battle's name and dates in the pop-up.",
+          "Click a diamond in each of the other clusters and use the coastline and the pop-up's account to say where it was fought.",
           "Ask: in which three areas was most of the fighting?"
         ],
         "steps": [
@@ -134,9 +148,9 @@
         },
         "lines": 3,
         "answer": {
-          "where": "The War of 1812 bookmark; Battles of the War of 1812 layer. The pop-up gives the battle name and its State Name field; the legend gives the result by color. Three clusters: the Great Lakes and the border with British Canada (pop-ups say Michigan, Ohio, New York, Ontario); Chesapeake Bay (Maryland, Virginia); the Gulf Coast and Alabama (Alabama, Louisiana).",
-          "accept": "Three areas named by region or by the states in the pop-ups: the Canadian border and Great Lakes; the Chesapeake Bay area around Washington and Baltimore; the South along the Gulf Coast and in Alabama. Accept the Creek War battles in Alabama as part of the southern area.",
-          "text": "Around Chesapeake Bay the British won at Bladensburg and burned Washington, then failed to take Baltimore. The Alabama battles were the Creek War against the Red Stick Creeks. The layer also includes Tippecanoe (November 1811), fought before the war against a Native confederacy; a battle diamond may sit on tan battlefield land, so the pop-up may say 1 of 2."
+          "where": "The War of 1812 bookmark; Battles of the War of 1812 layer. The pop-up gives the battle's name, dates and account; it does not name the state, and the basemap has no place names. The legend gives the result by color. Students place each group from the map itself: around the Great Lakes and the border with British Canada, around Chesapeake Bay, and near the Gulf Coast and in Alabama. Some accounts mention a place, which helps.",
+          "accept": "Three areas named by region, read from the shape of the coast and lakes or from places the pop-up accounts mention: the Canadian border and Great Lakes; the Chesapeake Bay area around Washington and Baltimore; the South along the Gulf Coast and in Alabama. Accept the Creek War battles in Alabama as part of the southern area.",
+          "text": "Around Chesapeake Bay the British won at Bladensburg and burned Washington, then failed to take Baltimore. The Alabama battles were the Creek War against the Red Stick Creeks. The layer also includes Tippecanoe (November 1811), fought before the war against a Native confederacy; the pop-up may say 1 of 2 because the click also lands on the Historic National Boundaries layer (its pop-up reads Year 1800). The tan battlefield land draws only when zoomed in close, so there is none at this bookmark."
         }
       },
       {
@@ -154,20 +168,20 @@
         "minutes": 15,
         "frontOfClass": [
           "Open The War of 1812 bookmark.",
-          "Click the biggest diamond and read Battle Dates, Battle Victor and Total Casualties in the pop-up.",
-          "Click the next two biggest diamonds and read the same three fields.",
+          "Click the biggest diamond and read the dates under the title, the victor line and Total Casualties in the pop-up.",
+          "Zoom in on the Niagara River, click the next two biggest diamonds and read the same three things.",
           "Ask: where and when was each battle fought, and who won?",
           "Write on the board: Treaty of Ghent signed December 24, 1814.",
           "Ask: which big battle came after the treaty was signed?"
         ],
         "steps": [
           {
-            "en": "Click the three biggest diamonds.",
-            "es": "Haz clic en los tres rombos más grandes."
+            "en": "Click the three biggest diamonds. Zoom in on the Niagara River, between Lake Erie and Lake Ontario, where several large diamonds sit close together.",
+            "es": "Haz clic en los tres rombos más grandes. Acércate al río Niágara, entre el lago Erie y el lago Ontario, donde hay varios rombos grandes muy juntos."
           },
           {
-            "en": "Read where and when each battle was fought, and who won.",
-            "es": "Lee dónde y cuándo se libró cada batalla, y quién ganó."
+            "en": "Read when each battle was fought and who won. Work out where from the map and the pop-up's account.",
+            "es": "Lee cuándo se libró cada batalla y quién ganó. Deduce dónde a partir del mapa y del relato de la ventana emergente."
           },
           {
             "en": "Compare each battle's date with December 24, 1814, when the peace treaty was signed at Ghent.",
@@ -180,9 +194,9 @@
         },
         "lines": 4,
         "answer": {
-          "where": "Battles of the War of 1812 layer, the three largest diamonds: pop-up fields Battle Dates, Battle Victor and Total Casualties, with the state in State Name. Legend: blue = American victory, red = British victory, gray = inconclusive. The table lists the five largest in case students pick a different third.",
+          "where": "Battles of the War of 1812 layer, the three largest diamonds: in each pop-up, the dates under the title, the victor line (American Side Victory, British Side Victory or Inconclusive) and Total Casualties. The pop-up does not show the state; the places in the table are for the teacher. Legend: blue = American victory, red = British victory, gray = inconclusive. The table lists the five largest in case students pick a different third.",
           "table": {
-            "caption": "Battles with the most casualties, from the pop-ups",
+            "caption": "Battles with the most casualties, from the pop-ups (the place in brackets is not in the pop-up)",
             "columns": [
               "Battle",
               "Dates",
@@ -222,8 +236,8 @@
               ]
             ]
           },
-          "accept": "The three battles with the most casualties, each with place, date and result from the pop-up; New Orleans (January 8, 1815) identified as the battle fought after the Treaty of Ghent.",
-          "text": "Fort Erie, New Orleans and Lundy's Lane are the three largest; news of the peace hadn't crossed the Atlantic before New Orleans. Horseshoe Bend (fourth largest) was fought against the Red Stick Creeks, not the British: the legend's British label is the layer's simplification, and the pop-up names Menawa as the opposing leader."
+          "accept": "The three battles with the most casualties, each with its date and result from the pop-up and a place worked out from the map or the account (the Niagara River or Canadian border for Fort Erie and Lundy's Lane); New Orleans (January 8, 1815) identified as the battle fought after the Treaty of Ghent.",
+          "text": "Fort Erie, New Orleans and Lundy's Lane are the three largest; news of the peace hadn't crossed the Atlantic before New Orleans. Horseshoe Bend (fourth largest) was fought against the Red Stick Creeks, not the British: the legend's British label is the layer's simplification, and the pop-up's account names Menawa and the Red Sticks."
         }
       },
       {
@@ -243,7 +257,7 @@
         "frontOfClass": [
           "Open The 1819 boundary bookmark.",
           "In Map layers, turn on Land Spain gave up in 1819 and Adams–Onís Treaty line, 1819.",
-          "Click the green land and read the Notes in the pop-up.",
+          "Drag the map east until all of Florida shows, click the green land and read the Notes in the pop-up.",
           "Ask: what did the United States gain from Spain?",
           "Click part 1 of the pink dashed line and read its description, then click the next parts going west.",
           "Ask: where does the border follow rivers, where straight lines, and why might it switch?"
@@ -258,8 +272,8 @@
             "es": "En las capas del mapa (Map layers), activa Land Spain gave up in 1819 (tierra que España cedió en 1819) y Adams–Onís Treaty line, 1819 (línea del tratado Adams-Onís, 1819)."
           },
           {
-            "en": "Click the green land and read its pop-up.",
-            "es": "Haz clic en la tierra verde y lee su ventana emergente."
+            "en": "Click the green land and read its pop-up. Drag the map east to see all of Florida.",
+            "es": "Haz clic en la tierra verde y lee su ventana emergente. Arrastra el mapa hacia el este para ver toda Florida."
           },
           {
             "en": "Click each part of the pink dashed line and read its pop-up.",
@@ -272,8 +286,8 @@
         },
         "lines": 3,
         "answer": {
-          "where": "The 1819 boundary bookmark. Land Spain gave up in 1819 layer: green areas East Florida (Spanish Cession) 1819, West Florida (Spanish Cession) 1819 and Spanish Cession 1819; the Notes in each pop-up say the land came through the Adams-Onís Treaty and the United States assumed $5 million in claims instead of paying. Adams–Onís Treaty line, 1819 layer, pop-ups part 1 to part 7: the Sabine River north to 32° N; north to the Red River; the Red River west to 100° W; north along 100° W to the Arkansas River; the Arkansas upstream to its source; north to 42° N; west along 42° N to the Pacific.",
-          "accept": "Florida (East and West) gained from Spain, with the $5 million in claims if read. Rivers: the Sabine, the Red and the Arkansas. Straight lines: north to the Red River, 100° W, north to 42° N, and 42° N to the Pacific. For why, accept any reasoned answer, for example that a river is a landmark both sides can find, and where no river ran the right way the treaty used lines of latitude and longitude.",
+          "where": "The 1819 boundary bookmark. Land Spain gave up in 1819 layer: green areas East Florida (Spanish Cession) 1819, West Florida (Spanish Cession) 1819 and Spanish Cession 1819; the Notes in each pop-up say the land came through the Adams-Onís Treaty and instead of paying Spain, the United States took on $5 million, which the pop-up describes as damage caused by American citizens when they rebelled against Spain; the treaty's own terms are claims by American citizens against Spain. Adams–Onís Treaty line, 1819 layer, pop-ups part 1 to part 7: the Sabine River north to 32° N; north to the Red River; the Red River west to 100° W; north along 100° W to the Arkansas River; the Arkansas upstream to its source; north to 42° N; west along 42° N to the Pacific.",
+          "accept": "Florida (East and West) gained from Spain, with the $5 million if read. Rivers: the Sabine, the Red and the Arkansas. Straight lines: north to the Red River, 100° W, north to 42° N, and 42° N to the Pacific. For why, accept any reasoned answer, for example that a river is a landmark both sides can find, and where no river ran the right way the treaty used lines of latitude and longitude.",
           "text": "The United States already held much of West Florida. The treaty was signed in 1819 and ratified in 1821. The line is drawn from the treaty's description and is approximate, as each pop-up's note says."
         }
       },
@@ -365,7 +379,7 @@
             ]
           },
           "accept": "The four nations recognized before the message, read from the pop-up dates (not all six blue circles); a reason for the warning that uses the map, such as new independent nations across the Americas that European powers might try to take back, or the United States wanting to be the main power in the region.",
-          "text": "Monroe warned European powers not to set up new colonies in the Americas or interfere with the newly independent nations, and said the United States would stay out of Europe's wars. Haiti, independent since 1804, was not recognized until 1862 (orange diamond)."
+          "text": "The pop-up shows each recognition date as a date and time in the computer's time zone, so in the United States it reads the evening before (Mexico shows 12/11/1822, not December 12). The dates given here are the correct ones, and which nations fall before December 2, 1823 does not change. Monroe warned European powers not to set up new colonies in the Americas or interfere with the newly independent nations, and said the United States would stay out of Europe's wars. Haiti, independent since 1804, was not recognized until 1862 (orange diamond)."
         }
       }
     ],
@@ -393,8 +407,8 @@
     "Most Latin American nations had declared independence before Monroe's 1823 message, and the United States recognized several of them. Comparing the dates on the map, was the Monroe Doctrine leading events or following them?"
   ],
   "differentiation": {
-    "support": "Do question 2 from the front, reading the three pop-up fields aloud, and keep the legend open on the board with the Treaty of Ghent date.",
-    "stretch": "Click the diamonds at Tippecanoe, Fort Mims and Horseshoe Bend, read who the leaders were, and explain why the legend's British label does not fit."
+    "support": "Do question 2 from the front, reading the dates, the victor line and Total Casualties aloud, and keep the legend open on the board with the Treaty of Ghent date.",
+    "stretch": "Click the diamonds at Tippecanoe, Fort Mims and Horseshoe Bend, read in each account who fought, and explain why the legend's British label does not fit."
   },
   "resources": [
     {
@@ -414,7 +428,7 @@
     }
   ],
   "assessment": {
-    "evidence": "Strong answers use the Battles of the War of 1812 pop-ups (Battle Victor, Total Casualties: Fort Erie 2,628; New Orleans, January 8, 1815, after the Treaty of Ghent of December 24, 1814), the Land Spain gave up in 1819 and Adams–Onís Treaty line pop-ups (East and West Florida; Sabine River, 100° W, 42° N) and the Latin American independence pop-ups (Mexico recognized December 12, 1822).",
+    "evidence": "Strong answers use the Battles of the War of 1812 pop-ups (the victor line and Total Casualties: Fort Erie 2,628; New Orleans, January 8, 1815, after the Treaty of Ghent of December 24, 1814), the Land Spain gave up in 1819 and Adams–Onís Treaty line pop-ups (East and West Florida; Sabine River, 100° W, 42° N) and the Latin American independence pop-ups (Mexico recognized December 12, 1822).",
     "exemplar": "The war itself changed little, but in the years after it the United States grew and began to speak for the Americas. The battles were in three areas: along the Great Lakes and the Canadian border, around Chesapeake Bay, and in the South near the Gulf Coast. One of the biggest battles, New Orleans, was fought on January 8, 1815, after the peace treaty was signed on December 24, 1814. In 1819 Spain gave up East and West Florida, and a new border followed the Sabine, Red and Arkansas rivers and then the line of 42° N to the Pacific. Before President Monroe's message of December 2, 1823, the United States had recognized four new nations, including Mexico on December 12, 1822. So the country went from fighting on its own borders to warning Europe to stay out of the Americas."
   },
   "studentSupport": {
@@ -423,8 +437,8 @@
       "es": "A comienzos del siglo XIX, Gran Bretaña y Francia estaban en guerra, y ambas se apoderaban de barcos estadounidenses. Además, los buques de guerra británicos obligaban a marineros de barcos estadounidenses a servir en la Marina Real, y Gran Bretaña apoyaba a los pueblos indígenas que se resistían a los asentamientos estadounidenses. En junio de 1812, Estados Unidos le declaró la guerra a Gran Bretaña."
     },
     "readingTheMap": {
-      "en": "The map has no place names: click a feature to see its name. Pink shading shows the United States in 1800. Diamonds mark battles; use the legend: blue for an American victory, red for a British victory, gray if neither side won; bigger diamonds mean more casualties. The legend says British for every opponent, but some battles were fought against Native nations: the pop-up's leaders and story tell you who fought. Each battle pop-up gives the dates, the victor and the casualties. Tan shading shows battlefield land. Three layers are off when the map opens: the land Spain gave up in 1819 (green), the treaty line (pink dashes, in seven parts) and the Latin American nations, shown as blue circles if the United States recognized them by 1824 and orange diamonds if later; the pop-up gives the exact date.",
-      "es": "El mapa no tiene nombres de lugares: haz clic en un elemento para ver su nombre. El sombreado rosado muestra Estados Unidos en 1800. Los rombos marcan las batallas; usa la leyenda: azul si ganaron los estadounidenses, rojo si ganaron los británicos y gris si ningún bando ganó; los rombos más grandes indican más bajas. La leyenda dice británicos para todos los adversarios, pero algunas batallas se libraron contra naciones indígenas: los líderes y el relato de la ventana emergente dicen quién combatió. La ventana emergente de cada batalla da las fechas, el vencedor y las bajas. El sombreado color canela muestra el terreno de los campos de batalla. Tres capas están desactivadas al abrir el mapa: la tierra que España cedió en 1819 (verde), la línea del tratado (rayas rosadas, en siete tramos) y las naciones latinoamericanas, que aparecen como círculos azules si Estados Unidos las reconoció en 1824 o antes y como rombos naranjas si fue más tarde; la ventana emergente da la fecha exacta."
+      "en": "The map has no place names: click a feature to see its name. Pink shading shows the United States in 1800. Diamonds mark battles; use the legend: blue for an American victory, red for a British victory, gray if neither side won; bigger diamonds mean more casualties. The legend says British for every opponent, but some battles were fought against Native nations: the pop-up's story tells you who fought. Each battle pop-up gives the dates, the victor and the casualties. Tan shading shows battlefield land when you zoom in close to a battle. Three layers are off when the map opens: the land Spain gave up in 1819 (green), the treaty line (pink dashes, in seven parts) and the Latin American nations, shown as blue circles if the United States recognized them by 1824 and orange diamonds if later; the pop-up gives the exact date.",
+      "es": "El mapa no tiene nombres de lugares: haz clic en un elemento para ver su nombre. El sombreado rosado muestra Estados Unidos en 1800. Los rombos marcan las batallas; usa la leyenda: azul si ganaron los estadounidenses, rojo si ganaron los británicos y gris si ningún bando ganó; los rombos más grandes indican más bajas. La leyenda dice británicos para todos los adversarios, pero algunas batallas se libraron contra naciones indígenas: el relato de la ventana emergente dice quién combatió. La ventana emergente de cada batalla da las fechas, el vencedor y las bajas. El sombreado color canela muestra el terreno de los campos de batalla cuando te acercas mucho a una batalla. Tres capas están desactivadas al abrir el mapa: la tierra que España cedió en 1819 (verde), la línea del tratado (rayas rosadas, en siete tramos) y las naciones latinoamericanas, que aparecen como círculos azules si Estados Unidos las reconoció en 1824 o antes y como rombos naranjas si fue más tarde; la ventana emergente da la fecha exacta."
     },
     "tips": [
       "popups"

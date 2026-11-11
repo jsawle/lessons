@@ -2,6 +2,7 @@
   "format": "Map spec 1.0",
   "id": "slavery-1850",
   "version": "0.1.0",
+  "lesson": "resources/lessons/us-slavery-and-slave-trade-1850.json",
   "item": {
     "title": "Slavery and the slave trade, 1850",
     "snippet": "Free and slave states and territories in late 1850, the Missouri Compromise line, the routes of the slave trade within the United States, and the approximate routes of the Underground Railroad.",

@@ -40,7 +40,7 @@ Known limits: the 1863 layer uses today's outlines and leaves out the territorie
 
 | Map | Spec | Build | Map test | Published |
 |---|---|---|---|---|
-| The Civil War, 1863 | `maps/specs/civil-war-1863.json` 0.1.0 | 3ebc89341043 | pass, 9 checks, Web Map Auditor 98.8 (11 Nov) | item `a93738b1850a48308dc797a1cc8352be`, private, 11 Nov, read-back matches |
+| The Civil War, 1863 | `maps/specs/civil-war-1863.json` 0.1.1 (Sand Creek and Bear River pop-ups say they were massacres, not battles; built and tested, the published item is still 0.1.0) | ae45b7d10add | pass, 11 checks, Web Map Auditor 98.8 (11 Nov) | item `a93738b1850a48308dc797a1cc8352be`, private, 11 Nov, read-back matches |
 | Slavery and the slave trade, 1850 | `maps/specs/slavery-1850.json` 0.1.0 | 877538a856f7 | pass, 9 checks, Web Map Auditor 97.6 (11 Nov) | item `cbee648b1f43455daae038b4bc64d6f4`, private, 11 Nov, read-back matches |
 
 Built as proposed below, with these differences: both maps open on the states layer only (plus the Missouri Compromise line), so students reveal the other layers; the battlefield core areas layer is left out; the routes have no arrowheads, because the digitized lines do not run in a consistent direction, so the pop-up gives the direction; the Civil War map keeps a reference label layer for cities and rivers, and the 1850 map names its states and territories from the data.
@@ -75,4 +75,5 @@ The current map uses an Albers basemap and river tiles owned by the MapMaker org
 1. **Copies or the MapMaker items.** Decided on 11 November 2026: the layers that need no correction (battlefield boundaries `8b2e2d492c124d1cacba0599d20639ae`, railroads `300106342f0f456381bac735c7962572`, Missouri Compromise Line `d68c728f32c4479b9bcd15a67db78b20`, Underground Railroad routes and cities `d8a604eef63e469189db303419718b5c`) are already public items in the MapMaker organization, so the replacement maps use them as they are, without copying.
 2. **Licence for the Esri digitizations.** Not needed while the maps use the MapMaker items. It comes back only if copies are made for other Atlas apps.
 3. **Territories on the 1863 map.** Left out for now, as on the 1828 map. The current lesson has a Territories group in its legend but no question uses it.
-4. **The lessons.** Civil War Battlefields and US Slavery 1850 are rewritten from the new maps once they are built, map first, as in the Age of Jackson slice.
+4. **The lessons.** Done on 11 November 2026: Civil War Battlefields (0.8.0) and US Slavery and the Slave Trade, 1850 (0.9.0) were rewritten from the new maps, seven questions each, English only. An independent fact-check (`maps/data/checks/replacement-lessons-factcheck-2026-11-11.md`) found 7 wrong and 15 misleading statements out of 102; all were corrected. Not yet done: a persona review, the Spanish text, and opening two Civil War resource links in a browser (they could not be fetched from here).
+5. **Indian Territory pop-up.** The data says nations were "moved here in the 1830s"; the fact-check suggests "forced to move here". It is in the data layer, so it waits for the next data version.

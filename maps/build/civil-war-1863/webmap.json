@@ -230,7 +230,7 @@
     "popupElements": [
      {
       "type": "text",
-      "text": "<p>A Civil War battlefield in {expression/state}.</p><p>The area mapped is about {expression/acres} acres.</p><p><i>The area is the land where the battle was fought, as mapped by the National Park Service. This layer does not say who won.</i></p>"
+      "text": "<p>{expression/what}</p><p>The area mapped is about {expression/acres} acres.</p><p><i>{expression/note}</i></p>"
      }
     ],
     "showAttachments": false,
@@ -243,16 +243,22 @@
       "expression": "return Proper(Lower($feature.NAME));"
      },
      {
-      "name": "state",
-      "title": "State",
-      "returnType": "string",
-      "expression": "return $feature.STATE;"
-     },
-     {
       "name": "acres",
       "title": "Acres",
       "returnType": "string",
       "expression": "return Text(Round($feature.Acres, -2), '#,###');"
+     },
+     {
+      "name": "what",
+      "title": "What happened here",
+      "returnType": "string",
+      "expression": "var n = Upper(Trim($feature.NAME));\nif (n == 'SAND CREEK') { return 'The site of the Sand Creek Massacre, in ' + $feature.STATE + '. In November 1864 United States volunteer troops attacked a Cheyenne and Arapaho village here.'; }\nif (n == 'BEAR RIVER') { return 'The site of the Bear River Massacre, in ' + $feature.STATE + '. In January 1863 United States volunteer troops attacked a Northwestern Shoshone village here.'; }\nreturn 'A Civil War battlefield in ' + $feature.STATE + '.';"
+     },
+     {
+      "name": "note",
+      "title": "Note",
+      "returnType": "string",
+      "expression": "var n = Upper(Trim($feature.NAME));\nif (n == 'SAND CREEK' || n == 'BEAR RIVER') { return 'The National Park Service maps this area with its Civil War battlefields. It was an attack on a village, not a battle.'; }\nreturn 'The area is the land where the battle was fought, as mapped by the National Park Service. This layer does not say who won.';"
      }
     ]
    }

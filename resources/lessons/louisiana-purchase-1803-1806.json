@@ -2,9 +2,9 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "louisiana-purchase-1803-1806",
-  "contentVersion": "0.8.0",
+  "contentVersion": "0.8.1",
   "status": "draft",
-  "updated": "2026-11-09",
+  "updated": "2026-11-11",
   "reviewed": null,
   "title": "The Louisiana Purchase and the Corps of Discovery, 1803–1806",
   "sheetTitle": {
@@ -70,7 +70,15 @@
       }
     ]
   },
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "date": "2026-11-11",
+      "status": "open",
+      "where": "Biomes layer, when left on",
+      "note": "Biomes draws over the Territorial acquisitions layer and hides the yellow Louisiana Purchase. Question 4 asks students to turn Biomes off before they look for where the trail leaves the purchase.",
+      "studentVisible": true
+    }
+  ],
   "inquiry": {
     "compellingQuestion": {
       "en": "What did the Louisiana Purchase add to the United States, and why did the Mississippi River matter so much?",
@@ -122,7 +130,7 @@
         },
         "answer": {
           "where": "The Louisiana Purchase bookmark; Territorial acquisitions to 1803 layer. Legend: green = Territory of the Original Thirteen States (Ceded by Great Britain) 1783, yellow = Louisiana Purchase 1803. Louisiana Purchase 1803 pop-up, Notes: 530,000,000 acres, bought from France in 1803 for $15 million. Fill-in: 530 million acres, $15 million.",
-          "accept": "About double, or roughly the same size as the country before it. The pop-up's Area in Square Kilometers field confirms it: about 2.1 million km² for the purchase and 2.3 million km² for the 1783 land.",
+          "accept": "About double, or roughly the same size as the country before it. The layer's data agrees (about 2.1 million km² for the purchase and 2.3 million km² for the 1783 land), but the pop-up does not show the area, so students judge it by eye.",
           "text": "Some edges were settled later and have their own legend entries and pop-ups: the strip ceded to Great Britain in 1818 (striped), and the parts that came with Texas in 1845 and the Mexican Cession in 1848."
         }
       },
@@ -224,7 +232,7 @@
         },
         "lines": 3,
         "answer": {
-          "where": "Up the Missouri bookmark; Biomes layer, pop-up first line (also in the legend): Temperate Grasslands, Savannas & Shrublands along the Missouri across the Great Plains. Further upriver in Montana the pop-up changes to Temperate Conifer Forests. The campsite symbols sit on the riverbanks.",
+          "where": "Up the Missouri bookmark; Biomes layer, pop-up first line (also in the legend): Temperate Grasslands, Savannas & Shrublands along the Missouri across the Great Plains. The biome stays grassland along the Missouri all the way through Montana; Temperate Conifer Forests begins only where the trail climbs into the Rockies, west of this bookmark's view. The campsite symbols sit on the riverbanks.",
           "accept": "Names the grassland biome; gives a reason for following rivers, such as travel by boat, drinking water, food, or a route through open country without roads or maps."
         }
       },
@@ -234,7 +242,7 @@
           "en": "Across the Rockies",
           "es": "A través de las Montañas Rocosas"
         },
-        "task": "Open the Across the Rockies to the Pacific bookmark. Note where the trail leaves the yellow purchase, then measure the straight-line distance from the trail's eastern end at Pittsburgh to its western end on the Pacific coast.",
+        "task": "Turn off Biomes, which hides the yellow purchase, and open the Across the Rockies to the Pacific bookmark. Note where the trail leaves the yellow purchase, then measure the straight-line distance from the trail's eastern end at Pittsburgh to its western end on the Pacific coast.",
         "tools": [
           "bookmarks",
           "zoom",
@@ -244,7 +252,7 @@
         "core": false,
         "minutes": 12,
         "frontOfClass": [
-          "Open the Across the Rockies to the Pacific bookmark.",
+          "In Map layers, turn off Biomes (it hides the yellow purchase), then open the Across the Rockies to the Pacific bookmark.",
           "Follow the trail line west and point to where it leaves the yellow Louisiana Purchase.",
           "Ask: was the Pacific coast part of the purchase?",
           "Zoom out until the whole trail is on screen.",
@@ -253,8 +261,8 @@
         ],
         "steps": [
           {
-            "en": "Open the Across the Rockies to the Pacific bookmark.",
-            "es": "Abre el marcador Across the Rockies to the Pacific (a través de las Rocosas hasta el Pacífico)."
+            "en": "In Map layers, turn off Biomes, then open the Across the Rockies to the Pacific bookmark.",
+            "es": "En las capas del mapa (Map layers), desactiva Biomes (Biomas) y luego abre el marcador Across the Rockies to the Pacific (a través de las Rocosas hasta el Pacífico)."
           },
           {
             "en": "Find where the trail line leaves the yellow Louisiana Purchase.",
@@ -278,7 +286,7 @@
           "es": "Distancia en línea recta: ________ millas. La ruta mide unas 4900 millas."
         },
         "answer": {
-          "where": "Across the Rockies to the Pacific bookmark; Territorial acquisitions to 1803 layer with the legend: the trail crosses out of the yellow purchase in the Rocky Mountains (the Continental Divide, on the Montana–Idaho border) and the Pacific Northwest is unshaded, so it was not part of the purchase. Measure tool, Pittsburgh to the trail's end at the mouth of the Columbia River: about 2,200 miles (accept 2,100 to 2,300).",
+          "where": "Across the Rockies to the Pacific bookmark, with Biomes turned off (it draws over the purchase and hides the yellow); Territorial acquisitions to 1803 layer with the legend: the trail crosses out of the yellow purchase in the Rocky Mountains (the Continental Divide, on the Montana–Idaho border) and the Pacific Northwest is unshaded, so it was not part of the purchase. Measure tool, Pittsburgh to the trail's end at the mouth of the Columbia River: about 2,200 miles (accept 2,100 to 2,300).",
           "accept": "Says the trail leaves the purchase at the Rockies and the Pacific coast was outside it; a measured distance in the accepted range; may note that the straight line is less than half the trail's 4,900 miles because the Corps followed winding rivers and mountain passes.",
           "text": "The basemap has no place names: Pittsburgh is where the trail line starts, at the fork where the Ohio River begins; the western end is where the line reaches the ocean."
         }
@@ -338,8 +346,8 @@
       "es": "En 1803, Estados Unidos compró a Francia su reclamación sobre una enorme región al oeste del río Misisipi. Los pueblos indígenas vivían en la mayor parte de esa tierra y la gobernaban; el Servicio de Parques Nacionales dice que la expedición se encontró con más de 50 naciones tribales. El presidente Thomas Jefferson envió al Cuerpo de Descubrimiento, dirigido por Meriwether Lewis y William Clark, a explorarla y a buscar una ruta por agua hasta el océano Pacífico. La expedición partió en 1803 y regresó en 1806."
     },
     "readingTheMap": {
-      "en": "The map has no place names: click an area to see its name. Use the legend: green is the land Britain gave up to the United States in 1783; yellow is the Louisiana Purchase of 1803. Edges of the purchase settled later have other colors or stripes. A purple line follows the Lewis and Clark National Historic Trail, and small symbols mark the Corps' approximate campsites; the line and the symbols have no pop-ups. United States Watersheds and Biomes are off when the map opens and show today's landscape. Watersheds shows larger regions when you zoom out and smaller ones when you zoom in.",
-      "es": "El mapa no tiene nombres de lugares: haz clic en una zona para ver su nombre. Usa la leyenda: el verde es la tierra que Gran Bretaña cedió a Estados Unidos en 1783; el amarillo, la compra de Luisiana de 1803. Los bordes definidos más tarde tienen otros colores o rayas. Una línea morada sigue la ruta de Lewis y Clark, y pequeños símbolos marcan los campamentos aproximados; la línea y los símbolos no tienen ventanas emergentes. Las capas United States Watersheds y Biomes están desactivadas al abrir el mapa y muestran el paisaje actual."
+      "en": "The map has no place names: click an area to see its name. Use the legend: green is the land Britain gave up to the United States in 1783; yellow is the Louisiana Purchase of 1803. Edges of the purchase settled later have other colors or stripes. A purple line follows the Lewis and Clark National Historic Trail, and symbols mark the Corps' approximate campsites, close enough together to cover parts of the line; the line and the symbols have no pop-ups. United States Watersheds and Biomes are off when the map opens and show today's landscape. Watersheds shows larger regions when you zoom out and smaller ones when you zoom in.",
+      "es": "El mapa no tiene nombres de lugares: haz clic en una zona para ver su nombre. Usa la leyenda: el verde es la tierra que Gran Bretaña cedió a Estados Unidos en 1783; el amarillo, la compra de Luisiana de 1803. Los bordes definidos más tarde tienen otros colores o rayas. Una línea morada sigue la ruta de Lewis y Clark, y unos símbolos marcan los campamentos aproximados, tan juntos que tapan partes de la línea; la línea y los símbolos no tienen ventanas emergentes. Las capas United States Watersheds y Biomes están desactivadas al abrir el mapa y muestran el paisaje actual."
     },
     "tips": [
       "popups"
