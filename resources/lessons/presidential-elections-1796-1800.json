@@ -2,9 +2,9 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "presidential-elections-1796-1800",
-  "contentVersion": "0.8.0",
+  "contentVersion": "0.8.1",
   "status": "draft",
-  "updated": "2026-11-09",
+  "updated": "2026-11-11",
   "reviewed": null,
   "title": "The First Political Parties, 1796–1800",
   "sheetTitle": {
@@ -54,7 +54,15 @@
       }
     ]
   },
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "date": "2026-11-11",
+      "status": "open",
+      "where": "Landmark Supreme Court cases, 1803 and 1819 layer, at The sixteen states bookmark",
+      "note": "The layer is on when the map opens, and its two squares, at Washington and Baltimore, sit on Maryland's pie, so a click there opens a court case first. Question 1 asks students to turn the layer off.",
+      "studentVisible": true
+    }
+  ],
   "inquiry": {
     "compellingQuestion": {
       "en": "How did the first political parties divide the country?",
@@ -67,7 +75,7 @@
           "en": "The election of 1796",
           "es": "La elección de 1796"
         },
-        "task": "Open The sixteen states bookmark. Use the pies and the legend to find which regions mostly voted for Adams and which for Jefferson, and click the two-color pies for the split states' numbers.",
+        "task": "Open The sixteen states bookmark and turn off Landmark Supreme Court cases, 1803 and 1819, whose squares cover Maryland's pie. Use the pies and the legend to find which regions mostly voted for Adams and which for Jefferson, and click the two-color pies for the split states' numbers.",
         "tools": [
           "bookmarks",
           "popups",
@@ -77,6 +85,7 @@
         "minutes": 15,
         "frontOfClass": [
           "Open The sixteen states bookmark.",
+          "In Map layers, turn off Landmark Supreme Court cases, 1803 and 1819, whose pink squares sit on Maryland's pie.",
           "Open the legend: orange for John Adams, blue for Thomas Jefferson.",
           "Point out that bigger pies mean more electors.",
           "Ask: which part of the country mostly voted for Adams, and which for Jefferson?",
@@ -87,6 +96,10 @@
           {
             "en": "Open The sixteen states bookmark.",
             "es": "Abre el marcador The sixteen states (Los dieciséis estados)."
+          },
+          {
+            "en": "In Map layers, turn off Landmark Supreme Court cases, 1803 and 1819: its pink squares cover Maryland's pie.",
+            "es": "En las capas del mapa (Map layers), desactiva Landmark Supreme Court cases, 1803 and 1819: sus cuadrados rosados tapan el gráfico de Maryland."
           },
           {
             "en": "Use the legend to read the 1796 pies.",
@@ -103,7 +116,7 @@
         },
         "lines": 3,
         "answer": {
-          "where": "The sixteen states bookmark; Election of 1796: electors' votes layer. Legend: orange = John Adams, blue = Thomas Jefferson; the pop-up names the state. All-orange pies: Connecticut, Delaware, Massachusetts, New Hampshire, New Jersey, New York, Rhode Island, Vermont. All-blue: Georgia, Kentucky, South Carolina, Tennessee. Two-color pies, from the pop-up's 1796 votes line: Maryland (Adams 7, Jefferson 4), Pennsylvania (Jefferson 14, Adams 1), Virginia (Jefferson 20, Adams 1), North Carolina (Jefferson 11, Adams 1).",
+          "where": "The sixteen states bookmark; Election of 1796: electors' votes layer. With Landmark Supreme Court cases, 1803 and 1819 left on, a click on Maryland's pie opens a court case first. Legend: orange = John Adams, blue = Thomas Jefferson; the pop-up names the state. All-orange pies: Connecticut, Delaware, Massachusetts, New Hampshire, New Jersey, New York, Rhode Island, Vermont. All-blue: Georgia, Kentucky, South Carolina, Tennessee. Two-color pies, from the pop-up's 1796 votes line: Maryland (Adams 7, Jefferson 4), Pennsylvania (Jefferson 14, Adams 1), Virginia (Jefferson 20, Adams 1), North Carolina (Jefferson 11, Adams 1).",
           "accept": "Adams: New England and the states around New York (New York, New Jersey, Delaware). Jefferson: the South and the West, plus most of Pennsylvania. The four split states named, with Maryland the only split state Adams won.",
           "text": "The totals are not on the map: Adams 71, Jefferson 68, so Jefferson, the runner-up, became vice president."
         }
@@ -149,7 +162,7 @@
         "lines": 3,
         "answer": {
           "where": "Election of 1800: electors' votes layer; two-color pies, pop-up 1800 votes line: Maryland (Jefferson 5, Adams 5), Pennsylvania (Jefferson 8, Adams 7), North Carolina (Jefferson 8, Adams 4). Closest: Maryland, an even split.",
-          "text": "Totals, not on the map: Jefferson 73, Burr 73, Adams 65. Each elector cast two votes, so the pop-ups also list Burr and Charles C. Pinckney."
+          "text": "Every 1800 pop-up says that Jefferson and Aaron Burr tied with 73 votes each; Adams's total, 65, is not on the map. Each elector cast two votes, so the pop-ups also list Burr and Charles C. Pinckney."
         }
       },
       {
@@ -219,7 +232,7 @@
         "frontOfClass": [
           "In Map layers, make sure Election of 1800 is on and Election of 1796 is off.",
           "Click New York and read its electors in the pop-up title: 12, all for Jefferson.",
-          "Give the class the totals, which are not on the map: Jefferson 73, Adams 65.",
+          "Give the class the totals: Jefferson 73 (in every 1800 pop-up, as his tie with Burr) and Adams 65 (not on the map).",
           "Ask: if New York's 12 electors had voted for Adams, as in 1796, what would the totals have been?",
           "Click Maryland, Pennsylvania and North Carolina. Ask: which other states were close enough to change the result?"
         ],
@@ -249,7 +262,7 @@
         "answer": {
           "where": "Election of 1800: electors' votes layer. New York pop-up title: 12 electors, all for Jefferson in 1800 (all for Adams in 1796). Moving those 12 gives Adams 65 + 12 = 77 and Jefferson 73 − 12 = 61. Split states, from the 1800 votes line: Maryland (Jefferson 5, Adams 5), Pennsylvania (Jefferson 8, Adams 7), North Carolina (Jefferson 8, Adams 4).",
           "accept": "Adams 77, Jefferson 61: New York's switch was enough to decide the election. Maryland (5 to 5) and Pennsylvania (8 to 7) were the closest states. A swing of five electors anywhere would also have reversed the result (65 + 5 = 70 against 73 − 5 = 68), so accept either state with that reasoning.",
-          "text": "The totals are not on the map, so the question gives them. Each elector cast two votes, which is why Jefferson and Burr tied at 73; the pop-ups explain it."
+          "text": "Jefferson's 73 is in every 1800 pop-up (the tie with Burr), but Adams's 65 is not on the map, so the question gives both totals. Each elector cast two votes, which is why Jefferson and Burr tied at 73; the pop-ups explain it."
         }
       }
     ],
@@ -307,8 +320,8 @@
       "es": "George Washington no pertenecía a ningún partido y, en 1796, cuando se preparaba para dejar la presidencia, advirtió a los estadounidenses contra los partidos. Para entonces ya se habían formado dos: los federalistas, encabezados por John Adams y Alexander Hamilton, y los demócrata-republicanos, encabezados por Thomas Jefferson y James Madison. Cada elector emitía dos votos para presidente, y quien quedaba en segundo lugar era vicepresidente."
     },
     "readingTheMap": {
-      "en": "The map has no place names: click a pie to see the state's name and its number of electors. Each pie shows how a state's electors voted: orange for John Adams (Federalist) and blue for Thomas Jefferson (Democratic-Republican); use the legend. Bigger pies mean more electors. Each elector cast two votes; the pop-up lists the other candidates. Election of 1800 is off when the map opens. Pink squares mark two Supreme Court cases; this lesson does not use them. Maine is shown within Massachusetts and West Virginia within Virginia, and territories aren't shown.",
-      "es": "El mapa no tiene nombres de lugares: haz clic en un gráfico circular para ver el nombre del estado y su número de electores. Cada gráfico muestra cómo votaron los electores de un estado: naranja para John Adams (federalista) y azul para Thomas Jefferson (demócrata-republicano); usa la leyenda. Los gráficos más grandes indican más electores. Cada elector emitía dos votos; la ventana emergente muestra a los demás candidatos. La capa Election of 1800 está desactivada al abrir el mapa. Los cuadrados rosados marcan dos casos de la Corte Suprema; esta lección no los usa. Maine aparece dentro de Massachusetts y Virginia Occidental dentro de Virginia, y no se muestran los territorios."
+      "en": "The map has no place names: click a pie to see the state's name and its number of electors. Each pie shows how a state's electors voted: orange for John Adams (Federalist) and blue for Thomas Jefferson (Democratic-Republican); use the legend. Bigger pies mean more electors. Each elector cast two votes; the pop-up lists the other candidates. Election of 1800 is off when the map opens. Pink squares mark two Supreme Court cases; this lesson does not use them, and they cover Maryland's pie, so turn that layer off in Map layers. Maine is shown within Massachusetts and West Virginia within Virginia, and territories aren't shown.",
+      "es": "El mapa no tiene nombres de lugares: haz clic en un gráfico circular para ver el nombre del estado y su número de electores. Cada gráfico muestra cómo votaron los electores de un estado: naranja para John Adams (federalista) y azul para Thomas Jefferson (demócrata-republicano); usa la leyenda. Los gráficos más grandes indican más electores. Cada elector emitía dos votos; la ventana emergente muestra a los demás candidatos. La capa Election of 1800 está desactivada al abrir el mapa. Los cuadrados rosados marcan dos casos de la Corte Suprema; esta lección no los usa y tapan el gráfico de Maryland, así que desactiva esa capa en las capas del mapa (Map layers). Maine aparece dentro de Massachusetts y Virginia Occidental dentro de Virginia, y no se muestran los territorios."
     },
     "tips": [
       "popups"

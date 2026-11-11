@@ -2,9 +2,9 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "rights-and-responsibilities-where-we-live",
-  "contentVersion": "0.7.0",
+  "contentVersion": "0.7.1",
   "status": "draft",
-  "updated": "2026-11-09",
+  "updated": "2026-11-11",
   "reviewed": null,
   "title": "Rights and Responsibilities Where We Live",
   "sheetTitle": {
@@ -46,21 +46,13 @@
       },
       {
         "name": "National Register of Historic Places",
-        "shows": "Places on the National Register as diamonds colored by type: building, structure, district, site or object. They appear when you zoom in. Each pop-up gives the address, city, county and state, and a link to the National Archives record, but not the place's name; read the name from the basemap label or the National Archives record.",
+        "shows": "Places on the National Register as diamonds colored by type: building, structure, district, site or object. They appear when you zoom in. Each pop-up starts with the place's name in bold, then its address, city, county and state, the resource type and a link to the National Archives record.",
         "source": "National Park Service (MapMaker catalogue)",
         "offAtStart": true
       }
     ]
   },
-  "knownIssues": [
-    {
-      "date": "2026-10-15",
-      "status": "open",
-      "where": "National Register of Historic Places pop-up",
-      "note": "The pop-up shows the address, city, county and state but not the place's name: the Resource Name field (RESNAME) is hidden, so students see an address without a name. Being raised with the MapMaker team. Until it is fixed, students can follow the pop-up's National Archive Information link for the name, or read the name off the Topographic basemap when the building is labeled.",
-      "studentVisible": true
-    }
-  ],
+  "knownIssues": [],
   "inquiry": {
     "compellingQuestion": {
       "en": "Where in our community do people use their rights and carry out their responsibilities?",
@@ -113,7 +105,7 @@
         "lines": 3,
         "answer": {
           "where": "Congressional districts (119th Congress) pop-up: \"[Representative Name] ([Party]) represents [State] Congressional District [number]\". The district count is the number of blue-outlined areas in the state when zoomed out, which equals the state's House seats after the 2020 census: for example California 52, Texas 38, Florida 28; six states (Alaska, Delaware, North Dakota, South Dakota, Vermont and Wyoming) have one, shown as the whole state.",
-          "accept": "Accept the name and party as the pop-up gives them for the 119th Congress (2025–2027); a seat that has changed hands since the layer was updated may differ. In California, Florida, Louisiana, North Carolina, Ohio, Tennessee, Texas and Utah the district on the November 2026 ballot may differ from the one shown (see the map's description)."
+          "accept": "Accept the name and party as the pop-up gives them for the 119th Congress (2025–2027); a seat that has changed hands since the layer was updated may differ. A vacant seat shows no name and \"Vacant\" as the party (Florida's 20th and Texas's 23rd when checked on November 11, 2026), and one California district showed an empty party. States with one seat show district 00; the District of Columbia and the territories show 98. In California, Florida, Louisiana, North Carolina, Ohio, Tennessee, Texas and Utah the district on the November 2026 ballot may differ from the one shown (see the map's description)."
         }
       },
       {
@@ -217,7 +209,7 @@
           "en": "History where we live",
           "es": "Historia donde vivimos"
         },
-        "task": "Turn on National Register of Historic Places, zoom in until the diamonds appear, and click the two nearest the school. The pop-up gives the address but not the name, so students match the diamond to the basemap label or follow the pop-up's National Archive Information link. Look for a public building and the right or responsibility it connects with.",
+        "task": "Turn on National Register of Historic Places, zoom in until the diamonds appear, and click the two nearest the school. The pop-up gives each place's name and address. Look for a public building and the right or responsibility it connects with.",
         "tools": [
           "layers",
           "legend",
@@ -230,8 +222,7 @@
           "In Map layers, turn on National Register of Historic Places.",
           "Zoom in near the school until the diamonds appear.",
           "Open the legend and show the diamond colors for building, district and site.",
-          "Click the diamond nearest the school and read the address in the pop-up.",
-          "Match it to the basemap label, or open the pop-up's National Archive Information link for the name.",
+          "Click the diamond nearest the school and read the place's name and address in the pop-up.",
           "Ask: is it a public building, and which right or responsibility does it connect with?"
         ],
         "steps": [
@@ -240,16 +231,12 @@
             "es": "En las capas del mapa (Map layers), activa National Register of Historic Places (Registro Nacional de Lugares Históricos)."
           },
           {
-            "en": "Zoom in until the diamonds appear and click the two nearest your school; the pop-up gives the address.",
-            "es": "Acércate hasta que aparezcan los rombos y haz clic en los dos más cercanos a tu escuela; la ventana emergente da la dirección."
+            "en": "Zoom in until the diamonds appear and click the two nearest your school; the pop-up gives each place's name and address.",
+            "es": "Acércate hasta que aparezcan los rombos y haz clic en los dos más cercanos a tu escuela; la ventana emergente da el nombre y la dirección de cada lugar."
           },
           {
-            "en": "Read the name from the basemap label under the diamond or the pop-up's National Archive Information link.",
-            "es": "Lee el nombre en la etiqueta del mapa base bajo el rombo o en el enlace National Archive Information de la ventana."
-          },
-          {
-            "en": "Use the legend to tell a building from a district or a site.",
-            "es": "Usa la leyenda para distinguir un edificio (building) de un distrito (district) o un sitio (site)."
+            "en": "Read Resource Type in the pop-up, or use the legend, to tell a building from a district or a site.",
+            "es": "Lee Resource Type (tipo de recurso) en la ventana emergente, o usa la leyenda, para distinguir un edificio (building) de un distrito (district) o un sitio (site)."
           }
         ],
         "ask": {
@@ -258,8 +245,8 @@
         },
         "lines": 3,
         "answer": {
-          "where": "National Register of Historic Places layer, on at close zoom. Pop-up: address, city, county, state, resource type and a National Archive Information link; the place name is not shown, so students read it from the basemap label or the National Archives record. Legend: diamond colors for building, structure, district, site and object. If nothing is listed nearby, zoom out to the nearest town.",
-          "accept": "Two places identified by address or name, with a sensible link for any public building: a courthouse with jury service and a fair trial; a post office or newspaper building with sharing news and ideas; a school or library with staying informed. Accept \"neither is a public building\" with a reason."
+          "where": "National Register of Historic Places layer, on at close zoom. Pop-up: the place's name in bold, then address, city, county, state, resource type and a National Archive Information link. Legend: diamond colors for building, structure, district, site and object. If nothing is listed nearby, zoom out to the nearest town.",
+          "accept": "Two places identified by name, with a sensible link for any public building: a courthouse with jury service and a fair trial; a post office or newspaper building with sharing news and ideas; a school or library with staying informed. Accept \"neither is a public building\" with a reason."
         }
       }
     ],
@@ -318,8 +305,8 @@
       "es": "En 1791 se añadieron a la Constitución diez enmiendas, conocidas como la Carta de Derechos. Protegen derechos como la libertad de expresión, de religión y de prensa, el derecho a reunirse pacíficamente y el derecho a un juicio justo. Los ciudadanos también tienen responsabilidades con su comunidad y su país."
     },
     "readingTheMap": {
-      "en": "The Topographic basemap has place names, and labels public buildings when you zoom in close. Blue lines are the boundaries of congressional districts for the 119th Congress (2025–2027); click inside one to see who represents it. National Register of Historic Places is off when the map opens: turn it on in Map layers and zoom in to see its diamonds, colored by type of place (see the legend). Its pop-ups give an address but not a name. Put your pins on public places, not homes. Sketches are not saved when you close the map.",
-      "es": "El mapa base Topographic (topográfico) tiene nombres de lugares y muestra los nombres de los edificios públicos cuando te acercas mucho. Las líneas azules son los límites de los distritos del Congreso número 119 (2025–2027); haz clic dentro de uno para ver quién lo representa. La capa National Register of Historic Places está desactivada al abrir el mapa: actívala en las capas del mapa (Map layers) y acércate para ver sus rombos, de colores según el tipo de lugar (mira la leyenda). Sus ventanas emergentes dan una dirección, pero no un nombre. Coloca tus marcadores en lugares públicos, no en viviendas. Los dibujos no se guardan al cerrar el mapa."
+      "en": "The Topographic basemap has place names, and labels public buildings when you zoom in close. Blue lines are the boundaries of congressional districts for the 119th Congress (2025–2027); click inside one to see who represents it. National Register of Historic Places is off when the map opens: turn it on in Map layers and zoom in to see its diamonds, colored by type of place (see the legend). Its pop-ups give each place's name and address. Put your pins on public places, not homes. Sketches are not saved when you close the map.",
+      "es": "El mapa base Topographic (topográfico) tiene nombres de lugares y muestra los nombres de los edificios públicos cuando te acercas mucho. Las líneas azules son los límites de los distritos del Congreso número 119 (2025–2027); haz clic dentro de uno para ver quién lo representa. La capa National Register of Historic Places está desactivada al abrir el mapa: actívala en las capas del mapa (Map layers) y acércate para ver sus rombos, de colores según el tipo de lugar (mira la leyenda). Sus ventanas emergentes dan el nombre y la dirección de cada lugar. Coloca tus marcadores en lugares públicos, no en viviendas. Los dibujos no se guardan al cerrar el mapa."
     },
     "tips": [
       "popups"
@@ -330,7 +317,7 @@
     }
   },
   "teacherNotes": {
-    "beforeClass": "Before class, zoom to your own town and check the basemap labels its public buildings at close zoom. National Register of Historic Places is off when the map opens; its pop-ups give an address but not a name. Students sketch on the map, so remind them sketches are not saved: finish in one session or take a screenshot. Congressional districts and representatives change: check the layer's date before class. Students pin public places only, never homes.",
+    "beforeClass": "Before class, zoom to your own town and check the basemap labels its public buildings at close zoom. National Register of Historic Places is off when the map opens; its pop-ups give each place's name and address. Students sketch on the map, so remind them sketches are not saved: finish in one session or take a screenshot. Congressional districts and representatives change: check the layer's date before class. Students pin public places only, never homes.",
     "misconceptions": [
       {
         "claim": "The Bill of Rights lists all of a citizen's rights.",

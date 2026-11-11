@@ -2,9 +2,9 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "the-battle-of-vicksburg",
-  "contentVersion": "0.8.0",
+  "contentVersion": "0.8.1",
   "status": "draft",
-  "updated": "2026-11-09",
+  "updated": "2026-11-11",
   "reviewed": null,
   "title": "The Battle of Vicksburg",
   "sheetTitle": {
@@ -24,7 +24,7 @@
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "1ba8cd3fc75a49a497be1137fce4c032",
-    "about": "This map is set on the Mississippi River around Vicksburg in spring 1863. Five dark pins, labeled on the map, mark places on Grant's route, and a yellow pin marks Vicksburg. A railroad layer shows the lines in the region when you zoom in (it includes lines built after the war). The Civil War Battlefields layer, off when the map opens, adds Civil War battles, including those around Vicksburg.",
+    "about": "This map is set on the Mississippi River around Vicksburg in spring 1863. Five dark pins, labeled on the map, mark places on Grant's route, and a yellow pin marks Vicksburg. A railroad layer shows the lines in the region (it includes lines built after the war, and disappears when you zoom out). The Civil War Battlefields layer, off when the map opens, adds Civil War battles, including those around Vicksburg.",
     "image": {
       "url": "https://jsawle.github.io/lessons/resources/assets/screenshots/the-battle-of-vicksburg.jpg",
       "alt": "The Mississippi River around Vicksburg, with five dark pins labeled with place names, a yellow pin at Vicksburg, and railroad lines.",
@@ -42,7 +42,7 @@
       },
       {
         "name": "Railroads 1826 to 1911",
-        "shows": "Railroads built from 1826 to 1911, so it includes lines built after the war. They only draw when zoomed in. No pop-up.",
+        "shows": "Railroads built from 1826 to 1911, so it includes lines built after the war. They draw at the bookmark's view and disappear when zoomed out. Clicking a line opens a list of data fields, including In Operation By (the year); no question uses it.",
         "source": "Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team"
       },
       {
@@ -60,13 +60,6 @@
       "status": "open",
       "date": "2026-10-12",
       "studentVisible": true
-    },
-    {
-      "where": "Civil War Battlefields",
-      "note": "Port Gibson appears twice in the layer (two identical features at the same spot), so its pop-up says 1 of 2.",
-      "status": "open",
-      "date": "2026-10-15",
-      "studentVisible": true
     }
   ],
   "inquiry": {
@@ -81,7 +74,7 @@
           "en": "Why Vicksburg?",
           "es": "¿Por qué Vicksburg?"
         },
-        "task": "Open The Battle of Vicksburg bookmark. Vicksburg is the yellow pin. Look at where it sits on the Mississippi River. Zoom in until the railroads draw and follow the line east from Vicksburg to Jackson, Mississippi, the state capital, which is a basemap label (not a pin). Why would both sides want the city?",
+        "task": "Open The Battle of Vicksburg bookmark. Vicksburg is the yellow pin. Look at where it sits on the Mississippi River. Find the railroad line and follow it east from Vicksburg to Jackson, Mississippi, the state capital, which is a basemap label (not a pin) just past the bookmark's east edge. Why would both sides want the city?",
         "tools": [
           "bookmarks",
           "zoom"
@@ -91,8 +84,8 @@
         "frontOfClass": [
           "Open The Battle of Vicksburg bookmark.",
           "Point to the yellow pin at Vicksburg on the bend of the Mississippi River.",
-          "Zoom in until the railroad line draws.",
-          "Follow the railroad east from Vicksburg to the Jackson label on the basemap.",
+          "Point to the railroad line (thin and dark, with cross marks) running east from Vicksburg.",
+          "Drag the map east and follow the railroad from Vicksburg to the Jackson label on the basemap.",
           "Ask: why would both sides want Vicksburg?"
         ],
         "steps": [
@@ -105,12 +98,12 @@
             "es": "Busca Vicksburg, el alfiler amarillo junto al río Misisipi."
           },
           {
-            "en": "Zoom in until the railroads appear and follow the line east from Vicksburg.",
-            "es": "Acércate hasta que aparezcan los ferrocarriles y sigue la línea hacia el este desde Vicksburg."
+            "en": "Find the railroad line (a thin dark line with cross marks) and follow it east from Vicksburg. If you zoom out and it disappears, zoom back in.",
+            "es": "Busca la línea del ferrocarril (una línea oscura fina con marcas transversales) y síguela hacia el este desde Vicksburg. Si te alejas y desaparece, vuelve a acercarte."
           },
           {
-            "en": "Find Jackson, Mississippi, on the basemap (the state capital, east of Vicksburg).",
-            "es": "Busca Jackson, Misisipi, en el mapa base (la capital del estado, al este de Vicksburg)."
+            "en": "Drag the map east to find Jackson, Mississippi, on the basemap (the state capital, east of Vicksburg).",
+            "es": "Arrastra el mapa hacia el este para encontrar Jackson, Misisipi, en el mapa base (la capital del estado, al este de Vicksburg)."
           }
         ],
         "ask": {
@@ -118,7 +111,7 @@
           "es": "¿Por qué querrían Vicksburg ambos lados?"
         },
         "answer": {
-          "where": "The Battle of Vicksburg bookmark; yellow pin at Vicksburg on a bend of the Mississippi; Railroads 1826 to 1911 layer, which draws when zoomed in to about 1:1,500,000 or closer; Jackson is a label on the Modern Antique basemap about 40 miles east.",
+          "where": "The Battle of Vicksburg bookmark; yellow pin at Vicksburg on a bend of the Mississippi; Railroads 1826 to 1911 layer, which already draws at the bookmark and disappears when zoomed out past about 1:1,500,000; Jackson is a label on the Modern Antique basemap about 40 miles east, just beyond the bookmark's east edge, so students drag the map to reach it.",
           "accept": "Says Vicksburg sits on the river, so whoever held it controlled traffic on the Mississippi, and that its railroad linked the river to Jackson and the rest of the Confederacy, so it was both a river stronghold and a rail junction. Mentioning the bluffs or guns is extra, not on the map."
         }
       },
@@ -128,7 +121,7 @@
           "en": "Grant's route",
           "es": "La ruta de Grant"
         },
-        "task": "Find the dark pins and put them in order along Grant's route: Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend, then Edwards. Which side of the river is each on? Measure the straight-line distance from Milliken's Bend to Bruinsburg Bend.",
+        "task": "Find the dark pins and put them in order along Grant's route: Milliken's Bend (spelled Miliken's Bend on the map, at the top edge of the bookmark's view), New Carthage, Hard Times, Bruinsburg Bend, then Edwards. Which side of the river is each on? Measure the straight-line distance from Milliken's Bend to Bruinsburg Bend.",
         "tools": [
           "zoom",
           "measure"
@@ -137,15 +130,15 @@
         "minutes": 15,
         "frontOfClass": [
           "Open The Battle of Vicksburg bookmark.",
-          "Point to the dark pins in order: Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend, then Edwards.",
+          "Point to the dark pins in order: Milliken's Bend (spelled Miliken's Bend on the map, at the top edge), New Carthage, Hard Times, Bruinsburg Bend, then Edwards.",
           "Ask: which side of the river is each pin on?",
           "Use Measure from Milliken's Bend to Bruinsburg Bend.",
           "Ask: how far south did Grant cross, and why not at Vicksburg itself?"
         ],
         "steps": [
           {
-            "en": "Find the dark pins for Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend and Edwards.",
-            "es": "Busca los alfileres oscuros de Milliken's Bend, New Carthage, Hard Times, Bruinsburg Bend y Edwards."
+            "en": "Find the dark pins for Milliken's Bend (spelled Miliken's Bend on the map, at the top edge of the view), New Carthage, Hard Times, Bruinsburg Bend and Edwards.",
+            "es": "Busca los alfileres oscuros de Milliken's Bend (en el mapa aparece escrito Miliken's Bend, en el borde superior de la vista), New Carthage, Hard Times, Bruinsburg Bend y Edwards."
           },
           {
             "en": "Check which side of the river each pin is on.",
@@ -185,7 +178,7 @@
         "minutes": 12,
         "frontOfClass": [
           "In Map layers, turn on Civil War Battlefields.",
-          "Click the diamond at Port Gibson, near Bruinsburg Bend, and read its date (use the arrows if it says 1 of 2).",
+          "Click the diamond at Port Gibson, near Bruinsburg Bend, and read its date.",
           "Click the diamonds east toward Jackson, reading each date: Raymond, Jackson, Champion Hill, Big Black River Bridge.",
           "Click the Vicksburg diamond and read its two dates.",
           "Ask: in what order were the battles fought, and which way did Grant's army move?"
@@ -210,7 +203,7 @@
         },
         "lines": 5,
         "answer": {
-          "where": "Civil War Battlefields pop-ups: the name is in bold and the dates below it. Port Gibson's pop-up says 1 of 2; both entries are the same battle. Grand Gulf (April 29, 1863), on the river just north of Bruinsburg, is the Union navy's failed attack before the crossing; accept it if students include it.",
+          "where": "Civil War Battlefields pop-ups: the name is in bold and the dates below it. Grand Gulf (April 29, 1863), on the river just north of Bruinsburg, is the Union navy's failed attack before the crossing; accept it if students include it.",
           "table": {
             "caption": "Battles of Grant's Vicksburg campaign, from the pop-ups",
             "columns": [
@@ -350,8 +343,8 @@
       "es": "En 1862, las fuerzas de la Unión tomaron Nueva Orleans y Memphis, dos ciudades a orillas del río Misisipi. Entre ambas, los confederados todavía controlaban parte del río, incluida la ciudad de Vicksburg, en Misisipi. En la primavera de 1863, el general de la Unión Ulysses S. Grant se propuso tomarla."
     },
     "readingTheMap": {
-      "en": "The yellow pin is Vicksburg. Dark pins mark places on Grant's route, each with its name. City and state names, such as Jackson and Louisiana, are part of the basemap. Railroads are thin dark lines with short cross marks, like a track; they appear when you zoom in, and they include lines built after the war. Civil War Battlefields is off when the map opens: turn it on in Map layers. Its diamonds mark battles, colored by who won: use the legend to read the result, because a battle's pop-up gives its name and dates but not the result.",
-      "es": "El alfiler amarillo es Vicksburg. Los alfileres oscuros marcan lugares de la ruta de Grant, cada uno con su nombre. Los nombres de ciudades y estados, como Jackson y Luisiana, forman parte del mapa base. Los ferrocarriles son líneas oscuras finas con pequeñas marcas transversales, como una vía; aparecen al acercarte e incluyen líneas construidas después de la guerra. La capa Civil War Battlefields está desactivada al abrir el mapa: actívala en las capas del mapa (Map layers). Sus rombos marcan las batallas, con un color según quién ganó: usa la leyenda para saber el resultado, porque la ventana emergente de una batalla da su nombre y sus fechas, pero no el resultado."
+      "en": "The yellow pin is Vicksburg. Dark pins mark places on Grant's route, each with its name. City and state names, such as Jackson and Louisiana, are part of the basemap. Railroads are thin dark lines with short cross marks, like a track; they disappear if you zoom out too far, and they include lines built after the war. Civil War Battlefields is off when the map opens: turn it on in Map layers. Its diamonds mark battles, colored by who won: use the legend to read the result, because a battle's pop-up gives its name and dates but not the result.",
+      "es": "El alfiler amarillo es Vicksburg. Los alfileres oscuros marcan lugares de la ruta de Grant, cada uno con su nombre. Los nombres de ciudades y estados, como Jackson y Luisiana, forman parte del mapa base. Los ferrocarriles son líneas oscuras finas con pequeñas marcas transversales, como una vía; desaparecen si te alejas demasiado e incluyen líneas construidas después de la guerra. La capa Civil War Battlefields está desactivada al abrir el mapa: actívala en las capas del mapa (Map layers). Sus rombos marcan las batallas, con un color según quién ganó: usa la leyenda para saber el resultado, porque la ventana emergente de una batalla da su nombre y sus fechas, pero no el resultado."
     },
     "tips": [
       "popups"

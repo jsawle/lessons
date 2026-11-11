@@ -2,10 +2,10 @@
  "rubricVersion": "0.7.1",
  "maps": [
   {
-   "itemId": "3ebc89341043fd2624f930f7a751a072",
+   "itemId": "ae45b7d10addf6e2a68406a85cf055a4",
    "title": "The Civil War, 1863",
    "owner": "build",
-   "auditedAt": "2026-11-11T17:07:01.366Z",
+   "auditedAt": "2026-11-11T17:46:42.587Z",
    "rubricVersion": "0.7.1",
    "standards": "General Cartographic Standards for MapMaker",
    "tally": {
@@ -85,7 +85,7 @@
      "status": "pass",
      "message": "",
      "evidence": [
-      "description: 1386 chars"
+      "description: 1602 chars"
      ]
     },
     {

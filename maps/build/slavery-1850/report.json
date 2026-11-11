@@ -3,17 +3,18 @@
  "spec": "maps/specs/slavery-1850.json",
  "specId": "slavery-1850",
  "specVersion": "0.1.0",
- "built": "2026-11-11T17:02:42Z",
+ "built": "2026-11-11T17:46:47Z",
  "webmapFingerprint": "877538a856f773e4f4d33400c9ab10b9064f983a",
  "itemFingerprint": "983552547104bc0a22957bc04572577c5d28ca44",
  "checked": [
+  "layers, start visibility and bookmarks match the lesson",
   "basemap is public and not CARTO",
   "every source layer is readable and every field the spec uses exists"
  ],
  "warnings": [],
  "tested": {
   "tool": "Map test 1.0",
-  "when": "2026-11-11T17:04:54Z",
+  "when": "2026-11-11T17:48:55Z",
   "timeZone": "America/Chicago",
   "webmapFingerprint": "877538a856f773e4f4d33400c9ab10b9064f983a",
   "pass": true,

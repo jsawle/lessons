@@ -2,20 +2,21 @@
  "tool": "Map builder 1.4",
  "spec": "maps/specs/civil-war-1863.json",
  "specId": "civil-war-1863",
- "specVersion": "0.1.0",
- "built": "2026-11-11T17:05:12Z",
- "webmapFingerprint": "3ebc89341043fd2624f930f7a751a0728dd938a4",
- "itemFingerprint": "e63b215cdd02d609bfb458766a212d1b0c482b08",
+ "specVersion": "0.1.1",
+ "built": "2026-11-11T17:44:36Z",
+ "webmapFingerprint": "ae45b7d10addf6e2a68406a85cf055a42a1228d0",
+ "itemFingerprint": "31a4e1ca738e1d4895487545ccbb870c0ec26f03",
  "checked": [
+  "layers, start visibility and bookmarks match the lesson",
   "basemap is public and not CARTO",
   "every source layer is readable and every field the spec uses exists"
  ],
  "warnings": [],
  "tested": {
   "tool": "Map test 1.0",
-  "when": "2026-11-11T17:07:01Z",
+  "when": "2026-11-11T17:46:42Z",
   "timeZone": "America/Chicago",
-  "webmapFingerprint": "3ebc89341043fd2624f930f7a751a0728dd938a4",
+  "webmapFingerprint": "ae45b7d10addf6e2a68406a85cf055a42a1228d0",
   "pass": true,
   "checks": [
    {
@@ -60,6 +61,16 @@
    },
    {
     "name": "tennessee",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "sand-creek",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "bear-river",
     "pass": true,
     "failures": []
    }
