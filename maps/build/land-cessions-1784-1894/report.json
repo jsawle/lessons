@@ -3,7 +3,7 @@
  "spec": "maps/specs/land-cessions-1784-1894.json",
  "specId": "land-cessions-1784-1894",
  "specVersion": "0.5.1",
- "built": "2026-11-11T15:05:13Z",
+ "built": "2026-11-11T17:19:36Z",
  "webmapFingerprint": "8c327d4efd4b036f1cabf1926e2662eeb15c0ef6",
  "itemFingerprint": "e3fec41bc7d3aca0a88ef65064b8330e95750754",
  "checked": [
@@ -14,7 +14,7 @@
  "warnings": [],
  "tested": {
   "tool": "Map test 1.0",
-  "when": "2026-11-11T15:06:33Z",
+  "when": "2026-11-11T17:20:56Z",
   "timeZone": "America/Chicago",
   "webmapFingerprint": "8c327d4efd4b036f1cabf1926e2662eeb15c0ef6",
   "pass": true,

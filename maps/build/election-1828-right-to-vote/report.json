@@ -3,7 +3,7 @@
  "spec": "maps/specs/election-1828-right-to-vote.json",
  "specId": "election-1828-right-to-vote",
  "specVersion": "0.7.0",
- "built": "2026-11-11T14:54:34Z",
+ "built": "2026-11-11T17:20:59Z",
  "webmapFingerprint": "011a69b99bff2b6d90516239cd1cb1fa923c31d4",
  "itemFingerprint": "3aeecddb19ab157de8beb12f05695d86c15ce4b7",
  "checked": [
@@ -14,7 +14,7 @@
  "warnings": [],
  "tested": {
   "tool": "Map test 1.0",
-  "when": "2026-11-11T14:56:44Z",
+  "when": "2026-11-11T17:23:08Z",
   "timeZone": "America/Chicago",
   "webmapFingerprint": "011a69b99bff2b6d90516239cd1cb1fa923c31d4",
   "pass": true,

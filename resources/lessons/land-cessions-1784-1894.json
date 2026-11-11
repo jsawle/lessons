@@ -1,5 +1,5 @@
 {
-  "$schema": "../../resources/schema/lesson.schema.json",
+  "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "land-cessions-1784-1894",
   "contentVersion": "0.4.0",

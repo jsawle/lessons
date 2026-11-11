@@ -2,7 +2,7 @@
   "format": "Map spec 1.0",
   "id": "election-1828-right-to-vote",
   "version": "0.7.0",
-  "lesson": "maps/lessons/election-1828-right-to-vote.json",
+  "lesson": "resources/lessons/election-1828-right-to-vote.json",
   "item": {
     "title": "The election of 1828 and the right to vote",
     "snippet": "How each state's electors voted in 1828, how each state chose them, and who could vote there: property and tax rules for white men, and whether free Black men could vote.",
