@@ -36,7 +36,16 @@ Known limits: the 1863 layer uses today's outlines and leaves out the territorie
    python maps/tools/publish_data.py maps/data/slavery-1850/data.json --profile g4s-publisher --go
    python maps/tools/publish_data.py maps/data/slavery-1850/routes.data.json --profile g4s-publisher --go
    ```
-3. Share the three layers publicly (the map builder warns otherwise) and pass on their item ids. The map specs are written, built and tested from those.
+3. Done on 11 November 2026: the three layers are shared publicly, and both map specs are written, built and tested.
+
+| Map | Spec | Build | Map test |
+|---|---|---|---|
+| The Civil War, 1863 | `maps/specs/civil-war-1863.json` 0.1.0 | 3ebc89341043 | pass, 9 checks, Web Map Auditor 98.8 (11 Nov) |
+| Slavery and the slave trade, 1850 | `maps/specs/slavery-1850.json` 0.1.0 | 877538a856f7 | pass, 9 checks, Web Map Auditor 97.6 (11 Nov) |
+
+Built as proposed below, with these differences: both maps open on the states layer only (plus the Missouri Compromise line), so students reveal the other layers; the battlefield core areas layer is left out; the routes have no arrowheads, because the digitized lines do not run in a consistent direction, so the pop-up gives the direction; the Civil War map keeps a reference label layer for cities and rivers, and the 1850 map names its states and territories from the data.
+
+Found in testing: ArcGIS Online stored the secession dates as a date field when the GeoJSON was published. The pop-up reads the date in UTC so that US time zones do not show the day before. Data publish should check field types after publishing (to do).
 
 ## Proposed maps
 

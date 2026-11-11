@@ -1,0 +1,80 @@
+{
+ "tool": "Map test 1.0",
+ "timeZone": "America/Chicago",
+ "sdk": "ArcGIS Maps SDK for JavaScript 4.34",
+ "webmapFingerprint": "877538a856f773e4f4d33400c9ab10b9064f983a",
+ "results": [
+  {
+   "name": "notice-free-slave",
+   "question": "Notice: free and slave in 1850",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": "Missouri Compromise line\n\t36°30′ north, the line of 1820\nFree and slave states and territories, 1850\n\tFree state\n\n\tFree territory\n\n\tSlave state (and Washington, D.C.)\n\n\tTerritory open to slavery"
+  },
+  {
+   "name": "california",
+   "question": "A new free state",
+   "pass": true,
+   "failures": [],
+   "popup": "California in 1850\n\nFree state (a state from 1850)\n\nAdmitted as a free state on September 9, 1850, as part of the Compromise of 1850.",
+   "legend": null
+  },
+  {
+   "name": "new-jersey",
+   "question": "A free state where people were still held",
+   "pass": true,
+   "failures": [],
+   "popup": "New Jersey in 1850\n\nFree state\n\nAn 1846 law abolished slavery here but kept the last enslaved people bound to their owners as 'apprentices'. The 1850 census still counted 236 people as enslaved.",
+   "legend": null
+  },
+  {
+   "name": "utah",
+   "question": "A territory left to its settlers",
+   "pass": true,
+   "failures": [],
+   "popup": "Utah Territory in 1850\n\nTerritory open to slavery\n\nOrganized by the Compromise of 1850, which left slavery for the settlers to decide.\n\nIncludes a small area on its eastern edge that the source map draws separately: land north of the Missouri Compromise line that the 1850 act placed in Utah Territory.",
+   "legend": null
+  },
+  {
+   "name": "reveal-trade",
+   "question": "Reveal: the slave trade inside the United States",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": "Routes of the slave trade within the United States\n\tRoute of the slave trade, by land or sea\nMissouri Compromise line\n\t36°30′ north, the line of 1820\nFree and slave states and territories, 1850\n\tFree state\n\n\tFree territory\n\n\tSlave state (and Washington, D.C.)\n\n\tTerritory open to slavery"
+  },
+  {
+   "name": "overland",
+   "question": "Which way people were moved",
+   "pass": true,
+   "failures": [],
+   "popup": "Overland routes of the slave trade\n\nDirection people were moved: South and west\n\nEnslaved people were forced along these routes from the Upper South, such as Virginia and Maryland, to the cotton and sugar country of the Deep South.\n\nThe line is approximate, from a 1920 atlas map.",
+   "legend": null
+  },
+  {
+   "name": "reveal-ships",
+   "question": "Reveal: two ships",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "amistad",
+   "question": "La Amistad",
+   "pass": true,
+   "failures": [],
+   "popup": "Route of La Amistad, 1839\n\nDirection people were moved: From Cuba north to Long Island, New York\n\nIn 1839 Africans who had been enslaved illegally took over the ship La Amistad off Cuba. It reached Long Island, New York. In 1841 the Supreme Court ruled that they were free.\n\nThe line is approximate, from a 1920 atlas map.",
+   "legend": null
+  },
+  {
+   "name": "reveal-underground",
+   "question": "Reveal: the Underground Railroad",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": "Underground Railroad cities\n\tCity on an Underground Railroad route\nUnderground Railroad approximate routes\n\tApproximate route of escape\nShips La Amistad (1839) and Creole (1841)\n\tRoute of a ship taken over by the people held on it\nRoutes of the slave trade within the United States\n\tRoute of the slave trade, by land or sea\nMissouri Compromise line\n\t36°30′ north, the line of 1820\nFree and slave states and territories, 1850\n\tFree state\n\n\tFree territory\n\n\tSlave state (and Washington, D.C.)\n\n\tTerritory open to slavery"
+  }
+ ]
+}
