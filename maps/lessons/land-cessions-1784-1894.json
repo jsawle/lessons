@@ -23,6 +23,7 @@
   "studentLogin": "Not needed to explore the map",
   "map": {
     "webmapId": "fd8f742aec1c4a8a9648cd20dafffe11",
+    "image": {"url": "https://jsawle.github.io/lessons/resources/assets/screenshots/land-cessions-1784-1894-opening.jpg", "alt": "The map as it opens: North America, with the land cessions dated before 1830 shaded blue across the eastern half of the United States and one layer in the legend.", "width": 1200, "height": 800},
     "about": "This map shows the land the United States gained from American Indian nations by treaty, act of Congress or executive order between 1784 and 1894, from the records Charles Royce compiled for the federal government (published 1899). There is one layer for each period: before 1830, the 1830s and 1840 to 1894. Only the cessions dated before 1830 are on when the map opens; students turn on the later periods themselves. State names, cities and rivers are labeled above the colored areas. Each area's pop-up gives the nation named in the record, the date or dates, today's states and the nations that exist today, and most link to the treaty, statute or executive order.",
     "bookmarks": [
       "The United States",
