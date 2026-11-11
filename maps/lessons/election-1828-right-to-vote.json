@@ -2,9 +2,9 @@
   "$schema": "../../resources/schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "election-1828-right-to-vote",
-  "contentVersion": "0.3.0",
+  "contentVersion": "0.3.1",
   "status": "draft",
-  "updated": "2026-11-09",
+  "updated": "2026-11-11",
   "reviewed": null,
   "title": "The Election of 1828 and the Right to Vote",
   "summary": "See how each state's electors voted in 1828, then turn on who could vote there: the property and tax rules for white men, and whether free Black men could vote. Students test the idea that Jackson's election was a victory for the common man against the rules state by state.",
@@ -36,13 +36,13 @@
       },
       {
         "name": "Free Black men and the vote, 1828",
-        "shows": "Each state shaded gray by whether free Black men could vote: light gray, could vote on the same terms as white men; middle gray, only with extra rules or kept out in practice; dark gray, could not vote. Off when the map opens.",
+        "shows": "Each state shaded rose by whether free Black men could vote: light rose, could vote on the same terms as white men; middle rose, only with extra rules or kept out in practice; dark rose, could not vote. Off when the map opens.",
         "source": "State constitutions and laws, as cited in each pop-up",
         "offAtStart": true
       },
       {
         "name": "White men and the vote, 1828",
-        "shows": "Each state shaded gray by its rule for white men: light gray, no property or tax rule; middle gray, had to pay a tax or meet a similar rule (militia service, road work or a little land); dark gray, had to own property. Off when the map opens.",
+        "shows": "Each state shaded green by its rule for white men: light green, no property or tax rule; middle green, had to pay a tax or meet a similar rule (militia service, road work or a little land); dark green, had to own property. Off when the map opens.",
         "source": "State constitutions and laws, as cited in each pop-up",
         "offAtStart": true
       }
@@ -167,7 +167,7 @@
         "minutes": 8,
         "frontOfClass": [
           "In Map layers, turn on White men and the vote, 1828.",
-          "Scroll down the legend to the key: light gray is no property or tax rule, middle gray is pay a tax (or a similar rule), dark gray is own property.",
+          "Scroll down the legend to the key: light green is no property or tax rule, middle green is pay a tax (or a similar rule), dark green is own property.",
           "Ask: which two states are dark? Open the New England and New York bookmark to find Rhode Island.",
           "Ask: where are the light states, and did Jackson win only in states with no rule?"
         ],
@@ -176,7 +176,7 @@
             "en": "In Map layers, turn on White men and the vote, 1828."
           },
           {
-            "en": "Scroll down the legend to its key: light gray means no property or tax rule, middle gray means pay a tax (or a similar rule), dark gray means own property."
+            "en": "Scroll down the legend to its key: light green means no property or tax rule, middle green means pay a tax (or a similar rule), dark green means own property."
           },
           {
             "en": "Click a dark state and a light state and read White men in each pop-up. Rhode Island is small: use the New England and New York bookmark."
@@ -208,7 +208,7 @@
         "minutes": 15,
         "frontOfClass": [
           "In Map layers, turn off White men and the vote, 1828 and turn on Free Black men and the vote, 1828.",
-          "Scroll down the legend to the key: light gray is could vote, middle gray is only with extra rules or kept out in practice, dark gray is could not vote.",
+          "Scroll down the legend to the key: light rose is could vote, middle rose is only with extra rules or kept out in practice, dark rose is could not vote.",
           "Ask: in which states could free Black men vote on the same terms as white men?",
           "Open the New England and New York bookmark and click New York. Read White men and Free Black men.",
           "Ask: Indiana, Illinois, Alabama and Missouri had no property or tax rule for white men. What does this layer show for free Black men there?"
@@ -218,7 +218,7 @@
             "en": "In Map layers, turn off White men and the vote, 1828 and turn on Free Black men and the vote, 1828."
           },
           {
-            "en": "Scroll down the legend to its key and find the light gray states (could vote)."
+            "en": "Scroll down the legend to its key and find the light rose states (could vote)."
           },
           {
             "en": "Open the New England and New York bookmark, click New York and read White men and Free Black men."
@@ -229,7 +229,7 @@
         },
         "lines": 4,
         "answer": {
-          "where": "Free Black men and the vote, 1828 layer and pop-ups. Light gray (could vote on the same terms): Maine, New Hampshire, Vermont, Massachusetts, North Carolina (until 1835) and Tennessee (until 1834). Middle gray: New York (the 1821 constitution set a new rule for Black men only: own property worth $250, pay tax on it and have been a citizen for three years) and Pennsylvania (the law didn't mention race, but in many places officials kept Black men from voting). Dark gray (could not vote): the other 16 states.",
+          "where": "Free Black men and the vote, 1828 layer and pop-ups. Light rose (could vote on the same terms): Maine, New Hampshire, Vermont, Massachusetts, North Carolina (until 1835) and Tennessee (until 1834). Middle rose: New York (the 1821 constitution set a new rule for Black men only: own property worth $250, pay tax on it and have been a citizen for three years) and Pennsylvania (the law didn't mention race, but in many places officials kept Black men from voting). Dark rose (could not vote): the other 16 states.",
           "accept": "(a) Maine, New Hampshire, Vermont, Massachusetts, North Carolina and Tennessee. (b) White men in New York had no property or tax rule after 1826, but Black men had to own $250 of property. (c) All four shut out free Black men: in these states voting was opened to more white men while Black men were kept out. Tennessee, also west of the Appalachians, is the exception: free Black men could vote there until 1834.",
           "text": "In 1825 only 298 Black men in the whole state of New York met the $250 rule (Peter J. Galie, Albany Law Review, citing Phyllis Field; Galie gives nearly 6,000 free adult Black New Yorkers). Before 1821 New York's property rules were the same for all voters. Free Black men lost the vote in North Carolina in 1835 and in Tennessee under its 1834 constitution."
         }
@@ -355,14 +355,14 @@
   ],
   "assessment": {
     "evidence": "Strong answers use the pies (Adams in New England, Jackson in the South and West, three split states), the white men layer (Virginia and Rhode Island property, the tax states, the light states), the free Black men layer (six states, New York's $250 rule) and the pop-ups' note on women.",
-    "exemplar": "Who could vote in 1828 depended a lot on where you lived. In the votes layer, Adams won New England and Jackson won the South and the West, but the voting rules don't follow that split. When I turned on the white men layer, Virginia and Rhode Island were dark gray, so a white man there had to own property, while in Indiana, Illinois and Alabama there was no property or tax rule. Jackson won Virginia anyway. The free Black men layer showed that free Black men could vote on the same terms as white men in only six states, and Indiana, Illinois, Alabama and Missouri shut them out. New York's pop-up says white men had no property rule after 1826, but Black men had to own $250 of property. Every pop-up also says women could not vote in any state. So 1828 was a victory for more white men, but not for everyone the common man might include."
+    "exemplar": "Who could vote in 1828 depended a lot on where you lived. In the votes layer, Adams won New England and Jackson won the South and the West, but the voting rules don't follow that split. When I turned on the white men layer, Virginia and Rhode Island were dark green, so a white man there had to own property, while in Indiana, Illinois and Alabama there was no property or tax rule. Jackson won Virginia anyway. The free Black men layer showed that free Black men could vote on the same terms as white men in only six states, and Indiana, Illinois, Alabama and Missouri shut them out. New York's pop-up says white men had no property rule after 1826, but Black men had to own $250 of property. Every pop-up also says women could not vote in any state. So 1828 was a victory for more white men, but not for everyone the common man might include."
   },
   "studentSupport": {
     "beforeYouStart": {
       "en": "In 1828, Americans did not vote for the president directly. Each state chose electors, and the electors voted for president. Andrew Jackson ran against President John Quincy Adams. Each state made its own rules about who could vote. Some states made men own land or pay a tax to vote. Suffrage means the right to vote. A legislature is a state's lawmakers. The militia was a state's citizen soldiers."
     },
     "readingTheMap": {
-      "en": "Blue pies: electors for Andrew Jackson. Orange pies: John Quincy Adams. Bigger pies mean more electors. Only the pies are on at the start; turn on the other layers in Map layers when a question asks. In both rule layers, light gray means fewer limits and dark gray means more. The key for the gray layers is lower down in the legend: scroll to see it. Click a state to read its votes, its rules and the sources; scroll to see all of the pop-up."
+      "en": "Blue pies: electors for Andrew Jackson. Orange pies: John Quincy Adams. Bigger pies mean more electors. Only the pies are on at the start; turn on the other layers in Map layers when a question asks. The white men layer is green and the free Black men layer is rose. In both, the lightest shade means fewer limits and the darkest means more. The key for these layers is lower down in the legend: scroll to see it. Click a state to read its votes, its rules and the sources; scroll to see all of the pop-up."
     },
     "tips": [
       "popups"
