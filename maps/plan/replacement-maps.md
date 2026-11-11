@@ -30,7 +30,7 @@ Known limits: the 1863 layer uses today's outlines and leaves out the territorie
 ## Your steps
 
 1. Done on 11 November 2026: the three tables had an independent fact-check (`maps/data/checks/replacement-maps-factcheck-2026-11-11.md`). No date, year, status, group or count was wrong. Ten wording corrections were applied in version 0.2.0, the small area the source left unnamed on Utah Territory's eastern edge was joined to Utah Territory, and two sentences that could not be verified were dropped.
-2. Publish the data from your computer, dry run first:
+2. Done on 11 November 2026: the three layers were created in GIS for Schools (folder Map data), private, and each read-back count matches: Civil War 1863 `e28b1b1b617c47bd9ca3c0baa628186c` (35), Slavery 1850 states `0fbb64de0f874d349b12da7ff37ded9e` (39), Slavery 1850 routes `2ed6e68901a141b8908a1350461b9fb4` (4). The commands were:
    ```
    python maps/tools/publish_data.py maps/data/civil-war-1863/data.json --profile g4s-publisher --go
    python maps/tools/publish_data.py maps/data/slavery-1850/data.json --profile g4s-publisher --go
