@@ -2,7 +2,7 @@
   "format": "Map spec 1.0",
   "id": "land-cessions-1784-1894",
   "version": "0.5.1",
-  "lesson": "maps/lessons/land-cessions-1784-1894.json",
+  "lesson": "resources/lessons/land-cessions-1784-1894.json",
   "notes": "Age of Jackson slice, map 1 (maps/plan/age-of-jackson.md). Map first: no lesson yet. Data is the v1.1 copy made by Data copy 1.1.1 from maps/data/land-cessions-royce.json.",
   "dataSpec": "maps/data/land-cessions-royce.json",
   "item": {

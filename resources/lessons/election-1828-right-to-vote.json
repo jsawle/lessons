@@ -1,5 +1,5 @@
 {
-  "$schema": "../../resources/schema/lesson.schema.json",
+  "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "election-1828-right-to-vote",
   "contentVersion": "0.3.2",
