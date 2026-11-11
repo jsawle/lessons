@@ -1,0 +1,512 @@
+{
+  "format": "Map spec 1.0",
+  "id": "slavery-1850",
+  "version": "0.1.0",
+  "item": {
+    "title": "Slavery and the slave trade, 1850",
+    "snippet": "Free and slave states and territories in late 1850, the Missouri Compromise line, the routes of the slave trade within the United States, and the approximate routes of the Underground Railroad.",
+    "description": "<p><b>Question:</b> Where was slavery legal in 1850, and how were enslaved people moved, or how did they escape?</p><p><b>What the map shows:</b> The states and territories of late 1850, after California became a state, are shaded in four groups: free states, slave states (and Washington, D.C.), free territories and territories open to slavery. A dashed line marks the Missouri Compromise line. Click an area for its group and a one-sentence reason. Four more layers are off when the map opens: the routes of the slave trade within the United States, the routes of the ships La Amistad (1839) and Creole (1841), and the approximate routes and cities of the Underground Railroad. Turn them on in the layer list.</p><p><b>Notes:</b> Outlines and routes come from a map of 1850 in Harper's Atlas of American History (1920), digitized by Esri, so they are approximate, and boundaries in the West are drawn as on that map. The atlas classes each area by the law that made it free or slave; this map uses four plain groups instead. A free state was not always free for everyone: the pop-up for New Jersey explains one case. The Underground Railroad was secret, so its routes are approximate. Route lines do not show direction; the pop-up gives it.</p><p><b>Sources:</b> Dixon Ryan Fox, Harper's Atlas of American History (1920), plate \"Slavery and Slave Trade, 1830-1850\", digitized by Esri; acts of Congress and state admission records, fact-checked 11 November 2026; Esri basemap.</p><p><i>Version 0.1 (11 November 2026), draft.</i></p>",
+    "tags": [
+      "US History",
+      "slavery",
+      "slave trade",
+      "1850",
+      "Compromise of 1850",
+      "Missouri Compromise",
+      "Underground Railroad",
+      "grade 8",
+      "MapMaker"
+    ],
+    "credits": "Harper's Atlas of American History (1920), Library of Congress, digitized by Esri; acts of Congress and state admission records; Esri.",
+    "license": "Outlines and routes digitized by Esri from a public-domain map (Harper's Atlas of American History, 1920). Text written for this map is original."
+  },
+  "basemap": {
+    "title": "Modern Antique",
+    "layers": [
+      {
+        "type": "tile",
+        "title": "World Hillshade",
+        "itemId": "1b243539f4514b6ba35e7d995890db1d",
+        "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer"
+      },
+      {
+        "type": "vectorTile",
+        "title": "Modern Antique (no Labels)",
+        "itemId": "545f2e839f624600bbb092c3ad998bb8",
+        "blendMode": "multiply",
+        "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json"
+      }
+    ],
+    "why": "The same basemap as the other GIS for Schools maps. No reference label layer: the states and territories of 1850 are named from the data, so modern state names don't sit on 1850 territories."
+  },
+  "view": {
+    "extent": [
+      -125.0,
+      23.0,
+      -66.0,
+      50.0
+    ]
+  },
+  "bookmarks": [
+    {
+      "name": "The United States in 1850",
+      "extent": [
+        -125.0,
+        23.0,
+        -66.0,
+        50.0
+      ]
+    },
+    {
+      "name": "The South",
+      "extent": [
+        -98.0,
+        24.0,
+        -74.0,
+        40.5
+      ]
+    },
+    {
+      "name": "The Ohio River and the North",
+      "extent": [
+        -93.0,
+        36.0,
+        -68.0,
+        47.5
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "title": "Underground Railroad cities",
+      "source": {
+        "itemId": "d8a604eef63e469189db303419718b5c",
+        "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Underground_Railroad_Approximate_Routes_Albers/FeatureServer/0"
+      },
+      "visible": false,
+      "symbol": {
+        "type": "marker",
+        "shape": "circle",
+        "color": "#1A1A1A",
+        "size": 7,
+        "outline": {
+          "color": "#FFFFFF",
+          "width": 1
+        },
+        "legendLabel": "City on an Underground Railroad route"
+      },
+      "labels": {
+        "expression": "$feature.Name",
+        "placement": "above",
+        "color": "#1A1A1A",
+        "font": {
+          "size": 9
+        },
+        "halo": {
+          "color": "#FFFFFFE6",
+          "size": 1.5
+        },
+        "minScale": 12000000
+      },
+      "popup": {
+        "title": "{Name}",
+        "html": "<p>A city on the approximate routes of the Underground Railroad ({State}, {Country}).</p>"
+      }
+    },
+    {
+      "title": "Underground Railroad approximate routes",
+      "source": {
+        "itemId": "d8a604eef63e469189db303419718b5c",
+        "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Underground_Railroad_Approximate_Routes_Albers/FeatureServer/1"
+      },
+      "visible": false,
+      "symbol": {
+        "type": "line",
+        "color": "#1B7837",
+        "width": 2,
+        "legendLabel": "Approximate route of escape"
+      },
+      "popup": {
+        "title": "Underground Railroad route",
+        "html": "<p>An approximate route that people escaping slavery followed north. The Underground Railroad was secret, so no exact routes were recorded.</p>"
+      }
+    },
+    {
+      "title": "Ships La Amistad (1839) and Creole (1841)",
+      "source": {
+        "itemId": "2ed6e68901a141b8908a1350461b9fb4",
+        "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/slavery_1850_routes_v0_2_0/FeatureServer/0"
+      },
+      "visible": false,
+      "filter": "Kind = 'A ship''s route'",
+      "symbol": {
+        "type": "line",
+        "color": "#762A83",
+        "width": 2.5,
+        "style": "dash",
+        "legendLabel": "Route of a ship taken over by the people held on it"
+      },
+      "popup": {
+        "title": "{Name}",
+        "html": "<p><b>Direction people were moved:</b> {Direction}</p><p>{About}</p><p><i>The line is approximate, from a 1920 atlas map.</i></p>"
+      }
+    },
+    {
+      "title": "Routes of the slave trade within the United States",
+      "source": {
+        "itemId": "2ed6e68901a141b8908a1350461b9fb4",
+        "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/slavery_1850_routes_v0_2_0/FeatureServer/0"
+      },
+      "visible": false,
+      "filter": "Kind = 'Slave trade within the United States'",
+      "symbol": {
+        "type": "line",
+        "color": "#1A1A1A",
+        "width": 2.5,
+        "legendLabel": "Route of the slave trade, by land or sea"
+      },
+      "popup": {
+        "title": "{Name}",
+        "html": "<p><b>Direction people were moved:</b> {Direction}</p><p>{About}</p><p><i>The line is approximate, from a 1920 atlas map.</i></p>"
+      }
+    },
+    {
+      "title": "Missouri Compromise line",
+      "source": {
+        "itemId": "d68c728f32c4479b9bcd15a67db78b20",
+        "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/MissouriCompromiseLine_Albers/FeatureServer/0"
+      },
+      "visible": true,
+      "symbol": {
+        "type": "line",
+        "color": "#4D4D4D",
+        "width": 2.5,
+        "style": "dash",
+        "legendLabel": "36°30′ north, the line of 1820"
+      },
+      "popup": {
+        "title": "{NAME}",
+        "html": "<p><i>{YEAR}</i></p><p>{DESCRIPTION}</p>"
+      }
+    },
+    {
+      "title": "Free and slave states and territories, 1850",
+      "source": {
+        "itemId": "0fbb64de0f874d349b12da7ff37ded9e",
+        "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/slavery_1850_states_v0_2_0/FeatureServer/0"
+      },
+      "visible": true,
+      "symbol": {
+        "type": "raw",
+        "renderer": {
+          "type": "uniqueValue",
+          "field1": "Status1850",
+          "uniqueValueInfos": [
+            {
+              "value": "Free state",
+              "label": "Free state",
+              "symbol": {
+                "type": "esriSFS",
+                "style": "esriSFSSolid",
+                "color": [
+                  33,
+                  102,
+                  172,
+                  215
+                ],
+                "outline": {
+                  "type": "esriSLS",
+                  "style": "esriSLSSolid",
+                  "color": [
+                    255,
+                    255,
+                    255,
+                    255
+                  ],
+                  "width": 1
+                }
+              }
+            },
+            {
+              "value": "Free territory",
+              "label": "Free territory",
+              "symbol": {
+                "type": "esriSFS",
+                "style": "esriSFSSolid",
+                "color": [
+                  146,
+                  197,
+                  222,
+                  215
+                ],
+                "outline": {
+                  "type": "esriSLS",
+                  "style": "esriSLSSolid",
+                  "color": [
+                    255,
+                    255,
+                    255,
+                    255
+                  ],
+                  "width": 1
+                }
+              }
+            },
+            {
+              "value": "Slave state (and Washington, D.C.)",
+              "label": "Slave state (and Washington, D.C.)",
+              "symbol": {
+                "type": "esriSFS",
+                "style": "esriSFSSolid",
+                "color": [
+                  204,
+                  102,
+                  0,
+                  215
+                ],
+                "outline": {
+                  "type": "esriSLS",
+                  "style": "esriSLSSolid",
+                  "color": [
+                    255,
+                    255,
+                    255,
+                    255
+                  ],
+                  "width": 1
+                }
+              }
+            },
+            {
+              "value": "Territory open to slavery",
+              "label": "Territory open to slavery",
+              "symbol": {
+                "type": "esriSFS",
+                "style": "esriSFSSolid",
+                "color": [
+                  253,
+                  184,
+                  99,
+                  215
+                ],
+                "outline": {
+                  "type": "esriSLS",
+                  "style": "esriSLSSolid",
+                  "color": [
+                    255,
+                    255,
+                    255,
+                    255
+                  ],
+                  "width": 1
+                }
+              }
+            }
+          ]
+        }
+      },
+      "labels": [
+        {
+          "expression": "$feature.Name",
+          "placement": "polygon",
+          "color": "#2B2B2B",
+          "font": {
+            "size": 9,
+            "weight": "bold"
+          },
+          "halo": {
+            "color": "#FFFFFFE6",
+            "size": 1.5
+          }
+        }
+      ],
+      "popup": {
+        "title": "{Name} in 1850",
+        "html": "<p><b>{Status1850}</b>{expression/admitted}</p><p>{Basis}</p><p>{expression/note}</p>",
+        "expressions": {
+          "admitted": {
+            "title": "Admitted",
+            "arcade": "return IIf(IsEmpty($feature.Admitted), '', ' (a state from ' + $feature.Admitted + ')');"
+          },
+          "note": {
+            "title": "Note",
+            "arcade": "return DefaultValue($feature.Note, '');"
+          }
+        }
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "notice-free-slave",
+      "question": "Notice: free and slave in 1850",
+      "do": {
+        "bookmark": "The United States in 1850",
+        "legend": true
+      },
+      "expect": {
+        "legendHas": [
+          "Free state",
+          "Slave state (and Washington, D.C.)",
+          "Free territory",
+          "Territory open to slavery",
+          "the line of 1820"
+        ],
+        "drawnAtScale": [
+          "Free and slave states and territories, 1850",
+          "Missouri Compromise line"
+        ],
+        "hiddenAtScale": [
+          "Routes of the slave trade within the United States",
+          "Ships La Amistad (1839) and Creole (1841)",
+          "Underground Railroad approximate routes",
+          "Underground Railroad cities"
+        ]
+      }
+    },
+    {
+      "name": "california",
+      "question": "A new free state",
+      "do": {
+        "open": {
+          "layer": "Free and slave states and territories, 1850",
+          "where": "Name='California'"
+        }
+      },
+      "expect": {
+        "popupHas": [
+          "California in 1850",
+          "Free state",
+          "a state from 1850"
+        ]
+      }
+    },
+    {
+      "name": "new-jersey",
+      "question": "A free state where people were still held",
+      "do": {
+        "open": {
+          "layer": "Free and slave states and territories, 1850",
+          "where": "Name='New Jersey'"
+        }
+      },
+      "expect": {
+        "popupHas": [
+          "Free state",
+          "236 people"
+        ]
+      }
+    },
+    {
+      "name": "utah",
+      "question": "A territory left to its settlers",
+      "do": {
+        "open": {
+          "layer": "Free and slave states and territories, 1850",
+          "where": "Name='Utah Territory'"
+        }
+      },
+      "expect": {
+        "popupHas": [
+          "Territory open to slavery",
+          "settlers to decide"
+        ]
+      }
+    },
+    {
+      "name": "reveal-trade",
+      "question": "Reveal: the slave trade inside the United States",
+      "do": {
+        "bookmark": "The South",
+        "on": [
+          "Routes of the slave trade within the United States"
+        ],
+        "legend": true
+      },
+      "expect": {
+        "legendHas": [
+          "Route of the slave trade, by land or sea"
+        ],
+        "drawnAtScale": [
+          "Routes of the slave trade within the United States"
+        ]
+      }
+    },
+    {
+      "name": "overland",
+      "question": "Which way people were moved",
+      "do": {
+        "open": {
+          "layer": "Routes of the slave trade within the United States",
+          "where": "Name='Overland routes of the slave trade'"
+        }
+      },
+      "expect": {
+        "popupHas": [
+          "South and west",
+          "Upper South"
+        ]
+      }
+    },
+    {
+      "name": "reveal-ships",
+      "question": "Reveal: two ships",
+      "do": {
+        "bookmark": "The United States in 1850",
+        "on": [
+          "Ships La Amistad (1839) and Creole (1841)"
+        ],
+        "legend": true
+      },
+      "expect": {
+        "drawnAtScale": [
+          "Ships La Amistad (1839) and Creole (1841)"
+        ]
+      }
+    },
+    {
+      "name": "amistad",
+      "question": "La Amistad",
+      "do": {
+        "open": {
+          "layer": "Ships La Amistad (1839) and Creole (1841)",
+          "where": "Name='Route of La Amistad, 1839'"
+        }
+      },
+      "expect": {
+        "popupHas": [
+          "La Amistad",
+          "Long Island",
+          "Supreme Court"
+        ]
+      }
+    },
+    {
+      "name": "reveal-underground",
+      "question": "Reveal: the Underground Railroad",
+      "do": {
+        "bookmark": "The Ohio River and the North",
+        "on": [
+          "Underground Railroad approximate routes",
+          "Underground Railroad cities"
+        ],
+        "legend": true
+      },
+      "expect": {
+        "legendHas": [
+          "Approximate route of escape"
+        ],
+        "drawnAtScale": [
+          "Underground Railroad approximate routes",
+          "Underground Railroad cities"
+        ]
+      }
+    }
+  ],
+  "publish": {
+    "org": "HNLEA4GfnbCFQZGa",
+    "orgLabel": "GIS for Schools",
+    "folder": "Map builds",
+    "thumbnail": "resources/assets/screenshots/slavery-1850.jpg"
+  }
+}

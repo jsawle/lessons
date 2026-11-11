@@ -1,0 +1,455 @@
+{
+  "format": "Map spec 1.0",
+  "id": "civil-war-1863",
+  "version": "0.1.0",
+  "item": {
+    "title": "The Civil War, 1863",
+    "snippet": "The 35 states of mid-1863 by side and by when they seceded, with Civil War battlefields and the railroads in operation by 1863.",
+    "description": "<p><b>Question:</b> Which states stayed in the Union and which seceded, and where was the Civil War fought?</p><p><b>What the map shows:</b> Each of the 35 states of mid-1863 is shaded by its side: Union free states, Union slave states (the border states), states that seceded before the attack on Fort Sumter in April 1861 and states that seceded after it. Click a state for its side and, if it seceded, the date. Two more layers are off when the map opens: the battlefields of the Civil War, and the railroads in operation by 1863. Turn them on in the layer list. Click a battlefield for its name, state and size.</p><p><b>Notes:</b> State outlines are today's. Territories, and Nevada (a state from 1864), are not shaded. The side shown is the one each state joined, not who held its land in 1863. Battlefields are the study areas mapped by the National Park Service's American Battlefield Protection Program; each area is the land where a battle was fought, not a single point, and the layer does not say who won. Railroads are drawn from the regional view inward.</p><p><b>Sources:</b> States: the ordinances of secession and acts of admission, fact-checked 11 November 2026; outlines from Natural Earth. Battlefields: National Park Service, American Battlefield Protection Program. Railroads: Jeremy Atack, Historical Geographic Information Systems database of U.S. Railroads. Esri basemap.</p><p><i>Version 0.1 (11 November 2026), draft.</i></p>",
+    "tags": [
+      "US History",
+      "Civil War",
+      "secession",
+      "border states",
+      "battlefields",
+      "railroads",
+      "grade 8",
+      "MapMaker"
+    ],
+    "credits": "Ordinances of secession and acts of admission (states); Natural Earth (outlines); National Park Service, American Battlefield Protection Program (battlefields); Jeremy Atack (railroads); Esri.",
+    "license": "Facts from public records; state outlines from Natural Earth (public domain); battlefield areas from the National Park Service; railroads from Jeremy Atack's database, used with its citation. Text written for this map is original."
+  },
+  "basemap": {
+    "title": "Modern Antique",
+    "layers": [
+      {
+        "type": "tile",
+        "title": "World Hillshade",
+        "itemId": "1b243539f4514b6ba35e7d995890db1d",
+        "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer"
+      },
+      {
+        "type": "vectorTile",
+        "title": "Modern Antique (no Labels)",
+        "itemId": "545f2e839f624600bbb092c3ad998bb8",
+        "blendMode": "multiply",
+        "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json"
+      },
+      {
+        "type": "vectorTile",
+        "title": "World Terrain Reference",
+        "itemId": "14fbc125ccc9488888b014db09f35f67",
+        "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/14fbc125ccc9488888b014db09f35f67/resources/styles/root.json",
+        "reference": true,
+        "why": "State names, cities and rivers above the cession layers, so the lesson can say where to click (Modern Antique here has no labels)."
+      }
+    ],
+    "why": "The same basemap as the other GIS for Schools maps. The reference layer on top names states, cities and rivers; the 35 states of 1863 have the names they have today."
+  },
+  "view": {
+    "extent": [
+      -125.0,
+      24.0,
+      -66.0,
+      50.0
+    ]
+  },
+  "bookmarks": [
+    {
+      "name": "The United States in 1863",
+      "extent": [
+        -125.0,
+        24.0,
+        -66.0,
+        50.0
+      ]
+    },
+    {
+      "name": "Virginia, Maryland and Pennsylvania",
+      "extent": [
+        -81.5,
+        36.3,
+        -74.5,
+        40.6
+      ]
+    },
+    {
+      "name": "The Mississippi Valley",
+      "extent": [
+        -95.0,
+        29.0,
+        -84.0,
+        39.5
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "title": "Civil War battlefields",
+      "source": {
+        "itemId": "8b2e2d492c124d1cacba0599d20639ae",
+        "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/WASO_ABPP-NPS_Battlefield Boundaries UPDATE/FeatureServer/0"
+      },
+      "visible": false,
+      "symbol": {
+        "type": "fill",
+        "color": "#1A1A1A",
+        "outline": {
+          "color": "#1A1A1A",
+          "width": 2.5
+        },
+        "legendLabel": "Land where a battle was fought",
+        "why": "A heavy dark outline, so each battlefield still shows as a dot at the national view, where the areas themselves are only a few pixels across."
+      },
+      "popup": {
+        "title": "{expression/name}",
+        "html": "<p>A Civil War battlefield in {expression/state}.</p><p>The area mapped is about {expression/acres} acres.</p><p><i>The area is the land where the battle was fought, as mapped by the National Park Service. This layer does not say who won.</i></p>",
+        "expressions": {
+          "name": {
+            "title": "Battle",
+            "arcade": "return Proper(Lower($feature.NAME));"
+          },
+          "state": {
+            "title": "State",
+            "arcade": "return $feature.STATE;"
+          },
+          "acres": {
+            "title": "Acres",
+            "arcade": "return Text(Round($feature.Acres, -2), '#,###');"
+          }
+        }
+      },
+      "visibleRange": {
+        "minScale": 0,
+        "maxScale": 0
+      }
+    },
+    {
+      "title": "Railroads in operation by 1863",
+      "source": {
+        "itemId": "300106342f0f456381bac735c7962572",
+        "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Railroads_1826_to_1911_static/FeatureServer/0"
+      },
+      "visible": false,
+      "filter": "InOpBy <= 1863",
+      "symbol": {
+        "type": "line",
+        "color": "#5E3C99",
+        "width": 1.25,
+        "legendLabel": "Railroad in operation by 1863"
+      },
+      "popup": {
+        "title": "{RRname}",
+        "html": "<p>In operation by {InOpBy}, in {STATENAM}.</p>"
+      },
+      "visibleRange": {
+        "minScale": 10000000,
+        "maxScale": 0
+      }
+    },
+    {
+      "title": "The states in the Civil War, 1863",
+      "source": {
+        "itemId": "e28b1b1b617c47bd9ca3c0baa628186c",
+        "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/civil_war_1863_v0_2_0/FeatureServer/0"
+      },
+      "visible": true,
+      "symbol": {
+        "type": "raw",
+        "renderer": {
+          "type": "uniqueValue",
+          "field1": "GroupName",
+          "uniqueValueInfos": [
+            {
+              "value": "Union free state",
+              "label": "Union free state",
+              "symbol": {
+                "type": "esriSFS",
+                "style": "esriSFSSolid",
+                "color": [
+                  33,
+                  102,
+                  172,
+                  215
+                ],
+                "outline": {
+                  "type": "esriSLS",
+                  "style": "esriSLSSolid",
+                  "color": [
+                    255,
+                    255,
+                    255,
+                    255
+                  ],
+                  "width": 1
+                }
+              }
+            },
+            {
+              "value": "Union slave state (border state)",
+              "label": "Union slave state (border state)",
+              "symbol": {
+                "type": "esriSFS",
+                "style": "esriSFSSolid",
+                "color": [
+                  146,
+                  197,
+                  222,
+                  215
+                ],
+                "outline": {
+                  "type": "esriSLS",
+                  "style": "esriSLSSolid",
+                  "color": [
+                    255,
+                    255,
+                    255,
+                    255
+                  ],
+                  "width": 1
+                }
+              }
+            },
+            {
+              "value": "Seceded before Fort Sumter (April 1861)",
+              "label": "Seceded before Fort Sumter (April 1861)",
+              "symbol": {
+                "type": "esriSFS",
+                "style": "esriSFSSolid",
+                "color": [
+                  204,
+                  102,
+                  0,
+                  215
+                ],
+                "outline": {
+                  "type": "esriSLS",
+                  "style": "esriSLSSolid",
+                  "color": [
+                    255,
+                    255,
+                    255,
+                    255
+                  ],
+                  "width": 1
+                }
+              }
+            },
+            {
+              "value": "Seceded after Fort Sumter (April 1861)",
+              "label": "Seceded after Fort Sumter (April 1861)",
+              "symbol": {
+                "type": "esriSFS",
+                "style": "esriSFSSolid",
+                "color": [
+                  253,
+                  184,
+                  99,
+                  215
+                ],
+                "outline": {
+                  "type": "esriSLS",
+                  "style": "esriSLSSolid",
+                  "color": [
+                    255,
+                    255,
+                    255,
+                    255
+                  ],
+                  "width": 1
+                }
+              }
+            }
+          ]
+        }
+      },
+      "popup": {
+        "title": "{State} in 1863",
+        "html": "<p><b>{GroupName}</b></p><p>Side: {Side}.{expression/seceded}</p><p>{expression/note}</p>",
+        "expressions": {
+          "seceded": {
+            "title": "Seceded",
+            "arcade": "// The layer stores the date as midnight UTC, so it is read in UTC; otherwise US time zones show the day before.\nreturn IIf(IsEmpty($feature.Seceded), '', ' Seceded: ' + Text(ToUTC($feature.Seceded), 'MMMM D, Y') + '.');"
+          },
+          "note": {
+            "title": "Note",
+            "arcade": "return DefaultValue($feature.Note, '');"
+          }
+        }
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "notice-sides",
+      "question": "Notice: which states were on each side",
+      "do": {
+        "bookmark": "The United States in 1863",
+        "legend": true
+      },
+      "expect": {
+        "legendHas": [
+          "Union free state",
+          "Union slave state (border state)",
+          "Seceded before Fort Sumter (April 1861)",
+          "Seceded after Fort Sumter (April 1861)"
+        ],
+        "drawnAtScale": [
+          "The states in the Civil War, 1863"
+        ],
+        "hiddenAtScale": [
+          "Civil War battlefields",
+          "Railroads in operation by 1863"
+        ]
+      }
+    },
+    {
+      "name": "south-carolina",
+      "question": "The first state to secede",
+      "do": {
+        "open": {
+          "layer": "The states in the Civil War, 1863",
+          "where": "Abbr='SC'"
+        }
+      },
+      "expect": {
+        "popupHas": [
+          "South Carolina in 1863",
+          "Seceded before Fort Sumter",
+          "Side: Confederacy.",
+          "December 20, 1860"
+        ]
+      }
+    },
+    {
+      "name": "maryland",
+      "question": "A border state",
+      "do": {
+        "open": {
+          "layer": "The states in the Civil War, 1863",
+          "where": "Abbr='MD'"
+        }
+      },
+      "expect": {
+        "popupHas": [
+          "Maryland in 1863",
+          "Union slave state (border state)",
+          "Side: Union."
+        ]
+      }
+    },
+    {
+      "name": "west-virginia",
+      "question": "A state made during the war",
+      "do": {
+        "open": {
+          "layer": "The states in the Civil War, 1863",
+          "where": "Abbr='WV'"
+        }
+      },
+      "expect": {
+        "popupHas": [
+          "June 20, 1863",
+          "Slavery was still legal here"
+        ]
+      }
+    },
+    {
+      "name": "reveal-battlefields",
+      "question": "Reveal: where the war was fought",
+      "do": {
+        "bookmark": "The United States in 1863",
+        "on": [
+          "Civil War battlefields"
+        ],
+        "legend": true
+      },
+      "expect": {
+        "legendHas": [
+          "Land where a battle was fought"
+        ],
+        "drawnAtScale": [
+          "Civil War battlefields"
+        ]
+      }
+    },
+    {
+      "name": "gettysburg",
+      "question": "One battlefield",
+      "do": {
+        "open": {
+          "layer": "Civil War battlefields",
+          "where": "NAME='GETTYSBURG'"
+        }
+      },
+      "expect": {
+        "popupHas": [
+          "Gettysburg",
+          "PA",
+          "acres"
+        ]
+      }
+    },
+    {
+      "name": "reveal-railroads",
+      "question": "Reveal: railroads in the East",
+      "do": {
+        "bookmark": "Virginia, Maryland and Pennsylvania",
+        "on": [
+          "Civil War battlefields",
+          "Railroads in operation by 1863"
+        ],
+        "legend": true
+      },
+      "expect": {
+        "legendHas": [
+          "Railroad in operation by 1863"
+        ],
+        "drawnAtScale": [
+          "Railroads in operation by 1863",
+          "Civil War battlefields"
+        ]
+      }
+    },
+    {
+      "name": "mississippi",
+      "question": "The Mississippi Valley",
+      "do": {
+        "bookmark": "The Mississippi Valley",
+        "on": [
+          "Civil War battlefields",
+          "Railroads in operation by 1863"
+        ]
+      },
+      "expect": {
+        "drawnAtScale": [
+          "Railroads in operation by 1863",
+          "Civil War battlefields"
+        ]
+      }
+    },
+    {
+      "name": "tennessee",
+      "question": "The last state to secede",
+      "do": {
+        "open": {
+          "layer": "The states in the Civil War, 1863",
+          "where": "Abbr='TN'"
+        }
+      },
+      "expect": {
+        "popupHas": [
+          "Seceded after Fort Sumter",
+          "June 8, 1861",
+          "Union forces held much of the state"
+        ]
+      }
+    }
+  ],
+  "publish": {
+    "org": "HNLEA4GfnbCFQZGa",
+    "orgLabel": "GIS for Schools",
+    "folder": "Map builds",
+    "thumbnail": "resources/assets/screenshots/civil-war-1863.jpg"
+  }
+}

@@ -1,0 +1,80 @@
+{
+ "tool": "Map test 1.0",
+ "timeZone": "America/Chicago",
+ "sdk": "ArcGIS Maps SDK for JavaScript 4.34",
+ "webmapFingerprint": "3ebc89341043fd2624f930f7a751a0728dd938a4",
+ "results": [
+  {
+   "name": "notice-sides",
+   "question": "Notice: which states were on each side",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": "The states in the Civil War, 1863\n\tUnion free state\n\n\tUnion slave state (border state)\n\n\tSeceded before Fort Sumter (April 1861)\n\n\tSeceded after Fort Sumter (April 1861)"
+  },
+  {
+   "name": "south-carolina",
+   "question": "The first state to secede",
+   "pass": true,
+   "failures": [],
+   "popup": "South Carolina in 1863\n\nSeceded before Fort Sumter (April 1861)\n\nSide: Confederacy. Seceded: December 20, 1860.",
+   "legend": null
+  },
+  {
+   "name": "maryland",
+   "question": "A border state",
+   "pass": true,
+   "failures": [],
+   "popup": "Maryland in 1863\n\nUnion slave state (border state)\n\nSide: Union.",
+   "legend": null
+  },
+  {
+   "name": "west-virginia",
+   "question": "A state made during the war",
+   "pass": true,
+   "failures": [],
+   "popup": "West Virginia in 1863\n\nUnion slave state (border state)\n\nSide: Union.\n\nBecame a state on June 20, 1863. In 1861 it was part of Virginia, which seceded. Slavery was still legal here; the new state's constitution freed enslaved people only gradually.",
+   "legend": null
+  },
+  {
+   "name": "reveal-battlefields",
+   "question": "Reveal: where the war was fought",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": "Civil War battlefields\n\tLand where a battle was fought\nThe states in the Civil War, 1863\n\tUnion free state\n\n\tUnion slave state (border state)\n\n\tSeceded before Fort Sumter (April 1861)\n\n\tSeceded after Fort Sumter (April 1861)"
+  },
+  {
+   "name": "gettysburg",
+   "question": "One battlefield",
+   "pass": true,
+   "failures": [],
+   "popup": "Gettysburg\n\nA Civil War battlefield in PA.\n\nThe area mapped is about 73,600 acres.\n\nThe area is the land where the battle was fought, as mapped by the National Park Service. This layer does not say who won.",
+   "legend": null
+  },
+  {
+   "name": "reveal-railroads",
+   "question": "Reveal: railroads in the East",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": "Civil War battlefields\n\tLand where a battle was fought\nRailroads in operation by 1863\n\tRailroad in operation by 1863\nThe states in the Civil War, 1863\n\tUnion free state\n\n\tUnion slave state (border state)\n\n\tSeceded before Fort Sumter (April 1861)\n\n\tSeceded after Fort Sumter (April 1861)"
+  },
+  {
+   "name": "mississippi",
+   "question": "The Mississippi Valley",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "tennessee",
+   "question": "The last state to secede",
+   "pass": true,
+   "failures": [],
+   "popup": "Tennessee in 1863\n\nSeceded after Fort Sumter (April 1861)\n\nSide: Confederacy. Seceded: June 8, 1861.\n\nVoters approved secession on June 8, 1861. Union forces held much of the state from 1862.",
+   "legend": null
+  }
+ ]
+}

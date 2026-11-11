@@ -1,0 +1,515 @@
+{
+ "operationalLayers": [
+  {
+   "id": "lyreecd5b8e3ca",
+   "title": "Free and slave states and territories, 1850",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/slavery_1850_states_v0_2_0/FeatureServer/0",
+   "itemId": "0fbb64de0f874d349b12da7ff37ded9e",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": true,
+   "opacity": 1,
+   "showLabels": true,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "uniqueValue",
+      "field1": "Status1850",
+      "uniqueValueInfos": [
+       {
+        "value": "Free state",
+        "label": "Free state",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          33,
+          102,
+          172,
+          215
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           255,
+           255,
+           255,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Free territory",
+        "label": "Free territory",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          146,
+          197,
+          222,
+          215
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           255,
+           255,
+           255,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Slave state (and Washington, D.C.)",
+        "label": "Slave state (and Washington, D.C.)",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          204,
+          102,
+          0,
+          215
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           255,
+           255,
+           255,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Territory open to slavery",
+        "label": "Territory open to slavery",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          253,
+          184,
+          99,
+          215
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           255,
+           255,
+           255,
+           255
+          ],
+          "width": 1
+         }
+        }
+       }
+      ]
+     },
+     "labelingInfo": [
+      {
+       "labelExpressionInfo": {
+        "expression": "$feature.Name"
+       },
+       "labelPlacement": "esriServerPolygonPlacementAlwaysHorizontal",
+       "symbol": {
+        "type": "esriTS",
+        "color": [
+         43,
+         43,
+         43,
+         255
+        ],
+        "font": {
+         "family": "Noto Sans",
+         "size": 9,
+         "weight": "bold"
+        },
+        "horizontalAlignment": "center",
+        "verticalAlignment": "baseline",
+        "haloColor": [
+         255,
+         255,
+         255,
+         230
+        ],
+        "haloSize": 1.5
+       },
+       "minScale": 0,
+       "maxScale": 0,
+       "repeatLabel": false
+      }
+     ]
+    }
+   },
+   "popupInfo": {
+    "title": "{Name} in 1850",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p><b>{Status1850}</b>{expression/admitted}</p><p>{Basis}</p><p>{expression/note}</p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": [],
+    "expressionInfos": [
+     {
+      "name": "admitted",
+      "title": "Admitted",
+      "returnType": "string",
+      "expression": "return IIf(IsEmpty($feature.Admitted), '', ' (a state from ' + $feature.Admitted + ')');"
+     },
+     {
+      "name": "note",
+      "title": "Note",
+      "returnType": "string",
+      "expression": "return DefaultValue($feature.Note, '');"
+     }
+    ]
+   }
+  },
+  {
+   "id": "lyr0887543461e",
+   "title": "Missouri Compromise line",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/MissouriCompromiseLine_Albers/FeatureServer/0",
+   "itemId": "d68c728f32c4479b9bcd15a67db78b20",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": true,
+   "opacity": 1,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "symbol": {
+       "type": "esriSLS",
+       "style": "esriSLSDash",
+       "color": [
+        77,
+        77,
+        77,
+        255
+       ],
+       "width": 2.5
+      },
+      "label": "36°30′ north, the line of 1820"
+     }
+    }
+   },
+   "popupInfo": {
+    "title": "{NAME}",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p><i>{YEAR}</i></p><p>{DESCRIPTION}</p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": []
+   }
+  },
+  {
+   "id": "lyrfcc2d2988dd",
+   "title": "Routes of the slave trade within the United States",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/slavery_1850_routes_v0_2_0/FeatureServer/0",
+   "itemId": "2ed6e68901a141b8908a1350461b9fb4",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": false,
+   "opacity": 1,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "symbol": {
+       "type": "esriSLS",
+       "style": "esriSLSSolid",
+       "color": [
+        26,
+        26,
+        26,
+        255
+       ],
+       "width": 2.5
+      },
+      "label": "Route of the slave trade, by land or sea"
+     }
+    },
+    "definitionExpression": "Kind = 'Slave trade within the United States'"
+   },
+   "popupInfo": {
+    "title": "{Name}",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p><b>Direction people were moved:</b> {Direction}</p><p>{About}</p><p><i>The line is approximate, from a 1920 atlas map.</i></p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": []
+   }
+  },
+  {
+   "id": "lyr6e6f827389b",
+   "title": "Ships La Amistad (1839) and Creole (1841)",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/slavery_1850_routes_v0_2_0/FeatureServer/0",
+   "itemId": "2ed6e68901a141b8908a1350461b9fb4",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": false,
+   "opacity": 1,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "symbol": {
+       "type": "esriSLS",
+       "style": "esriSLSDash",
+       "color": [
+        118,
+        42,
+        131,
+        255
+       ],
+       "width": 2.5
+      },
+      "label": "Route of a ship taken over by the people held on it"
+     }
+    },
+    "definitionExpression": "Kind = 'A ship''s route'"
+   },
+   "popupInfo": {
+    "title": "{Name}",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p><b>Direction people were moved:</b> {Direction}</p><p>{About}</p><p><i>The line is approximate, from a 1920 atlas map.</i></p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": []
+   }
+  },
+  {
+   "id": "lyrfcfc1a08a76",
+   "title": "Underground Railroad approximate routes",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Underground_Railroad_Approximate_Routes_Albers/FeatureServer/1",
+   "itemId": "d8a604eef63e469189db303419718b5c",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": false,
+   "opacity": 1,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "symbol": {
+       "type": "esriSLS",
+       "style": "esriSLSSolid",
+       "color": [
+        27,
+        120,
+        55,
+        255
+       ],
+       "width": 2
+      },
+      "label": "Approximate route of escape"
+     }
+    }
+   },
+   "popupInfo": {
+    "title": "Underground Railroad route",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p>An approximate route that people escaping slavery followed north. The Underground Railroad was secret, so no exact routes were recorded.</p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": []
+   }
+  },
+  {
+   "id": "lyre0f5debff45",
+   "title": "Underground Railroad cities",
+   "url": "https://services7.arcgis.com/iFGeGXTAJXnjq0YN/arcgis/rest/services/Underground_Railroad_Approximate_Routes_Albers/FeatureServer/0",
+   "itemId": "d8a604eef63e469189db303419718b5c",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": false,
+   "opacity": 1,
+   "showLabels": true,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "symbol": {
+       "type": "esriSMS",
+       "style": "esriSMSCircle",
+       "color": [
+        26,
+        26,
+        26,
+        255
+       ],
+       "size": 7,
+       "angle": 0,
+       "xoffset": 0,
+       "yoffset": 0,
+       "outline": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         255,
+         255,
+         255,
+         255
+        ],
+        "width": 1
+       }
+      },
+      "label": "City on an Underground Railroad route"
+     },
+     "labelingInfo": [
+      {
+       "labelExpressionInfo": {
+        "expression": "$feature.Name"
+       },
+       "labelPlacement": "esriServerPointLabelPlacementAboveCenter",
+       "symbol": {
+        "type": "esriTS",
+        "color": [
+         26,
+         26,
+         26,
+         255
+        ],
+        "font": {
+         "family": "Noto Sans",
+         "size": 9,
+         "weight": "normal"
+        },
+        "horizontalAlignment": "center",
+        "verticalAlignment": "baseline",
+        "haloColor": [
+         255,
+         255,
+         255,
+         230
+        ],
+        "haloSize": 1.5
+       },
+       "minScale": 12000000,
+       "maxScale": 0,
+       "repeatLabel": false
+      }
+     ]
+    }
+   },
+   "popupInfo": {
+    "title": "{Name}",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p>A city on the approximate routes of the Underground Railroad ({State}, {Country}).</p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": []
+   }
+  }
+ ],
+ "baseMap": {
+  "title": "Modern Antique",
+  "baseMapLayers": [
+   {
+    "id": "basec527aa8b",
+    "title": "World Hillshade",
+    "opacity": 1,
+    "visibility": true,
+    "layerType": "ArcGISTiledMapServiceLayer",
+    "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+    "itemId": "1b243539f4514b6ba35e7d995890db1d"
+   },
+   {
+    "id": "base6e149572",
+    "title": "Modern Antique (no Labels)",
+    "opacity": 1,
+    "visibility": true,
+    "layerType": "VectorTileLayer",
+    "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json",
+    "itemId": "545f2e839f624600bbb092c3ad998bb8",
+    "blendMode": "multiply"
+   }
+  ]
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857
+ },
+ "authoringApp": "Map builder",
+ "authoringAppVersion": "1.4",
+ "version": "2.31",
+ "initialState": {
+  "viewpoint": {
+   "targetGeometry": {
+    "xmin": -13914936.3,
+    "ymin": 2632018.6,
+    "xmax": -7347086.4,
+    "ymax": 6446275.8,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  }
+ },
+ "bookmarks": [
+  {
+   "name": "The United States in 1850",
+   "extent": {
+    "xmin": -13914936.3,
+    "ymin": 2632018.6,
+    "xmax": -7347086.4,
+    "ymax": 6446275.8,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  },
+  {
+   "name": "The South",
+   "extent": {
+    "xmin": -10909310.1,
+    "ymin": 2753408.1,
+    "xmax": -8237642.3,
+    "ymax": 4938869.2,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  },
+  {
+   "name": "The Ohio River and the North",
+   "extent": {
+    "xmin": -10352712.6,
+    "ymin": 4300621.4,
+    "xmax": -7569725.4,
+    "ymax": 6024072.1,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  }
+ ]
+}
