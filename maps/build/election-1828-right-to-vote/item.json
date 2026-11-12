@@ -6,6 +6,6 @@
  "tags": "US History,election of 1828,Andrew Jackson,John Quincy Adams,suffrage,right to vote,Age of Jackson,grade 8,MapMaker",
  "accessInformation": "National Archives (electoral votes); state constitutions and laws as cited (voting rules); Natural Earth (state outlines); Esri.",
  "licenseInfo": "Facts from public records; state outlines from Natural Earth (public domain). Text written for this map is original.",
- "typeKeywords": "ArcGIS Online,Explorer Web Map,Map,Online Map,Web Map,spec:election-1828-right-to-vote,specVersion:0.7.0",
+ "typeKeywords": "ArcGIS Online,Explorer Web Map,Map,Online Map,Web Map,spec:election-1828-right-to-vote,specVersion:0.8.0",
  "extent": "-92.5,27.0,-66.5,47.5"
 }

@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "election-1828-right-to-vote",
-  "contentVersion": "0.3.2",
+  "contentVersion": "0.4.0",
   "status": "draft",
   "updated": "2026-11-11",
   "reviewed": null,
@@ -36,7 +36,7 @@
       },
       {
         "name": "Free Black men and the vote, 1828",
-        "shows": "Each state shaded green by whether free Black men could vote: light green, could vote on the same terms as white men; middle green, only with extra rules or kept out in practice; dark green, could not vote. Off when the map opens.",
+        "shows": "Each state shaded pink by whether free Black men could vote: light pink, could vote on the same terms as white men; middle pink, only with extra rules or kept out in practice; dark pink, could not vote. Off when the map opens.",
         "source": "State constitutions and laws, as cited in each pop-up",
         "offAtStart": true
       },
@@ -208,7 +208,7 @@
         "minutes": 15,
         "frontOfClass": [
           "In Map layers, turn off White men and the vote, 1828 and turn on Free Black men and the vote, 1828.",
-          "Scroll down the legend to the key: light green is could vote, middle green is only with extra rules or kept out in practice, dark green is could not vote.",
+          "Scroll down the legend to the key: light pink is could vote, middle pink is only with extra rules or kept out in practice, dark pink is could not vote.",
           "Ask: in which states could free Black men vote on the same terms as white men?",
           "Open the New England and New York bookmark and click New York. Read White men and Free Black men.",
           "Ask: Indiana, Illinois, Alabama and Missouri had no property or tax rule for white men. What does this layer show for free Black men there?"
@@ -218,7 +218,7 @@
             "en": "In Map layers, turn off White men and the vote, 1828 and turn on Free Black men and the vote, 1828."
           },
           {
-            "en": "Scroll down the legend to its key and find the light green states (could vote)."
+            "en": "Scroll down the legend to its key and find the lightest states, labeled Could vote."
           },
           {
             "en": "Open the New England and New York bookmark, click New York and read White men and Free Black men."
@@ -229,7 +229,7 @@
         },
         "lines": 4,
         "answer": {
-          "where": "Free Black men and the vote, 1828 layer and pop-ups. Light green (could vote on the same terms): Maine, New Hampshire, Vermont, Massachusetts, North Carolina (until 1835) and Tennessee (until 1834). Middle green: New York (the 1821 constitution set a new rule for Black men only: own property worth $250, pay tax on it and have been a citizen for three years) and Pennsylvania (the law didn't mention race, but in many places officials kept Black men from voting). Dark green (could not vote): the other 16 states.",
+          "where": "Free Black men and the vote, 1828 layer and pop-ups. Light pink (could vote on the same terms): Maine, New Hampshire, Vermont, Massachusetts, North Carolina (until 1835) and Tennessee (until 1834). Middle pink: New York (the 1821 constitution set a new rule for Black men only: own property worth $250, pay tax on it and have been a citizen for three years) and Pennsylvania (the law didn't mention race, but in many places officials kept Black men from voting). Dark pink (could not vote): the other 16 states.",
           "accept": "(a) Maine, New Hampshire, Vermont, Massachusetts, North Carolina and Tennessee. (b) White men in New York had no property or tax rule after 1826, but Black men had to own $250 of property. (c) All four shut out free Black men: in these states voting was opened to more white men while Black men were kept out. Tennessee, also west of the Appalachians, is the exception: free Black men could vote there until 1834.",
           "text": "In 1825 only 298 Black men in the whole state of New York met the $250 rule (Peter J. Galie, Albany Law Review, citing Phyllis Field; Galie gives nearly 6,000 free adult Black New Yorkers). Before 1821 New York's property rules were the same for all voters. Free Black men lost the vote in North Carolina in 1835 and in Tennessee under its 1834 constitution."
         }
@@ -362,7 +362,7 @@
       "en": "In 1828, Americans did not vote for the president directly. Each state chose electors, and the electors voted for president. Andrew Jackson ran against President John Quincy Adams. Each state made its own rules about who could vote. Some states made men own land or pay a tax to vote. Suffrage means the right to vote. A legislature is a state's lawmakers. The militia was a state's citizen soldiers."
     },
     "readingTheMap": {
-      "en": "Blue pies: electors for Andrew Jackson. Orange pies: John Quincy Adams. Bigger pies mean more electors. Only the pies are on at the start; turn on the other layers in Map layers when a question asks. Both rule layers are green. In both, light green means fewer limits and dark green means more. The key for these layers is lower down in the legend: scroll to see it. Click a state to read its votes, its rules and the sources; scroll to see all of the pop-up."
+      "en": "Blue pies: electors for Andrew Jackson. Orange pies: John Quincy Adams. Bigger pies mean more electors. Only the pies are on at the start; turn on the other layers in Map layers when a question asks. The white men layer is green and the free Black men layer is pink. In both, lighter means fewer limits and darker means more; the legend gives each shade its meaning in words. The key for these layers is lower down in the legend: scroll to see it. Click a state to read its votes, its rules and the sources; scroll to see all of the pop-up."
     },
     "tips": [
       "popups"

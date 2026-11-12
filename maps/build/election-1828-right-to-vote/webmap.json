@@ -22,9 +22,9 @@
          "type": "esriSFS",
          "style": "esriSFSSolid",
          "color": [
-          229,
-          245,
-          224,
+          199,
+          233,
+          192,
           225
          ],
          "outline": {
@@ -47,9 +47,9 @@
          "type": "esriSFS",
          "style": "esriSFSSolid",
          "color": [
-          161,
-          217,
-          155,
+          116,
+          196,
+          118,
           225
          ],
          "outline": {
@@ -72,9 +72,9 @@
          "type": "esriSFS",
          "style": "esriSFSSolid",
          "color": [
-          65,
-          171,
-          93,
+          35,
+          139,
+          69,
           225
          ],
          "outline": {
@@ -101,9 +101,9 @@
            "type": "esriSFS",
            "style": "esriSFSSolid",
            "color": [
-            229,
-            245,
-            224,
+            199,
+            233,
+            192,
             225
            ],
            "outline": {
@@ -130,9 +130,9 @@
            "type": "esriSFS",
            "style": "esriSFSSolid",
            "color": [
-            161,
-            217,
-            155,
+            116,
+            196,
+            118,
             225
            ],
            "outline": {
@@ -159,9 +159,9 @@
            "type": "esriSFS",
            "style": "esriSFSSolid",
            "color": [
-            65,
-            171,
-            93,
+            35,
+            139,
+            69,
             225
            ],
            "outline": {
@@ -236,9 +236,9 @@
          "type": "esriSFS",
          "style": "esriSFSSolid",
          "color": [
-          229,
-          245,
-          224,
+          252,
+          197,
+          192,
           225
          ],
          "outline": {
@@ -261,9 +261,9 @@
          "type": "esriSFS",
          "style": "esriSFSSolid",
          "color": [
+          247,
+          104,
           161,
-          217,
-          155,
           225
          ],
          "outline": {
@@ -286,9 +286,9 @@
          "type": "esriSFS",
          "style": "esriSFSSolid",
          "color": [
-          65,
-          171,
-          93,
+          174,
+          1,
+          126,
           225
          ],
          "outline": {
@@ -315,9 +315,9 @@
            "type": "esriSFS",
            "style": "esriSFSSolid",
            "color": [
-            229,
-            245,
-            224,
+            252,
+            197,
+            192,
             225
            ],
            "outline": {
@@ -344,9 +344,9 @@
            "type": "esriSFS",
            "style": "esriSFSSolid",
            "color": [
+            247,
+            104,
             161,
-            217,
-            155,
             225
            ],
            "outline": {
@@ -373,9 +373,9 @@
            "type": "esriSFS",
            "style": "esriSFSSolid",
            "color": [
-            65,
-            171,
-            93,
+            174,
+            1,
+            126,
             225
            ],
            "outline": {
@@ -544,7 +544,8 @@
        "minScale": 0,
        "maxScale": 0,
        "repeatLabel": false,
-       "where": "Electors >= 20"
+       "where": "Electors >= 20",
+       "deconflictionStrategy": "none"
       },
       {
        "labelExpressionInfo": {
@@ -578,7 +579,8 @@
        "minScale": 0,
        "maxScale": 0,
        "repeatLabel": false,
-       "where": "Electors >= 9 AND Electors < 20"
+       "where": "Electors >= 9 AND Electors < 20",
+       "deconflictionStrategy": "none"
       },
       {
        "labelExpressionInfo": {
@@ -612,7 +614,8 @@
        "minScale": 0,
        "maxScale": 0,
        "repeatLabel": false,
-       "where": "Electors < 9"
+       "where": "Electors < 9",
+       "deconflictionStrategy": "none"
       }
      ]
     }
