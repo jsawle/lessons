@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "revolutionary-battles-1775-1776",
-  "contentVersion": "0.10.1",
+  "contentVersion": "0.11.0",
   "status": "draft",
   "updated": "2026-11-11",
   "reviewed": null,
@@ -121,10 +121,10 @@
         "minutes": 10,
         "frontOfClass": [
           "Open the Massachusetts bookmark.",
-          "Click the diamond at Lexington and Concord and read the date line.",
+          "Click the blue diamond just left of circle 1 (Lexington and Concord) and read the date line.",
           "Open the legend and find which color means an American victory.",
           "Ask: who won, and how do you know from the map?",
-          "Click the Boston diamond and read its two dates.",
+          "Click circle 2, which covers the Boston diamond, and use the arrow in the pop-up until the title says Boston. Read its two dates.",
           "Ask: how long did the siege of Boston last?",
           "Use Measure for the straight-line distance from Boston to Concord.",
           "Ask: how close to Boston did the war begin?"
@@ -135,20 +135,20 @@
             "es": "Abre el marcador Massachusetts."
           },
           {
-            "en": "Click the diamond at Lexington and Concord and read its dates.",
-            "es": "Haz clic en el rombo de Lexington and Concord y lee sus fechas."
+            "en": "Click the blue diamond just left of circle 1. It is Lexington and Concord. Read its dates.",
+            "es": "Haz clic en el rombo azul que está justo a la izquierda del círculo 1. Es Lexington and Concord. Lee sus fechas."
           },
           {
             "en": "Open the legend and check which color shows who won.",
             "es": "Abre la leyenda y comprueba qué color muestra quién ganó."
           },
           {
-            "en": "Click the Boston diamond and read its dates.",
-            "es": "Haz clic en el rombo de Boston y lee sus fechas."
+            "en": "Click circle 2. It covers the Boston diamond. Use the arrow in the pop-up until the title says Boston, then read its dates.",
+            "es": "Haz clic en el círculo 2, que cubre el rombo de Boston. Usa la flecha de la ventana emergente hasta que el título diga Boston y lee sus fechas."
           },
           {
-            "en": "Use Measure for the straight-line distance from Boston to Concord.",
-            "es": "Usa la herramienta de medir (Measure) para la distancia en línea recta de Boston a Concord."
+            "en": "Use Measure for the straight-line distance from circle 2 (Boston) to the blue diamond beside circle 1 (Concord).",
+            "es": "Usa la herramienta de medir (Measure) para la distancia en línea recta del círculo 2 (Boston) al rombo azul junto al círculo 1 (Concord)."
           }
         ],
         "ask": {
@@ -193,12 +193,12 @@
             "es": "Aléjate un paso desde el marcador Massachusetts. Arrastra el mapa desde Quebec, en el norte, hasta Carolina del Sur, en el sur, para encontrar los 21 rombos. Si los rombos desaparecen, te alejaste demasiado: acércate un paso."
           },
           {
-            "en": "Click the diamonds and read each one's date line to see its year.",
-            "es": "Haz clic en los rombos y lee la línea de la fecha de cada uno para saber su año."
+            "en": "Click at least one diamond in each group and read its date line to see its year. Where diamonds overlap, zoom in.",
+            "es": "Haz clic en al menos un rombo de cada grupo y lee la línea de la fecha para saber su año. Donde los rombos se superponen, acércate."
           },
           {
-            "en": "Read the colony's name printed on the map under each group of diamonds (colonies have no pop-up, and Quebec is not labeled). Use the legend to see who won.",
-            "es": "Lee el nombre de la colonia impreso en el mapa debajo de cada grupo de rombos (las colonias no tienen ventana emergente y Quebec no tiene etiqueta). Usa la leyenda para ver quién ganó."
+            "en": "Read the colony's name printed on the map near each group of diamonds (colonies have no pop-up, and Quebec is not labeled). The diamonds around Boston are in Massachusetts: its name is printed farther north. Use the legend to see who won.",
+            "es": "Lee el nombre de la colonia impreso en el mapa cerca de cada grupo de rombos (las colonias no tienen ventana emergente y Quebec no tiene etiqueta). Los rombos alrededor de Boston están en Massachusetts: su nombre está impreso más al norte. Usa la leyenda para ver quién ganó."
           }
         ],
         "ask": {
@@ -309,34 +309,34 @@
         "core": false,
         "minutes": 12,
         "frontOfClass": [
-          "Zoom in on New York City until the numbered Turning Points circles appear.",
+          "Open the New York/New Jersey bookmark.",
           "Click circle 4 and read the Battle details text.",
-          "Click the diamond for Fort Lee and read its dates. Circle 4 covers the Fort Washington diamond: click the circle and use the arrow in the pop-up (2 of 2) to reach the battle.",
-          "Click circle 5, read its Battle details text, then use the arrow in the pop-up (2 of 2) to reach the Trenton battle and read its date.",
+          "Circle 4 covers the Fort Washington and Fort Lee diamonds: click the circle and use the arrow in the pop-up until the title is each battle, and read its dates.",
+          "Click circle 5, read its Battle details text, then use the arrow in the pop-up until the title is the Trenton battle and read its date.",
           "Zoom out until the circles disappear, open the legend and check the color of each diamond.",
           "Use Measure for the distance from the Brooklyn diamond (New York City) to Trenton.",
           "Ask: how far from New York City had the fighting moved, and how did 1776 end for Washington's army?"
         ],
         "steps": [
           {
-            "en": "Zoom in on New York City until the numbered circles appear.",
-            "es": "Acércate a la ciudad de Nueva York hasta que aparezcan los círculos numerados."
+            "en": "Open the New York/New Jersey bookmark.",
+            "es": "Abre el marcador (Bookmarks) New York/New Jersey."
           },
           {
-            "en": "Follow circles 4 and 5.",
-            "es": "Sigue los círculos 4 y 5."
+            "en": "Click circles 4 and 5 and read each summary.",
+            "es": "Haz clic en los círculos 4 y 5 y lee cada resumen."
           },
           {
-            "en": "Click the diamonds for Fort Washington, Fort Lee and Trenton. A numbered circle covers the Fort Washington and Trenton diamonds: click the circle and use the arrow in the pop-up to reach the battle (2 of 2).",
-            "es": "Haz clic en los rombos de Fort Washington, Fort Lee y Trenton. Un círculo numerado cubre los rombos de Fort Washington y Trenton: haz clic en el círculo y usa la flecha de la ventana emergente para llegar a la batalla (2 de 2)."
+            "en": "Find the battles of Fort Washington, Fort Lee and Trenton. Circle 4 covers the Fort Washington and Fort Lee diamonds, and circle 5 covers Trenton. Click the circle and use the arrow in the pop-up until the title is the battle you want.",
+            "es": "Busca las batallas de Fort Washington, Fort Lee y Trenton. El círculo 4 cubre los rombos de Fort Washington y Fort Lee, y el círculo 5 cubre Trenton. Haz clic en el círculo y usa la flecha de la ventana emergente hasta que el título sea la batalla que buscas."
           },
           {
             "en": "Read each one's dates, and use the legend to see who won. To see the color of a covered diamond, zoom out until the circles disappear.",
             "es": "Lee las fechas de cada uno y usa la leyenda para ver quién ganó. Para ver el color de un rombo cubierto, aléjate hasta que los círculos desaparezcan."
           },
           {
-            "en": "Use Measure for the distance from the Brooklyn diamond (New York City) to Trenton.",
-            "es": "Usa la herramienta de medir (Measure) para la distancia del rombo de Brooklyn (ciudad de Nueva York) a Trenton."
+            "en": "Use Measure for the distance from circle 3 (Brooklyn, in New York City) to circle 5 (Trenton).",
+            "es": "Usa la herramienta de medir (Measure) para la distancia del círculo 3 (Brooklyn, en la ciudad de Nueva York) al círculo 5 (Trenton)."
           }
         ],
         "ask": {
@@ -348,7 +348,7 @@
           "es": "Mide la distancia de la ciudad de Nueva York a Trenton: ________ millas"
         },
         "answer": {
-          "where": "Turning Points circles 4 (Fall of New York City, 1776, Victor: Britain) and 5 (Washington Strikes Back, 1776, Victor: United States); the pop-up's Battle details text tells the story of each. Revolutionary War Battles pop-ups: Fort Washington, November 16, 1776, and Fort Lee, November 20, 1776, red = British Victory; Trenton, December 26, 1776, blue = American Victory. Measure tool, from the Brooklyn diamond (New York City) to Trenton: about 52 miles (accept 48 to 56). From the Fort Washington or Fort Lee diamonds it is about 61 miles; accept that if a student measured from there. Circles 4 and 5 sit on the Fort Washington and Trenton diamonds, so a click opens the circle first and the battle is the second pop-up.",
+          "where": "Turning Points circles 4 (Fall of New York City, 1776, Victor: Britain) and 5 (Washington Strikes Back, 1776, Victor: United States); the pop-up's Battle details text tells the story of each. Revolutionary War Battles pop-ups: Fort Washington, November 16, 1776, and Fort Lee, November 20, 1776, red = British Victory; Trenton, December 26, 1776, blue = American Victory. Measure tool, from the Brooklyn diamond (New York City) to Trenton: about 52 miles (accept 48 to 56). From the Fort Washington or Fort Lee diamonds it is about 61 miles; accept that if a student measured from there. Circles 4 and 5 sit on the Fort Washington and Trenton diamonds, so a click opens the circle first; the battle is one of the later pop-ups (the counter runs up to 1 of 5).",
           "accept": "The three dates and winners, and about 52 miles: by December 26, 1776 the fighting had moved across New Jersey to Trenton."
         }
       }
@@ -374,7 +374,7 @@
   ],
   "discussion": [
     "Looking at where the 1775 battles cluster and where the 1776 battles cluster, what does the map suggest about each side's plan for the war?",
-    "The Key Port Cities layer has no pop-ups, so you had to work out the ports from the coastline and the battle diamonds. What other clues on the map helped, and what was missing?",
+    "The Key Port Cities pop-ups give only a port's name. What other clues on the map helped you see why a port mattered, and what was missing?",
     "Nearly every 1776 battle around New York was a British victory, yet the year ends with Trenton. Using the distances you measured, why might that one small battle have mattered so much?"
   ],
   "differentiation": {
@@ -400,7 +400,7 @@
   ],
   "assessment": {
     "evidence": "Strong answers use dates and victors from the Revolutionary War Battles pop-ups and legend (Lexington and Concord, April 19, 1775, blue = American Victory; Fort Washington, November 16, 1776, red = British Victory; Trenton, December 26, 1776), the Major Port City symbol in the Key Port Cities legend, the Turning Points circles, and a Measure distance such as New York to Boston (about 190 miles).",
-    "exemplar": "The fighting moved because the British gave up Boston and went after New York, the big port in the middle of the coast. The war began close to Boston: Lexington and Concord was fought on April 19, 1775, about 16 miles from the city, and the Americans won. The siege of Boston lasted about 11 months, until March 17, 1776. After that most battles were around New York. New York is a major port about 190 miles from Boston and 80 miles from Philadelphia, so a navy there could reach the other big ports and cut New England off from the colonies to the south. The British won at Brooklyn, Fort Washington and Fort Lee, and Washington's army fell back across New Jersey. On December 26, 1776, about 52 miles from New York City, the Americans won at Trenton."
+    "exemplar": "The fighting moved because the British gave up Boston and went after New York, the big port in the middle of the coast. The war began close to Boston: Lexington and Concord was fought on April 19, 1775, about 17 miles from the city, and the Americans won. The siege of Boston lasted about 11 months, until March 17, 1776. After that most battles were around New York. New York is a major port about 190 miles from Boston and 80 miles from Philadelphia, so a navy there could reach the other big ports and cut New England off from the colonies to the south. The British won at Brooklyn, Fort Washington and Fort Lee, and Washington's army fell back across New Jersey. On December 26, 1776, about 52 miles from New York City, the Americans won at Trenton."
   },
   "studentSupport": {
     "beforeYouStart": {
@@ -408,8 +408,8 @@
       "es": "Soldados británicos salieron de Boston para apoderarse de las armas que los colonos habían guardado en Concord. Los combates que siguieron dieron inicio a la Revolución estadounidense. Durante los dos años siguientes, el ejército y la armada británicos y el nuevo Ejército Continental, dirigido por George Washington, lucharon por las ciudades, los ríos y los puertos de las colonias."
     },
     "readingTheMap": {
-      "en": "Diamonds mark battles. A battle's pop-up gives its name, dates and story, but not the winner in words: the diamond's color shows the winner, so use the legend. Each diamond is placed at the battle's usual location, but the fighting covered a wider area: gray shaded areas show the battlefield, and areas with diagonal stripes show the core, where the fighting was heaviest. Zoom in to see white numbered circles: five turning points, numbered in the order they happened. In the Key Port Cities layer, click a port to see its name; the legend tells a major port from a smaller one.",
-      "es": "Los rombos marcan las batallas. La ventana emergente de una batalla da su nombre, sus fechas y su historia, pero no dice quién ganó: el color del rombo muestra al ganador, así que usa la leyenda. Cada rombo está en el lugar donde se suele situar la batalla, pero los combates ocuparon un área mayor: las zonas grises muestran el campo de batalla y las zonas rayadas, el núcleo, donde la lucha fue más intensa. Acércate para ver círculos blancos numerados: cinco momentos decisivos, numerados en el orden en que ocurrieron. En la capa Key Port Cities (ciudades portuarias clave), haz clic en un puerto para ver su nombre; la leyenda distingue un puerto principal de uno menor."
+      "en": "Diamonds mark battles. A diamond's pop-up gives the battle's name, dates and story, but not the winner in words: the diamond's color shows the winner, so use the legend. Each diamond is placed at the battle's usual location, but the fighting covered a wider area: gray shaded areas show the battlefield, and areas with diagonal stripes show the core, where the fighting was heaviest. White numbered circles are five turning points, numbered in the order they happened. A circle's pop-up is a short summary: it gives only the year and ends with a Victor line. Some circles sit on top of a diamond. Click there and use the arrows in the pop-up until the title is the battle you want. In the Key Port Cities layer, click a port to see its name; the legend tells a major port from a smaller one.",
+      "es": "Los rombos marcan las batallas. La ventana emergente de un rombo da el nombre de la batalla, sus fechas y su historia, pero no dice quién ganó: el color del rombo muestra al ganador, así que usa la leyenda. Cada rombo está en el lugar donde se suele situar la batalla, pero los combates ocuparon un área mayor: las zonas grises muestran el campo de batalla y las zonas rayadas, el núcleo, donde la lucha fue más intensa. Los círculos blancos numerados son cinco momentos decisivos (Turning Points), numerados en el orden en que ocurrieron. La ventana emergente de un círculo es un resumen breve: solo da el año y termina con la línea Victor (ganador). Algunos círculos están encima de un rombo. Haz clic allí y usa las flechas de la ventana emergente hasta que el título sea la batalla que buscas. En la capa Key Port Cities (ciudades portuarias clave), haz clic en un puerto para ver su nombre; la leyenda distingue un puerto principal de uno menor."
     },
     "tips": [
       "popups"
