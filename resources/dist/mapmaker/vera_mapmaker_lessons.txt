@@ -71,7 +71,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** TX 8.6(B); TX 8.11(A); FL SS.8.A.4.1; C3 D2.Geo.7.6-8; C3 D2.His.14.6-8.
 **How-to pages for the tools this lesson uses:** [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.9.1, updated 2026-11-11.
+**Lesson content version:** 0.9.2, updated 2026-11-11.
 
 ### US Slavery and the Slave Trade, 1850
 **Lesson ID:** us-slavery-and-slave-trade-1850
@@ -313,7 +313,7 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **Standards:** TX 8.6(B); TX 8.10(A); TX 8.10(C); FL SS.8.A.3.14; FL SS.8.G.1.2; C3 D2.Geo.2.6-8.
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data); [Measure with MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/measure-with-mapmaker); [Sketch on a Map](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/sketch-on-a-map).
 **Languages:** student sheets in English and Spanish.
-**Lesson content version:** 0.10.0, updated 2026-11-11.
+**Lesson content version:** 0.10.1, updated 2026-11-11.
 
 ### The War of 1812 and the Monroe Doctrine, 1807–1823
 **Lesson ID:** war-of-1812-and-monroe-doctrine
