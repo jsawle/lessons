@@ -2,10 +2,10 @@
  "tool": "Map builder 1.4",
  "spec": "maps/specs/slavery-1850.json",
  "specId": "slavery-1850",
- "specVersion": "0.1.0",
- "built": "2026-11-11T17:46:47Z",
- "webmapFingerprint": "877538a856f773e4f4d33400c9ab10b9064f983a",
- "itemFingerprint": "983552547104bc0a22957bc04572577c5d28ca44",
+ "specVersion": "0.2.0",
+ "built": "2026-11-12T07:27:45Z",
+ "webmapFingerprint": "f08ca4d20960e9644937f69890aab207e16001c8",
+ "itemFingerprint": "b527409cb81636e1f0b52b091ae1fdf9acd4ea40",
  "checked": [
   "layers, start visibility and bookmarks match the lesson",
   "basemap is public and not CARTO",
@@ -14,9 +14,9 @@
  "warnings": [],
  "tested": {
   "tool": "Map test 1.0",
-  "when": "2026-11-11T17:48:55Z",
+  "when": "2026-11-12T07:29:53Z",
   "timeZone": "America/Chicago",
-  "webmapFingerprint": "877538a856f773e4f4d33400c9ab10b9064f983a",
+  "webmapFingerprint": "f08ca4d20960e9644937f69890aab207e16001c8",
   "pass": true,
   "checks": [
    {

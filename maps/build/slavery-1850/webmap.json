@@ -120,7 +120,7 @@
      "labelingInfo": [
       {
        "labelExpressionInfo": {
-        "expression": "$feature.Name"
+        "expression": "IIf($feature.Name == 'Unorganized land given up by Texas', '', $feature.Name)"
        },
        "labelPlacement": "esriServerPolygonPlacementAlwaysHorizontal",
        "symbol": {
@@ -158,7 +158,7 @@
     "popupElements": [
      {
       "type": "text",
-      "text": "<p><b>{Status1850}</b>{expression/admitted}</p><p>{Basis}</p><p>{expression/note}</p>"
+      "text": "<p><b>{expression/status}</b>{expression/admitted}</p><p>{Basis}</p><p>{expression/note}</p>"
      }
     ],
     "showAttachments": false,
@@ -175,6 +175,12 @@
       "title": "Note",
       "returnType": "string",
       "expression": "return DefaultValue($feature.Note, '');"
+     },
+     {
+      "name": "status",
+      "title": "Status in 1850",
+      "returnType": "string",
+      "expression": "// The legend groups Washington, D.C. with the slave states; a state's own pop-up says just 'Slave state'.\nvar s = $feature.Status1850;\nif ($feature.Kind == 'State' && Find('Slave state', s) == 0) { return 'Slave state'; }\nif ($feature.Kind == 'District') { return 'A federal district where slavery was legal'; }\nreturn s;"
      }
     ]
    }
@@ -291,7 +297,7 @@
     "popupElements": [
      {
       "type": "text",
-      "text": "<p><b>Direction people were moved:</b> {Direction}</p><p>{About}</p><p><i>The line is approximate, from a 1920 atlas map.</i></p>"
+      "text": "<p><b>Route of the ship:</b> {Direction}</p><p>{About}</p><p><i>The line is approximate, from a 1920 atlas map.</i></p>"
      }
     ],
     "showAttachments": false,

@@ -6,6 +6,6 @@
  "tags": "US History,Civil War,secession,border states,battlefields,railroads,grade 8,MapMaker",
  "accessInformation": "Ordinances of secession and acts of admission (states); Natural Earth (outlines); National Park Service, American Battlefield Protection Program (battlefields); Jeremy Atack (railroads); Esri.",
  "licenseInfo": "Facts from public records; state outlines from Natural Earth (public domain); battlefield areas from the National Park Service; railroads from Jeremy Atack's database, used with its citation. Text written for this map is original.",
- "typeKeywords": "ArcGIS Online,Explorer Web Map,Map,Online Map,Web Map,spec:civil-war-1863,specVersion:0.1.1",
+ "typeKeywords": "ArcGIS Online,Explorer Web Map,Map,Online Map,Web Map,spec:civil-war-1863,specVersion:0.2.0",
  "extent": "-125.0,24.0,-66.0,50.0"
 }

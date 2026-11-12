@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "roads-trails-and-rails-west",
-  "contentVersion": "0.8.1",
+  "contentVersion": "0.9.0",
   "status": "draft",
   "updated": "2026-11-11",
   "reviewed": null,
@@ -50,7 +50,7 @@
       },
       {
         "name": "Railroads 1826 to 1911",
-        "shows": "All railroad lines built from 1826 to 1911, as thin gray lines. Each pop-up gives the railroad's name (where recorded) and the year it was in operation by. In the Railroads group.",
+        "shows": "All railroad lines built from 1826 to 1911, as thin dark lines. Each pop-up gives the railroad's name (where recorded) and the year it was in operation by. In the Railroads group.",
         "source": "Jeremy Atack, historical railroad data (ICPSR 36353), prepared by the MapMaker team",
         "offAtStart": true
       },
@@ -120,8 +120,8 @@
           }
         ],
         "ask": {
-          "en": "Where did each trail start? In which state do most of them start, and why there? Use the Missouri River on the map.",
-          "es": "¿Dónde empezaba cada sendero? ¿En qué estado empieza la mayoría, y por qué allí? Usa el río Misuri del mapa."
+          "en": "Where did each trail start? In which state do most of them start, and why there? Use the Missouri River: zoom in between Kansas City and St. Louis to see its name.",
+          "es": "¿Dónde empezaba cada sendero? ¿En qué estado empieza la mayoría, y por qué allí? Usa el río Misuri (Missouri River): acércate entre Kansas City y St. Louis para ver su nombre."
         },
         "lines": 4,
         "answer": {
@@ -190,9 +190,9 @@
         "core": false,
         "minutes": 12,
         "frontOfClass": [
-          "Click the Oregon trail line in Idaho or Oregon, where it runs alone, and read its length and how many people used it.",
-          "Zoom in on Kansas City and find Independence, Missouri, on the basemap.",
-          "Use Measure in miles from Independence to Portland, Oregon.",
+          "Click the Oregon trail line in Oregon or near Boise, Idaho, where it runs alone, and read its length and how many people used it.",
+          "Zoom in on Kansas City; Independence, where the trail began, is just east of it and may not be named.",
+          "Use Measure in miles from Kansas City to Portland, Oregon.",
           "Ask: how much longer is the trail than the straight line?",
           "Trace the dotted Oregon line from Independence to Portland with the pointer.",
           "Ask: why is the trail so much longer than a straight line?"
@@ -203,16 +203,16 @@
             "es": "Busca el color del sendero de Oregón en la leyenda."
           },
           {
-            "en": "Click the Oregon Trail and read its length and how many people traveled it. Check that the pop-up's title says Oregon Trail: where trails share a route, another trail may open first, so use the arrow or click the line in Idaho or Oregon.",
-            "es": "Haz clic en el sendero de Oregón y lee su longitud y cuántas personas lo recorrieron. Comprueba que el título de la ventana emergente diga Oregon Trail: donde varios senderos comparten ruta puede abrirse primero otro sendero, así que usa la flecha o haz clic en la línea en Idaho u Oregón."
+            "en": "Click the Oregon Trail in the state of Oregon, or near Boise in Idaho, where it runs alone. Check that the pop-up's title says Oregon Trail, then read its length and how many people traveled it.",
+            "es": "Haz clic en el sendero de Oregón dentro del estado de Oregón, o cerca de Boise, en Idaho, donde va solo. Comprueba que el título de la ventana emergente diga Oregon Trail y lee su longitud y cuántas personas lo recorrieron."
           },
           {
-            "en": "Find Independence, Missouri, on the basemap, next to Kansas City.",
-            "es": "Busca Independence, Misuri, en el mapa base, junto a Kansas City."
+            "en": "Find Kansas City, Missouri, on the basemap. Independence, where the trail began, is just east of it.",
+            "es": "Busca Kansas City, Misuri, en el mapa base. Independence, donde empezaba el sendero, está justo al este."
           },
           {
-            "en": "Use Measure for a straight line from Independence to Portland, Oregon.",
-            "es": "Usa la herramienta de medir (Measure) para trazar una línea recta de Independence a Portland, Oregón."
+            "en": "Use Measure for a straight line from Kansas City to Portland, Oregon.",
+            "es": "Usa la herramienta de medir (Measure) para trazar una línea recta de Kansas City a Portland, Oregón."
           }
         ],
         "ask": {
@@ -224,7 +224,7 @@
           "es": "Mide la distancia en línea recta de Independence (Misuri) a Portland (Oregón): ________ millas"
         },
         "answer": {
-          "where": "Oregon Trail pop-up: about 2,000 miles (3,219 km); 300,000 to 400,000 people between 1840 and 1860. Measure tool, Independence to Portland: about 1,500 miles (accept 1,450 to 1,550).",
+          "where": "Oregon Trail pop-up: about 2,000 miles (3,219 km); 300,000 to 400,000 people between 1840 and 1860. Measure tool, Kansas City to Portland: about 1,500 miles (accept 1,450 to 1,550). Independence is about 10 miles east of Kansas City and is not named on the basemap at most zooms.",
           "accept": "The trail is about 500 miles longer than the straight line. Says the dotted line bends to follow rivers (the pop-up names the Platte, North Platte, Snake and Columbia) for water and grass, and crosses the mountains through passes rather than straight over them."
         }
       },
@@ -294,7 +294,7 @@
           "Open the legend and find Transcontinental Railroad (Union Pacific) and Transcontinental Railroad (Central Pacific).",
           "Trace the two thick lines from Omaha to Sacramento.",
           "Ask: which dotted trails do they follow most closely?",
-          "Click a thin gray railroad line near a trail and read the year it was in operation by.",
+          "Click a thin dark railroad line near a trail and read the year it was in operation by.",
           "Ask: was that before or after 1869, and what happened to the wagon trails once the railroad opened?"
         ],
         "steps": [
@@ -303,17 +303,17 @@
             "es": "En las capas del mapa (Map layers), activa Railroads (ferrocarriles)."
           },
           {
-            "en": "Use the legend to find the Transcontinental Railroad (Union Pacific) and (Central Pacific) lines.",
-            "es": "Usa la leyenda para encontrar las líneas Transcontinental Railroad (Union Pacific) y (Central Pacific)."
+            "en": "Zoom in on Nebraska, Wyoming and Utah until you can see single lines. The two thick lines that run from Omaha to Sacramento are the Transcontinental Railroad (Union Pacific) and (Central Pacific): check them in the legend.",
+            "es": "Acércate a Nebraska, Wyoming y Utah hasta ver las líneas una por una. Las dos líneas gruesas que van de Omaha a Sacramento son Transcontinental Railroad (Union Pacific) y (Central Pacific): compruébalas en la leyenda."
           },
           {
-            "en": "Click a thin gray railroad line near one of the trails and read when it was in operation by.",
-            "es": "Haz clic en una línea gris fina de ferrocarril cerca de uno de los senderos y lee desde cuándo funcionaba."
+            "en": "Click a thin dark railroad line near one of the trails and read the year after Railroad in operation by: the railroad was running by that year.",
+            "es": "Haz clic en una línea fina y oscura de ferrocarril cerca de uno de los senderos y lee el año después de Railroad in operation by: el ferrocarril ya funcionaba ese año."
           }
         ],
         "ask": {
-          "en": "Which trails do the Transcontinental Railroad lines follow most closely? Was your gray line in operation before or after 1869, when the California Trail stopped being used? What does that suggest?",
-          "es": "¿Qué senderos siguen más de cerca las líneas del Transcontinental Railroad? ¿Tu línea gris funcionaba antes o después de 1869, cuando dejó de usarse el California Trail? ¿Qué sugiere eso?"
+          "en": "Which trails do the Transcontinental Railroad lines follow most closely? Was your thin line in operation before or after 1869, when the California Trail stopped being used? What does that suggest?",
+          "es": "¿Qué senderos siguen más de cerca las líneas del Transcontinental Railroad? ¿Tu línea fina funcionaba antes o después de 1869, cuando dejó de usarse el California Trail? ¿Qué sugiere eso?"
         },
         "answer": {
           "where": "Legend: Transcontinental Railroad (Union Pacific) and Transcontinental Railroad (Central Pacific) are thick colored lines running from Omaha across Nebraska, Wyoming, Utah and Nevada to Sacramento. Compare with the dotted California and Mormon Pioneer trails (and the Pony Express across Nevada). Railroads 1826 to 1911 pop-up: \"Railroad in operation by:\" followed by a year. West of the Missouri River the layer's earliest lines are dated 1865 (Nebraska), 1867 (Wyoming), 1868 (Nevada) and 1869 (Utah); California and Texas have lines from the 1850s. The California Trail pop-up says the trail was used until 1869, when the transcontinental railroad was completed.",
@@ -375,8 +375,8 @@
       "es": "En el siglo XIX, cientos de miles de personas del este de Estados Unidos viajaron al Oeste en carretas, en busca de tierras de cultivo, oro o un lugar donde practicar su religión libremente. Un viaje por uno de los senderos podía durar meses. Más adelante en ese siglo, se construyeron ferrocarriles a través del Oeste."
     },
     "readingTheMap": {
-      "en": "Each trail is a dotted line in its own color; the legend names them, and clicking a trail opens its pop-up. City and state names are part of the basemap. Railroads and Indigenous Territories are off when the map opens: turn them on in Map layers. Thick colored lines are the transcontinental railroads, named in the legend, and thin gray lines are other railroads; of the railroads, only the thin gray lines have pop-ups. Each Indigenous nation's territory is shaded in its own color; its name appears when you zoom in, or when you click the shading. The territories are approximate and aren't listed in the legend.",
-      "es": "Cada sendero es una línea punteada de un color distinto; la leyenda indica sus nombres, y al hacer clic en un sendero se abre su ventana emergente. Los nombres de ciudades y estados forman parte del mapa base. Las capas Railroads e Indigenous Territories están desactivadas al abrir el mapa: actívalas en las capas del mapa (Map layers). Las líneas gruesas de colores son los ferrocarriles transcontinentales, con sus nombres en la leyenda, y las líneas grises finas son otros ferrocarriles; de los ferrocarriles, solo las líneas grises finas tienen ventana emergente. El territorio de cada nación indígena tiene su propio color; su nombre aparece al acercarte o al hacer clic en el sombreado. Los territorios son aproximados y no aparecen en la leyenda."
+      "en": "Each trail is a dotted line in its own color; the legend names them, and clicking a trail opens its pop-up. City and state names are part of the basemap. Railroads and Indigenous Territories are off when the map opens: turn them on in Map layers. Thick colored lines are the transcontinental railroads, named in the legend, and thin dark lines are other railroads; of the railroads, only the thin lines have pop-ups. Zoomed out, the thin lines cover the East: zoom in to see single lines. Each Indigenous nation's territory is shaded in its own color; its name appears when you zoom in, or when you click the shading. The territories are approximate and aren't listed in the legend.",
+      "es": "Cada sendero es una línea punteada de un color distinto; la leyenda indica sus nombres, y al hacer clic en un sendero se abre su ventana emergente. Los nombres de ciudades y estados forman parte del mapa base. Las capas Railroads e Indigenous Territories están desactivadas al abrir el mapa: actívalas en las capas del mapa (Map layers). Las líneas gruesas de colores son los ferrocarriles transcontinentales, con sus nombres en la leyenda, y las líneas finas y oscuras son otros ferrocarriles; de los ferrocarriles, solo las líneas finas tienen ventana emergente. Con el mapa alejado, las líneas finas cubren el este: acércate para verlas una por una. El territorio de cada nación indígena tiene su propio color; su nombre aparece al acercarte o al hacer clic en el sombreado. Los territorios son aproximados y no aparecen en la leyenda."
     },
     "tips": [
       "popups"

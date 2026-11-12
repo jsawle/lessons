@@ -2,7 +2,7 @@
  "tool": "Map test 1.0",
  "timeZone": "America/Chicago",
  "sdk": "ArcGIS Maps SDK for JavaScript 4.34",
- "webmapFingerprint": "877538a856f773e4f4d33400c9ab10b9064f983a",
+ "webmapFingerprint": "f08ca4d20960e9644937f69890aab207e16001c8",
  "results": [
   {
    "name": "notice-free-slave",
@@ -65,7 +65,7 @@
    "question": "La Amistad",
    "pass": true,
    "failures": [],
-   "popup": "Route of La Amistad, 1839\n\nDirection people were moved: From Cuba north to Long Island, New York\n\nIn 1839 Africans who had been enslaved illegally took over the ship La Amistad off Cuba. It reached Long Island, New York. In 1841 the Supreme Court ruled that they were free.\n\nThe line is approximate, from a 1920 atlas map.",
+   "popup": "Route of La Amistad, 1839\n\nRoute of the ship: From Cuba north to Long Island, New York\n\nIn 1839 Africans who had been enslaved illegally took over the ship La Amistad off Cuba. It reached Long Island, New York. In 1841 the Supreme Court ruled that they were free.\n\nThe line is approximate, from a 1920 atlas map.",
    "legend": null
   },
   {

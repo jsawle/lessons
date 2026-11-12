@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "land-cessions-1784-1894",
-  "contentVersion": "0.4.0",
+  "contentVersion": "0.5.0",
   "status": "draft",
   "updated": "2026-11-09",
   "reviewed": null,
@@ -117,7 +117,7 @@
             "en": "Open The United States bookmark."
           },
           {
-            "en": "Find the light blue areas (Cessions dated before 1830) in the legend and on the map."
+            "en": "Find the light blue areas (Cessions dated before 1830) in the legend and on the map. Zoom in one or two steps until the state names show."
           },
           {
             "en": "Open The Southeast bookmark and look for gaps: places in Mississippi, Alabama and Georgia with no light blue."
@@ -236,10 +236,10 @@
             "en": "Make sure Cessions dated 1830 to 1839 (orange) is on, and open The Southeast bookmark."
           },
           {
-            "en": "Click three orange areas: in Mississippi north-east of Jackson; in Alabama north of Montgomery, near the Georgia line; in the north-west corner of Georgia."
+            "en": "Click three orange areas: the large one in the middle of Mississippi, north-east of Jackson; in Alabama north of Montgomery, near the Georgia line; in the north-west corner of Georgia."
           },
           {
-            "en": "For each one, write the nation (the title of the pop-up), the date, and the words on the first link (for example Treaty text). You don't need to open the link."
+            "en": "For each one, write the nation (the title of the pop-up), the date in the 1830s, and the words on the first link (for example Treaty text). You don't need to open the link."
           }
         ],
         "ask": {
@@ -247,7 +247,7 @@
         },
         "lines": 5,
         "answer": {
-          "where": "Cessions dated 1830 to 1839 layer, The Southeast bookmark, pop-ups. Mississippi, north-east of Jackson: Choctaw, September 27, 1830 (Today's states: Alabama, Mississippi). Alabama, north of Montgomery near the Georgia line: Creek, March 24, 1832. The north-west corner of Georgia: Cherokee, December 29, 1835 (Alabama, Georgia, North Carolina, Tennessee). Others students may open: Chickasaw, October 20, 1832 (northern Mississippi); Seminole, central Florida around Orlando, September 18, 1823 and May 9, 1832. Each of these first links reads Treaty text. A student who clicks Jackson itself gets a light blue Choctaw cession of 1820.",
+          "where": "Cessions dated 1830 to 1839 layer, The Southeast bookmark, pop-ups. Mississippi, north-east of Jackson: Choctaw, September 27, 1830 (Today's states: Alabama, Mississippi). Alabama, north of Montgomery near the Georgia line: Creek, March 24, 1832. The north-west corner of Georgia: Cherokee, December 29, 1835 (Alabama, Georgia, North Carolina, Tennessee). Others students may open: Chickasaw, October 20, 1832 (northern Mississippi); Seminole, central Florida around Orlando, September 18, 1823 and May 9, 1832. Each of these first links reads Treaty text. A student who clicks Jackson itself gets a light blue Choctaw cession of 1820. A smaller Choctaw area near the Alabama line gives two dates, November 16, 1805 and September 27, 1830, and Today's states: Alabama; accept it, and point the student to the 1830 date.",
           "accept": "Connects the dates to the Indian Removal Act: after May 1830 the President could make removal treaties with nations east of the Mississippi, and within about five years the Choctaw, Creek, Chickasaw and Cherokee nations had ceded their remaining homelands in Mississippi, Alabama and Georgia. Explains why here with Jackson's own reason: he wanted the land between Tennessee and Louisiana opened to white settlement, and these were the nations' remaining lands, surrounded by land already ceded. Strong answers note that the map shows when and where, and the documents give the why.",
           "text": "Two dates on one area don't always mean two cessions: Royce lists every treaty that concerns an area. The Seminole area in central Florida was set aside as a reservation in 1823 and ceded in 1832. The Treaty of New Echota (December 1835) was signed by the minority Treaty Party; Principal Chief John Ross, the Cherokee government and most Cherokees opposed it, and 3,352 Cherokees signed an 1836 petition asking the Senate not to ratify it (National Archives, DocsTeach). The National Archives says Jackson's administration negotiated almost 70 removal treaties, and nearly 50,000 people were moved to Indian Territory. Some people of each nation stayed in the Southeast: the Mississippi Band of Choctaw Indians and the Eastern Band of Cherokee Indians (both in the pop-ups' Nations today) and the Poarch Band of Creek Indians in Alabama live there today."
         },
@@ -304,7 +304,7 @@
         "core": false,
         "minutes": 7,
         "frontOfClass": [
-          "Click the Cherokee cession in the north-west corner of Georgia. Scroll to the end of the pop-up and read the last sentence.",
+          "Click the Cherokee cession in the north-west corner of Georgia. Scroll to the end of the pop-up and read the note in slanted letters.",
           "Ask: who recorded these cessions, and from whose records?",
           "Click the Creek cession in Alabama, north of Montgomery, and read Nations today.",
           "Ask: what is missing from the Creek pop-up?",
@@ -312,7 +312,7 @@
         ],
         "steps": [
           {
-            "en": "Click the orange area in the north-west corner of Georgia (Cherokee). Scroll to the end of the pop-up and read the last sentence."
+            "en": "Click the orange area in the north-west corner of Georgia (Cherokee). Scroll to the end of the pop-up and read the note in slanted letters."
           },
           {
             "en": "Click the orange area in Alabama north of Montgomery (Creek) and read Nations today."
@@ -323,7 +323,7 @@
         },
         "lines": 4,
         "answer": {
-          "where": "Pop-up's last sentence: Royce compiled this from United States records (published 1899), so it shows how the federal government recorded the transaction, and the boundary is approximate. The Creek cession of March 24, 1832 reads \"Not listed in this map's data.\" under Nations today.",
+          "where": "Pop-up's closing note, in slanted letters: Royce compiled this from United States records (published 1899), so it shows how the federal government recorded the transaction, and the boundary is approximate. The Creek cession of March 24, 1832 reads \"Not listed in this map's data.\" under Nations today.",
           "accept": "(a) Charles Royce, from United States government records, published by the federal government in 1899. (b) A nation that exists today: the Muscogee (Creek) Nation in Oklahoma is one, and the Poarch Band of Creek Indians in Alabama another; the gap is in the modern data. (c) The pop-up records the Cherokee cession as a treaty, but the petition shows that many Cherokees said the people who signed it had no authority to speak for the nation, so the map gives the United States' side of a disputed agreement.",
           "text": "The petition is in the National Archives (Records of the U.S. Senate); DocsTeach has the image and transcription. The layer was digitized by the USDA Forest Service, which says the data are for information only, not for deciding title or boundaries."
         }

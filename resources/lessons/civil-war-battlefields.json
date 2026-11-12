@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "civil-war-battlefields",
-  "contentVersion": "0.8.0",
+  "contentVersion": "0.9.0",
   "status": "draft",
   "updated": "2026-11-11",
   "reviewed": null,
@@ -44,7 +44,7 @@
       },
       {
         "name": "Railroads in operation by 1863",
-        "shows": "Purple lines for the railroads in operation by 1863. They draw once you zoom in to a region. The pop-up gives the railroad's name (some lines have none), the year it was in operation by and the state. Off when the map opens.",
+        "shows": "Thin black lines for the railroads in operation by 1863. They draw once you zoom in to a region. The pop-up gives the railroad's name (some lines have none), the year it was in operation by and the state. Off when the map opens.",
         "source": "Jeremy Atack, Historical Geographic Information Systems database of U.S. Railroads",
         "offAtStart": true
       },
@@ -128,14 +128,14 @@
             "en": "Open The United States in 1863 bookmark and open the legend."
           },
           {
-            "en": "Count the states in each of the four colors."
+            "en": "Count the states in the two orange groups: each state's name is printed on it. The two blue groups are larger: 19 dark blue and 5 light blue."
           },
           {
             "en": "Click South Carolina and Tennessee and read the date each seceded."
           }
         ],
         "ask": {
-          "en": "(a) How many states are in each of the four groups? (b) Which side is blue and which is orange? (c) When did South Carolina secede, and when did Tennessee?"
+          "en": "(a) How many states seceded before Fort Sumter, and how many after? (b) Which side is blue and which is orange? (c) When did South Carolina secede, and when did Tennessee?"
         },
         "lines": 3,
         "answer": {
@@ -216,7 +216,7 @@
         },
         "lines": 4,
         "answer": {
-          "where": "Civil War battlefields layer over the states layer, and battlefield pop-ups. Most dots are on orange states, and Virginia has far more than any other state. Pennsylvania's large battlefield: Gettysburg, in PA, about 73,600 acres. The dark blue (Union free) states have very few: two in Pennsylvania (Gettysburg and Hanover), two in Ohio, one in Indiana, four in Kansas and two in Minnesota.",
+          "where": "Civil War battlefields layer over the states layer, and battlefield pop-ups. Most dots are on orange states, and Virginia has far more than any other state. Pennsylvania's large battlefield: Gettysburg, in Pennsylvania, about 73,600 acres. The dark blue (Union free) states have very few: two in Pennsylvania (Gettysburg and Hanover), two in Ohio, one in Indiana, four in Kansas and two in Minnesota.",
           "accept": "(a) Orange, the states that seceded; Virginia. (b) Gettysburg, about 73,600 acres. (c) Few.",
           "text": "Counted from the layer's state codes, not on the map: of 378 areas, 288 are in the eleven states that seceded (Virginia 121, Tennessee 38, Georgia 26; Louisiana's 23 include Yellow Bayou, whose code is mistyped L0), 62 are in the border states (Missouri 29, West Virginia 15, Kentucky 11, Maryland 7, Delaware none), 11 are in Union free states and 17 are outside the shaded states (15 named battlefields and the two unnamed areas)."
         }
@@ -284,7 +284,7 @@
         "minutes": 8,
         "frontOfClass": [
           "Stay on the Virginia, Maryland and Pennsylvania bookmark and turn on Railroads in operation by 1863.",
-          "Ask: where are the purple lines closest together, in the blue states or the orange states?",
+          "Ask: where are the black railroad lines closest together, in the blue states or the orange states?",
           "Find First Manassas, west of Washington, and Petersburg, south of Richmond.",
           "Ask: what do those two battlefields have in common when the railroads are on?"
         ],
@@ -333,7 +333,7 @@
         ],
         "steps": [
           {
-            "en": "Open The Mississippi Valley bookmark."
+            "en": "In Map layers, turn off Railroads in operation by 1863. Then open The Mississippi Valley bookmark."
           },
           {
             "en": "Follow the Mississippi River south from Missouri to the Gulf of Mexico."
@@ -350,7 +350,7 @@
         },
         "lines": 4,
         "answer": {
-          "where": "Battlefields layer and pop-ups at The Mississippi Valley bookmark. On or beside the river, north to south: New Madrid Island No 10 (MO), Fort Pillow and Memphis (TN), Helena (AR), Vicksburg and Grand Gulf (MS), Port Hudson, Baton Rouge and New Orleans (LA). States layer: Arkansas, Louisiana and Texas are west of the river (part of Louisiana is east of it). Other areas on the river are also correct, for example Belmont (MO), Milliken's Bend, Goodrich's Landing, Donaldsonville and Forts Jackson & St. Phillip (LA). Memphis appears as Memphis I and Memphis II.",
+          "where": "Battlefields layer and pop-ups at The Mississippi Valley bookmark. On or beside the river, north to south: New Madrid Island No 10 (Missouri), Fort Pillow and Memphis (Tennessee), Helena (Arkansas), Vicksburg and Grand Gulf (Mississippi), Port Hudson, Baton Rouge and New Orleans (Louisiana). States layer: Arkansas, Louisiana and Texas are west of the river (part of Louisiana is east of it). Other areas on the river are also correct, for example Belmont (Missouri), Milliken's Bend, Goodrich's Landing, Donaldsonville and Forts Jackson & St. Philip (Louisiana). Memphis appears as Memphis I and Memphis II.",
           "accept": "(a) Any three battlefields on the river, such as those named. (b) Arkansas, Louisiana and Texas. (c) They would be cut off from the rest of the Confederacy, and the Union could move troops and supplies along the river.",
           "text": "Vicksburg's pop-up gives about 38,600 acres. The Battle of Vicksburg lesson picks up from here."
         }
@@ -378,7 +378,7 @@
             "en": "Open The United States in 1863 bookmark with Civil War battlefields on."
           },
           {
-            "en": "Find a battlefield that is not on a shaded state and click it."
+            "en": "Find a battlefield that is not on a shaded state. Zoom in until it is big enough to click, and click it."
           },
           {
             "en": "Read the last sentence of the pop-up."
@@ -389,7 +389,7 @@
         },
         "lines": 4,
         "answer": {
-          "where": "Battlefields layer at the national view: dots in today's North Dakota, Oklahoma, New Mexico, Colorado and Idaho, none of them on a shaded state. Almost every battlefield pop-up gives the name, the state and the acres (two unnamed areas in Oklahoma do not), and each ends: \"This layer does not say who won.\"",
+          "where": "Battlefields layer at the national view: dots in today's North Dakota, Oklahoma, New Mexico, Colorado and Idaho, none of them on a shaded state. Almost every battlefield pop-up gives the name, the state and the acres (two unnamed areas in Oklahoma do not), and each ends: \"This layer does not say who won.\" The two exceptions are Sand Creek (Colorado) and Bear River (Idaho): their pop-ups say the area was an attack on a village, not a battle, so a student who clicks one of them has a different last sentence.",
           "accept": "(a) Any of those places, for example North Dakota or New Mexico. (b) It gives the name, the state and the size of the area; it leaves out the date, who fought, who won and how many people were killed or wounded. (c) A National Park Service battle summary, a textbook, letters or newspapers from the time.",
           "text": "Teacher notes say more about the western sites, which include fights between United States troops and Native nations and two massacres of Native people, at Bear River and Sand Creek."
         }
@@ -442,14 +442,14 @@
   ],
   "assessment": {
     "evidence": "Strong answers use the states layer (the four groups and which states border Washington), the battlefields layer (most dots on orange states, Virginia the most, Gettysburg as a rare battle in a free state), the Washington to Richmond measurement, the railroads (denser in the Union, junctions at Manassas and Petersburg) and the river battlefields.",
-    "exemplar": "Most of the Civil War was fought in the South, and a lot of it in Virginia. When I turned on the battlefields, almost all the dots were on the orange states, and Virginia had the most by far. The dark blue states had only a few, like Gettysburg in Pennsylvania, which the pop-up says is about 73,600 acres. I think Virginia had so many because of the capitals. I measured from Washington to Richmond and it was only about 100 miles, and the battlefields are packed in between. The railroads matter too. The Union states have way more purple lines, and Manassas and Petersburg are both where rail lines meet, so armies fought over them. In the Mississippi Valley the battlefields follow the river, like Vicksburg and Port Hudson. If the Union held the river, Texas, Arkansas and Louisiana were cut off. So the war was fought where the capitals, railroads and rivers were."
+    "exemplar": "Most of the Civil War was fought in the South, and a lot of it in Virginia. When I turned on the battlefields, almost all the dots were on the orange states, and Virginia had the most by far. The dark blue states had only a few, like Gettysburg in Pennsylvania, which the pop-up says is about 73,600 acres. I think Virginia had so many because of the capitals. I measured from Washington to Richmond and it was only about 100 miles, and the battlefields are packed in between. The railroads matter too. The Union states have way more railroad lines, and Manassas and Petersburg are both where rail lines meet, so armies fought over them. In the Mississippi Valley the battlefields follow the river, like Vicksburg and Port Hudson. If the Union held the river, Texas, Arkansas and Louisiana were cut off. So the war was fought where the capitals, railroads and rivers were."
   },
   "studentSupport": {
     "beforeYouStart": {
       "en": "In 1860 and 1861, eleven states left the United States and formed the Confederate States of America. To secede means to leave a country. The states that stayed were called the Union. The attack on Fort Sumter, in South Carolina, in April 1861 started the fighting. This map shows the country in the middle of 1863."
     },
     "readingTheMap": {
-      "en": "Blue states stayed in the Union: dark blue for free states, light blue for slave states that stayed (the border states). Orange states seceded: dark orange before Fort Sumter, light orange after. Only the states are on at the start; turn on the other layers in Map layers when a question asks. Dark shapes are battlefields; from far away each one looks like a dot. Purple lines are railroads, and they appear only after you zoom in to a region. Click a state or a battlefield to read its pop-up."
+      "en": "Blue states stayed in the Union: dark blue for free states, light blue for slave states that stayed (the border states). Orange states seceded: dark orange before Fort Sumter, light orange after. Only the states are on at the start; turn on the other layers in Map layers when a question asks. Dark shapes are battlefields; from far away each one looks like a dot. Thin black lines are railroads, and they appear only after you zoom in to a region. Each state's name is printed on it. Click a state or a battlefield to read its pop-up."
     },
     "tips": [
       "popups"
