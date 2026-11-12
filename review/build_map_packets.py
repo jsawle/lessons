@@ -99,9 +99,9 @@ def teacher_part(lesson):
     return "\n".join(lines)
 
 
-BRIEF = """You are reviewing {n} Grade 8 US History lessons and the **web maps** they use, as the person described below. Each lesson has a student sheet that sends students to one web map in a browser app, where they turn layers on and off, open bookmarks, read the legend and click features to read pop-ups. The lesson wording was revised in November 2026, some lessons are new and some maps are new or redesigned, so review both: the lesson as this person meets it ({lessonparts}), and the map: whether this person can find, read, tell apart and use on the map what the sheet asks for, and whether the sheet's words and the map match.
+BRIEF = """You are reviewing {n} of the {total} Grade 8 US History lessons in this set, and the **web maps** they use, as the person described below. Each lesson has a student sheet that sends students to one web map in a browser app, where they turn layers on and off, open bookmarks, read the legend and click features to read pop-ups. The lesson wording was revised in November 2026, some lessons are new and some maps are new or redesigned, so review both: the lesson as this person meets it ({lessonparts}), and the map: whether this person can find, read, tell apart and use on the map what the sheet asks for, and whether the sheet's words and the map match.
 
-What you have for each lesson: {have} and, under "The map as students meet it", pictures of the live web map taken by following the sheet's steps. Each entry says what was done (bookmark, layers turned on or off, zoom, a click on a feature), the picture file, the legend text when the legend was open, and the pop-up text exactly as it appeared. Open every picture with your file-reading tool and look at it; the pictures are the map. They were taken with the same mapping library the app uses, at a laptop size (1200 x 800 pixels), with the legend in a panel on the right; the app's own buttons and panels look a little different. {tz}A pop-up longer than its box scrolls, and the pop-up text given is the whole of it. "No pop-up opened" means the click opened nothing. Some clicks open a different feature from the one named, because something else sits at that spot: judge what a student would get.{sim}
+What you have for each lesson: {have} and, under "The map as students meet it", pictures of the live web map taken by following the sheet's steps. Each entry says what was done (bookmark, layers turned on or off, zoom, a click on a feature), the picture file, the legend text when the legend was open, and the pop-up text exactly as it appeared. Open every picture with your file-reading tool and look at it; the pictures are the map. They were taken with the same mapping library the app uses, at a laptop size (1200 x 800 pixels), with the legend in a panel on the right; the app's own buttons and panels look a little different. {tz}A pop-up longer than its box scrolls, and the pop-up text given is the whole of it. "No pop-up opened" means the click opened nothing. A capture note under a view says when the capture could not show what a student would get. Some clicks open a different feature from the one named, because something else sits at that spot: judge what a student would get.{sim}
 
 Stay in role. Use only these packets, the files they name and the pictures: don't open other files or websites. Where you suspect a fact is wrong, say what you'd check rather than looking it up.
 
@@ -138,6 +138,9 @@ def views(lid, sim=False):
         if s.get("legend"): out.append("Legend text:\n" + s["legend"].strip())
         if "click" in s["what"].lower() or s.get("popup") is not None:
             out.append("Pop-up text:\n" + (s["popup"].strip() if s.get("popup") else "(no pop-up opened)"))
+            if s.get("opened") and not s.get("popup"): out.append("(Capture note: the capture could not get a pop-up to show at this spot, by clicking or by opening the named feature directly. That is a limit of the capture, so treat what a student gets here as unknown.)")
+            elif s.get("opened"): out.append("(Capture note: the capture's click at this spot opened nothing in the time it waited, so this is the pop-up of the feature the step names, opened directly. It shows what the pop-up says, not that a student's click here reaches it.)")
+        if s.get("stillDrawing"): out.append("(Capture note: the map had not finished drawing when this picture was taken, so something may be missing from it.)")
     for n in r.get("notes", []): out.insert(0, "Note on the capture: " + n)
     if r.get("bookmarks"): out.insert(0, "Bookmarks in the app: " + ", ".join(r["bookmarks"]))
     lay = r.get("layers", [])
@@ -157,7 +160,7 @@ for pid, names in PERSONAS.items():
         lessonparts = ("the lesson page, the answer notes, the student sheet and the teacher notes" if teacher else "the student sheet: its words, its steps and what it asks you to write")
         simnote = (" For every view you get two pictures: the first is a simulation of the map as someone with red-green colour vision deficiency (deuteranopia) sees it, and that is how you see the map; the second is the same view as most classmates see it. Look at the simulated picture first for every view, and open the other one when you need to know what the sheet's colour words refer to." if pid == "S3" else "")
         parts = [f"# Lesson and map review: {pid}, lessons group {g}", "",
-                 BRIEF.format(n=len(ids), have=have, lessonparts=lessonparts, tz=tz_note, sim=simnote,
+                 BRIEF.format(n=len(ids), total={12: 'twelve'}.get(len(index), len(index)), have=have, lessonparts=lessonparts, tz=tz_note, sim=simnote,
                               out=os.path.abspath(os.path.join(FINDINGS, f"{pid}-{g}.json")), pid=pid, group=g), "", "## Who you are", persona_text(names)]
         for lid in ids:
             lesson = json.load(open(f"resources/lessons/{lid}.json"))
