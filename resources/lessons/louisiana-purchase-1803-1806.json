@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "louisiana-purchase-1803-1806",
-  "contentVersion": "0.10.0",
+  "contentVersion": "0.10.1",
   "status": "draft",
   "updated": "2026-11-11",
   "reviewed": null,
@@ -198,7 +198,7 @@
         "minutes": 10,
         "frontOfClass": [
           "Open the Up the Missouri bookmark.",
-          "Trace the purple trail line and the campsite symbols up the Missouri River.",
+          "Trace the line of orange campsite dots up the Missouri River; the trail line runs underneath them.",
           "In Map layers, turn off United States Watersheds and turn on Biomes.",
           "Click the shading along the route and read the first line of the pop-up.",
           "Ask: which biome covers the Great Plains?",

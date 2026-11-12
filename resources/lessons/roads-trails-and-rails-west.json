@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "roads-trails-and-rails-west",
-  "contentVersion": "0.9.1",
+  "contentVersion": "0.9.2",
   "status": "draft",
   "updated": "2026-11-11",
   "reviewed": null,
@@ -99,7 +99,7 @@
         "minutes": 10,
         "frontOfClass": [
           "Open the legend and show the seven trail colors.",
-          "Click the dotted Oregon trail line and read where it started and ended.",
+          "Click the dotted Oregon trail line in Oregon or near Boise, Idaho, where it runs alone; check that the pop-up's title says Oregon Trail, then read where it started and ended.",
           "Click the Santa Fe trail and read where it started.",
           "Click the Pony Express trail and read where it started.",
           "Ask: in which state do most of the trails start?",
@@ -281,7 +281,7 @@
           "en": "From trails to rails",
           "es": "De los senderos a los rieles"
         },
-        "task": "Turn on the Railroads group in Map layers. Using the legend, which trails does the Union Pacific and Central Pacific line follow most closely? Click a thin gray railroad line near a trail, read when it was in operation, and compare the year with 1869, when the California Trail stopped being used (the thick transcontinental lines have no pop-up).",
+        "task": "Turn on the Railroads group in Map layers. Using the legend, which trails does the Union Pacific and Central Pacific line follow most closely? Click a thin dark railroad line near a trail, read when it was in operation, and compare the year with 1869, when the California Trail stopped being used (the thick transcontinental lines have no pop-up).",
         "tools": [
           "layers",
           "popups",
@@ -317,7 +317,7 @@
         },
         "answer": {
           "where": "Legend: Transcontinental Railroad (Union Pacific) and Transcontinental Railroad (Central Pacific) are thick colored lines running from Omaha across Nebraska, Wyoming, Utah and Nevada to Sacramento. Compare with the dotted California and Mormon Pioneer trails (and the Pony Express across Nevada). Railroads 1826 to 1911 pop-up: \"Railroad in operation by:\" followed by a year. West of the Missouri River the layer's earliest lines are dated 1865 (Nebraska), 1867 (Wyoming), 1868 (Nevada) and 1869 (Utah); California and Texas have lines from the 1850s. The California Trail pop-up says the trail was used until 1869, when the transcontinental railroad was completed.",
-          "accept": "The California and Mormon Pioneer trails (also the Pony Express across Nevada). A year read from a gray line's pop-up, correctly placed before or after 1869. Most lines along the trails west of the Missouri River date from the late 1860s or later, so the railroads arrived as the wagon trails went out of use, and ran along the same river valleys and passes."
+          "accept": "The California and Mormon Pioneer trails (also the Pony Express across Nevada). A year read from a thin dark line's pop-up, correctly placed before or after 1869. Most lines along the trails west of the Missouri River date from the late 1860s or later, so the railroads arrived as the wagon trails went out of use, and ran along the same river valleys and passes."
         }
       }
     ],
