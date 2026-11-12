@@ -2,10 +2,10 @@
  "tool": "Map builder 1.4",
  "spec": "maps/specs/civil-war-1863.json",
  "specId": "civil-war-1863",
- "specVersion": "0.1.1",
- "built": "2026-11-11T17:44:36Z",
- "webmapFingerprint": "ae45b7d10addf6e2a68406a85cf055a42a1228d0",
- "itemFingerprint": "31a4e1ca738e1d4895487545ccbb870c0ec26f03",
+ "specVersion": "0.2.0",
+ "built": "2026-11-12T07:24:34Z",
+ "webmapFingerprint": "a701a337c381a4fe8b82c12482c06f66d1771ee0",
+ "itemFingerprint": "e179514e21f0dd88ecc1ce6df59697e7c55ab22c",
  "checked": [
   "layers, start visibility and bookmarks match the lesson",
   "basemap is public and not CARTO",
@@ -14,9 +14,9 @@
  "warnings": [],
  "tested": {
   "tool": "Map test 1.0",
-  "when": "2026-11-11T17:46:42Z",
+  "when": "2026-11-12T07:26:57Z",
   "timeZone": "America/Chicago",
-  "webmapFingerprint": "ae45b7d10addf6e2a68406a85cf055a42a1228d0",
+  "webmapFingerprint": "a701a337c381a4fe8b82c12482c06f66d1771ee0",
   "pass": true,
   "checks": [
    {

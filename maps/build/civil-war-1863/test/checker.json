@@ -2,21 +2,21 @@
  "rubricVersion": "0.7.1",
  "maps": [
   {
-   "itemId": "ae45b7d10addf6e2a68406a85cf055a4",
+   "itemId": "a701a337c381a4fe8b82c12482c06f66",
    "title": "The Civil War, 1863",
    "owner": "build",
-   "auditedAt": "2026-11-11T17:46:42.587Z",
+   "auditedAt": "2026-11-12T07:26:57.744Z",
    "rubricVersion": "0.7.1",
    "standards": "General Cartographic Standards for MapMaker",
    "tally": {
     "fail": 0,
-    "warn": 1,
+    "warn": 2,
     "info": 1,
-    "pass": 36,
+    "pass": 35,
     "skip": 0
    },
    "verdict": "review",
-   "score": 98.8,
+   "score": 97.6,
    "grade": "A",
    "sectionScores": {
     "Map title & metadata": 97.1,
@@ -24,7 +24,7 @@
     "Layers": 100,
     "Pop-ups": 100,
     "Visual effects & labels": 100,
-    "Accessibility": 100,
+    "Accessibility": 87.5,
     "Symbology & legend": 100
    },
    "checks": [
@@ -336,7 +336,7 @@
      "status": "pass",
      "message": "",
      "evidence": [
-      "no map labels"
+      "Noto Sans"
      ]
     },
     {
@@ -393,10 +393,11 @@
      "name": "Label text large enough",
      "severity": "warn",
      "provisional": false,
-     "status": "pass",
-     "message": "",
+     "status": "warn",
+     "message": "2 label class(es) below 10pt.",
      "evidence": [
-      "label sizes OK / no labels"
+      "The states in the Civil War, 1863: 9pt",
+      "The states in the Civil War, 1863: 9pt"
      ]
     },
     {

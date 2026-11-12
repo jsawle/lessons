@@ -8,6 +8,7 @@
    "layerType": "ArcGISFeatureLayer",
    "visibility": true,
    "opacity": 1,
+   "showLabels": true,
    "layerDefinition": {
     "drawingInfo": {
      "renderer": {
@@ -115,7 +116,76 @@
         }
        }
       ]
-     }
+     },
+     "labelingInfo": [
+      {
+       "labelExpressionInfo": {
+        "expression": "$feature.State"
+       },
+       "labelPlacement": "esriServerPolygonPlacementAlwaysHorizontal",
+       "symbol": {
+        "type": "esriTS",
+        "color": [
+         43,
+         43,
+         43,
+         255
+        ],
+        "font": {
+         "family": "Noto Sans",
+         "size": 9,
+         "weight": "bold"
+        },
+        "horizontalAlignment": "center",
+        "verticalAlignment": "baseline",
+        "haloColor": [
+         255,
+         255,
+         255,
+         230
+        ],
+        "haloSize": 1.5
+       },
+       "minScale": 0,
+       "maxScale": 0,
+       "repeatLabel": false,
+       "where": "GroupName LIKE 'Seceded%'",
+       "deconflictionStrategy": "none"
+      },
+      {
+       "labelExpressionInfo": {
+        "expression": "$feature.State"
+       },
+       "labelPlacement": "esriServerPolygonPlacementAlwaysHorizontal",
+       "symbol": {
+        "type": "esriTS",
+        "color": [
+         43,
+         43,
+         43,
+         255
+        ],
+        "font": {
+         "family": "Noto Sans",
+         "size": 9,
+         "weight": "bold"
+        },
+        "horizontalAlignment": "center",
+        "verticalAlignment": "baseline",
+        "haloColor": [
+         255,
+         255,
+         255,
+         230
+        ],
+        "haloSize": 1.5
+       },
+       "minScale": 0,
+       "maxScale": 0,
+       "repeatLabel": false,
+       "where": "GroupName NOT LIKE 'Seceded%'"
+      }
+     ]
     }
    },
    "popupInfo": {
@@ -160,12 +230,12 @@
        "type": "esriSLS",
        "style": "esriSLSSolid",
        "color": [
-        94,
-        60,
-        153,
+        17,
+        17,
+        17,
         255
        ],
-       "width": 1.25
+       "width": 1.5
       },
       "label": "Railroad in operation by 1863"
      }
@@ -205,7 +275,7 @@
         26,
         26,
         26,
-        255
+        115
        ],
        "outline": {
         "type": "esriSLS",
@@ -240,7 +310,7 @@
       "name": "name",
       "title": "Battle",
       "returnType": "string",
-      "expression": "return Proper(Lower($feature.NAME));"
+      "expression": "// The layer spells two names differently from the National Park Service's own usage.\nvar n = Proper(Lower($feature.NAME));\nn = Replace(n, 'Glorietta', 'Glorieta');\nn = Replace(n, 'St.phillip', 'St. Philip');\nreturn n;"
      },
      {
       "name": "acres",
@@ -252,7 +322,7 @@
       "name": "what",
       "title": "What happened here",
       "returnType": "string",
-      "expression": "var n = Upper(Trim($feature.NAME));\nif (n == 'SAND CREEK') { return 'The site of the Sand Creek Massacre, in ' + $feature.STATE + '. In November 1864 United States volunteer troops attacked a Cheyenne and Arapaho village here.'; }\nif (n == 'BEAR RIVER') { return 'The site of the Bear River Massacre, in ' + $feature.STATE + '. In January 1863 United States volunteer troops attacked a Northwestern Shoshone village here.'; }\nreturn 'A Civil War battlefield in ' + $feature.STATE + '.';"
+      "expression": "var st = Decode(Trim($feature.STATE), 'AL', 'Alabama', 'AR', 'Arkansas', 'CO', 'Colorado', 'DC', 'Washington, D.C.', 'FL', 'Florida', 'GA', 'Georgia', 'ID', 'Idaho', 'IN', 'Indiana', 'KS', 'Kansas', 'KY', 'Kentucky', 'LA', 'Louisiana', 'MD', 'Maryland', 'MN', 'Minnesota', 'MO', 'Missouri', 'MS', 'Mississippi', 'NC', 'North Carolina', 'ND', 'North Dakota', 'NM', 'New Mexico', 'OH', 'Ohio', 'OK', 'Oklahoma', 'PA', 'Pennsylvania', 'SC', 'South Carolina', 'TN', 'Tennessee', 'TX', 'Texas', 'VA', 'Virginia', 'WV', 'West Virginia', '');\nvar inSt = IIf(st == '', '', ' in ' + st);\nvar n = Upper(Trim($feature.NAME));\nif (n == 'SAND CREEK') { return 'The site of the Sand Creek Massacre,' + inSt + '. In November 1864 United States volunteer troops attacked a Cheyenne and Arapaho village here.'; }\nif (n == 'BEAR RIVER') { return 'The site of the Bear River Massacre,' + inSt + '. In January 1863 United States volunteer troops attacked a Northwestern Shoshone village here.'; }\nreturn 'A Civil War battlefield' + inSt + '.';"
      },
      {
       "name": "note",
