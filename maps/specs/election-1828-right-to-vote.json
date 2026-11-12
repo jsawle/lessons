@@ -1,7 +1,7 @@
 {
   "format": "Map spec 1.0",
   "id": "election-1828-right-to-vote",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "lesson": "resources/lessons/election-1828-right-to-vote.json",
   "item": {
     "title": "The election of 1828 and the right to vote",
@@ -152,7 +152,8 @@
           "halo": {
             "color": "#FFFFFFE6",
             "size": 1.5
-          }
+          },
+          "overlap": true
         },
         {
           "expression": "$feature.State",
@@ -167,7 +168,8 @@
           "halo": {
             "color": "#FFFFFFE6",
             "size": 1.5
-          }
+          },
+          "overlap": true
         },
         {
           "expression": "$feature.State",
@@ -182,7 +184,8 @@
           "halo": {
             "color": "#FFFFFFE6",
             "size": 1.5
-          }
+          },
+          "overlap": true
         }
       ]
     },
@@ -207,9 +210,9 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  229,
-                  245,
-                  224,
+                  252,
+                  197,
+                  192,
                   225
                 ],
                 "outline": {
@@ -232,9 +235,9 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
+                  247,
+                  104,
                   161,
-                  217,
-                  155,
                   225
                 ],
                 "outline": {
@@ -257,9 +260,9 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  65,
-                  171,
-                  93,
+                  174,
+                  1,
+                  126,
                   225
                 ],
                 "outline": {
@@ -286,9 +289,9 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      229,
-                      245,
-                      224,
+                      252,
+                      197,
+                      192,
                       225
                     ],
                     "outline": {
@@ -315,9 +318,9 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
+                      247,
+                      104,
                       161,
-                      217,
-                      155,
                       225
                     ],
                     "outline": {
@@ -344,9 +347,9 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      65,
-                      171,
-                      93,
+                      174,
+                      1,
+                      126,
                       225
                     ],
                     "outline": {
@@ -371,7 +374,7 @@
             }
           ]
         },
-        "why": "Green, light to dark, the same as the white men layer, so one rule covers both: darker green means more limits. Tested against the blue and orange pies with simulated red-green color vision deficiency: every step stays apart from both pie colors."
+        "why": "Pink, light to dark, where the white men layer is green, so the two layers cannot be mistaken for each other; in both, darker means more limits. Tested against the blue and orange pies with simulated red-green color vision deficiency: every step stays apart from both pie colors."
       },
       "popup": {
         "title": "{State} in 1828: {Electors} electors",
@@ -409,9 +412,9 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  229,
-                  245,
-                  224,
+                  199,
+                  233,
+                  192,
                   225
                 ],
                 "outline": {
@@ -434,9 +437,9 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  161,
-                  217,
-                  155,
+                  116,
+                  196,
+                  118,
                   225
                 ],
                 "outline": {
@@ -459,9 +462,9 @@
                 "type": "esriSFS",
                 "style": "esriSFSSolid",
                 "color": [
-                  65,
-                  171,
-                  93,
+                  35,
+                  139,
+                  69,
                   225
                 ],
                 "outline": {
@@ -488,9 +491,9 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      229,
-                      245,
-                      224,
+                      199,
+                      233,
+                      192,
                       225
                     ],
                     "outline": {
@@ -517,9 +520,9 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      161,
-                      217,
-                      155,
+                      116,
+                      196,
+                      118,
                       225
                     ],
                     "outline": {
@@ -546,9 +549,9 @@
                     "type": "esriSFS",
                     "style": "esriSFSSolid",
                     "color": [
-                      65,
-                      171,
-                      93,
+                      35,
+                      139,
+                      69,
                       225
                     ],
                     "outline": {
