@@ -14,7 +14,7 @@
   else root.MMRSheet = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "1.9";
+  var VERSION = "1.10";
   /* Sheets with more question text than this get tighter writing lines, so every sheet stays on one page. */
   var LONG_SHEET_CHARS = 1040;
   /* The same for two-page sheets (lessons with studentSupport), counting the extra sections too. */
@@ -118,7 +118,7 @@
         // The map steps are set a point smaller and tighter than the question, so the sheet reads as "do this, then answer this".
         kids.push(new D.Paragraph({ indent: { left: 720, hanging: 300 }, spacing: { after: 0, line: extraLong ? 230 : 252 }, keepNext: true, children: [run((j + 1) + ".\t" + MMR.plain(st[lang]), { size: 22 })] }));
       });
-      kids.push(new D.Paragraph({ indent: { left: 360 }, spacing: { before: extraLong ? 40 : 60 }, keepNext: !!S, children: [run((T.answer || "Answer:") + " ", { bold: true, color: "00619B" }), run(q.ask[lang])] }));
+      kids.push(new D.Paragraph({ indent: { left: 360 }, spacing: { before: extraLong ? 40 : 60 }, keepNext: !!S, children: [run((T.answer || "Answer:") + " ", { bold: true, color: "00619B" }), run(MMR.letterParts(q.ask[lang]))] }));
       if (q.fill) kids.push(new D.Paragraph({ indent: { left: 360 }, spacing: { before: 60 }, keepNext: !!S, children: withBlanks(q.fill[lang]) }));
       kids.push.apply(kids, lines(nLines(q.lines || (S ? 3 : 2))));
     });

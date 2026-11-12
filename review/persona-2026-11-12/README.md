@@ -125,3 +125,20 @@ Tools: Map capture 1.1, Map review packets 1.1. Capture time zone America/Chicag
 - Rule-layer legend sits below the pie key.
 - Question 5 step order (Georgia off screen); question 6 "end of any pop-up".
 - T5: the lesson gives no evidence for the expansion side of the big question; check New York's 1824 electors.
+
+## What was fixed (12 November 2026)
+
+- Maps we built: election of 1828 0.8.0 (pink second layer, darker greens, every state labeled); Civil War 0.2.0 (state names, black railroads, see-through battlefields, state names spelled out, Glorieta); slavery 1850 0.2.0 (state pop-up wording, ship pop-up heading, label off the line). All three published and read back.
+- Lesson wording on all twelve lessons, each change checked against the lesson file and, where it names something on the map, against the live map or the capture.
+- Page renderer 3.7 and Word sheet builder 1.10: a question that asks several things is lettered (a), (b), (c).
+- Texas standards checked against the Texas Education Agency's Grade 8 assessed curriculum (revised August 2026): Roads, Trails and Rails had two 8.6 entries from an older version, now one 8.6(B); 8.8(C) added to the Civil War and Vicksburg lessons and 8.7(D), 8.7(E) to the slavery lesson; partial-coverage notes added to 8.17(A), 8.5(E) and 8.5(F). Other states' codes were not checked.
+- Site wording: twelve lessons; English-only sheets no longer described as English and Spanish.
+
+## Not fixed
+
+- Map changes on the eight MapMaker maps: listed for the map owner in a separate change list (60 items).
+- Printable map pages (item 9): parked, to try on real teachers.
+- Reading the map as a short key (item 8), suggested splits for 45-minute periods (item 10), key words with meanings (item 11): not done.
+- Land cessions data (Eastern Band listed twice, Creek "Nations today"): next data version.
+- Spanish sheets for the four English-only lessons.
+- A wrong sentence was caught before merge: a draft said one Maryland elector voted for both men in 1796; the pop-up's own explanation (each elector cast two votes) is used instead.

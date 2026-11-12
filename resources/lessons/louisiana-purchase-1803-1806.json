@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "louisiana-purchase-1803-1806",
-  "contentVersion": "0.9.0",
+  "contentVersion": "0.10.0",
   "status": "draft",
   "updated": "2026-11-11",
   "reviewed": null,
@@ -112,8 +112,8 @@
             "es": "Abre el marcador The Louisiana Purchase (La compra de Luisiana) y usa la leyenda."
           },
           {
-            "en": "Compare the yellow Louisiana Purchase with the green land of the United States in 1783.",
-            "es": "Compara la compra de Luisiana, en amarillo, con el territorio de Estados Unidos en 1783, en verde."
+            "en": "Compare the yellow Louisiana Purchase with the darker land east of it, the United States in 1783.",
+            "es": "Compara la compra de Luisiana, en amarillo, con la zona más oscura al este, el territorio de Estados Unidos en 1783."
           },
           {
             "en": "Click the Louisiana Purchase and read its pop-up.",
@@ -346,8 +346,8 @@
       "es": "En 1803, Estados Unidos compró a Francia su reclamación sobre una enorme región al oeste del río Misisipi. Los pueblos indígenas vivían en la mayor parte de esa tierra y la gobernaban; el Servicio de Parques Nacionales dice que la expedición se encontró con más de 50 naciones tribales. El presidente Thomas Jefferson envió al Cuerpo de Descubrimiento, dirigido por Meriwether Lewis y William Clark, a explorarla y a buscar una ruta por agua hasta el océano Pacífico. La expedición partió en 1803 y regresó en 1806."
     },
     "readingTheMap": {
-      "en": "The map has no place names: click an area to see its name. Use the legend: green is the land Britain gave up to the United States in 1783; yellow is the Louisiana Purchase of 1803. Edges of the purchase settled later have other colors or stripes. A purple line follows the Lewis and Clark National Historic Trail, and symbols mark the Corps' approximate campsites, close enough together to cover parts of the line; the line and the symbols have no pop-ups. United States Watersheds and Biomes are off when the map opens and show today's landscape. Watersheds shows larger regions when you zoom out and smaller ones when you zoom in.",
-      "es": "El mapa no tiene nombres de lugares: haz clic en una zona para ver su nombre. Usa la leyenda: el verde es la tierra que Gran Bretaña cedió a Estados Unidos en 1783; el amarillo, la compra de Luisiana de 1803. Los bordes definidos más tarde tienen otros colores o rayas. Una línea morada sigue la ruta de Lewis y Clark, y unos símbolos marcan los campamentos aproximados, tan juntos que tapan partes de la línea; la línea y los símbolos no tienen ventanas emergentes. Las capas United States Watersheds y Biomes están desactivadas al abrir el mapa y muestran el paisaje actual."
+      "en": "The map has no place names: click an area to see its name. Use the legend: the darker gray-green land east of the Mississippi is the land Britain gave up to the United States in 1783; yellow is the Louisiana Purchase of 1803. Edges of the purchase settled later have other colors or stripes. A purple line follows the Lewis and Clark National Historic Trail, and symbols mark the Corps' approximate campsites, close enough together to cover parts of the line; the line and the symbols have no pop-ups. United States Watersheds and Biomes are off when the map opens and show today's landscape. Watersheds shows larger regions when you zoom out and smaller ones when you zoom in.",
+      "es": "El mapa no tiene nombres de lugares: haz clic en una zona para ver su nombre. Usa la leyenda: la zona verde grisácea, más oscura, al este del Misisipi es la tierra que Gran Bretaña cedió a Estados Unidos en 1783; el amarillo es la compra de Luisiana de 1803. Los bordes definidos más tarde tienen otros colores o rayas. Una línea morada sigue la ruta de Lewis y Clark, y unos símbolos marcan los campamentos aproximados, tan juntos que tapan partes de la línea; la línea y los símbolos no tienen ventanas emergentes. Las capas United States Watersheds y Biomes están desactivadas al abrir el mapa y muestran el paisaje actual."
     },
     "tips": [
       "popups"

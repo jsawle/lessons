@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "civil-war-battlefields",
-  "contentVersion": "0.9.0",
+  "contentVersion": "0.9.1",
   "status": "draft",
   "updated": "2026-11-11",
   "reviewed": null,
@@ -492,6 +492,10 @@
     {
       "code": "FL SS.8.A.5.4",
       "text": "Identify the division (Confederate and Union States, Border states, western territories) of the United States at the outbreak of the Civil War"
+    },
+    {
+      "code": "TX 8.8(C)",
+      "text": "Explain significant events of the Civil War, including the firing on Fort Sumter; the battles of Antietam, Gettysburg, and Vicksburg; the Emancipation Proclamation; Lee's surrender at Appomattox Court House; and the assassination of Abraham Lincoln (partial: this lesson uses the firing on Fort Sumter to sort the states that seceded, and locates Gettysburg and Vicksburg)"
     },
     {
       "code": "TX 8.10(A)",

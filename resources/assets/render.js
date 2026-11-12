@@ -264,7 +264,7 @@
       "<p><em>" + esc(T.openMap + " " + lesson.title) + "</em></p>" + supportTop(site, lesson, lang) + "<ol>" +
       lesson.inquiry.questions.map(function (q) {
         return "<li><strong>" + inline(q.title[lang]) + '</strong><p class="sheetlabel">' + esc(T.onTheMap || "On the map:") + '</p><ol class="sheetsteps">' + (q.steps || []).map(function (st) { return "<li>" + inline(st[lang]) + "</li>"; }).join("") + "</ol>" +
-          '<p><span class="sheetlabel">' + esc(T.answer || "Answer:") + "</span> " + inline(q.ask[lang]) + (q.fill ? " " + blank(q.fill[lang]) : "") + "</p></li>";
+          '<p><span class="sheetlabel">' + esc(T.answer || "Answer:") + "</span> " + inline(MMR.letterParts(q.ask[lang])) + (q.fill ? " " + blank(q.fill[lang]) : "") + "</p></li>";
       }).join("") + "</ol><p><strong>" + esc(T.yourAnswer) + "</strong> " + inline(lesson.inquiry.final.student[lang]) + "</p>" +
       (S && S.reflection ? "<h4>" + esc(T.lookingBack) + "</h4><p>" + inline(S.reflection[lang]) + "</p>" : "") +
       (note ? '<p class="muted" lang="en">' + esc(note) + "</p>" : "") + "</article>";

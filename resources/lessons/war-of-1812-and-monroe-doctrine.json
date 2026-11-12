@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "war-of-1812-and-monroe-doctrine",
-  "contentVersion": "0.7.1",
+  "contentVersion": "0.8.0",
   "status": "draft",
   "updated": "2026-11-11",
   "reviewed": null,
@@ -323,8 +323,8 @@
             "es": "Activa la capa Latin American independence and US recognition (independencia latinoamericana y reconocimiento de Estados Unidos)."
           },
           {
-            "en": "Click the blue circles and read each recognition date in the pop-up.",
-            "es": "Haz clic en los círculos azules y lee la fecha de reconocimiento en cada ventana emergente."
+            "en": "Click the blue circles and read each recognition date in the pop-up. The year printed beside a name on the map is the year of independence, not recognition. The pop-up may show the date with a clock time, one day early; that does not change your answer.",
+            "es": "Haz clic en los círculos azules y lee la fecha de reconocimiento en cada ventana emergente. El año impreso junto a un nombre en el mapa es el año de la independencia, no del reconocimiento. La ventana emergente puede mostrar la fecha con una hora y un día antes; eso no cambia tu respuesta."
           },
           {
             "en": "Check each date against December 2, 1823 (blue only means recognized by 1824).",
@@ -437,8 +437,8 @@
       "es": "A comienzos del siglo XIX, Gran Bretaña y Francia estaban en guerra, y ambas se apoderaban de barcos estadounidenses. Además, los buques de guerra británicos obligaban a marineros de barcos estadounidenses a servir en la Marina Real, y Gran Bretaña apoyaba a los pueblos indígenas que se resistían a los asentamientos estadounidenses. En junio de 1812, Estados Unidos le declaró la guerra a Gran Bretaña."
     },
     "readingTheMap": {
-      "en": "The map has no place names: click a feature to see its name. Pink shading shows the United States in 1800. Diamonds mark battles; use the legend: blue for an American victory, red for a British victory, gray if neither side won; bigger diamonds mean more casualties. The legend says British for every opponent, but some battles were fought against Native nations: the pop-up's story tells you who fought. Each battle pop-up gives the dates, the victor and the casualties. Tan shading shows battlefield land when you zoom in close to a battle. Three layers are off when the map opens: the land Spain gave up in 1819 (green), the treaty line (pink dashes, in seven parts) and the Latin American nations, shown as blue circles if the United States recognized them by 1824 and orange diamonds if later; the pop-up gives the exact date.",
-      "es": "El mapa no tiene nombres de lugares: haz clic en un elemento para ver su nombre. El sombreado rosado muestra Estados Unidos en 1800. Los rombos marcan las batallas; usa la leyenda: azul si ganaron los estadounidenses, rojo si ganaron los británicos y gris si ningún bando ganó; los rombos más grandes indican más bajas. La leyenda dice británicos para todos los adversarios, pero algunas batallas se libraron contra naciones indígenas: el relato de la ventana emergente dice quién combatió. La ventana emergente de cada batalla da las fechas, el vencedor y las bajas. El sombreado color canela muestra el terreno de los campos de batalla cuando te acercas mucho a una batalla. Tres capas están desactivadas al abrir el mapa: la tierra que España cedió en 1819 (verde), la línea del tratado (rayas rosadas, en siete tramos) y las naciones latinoamericanas, que aparecen como círculos azules si Estados Unidos las reconoció en 1824 o antes y como rombos naranjas si fue más tarde; la ventana emergente da la fecha exacta."
+      "en": "The names printed on the map are from 1800, such as New Spain and Indiana Territory, and there are no city names: click a feature to see its name. Pink shading shows the United States in 1800. Diamonds mark battles; use the legend: blue for an American victory, red for a British victory, gray if neither side won; bigger diamonds mean more casualties. The legend says British for every opponent, but some battles were fought against Native nations: the pop-up's story tells you who fought. Each battle pop-up gives the dates, the victor and the casualties. Tan shading shows battlefield land when you zoom in close to a battle. Three layers are off when the map opens: the land Spain gave up in 1819 (green), the treaty line (pink dashes, in seven parts) and the Latin American nations, shown as blue circles if the United States recognized them by 1824 and orange diamonds if later; the pop-up gives the exact date.",
+      "es": "Los nombres impresos en el mapa son de 1800, como New Spain e Indiana Territory, y no hay nombres de ciudades: haz clic en un elemento para ver su nombre. El sombreado rosado muestra Estados Unidos en 1800. Los rombos marcan las batallas; usa la leyenda: azul si ganaron los estadounidenses, rojo si ganaron los británicos y gris si ningún bando ganó; los rombos más grandes indican más bajas. La leyenda dice británicos para todos los adversarios, pero algunas batallas se libraron contra naciones indígenas: el relato de la ventana emergente dice quién combatió. La ventana emergente de cada batalla da las fechas, el vencedor y las bajas. El sombreado color canela muestra el terreno de los campos de batalla cuando te acercas mucho a una batalla. Tres capas están desactivadas al abrir el mapa: la tierra que España cedió en 1819 (verde), la línea del tratado (rayas rosadas, en siete tramos) y las naciones latinoamericanas, que aparecen como círculos azules si Estados Unidos las reconoció en 1824 o antes y como rombos naranjas si fue más tarde; la ventana emergente da la fecha exacta."
     },
     "tips": [
       "popups"
@@ -482,11 +482,11 @@
   "standards": [
     {
       "code": "TX 8.5(E)",
-      "text": "Explain the causes, important events, and effects of the War of 1812"
+      "text": "Explain the causes, important events, and effects of the War of 1812 (partial: this lesson covers where and when the main battles were fought; causes are not taught)"
     },
     {
       "code": "TX 8.5(F)",
-      "text": "Identify the foreign policies of presidents Washington through Monroe and explain the impact of Washington's Farewell Address and the Monroe Doctrine"
+      "text": "Identify the foreign policies of presidents Washington through Monroe and explain the impact of Washington's Farewell Address and the Monroe Doctrine (partial: this lesson covers the Monroe Doctrine and the 1819 treaty with Spain)"
     },
     {
       "code": "FL SS.8.A.4.1",

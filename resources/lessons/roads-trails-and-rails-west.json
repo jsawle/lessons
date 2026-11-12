@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "roads-trails-and-rails-west",
-  "contentVersion": "0.9.0",
+  "contentVersion": "0.9.1",
   "status": "draft",
   "updated": "2026-11-11",
   "reviewed": null,
@@ -414,11 +414,7 @@
   "standards": [
     {
       "code": "TX 8.6(B)",
-      "text": "Explain the political, economic, and social roots of Manifest Destiny"
-    },
-    {
-      "code": "TX 8.6(C)",
-      "text": "Analyze the relationship between the concept of Manifest Destiny and the westward growth of the nation"
+      "text": "Analyze the westward growth of the nation, including the Louisiana Purchase and Manifest Destiny"
     },
     {
       "code": "TX 8.11(A)",

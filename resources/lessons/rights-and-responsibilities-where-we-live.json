@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "rights-and-responsibilities-where-we-live",
-  "contentVersion": "0.7.1",
+  "contentVersion": "0.8.0",
   "status": "draft",
   "updated": "2026-11-11",
   "reviewed": null,
@@ -86,15 +86,15 @@
             "es": "Acércate a tu pueblo o ciudad; el mapa base tiene nombres de lugares."
           },
           {
-            "en": "Find the blue lines, which are the boundaries of congressional districts.",
-            "es": "Busca las líneas azules, que son los límites de los distritos del Congreso."
+            "en": "Find the blue lines, which are the boundaries of congressional districts. Your state's border is drawn the same way.",
+            "es": "Busca las líneas azules, que son los límites de los distritos del Congreso. El borde de tu estado está dibujado igual."
           },
           {
             "en": "Click inside your district and read the pop-up.",
             "es": "Haz clic dentro de tu distrito y lee la ventana emergente."
           },
           {
-            "en": "Zoom out to see your whole state.",
+            "en": "Zoom out to see your whole state. To count its districts, click inside each area in your state and read the district number in the pop-up.",
             "es": "Aléjate para ver todo tu estado."
           }
         ],
@@ -130,20 +130,20 @@
         ],
         "steps": [
           {
-            "en": "Zoom in on your town until the basemap shows building names.",
-            "es": "Acércate a tu pueblo o ciudad hasta que el mapa base muestre nombres de edificios."
+            "en": "Zoom in on your town until you can read the street names.",
+            "es": "Acércate a tu pueblo o ciudad hasta que puedas leer los nombres de las calles."
           },
           {
-            "en": "Find four public places, not homes: a courthouse, city hall, library, place of worship, polling place or newspaper office.",
-            "es": "Encuentra cuatro lugares públicos, no viviendas: un tribunal, el ayuntamiento, una biblioteca, un lugar de culto, un centro de votación o la redacción de un periódico."
+            "en": "Find four public places, not homes: a courthouse, city hall, library, place of worship, polling place or newspaper office. If the map does not name a place, use what you know about where it is.",
+            "es": "Encuentra cuatro lugares públicos, no viviendas: un tribunal, el ayuntamiento, una biblioteca, un lugar de culto, un centro de votación o la redacción de un periódico. Si el mapa no nombra un lugar, usa lo que sabes sobre dónde está."
           },
           {
             "en": "Use Sketch to put a pin on each one.",
-            "es": "Usa Sketch (dibujar) para colocar un marcador en cada uno."
+            "es": "Usa Sketch (dibujar) para colocar un alfiler en cada uno."
           },
           {
             "en": "Next to each pin, write a right from the Bill of Rights that people use there.",
-            "es": "Junto a cada marcador, escribe un derecho de la Carta de Derechos que las personas ejercen allí."
+            "es": "Junto a cada alfiler, escribe un derecho de la Carta de Derechos que las personas ejercen allí."
           },
           {
             "en": "Finish in one lesson or take a screenshot, because sketches are not saved.",
@@ -185,12 +185,12 @@
             "es": "Empieza en el tribunal o el ayuntamiento que marcaste."
           },
           {
-            "en": "Add a pin at each place where people carry out a citizen's responsibility: voting, jury service, paying taxes.",
-            "es": "Añade un marcador en cada lugar donde las personas cumplen una responsabilidad ciudadana: votar, formar parte de un jurado, pagar impuestos."
+            "en": "Add a pin at each place where people carry out a civic responsibility: voting, jury service, paying taxes.",
+            "es": "Añade un alfiler en cada lugar donde las personas cumplen una responsabilidad cívica: votar, formar parte de un jurado, pagar impuestos."
           },
           {
             "en": "Next to each pin, write the responsibility.",
-            "es": "Junto a cada marcador, escribe la responsabilidad."
+            "es": "Junto a cada alfiler, escribe la responsabilidad."
           }
         ],
         "ask": {
@@ -305,8 +305,8 @@
       "es": "En 1791 se añadieron a la Constitución diez enmiendas, conocidas como la Carta de Derechos. Protegen derechos como la libertad de expresión, de religión y de prensa, el derecho a reunirse pacíficamente y el derecho a un juicio justo. Los ciudadanos también tienen responsabilidades con su comunidad y su país."
     },
     "readingTheMap": {
-      "en": "The Topographic basemap has place names, and labels public buildings when you zoom in close. Blue lines are the boundaries of congressional districts for the 119th Congress (2025–2027); click inside one to see who represents it. National Register of Historic Places is off when the map opens: turn it on in Map layers and zoom in to see its diamonds, colored by type of place (see the legend). Its pop-ups give each place's name and address. Put your pins on public places, not homes. Sketches are not saved when you close the map.",
-      "es": "El mapa base Topographic (topográfico) tiene nombres de lugares y muestra los nombres de los edificios públicos cuando te acercas mucho. Las líneas azules son los límites de los distritos del Congreso número 119 (2025–2027); haz clic dentro de uno para ver quién lo representa. La capa National Register of Historic Places está desactivada al abrir el mapa: actívala en las capas del mapa (Map layers) y acércate para ver sus rombos, de colores según el tipo de lugar (mira la leyenda). Sus ventanas emergentes dan el nombre y la dirección de cada lugar. Coloca tus marcadores en lugares públicos, no en viviendas. Los dibujos no se guardan al cerrar el mapa."
+      "en": "The Topographic basemap has place and street names. When you zoom in close it names some public buildings, but not all of them, so you may need to use what you know about your town. Blue lines are the boundaries of congressional districts for the 119th Congress (2025–2027); click inside one to see who represents it. National Register of Historic Places is off when the map opens: turn it on in Map layers and zoom in to see its diamonds, colored by type of place (see the legend). Its pop-ups give each place's name and address. Put your pins on public places, not homes. Sketches are not saved when you close the map.",
+      "es": "El mapa base Topographic (topográfico) tiene nombres de lugares y de calles. Cuando te acercas mucho nombra algunos edificios públicos, pero no todos, así que quizá tengas que usar lo que sabes de tu pueblo o ciudad. Las líneas azules son los límites de los distritos del Congreso número 119 (2025–2027); haz clic dentro de uno para ver quién lo representa. La capa National Register of Historic Places está desactivada al abrir el mapa: actívala en las capas del mapa (Map layers) y acércate para ver sus rombos, de colores según el tipo de lugar (mira la leyenda). Sus ventanas emergentes dan el nombre y la dirección de cada lugar. Coloca tus alfileres en lugares públicos, no en viviendas. Los dibujos no se guardan al cerrar el mapa."
     },
     "tips": [
       "popups"

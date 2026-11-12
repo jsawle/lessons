@@ -8,7 +8,7 @@
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  var VERSION = { renderer: "3.6", format: "1.10", checker: "1.10", knowledge: "1.6", prompt: "1.2" };
+  var VERSION = { renderer: "3.7", format: "1.10", checker: "1.10", knowledge: "1.6", prompt: "1.2" };
   var HEX32 = /^[0-9a-f]{32}$/i;
   var DATE = /^\d{4}-\d{2}-\d{2}$/;
   var DISTANCE = /\b(how far|how close|distance|distances|miles|farther|longer than|shorter than)\b/i;
@@ -51,6 +51,18 @@
       return '<a href="' + u + '" target="_blank" rel="noopener">' + t + '<span class="sr-only"> (opens in a new tab)</span></a>';
     });
     return out;
+  }
+  /* A question that asks several things is lettered (a), (b), (c) on the student sheet, so a student can see how many
+     answers are wanted and label each one. A sentence that is not a question stays with the question that follows it.
+     Text that already has its own (a) is left alone. Added after the persona review of 12 November 2026. */
+  function letterParts(text) {
+    var s = String(text == null ? "" : text);
+    if (/\(a\)/.test(s)) return s;
+    var sentences = s.split(/(?<=[.?!])\s+(?=[A-ZÁÉÍÓÚÑ¿¡"“(])/), parts = [], cur = [];
+    sentences.forEach(function (x) { cur.push(x); if (/\?["”)]?$/.test(x.trim())) { parts.push(cur.join(" ")); cur = []; } });
+    if (cur.length) { if (parts.length) parts[parts.length - 1] += " " + cur.join(" "); else parts.push(cur.join(" ")); }
+    if (parts.length < 2) return s;
+    return parts.map(function (x, i) { return "(" + "abcdefgh".charAt(i) + ") " + x; }).join(" ");
   }
   function plain(text) {
     return String(text == null ? "" : text)
@@ -464,7 +476,7 @@
     return errs;
   }
 
-  return { VERSION: VERSION, esc: esc, inline: inline, plain: plain, atlasUrl: atlasUrl, mapImage: mapImage, classroomShareUrl: classroomShareUrl, hubUrl: hubUrl, feedbackUrl: feedbackUrl,
+  return { VERSION: VERSION, esc: esc, inline: inline, plain: plain, letterParts: letterParts, atlasUrl: atlasUrl, mapImage: mapImage, classroomShareUrl: classroomShareUrl, hubUrl: hubUrl, feedbackUrl: feedbackUrl,
     mergeSite: mergeSite, loadSite: loadSite, defaultLessons: defaultLessons, lessonsFileName: lessonsFileName, unfilled: unfilled,
     names: names, appName: appName, aOrAn: aOrAn, licence: licence, assistant: assistant,
     howToLinks: howToLinks, assistantUrl: assistantUrl, lessonEntry: lessonEntry, assistantFile: assistantFile, assistantFileName: assistantFileName, aiPrompt: aiPrompt, promptUrl: promptUrl,
