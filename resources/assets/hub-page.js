@@ -11,7 +11,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "3.6";
+  var VERSION = "3.7";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
@@ -306,7 +306,7 @@
       "<p><em>" + esc(T.openMap + " " + lesson.title) + "</em></p>" + supportTop(site, lesson, lang) + "<ol>" +
       lesson.inquiry.questions.map(function (q) {
         return "<li><strong>" + t(q.title[lang]) + '</strong><p class="mml-sheetlabel">' + esc(T.onTheMap || "On the map:") + '</p><ol class="mml-sheetsteps">' + (q.steps || []).map(function (st) { return "<li>" + t(st[lang]) + "</li>"; }).join("") + "</ol>" +
-          '<p><span class="mml-sheetlabel">' + esc(T.answer || "Answer:") + "</span> " + t(q.ask[lang]) + (q.fill ? " " + blanks(q.fill[lang]) : "") + "</p></li>";
+          '<p><span class="mml-sheetlabel">' + esc(T.answer || "Answer:") + "</span> " + t(MMR.letterParts(q.ask[lang])) + (q.fill ? " " + blanks(q.fill[lang]) : "") + "</p></li>";
       }).join("") + "</ol><p><strong>" + esc(T.yourAnswer) + "</strong> " + t(lesson.inquiry.final.student[lang]) + "</p>" +
       (S && S.reflection ? "<h4>" + esc(T.lookingBack) + "</h4><p>" + t(S.reflection[lang]) + "</p>" : "") + "</div>";
   }

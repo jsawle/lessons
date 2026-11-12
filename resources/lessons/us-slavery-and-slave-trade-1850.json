@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "us-slavery-and-slave-trade-1850",
-  "contentVersion": "0.10.0",
+  "contentVersion": "0.10.1",
   "status": "draft",
   "updated": "2026-11-11",
   "reviewed": null,
@@ -519,6 +519,14 @@
     {
       "code": "FL SS.8.A.5.2",
       "text": "Analyze the role of slavery in the development of sectional conflict"
+    },
+    {
+      "code": "TX 8.7(D)",
+      "text": "Analyze the impact of slavery on different sections of the United States (partial: this lesson maps where slavery was legal in 1850 and where the trade within the United States ran)"
+    },
+    {
+      "code": "TX 8.7(E)",
+      "text": "Identify the provisions and compare the effects of congressional conflicts and compromises prior to the Civil War, including the role of John Quincy Adams (partial: this lesson covers the Missouri Compromise line and the Compromise of 1850 as they appear on the map)"
     },
     {
       "code": "TX 8.10(A)",

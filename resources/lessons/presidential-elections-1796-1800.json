@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "presidential-elections-1796-1800",
-  "contentVersion": "0.8.1",
+  "contentVersion": "0.9.0",
   "status": "draft",
   "updated": "2026-11-11",
   "reviewed": null,
@@ -106,8 +106,8 @@
             "es": "Usa la leyenda para leer los gráficos circulares de 1796."
           },
           {
-            "en": "Click each two-color pie and read its pop-up.",
-            "es": "Haz clic en cada gráfico de dos colores y lee su ventana emergente."
+            "en": "Click each two-color pie and read its pop-up. Maryland's says 10 electors but lists 7 for Adams and 4 for Jefferson: each elector cast two votes, so a state's votes add up to twice its electors.",
+            "es": "Haz clic en cada gráfico de dos colores y lee su ventana emergente. La de Maryland dice 10 electores pero da 7 para Adams y 4 para Jefferson: cada elector emitía dos votos, así que los votos de un estado suman el doble de sus electores."
           }
         ],
         "ask": {
@@ -242,8 +242,8 @@
             "es": "En las capas del mapa (Map layers), comprueba que Election of 1800 esté activada."
           },
           {
-            "en": "Click New York and read how many electors it had and how they voted.",
-            "es": "Haz clic en Nueva York y lee cuántos electores tenía y cómo votaron."
+            "en": "Click New York and read how many electors it had and how they voted in 1800. Then turn on Election of 1796, turn off Election of 1800, and read how New York voted in 1796.",
+            "es": "Haz clic en Nueva York y lee cuántos electores tenía y cómo votaron en 1800. Luego activa Election of 1796, desactiva Election of 1800 y lee cómo votó Nueva York en 1796."
           },
           {
             "en": "Click the two-color pies again and read how close each state was.",
@@ -320,8 +320,8 @@
       "es": "George Washington no pertenecía a ningún partido y, en 1796, cuando se preparaba para dejar la presidencia, advirtió a los estadounidenses contra los partidos. Para entonces ya se habían formado dos: los federalistas, encabezados por John Adams y Alexander Hamilton, y los demócrata-republicanos, encabezados por Thomas Jefferson y James Madison. Cada elector emitía dos votos para presidente, y quien quedaba en segundo lugar era vicepresidente."
     },
     "readingTheMap": {
-      "en": "The map has no place names: click a pie to see the state's name and its number of electors. Each pie shows how a state's electors voted: orange for John Adams (Federalist) and blue for Thomas Jefferson (Democratic-Republican); use the legend. Bigger pies mean more electors. Each elector cast two votes; the pop-up lists the other candidates. Election of 1800 is off when the map opens. Pink squares mark two Supreme Court cases; this lesson does not use them, and they cover Maryland's pie, so turn that layer off in Map layers. Maine is shown within Massachusetts and West Virginia within Virginia, and territories aren't shown.",
-      "es": "El mapa no tiene nombres de lugares: haz clic en un gráfico circular para ver el nombre del estado y su número de electores. Cada gráfico muestra cómo votaron los electores de un estado: naranja para John Adams (federalista) y azul para Thomas Jefferson (demócrata-republicano); usa la leyenda. Los gráficos más grandes indican más electores. Cada elector emitía dos votos; la ventana emergente muestra a los demás candidatos. La capa Election of 1800 está desactivada al abrir el mapa. Los cuadrados rosados marcan dos casos de la Corte Suprema; esta lección no los usa y tapan el gráfico de Maryland, así que desactiva esa capa en las capas del mapa (Map layers). Maine aparece dentro de Massachusetts y Virginia Occidental dentro de Virginia, y no se muestran los territorios."
+      "en": "The map has no place names: click a pie to see the state's name and its number of electors. An elector is a person chosen by a state to vote for president. Each pie shows how a state's electors voted: orange for John Adams (Federalist) and blue for Thomas Jefferson (Democratic-Republican); use the legend. Bigger pies mean more electors. Each elector cast two votes; the pop-up lists the other candidates. Election of 1800 is off when the map opens. Pink squares mark two Supreme Court cases; this lesson does not use them, and they cover Maryland's pie, so turn that layer off in Map layers. Maine is shown within Massachusetts and West Virginia within Virginia, and territories aren't shown.",
+      "es": "El mapa no tiene nombres de lugares: haz clic en un gráfico circular para ver el nombre del estado y su número de electores. Un elector es una persona elegida por un estado para votar por el presidente. Cada gráfico muestra cómo votaron los electores de un estado: naranja para John Adams (federalista) y azul para Thomas Jefferson (demócrata-republicano); usa la leyenda. Los gráficos más grandes indican más electores. Cada elector emitía dos votos; la ventana emergente muestra a los demás candidatos. La capa Election of 1800 está desactivada al abrir el mapa. Los cuadrados rosados marcan dos casos de la Corte Suprema; esta lección no los usa y tapan el gráfico de Maryland, así que desactiva esa capa en las capas del mapa (Map layers). Maine aparece dentro de Massachusetts y Virginia Occidental dentro de Virginia, y no se muestran los territorios."
     },
     "tips": [
       "popups"

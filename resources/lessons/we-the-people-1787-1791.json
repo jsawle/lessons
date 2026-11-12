@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "we-the-people-1787-1791",
-  "contentVersion": "0.8.1",
+  "contentVersion": "0.9.0",
   "status": "draft",
   "updated": "2026-11-11",
   "reviewed": null,
@@ -134,8 +134,8 @@
             "es": "Haz clic en los gráficos circulares y lee cada ventana emergente."
           },
           {
-            "en": "Read the first line of each pop-up, which gives the percentage enslaved.",
-            "es": "Lee la primera línea de cada ventana emergente, que da el porcentaje de personas esclavizadas."
+            "en": "Read the first line of each pop-up, which gives the percentage enslaved. If the percentage has many decimal places, round it to a whole number.",
+            "es": "Lee la primera línea de cada ventana emergente, que da el porcentaje de personas esclavizadas. Si el porcentaje tiene muchos decimales, redondéalo a un número entero."
           }
         ],
         "ask": {
@@ -217,8 +217,8 @@
             "es": "En las capas del mapa (Map layers), activa House seats in 1793 (escaños en la Cámara en 1793)."
           },
           {
-            "en": "Read the labels: each gives the state and its seats, and darker blue means more seats.",
-            "es": "Lee las etiquetas: cada una da el estado y sus escaños, y un azul más oscuro indica más escaños."
+            "en": "Read the labels: each gives the state and its seats, and darker blue means more seats. A small state may have no label: click it to read its seats.",
+            "es": "Lee las etiquetas: cada una da el estado y sus escaños, y un azul más oscuro indica más escaños. Un estado pequeño puede no tener etiqueta: haz clic en él para leer sus escaños."
           },
           {
             "en": "Click two states and read how many senators each had.",
@@ -273,8 +273,8 @@
           "es": "Según la cláusula de los tres quintos, se contaban tres de cada cinco personas esclavizadas al repartir los escaños de la Cámara. ¿Cuántos escaños tuvieron Virginia y Carolina del Sur con la cláusula, y cuántos habría tenido cada uno si se hubiera contado a todas las personas esclavizadas, o a ninguna? ¿Qué estados ganaron escaños al contar a personas esclavizadas, que no podían votar?"
         },
         "fill": {
-          "en": "Virginia: ____ seats with the three-fifths clause; ____ if counted in full; ____ if not counted at all.",
-          "es": "Virginia: ____ escaños con la cláusula de los tres quintos; ____ si se hubiera contado a todas; ____ si no se hubiera contado a ninguna."
+          "en": "Virginia: ____ seats with the three-fifths clause; ____ if counted in full; ____ if not counted at all. South Carolina: ____; ____; ____.",
+          "es": "Virginia: ____ escaños con la cláusula de los tres quintos; ____ si se hubiera contado a todas; ____ si no se hubiera contado a ninguna. Carolina del Sur: ____; ____; ____."
         },
         "lines": 3,
         "answer": {
@@ -542,8 +542,8 @@
       "es": "En 1787, delegados de doce estados se reunieron en Filadelfia y redactaron la Constitución. Los estados grandes y los pequeños no estaban de acuerdo sobre cuántos votos debía tener cada uno en el Congreso. Lo resolvieron con el Gran Compromiso y con el Compromiso de los Tres Quintos, que decidió cómo se contaba a las personas esclavizadas. La Constitución solo entraría en vigor cuando nueve estados la ratificaran, cada uno en una convención especial."
     },
     "readingTheMap": {
-      "en": "The map has no place names: click a pie or a state to see its name in the pop-up title. Pies on the states show the people in 1790: blue for free, orange-red for enslaved, and bigger pies for more people. Three layers are off when the map opens. In House seats in 1793, darker blue means more seats, and each label gives the state's abbreviation and seats. In Ratifying the Constitution, each pie sits where a state's convention met: blue for votes to ratify, orange-red for votes against, and labels give the order each state ratified. Maine is shown within Massachusetts and West Virginia within Virginia.",
-      "es": "El mapa no tiene nombres de lugares: haz clic en un gráfico circular o en un estado para ver su nombre en el título de la ventana emergente. Los gráficos sobre los estados muestran la población en 1790: azul para las personas libres, rojo anaranjado para las esclavizadas, y los gráficos más grandes indican más habitantes. Tres capas están desactivadas al abrir el mapa. En House seats in 1793, un azul más oscuro indica más escaños, y cada etiqueta da la abreviatura del estado y sus escaños. En Ratifying the Constitution, cada gráfico está donde se reunió la convención de un estado: azul para los votos a favor de ratificar, rojo anaranjado para los votos en contra, y las etiquetas indican el orden en que ratificó cada estado. Maine aparece dentro de Massachusetts y Virginia Occidental dentro de Virginia."
+      "en": "The map has no place names: click a pie or a state to see its name in the pop-up title. Pies on the states show the people in 1790: blue for free, orange-red for enslaved (the legend names each color), and bigger pies for more people. Three layers are off when the map opens. In House seats in 1793, darker blue means more seats, and each label gives the state's abbreviation and seats. In Ratifying the Constitution, each pie sits where a state's convention met: blue for votes to ratify, orange-red for votes against, and labels give the order each state ratified. Maine is shown within Massachusetts and West Virginia within Virginia.",
+      "es": "El mapa no tiene nombres de lugares: haz clic en un gráfico circular o en un estado para ver su nombre en el título de la ventana emergente. Los gráficos sobre los estados muestran la población en 1790: azul para las personas libres, rojo anaranjado para las esclavizadas (la leyenda nombra cada color), y los gráficos más grandes indican más habitantes. Tres capas están desactivadas al abrir el mapa. En House seats in 1793, un azul más oscuro indica más escaños, y cada etiqueta da la abreviatura del estado y sus escaños. En Ratifying the Constitution, cada gráfico está donde se reunió la convención de un estado: azul para los votos a favor de ratificar, rojo anaranjado para los votos en contra, y las etiquetas indican el orden en que ratificó cada estado. Maine aparece dentro de Massachusetts y Virginia Occidental dentro de Virginia."
     },
     "tips": [
       "popups"
@@ -587,7 +587,7 @@
     },
     {
       "code": "TX 8.17(A)",
-      "text": "Analyze the arguments of the Federalists and Anti-Federalists, including those of Alexander Hamilton, Patrick Henry, James Madison, and George Mason, and explain how their debates exemplify civil discourse"
+      "text": "Analyze the arguments of the Federalists and Anti-Federalists, including those of Alexander Hamilton, Patrick Henry, James Madison, and George Mason, and explain how their debates exemplify civil discourse (partial: this lesson maps how close each state's ratification vote was; it does not teach the arguments of the people named)"
     },
     {
       "code": "FL SS.8.A.3.10",

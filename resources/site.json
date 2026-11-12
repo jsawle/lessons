@@ -1,15 +1,15 @@
 {
  "app": {
   "name": "{pages} (lab)",
-  "version": "0.21.0",
+  "version": "0.22.0",
   "parts": {
-   "Page renderer": "3.6",
-   "Word sheet builder": "1.9",
+   "Page renderer": "3.7",
+   "Word sheet builder": "1.10",
    "Lesson file format": "1.10",
    "Checker": "1.10",
    "Assistant knowledge builder": "1.6",
    "AI prompt builder": "1.2",
-   "Hub page builder": "3.6",
+   "Hub page builder": "3.7",
    "Map pictures": "1.0"
   }
  },

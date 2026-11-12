@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "election-1828-right-to-vote",
-  "contentVersion": "0.4.0",
+  "contentVersion": "0.5.0",
   "status": "draft",
   "updated": "2026-11-11",
   "reviewed": null,
@@ -254,10 +254,10 @@
         ],
         "steps": [
           {
-            "en": "Click South Carolina and read Who chose the electors. Then open The Middle Atlantic bookmark and click Delaware."
+            "en": "Click South Carolina and read Who chose the electors. Click Georgia, the state south of it, and read the same line."
           },
           {
-            "en": "Click Georgia and read Who chose the electors."
+            "en": "Open The Middle Atlantic bookmark, click Delaware and read Who chose the electors."
           }
         ],
         "ask": {
@@ -291,7 +291,7 @@
             "en": "Click Pennsylvania and read Free Black men."
           },
           {
-            "en": "Read the sentence about women at the end of any pop-up."
+            "en": "Read the sentence about women in slanted letters near the end of any pop-up, just above the last link."
           }
         ],
         "ask": {
