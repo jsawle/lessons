@@ -1,7 +1,7 @@
 {
   "format": "Map spec 1.0",
   "id": "slavery-1850",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "lesson": "resources/lessons/us-slavery-and-slave-trade-1850.json",
   "item": {
     "title": "Slavery and the slave trade, 1850",
@@ -149,7 +149,7 @@
       },
       "popup": {
         "title": "{Name}",
-        "html": "<p><b>Direction people were moved:</b> {Direction}</p><p>{About}</p><p><i>The line is approximate, from a 1920 atlas map.</i></p>"
+        "html": "<p><b>Route of the ship:</b> {Direction}</p><p>{About}</p><p><i>The line is approximate, from a 1920 atlas map.</i></p>"
       }
     },
     {
@@ -308,7 +308,7 @@
       },
       "labels": [
         {
-          "expression": "$feature.Name",
+          "expression": "IIf($feature.Name == 'Unorganized land given up by Texas', '', $feature.Name)",
           "placement": "polygon",
           "color": "#2B2B2B",
           "font": {
@@ -323,7 +323,7 @@
       ],
       "popup": {
         "title": "{Name} in 1850",
-        "html": "<p><b>{Status1850}</b>{expression/admitted}</p><p>{Basis}</p><p>{expression/note}</p>",
+        "html": "<p><b>{expression/status}</b>{expression/admitted}</p><p>{Basis}</p><p>{expression/note}</p>",
         "expressions": {
           "admitted": {
             "title": "Admitted",
@@ -332,6 +332,10 @@
           "note": {
             "title": "Note",
             "arcade": "return DefaultValue($feature.Note, '');"
+          },
+          "status": {
+            "title": "Status in 1850",
+            "arcade": "// The legend groups Washington, D.C. with the slave states; a state's own pop-up says just 'Slave state'.\nvar s = $feature.Status1850;\nif ($feature.Kind == 'State' && Find('Slave state', s) == 0) { return 'Slave state'; }\nif ($feature.Kind == 'District') { return 'A federal district where slavery was legal'; }\nreturn s;"
           }
         }
       }

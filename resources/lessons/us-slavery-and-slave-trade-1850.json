@@ -2,7 +2,7 @@
   "$schema": "../schema/lesson.schema.json",
   "formatVersion": "1.10",
   "id": "us-slavery-and-slave-trade-1850",
-  "contentVersion": "0.9.0",
+  "contentVersion": "0.10.0",
   "status": "draft",
   "updated": "2026-11-11",
   "reviewed": null,
@@ -52,7 +52,7 @@
       },
       {
         "name": "Ships La Amistad (1839) and Creole (1841)",
-        "shows": "Two dashed purple lines: the route of La Amistad in 1839 and of the Creole in 1841. The pop-up gives the direction and a short account. Off when the map opens.",
+        "shows": "Two dashed lines at sea (purple): the route of La Amistad in 1839 and of the Creole in 1841. The pop-up gives the direction and a short account. Off when the map opens.",
         "source": "Harper's Atlas of American History (1920), digitized by Esri; accounts written for this map and fact-checked",
         "offAtStart": true
       },
@@ -188,7 +188,7 @@
             "en": "Click the dashed line. Read the year and the description."
           },
           {
-            "en": "Click Missouri and read the note at the bottom of its pop-up."
+            "en": "Click Missouri, the orange state just north of the east end of the dashed line (its name may not show). Read the sentence in its pop-up about the line."
           },
           {
             "en": "Click Unorganized territory and then Utah Territory. Read the reason in each pop-up."
@@ -304,19 +304,19 @@
         "frontOfClass": [
           "In Map layers, turn on Ships La Amistad (1839) and Creole (1841).",
           "Open The United States in 1850 bookmark.",
-          "Click the dashed purple line that runs up the Atlantic coast and read its pop-up.",
-          "Click the shorter dashed purple line and read its pop-up.",
+          "Click the dashed line that runs up the Atlantic coast and read its pop-up.",
+          "Click the shorter dashed line and read its pop-up.",
           "Ask: where did each voyage end, and who decided what happened to the people on board?"
         ],
         "steps": [
           {
-            "en": "In Map layers, turn on Ships La Amistad (1839) and Creole (1841)."
+            "en": "In Map layers, turn off Routes of the slave trade within the United States and turn on Ships La Amistad (1839) and Creole (1841)."
           },
           {
             "en": "Open The United States in 1850 bookmark."
           },
           {
-            "en": "Click each dashed purple line and read its pop-up."
+            "en": "Click each of the two dashed lines at sea and read its pop-up."
           }
         ],
         "ask": {
@@ -359,7 +359,7 @@
             "en": "Open The Ohio River and the North bookmark."
           },
           {
-            "en": "Click the dots north of the Great Lakes and along the St. Lawrence River. Read the country in each pop-up."
+            "en": "Click the dots on the unshaded land north of the blue states. They lie north of the Great Lakes and along the St. Lawrence River. Read the country in each pop-up."
           },
           {
             "en": "Use Measure to draw a straight line from Ripley, Ohio, to Chatham, in Canada. Chatham is the dot just east of Detroit; click it to check."
@@ -390,13 +390,13 @@
         "core": false,
         "minutes": 5,
         "frontOfClass": [
-          "Click any green line and read its pop-up.",
+          "Click any Underground Railroad route (a thin green line) and read its pop-up.",
           "Ask: why are these routes only approximate?",
           "Ask: the map shows where routes ran. What does it not tell you about the people who were moved along them, or who escaped?"
         ],
         "steps": [
           {
-            "en": "Click any green line and read its pop-up."
+            "en": "Click any Underground Railroad route (a thin green line) and read its pop-up."
           },
           {
             "en": "Think about what you could count or name on this map, and what you could not."
@@ -475,7 +475,7 @@
       "en": "In 1850 slavery was legal in some states and banned in others. A territory was land that belonged to the United States but was not yet a state. Twice, in 1820 and in 1850, Congress passed a compromise, an agreement where each side gives something up, about where slavery would be allowed. People who were enslaved were bought and sold, and many were forced to move far from their families. Some escaped. This map is traced from an atlas printed in 1920."
     },
     "readingTheMap": {
-      "en": "Dark blue: free state. Light blue: free territory. Dark orange: slave state, and Washington, D.C. Light orange: territory open to slavery. The dashed gray line is the Missouri Compromise line. Only these two layers are on at the start; turn on the others in Map layers when a question asks. Black lines are slave trade routes, dashed purple lines are two ships, green lines and black dots are the Underground Railroad. No line has arrows: click it and the pop-up gives the direction. Small states may have no name on the map; click one to see it."
+      "en": "Dark blue: free state. Light blue: free territory. Dark orange: slave state, and Washington, D.C. Light orange: territory open to slavery. The dashed gray line is the Missouri Compromise line. Only these two layers are on at the start; turn on the others in Map layers when a question asks. Solid black lines are slave trade routes. The two dashed lines at sea are two ships. The thinner green lines and the black dots are the Underground Railroad. The legend names each one. No line has arrows: click it and the pop-up gives the direction. Small states may have no name on the map; click one to see it."
     },
     "tips": [
       "popups"
