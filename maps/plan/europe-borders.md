@@ -40,3 +40,26 @@ Look at the map in Map Viewer and the Atlas app, then run the Map checker and pe
 
 - Whether to add the missing small states and territories from other sources.
 - Decided 19 November: one map with all four layers.
+
+## Time slider lab (19 November 2026)
+
+A separate test, so the working map isn't touched. Data id `europe-borders-timeline`, version 0.1.0, built by the builder (1.1) alongside the snapshots: 108 features, one for each border period in the source between 1 January 1914 and 31 December 1947.
+
+- `ShowFrom` and `ShowTo`: the dates the border was in force, cut to the window. These are the start and end fields for the time slider.
+- `BorderFrom` and `BorderTo`: the source's own dates.
+- Two periods are cut in two on the day the country's name changed: Irish Free State to Ireland (29 December 1937) and Kingdom of Serbs, Croats and Slovenes to Yugoslavia (3 October 1929).
+- The builder checks every day in the window: no name twice, and on the four snapshot days the same count as the snapshot layers.
+
+Publish: `python maps\tools\publish_data.py maps\data\europe-borders\europe-borders-timeline.data.json --profile NAME --go`
+
+To test, in this order:
+1. In Map Viewer, add the layer to a new map, switch time on with `ShowFrom` and `ShowTo`, save.
+2. Read the saved map back, to see how the time settings are stored (the Map builder can't write them yet).
+3. Open the map in the Atlas app. Does a border disappear after its end date? Do dates before 1970 work?
+
+Limits that matter for an animation:
+- The source records recognised borders, not wartime occupation. Poland, Czechoslovakia and Austria stay on the map through 1939 to 1945; Germany only gains the Sudetenland (30 September 1938).
+- The Free City of Danzig ends on 31 August 1938 in the source.
+- Estonia, Latvia and Lithuania end on 1 June 1940 and the Soviet Union's border changes on 2 June 1940.
+- Most change is in 1918 to 1921 (49 of the 84 changes) and in 1940 and 1945.
+- The file is 2.7 MB, five times a snapshot layer. Loading speed in a classroom is not tested.

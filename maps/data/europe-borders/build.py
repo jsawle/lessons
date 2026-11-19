@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Europe borders data builder 1.0: cuts four snapshots of Europe's country boundaries out of CShapes 2.0 (ETH Zurich)
+"""Europe borders data builder 1.1: cuts four snapshots of Europe's country boundaries out of CShapes 2.0 (ETH Zurich)
 and writes the GeoJSON files that Data publish puts into ArcGIS Online.
 
 Snapshots (snapshots.json): 1 July 1914, 1 June 1925, 1 January 1938 and 31 December 1947: before and after each world
@@ -13,13 +13,16 @@ maps/data/build/ (ignored by git). See LICENCE.md in this folder before publishi
   python3 maps/data/europe-borders/build.py                  downloads the source
   python3 maps/data/europe-borders/build.py path/to/cshapes_2_gw.topojson.xz
 Writes maps/data/build/europe-borders/europe-<year>-v<version>.geojson and a .built.json record next to each.
+
+1.1 also writes the timeline file (snapshots.json "timeline"): one feature for every border period in the source that
+overlaps 1914 to 1947, with the dates each was in force, for the time slider. A LAB layer: see maps/plan/europe-borders.md.
 """
 import datetime, hashlib, json, lzma, sys, urllib.request
 from pathlib import Path
 from shapely.geometry import Polygon, MultiPolygon, box, mapping
 from shapely.validation import make_valid
 
-VERSION = "1.0"
+VERSION = "1.1"
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 CFG = json.loads((HERE / "snapshots.json").read_text(encoding="utf-8"))
@@ -108,6 +111,51 @@ def main():
                "cshapes": {"url": SRC_URL, "sha1": sha, "licence": "CC BY-NC-SA 4.0"}}
         out.with_suffix(".built.json").write_text(json.dumps(rec, indent=1) + "\n", encoding="utf-8")
         print(f"Built {out.name}: {len(feats)} features, {len(body)/1e3:.0f} kB")
+    timeline(src, owners, bb, drop, outdir, sha)
+
+
+def day_before(d): return (datetime.date.fromisoformat(d) - datetime.timedelta(days=1)).isoformat()
+
+
+def timeline(src, owners, bb, drop, outdir, sha):
+    """Every border period overlapping the window, as one layer. Checked day by day: no name twice on any day, and on
+    each snapshot day exactly the names the snapshot layers have."""
+    T = CFG["timeline"]; lo, hi, feats = T["from"], T["to"], []
+    for p, g in src:
+        if p["end"] < lo or p["start"] > hi or p["country_name"] in drop or not g.intersects(bb): continue
+        g = polygons(g.intersection(bb).buffer(0))
+        if g is None: continue
+        m = mapping(g); geom = {"type": m["type"], "coordinates": rnd(m["coordinates"])}
+        own, code = int(p["owner"]), int(p["gwcode"])
+        by = "" if own == code else CFG["controllers"].get(str(own), owners.get(own, str(own)))
+        cuts = [d for d in T["renamed"].get(p["country_name"], []) if p["start"] < d <= p["end"]]
+        edges = [p["start"]] + cuts + [None]
+        for a, b in zip(edges, edges[1:]):
+            z = p["end"] if b is None else day_before(b)
+            if z < lo or a > hi: continue
+            feats.append({"type": "Feature", "geometry": geom, "properties": {
+                "Name": display_name(p["country_name"], int(a[:4]), p["status"]), "SourceName": p["country_name"], "Status": p["status"].capitalize(),
+                "ControlledBy": by, "BorderFrom": p["start"], "BorderTo": p["end"], "ShowFrom": max(a, lo), "ShowTo": min(z, hi)}})
+    problems = []
+    if len(feats) != T["expectFeatures"]: problems.append(f"{len(feats)} features, expected {T['expectFeatures']}")
+    d, end, snaps = datetime.date.fromisoformat(lo), datetime.date.fromisoformat(hi), {s["date"]: s for s in CFG["snapshots"]}
+    while d <= end:
+        day = d.isoformat(); names = [f["properties"]["Name"] for f in feats if f["properties"]["ShowFrom"] <= day <= f["properties"]["ShowTo"]]
+        if len(set(names)) != len(names): problems.append(f"{day}: a name appears twice: " + ", ".join(sorted({n for n in names if names.count(n) > 1})))
+        if day in snaps:
+            s = snaps[day]
+            if len(names) != s["expectFeatures"]: problems.append(f"{day}: {len(names)} features, the snapshot layer has {s['expectFeatures']}")
+            problems += [f"{day}: missing {n}" for n in s["mustHave"] if n not in names] + [f"{day}: should not be here: {n}" for n in s.get("mustNotHave", []) if n in names]
+        d += datetime.timedelta(days=1)
+    if problems: sys.exit("Not built (timeline):\n  " + "\n  ".join(problems[:20]))
+    feats.sort(key=lambda f: (f["properties"]["Name"], f["properties"]["ShowFrom"]))
+    out = outdir / f"{T['id']}-v{T['version'].replace('.', '_')}.geojson"
+    body = json.dumps({"type": "FeatureCollection", "features": feats}, ensure_ascii=False, separators=(",", ":")).encode("utf-8"); out.write_bytes(body)
+    rec = {"tool": f"Europe borders data builder {VERSION}", "when": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+           "sha1": hashlib.sha1(body).hexdigest(), "features": len(feats), "window": [lo, hi],
+           "cshapes": {"url": SRC_URL, "sha1": sha, "licence": "CC BY-NC-SA 4.0"}}
+    out.with_suffix(".built.json").write_text(json.dumps(rec, indent=1) + "\n", encoding="utf-8")
+    print(f"Built {out.name}: {len(feats)} features, {len(body)/1e3:.0f} kB")
 
 
 if __name__ == "__main__":
