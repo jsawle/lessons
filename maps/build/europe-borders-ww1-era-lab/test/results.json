@@ -2,7 +2,7 @@
  "tool": "Map test 1.1",
  "timeZone": "America/Chicago",
  "sdk": "ArcGIS Maps SDK for JavaScript 5.2",
- "webmapFingerprint": "9164b5ec136a11bbfe81dd7cb72dffa937469579",
+ "webmapFingerprint": "791a50688dbe509c542826ffca392f8ecfb9a64a",
  "results": [
   {
    "name": "jan-1914",
