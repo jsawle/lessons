@@ -1,0 +1,11 @@
+{
+ "type": "Web Map",
+ "title": "LAB: Europe's borders through time, 1914 to 1947 v0.1",
+ "snippet": "Test map: move the time slider to see Europe's country borders on any date from 1914 to 1947. Draft.",
+ "description": "<p><b>Test map.</b> One layer holds every border in Europe that the source records between 1914 and 1947. The time slider shows the borders in force on one date. It steps a year at a time.</p><p><b>Colour:</b> each country keeps one colour for the whole period, so a change of shape or a new country stands out. The colours only tell neighbours apart; they have no other meaning. Every country is also named on the map.</p><p><b>Notes:</b> the source records recognised borders, not wartime occupation, so Poland, Czechoslovakia and Austria stay on the map from 1939 to 1945. Yearly steps skip borders that lasted less than a year. The smallest states are left out, the Soviet Union is one area, coastlines are simplified and the layer stops at 60 degrees east.</p><p><b>Source:</b> CShapes 2.0, ETH Zurich: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), Mapping the International System, 1886-2019, Journal of Conflict Resolution 66(1).</p><p><i>Map version 0.1 (19 November 2026), lab draft.</i></p>",
+ "tags": "World History,Europe,borders,time,First World War,Second World War,lab,draft,licence pending",
+ "accessInformation": "CShapes 2.0: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), ETH Zurich; Esri.",
+ "licenseInfo": "Boundaries from CShapes 2.0 (ETH Zurich), licence CC BY-NC-SA 4.0. Written permission to use it in MapMaker has not been confirmed: keep this map private until it is. Text written for this map is original.",
+ "typeKeywords": "ArcGIS Online,Explorer Web Map,Map,Online Map,Web Map,spec:europe-borders-through-time-lab,specVersion:0.1.0",
+ "extent": "-25.0,34.0,50.0,71.5"
+}

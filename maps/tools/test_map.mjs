@@ -1,10 +1,11 @@
-// Map test 1.0: draws a built web map (maps/build/<id>/webmap.json) with the ArcGIS Maps SDK for JavaScript 4.34 in
+// Map test 1.1: draws a built web map (maps/build/<id>/webmap.json) with the ArcGIS Maps SDK for JavaScript (4.34, or
+// the version in the spec's "test": {"sdk"} or --sdk; time fields set in the map need 5.2) in
 // headless Chromium, set to US Central time, follows the spec's checks (bookmarks, layers on and off, zoom, clicks)
 // and tests what a student would see: pop-up text, legend text, which layers draw. Optionally runs the MapMaker Web
 // Map Auditor on the same build. Writes maps/build/<id>/test/ (pictures, results.json, checker.json) and records the result,
 // with the fingerprint of the build it tested, in report.json; the publish script refuses a build without a pass.
 //
-//   node maps/tools/test_map.mjs maps/build/<id> [--checker path/to/mapchecker/index.html] [--tz America/Chicago]
+//   node maps/tools/test_map.mjs maps/build/<id> [--checker path/to/mapchecker/index.html] [--tz America/Chicago] [--sdk 5.2]
 // Needs playwright (npm i playwright); uses the Chromium at PLAYWRIGHT_BROWSERS_PATH.
 import { createServer } from "node:http";
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
@@ -13,7 +14,7 @@ import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
 import { chromium } from "playwright";
 
-const VERSION = "1.0";
+const VERSION = "1.1";
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, "..", "..");
 const args = process.argv.slice(2);
@@ -31,7 +32,9 @@ if (fp !== report.webmapFingerprint) { console.error("webmap.json has changed si
 const outDir = join(buildDir, "test");
 mkdirSync(outDir, { recursive: true });
 
-const page_html = readFileSync(join(here, "test_map.html"), "utf8").replace("__WMJSON__", JSON.stringify(webmap).replace(/<\//g, "<\\/"));
+const sdk = opt("--sdk", (spec.test || {}).sdk || "4.34");
+const sdkScript = Number(sdk.split(".")[0]) >= 5 ? `<script type="module" src="https://js.arcgis.com/${sdk}/"></script>` : `<script src="https://js.arcgis.com/${sdk}/"></script>`;
+const page_html = readFileSync(join(here, "test_map.html"), "utf8").replaceAll("__SDK__", sdk).replace("__SDKSCRIPT__", sdkScript).replace("__WMJSON__", JSON.stringify(webmap).replace(/<\//g, "<\\/"));
 const server = createServer((q, r) => { r.writeHead(200, { "content-type": "text/html; charset=utf-8" }); r.end(q.url.startsWith("/checker") ? readFileSync(checkerHtml) : page_html); });
 await new Promise((r) => server.listen(0, r));
 const port = server.address().port;
@@ -65,6 +68,7 @@ for (const c of loadError ? [] : spec.checks || []) {
     if (d.bookmark) await page.evaluate((b) => H.bookmark(b), d.bookmark);
     for (const t of d.off || []) await page.evaluate((t) => H.visible(t, false), t);
     for (const t of d.on || []) await page.evaluate((t) => H.visible(t, true), t);
+    if (d.time) await page.evaluate((t) => H.time(t), d.time);
     if (d.goTo) await page.evaluate((g) => H.goTo(g[0], g[1], g[2]), d.goTo);
     await page.evaluate((on) => H.legend(on), !!(d.legend || e.legendHas));
     if (d.open) await page.evaluate((o) => H.openFeature(o.layer, o.where, o.at), d.open);
@@ -83,6 +87,13 @@ for (const c of loadError ? [] : spec.checks || []) {
     for (const s of e.legendHas || []) if (!(legend || "").includes(s)) failures.push(`legend lacks "${s}"`);
     for (const t of e.drawnAtScale || []) { const s = await page.evaluate((t) => H.drawn(t), t); if (!(s.on && s.inRange)) failures.push(`"${t}" doesn't draw at 1:${s.scale.toLocaleString("en-US")}`); }
     for (const t of e.hiddenAtScale || []) { const s = await page.evaluate((t) => H.drawn(t), t); if (s.on && s.inRange) failures.push(`"${t}" draws at 1:${s.scale.toLocaleString("en-US")}`); }
+    for (const t of new Set([...Object.keys(e.namesHave || {}), ...Object.keys(e.namesLack || {}), ...Object.keys(e.count || {})])) {
+      const got = await page.evaluate((t) => H.names(t), t);
+      if (!got.timeInfo) failures.push(`"${t}" has no time fields`);
+      for (const n of (e.namesHave || {})[t] || []) if (!got.names.includes(n)) failures.push(`"${n}" is not shown on ${d.time}`);
+      for (const n of (e.namesLack || {})[t] || []) if (got.names.includes(n)) failures.push(`"${n}" is shown on ${d.time}`);
+      if ((e.count || {})[t] != null && got.names.length !== e.count[t]) failures.push(`${got.names.length} features shown on ${d.time}, expected ${e.count[t]}`);
+    }
     if (/\d\.\d{6,}/.test(popup || "")) failures.push("pop-up shows a number with many decimal places");
     if (/\d{1,2}\/\d{1,2}\/\d{4}, \d{1,2}:\d{2} [AP]M/.test(popup || "")) failures.push("pop-up shows a date with a time");
   } catch (err) { failures.push(`error: ${String(err.message || err).slice(0, 300)}`); }
@@ -106,8 +117,8 @@ if (checkerHtml) {
 await browser.close(); server.close();
 
 const pass = results.length > 0 && results.every((r) => r.pass);
-writeFileSync(join(outDir, "results.json"), JSON.stringify({ tool: `Map test ${VERSION}`, timeZone: tz, sdk: "ArcGIS Maps SDK for JavaScript 4.34", webmapFingerprint: fp, results }, null, 1));
-report.tested = { tool: `Map test ${VERSION}`, when: new Date().toISOString().replace(/\.\d+Z$/, "Z"), timeZone: tz, webmapFingerprint: fp, pass,
+writeFileSync(join(outDir, "results.json"), JSON.stringify({ tool: `Map test ${VERSION}`, timeZone: tz, sdk: "ArcGIS Maps SDK for JavaScript " + sdk, webmapFingerprint: fp, results }, null, 1));
+report.tested = { tool: `Map test ${VERSION}`, sdk, when: new Date().toISOString().replace(/\.\d+Z$/, "Z"), timeZone: tz, webmapFingerprint: fp, pass,
                   checks: results.map((r) => ({ name: r.name, pass: r.pass, failures: r.failures })), checker: checker ? "test/checker.json" : null };
 writeFileSync(join(buildDir, "report.json"), JSON.stringify(report, null, 1) + "\n");
 console.log(pass ? `PASS: ${results.length} checks` : `FAIL: ${results.filter((r) => !r.pass).length} of ${results.length} checks failed`);

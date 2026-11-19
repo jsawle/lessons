@@ -1,0 +1,61 @@
+{
+ "tool": "Map builder 1.5",
+ "spec": "maps/specs/europe-borders-through-time-lab.json",
+ "specId": "europe-borders-through-time-lab",
+ "specVersion": "0.1.0",
+ "built": "2026-11-19T12:32:59Z",
+ "webmapFingerprint": "1793b97549c8415d3c6d06f14756c69c6af17d88",
+ "itemFingerprint": "c301ed3b2f0a5f11e0819fa97f3434ce0640ad5d",
+ "checked": [
+  "basemap is public and not CARTO",
+  "every source layer is readable and every field the spec uses exists",
+  "time fields are date fields; the slider covers 1914-01-01 to 1947-12-31"
+ ],
+ "warnings": [],
+ "tested": {
+  "tool": "Map test 1.1",
+  "sdk": "5.2",
+  "when": "2026-11-19T12:45:53Z",
+  "timeZone": "America/Chicago",
+  "webmapFingerprint": "1793b97549c8415d3c6d06f14756c69c6af17d88",
+  "pass": true,
+  "checks": [
+   {
+    "name": "jan-1914",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "last-day-austria-hungary",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "first-day-austria",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "jan-1925",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "poland-popup-1925",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "jan-1941",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "end-1947",
+    "pass": true,
+    "failures": []
+   }
+  ],
+  "checker": null
+ }
+}
