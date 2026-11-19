@@ -11,7 +11,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "3.7";
+  var VERSION = "3.8";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
@@ -282,6 +282,7 @@
   function toolLinks(site, tools) {
     return (tools || []).map(function (k) {
       var tl = site.tools[k];
+      if (!tl.howTo) return esc(tl.label);  // a tool with no how-to page yet (the time slider) is named, not linked
       return '<a href="' + esc(MMR.hubUrl(site, "/pages/" + tl.howTo)) + '" target="_blank" rel="noopener">' + esc(tl.label) +
         '<span class="mml-sr">, how-to video: ' + esc(tl.howToTitle) + " (opens in a new tab)</span></a>";
     }).join(" · ");
@@ -336,7 +337,7 @@
 
     // Hero: what the lesson is, its standards, the things a teacher does with it, and a picture of the map.
     var gc = classroomButton(site, mm), pic = MMR.mapImage(site, lesson);
-    add("<style>" + CSS + classroomCss(site) + "</style>" + '<div class="mml mml-hero"><p class="mml-crumbs"><a href="' + lessonsPath(site) + '">Lessons</a> › ' + esc(lesson.course) + " › " + esc(lesson.unit) + "</p>" +
+    add("<style>" + cssFor(site, lesson.course) + classroomCss(site) + "</style>" + '<div class="mml mml-hero"><p class="mml-crumbs"><a href="' + lessonsPath(site) + '">Lessons</a> › ' + esc(lesson.course) + " › " + esc(lesson.unit) + "</p>" +
       "<h1>" + esc(lesson.title) + '</h1><div class="mml-herogrid"><div><p class="mml-summary">' + t(lesson.summary) + "</p>" + factsList(site, lesson) +
       '<p class="mml-actions">' + ext(mm, esc(N.openInApp), "mml-btn mml-primary") + " " + (gc ? gc + " " : "") +
       jump(slug, "student-activity", "Student sheet") + " " + jump(slug, "teacher-notes", "Teacher notes") + "</p></div>" +
@@ -437,7 +438,7 @@
     var slug = teacherSlug(lesson), S = [], n = 0, inq = lesson.inquiry, tn = lesson.teacherNotes;
     var mm = MMR.atlasUrl(site, lesson.map.webmapId), N = MMR.names(site), app = N.app;
     function add(html) { S.push(section([mdCard(slug + ":" + n, html)])); n++; }
-    add("<style>" + CSS + "</style>" + '<div class="mml mml-hero"><p class="mml-crumbs"><a href="' + lessonsPath(site) + '">Lessons</a> › <a href="/pages/' + esc(lesson.id) + '">' + esc(lesson.title) + "</a></p>" +
+    add("<style>" + cssFor(site, lesson.course) + "</style>" + '<div class="mml mml-hero"><p class="mml-crumbs"><a href="' + lessonsPath(site) + '">Lessons</a> › <a href="/pages/' + esc(lesson.id) + '">' + esc(lesson.title) + "</a></p>" +
       "<h1>Answer notes: " + esc(lesson.title) + '</h1><div class="mml-notice"><strong>For teachers.</strong> This page holds the answers and what to accept. With students, share the lesson page or the map, not this page.</div>' +
       factsList(site, lesson) +
       '<p class="mml-actions">' + ext(mm, esc(N.openInApp), "mml-btn mml-primary") + ' <a class="mml-btn" href="/pages/' + esc(lesson.id) + '">Lesson page</a> <a class="mml-btn" href="' + sheetPlaceholder(lesson.id, "teacher") + '">Download Word (teacher notes)</a></p></div>');
@@ -452,6 +453,25 @@
       layout: { sections: S } };
   }
 
+  /* Course colours (site.json courseColours): the page CSS with the site's blue tokens swapped for a course's own. */
+  var BLUE = { brand: "#007AC2", hover: "#00619B", press: "#004874", tint: "#E8F2F9", tintBorder: "#9CC9E8", footRule: "#3D6F92" };
+  function courseColours(site, course) { var c = (site.courseColours || {})[course]; return c && typeof c === "object" ? c : null; }
+  function cssFor(site, course) {
+    var c = courseColours(site, course), out = CSS;
+    if (!c) return out;
+    Object.keys(BLUE).forEach(function (k) { if (c[k]) out = out.split(BLUE[k]).join(c[k]); });
+    return out;
+  }
+  /* On the Lessons page each course sits in its own block; a course with its own colours gets these rules for that block. */
+  function courseBlockCss(site, course, cls) {
+    var c = courseColours(site, course);
+    if (!c) return "";
+    var p = ".mml ." + cls + " ";
+    return p + "h2{border-bottom-color:" + c.brand + "}" + p + ".mml-unit{color:" + c.press + ";border-left-color:" + c.brand + "}" +
+      p + ".mml-lessons>li{border-top-color:" + c.brand + "}" + p + "a{color:" + c.hover + "}" + p + "a:hover{color:" + c.press + "}" +
+      p + "a:focus-visible{outline-color:" + c.brand + "}" + p + ".mml-lessons>li:hover h3 a," + p + ".mml-lessons>li:focus-within h3 a{color:" + c.press + "}";
+  }
+
   /* ---------------- Lessons (catalogue) page: grouped by unit, in the order the course is taught ---------------- */
   function cataloguePage(site, lessons) {
     var H = hubHome(site), slug = H.lessonsSlug || "lessons", S = [], n = 0, N = MMR.names(site), app = N.app, A = MMR.assistant(site);
@@ -460,11 +480,12 @@
       return a.course.localeCompare(b.course) || MMR.unitIndex(site, a) - MMR.unitIndex(site, b) || a.title.localeCompare(b.title);
     });
     var courses = sorted.map(function (l) { return l.course; }).filter(function (v, i, a) { return a.indexOf(v) === i; });
-    add("<style>" + CSS + "</style>" + '<div class="mml mml-hero"><h1>' + esc(H.lessonsTitle || "Lessons") + '</h1><p class="mml-summary">' + esc(H.lessonsIntro || "") + "</p>" +
+    add("<style>" + CSS + courses.map(function (c, k) { return courseBlockCss(site, c, "mml-course" + k); }).join("") + "</style>" + '<div class="mml mml-hero"><h1>' + esc(H.lessonsTitle || "Lessons") + '</h1><p class="mml-summary">' + esc(H.lessonsIntro || "") + "</p>" +
       '<p><span class="mml-muted">' + sorted.length + " lesson" + (sorted.length === 1 ? "" : "s") + " · " + esc(courses.join(", ")) + " · no account or login needed</span></p></div>");
     var body = "";
     courses.forEach(function (course) {
       var units = MMR.unitList(site, course), inCourse = sorted.filter(function (l) { return l.course === course; });
+      body += '<div class="mml-course' + courses.indexOf(course) + '">';
       if (courses.length > 1) body += "<h2>" + esc(course) + "</h2>";
       var groups = units.filter(function (u) { return inCourse.some(function (l) { return l.unit === u; }); });
       groups.forEach(function (u) {
@@ -477,6 +498,7 @@
       if (other.length) body += '<h2 class="mml-unit">Other</h2><ul class="mml-lessons">' + other.map(function (l) {
         return '<li><h3><a href="/pages/' + esc(l.id) + '">' + esc(l.title) + '</a></h3><p class="mml-sum">' + t(l.summary) + "</p></li>";
       }).join("") + "</ul>";
+      body += "</div>";
     });
     add('<div class="mml">' + body + "</div>");
     add('<div class="mml"><h2>In every lesson</h2><ul class="mml-prose"><li>' + esc(app ? MMR.aOrAn(app) + " map" : "A map") + ' that opens straight from the page, with each layer’s source listed. No account or login is needed.</li>' +

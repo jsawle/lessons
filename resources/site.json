@@ -1,15 +1,15 @@
 {
  "app": {
   "name": "{pages} (lab)",
-  "version": "0.22.1",
+  "version": "0.23.0",
   "parts": {
-   "Page renderer": "3.7",
+   "Page renderer": "3.8",
    "Word sheet builder": "1.10",
    "Lesson file format": "1.10",
    "Checker": "1.10",
    "Assistant knowledge builder": "1.6",
    "AI prompt builder": "1.2",
-   "Hub page builder": "3.7",
+   "Hub page builder": "3.8",
    "Map pictures": "1.0"
   }
  },
@@ -45,6 +45,10 @@
   "sketch": {
    "label": "Sketch",
    "skill": "Sketching on a map"
+  },
+  "time": {
+   "label": "Time slider",
+   "skill": "Using a time slider to see change over time"
   }
  },
  "sheetText": {
@@ -115,6 +119,15 @@
    "The Civil War",
    "Reconstruction",
    "After Reconstruction"
+  ],
+  "World History": [
+   "Revolutions and nationalism",
+   "Industrialization and imperialism",
+   "The First World War and the peace",
+   "Between the wars",
+   "The Second World War",
+   "The Cold War and decolonization",
+   "The world since 1991"
   ]
  },
  "standardsOrder": {
@@ -223,5 +236,16 @@
     ]
    }
   ]
+ },
+ "courseColours": {
+  "about": "A course can have its own accent colour on its lesson pages, its answer pages and its part of the Lessons page. A course not listed here uses the site's blue. Each colour is checked for contrast by the checker: brand, hover and press against white (4.5:1), and press against the tint.",
+  "World History": {
+   "brand": "#1A6B5C",
+   "hover": "#145447",
+   "press": "#0E3D34",
+   "tint": "#E6F2EF",
+   "tintBorder": "#9CCFC4",
+   "footRule": "#4E8A7E"
+  }
  }
 }

@@ -56,8 +56,8 @@
   "siteId": "",
   "url": "",
   "lessonsSlug": "lessons",
-  "lessonsTitle": "MapMaker lessons: Grade 8 US History",
-  "lessonsIntro": "Twelve lessons that teach Grade 8 US History with National Geographic MapMaker maps, arranged by topic in the order most courses teach them. Each one pairs a map with an inquiry, a Word student sheet in English (eight also in Spanish), and a separate teacher page with the answers.",
+  "lessonsTitle": "MapMaker lessons",
+  "lessonsIntro": "Lessons that teach history with National Geographic MapMaker maps, arranged by course and by topic in the order most courses teach them. Each one pairs a map with an inquiry, a Word student sheet in English (some also in Spanish), and a separate teacher page with the answers.",
   "distUrl": "https://jsawle.github.io/lessons/resources/dist/mapmaker",
   "repoUrl": "https://github.com/jsawle/lessons",
   "theme": {
@@ -130,7 +130,8 @@
   "sketch": {
    "howTo": "sketch-on-a-map",
    "howToTitle": "Sketch on a Map"
-  }
+  },
+  "time": {}
  },
  "licence": "The National Geographic Society and Esri make this content available under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence, except as noted. The licence excludes the National Geographic and Esri logos (the words National Geographic with the yellow border logo, and the Esri globe and letters) and any images included in the content. The logos and images may not be removed, altered or changed."
 }

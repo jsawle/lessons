@@ -8,7 +8,7 @@
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  var VERSION = { renderer: "3.7", format: "1.10", checker: "1.10", knowledge: "1.6", prompt: "1.2" };
+  var VERSION = { renderer: "3.8", format: "1.10", checker: "1.10", knowledge: "1.6", prompt: "1.2" };
   var HEX32 = /^[0-9a-f]{32}$/i;
   var DATE = /^\d{4}-\d{2}-\d{2}$/;
   var DISTANCE = /\b(how far|how close|distance|distances|miles|farther|longer than|shorter than)\b/i;
@@ -178,7 +178,7 @@
     tools = tools.concat((lesson.inquiry && lesson.inquiry.final && lesson.inquiry.final.tools) || []);
     tools.forEach(function (key) {
       var t = site.tools[key];
-      if (!t || seen[t.howTo]) return;
+      if (!t || !t.howTo || seen[t.howTo]) return;
       seen[t.howTo] = true;
       var used = tools.filter(function (k) { return site.tools[k] && site.tools[k].howTo === t.howTo; })
         .map(function (k) { return site.tools[k].label; })
