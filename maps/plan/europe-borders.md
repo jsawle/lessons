@@ -63,3 +63,17 @@ Limits that matter for an animation:
 - Estonia, Latvia and Lithuania end on 1 June 1940 and the Soviet Union's border changes on 2 June 1940.
 - Most change is in 1918 to 1921 (49 of the 84 changes) and in 1940 and 1945.
 - The file is 2.7 MB, five times a snapshot layer. Loading speed in a classroom is not tested.
+
+### Time slider lab: what the tests found (19 November 2026)
+
+- Published: timeline layer item `3d3baeaaca124de3bdb223281eb0c13c`. Jason's hand-made test map: `44aa93bb65d94cf7b066991ce8fb10d8`.
+- Map Viewer stores time in the map in three places: the layer's `layerDefinition.timeInfo` (start field, end field, extent) with `timeAnimation: true`; `widgets.timeSlider.properties` (start, end, current date, one handle, step, speed, loop); and the map's `timeZone`. Dates are milliseconds since 1970 at midnight UTC, negative before 1970. Map builder 1.5 writes all three (`"time"` on the spec and on a layer).
+- SDK 4.34 ignores time fields set in the map: all 108 features draw. SDK 5.2 reads them. The Atlas app loads 5.2 (its page links js.arcgis.com/5.2), so Map test 1.1 can run on 5.2 (`"test": {"sdk": "5.2"}` in the spec, or `--sdk`).
+- With 5.2, in US Central time and map time zone UTC: the day boundaries are right. Austria-Hungary draws on 2 November 1918 and not on 3 November; counts on the snapshot days match the snapshot layers (24, 33, 30).
+- Not yet tested: the Atlas app itself, a monthly step, loading speed.
+
+### Colour and the changes layer
+
+- Lab map `europe-borders-through-time-lab` 0.1.0: each country keeps one of eight colours for the whole period (by the source's country name, so the Russian Empire and the Soviet Union share one). Colours only tell neighbours apart; names are on the map, and the legend is off for this layer.
+- Data `europe-borders-changes` 0.1.0 (builder 1.2): 47 areas that went from one country to another, each shown for 365 days after the change. Rules are in `snapshots.json` under `changes`.
+- A source oddity to raise with ETH Zurich: the Free City of Danzig ends on 31 August 1938 and is inside Germany from 30 September 1938. It was annexed on 1 September 1939.

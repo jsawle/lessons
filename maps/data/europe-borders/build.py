@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Europe borders data builder 1.1: cuts four snapshots of Europe's country boundaries out of CShapes 2.0 (ETH Zurich)
+"""Europe borders data builder 1.2: cuts four snapshots of Europe's country boundaries out of CShapes 2.0 (ETH Zurich)
 and writes the GeoJSON files that Data publish puts into ArcGIS Online.
 
 Snapshots (snapshots.json): 1 July 1914, 1 June 1925, 1 January 1938 and 31 December 1947: before and after each world
@@ -16,13 +16,16 @@ Writes maps/data/build/europe-borders/europe-<year>-v<version>.geojson and a .bu
 
 1.1 also writes the timeline file (snapshots.json "timeline"): one feature for every border period in the source that
 overlaps 1914 to 1947, with the dates each was in force, for the time slider. A LAB layer: see maps/plan/europe-borders.md.
+1.2 also writes the changes file (snapshots.json "changes"): the land that went from one country to another at each
+border change, to flash on the map for a year after the change.
 """
 import datetime, hashlib, json, lzma, sys, urllib.request
+import pyproj, shapely
 from pathlib import Path
 from shapely.geometry import Polygon, MultiPolygon, box, mapping
 from shapely.validation import make_valid
 
-VERSION = "1.1"
+VERSION = "1.2"
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 CFG = json.loads((HERE / "snapshots.json").read_text(encoding="utf-8"))
@@ -112,6 +115,7 @@ def main():
         out.with_suffix(".built.json").write_text(json.dumps(rec, indent=1) + "\n", encoding="utf-8")
         print(f"Built {out.name}: {len(feats)} features, {len(body)/1e3:.0f} kB")
     timeline(src, owners, bb, drop, outdir, sha)
+    changes(src, bb, drop, outdir, sha)
 
 
 def day_before(d): return (datetime.date.fromisoformat(d) - datetime.timedelta(days=1)).isoformat()
@@ -150,6 +154,47 @@ def timeline(src, owners, bb, drop, outdir, sha):
     if problems: sys.exit("Not built (timeline):\n  " + "\n  ".join(problems[:20]))
     feats.sort(key=lambda f: (f["properties"]["Name"], f["properties"]["ShowFrom"]))
     out = outdir / f"{T['id']}-v{T['version'].replace('.', '_')}.geojson"
+    body = json.dumps({"type": "FeatureCollection", "features": feats}, ensure_ascii=False, separators=(",", ":")).encode("utf-8"); out.write_bytes(body)
+    rec = {"tool": f"Europe borders data builder {VERSION}", "when": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+           "sha1": hashlib.sha1(body).hexdigest(), "features": len(feats), "window": [lo, hi],
+           "cshapes": {"url": SRC_URL, "sha1": sha, "licence": "CC BY-NC-SA 4.0"}}
+    out.with_suffix(".built.json").write_text(json.dumps(rec, indent=1) + "\n", encoding="utf-8")
+    print(f"Built {out.name}: {len(feats)} features, {len(body)/1e3:.0f} kB")
+
+
+def changes(src, bb, drop, outdir, sha):
+    """Land that changed hands. For each border that starts inside the window: the parts held by a different country
+    the day before, or by the last different holder within lookBackDays where the source leaves a gap."""
+    T, C = CFG["timeline"], CFG["changes"]; lo, hi = T["from"], T["to"]
+    ea = pyproj.Transformer.from_crs(4326, 3035, always_xy=True)  # equal-area, for square kilometres
+    km2 = lambda g: shapely.transform(g, lambda xy: __import__("numpy").column_stack(ea.transform(xy[:, 0], xy[:, 1]))).area / 1e6
+    S = [(p, g.intersection(bb).buffer(0)) for p, g in src if g.intersects(bb)]
+    add = lambda d, n: (datetime.date.fromisoformat(d) + datetime.timedelta(days=n)).isoformat()
+    feats = []
+    for pn, gn in S:
+        D = pn["start"]
+        if not (lo < D <= hi) or pn["country_name"] in drop: continue
+        back = add(D, -C["lookBackDays"])
+        # most recent first; the country's own earlier land comes off first, so only land new to it is left
+        before = [(p, g) for p, g in S if p["start"] < D and back <= p["end"]]
+        own = [g for p, g in before if p["gwcode"] == pn["gwcode"]]
+        left = gn.difference(shapely.union_all(own)) if own else gn
+        others = sorted([(p, g) for p, g in before if p["gwcode"] != pn["gwcode"]], key=lambda f: f[0]["end"], reverse=True)
+        for po, go in others:
+            if left.is_empty: break
+            x = polygons(left.intersection(go).buffer(0))
+            if x is None: continue
+            left = left.difference(go)
+            a = km2(x)
+            if a < C["minKm2"] or po["country_name"] in drop: continue
+            m = mapping(x); prev = add(D, -1)
+            feats.append({"type": "Feature", "geometry": {"type": m["type"], "coordinates": rnd(m["coordinates"])}, "properties": {
+                "FromName": display_name(po["country_name"], int(max(po["start"], lo)[:4]), po["status"]), "ToName": display_name(pn["country_name"], int(D[:4]), pn["status"]),
+                "ChangeDate": D, "AreaKm2": int(round(a, -2 if a >= 1000 else -1)), "ShowFrom": D, "ShowTo": min(add(D, C["showDays"] - 1), hi)}})
+    feats.sort(key=lambda f: (f["properties"]["ChangeDate"], f["properties"]["ToName"], f["properties"]["FromName"]))
+    if len(feats) != C["expectFeatures"]: sys.exit(f"Not built (changes): {len(feats)} features, expected {C['expectFeatures']}\n  " + "\n  ".join(
+        f"{f['properties']['ChangeDate']} {f['properties']['FromName']} -> {f['properties']['ToName']} {f['properties']['AreaKm2']}" for f in feats))
+    out = outdir / f"{C['id']}-v{C['version'].replace('.', '_')}.geojson"
     body = json.dumps({"type": "FeatureCollection", "features": feats}, ensure_ascii=False, separators=(",", ":")).encode("utf-8"); out.write_bytes(body)
     rec = {"tool": f"Europe borders data builder {VERSION}", "when": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
            "sha1": hashlib.sha1(body).hexdigest(), "features": len(feats), "window": [lo, hi],

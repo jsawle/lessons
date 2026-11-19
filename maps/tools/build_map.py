@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Map builder 1.4: turns a map spec (maps/specs/<id>.json, Map spec 1.0) into the web map ArcGIS Online stores.
+"""Map builder 1.5: turns a map spec (maps/specs/<id>.json, Map spec 1.0) into the web map ArcGIS Online stores.
 
 Reads only public ArcGIS Online content; signs in to nothing. For each spec it:
   - checks the spec against its lesson (layer names, which layers start off, bookmarks),
@@ -8,13 +8,17 @@ Reads only public ArcGIS Online content; signs in to nothing. For each spec it:
   - writes maps/build/<id>/webmap.json (the item's data), item.json (title, summary, tags...) and report.json,
     with a fingerprint of webmap.json that the publish script checks before it changes anything.
 
+Time (1.5): a layer's "time": {"start": field, "end": field} shows each feature only between its two dates, and the
+spec's "time": {"from", "to", "at", "step": {"interval", "units"}, "secondsPerStep", "loop"} sets the time slider (one
+handle: the map shows one date). Dates are YYYY-MM-DD. Stored the way Map Viewer (November 2026) stores them.
+
 Usage, from the repo root:  python3 maps/tools/build_map.py maps/specs/<id>.json [more specs...]
 Exit code 1 if any spec has errors (nothing is written for that spec).
 """
 import copy, datetime, hashlib, json, math, re, sys, urllib.parse, urllib.request
 from pathlib import Path
 
-VERSION = "1.4"
+VERSION = "1.5"
 SPEC_FORMAT = "Map spec 1.0"
 PORTAL = "https://www.arcgis.com/sharing/rest"
 ROOT = Path(__file__).resolve().parents[2]
@@ -151,6 +155,15 @@ def fields_used(lyr):
     return used
 
 
+def ms(day):
+    """Milliseconds since 1970 for midnight UTC on a YYYY-MM-DD day (negative before 1970)."""
+    return int(datetime.datetime.strptime(day, "%Y-%m-%d").replace(tzinfo=datetime.timezone.utc).timestamp() * 1000)
+
+
+TIME_UNITS = {"days": "esriTimeUnitsDays", "weeks": "esriTimeUnitsWeeks", "months": "esriTimeUnitsMonths", "years": "esriTimeUnitsYears"}
+DATE_TYPES = {"esriFieldTypeDate", "esriFieldTypeDateOnly", "esriFieldTypeTimestampOffset"}
+
+
 def build(spec_path):
     spec = json.loads(Path(spec_path).read_text(encoding="utf-8"))
     errors, warnings, checked = [], [], []
@@ -212,6 +225,16 @@ def build(spec_path):
         # A key that is present is written even when it is 0, so a spec can lift a scale limit set on the service itself.
         if "minScale" in vr: ld["minScale"] = vr["minScale"]
         if "maxScale" in vr: ld["maxScale"] = vr["maxScale"]
+        if lyr.get("time"):
+            tm = lyr["time"]; types = {f["name"]: f["type"] for f in svc.get("fields", [])}
+            for k in ("start", "end"):
+                if tm.get(k) and types.get(tm[k]) not in DATE_TYPES: errors.append(f"{lyr['title']!r}: time {k} field {tm.get(k)!r} is not a date field")
+            if not spec.get("time"): errors.append(f"{lyr['title']!r} has time fields but the spec has no \"time\" (slider) settings")
+            else:
+                ld["timeInfo"] = {"startTimeField": tm["start"], "timeExtent": [ms(spec["time"]["from"]), ms(spec["time"]["to"])]}
+                if tm.get("end"): ld["timeInfo"]["endTimeField"] = tm["end"]
+                layer["timeAnimation"] = True
+        if lyr.get("legend") is False: layer["showLegend"] = False
         layer["layerDefinition"] = ld
         if lyr.get("popupOff"): layer["disablePopup"] = True
         else: layer["popupInfo"] = popup(lyr["popup"])
@@ -233,6 +256,17 @@ def build(spec_path):
               "authoringApp": "Map builder", "authoringAppVersion": VERSION, "version": "2.31",
               "initialState": {"viewpoint": {"targetGeometry": mercator(spec["view"]["extent"])}},
               "bookmarks": [{"name": b["name"], "extent": mercator(b["extent"])} for b in spec.get("bookmarks", [])]}
+    if spec.get("time"):
+        t = spec["time"]; step = t.get("step", {"interval": 1, "units": "years"})
+        if step["units"] not in TIME_UNITS: errors.append(f"time step units {step['units']!r}")
+        elif not any(l.get("time") for l in spec["layers"]): errors.append("the spec has time settings but no layer has time fields")
+        else:
+            at = ms(t.get("at", t["from"]))
+            webmap["widgets"] = {"timeSlider": {"properties": {"startTime": ms(t["from"]), "endTime": ms(t["to"]), "currentTimeExtent": [at, at], "thumbCount": 1,
+                                 "thumbMovingRate": int(t.get("secondsPerStep", 2) * 1000), "loop": bool(t.get("loop", True)),
+                                 "timeStopInterval": {"interval": step["interval"], "units": TIME_UNITS[step["units"]]}}}}
+            webmap["timeZone"] = t.get("timeZone", "UTC"); webmap["version"] = "2.38"
+            checked.append("time fields are date fields; the slider covers " + t["from"] + " to " + t["to"])
     it = spec["item"]
     x = spec["view"]["extent"]
     item = {"type": "Web Map", "title": it["title"], "snippet": it.get("snippet", ""), "description": it.get("description", ""),
