@@ -1,0 +1,75 @@
+{
+  "format": "Data publish 1.0",
+  "id": "europe-borders-timeline",
+  "version": "0.1.0",
+  "file": "maps/data/build/europe-borders/europe-borders-timeline-v0_1_0.geojson",
+  "expectFeatures": 108,
+  "note": "LAB layer for testing the time slider. Built by maps/data/europe-borders/build.py (1.1) from CShapes 2.0. The file is not kept in the repository. Not for MapMaker until ETH Zurich confirms permission (LICENCE.md).",
+  "checks": [
+    {
+      "name": "Poland's Peace of Riga border runs 18 March 1921 to 7 May 1945",
+      "where": {
+        "Name": "Poland",
+        "ShowFrom": "1921-03-18"
+      },
+      "expect": {
+        "ShowTo": "1945-05-07",
+        "BorderTo": "1945-05-07"
+      }
+    },
+    {
+      "name": "Irish Free State ends the day before the 1937 constitution",
+      "where": {
+        "Name": "Irish Free State"
+      },
+      "expect": {
+        "ShowFrom": "1921-12-06",
+        "ShowTo": "1937-12-28"
+      }
+    },
+    {
+      "name": "A border older than the window is cut to 1 January 1914 but keeps its own date",
+      "where": {
+        "Name": "Russian Empire",
+        "ShowFrom": "1914-01-01"
+      },
+      "expect": {
+        "BorderFrom": "1905-09-05",
+        "ShowTo": "1914-04-16"
+      }
+    },
+    {
+      "name": "Austria-Hungary ends 2 November 1918",
+      "where": {
+        "Name": "Austria-Hungary"
+      },
+      "expect": {
+        "ShowTo": "1918-11-02"
+      }
+    }
+  ],
+  "item": {
+    "title": "LAB: Europe's borders through time, 1914 to 1947 (data for lessons) v0.1",
+    "snippet": "Test layer for the time slider: every change to country borders in Europe from 1914 to 1947, with the dates each border was in force. Draft.",
+    "description": "<p><b>Test layer.</b> Every border in Europe that the source records between 1 January 1914 and 31 December 1947: 108 areas, each with its name at the time, its status, who controlled it if it was not independent, and dates.</p><p><b>For the time slider:</b> use ShowFrom as the start field and ShowTo as the end field. They are the dates the border was in force, cut to 1914 to 1947. BorderFrom and BorderTo are the source's own dates, which can run earlier or later.</p><p><b>Limits:</b> the source records recognised borders, not wartime occupation: Poland, Czechoslovakia, Austria and others stay on the map through the Second World War. The Free City of Danzig ends on 31 August 1938 in the source. The smallest states and some special territories are left out, and the Soviet Union is one area. Coastlines are simplified. Clipped at 60 degrees east.</p><p><b>Source:</b> CShapes 2.0: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), Mapping the International System, 1886-2019, Journal of Conflict Resolution 66(1); ETH Zurich.</p><p><i>Data version 0.1 (19 November 2026), lab draft.</i></p>",
+    "tags": [
+      "World History",
+      "Europe",
+      "borders",
+      "boundaries",
+      "time",
+      "First World War",
+      "Second World War",
+      "lab",
+      "draft",
+      "licence pending"
+    ],
+    "credits": "CShapes 2.0: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), Mapping the International System, 1886-2019, Journal of Conflict Resolution 66(1); ETH Zurich.",
+    "license": "Boundaries from CShapes 2.0 (ETH Zurich), licence CC BY-NC-SA 4.0: credit the source, non-commercial use only, and share anything made from it under the same licence. Written permission to use it in MapMaker has not been confirmed: keep this layer private until it is. See maps/data/europe-borders/LICENCE.md."
+  },
+  "publish": {
+    "org": "HNLEA4GfnbCFQZGa",
+    "orgLabel": "GIS for Schools",
+    "folder": "Map data"
+  }
+}

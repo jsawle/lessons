@@ -17,6 +17,10 @@
     "German Federal Republic": [{"status": "occupied", "name": "Germany: western occupation zones"}, {"name": "West Germany"}],
     "German Democratic Republic": [{"status": "occupied", "name": "Germany: Soviet occupation zone"}, {"name": "East Germany"}]
   },
+  "timeline": {"id": "europe-borders-timeline", "version": "0.1.0", "from": "1914-01-01", "to": "1947-12-31", "expectFeatures": 108,
+    "note": "One feature per border period in the source that overlaps the window. ShowFrom and ShowTo are the period cut to the window (for the time slider); BorderFrom and BorderTo are the source's own dates. renamed: a period is cut in two on the day a country's name changed.",
+    "renamed": {"Ireland": ["1937-12-29"], "Yugoslavia": ["1929-10-03"]},
+    "sameAsSnapshots": true},
   "snapshots": [
     {"date": "1914-07-01", "label": "July 1914, before the First World War", "expectFeatures": 24,
      "mustHave": ["Austria-Hungary", "Germany", "Russian Empire", "Ottoman Empire", "Serbia", "Montenegro"], "mustNotHave": ["Poland", "Czechoslovakia"]},
