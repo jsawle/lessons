@@ -56,8 +56,8 @@
   "siteId": "9c39add73ebf47068e1dac37f6353b8d",
   "url": "https://lessons-gis-4-schools.hub.arcgis.com",
   "lessonsSlug": "lessons",
-  "lessonsTitle": "Lessons",
-  "lessonsIntro": "Lessons that teach history with maps, arranged by course and by topic in the order most courses teach them. Each one pairs a map with an inquiry, a Word student sheet in English (some also in Spanish), and a separate teacher page with the answers.",
+  "lessonsTitle": "Lessons: Grade 8 US History",
+  "lessonsIntro": "Twelve lessons that teach Grade 8 US History with maps, arranged by topic in the order most courses teach them. Each one pairs a map with an inquiry, a Word student sheet in English (eight also in Spanish), and a separate teacher page with the answers.",
   "distUrl": "https://jsawle.github.io/lessons/resources/dist",
   "repoUrl": "https://github.com/jsawle/lessons",
   "theme": {
@@ -79,7 +79,14 @@
    }
   },
   "aboutSlug": "how-these-lessons-work",
-  "aboutTitle": "How these lessons work"
+  "aboutTitle": "How these lessons work",
+  "coursePages": {
+   "World History": {
+    "slug": "world-history-lessons",
+    "title": "Lessons: World History",
+    "intro": "Lessons that teach World History with maps, arranged by topic in the order most courses teach them. Each one pairs a map with an inquiry, a Word student sheet in English, and a separate teacher page with the answers."
+   }
+  }
  },
  "classroom": {
   "about": "Share to Google Classroom button on each lesson page. It shares the lesson's map, never the lesson page, which holds the answer notes. Follows Google's Classroom branding guidelines: approved wording, the official icon on the left (32 to 96 px, unaltered), Roboto Bold, a 20% black shade on the icon on hover, and the trademark notice in the page footer. The button is left out if icon is empty.",
