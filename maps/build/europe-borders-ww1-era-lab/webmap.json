@@ -3,8 +3,8 @@
   {
    "id": "lyr816aeb63937",
    "title": "Countries and territories, 1914 to 1924",
-   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/europe_borders_timeline_v0_1_0/FeatureServer/0",
-   "itemId": "3d3baeaaca124de3bdb223281eb0c13c",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/europe_borders_timeline_v0_2_0/FeatureServer/0",
+   "itemId": "f4f81ee402b842c793eba54768f6106f",
    "layerType": "ArcGISFeatureLayer",
    "visibility": true,
    "opacity": 1,
@@ -1071,8 +1071,8 @@
   {
    "id": "lyrfb8aab5e74a",
    "title": "Land that changed hands in the last year",
-   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/europe_borders_changes_v0_1_0/FeatureServer/0",
-   "itemId": "d41979c819334fe99199fe4530657fcf",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/europe_borders_changes_v0_2_0/FeatureServer/0",
+   "itemId": "dbeffe7848234bbc908e4cdab514f323",
    "layerType": "ArcGISFeatureLayer",
    "visibility": true,
    "opacity": 1,

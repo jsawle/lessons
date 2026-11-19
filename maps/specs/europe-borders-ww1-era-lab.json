@@ -1,12 +1,12 @@
 {
  "format": "Map spec 1.0",
  "id": "europe-borders-ww1-era-lab",
- "version": "0.1.0",
+ "version": "0.2.0",
  "why": "LAB map. The time slider on the borders of one era, 1914 to 1924, so students stay on the era they are studying; split from europe-borders-through-time-lab 0.2.0, whose 1925 to 1937 stretch has almost no changes. Same data layers, filtered to the era. Not a lesson map and not for MapMaker until ETH Zurich confirms permission.",
  "item": {
-  "title": "LAB: Europe's borders in the First World War era, 1914 to 1924 v0.1",
+  "title": "LAB: Europe's borders in the First World War era, 1914 to 1924 v0.2",
   "snippet": "Test map: move the time slider to see Europe's country borders from 1914 to 1924, through the First World War and the peace treaties. Draft.",
-  "description": "<p><b>Test map.</b> Europe's country borders from 1 January 1914 to the end of 1924: the empires before the war, the war, and the borders set by the peace treaties (Brest-Litovsk, Versailles, St-Germain, Neuilly, Trianon, Riga, Lausanne). The time slider shows the borders on one date and steps three months at a time. Every border period in the source shows at some step except three that lasted less than a month (Hungary in November 1918; two Soviet borders in February and March 1918).</p><p><b>Colour:</b> each country keeps one colour for the whole period, so a change of shape or a new country stands out. The colours only tell neighbours apart; they have no other meaning. Every country is also named on the map.</p><p><b>Changes:</b> land that went from one country to another is hatched with a heavy outline for one year after the change. Click it to see who held it before, who holds it now, the date and its rough size.</p><p><b>Notes:</b> dates are the source's. The source records recognised borders, not where armies stood. The smallest states are left out, the Soviet Union (and before it the Russian Empire) is one area, coastlines are simplified and the layer stops at 60 degrees east.</p><p><b>Source:</b> CShapes 2.0, ETH Zurich: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), Mapping the International System, 1886-2019, Journal of Conflict Resolution 66(1).</p><p><i>Map version 0.1 (19 November 2026), lab draft.</i></p>",
+  "description": "<p><b>Test map.</b> Europe's country borders from 1 January 1914 to the end of 1924: the empires before the war, the war, and the borders set by the peace treaties (Brest-Litovsk, Versailles, St-Germain, Neuilly, Trianon, Riga, Lausanne). The time slider shows the borders on one date and steps three months at a time. Every border period in the source shows at some step except three that lasted less than a month (Hungary in November 1918; two Soviet borders in February and March 1918).</p><p><b>Colour:</b> each country keeps one colour for the whole period, so a change of shape or a new country stands out. The colours only tell neighbours apart; they have no other meaning. Every country is also named on the map.</p><p><b>Changes:</b> land that went from one country to another is hatched with a heavy outline for one year after the change. Click it to see who held it before, who holds it now, the date and its rough size.</p><p><b>Notes:</b> dates are the source's. The source records recognised borders, not where armies stood. The smallest states are left out, the Soviet Union (and before it the Russian Empire) is one area, coastlines are simplified and the layer stops at 60 degrees east.</p><p><b>Source:</b> CShapes 2.0, ETH Zurich: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), Mapping the International System, 1886-2019, Journal of Conflict Resolution 66(1).</p><p><i>Map version 0.2 (19 November 2026), lab draft.</i></p>",
   "tags": [
    "World History",
    "Europe",
@@ -93,8 +93,8 @@
   {
    "title": "Land that changed hands in the last year",
    "source": {
-    "itemId": "d41979c819334fe99199fe4530657fcf",
-    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/europe_borders_changes_v0_1_0/FeatureServer/0"
+    "itemId": "dbeffe7848234bbc908e4cdab514f323",
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/europe_borders_changes_v0_2_0/FeatureServer/0"
    },
    "visible": true,
    "time": {
@@ -171,8 +171,8 @@
   {
    "title": "Countries and territories, 1914 to 1924",
    "source": {
-    "itemId": "3d3baeaaca124de3bdb223281eb0c13c",
-    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/europe_borders_timeline_v0_1_0/FeatureServer/0"
+    "itemId": "f4f81ee402b842c793eba54768f6106f",
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/europe_borders_timeline_v0_2_0/FeatureServer/0"
    },
    "visible": true,
    "legend": false,
