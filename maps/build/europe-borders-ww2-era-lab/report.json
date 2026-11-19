@@ -1,0 +1,51 @@
+{
+ "tool": "Map builder 1.5",
+ "spec": "maps/specs/europe-borders-ww2-era-lab.json",
+ "specId": "europe-borders-ww2-era-lab",
+ "specVersion": "0.1.0",
+ "built": "2026-11-19T14:39:03Z",
+ "webmapFingerprint": "80f415725cd600d53695f4500b550207db10a37f",
+ "itemFingerprint": "6d108653b3b8a9c5d78cd097d140117c845f28fb",
+ "checked": [
+  "basemap is public and not CARTO",
+  "every source layer is readable and every field the spec uses exists",
+  "time fields are date fields; the slider covers 1938-01-01 to 1947-12-31"
+ ],
+ "warnings": [],
+ "tested": {
+  "tool": "Map test 1.1",
+  "sdk": "5.2",
+  "when": "2026-11-19T14:59:33Z",
+  "timeZone": "America/Chicago",
+  "webmapFingerprint": "80f415725cd600d53695f4500b550207db10a37f",
+  "pass": true,
+  "checks": [
+   {
+    "name": "jan-1938",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "changes-jan-1939",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "jan-1941",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "changes-jan-1946",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "end-1947",
+    "pass": true,
+    "failures": []
+   }
+  ],
+  "checker": null
+ }
+}

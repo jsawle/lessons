@@ -82,3 +82,15 @@ Limits that matter for an animation:
 ### Lighter outlines (19 November 2026)
 
 Jason found the lab map slow to load in the Atlas app; the slider and the hatched areas worked. Measured: the two layers download as about 380 kB, but the borders layer had 150,600 outline points against 31,100 for a snapshot layer. Builder 1.3 thins shared borders in the source's own lines (tolerance 0.03 degrees, about 3 km), so neighbours still meet: timeline 0.2.0 has 46,200 points and changes 0.2.0 has 4,800 (31% of before together). File sizes: 852 kB and 96 kB. The four snapshot files are unchanged byte for byte. Whether this fixes the slowness is not yet tested.
+
+### Split into two eras (19 November 2026)
+
+Jason's call: one slider from 1914 to 1947 spends most of its run on 1925 to 1937, when almost nothing changes, and students should stay on the era they are studying. So the lab map becomes two maps on the same two data layers. No new data items, no extra copies of the CShapes data.
+
+- What the data shows: of the 47 changes of hands, 30 fall in 1914 to 1921 and 17 in 1938 to 1947; none in 1922 to 1937. Between 1925 and 1937 the only new border periods are two renames (Yugoslavia 1929, Ireland 1937).
+- `europe-borders-ww1-era-lab` 0.1.0: 1 January 1914 to 31 December 1924, so it includes Lausanne (Turkey, 14 October 1923) and the Polish-Lithuanian border of April 1922.
+- `europe-borders-ww2-era-lab` 0.1.0: 1 January 1938 to 31 December 1947, from before Munich to the Paris peace treaties (10 February 1947).
+- Each layer carries a filter to its era (`ShowFrom <= DATE '<end>' AND ShowTo >= DATE '<start>'`), and the slider's range, the layers' time extent and the opening date are set to the era.
+- Step: three months (44 stops for the WWI era, 40 for the WWII era), at one second a step. Yearly steps on 1 January missed 18 of the 139 border periods; three-monthly steps miss 4, all shorter than a month (Hungary, November 1918; two Soviet borders in February and March 1918; a Soviet border in June 1940). Monthly steps would miss 3 but take 132 stops.
+- Checks: the old map's checks split by era (1925 ones moved to 31 December 1924), plus Brest-Litovsk (1 April 1918), before Munich (1 January 1938) and the Munich changes (1 January 1939).
+- Not yet tested: whether MapMaker (the Atlas app) keeps the slider to the era's range set in the map, or falls back to the layer's own 1914 to 1947 range.

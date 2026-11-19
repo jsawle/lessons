@@ -1,0 +1,1302 @@
+{
+ "operationalLayers": [
+  {
+   "id": "lyr2f99a4578e4",
+   "title": "Countries and territories, 1938 to 1947",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/europe_borders_timeline_v0_1_0/FeatureServer/0",
+   "itemId": "3d3baeaaca124de3bdb223281eb0c13c",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": true,
+   "opacity": 1,
+   "showLabels": true,
+   "timeAnimation": true,
+   "showLegend": false,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "uniqueValue",
+      "field1": "SourceName",
+      "defaultSymbol": {
+       "type": "esriSFS",
+       "style": "esriSFSSolid",
+       "color": [
+        200,
+        200,
+        200,
+        200
+       ],
+       "outline": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         60,
+         60,
+         60,
+         255
+        ],
+        "width": 1
+       }
+      },
+      "defaultLabel": "Other",
+      "uniqueValueInfos": [
+       {
+        "value": "Albania",
+        "label": "Albania",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          102,
+          194,
+          165,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Austria",
+        "label": "Austria",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          231,
+          138,
+          195,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Austria-Hungary",
+        "label": "Austria-Hungary",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          102,
+          194,
+          165,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Belgium",
+        "label": "Belgium",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          179,
+          179,
+          179,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Bulgaria",
+        "label": "Bulgaria",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          255,
+          217,
+          47,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Cyprus",
+        "label": "Cyprus",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          231,
+          138,
+          195,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Czechoslovakia",
+        "label": "Czechoslovakia",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          179,
+          179,
+          179,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Danzig",
+        "label": "Danzig",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          255,
+          217,
+          47,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Denmark",
+        "label": "Denmark",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          166,
+          216,
+          84,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Estonia",
+        "label": "Estonia",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          229,
+          196,
+          148,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Finland",
+        "label": "Finland",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          179,
+          179,
+          179,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "France",
+        "label": "France",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          102,
+          194,
+          165,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "German Democratic Republic",
+        "label": "German Democratic Republic",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          231,
+          138,
+          195,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "German Federal Republic",
+        "label": "German Federal Republic",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          255,
+          217,
+          47,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Germany (Prussia)",
+        "label": "Germany (Prussia)",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          141,
+          160,
+          203,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Greece",
+        "label": "Greece",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          141,
+          160,
+          203,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Hungary",
+        "label": "Hungary",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          141,
+          160,
+          203,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Iceland",
+        "label": "Iceland",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          166,
+          216,
+          84,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Ireland",
+        "label": "Ireland",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          141,
+          160,
+          203,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Italy/Sardinia",
+        "label": "Italy/Sardinia",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          252,
+          141,
+          98,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Latvia",
+        "label": "Latvia",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          255,
+          217,
+          47,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Lithuania",
+        "label": "Lithuania",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          229,
+          196,
+          148,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Luxembourg",
+        "label": "Luxembourg",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          166,
+          216,
+          84,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Malta",
+        "label": "Malta",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          255,
+          217,
+          47,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Montenegro",
+        "label": "Montenegro",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          166,
+          216,
+          84,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Netherlands",
+        "label": "Netherlands",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          252,
+          141,
+          98,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Norway",
+        "label": "Norway",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          141,
+          160,
+          203,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Poland",
+        "label": "Poland",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          166,
+          216,
+          84,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Portugal",
+        "label": "Portugal",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          252,
+          141,
+          98,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Rumania",
+        "label": "Rumania",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          231,
+          138,
+          195,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Russia (Soviet Union)",
+        "label": "Russia (Soviet Union)",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          252,
+          141,
+          98,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Serbia",
+        "label": "Serbia",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          252,
+          141,
+          98,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Spain",
+        "label": "Spain",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          179,
+          179,
+          179,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Sweden",
+        "label": "Sweden",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          102,
+          194,
+          165,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Switzerland",
+        "label": "Switzerland",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          229,
+          196,
+          148,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Turkey (Ottoman Empire)",
+        "label": "Turkey (Ottoman Empire)",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          231,
+          138,
+          195,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "United Kingdom",
+        "label": "United Kingdom",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          102,
+          194,
+          165,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       },
+       {
+        "value": "Yugoslavia",
+        "label": "Yugoslavia",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          229,
+          196,
+          148,
+          200
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           60,
+           60,
+           60,
+           255
+          ],
+          "width": 1
+         }
+        }
+       }
+      ]
+     },
+     "labelingInfo": [
+      {
+       "labelExpressionInfo": {
+        "expression": "$feature.Name"
+       },
+       "labelPlacement": "esriServerPolygonPlacementAlwaysHorizontal",
+       "symbol": {
+        "type": "esriTS",
+        "color": [
+         26,
+         26,
+         26,
+         255
+        ],
+        "font": {
+         "family": "Noto Sans",
+         "size": 9,
+         "weight": "bold"
+        },
+        "horizontalAlignment": "center",
+        "verticalAlignment": "baseline",
+        "haloColor": [
+         255,
+         255,
+         255,
+         230
+        ],
+        "haloSize": 1.5
+       },
+       "minScale": 0,
+       "maxScale": 0,
+       "repeatLabel": false
+      }
+     ]
+    },
+    "definitionExpression": "ShowFrom <= DATE '1947-12-31' AND ShowTo >= DATE '1938-01-01'",
+    "timeInfo": {
+     "startTimeField": "ShowFrom",
+     "timeExtent": [
+      -1009843200000,
+      -694396800000
+     ],
+     "endTimeField": "ShowTo"
+    }
+   },
+   "popupInfo": {
+    "title": "{Name}",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p><b>{expression/status}</b></p><p>This border was in force from {expression/from} to {expression/to}.</p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": [],
+    "expressionInfos": [
+     {
+      "name": "status",
+      "title": "Status",
+      "returnType": "string",
+      "expression": "var s = $feature.Status;\nvar c = $feature.ControlledBy;\nif (c == 'Soviet Union') { c = 'the Soviet Union'; }\nif (c == 'United Kingdom') { c = 'the United Kingdom'; }\nif (c == 'United States, United Kingdom and France') { c = 'the United States, the United Kingdom and France'; }\nif (s == 'Independent') { return 'An independent country'; }\nif (s == 'Occupied') { return 'Occupied by ' + c; }\nif (s == 'Colony') { return 'A colony of ' + c; }\nif (s == 'Mandate') { return 'Under the protection of the ' + c; }\nreturn s;"
+     },
+     {
+      "name": "from",
+      "title": "Border in force from",
+      "returnType": "string",
+      "expression": "var d = $feature.BorderFrom;\nif (IsEmpty(d)) { return ''; }\nvar p = Split(d, '-');\nvar m = ['January','February','March','April','May','June','July','August','September','October','November','December'];\nreturn m[Number(p[1]) - 1] + ' ' + Text(Number(p[2])) + ', ' + p[0];"
+     },
+     {
+      "name": "to",
+      "title": "Border in force to",
+      "returnType": "string",
+      "expression": "var d = $feature.BorderTo;\nif (IsEmpty(d)) { return ''; }\nvar p = Split(d, '-');\nvar m = ['January','February','March','April','May','June','July','August','September','October','November','December'];\nif (p[0] == '2019') { return 'still in force when the source data ends (2019)'; }\nreturn m[Number(p[1]) - 1] + ' ' + Text(Number(p[2])) + ', ' + p[0];"
+     }
+    ]
+   }
+  },
+  {
+   "id": "lyra8b23e8b84a",
+   "title": "Land that changed hands in the last year",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/europe_borders_changes_v0_1_0/FeatureServer/0",
+   "itemId": "d41979c819334fe99199fe4530657fcf",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": true,
+   "opacity": 1,
+   "showLabels": true,
+   "timeAnimation": true,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "label": "Land that went from one country to another",
+      "symbol": {
+       "type": "esriSFS",
+       "style": "esriSFSBackwardDiagonal",
+       "color": [
+        26,
+        26,
+        26,
+        255
+       ],
+       "outline": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         26,
+         26,
+         26,
+         255
+        ],
+        "width": 2.5
+       }
+      }
+     },
+     "labelingInfo": [
+      {
+       "labelExpressionInfo": {
+        "expression": "'from ' + $feature.FromName"
+       },
+       "labelPlacement": "esriServerPolygonPlacementAlwaysHorizontal",
+       "symbol": {
+        "type": "esriTS",
+        "color": [
+         26,
+         26,
+         26,
+         255
+        ],
+        "font": {
+         "family": "Noto Sans",
+         "size": 8,
+         "weight": "normal"
+        },
+        "horizontalAlignment": "center",
+        "verticalAlignment": "baseline",
+        "haloColor": [
+         255,
+         255,
+         255,
+         242
+        ],
+        "haloSize": 1.5
+       },
+       "minScale": 0,
+       "maxScale": 0,
+       "repeatLabel": false
+      }
+     ]
+    },
+    "definitionExpression": "ShowFrom <= DATE '1947-12-31' AND ShowTo >= DATE '1938-01-01'",
+    "timeInfo": {
+     "startTimeField": "ShowFrom",
+     "timeExtent": [
+      -1009843200000,
+      -694396800000
+     ],
+     "endTimeField": "ShowTo"
+    }
+   },
+   "popupInfo": {
+    "title": "{FromName} to {ToName}",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p>This land went from {expression/from} to {expression/to} on <b>{expression/date}</b>.</p><p>It covers about {AreaKm2} square kilometres.</p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": [
+     {
+      "fieldName": "AreaKm2",
+      "label": "AreaKm2",
+      "visible": false,
+      "format": {
+       "places": 0,
+       "digitSeparator": true
+      }
+     }
+    ],
+    "expressionInfos": [
+     {
+      "name": "date",
+      "title": "Date",
+      "returnType": "string",
+      "expression": "var d = $feature.ChangeDate;\nif (IsEmpty(d)) { return ''; }\nvar p = Split(d, '-');\nvar m = ['January','February','March','April','May','June','July','August','September','October','November','December'];\nreturn m[Number(p[1]) - 1] + ' ' + Text(Number(p[2])) + ', ' + p[0];"
+     },
+     {
+      "name": "from",
+      "title": "From",
+      "returnType": "string",
+      "expression": "var n = $feature.FromName;\nif (n == 'Soviet Union' || n == 'Russian Empire' || n == 'Ottoman Empire' || n == 'United Kingdom' || n == 'Irish Free State' || n == 'Free City of Danzig' || n == 'Kingdom of Serbs, Croats and Slovenes') { return 'the ' + n; }\nreturn n;"
+     },
+     {
+      "name": "to",
+      "title": "To",
+      "returnType": "string",
+      "expression": "var n = $feature.ToName;\nif (n == 'Soviet Union' || n == 'Russian Empire' || n == 'Ottoman Empire' || n == 'United Kingdom' || n == 'Irish Free State' || n == 'Free City of Danzig' || n == 'Kingdom of Serbs, Croats and Slovenes') { return 'the ' + n; }\nreturn n;"
+     }
+    ]
+   }
+  }
+ ],
+ "baseMap": {
+  "title": "Modern Antique",
+  "baseMapLayers": [
+   {
+    "id": "basec527aa8b",
+    "title": "World Hillshade",
+    "opacity": 1,
+    "visibility": true,
+    "layerType": "ArcGISTiledMapServiceLayer",
+    "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+    "itemId": "1b243539f4514b6ba35e7d995890db1d"
+   },
+   {
+    "id": "base6e149572",
+    "title": "Modern Antique (no Labels)",
+    "opacity": 1,
+    "visibility": true,
+    "layerType": "VectorTileLayer",
+    "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json",
+    "itemId": "545f2e839f624600bbb092c3ad998bb8",
+    "blendMode": "multiply"
+   }
+  ]
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857
+ },
+ "authoringApp": "Map builder",
+ "authoringAppVersion": "1.5",
+ "version": "2.38",
+ "initialState": {
+  "viewpoint": {
+   "targetGeometry": {
+    "xmin": -2782987.3,
+    "ymin": 4028802.0,
+    "xmax": 5565974.5,
+    "ymax": 11575440.0,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  }
+ },
+ "bookmarks": [
+  {
+   "name": "Europe",
+   "extent": {
+    "xmin": -2782987.3,
+    "ymin": 4028802.0,
+    "xmax": 5565974.5,
+    "ymax": 11575440.0,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  },
+  {
+   "name": "Central and Eastern Europe",
+   "extent": {
+    "xmin": 556597.5,
+    "ymin": 5311971.8,
+    "xmax": 3896182.2,
+    "ymax": 7967317.5,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  },
+  {
+   "name": "The Balkans and Turkey",
+   "extent": {
+    "xmin": 1335833.9,
+    "ymin": 4028802.0,
+    "xmax": 5120696.6,
+    "ymax": 6190443.8,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  }
+ ],
+ "widgets": {
+  "timeSlider": {
+   "properties": {
+    "startTime": -1009843200000,
+    "endTime": -694396800000,
+    "currentTimeExtent": [
+     -1009843200000,
+     -1009843200000
+    ],
+    "thumbCount": 1,
+    "thumbMovingRate": 1000,
+    "loop": true,
+    "timeStopInterval": {
+     "interval": 3,
+     "units": "esriTimeUnitsMonths"
+    }
+   }
+  }
+ },
+ "timeZone": "UTC"
+}
