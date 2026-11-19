@@ -2,10 +2,10 @@
  "tool": "Map builder 1.5",
  "spec": "maps/specs/europe-borders-through-time-lab.json",
  "specId": "europe-borders-through-time-lab",
- "specVersion": "0.1.0",
- "built": "2026-11-19T12:32:59Z",
- "webmapFingerprint": "1793b97549c8415d3c6d06f14756c69c6af17d88",
- "itemFingerprint": "c301ed3b2f0a5f11e0819fa97f3434ce0640ad5d",
+ "specVersion": "0.2.0",
+ "built": "2026-11-19T12:51:30Z",
+ "webmapFingerprint": "bdc294b0065170d87f7d959663052554aa7af863",
+ "itemFingerprint": "0d70f14ed516ae78e568a698d2003bf97e643670",
  "checked": [
   "basemap is public and not CARTO",
   "every source layer is readable and every field the spec uses exists",
@@ -15,9 +15,9 @@
  "tested": {
   "tool": "Map test 1.1",
   "sdk": "5.2",
-  "when": "2026-11-19T12:45:53Z",
+  "when": "2026-11-19T13:10:10Z",
   "timeZone": "America/Chicago",
-  "webmapFingerprint": "1793b97549c8415d3c6d06f14756c69c6af17d88",
+  "webmapFingerprint": "bdc294b0065170d87f7d959663052554aa7af863",
   "pass": true,
   "checks": [
    {
@@ -52,6 +52,26 @@
    },
    {
     "name": "end-1947",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "changes-jan-1922",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "riga-popup",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "changes-jan-1930",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "changes-jan-1946",
     "pass": true,
     "failures": []
    }
