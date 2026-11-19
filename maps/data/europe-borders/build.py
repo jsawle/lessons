@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Europe borders data builder 1.2: cuts four snapshots of Europe's country boundaries out of CShapes 2.0 (ETH Zurich)
+"""Europe borders data builder 1.3: cuts four snapshots of Europe's country boundaries out of CShapes 2.0 (ETH Zurich)
 and writes the GeoJSON files that Data publish puts into ArcGIS Online.
 
 Snapshots (snapshots.json): 1 July 1914, 1 June 1925, 1 January 1938 and 31 December 1947: before and after each world
@@ -18,14 +18,17 @@ Writes maps/data/build/europe-borders/europe-<year>-v<version>.geojson and a .bu
 overlaps 1914 to 1947, with the dates each was in force, for the time slider. A LAB layer: see maps/plan/europe-borders.md.
 1.2 also writes the changes file (snapshots.json "changes"): the land that went from one country to another at each
 border change, to flash on the map for a year after the change.
+1.3 thins the outlines of the timeline and changes files (snapshots.json "timeline" "simplifyDegrees") so they draw
+faster. Each shared border is one line in the source and is thinned once, so neighbours still meet. Islands too small
+to keep a shape at that tolerance are dropped. The four snapshot files are not thinned and do not change.
 """
 import datetime, hashlib, json, lzma, sys, urllib.request
 import pyproj, shapely
 from pathlib import Path
-from shapely.geometry import Polygon, MultiPolygon, box, mapping
+from shapely.geometry import LineString, Polygon, MultiPolygon, box, mapping
 from shapely.validation import make_valid
 
-VERSION = "1.2"
+VERSION = "1.3"
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 CFG = json.loads((HERE / "snapshots.json").read_text(encoding="utf-8"))
@@ -45,28 +48,38 @@ def polygons(g):
     return MultiPolygon(flat) if flat else None
 
 
-def read_source(raw):
+def read_source(raw, tol=None):
     t = json.loads(lzma.decompress(raw).decode("utf-8")); tr = t.get("transform"); arcs = []
     for a in t["arcs"]:
         pts, x, y = [], 0, 0
         for dx, dy in a:
             if tr: x += dx; y += dy; pts.append((x * tr["scale"][0] + tr["translate"][0], y * tr["scale"][1] + tr["translate"][1]))
             else: pts.append((dx, dy))
+        if tol and len(pts) > 2:
+            closed = pts[0] == pts[-1]; pts = list(LineString(pts).simplify(tol, preserve_topology=False).coords)
+            if closed and len(pts) < 4: pts = None  # an island too small to keep a shape
         arcs.append(pts)
 
     def ring(idx):
         out = []
         for i in idx:
-            a = arcs[i] if i >= 0 else arcs[~i][::-1]
+            a = arcs[i] if i >= 0 else arcs[~i]
+            if a is None: return None
+            if i < 0: a = a[::-1]
             out.extend(a if not out else a[1:])
-        return out
+        return out if len(out) >= 4 else None
+
+    def poly(p):
+        e = ring(p[0])
+        return None if e is None else Polygon(e, [h for h in (ring(r) for r in p[1:]) if h])
 
     feats = []
     for o in t["objects"][next(iter(t["objects"]))]["geometries"]:
-        if o["type"] == "Polygon": g = Polygon(ring(o["arcs"][0]), [ring(r) for r in o["arcs"][1:]])
-        elif o["type"] == "MultiPolygon": g = MultiPolygon([Polygon(ring(p[0]), [ring(r) for r in p[1:]]) for p in o["arcs"]])
+        if o["type"] == "Polygon": ps = [poly(o["arcs"])]
+        elif o["type"] == "MultiPolygon": ps = [poly(p) for p in o["arcs"]]
         else: continue
-        feats.append((o["properties"], make_valid(g)))
+        ps = [q for q in ps if q is not None]
+        if ps: feats.append((o["properties"], make_valid(ps[0] if o["type"] == "Polygon" else MultiPolygon(ps))))
     return feats
 
 
@@ -114,8 +127,9 @@ def main():
                "cshapes": {"url": SRC_URL, "sha1": sha, "licence": "CC BY-NC-SA 4.0"}}
         out.with_suffix(".built.json").write_text(json.dumps(rec, indent=1) + "\n", encoding="utf-8")
         print(f"Built {out.name}: {len(feats)} features, {len(body)/1e3:.0f} kB")
-    timeline(src, owners, bb, drop, outdir, sha)
-    changes(src, bb, drop, outdir, sha)
+    thin = read_source(raw, CFG["timeline"].get("simplifyDegrees"))
+    timeline(thin, owners, bb, drop, outdir, sha)
+    changes(thin, bb, drop, outdir, sha)
 
 
 def day_before(d): return (datetime.date.fromisoformat(d) - datetime.timedelta(days=1)).isoformat()

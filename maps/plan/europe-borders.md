@@ -78,3 +78,7 @@ Limits that matter for an animation:
 - Data `europe-borders-changes` 0.1.0 (builder 1.2): 47 areas that went from one country to another, each shown for 365 days after the change. Rules are in `snapshots.json` under `changes`.
 - A source oddity to raise with ETH Zurich: the Free City of Danzig ends on 31 August 1938 and is inside Germany from 30 September 1938. It was annexed on 1 September 1939.
 - Lab map 0.2.0 adds the changes layer (item `d41979c819334fe99199fe4530657fcf`): hatched with a heavy outline, labelled "from <country>", pop-up with both countries, the date and the size. Map test 11 of 11 on SDK 5.2. One run failed the Poland pop-up check with an empty pop-up and passed on the next run unchanged: a timing fault in the test, to watch.
+
+### Lighter outlines (19 November 2026)
+
+Jason found the lab map slow to load in the Atlas app; the slider and the hatched areas worked. Measured: the two layers download as about 380 kB, but the borders layer had 150,600 outline points against 31,100 for a snapshot layer. Builder 1.3 thins shared borders in the source's own lines (tolerance 0.03 degrees, about 3 km), so neighbours still meet: timeline 0.2.0 has 46,200 points and changes 0.2.0 has 4,800 (31% of before together). File sizes: 852 kB and 96 kB. The four snapshot files are unchanged byte for byte. Whether this fixes the slowness is not yet tested.
