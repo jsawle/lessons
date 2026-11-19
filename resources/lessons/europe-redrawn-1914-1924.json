@@ -1,0 +1,443 @@
+{
+ "$schema": "../schema/lesson.schema.json",
+ "formatVersion": "1.10",
+ "id": "europe-redrawn-1914-1924",
+ "contentVersion": "0.1.0",
+ "status": "draft",
+ "updated": "2026-11-19",
+ "reviewed": null,
+ "title": "Europe Redrawn, 1914–1924",
+ "summary": "Move a time slider from the empires of 1914 to the new countries of 1924. Each time a border moves, the land that changed hands is hatched for a year: students click it to read who lost it, who gained it and when, then match the dates to the peace treaties.",
+ "subject": "History",
+ "course": "World History",
+ "unit": "The First World War and the peace",
+ "alsoFits": [
+  "Between the wars"
+ ],
+ "grade": "9-10",
+ "subjects": [
+  "World History",
+  "Geography"
+ ],
+ "time": "About 65 minutes over two class periods: questions 1 to 4, then 5, 6 and the big question",
+ "studentLogin": "Not needed to explore the map",
+ "map": {
+  "webmapId": "ffa17ccd8da248c0b96237dcc15a64b5",
+  "image": {
+   "url": "https://jsawle.github.io/lessons/resources/assets/screenshots/europe-redrawn-1914-1924-opening.jpg",
+   "alt": "The map as it opens, on January 1, 1914: Europe with each country named and shaded in one of eight colors, including Austria-Hungary, the Russian Empire, the Ottoman Empire and Germany.",
+   "width": 1200,
+   "height": 800
+  },
+  "about": "This map shows the borders of Europe's countries on any date from January 1, 1914 to the end of 1924. A time slider moves the date three months at a time. Each country keeps one color for the whole period, and its name is on the map. When land goes from one country to another, that land is hatched with a heavy outline for one year. Both layers are on when the map opens, on January 1, 1914.",
+  "bookmarks": [
+   "Europe",
+   "Central and Eastern Europe",
+   "The Balkans and Turkey"
+  ],
+  "layers": [
+   {
+    "name": "Land that changed hands in the last year",
+    "shows": "Hatched areas with a heavy outline: land that went from one country to another, shown for one year after the change and labeled with the country it came from. The pop-up names both countries, the date and the size of the land in square kilometers.",
+    "source": "Worked out from CShapes 2.0 (Schvitz, Girardin, Rüegger, Weidmann, Cederman and Gleditsch, 2022), ETH Zurich"
+   },
+   {
+    "name": "Countries and territories, 1914 to 1924",
+    "shows": "Each country in force on the slider's date, named and shaded in one of eight colors. A country keeps its color for the whole period; the colors only tell neighbors apart. The pop-up gives the country's status and the dates its border was in force.",
+    "source": "CShapes 2.0 (Schvitz, Girardin, Rüegger, Weidmann, Cederman and Gleditsch, 2022), ETH Zurich"
+   }
+  ]
+ },
+ "knownIssues": [
+  {
+   "where": "The map and both layers",
+   "note": "Test map in the GIS for Schools sandbox, titled LAB. The data is CShapes 2.0 (CC BY-NC-SA 4.0); ETH Zurich was asked on 19 November 2026 to confirm its use and has not yet replied. Not for a branded Atlas until they do.",
+   "status": "open",
+   "date": "2026-11-19",
+   "studentVisible": false
+  },
+  {
+   "where": "Hatched areas, pop-up",
+   "note": "Sizes are in square kilometers, and the pop-up uses the British spelling. The other lessons use miles. Question 5 uses the numbers as given.",
+   "status": "open",
+   "date": "2026-11-19",
+   "studentVisible": true
+  },
+  {
+   "where": "Russia from December 1917",
+   "note": "The source names the country Soviet Union from December 6, 1917. The Soviet Union was formed in December 1922; before that it was Soviet Russia. The teacher notes say so.",
+   "status": "open",
+   "date": "2026-11-19",
+   "studentVisible": true
+  },
+  {
+   "where": "Time slider",
+   "note": "The steps describe the slider as it works in Map Viewer (play, step forward, step back). Jason has seen the map working in the Atlas app; the exact button names there are not yet checked against the steps.",
+   "status": "open",
+   "date": "2026-11-19",
+   "studentVisible": false
+  },
+  {
+   "where": "Standards and further reading",
+   "note": "The standards' wording was written from memory because the official pages could not be opened on 19 November 2026; check each one before review. Only one further-reading link has been opened and checked.",
+   "status": "open",
+   "date": "2026-11-19",
+   "studentVisible": false
+  },
+  {
+   "where": "Lesson as a whole",
+   "note": "First draft: no independent fact-check, map checker run or persona review yet.",
+   "status": "open",
+   "date": "2026-11-19",
+   "studentVisible": false
+  }
+ ],
+ "inquiry": {
+  "compellingQuestion": {
+   "en": "How did the First World War and the peace treaties change the map of Europe between 1914 and 1924, and who gained and who lost?"
+  },
+  "questions": [
+   {
+    "id": "q1",
+    "title": {
+     "en": "Notice: Europe in 1914"
+    },
+    "task": "With the slider at January 1, 1914, name the large empires of central and eastern Europe, check whether Poland and Czechoslovakia are on the map, and read Austria-Hungary's pop-up.",
+    "tools": [
+     "bookmarks",
+     "time",
+     "popups"
+    ],
+    "core": false,
+    "minutes": 8,
+    "frontOfClass": [
+     "Open the Europe bookmark. The slider is at January 1, 1914.",
+     "Ask: which large countries cover central and eastern Europe? Can you find Poland or Czechoslovakia?",
+     "Click Austria-Hungary and read the pop-up: its status, and the dates its border was in force.",
+     "Ask: on what date does the pop-up say this border ended?"
+    ],
+    "steps": [
+     {
+      "en": "Open the Europe bookmark. Check that the time slider is at its start, January 1, 1914."
+     },
+     {
+      "en": "Read the country names in central and eastern Europe. Look for Poland and for Czechoslovakia."
+     },
+     {
+      "en": "Click Austria-Hungary and read its pop-up."
+     }
+    ],
+    "ask": {
+     "en": "(a) Name three large empires in central and eastern Europe in 1914. (b) Are Poland and Czechoslovakia on the map? (c) According to the pop-up, on what date did Austria-Hungary's border end?"
+    },
+    "lines": 3,
+    "answer": {
+     "where": "Countries and territories, 1914 to 1924 layer, Europe bookmark, slider at January 1, 1914. The map shows 24 countries, among them Austria-Hungary, the Russian Empire, the Ottoman Empire and Germany. Poland, Czechoslovakia, Finland, Estonia, Latvia and Lithuania are not there. Austria-Hungary's pop-up reads: An independent country. This border was in force from October 7, 1908 to November 2, 1918.",
+     "accept": "(a) Any three of Austria-Hungary, the Russian Empire, the Ottoman Empire and Germany. (b) No, neither is on the map. (c) November 2, 1918.",
+     "text": "The start date, October 7, 1908, is when the source says Austria-Hungary's border last changed before the war. Students don't need it."
+    }
+   },
+   {
+    "id": "q2",
+    "title": {
+     "en": "Predict"
+    },
+    "task": "Before moving the slider, students predict which countries' borders will change most by 1924 and give a reason. They write the prediction down first.",
+    "tools": [
+     "bookmarks"
+    ],
+    "core": false,
+    "minutes": 5,
+    "frontOfClass": [
+     "Keep the slider at January 1, 1914.",
+     "Read Before you start together: who lost the war?",
+     "Ask: which countries on this map do you expect to lose land by 1924, and why? Have students write the prediction down before anyone moves the slider."
+    ],
+    "steps": [
+     {
+      "en": "Keep the slider at January 1, 1914."
+     },
+     {
+      "en": "Read Before you start again and find the countries that lost the war."
+     },
+     {
+      "en": "Write your prediction before you move the slider."
+     }
+    ],
+    "ask": {
+     "en": "Which countries do you expect to lose the most land by 1924? Why those?"
+    },
+    "fill": {
+     "en": "I predict ______________ will lose the most land because ______________."
+    },
+    "lines": 2,
+    "answer": {
+     "accept": "Any prediction with a reason: for example, the countries that lost the war (Germany, Austria-Hungary, the Ottoman Empire, Bulgaria), or the largest empires. Predictions are checked in question 3, not marked right or wrong here."
+    }
+   },
+   {
+    "id": "q3",
+    "title": {
+     "en": "Reveal: January 1919"
+    },
+    "task": "Move the slider to January 1, 1919, seven weeks after the fighting stopped, and compare the map with 1914 and with the prediction.",
+    "tools": [
+     "time",
+     "bookmarks"
+    ],
+    "core": false,
+    "minutes": 8,
+    "frontOfClass": [
+     "Open the Central and Eastern Europe bookmark.",
+     "Step the slider forward to January 1, 1919. Let students watch the borders change on the way.",
+     "Ask: which country from 1914 is gone? Name four countries that were not on the map in 1914.",
+     "Ask: was your prediction right so far?"
+    ],
+    "steps": [
+     {
+      "en": "Open the Central and Eastern Europe bookmark."
+     },
+     {
+      "en": "Move the time slider forward, one step at a time, to January 1, 1919. Watch what changes on the way."
+     },
+     {
+      "en": "Read the country names again."
+     }
+    ],
+    "ask": {
+     "en": "(a) Which large country from 1914 is no longer on the map? (b) Name four countries that were not on the map in 1914. (c) Was your prediction right so far?"
+    },
+    "lines": 3,
+    "answer": {
+     "where": "Countries and territories, 1914 to 1924 layer, Central and Eastern Europe bookmark, slider at January 1, 1919. Austria-Hungary is gone; Austria and Hungary are there from November 3, 1918. New names: Finland (from December 6, 1917), Lithuania (February 16, 1918), Estonia, Poland and Czechoslovakia (November 11, 1918), Latvia (November 18, 1918) and the Kingdom of Serbs, Croats and Slovenes (December 1, 1918), which replaces Serbia and Montenegro. The Russian Empire is now labeled Soviet Union. Much of the map is hatched.",
+     "accept": "(a) Austria-Hungary. Also accept the Russian Empire, Serbia or Montenegro, with Austria-Hungary the main answer. (b) Any four of Austria, Hungary, Czechoslovakia, Poland, Finland, Estonia, Latvia, Lithuania and the Kingdom of Serbs, Croats and Slovenes. (c) An honest comparison with the prediction.",
+     "text": "The source dates each new country from the day it counts it as a state, which can differ from the dates in a textbook. The peace treaties came later, in 1919 and 1920: question 4."
+    }
+   },
+   {
+    "id": "q4",
+    "title": {
+     "en": "Read the hatched land"
+    },
+    "task": "At January 1, 1920, click three hatched areas, read who lost the land, who gained it, when and how much, and match the dates to the treaties in Before you start.",
+    "tools": [
+     "time",
+     "popups",
+     "legend"
+    ],
+    "core": true,
+    "minutes": 15,
+    "frontOfClass": [
+     "Step the slider to January 1, 1920. Open the legend: hatching is land that went from one country to another in the last year.",
+     "Click the hatched area inside Poland labeled from Germany. Read the pop-up: both countries, the date and the size. If it says 1 of 2, the first is the hatched land.",
+     "Click two more: the hatched area inside France labeled from Germany, and the one inside Italy labeled from Austria.",
+     "Ask: which treaty in Before you start has the same date as each one?",
+     "Ask: what do the countries that lost this land have in common?"
+    ],
+    "steps": [
+     {
+      "en": "Move the time slider to January 1, 1920. Open the legend and read what the hatching means."
+     },
+     {
+      "en": "Click three hatched areas: inside Poland, the one labeled from Germany; inside France, the one labeled from Germany; inside Italy, the one labeled from Austria."
+     },
+     {
+      "en": "For each one, write the country that lost the land, the country that gained it, the date and the size."
+     }
+    ],
+    "ask": {
+     "en": "(a) Fill in who lost the land, who gained it, the date and the size for each area. (b) Which treaty in Before you start has the same date as each one? (c) What do the countries that lost this land have in common?"
+    },
+    "lines": 5,
+    "answer": {
+     "where": "Land that changed hands in the last year layer, slider at January 1, 1920, pop-ups. Germany to Poland: June 28, 1919, about 47,700 square kilometers. Germany to France: June 28, 1919, about 15,800. Austria to Italy: September 10, 1919, about 15,400. Others a student may open on this date: Germany to the Free City of Danzig, June 28, 1919 (2,000); Austria to Poland, September 10, 1919 (78,900); Austria to the Kingdom of Serbs, Croats and Slovenes, September 10, 1919 (34,000); Hungary to Romania, September 10, 1919 (12,700); Bulgaria to Greece (8,200) and Bulgaria to Romania (7,900), both November 27, 1919.",
+     "accept": "(a) The three rows as above; accept any hatched area read correctly. (b) June 28, 1919 is the Treaty of Versailles with Germany; September 10, 1919 is the Treaty of Saint-Germain with Austria. (c) Germany and Austria were on the losing side of the war. Strong answers add that the land went to countries on the winning side or to new countries.",
+     "text": "The dates match because the source dates these changes from the day each treaty was signed. The Bulgarian changes carry the date of a treaty that is not in Before you start; a student who opens one has found a fourth treaty to look up."
+    }
+   },
+   {
+    "id": "q5",
+    "title": {
+     "en": "Follow one country: Hungary"
+    },
+    "task": "At January 1, 1921, read the two hatched areas labeled from Hungary, add up the land, and weigh the map against a museum's statement about the Treaty of Trianon.",
+    "tools": [
+     "time",
+     "popups",
+     "bookmarks"
+    ],
+    "core": false,
+    "minutes": 10,
+    "frontOfClass": [
+     "Step the slider to January 1, 1921 and open the Central and Eastern Europe bookmark.",
+     "Click the hatched area inside Romania labeled from Hungary, then the one inside the Kingdom of Serbs, Croats and Slovenes labeled from Hungary.",
+     "Ask: who gained land from Hungary, on what date, and how much in all?",
+     "Read the museum's statement in the question. Ask: what on the map supports it, and what can't the map tell you?"
+    ],
+    "steps": [
+     {
+      "en": "Move the time slider to January 1, 1921 and open the Central and Eastern Europe bookmark."
+     },
+     {
+      "en": "Click the two hatched areas labeled from Hungary: one inside Romania, one inside the Kingdom of Serbs, Croats and Slovenes."
+     },
+     {
+      "en": "Write the date and the size of each, then add the two sizes."
+     }
+    ],
+    "ask": {
+     "en": "(a) Which two countries gained land from Hungary, and on what date? (b) How much land in all? (c) The National WWI Museum says that in the Treaty of Trianon Hungary lost two-thirds of its former territory and 58 percent of its population. What on the map supports this, and what can't the map tell you?"
+    },
+    "lines": 4,
+    "answer": {
+     "where": "Land that changed hands in the last year layer, slider at January 1, 1921, pop-ups. Hungary to Romania: June 4, 1920, about 102,800 square kilometers. Hungary to the Kingdom of Serbs, Croats and Slovenes: June 4, 1920, about 61,900. Together about 164,700.",
+     "accept": "(a) Romania and the Kingdom of Serbs, Croats and Slovenes, on June 4, 1920. (b) About 164,700 square kilometers. (c) Supports: the date is the Treaty of Trianon's, and the hatched land is large beside the Hungary that is left. Can't tell: the map has no size for Hungary itself, so the fraction can't be checked here; it shows nothing about people, so the 58 percent can't be checked; and it doesn't show land Hungary lost at other dates.",
+     "text": "The museum's two-thirds counts from the old Kingdom of Hungary. On this map Slovakia goes from Austria-Hungary straight to Czechoslovakia on November 11, 1918, and Hungary loses more land on December 1, 1918 (51,300) and September 10, 1919 (12,700), so the two areas dated June 4, 1920 are only part of the loss."
+    }
+   },
+   {
+    "id": "q6",
+    "title": {
+     "en": "Question the map"
+    },
+    "task": "At the last stop of the slider, read Poland's pop-up and ask what a map of borders leaves out.",
+    "tools": [
+     "time",
+     "popups"
+    ],
+    "core": false,
+    "minutes": 7,
+    "frontOfClass": [
+     "Step the slider to its last stop, October 1, 1924. Nothing is hatched: no land changed hands in the year before.",
+     "Click Poland and read the pop-up.",
+     "Ask: how long did this border last? What ended it?",
+     "Ask: this map shows borders and dates. What doesn't it show about the people who lived on the hatched land?"
+    ],
+    "steps": [
+     {
+      "en": "Move the time slider to its last stop, October 1, 1924."
+     },
+     {
+      "en": "Click Poland and read the dates in its pop-up."
+     },
+     {
+      "en": "Look back at one hatched area you opened in question 4 or 5."
+     }
+    ],
+    "ask": {
+     "en": "(a) According to the pop-up, from when to when was Poland's border in force? About how many years is that? (b) This map shows borders and dates. Name two things it doesn't show about the land that changed hands."
+    },
+    "lines": 3,
+    "answer": {
+     "where": "Countries and territories, 1914 to 1924 layer, slider at October 1, 1924, Poland's pop-up: An independent country. This border was in force from March 18, 1921 to May 7, 1945.",
+     "accept": "(a) March 18, 1921 to May 7, 1945, about 24 years. (b) Any two of: who lived there, what languages they spoke, whether they were asked, whether there was fighting, why the border was drawn where it was, what happened to people who ended up in a new country.",
+     "text": "The map draws the borders the source counts as recognized, from a research data set made at ETH Zurich. It leaves out the smallest countries, and it dates changes by its own rules. May 7, 1945 is the source's date for the end of this border, at the end of the Second World War."
+    }
+   }
+  ],
+  "final": {
+   "teacher": "Students answer the compelling question with evidence from the slider at three dates (1914, 1919 and 1924) and at least two hatched-area pop-ups, then write one question about these borders that the map can't answer. Accept answers that describe the change (three empires gone or broken up, nine new countries in central and eastern Europe), name who lost land (Germany, Austria, Hungary, Bulgaria, Russia) and who gained it with dates from the pop-ups, connect the 1919 and 1920 dates to the treaties, and say something the map can't show. The students' own questions are a good way into the years between the wars.",
+   "student": {
+    "en": "Answer the big question, How did the First World War and the peace treaties change the map of Europe between 1914 and 1924, and who gained and who lost?, using what the slider shows at three dates and at least two hatched-area pop-ups. Then write one question about these borders that the map can't answer."
+   },
+   "tools": [
+    "time",
+    "popups"
+   ]
+  }
+ },
+ "objectives": [
+  "Describe the countries of central and eastern Europe in January 1914, using the time slider and the country names.",
+  "Make a prediction from the map, then move the slider to test it.",
+  "Read who lost land, who gained it, the date and the size in the pop-ups of three hatched areas.",
+  "Match the dates of border changes to the treaties of Versailles, Saint-Germain and Trianon.",
+  "Evaluate the map as a source: what a map of borders and dates leaves out."
+ ],
+ "discussion": [
+  "Your prediction in question 2: what did you base it on, and what did the slider show that you didn't expect?",
+  "The hatching lasts one year and then disappears. What does that make easy to see, and what does it hide?",
+  "The map shows who gained land, not who lived on it. What other evidence would you want before saying a new border was fair?"
+ ],
+ "differentiation": {
+  "support": "Do questions 1 and 3 from the front, stepping the slider yourself, and point out the three hatched areas to click in question 4 (inside Poland, inside France, inside Italy) on the projected map.",
+  "stretch": "At January 1, 1921, open every hatched area on the map and list them by the country that lost the land. Which country lost land to the most neighbors, and what might explain that?"
+ },
+ "resources": [
+  {
+   "title": "Treaties Signed: the Paris Peace Conference, 1919–1920",
+   "url": "https://theworldwar.org/learn/peace/treaties-signed",
+   "source": "National WWI Museum and Memorial"
+  }
+ ],
+ "assessment": {
+  "evidence": "Strong answers use the slider at three dates (January 1, 1914; January 1, 1919; October 1, 1924) to say which countries went and which appeared, pop-up names, dates and sizes for at least two hatched areas (for example Germany to Poland, June 28, 1919; Hungary to Romania, June 4, 1920), the treaty that matches each date, and one thing the map can't show.",
+  "exemplar": "In January 1914 the map shows a few big empires in central and eastern Europe: Austria-Hungary, the Russian Empire, the Ottoman Empire and Germany. By January 1919 Austria-Hungary is gone, and Austria, Hungary, Czechoslovakia and Poland are on the map, with Finland and the Baltic countries where Russia's edge used to be. The countries that lost the war lost land. On June 28, 1919, the date of the Treaty of Versailles, Germany lost about 47,700 square kilometers to Poland and about 15,800 to France. On June 4, 1920, the Treaty of Trianon, Hungary lost about 102,800 to Romania. The winners and the new countries gained. By 1924 the borders had stopped moving. The map shows borders and dates, but not who lived on the land or whether they were asked."
+ },
+ "studentSupport": {
+  "beforeYouStart": {
+   "en": "The First World War began in 1914. The fighting stopped on November 11, 1918. Germany, Austria-Hungary, the Ottoman Empire and Bulgaria lost. The countries that won then wrote a peace treaty with each country that lost. Three of them: the Treaty of Versailles with Germany, signed on June 28, 1919; the Treaty of Saint-Germain with Austria, September 10, 1919; and the Treaty of Trianon with Hungary, June 4, 1920. An empire is a large state that rules many peoples."
+  },
+  "readingTheMap": {
+   "en": "The time slider at the bottom of the map sets the date. It moves three months at a time, from January 1, 1914 to October 1, 1924. Use the step buttons to move one step, or play to watch. Each country keeps one color the whole time; the colors only tell neighbors apart. Hatched land with a heavy outline changed hands in the year before the slider's date, and its label says who it came from. Click any area to open its pop-up."
+  },
+  "tips": [
+   "popups"
+  ],
+  "reflection": {
+   "en": "Moving the slider a step at a time, what did you notice about how Europe's borders changed that you might have missed by comparing a 1914 map with a 1924 map?"
+  }
+ },
+ "teacherNotes": {
+  "beforeClass": "The map opens on January 1, 1914 with both layers on. The slider stops every three months (January 1, April 1, July 1 and October 1), so every date in the questions is a stop. It plays on its own if a student presses play; the questions work best one step at a time. Hatching stays for one year after a change, so a hatched area is on the map for four stops and then goes. Sizes in the pop-ups are in square kilometers. Try the slider in your own browser first: the lesson needs it.",
+  "misconceptions": [
+   {
+    "claim": "The new countries were created by the peace treaties.",
+    "response": "On this map most of them appear in November and December 1918, months before the first treaty. The treaties of 1919 and 1920 then moved their borders."
+   },
+   {
+    "claim": "The label Soviet Union means the Soviet Union existed in 1918.",
+    "response": "The source uses that name from December 6, 1917. The country was Soviet Russia until the Soviet Union was formed in December 1922."
+   },
+   {
+    "claim": "When the hatching disappears, the land has gone back.",
+    "response": "Hatching only marks the year after a change. The border stays where it moved to: click the country to see its dates."
+   },
+   {
+    "claim": "A country's color shows which side it was on.",
+    "response": "The eight colors only tell neighbors apart. Nothing on the map shows sides in the war."
+   }
+  ],
+  "keyWords": [
+   "empire",
+   "border",
+   "treaty",
+   "armistice",
+   "recognized",
+   "self-determination"
+  ]
+ },
+ "standards": [
+  {
+   "code": "C3 D2.His.14.9-12",
+   "text": "Analyze multiple and complex causes and effects of events in the past."
+  },
+  {
+   "code": "C3 D2.Geo.2.9-12",
+   "text": "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions and their political, cultural, and economic dynamics."
+  },
+  {
+   "code": "FL SS.912.W.7.3",
+   "text": "Summarize significant effects of World War I (partial: the changes to Europe's borders)."
+  },
+  {
+   "code": "CA 10.6.2",
+   "text": "Describe the effects of the war and resulting peace treaties on population movement, the international economy, and shifts in the geographic and political borders of Europe and the Middle East (partial: the borders of Europe)."
+  }
+ ],
+ "languages": {
+  "en": {
+   "status": "draft",
+   "note": "English first draft 0.1.0 (19 Nov 2026), written to test the World History workflow. Not yet fact-checked independently or reviewed."
+  }
+ }
+}

@@ -1,5 +1,5 @@
 # MapMaker lessons on the Support Hub (questions, layers and sources)
-Built 2026-11-11 from the lesson files by the MapMaker resource pages, Vera knowledge builder 1.6. Do not edit by hand; edit the lesson files and rebuild.
+Built 2026-11-19 from the lesson files by the MapMaker resource pages, Vera knowledge builder 1.6. Do not edit by hand; edit the lesson files and rebuild.
 
 How to use this file: each lesson below has its own MapMaker map. When a teacher names one of these lessons (by title or lesson ID) and asks for new or different questions, base every question only on the bookmarks, layers and pop-up content listed for that lesson, and use bookmark and layer names exactly as written. If a request needs information that lesson's map does not show, say so plainly instead of inventing it. Use only the links listed for that lesson. The answers to the lessons' questions are not in this file: do not give them, and do not write student material that contains them.
 
@@ -420,3 +420,37 @@ How to use this file: each lesson below has its own MapMaker map. When a teacher
 **How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data).
 **Languages:** student sheets in English.
 **Lesson content version:** 0.5.0, updated 2026-11-11.
+
+### Europe Redrawn, 1914–1924
+**Lesson ID:** europe-redrawn-1914-1924
+**Subject:** History. **Course:** World History. **Grade:** 9-10. **Unit:** The First World War and the peace. **Time:** About 65 minutes over two class periods: questions 1 to 4, then 5, 6 and the big question.
+**MapMaker map:** [Open Europe Redrawn, 1914–1924 in MapMaker](https://mpmkr.maps.arcgis.com/apps/instant/atlas/index.html?appid=0cd1cdee853c413a84bfe4b9a6931f0d&webmap=ffa17ccd8da248c0b96237dcc15a64b5)
+**Description:** Move a time slider from the empires of 1914 to the new countries of 1924. Each time a border moves, the land that changed hands is hatched for a year: students click it to read who lost it, who gained it and when, then match the dates to the peace treaties.
+**Subjects:** World History, Geography.
+**Learning objectives (students will):**
+- Describe the countries of central and eastern Europe in January 1914, using the time slider and the country names.
+- Make a prediction from the map, then move the slider to test it.
+- Read who lost land, who gained it, the date and the size in the pop-ups of three hatched areas.
+- Match the dates of border changes to the treaties of Versailles, Saint-Germain and Trianon.
+- Evaluate the map as a source: what a map of borders and dates leaves out.
+**Bookmarks in this map:** Europe; Central and Eastern Europe; The Balkans and Turkey.
+**Layers in this map (exact name: what students see; source):**
+- Land that changed hands in the last year: Hatched areas with a heavy outline: land that went from one country to another, shown for one year after the change and labeled with the country it came from. The pop-up names both countries, the date and the size of the land in square kilometers; source: Worked out from CShapes 2.0 (Schvitz, Girardin, Rüegger, Weidmann, Cederman and Gleditsch, 2022), ETH Zurich.
+- Countries and territories, 1914 to 1924: Each country in force on the slider's date, named and shaded in one of eight colors. A country keeps its color for the whole period; the colors only tell neighbors apart. The pop-up gives the country's status and the dates its border was in force; source: CShapes 2.0 (Schvitz, Girardin, Rüegger, Weidmann, Cederman and Gleditsch, 2022), ETH Zurich.
+**What students read before they start:** The First World War began in 1914. The fighting stopped on November 11, 1918. Germany, Austria-Hungary, the Ottoman Empire and Bulgaria lost. The countries that won then wrote a peace treaty with each country that lost. Three of them: the Treaty of Versailles with Germany, signed on June 28, 1919; the Treaty of Saint-Germain with Austria, September 10, 1919; and the Treaty of Trianon with Hungary, June 4, 1920. An empire is a large state that rules many peoples.
+**How the student sheet explains the map's symbols:** The time slider at the bottom of the map sets the date. It moves three months at a time, from January 1, 1914 to October 1, 1924. Use the step buttons to move one step, or play to watch. Each country keeps one color the whole time; the colors only tell neighbors apart. Hatched land with a heavy outline changed hands in the year before the slider's date, and its label says who it came from. Click any area to open its pop-up.
+**Compelling question:** How did the First World War and the peace treaties change the map of Europe between 1914 and 1924, and who gained and who lost?
+**Questions already in this lesson:**
+1. Notice: Europe in 1914 On the map: Open the Europe bookmark. Check that the time slider is at its start, January 1, 1914. Read the country names in central and eastern Europe. Look for Poland and for Czechoslovakia. Click Austria-Hungary and read its pop-up. Answer: (a) Name three large empires in central and eastern Europe in 1914. (b) Are Poland and Czechoslovakia on the map? (c) According to the pop-up, on what date did Austria-Hungary's border end?
+2. Predict On the map: Keep the slider at January 1, 1914. Read Before you start again and find the countries that lost the war. Write your prediction before you move the slider. Answer: Which countries do you expect to lose the most land by 1924? Why those? I predict ______________ will lose the most land because ______________.
+3. Reveal: January 1919 On the map: Open the Central and Eastern Europe bookmark. Move the time slider forward, one step at a time, to January 1, 1919. Watch what changes on the way. Read the country names again. Answer: (a) Which large country from 1914 is no longer on the map? (b) Name four countries that were not on the map in 1914. (c) Was your prediction right so far?
+4. Read the hatched land On the map: Move the time slider to January 1, 1920. Open the legend and read what the hatching means. Click three hatched areas: inside Poland, the one labeled from Germany; inside France, the one labeled from Germany; inside Italy, the one labeled from Austria. For each one, write the country that lost the land, the country that gained it, the date and the size. Answer: (a) Fill in who lost the land, who gained it, the date and the size for each area. (b) Which treaty in Before you start has the same date as each one? (c) What do the countries that lost this land have in common?
+5. Follow one country: Hungary On the map: Move the time slider to January 1, 1921 and open the Central and Eastern Europe bookmark. Click the two hatched areas labeled from Hungary: one inside Romania, one inside the Kingdom of Serbs, Croats and Slovenes. Write the date and the size of each, then add the two sizes. Answer: (a) Which two countries gained land from Hungary, and on what date? (b) How much land in all? (c) The National WWI Museum says that in the Treaty of Trianon Hungary lost two-thirds of its former territory and 58 percent of its population. What on the map supports this, and what can't the map tell you?
+6. Question the map On the map: Move the time slider to its last stop, October 1, 1924. Click Poland and read the dates in its pop-up. Look back at one hatched area you opened in question 4 or 5. Answer: (a) According to the pop-up, from when to when was Poland's border in force? About how many years is that? (b) This map shows borders and dates. Name two things it doesn't show about the land that changed hands.
+**Closing reflection already in this lesson:** Moving the slider a step at a time, what did you notice about how Europe's borders changed that you might have missed by comparing a 1914 map with a 1924 map?
+**Answers:** not in this file. The answers are on the lesson's teacher page, for teachers only; do not give answers to the questions above, and do not write student material that contains them.
+**Key words:** empire, border, treaty, armistice, recognized, self-determination.
+**Standards:** C3 D2.His.14.9-12; C3 D2.Geo.2.9-12; FL SS.912.W.7.3; CA 10.6.2.
+**How-to pages for the tools this lesson uses:** [Navigating MapMaker](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/navigating-mapmaker); [Explore Layers and Data](https://mapmaker-support-hub-mpmkr.hub.arcgis.com/pages/explore-layers-and-data).
+**Languages:** student sheets in English.
+**Lesson content version:** 0.1.0, updated 2026-11-19.

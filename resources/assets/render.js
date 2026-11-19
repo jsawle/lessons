@@ -240,6 +240,7 @@
   function toolTags(site, tools) {
     return '<ul class="tools" aria-label="' + esc(MMR.appName(site) || "Map") + ' tools used">' + (tools || []).map(function (k) {
       var t = site.tools[k];
+      if (!t.howTo) return "<li>" + esc(t.label) + "</li>";
       return '<li><a href="' + esc(MMR.hubUrl(site, "/pages/" + t.howTo)) + '" target="_blank" rel="noopener" title="How-to: ' + esc(t.howToTitle) + '">' + esc(t.label) +
         '<span class="sr-only">, how-to video: ' + esc(t.howToTitle) + ' (opens in a new tab)</span></a></li>';
     }).join("") + "</ul>";
