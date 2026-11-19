@@ -11,7 +11,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "3.9";
+  var VERSION = "3.10";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
@@ -427,7 +427,7 @@
 
     add(footer(site, lesson));
     return { slug: slug, kind: "lesson", lessonId: lesson.id, title: lesson.title, summary: MMR.plain(lesson.summary),
-      tags: [app, "Lesson", lesson.course, "Grade " + lesson.grade, lesson.unit].filter(Boolean), contentVersion: lesson.contentVersion,
+      tags: [app, "Lesson", lesson.course, "Grade " + lesson.grade, lesson.unit].filter(Boolean), courses: [lesson.course], contentVersion: lesson.contentVersion,
       layout: { sections: S } };
   }
 
@@ -455,7 +455,7 @@
     add('<div class="mml"><h2>Standards</h2>' + standardsTable(site, lesson) + "</div>");
     add(footer(site, Object.assign({}, lesson, { kindOfPage: "teacher" })));
     return { slug: slug, kind: "teacher", lessonId: lesson.id, title: "Answer notes: " + lesson.title, summary: "Where to find each answer on the map and what to accept, for the " + N.appLesson + " " + MMR.plain(lesson.title) + ". For teachers.",
-      tags: [app, "Teacher notes", lesson.course, "Grade " + lesson.grade, lesson.unit].filter(Boolean), contentVersion: lesson.contentVersion,
+      tags: [app, "Teacher notes", lesson.course, "Grade " + lesson.grade, lesson.unit].filter(Boolean), courses: [lesson.course], contentVersion: lesson.contentVersion,
       layout: { sections: S } };
   }
 
@@ -485,21 +485,18 @@
     var pageTitle = own ? own.title : (H.lessonsTitle || "Lessons"), pageIntro = own ? (own.intro || "") : (H.lessonsIntro || "");
     // The main page lists every course without a page of its own; a course page lists that course alone.
     var lessons = allLessons.filter(function (l) { return own ? l.course === ownCourse : !CP[l.course]; });
-    var others = (own ? [{ title: H.lessonsTitle || "Lessons", path: lessonsPath(site) }] : []).concat(Object.keys(CP).filter(function (c) {
-      return c !== ownCourse && allLessons.some(function (l) { return l.course === c; });
-    }).map(function (c) { return { title: CP[c].title, path: "/pages/" + CP[c].slug }; }));
     function add(html) { S.push(section([mdCard(slug + ":" + n, html)])); n++; }
     var sorted = lessons.slice().sort(function (a, b) {
       return a.course.localeCompare(b.course) || MMR.unitIndex(site, a) - MMR.unitIndex(site, b) || a.title.localeCompare(b.title);
     });
     var courses = sorted.map(function (l) { return l.course; }).filter(function (v, i, a) { return a.indexOf(v) === i; });
     add("<style>" + (own ? cssFor(site, ownCourse) : CSS + courses.map(function (c, k) { return courseBlockCss(site, c, "mml-course" + k); }).join("")) + "</style>" + '<div class="mml mml-hero"><h1>' + esc(pageTitle) + '</h1><p class="mml-summary">' + esc(pageIntro) + "</p>" +
-      '<p><span class="mml-muted">' + sorted.length + " lesson" + (sorted.length === 1 ? "" : "s") + " · " + esc(courses.join(", ")) + " · no account or login needed</span></p>" +
-      (others.length ? '<p class="mml-prose">More lessons: ' + others.map(function (o) { return '<a href="' + esc(o.path) + '">' + esc(o.title) + "</a>"; }).join(" · ") + "</p>" : "") + "</div>");
+      '<p><span class="mml-muted">' + sorted.length + " lesson" + (sorted.length === 1 ? "" : "s") + " · " + esc(courses.join(", ")) + " · no account or login needed</span></p></div>");
     var body = "";
     courses.forEach(function (course) {
       var units = MMR.unitList(site, course), inCourse = sorted.filter(function (l) { return l.course === course; });
-      body += '<div class="mml-course' + courses.indexOf(course) + '">';
+      var block = !own && !!courseColours(site, course);  // only a course with its own colours on a shared page needs a block
+      if (block) body += '<div class="mml-course' + courses.indexOf(course) + '">';
       if (courses.length > 1) body += "<h2>" + esc(course) + "</h2>";
       var groups = units.filter(function (u) { return inCourse.some(function (l) { return l.unit === u; }); });
       groups.forEach(function (u) {
@@ -512,7 +509,7 @@
       if (other.length) body += '<h2 class="mml-unit">Other</h2><ul class="mml-lessons">' + other.map(function (l) {
         return '<li><h3><a href="/pages/' + esc(l.id) + '">' + esc(l.title) + '</a></h3><p class="mml-sum">' + t(l.summary) + "</p></li>";
       }).join("") + "</ul>";
-      body += "</div>";
+      if (block) body += "</div>";
     });
     add('<div class="mml">' + body + "</div>");
     add('<div class="mml"><h2>In every lesson</h2><ul class="mml-prose"><li>' + esc(app ? MMR.aOrAn(app) + " map" : "A map") + ' that opens straight from the page, with each layer’s source listed. No account or login is needed.</li>' +
@@ -523,7 +520,7 @@
     if (A && A.url) add('<div class="mml"><h2>Make your own questions</h2><p class="mml-prose">' + esc(A.about || A.name) + ', has every lesson’s map, bookmarks, layers and questions, but not the answers. Name a lesson and ask for easier or harder questions, a short quiz, questions for your own state’s standards or questions in another language. Each lesson page also has a prompt you can paste into another AI tool.</p>' +
       '<p class="mml-actions">' + ext(A.url, "Ask " + esc(A.name), "mml-btn") + '</p><p class="mml-prose mml-muted">' + esc(A.name) + '’s questions aren’t reviewed like these lessons. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem on the lesson page.</p></div>');
     add(footer(site, null));
-    return { slug: slug, kind: "catalogue", title: pageTitle, summary: pageIntro, tags: [app, "Lessons"].filter(Boolean), layout: { sections: S } };
+    return { slug: slug, kind: "catalogue", courses: courses, title: pageTitle, summary: pageIntro, tags: [app, "Lessons"].filter(Boolean), layout: { sections: S } };
   }
 
   /* ---------------- How these lessons work: one page for everything shared ---------------- */
@@ -547,7 +544,7 @@
     var out = [], N = MMR.names(site), app = N.app;
     lessons.forEach(function (l) {
       var tfn = teacherFileName(l), lic = MMR.plain(MMR.licence(site, l));
-      out.push({ key: l.id + ":teacher", keyword: "mmlSheet-" + l.id + "-teacher", lessonId: l.id, lang: "en", kind: "teacher",
+      out.push({ course: l.course, key: l.id + ":teacher", keyword: "mmlSheet-" + l.id + "-teacher", lessonId: l.id, lang: "en", kind: "teacher",
         title: l.title + ": Teacher notes (English)",
         snippet: ("Teacher notes for the " + N.appLesson + " " + l.title + ": where to find each answer on the map, what to accept, common misunderstandings, key words and standards. For teachers.").slice(0, 250),
         description: "<p>Teacher notes for the " + esc(N.appLesson) + " <strong>" + esc(l.title) + "</strong> (" + esc(l.course) + ", grade " + esc(l.grade) + "): where to find each answer on the map, what to accept, common misunderstandings, key words and standards. For teachers; share the lesson page or the map with students, not this file.</p>" +
@@ -557,7 +554,7 @@
       Object.keys(l.languages).forEach(function (lang) {
         var T = site.sheetText[lang], title = lang === "en" ? l.title : (l.sheetTitle && l.sheetTitle[lang]) || l.title;
         var fn = fileName(l, lang);
-        out.push({ key: l.id + ":" + lang, keyword: "mmlSheet-" + l.id + "-" + lang, lessonId: l.id, lang: lang,
+        out.push({ course: l.course, key: l.id + ":" + lang, keyword: "mmlSheet-" + l.id + "-" + lang, lessonId: l.id, lang: lang,
           title: title + ": " + T.subtitle + " (" + langInPhrase(site, lang) + ")",
           snippet: (T.subtitle + " for the " + N.appLesson + " " + l.title + ". Word document you can edit, print or open in Google Docs.").slice(0, 250),
           description: "<p>" + esc(T.subtitle) + " for the " + esc(N.appLesson) + " <strong>" + esc(l.title) + "</strong> (" + esc(l.course) + ", grade " + esc(l.grade) + ").</p>" +
