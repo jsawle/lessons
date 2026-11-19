@@ -56,8 +56,8 @@
   "siteId": "",
   "url": "",
   "lessonsSlug": "lessons",
-  "lessonsTitle": "MapMaker lessons",
-  "lessonsIntro": "Lessons that teach history with National Geographic MapMaker maps, arranged by course and by topic in the order most courses teach them. Each one pairs a map with an inquiry, a Word student sheet in English (some also in Spanish), and a separate teacher page with the answers.",
+  "lessonsTitle": "MapMaker lessons: Grade 8 US History",
+  "lessonsIntro": "Twelve lessons that teach Grade 8 US History with National Geographic MapMaker maps, arranged by topic in the order most courses teach them. Each one pairs a map with an inquiry, a Word student sheet in English (eight also in Spanish), and a separate teacher page with the answers.",
   "distUrl": "https://jsawle.github.io/lessons/resources/dist/mapmaker",
   "repoUrl": "https://github.com/jsawle/lessons",
   "theme": {
@@ -79,7 +79,14 @@
    }
   },
   "aboutSlug": "how-these-lessons-work",
-  "aboutTitle": "How these lessons work"
+  "aboutTitle": "How these lessons work",
+  "coursePages": {
+   "World History": {
+    "slug": "world-history-lessons",
+    "title": "MapMaker lessons: World History",
+    "intro": "Lessons that teach World History with National Geographic MapMaker maps, arranged by topic in the order most courses teach them. Each one pairs a map with an inquiry, a Word student sheet in English, and a separate teacher page with the answers."
+   }
+  }
  },
  "assistant": {
   "name": "Vera",

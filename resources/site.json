@@ -1,7 +1,7 @@
 {
  "app": {
   "name": "{pages} (lab)",
-  "version": "0.23.0",
+  "version": "0.24.0",
   "parts": {
    "Page renderer": "3.8",
    "Word sheet builder": "1.10",
@@ -9,7 +9,7 @@
    "Checker": "1.10",
    "Assistant knowledge builder": "1.6",
    "AI prompt builder": "1.2",
-   "Hub page builder": "3.8",
+   "Hub page builder": "3.9",
    "Map pictures": "1.0"
   }
  },

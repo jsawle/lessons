@@ -11,7 +11,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "3.8";
+  var VERSION = "3.9";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
@@ -257,7 +257,13 @@
   /* Inside a phrase, Spanish (and most languages) write the language name in lower case: "Hoja del estudiante (español)". */
   function langInPhrase(site, lang) { var n = langName(site, lang); return lang === "en" ? n : n.toLowerCase(); }
   function hubHome(site) { return site.hubDemo || {}; }
-  function lessonsPath(site) { return "/pages/" + (hubHome(site).lessonsSlug || "lessons"); }
+  /* A course can have a Lessons page of its own (hubDemo.coursePages in the lessons settings): its lessons are listed there,
+     not on the main Lessons page, and its lesson pages link back to it. */
+  function coursePages(site) { var c = hubHome(site).coursePages; return c && typeof c === "object" ? c : {}; }
+  function lessonsPath(site, course) {
+    var cp = course && coursePages(site)[course];
+    return "/pages/" + ((cp && cp.slug) || hubHome(site).lessonsSlug || "lessons");
+  }
 
   function teacherSlug(lesson) { return lesson.id + "-teacher"; }
   function standardsList(site, lesson) {
@@ -337,7 +343,7 @@
 
     // Hero: what the lesson is, its standards, the things a teacher does with it, and a picture of the map.
     var gc = classroomButton(site, mm), pic = MMR.mapImage(site, lesson);
-    add("<style>" + cssFor(site, lesson.course) + classroomCss(site) + "</style>" + '<div class="mml mml-hero"><p class="mml-crumbs"><a href="' + lessonsPath(site) + '">Lessons</a> › ' + esc(lesson.course) + " › " + esc(lesson.unit) + "</p>" +
+    add("<style>" + cssFor(site, lesson.course) + classroomCss(site) + "</style>" + '<div class="mml mml-hero"><p class="mml-crumbs"><a href="' + lessonsPath(site, lesson.course) + '">Lessons</a> › ' + esc(lesson.course) + " › " + esc(lesson.unit) + "</p>" +
       "<h1>" + esc(lesson.title) + '</h1><div class="mml-herogrid"><div><p class="mml-summary">' + t(lesson.summary) + "</p>" + factsList(site, lesson) +
       '<p class="mml-actions">' + ext(mm, esc(N.openInApp), "mml-btn mml-primary") + " " + (gc ? gc + " " : "") +
       jump(slug, "student-activity", "Student sheet") + " " + jump(slug, "teacher-notes", "Teacher notes") + "</p></div>" +
@@ -438,7 +444,7 @@
     var slug = teacherSlug(lesson), S = [], n = 0, inq = lesson.inquiry, tn = lesson.teacherNotes;
     var mm = MMR.atlasUrl(site, lesson.map.webmapId), N = MMR.names(site), app = N.app;
     function add(html) { S.push(section([mdCard(slug + ":" + n, html)])); n++; }
-    add("<style>" + cssFor(site, lesson.course) + "</style>" + '<div class="mml mml-hero"><p class="mml-crumbs"><a href="' + lessonsPath(site) + '">Lessons</a> › <a href="/pages/' + esc(lesson.id) + '">' + esc(lesson.title) + "</a></p>" +
+    add("<style>" + cssFor(site, lesson.course) + "</style>" + '<div class="mml mml-hero"><p class="mml-crumbs"><a href="' + lessonsPath(site, lesson.course) + '">Lessons</a> › <a href="/pages/' + esc(lesson.id) + '">' + esc(lesson.title) + "</a></p>" +
       "<h1>Answer notes: " + esc(lesson.title) + '</h1><div class="mml-notice"><strong>For teachers.</strong> This page holds the answers and what to accept. With students, share the lesson page or the map, not this page.</div>' +
       factsList(site, lesson) +
       '<p class="mml-actions">' + ext(mm, esc(N.openInApp), "mml-btn mml-primary") + ' <a class="mml-btn" href="/pages/' + esc(lesson.id) + '">Lesson page</a> <a class="mml-btn" href="' + sheetPlaceholder(lesson.id, "teacher") + '">Download Word (teacher notes)</a></p></div>');
@@ -473,15 +479,23 @@
   }
 
   /* ---------------- Lessons (catalogue) page: grouped by unit, in the order the course is taught ---------------- */
-  function cataloguePage(site, lessons) {
-    var H = hubHome(site), slug = H.lessonsSlug || "lessons", S = [], n = 0, N = MMR.names(site), app = N.app, A = MMR.assistant(site);
+  function cataloguePage(site, allLessons, ownCourse) {
+    var H = hubHome(site), CP = coursePages(site), own = ownCourse ? CP[ownCourse] : null;
+    var slug = own ? own.slug : (H.lessonsSlug || "lessons"), S = [], n = 0, N = MMR.names(site), app = N.app, A = MMR.assistant(site);
+    var pageTitle = own ? own.title : (H.lessonsTitle || "Lessons"), pageIntro = own ? (own.intro || "") : (H.lessonsIntro || "");
+    // The main page lists every course without a page of its own; a course page lists that course alone.
+    var lessons = allLessons.filter(function (l) { return own ? l.course === ownCourse : !CP[l.course]; });
+    var others = (own ? [{ title: H.lessonsTitle || "Lessons", path: lessonsPath(site) }] : []).concat(Object.keys(CP).filter(function (c) {
+      return c !== ownCourse && allLessons.some(function (l) { return l.course === c; });
+    }).map(function (c) { return { title: CP[c].title, path: "/pages/" + CP[c].slug }; }));
     function add(html) { S.push(section([mdCard(slug + ":" + n, html)])); n++; }
     var sorted = lessons.slice().sort(function (a, b) {
       return a.course.localeCompare(b.course) || MMR.unitIndex(site, a) - MMR.unitIndex(site, b) || a.title.localeCompare(b.title);
     });
     var courses = sorted.map(function (l) { return l.course; }).filter(function (v, i, a) { return a.indexOf(v) === i; });
-    add("<style>" + CSS + courses.map(function (c, k) { return courseBlockCss(site, c, "mml-course" + k); }).join("") + "</style>" + '<div class="mml mml-hero"><h1>' + esc(H.lessonsTitle || "Lessons") + '</h1><p class="mml-summary">' + esc(H.lessonsIntro || "") + "</p>" +
-      '<p><span class="mml-muted">' + sorted.length + " lesson" + (sorted.length === 1 ? "" : "s") + " · " + esc(courses.join(", ")) + " · no account or login needed</span></p></div>");
+    add("<style>" + (own ? cssFor(site, ownCourse) : CSS + courses.map(function (c, k) { return courseBlockCss(site, c, "mml-course" + k); }).join("")) + "</style>" + '<div class="mml mml-hero"><h1>' + esc(pageTitle) + '</h1><p class="mml-summary">' + esc(pageIntro) + "</p>" +
+      '<p><span class="mml-muted">' + sorted.length + " lesson" + (sorted.length === 1 ? "" : "s") + " · " + esc(courses.join(", ")) + " · no account or login needed</span></p>" +
+      (others.length ? '<p class="mml-prose">More lessons: ' + others.map(function (o) { return '<a href="' + esc(o.path) + '">' + esc(o.title) + "</a>"; }).join(" · ") + "</p>" : "") + "</div>");
     var body = "";
     courses.forEach(function (course) {
       var units = MMR.unitList(site, course), inCourse = sorted.filter(function (l) { return l.course === course; });
@@ -509,7 +523,7 @@
     if (A && A.url) add('<div class="mml"><h2>Make your own questions</h2><p class="mml-prose">' + esc(A.about || A.name) + ', has every lesson’s map, bookmarks, layers and questions, but not the answers. Name a lesson and ask for easier or harder questions, a short quiz, questions for your own state’s standards or questions in another language. Each lesson page also has a prompt you can paste into another AI tool.</p>' +
       '<p class="mml-actions">' + ext(A.url, "Ask " + esc(A.name), "mml-btn") + '</p><p class="mml-prose mml-muted">' + esc(A.name) + '’s questions aren’t reviewed like these lessons. Each one should be answerable from the map; if one isn’t, please tell us using Report a problem on the lesson page.</p></div>');
     add(footer(site, null));
-    return { slug: slug, kind: "catalogue", title: H.lessonsTitle || "Lessons", summary: H.lessonsIntro || "", tags: [app, "Lessons"].filter(Boolean), layout: { sections: S } };
+    return { slug: slug, kind: "catalogue", title: pageTitle, summary: pageIntro, tags: [app, "Lessons"].filter(Boolean), layout: { sections: S } };
   }
 
   /* ---------------- How these lessons work: one page for everything shared ---------------- */
@@ -566,7 +580,8 @@
       builtOn: builtOn(lessons),
       app: { name: site.app.name, version: site.app.version, parts: site.app.parts },
       hub: { siteId: H.siteId, url: H.url, lessonsSlug: H.lessonsSlug || "lessons", theme: siteTheme(site) },
-      pages: [cataloguePage(site, lessons), aboutPage(site)].concat(lessons.map(function (l) { return lessonPage(site, l); })).concat(lessons.map(function (l) { return teacherPage(site, l); })),
+      pages: [cataloguePage(site, lessons)].concat(Object.keys(coursePages(site)).filter(function (c) { return lessons.some(function (l) { return l.course === c; }); })
+        .map(function (c) { return cataloguePage(site, lessons, c); })).concat([aboutPage(site)]).concat(lessons.map(function (l) { return lessonPage(site, l); })).concat(lessons.map(function (l) { return teacherPage(site, l); })),
       sheets: sheets(site, lessons, dist, opts.sheetFileName || function (l, lang) { return l.id + "-student-sheet-" + lang + ".docx"; },
         opts.teacherFileName || function (l) { return l.id + "-teacher-notes-en.docx"; }),
       assistant: kf ? { name: MMR.assistant(site).name, fileName: kf, url: dist.replace(/\/+$/, "") + "/" + kf } : null
