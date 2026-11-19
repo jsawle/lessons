@@ -1,0 +1,11 @@
+{
+ "type": "Web Map",
+ "title": "Europe's borders before and after the world wars, 1914 to 1947",
+ "snippet": "Country borders in Europe at four dates: July 1914, 1925, January 1938 and the end of 1947. Turn the layers on and off to compare Europe before and after each world war.",
+ "description": "<p><b>Question:</b> How did each world war change the map of Europe?</p><p><b>What the map shows:</b> Four layers, each with Europe's country borders on one day: 1 July 1914 (before the First World War), 1 June 1925 (after the peace settlement), 1 January 1938 (before the Second World War) and 31 December 1947 (after the peace treaties of 1947). The map opens on 1914. Turn the other layers on in the layer list to compare. Each date has its own outline colour and line pattern. Click a country for its status and the dates between which that border was in force.</p><p><b>Notes:</b> The source leaves out the smallest states (Andorra, Monaco, San Marino, Liechtenstein) and some special territories (the Saar; in 1947 the Free Territory of Trieste and the sectors of Berlin). The Soviet Union is drawn as one area, and Estonia, Latvia and Lithuania are not shown separately in 1947, when the Soviet Union had annexed them. Germany in 1947 is shown as two occupied areas. Cyprus is missing in 1914. Coastlines are simplified and the layers stop at 60 degrees east.</p><p><b>Source:</b> CShapes 2.0, ETH Zurich: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), Mapping the International System, 1886-2019, Journal of Conflict Resolution 66(1).</p><p><i>Version 0.1 (19 November 2026), draft.</i></p>",
+ "tags": "World History,Europe,borders,First World War,Second World War,1914,1925,1938,1947,MapMaker,draft",
+ "accessInformation": "CShapes 2.0: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), ETH Zurich; Esri.",
+ "licenseInfo": "Boundaries from CShapes 2.0 (ETH Zurich), licence CC BY-NC-SA 4.0. Written permission to use it in MapMaker has not been confirmed: keep this map private until it is. Text written for this map is original.",
+ "typeKeywords": "ArcGIS Online,Explorer Web Map,Map,Online Map,Web Map,spec:europe-borders-1914-1947,specVersion:0.1.0",
+ "extent": "-25.0,34.0,50.0,71.5"
+}
