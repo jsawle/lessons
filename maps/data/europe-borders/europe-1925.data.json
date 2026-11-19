@@ -1,0 +1,52 @@
+{
+  "format": "Data publish 1.0",
+  "id": "europe-1925",
+  "version": "0.3.0",
+  "file": "maps/data/build/europe-borders/europe-1925-v0_3_0.geojson",
+  "expectFeatures": 33,
+  "note": "Built by maps/data/europe-borders/build.py from CShapes 2.0. The file is not kept in the repository: run the builder first. PRIVATE until ETH Zurich confirms permission (LICENCE.md).",
+  "checks": [
+    {
+      "name": "Poland's border from the Peace of Riga, 18 March 1921",
+      "where": {
+        "Name": "Poland"
+      },
+      "expect": {
+        "BorderFrom": "1921-03-18",
+        "Status": "Independent"
+      }
+    },
+    {
+      "name": "Danzig under the League of Nations",
+      "where": {
+        "Name": "Free City of Danzig"
+      },
+      "expect": {
+        "ControlledBy": "League of Nations"
+      }
+    }
+  ],
+  "item": {
+    "title": "Europe's borders, 1925 (data for lessons) v0.3",
+    "snippet": "Country borders in Europe on 1 June 1925, after the First World War settlement. Draft for review: private until the source's licence is confirmed.",
+    "description": "<p>Country borders in Europe on 1 June 1925, after the First World War settlement: 33 areas, each with its name at the time, its status (independent, colony, mandate or occupied), who controlled it if it was not independent, and the dates between which this border was in force.</p><p>One of four layers (July 1914, 1925, January 1938, end of 1947) for comparing Europe before and after each world war's settlement.</p><p><b>Limits:</b> the source leaves out the smallest states (Andorra, Monaco, San Marino, Liechtenstein) and some special territories (the Saar; in 1947 the Free Territory of Trieste and Berlin's sectors), and draws the Soviet Union as one area. Coastlines are simplified. The layer is clipped at 60 degrees east.</p><p><b>Source:</b> CShapes 2.0: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), Mapping the International System, 1886-2019, Journal of Conflict Resolution 66(1); ETH Zurich.</p><p><i>Data version 0.3 (19 November 2026), draft.</i></p>",
+    "tags": [
+      "World History",
+      "Europe",
+      "borders",
+      "boundaries",
+      "1925",
+      "First World War",
+      "Second World War",
+      "draft",
+      "licence pending"
+    ],
+    "credits": "CShapes 2.0: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), Mapping the International System, 1886-2019, Journal of Conflict Resolution 66(1); ETH Zurich.",
+    "license": "Boundaries from CShapes 2.0 (ETH Zurich), licence CC BY-NC-SA 4.0: credit the source, non-commercial use only, and share anything made from it under the same licence. Written permission to use it in MapMaker has not been confirmed: keep this layer private until it is. See maps/data/europe-borders/LICENCE.md."
+  },
+  "publish": {
+    "org": "HNLEA4GfnbCFQZGa",
+    "orgLabel": "GIS for Schools",
+    "folder": "Map data"
+  }
+}
