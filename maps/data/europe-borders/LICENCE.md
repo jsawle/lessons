@@ -8,7 +8,7 @@ The four Europe border layers are cut from **CShapes 2.0** (ETH Zurich): Schvitz
 | Permission to use it in MapMaker | **Not confirmed.** To be asked of ETH Zurich in writing |
 | The R package that carries the same data (`cran/cshapes`) | Marked GPL (>= 2); which licence governs the data is one of the questions for ETH |
 | What is in this repository | The builder, the snapshot settings and the data specs only. The source file and the built GeoJSON are not committed (the repository is public) |
-| Layers in ArcGIS Online | Private. Do not share them, or maps that use them, until permission is confirmed |
+| Layers in ArcGIS Online | Shared publicly in the GIS for Schools sandbox on 19 November 2026 by Jason's decision, so the map could be built and tested. Permission from ETH is still to be confirmed; not for use in MapMaker until it is |
 
 Questions for ETH Zurich:
 

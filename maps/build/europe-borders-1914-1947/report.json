@@ -1,0 +1,74 @@
+{
+ "tool": "Map builder 1.4",
+ "spec": "maps/specs/europe-borders-1914-1947.json",
+ "specId": "europe-borders-1914-1947",
+ "specVersion": "0.1.0",
+ "built": "2026-11-19T11:06:46Z",
+ "webmapFingerprint": "709a4dd01c0f9fbcf4327c117ff4217b038f947e",
+ "itemFingerprint": "74b86c392ee38ff729404f0c939bc960049b9d61",
+ "checked": [
+  "basemap is public and not CARTO",
+  "every source layer is readable and every field the spec uses exists"
+ ],
+ "warnings": [],
+ "tested": {
+  "tool": "Map test 1.0",
+  "when": "2026-11-19T11:10:33Z",
+  "timeZone": "America/Chicago",
+  "webmapFingerprint": "709a4dd01c0f9fbcf4327c117ff4217b038f947e",
+  "pass": true,
+  "checks": [
+   {
+    "name": "notice-1914",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "austria-hungary",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "reveal-1925",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "poland-1925",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "danzig",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "reveal-1938",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "czechoslovakia-1938",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "reveal-1947",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "soviet-zone",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "poland-1947",
+    "pass": true,
+    "failures": []
+   }
+  ],
+  "checker": null
+ }
+}

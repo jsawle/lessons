@@ -1,0 +1,88 @@
+{
+ "tool": "Map test 1.0",
+ "timeZone": "America/Chicago",
+ "sdk": "ArcGIS Maps SDK for JavaScript 4.34",
+ "webmapFingerprint": "709a4dd01c0f9fbcf4327c117ff4217b038f947e",
+ "results": [
+  {
+   "name": "notice-1914",
+   "question": "Notice: Europe before the First World War",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": "Europe in July 1914, before the First World War\n\tCountry or territory, July 1914"
+  },
+  {
+   "name": "austria-hungary",
+   "question": "An empire that will not survive the war",
+   "pass": true,
+   "failures": [],
+   "popup": "Austria-Hungary, July 1914\n\nAn independent country\n\nThis border was in force from October 7, 1908 to November 2, 1918.",
+   "legend": null
+  },
+  {
+   "name": "reveal-1925",
+   "question": "Reveal: Europe after the First World War",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": "Europe in 1925, after the First World War\n\tCountry or territory, 1925"
+  },
+  {
+   "name": "poland-1925",
+   "question": "A country back on the map",
+   "pass": true,
+   "failures": [],
+   "popup": "Poland, 1925\n\nAn independent country\n\nThis border was in force from March 18, 1921 to May 7, 1945.",
+   "legend": null
+  },
+  {
+   "name": "danzig",
+   "question": "A city under the League of Nations",
+   "pass": true,
+   "failures": [],
+   "popup": "Free City of Danzig, 1925\n\nUnder the protection of the League of Nations\n\nThis border was in force from June 28, 1919 to August 31, 1938.",
+   "legend": null
+  },
+  {
+   "name": "reveal-1938",
+   "question": "Reveal: Europe before the Second World War",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": "Europe in January 1938, before the Second World War\n\tCountry or territory, January 1938"
+  },
+  {
+   "name": "czechoslovakia-1938",
+   "question": "A border with months left",
+   "pass": true,
+   "failures": [],
+   "popup": "Czechoslovakia, January 1938\n\nAn independent country\n\nThis border was in force from November 11, 1918 to September 29, 1938.",
+   "legend": null
+  },
+  {
+   "name": "reveal-1947",
+   "question": "Reveal: Europe after the Second World War",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": "Europe at the end of 1947, after the Second World War\n\tCountry or territory, the end of 1947"
+  },
+  {
+   "name": "soviet-zone",
+   "question": "Germany divided and occupied",
+   "pass": true,
+   "failures": [],
+   "popup": "Germany: Soviet occupation zone, the end of 1947\n\nOccupied by the Soviet Union\n\nThis border was in force from May 8, 1945 to October 4, 1949.",
+   "legend": null
+  },
+  {
+   "name": "poland-1947",
+   "question": "Poland moved west",
+   "pass": true,
+   "failures": [],
+   "popup": "Poland, the end of 1947\n\nAn independent country\n\nThis border was in force from May 8, 1945 to still in force when the source data ends (2019).",
+   "legend": null
+  }
+ ]
+}
