@@ -1,10 +1,10 @@
 {
   "format": "Data publish 1.0",
   "id": "europe-borders-changes",
-  "version": "0.1.0",
-  "file": "maps/data/build/europe-borders/europe-borders-changes-v0_1_0.geojson",
+  "version": "0.2.0",
+  "file": "maps/data/build/europe-borders/europe-borders-changes-v0_2_0.geojson",
   "expectFeatures": 47,
-  "note": "LAB layer for testing the time slider. Built by maps/data/europe-borders/build.py (1.2) from CShapes 2.0. The file is not kept in the repository. Not for MapMaker until ETH Zurich confirms permission (LICENCE.md).",
+  "note": "LAB layer for testing the time slider. Built by maps/data/europe-borders/build.py (1.3) from CShapes 2.0. The file is not kept in the repository. Not for MapMaker until ETH Zurich confirms permission (LICENCE.md).",
   "checks": [
     {
       "name": "Peace of Riga: land from the Soviet Union to Poland, 18 March 1921",
@@ -51,9 +51,9 @@
     }
   ],
   "item": {
-    "title": "LAB: Land that changed hands in Europe, 1914 to 1947 (data for lessons) v0.1",
+    "title": "LAB: Land that changed hands in Europe, 1914 to 1947 (data for lessons) v0.2",
     "snippet": "Test layer for the time slider: each area of land that went from one country to another in Europe from 1914 to 1947, shown for a year after the change. Draft.",
-    "description": "<p><b>Test layer.</b> 47 areas of land that went from one country to another between 1914 and 1947, worked out from the borders in the companion layer. Each has the country it left, the country it joined, the date and its rough size in square kilometres.</p><p><b>For the time slider:</b> use ShowFrom as the start field and ShowTo as the end field. Each area shows for one year from the date of the change.</p><p><b>Limits:</b> dates are the source's. It records recognised borders, not wartime occupation, so eastern Poland's move to the Soviet Union is dated 8 May 1945. The source ends the Free City of Danzig on 31 August 1938 and shows it inside Germany from 30 September 1938; it was annexed on 1 September 1939. Land that leaves a country without the source giving it to another is not shown. A change of name or status inside one country is not shown. Areas under 200 square kilometres are left out.</p><p><b>Source:</b> worked out from CShapes 2.0: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), Mapping the International System, 1886-2019, Journal of Conflict Resolution 66(1); ETH Zurich.</p><p><i>Data version 0.1 (19 November 2026), lab draft.</i></p>",
+    "description": "<p><b>Test layer.</b> 47 areas of land that went from one country to another between 1914 and 1947, worked out from the borders in the companion layer. Each has the country it left, the country it joined, the date and its rough size in square kilometres.</p><p><b>For the time slider:</b> use ShowFrom as the start field and ShowTo as the end field. Each area shows for one year from the date of the change.</p><p><b>Limits:</b> dates are the source's. It records recognised borders, not wartime occupation, so eastern Poland's move to the Soviet Union is dated 8 May 1945. The source ends the Free City of Danzig on 31 August 1938 and shows it inside Germany from 30 September 1938; it was annexed on 1 September 1939. Land that leaves a country without the source giving it to another is not shown. A change of name or status inside one country is not shown. Areas under 200 square kilometres are left out.</p><p><b>Outlines:</b> thinned to about a third of the source's points so the map draws faster; a line can sit up to about 3 kilometres from the source's. The smallest islands are dropped.</p><p><b>Source:</b> worked out from CShapes 2.0: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), Mapping the International System, 1886-2019, Journal of Conflict Resolution 66(1); ETH Zurich.</p><p><i>Data version 0.2 (19 November 2026): lighter outlines, lab draft.</i></p>",
     "tags": [
       "World History",
       "Europe",
