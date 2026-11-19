@@ -1,0 +1,30 @@
+{
+  "version": "0.3.0",
+  "source": {"commit": "54840534d9a82cfd01caf1021f85933e701e8318", "sha1": "358161dccfdd038ac3eee9d7aa3ed5243c55d5bf",
+             "note": "cshapes_2_gw.topojson.xz from the CRAN package cshapes 2.0 (GitHub mirror cran/cshapes), the same data ETH Zurich publishes at icr.ethz.ch/data/cshapes"},
+  "extent": [-25, 33, 60, 71.6],
+  "notEurope": ["Algeria", "Morocco", "Spanish Morocco", "Libya", "Tunisia", "Egypt", "Syria", "Iraq", "Iran (Persia)", "Jordan", "Lebanon", "Palestine", "Israel", "Kuwait", "Saudi Arabia", "Khiva", "Bukhara"],
+  "controllers": {"0": "League of Nations", "2": "United States, United Kingdom and France", "365": "Soviet Union", "200": "United Kingdom", "390": "Denmark"},
+  "names": {
+    "Germany (Prussia)": [{"name": "Germany"}],
+    "Italy/Sardinia": [{"name": "Italy"}],
+    "Rumania": [{"name": "Romania"}],
+    "Danzig": [{"name": "Free City of Danzig"}],
+    "Russia (Soviet Union)": [{"before": 1917, "name": "Russian Empire"}, {"name": "Soviet Union"}],
+    "Turkey (Ottoman Empire)": [{"before": 1923, "name": "Ottoman Empire"}, {"name": "Turkey"}],
+    "Ireland": [{"before": 1937, "name": "Irish Free State"}, {"name": "Ireland"}],
+    "Yugoslavia": [{"before": 1929, "name": "Kingdom of Serbs, Croats and Slovenes"}, {"name": "Yugoslavia"}],
+    "German Federal Republic": [{"status": "occupied", "name": "Germany: western occupation zones"}, {"name": "West Germany"}],
+    "German Democratic Republic": [{"status": "occupied", "name": "Germany: Soviet occupation zone"}, {"name": "East Germany"}]
+  },
+  "snapshots": [
+    {"date": "1914-07-01", "label": "July 1914, before the First World War", "expectFeatures": 24,
+     "mustHave": ["Austria-Hungary", "Germany", "Russian Empire", "Ottoman Empire", "Serbia", "Montenegro"], "mustNotHave": ["Poland", "Czechoslovakia"]},
+    {"date": "1925-06-01", "label": "1925, after the First World War settlement", "expectFeatures": 33,
+     "mustHave": ["Poland", "Czechoslovakia", "Free City of Danzig", "Kingdom of Serbs, Croats and Slovenes", "Soviet Union", "Irish Free State", "Turkey", "Estonia", "Latvia", "Lithuania"], "mustNotHave": ["Austria-Hungary"]},
+    {"date": "1938-01-01", "label": "January 1938, before the Second World War", "expectFeatures": 33,
+     "mustHave": ["Austria", "Czechoslovakia", "Poland", "Yugoslavia", "Free City of Danzig", "Ireland"], "mustNotHave": ["Irish Free State"]},
+    {"date": "1947-12-31", "label": "End of 1947, after the Second World War settlement", "expectFeatures": 30,
+     "mustHave": ["Germany: western occupation zones", "Germany: Soviet occupation zone", "Poland", "Soviet Union", "Czechoslovakia"], "mustNotHave": ["Estonia", "Latvia", "Lithuania", "Free City of Danzig", "Germany"]}
+  ]
+}
