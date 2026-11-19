@@ -73,8 +73,9 @@ function ([WebMap, MapView, Legend, Expand, reactiveUtils, Point]) {
   H.time = async (day) => { const d = new Date(day + "T00:00:00Z"); view.timeExtent = { start: d, end: d }; await settle(2500); };
   // Names of the features a layer is drawing now (its time fields and the view's time applied), read from the drawn layer.
   H.names = async (title, field) => { const l = byTitle(title); if (!l) throw new Error("no layer " + title); const lv = await view.whenLayerView(l);
-    await reactiveUtils.whenOnce(() => !lv.updating); const q = lv.createQuery(); q.outFields = [field || "Name"]; q.returnGeometry = false; q.geometry = null;
-    const res = await lv.queryFeatures(q); return { names: res.features.map((f) => f.attributes[field || "Name"]), timeInfo: l.timeInfo ? { start: l.timeInfo.startField, end: l.timeInfo.endField } : null }; };
+    const fld = field || "Name"; if (!(lv.availableFields || []).includes(fld)) { l.outFields = [...new Set([...(l.outFields || []), fld])]; await settle(2500); }
+    await reactiveUtils.whenOnce(() => !lv.updating); const q = lv.createQuery(); q.outFields = [fld]; q.returnGeometry = false; q.geometry = null;
+    const res = await lv.queryFeatures(q); return { names: res.features.map((f) => f.attributes[fld]), timeInfo: l.timeInfo ? { start: l.timeInfo.startField, end: l.timeInfo.endField } : null }; };
   H.legendText = () => { const el = document.querySelector(".esri-legend"); return el ? el.innerText : ""; };
   H.bookmarks = () => map.bookmarks.map((b) => b.name).toArray();
   view.when(async () => { await map.loadAll(); await settle(2500); H.ready = true; }, (e) => { H.error = String(e); });

@@ -1066,6 +1066,129 @@
      }
     ]
    }
+  },
+  {
+   "id": "lyraa9752f12e1",
+   "title": "Land that changed hands in the last year",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/europe_borders_changes_v0_1_0/FeatureServer/0",
+   "itemId": "d41979c819334fe99199fe4530657fcf",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": true,
+   "opacity": 1,
+   "showLabels": true,
+   "timeAnimation": true,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "label": "Land that went from one country to another",
+      "symbol": {
+       "type": "esriSFS",
+       "style": "esriSFSBackwardDiagonal",
+       "color": [
+        26,
+        26,
+        26,
+        255
+       ],
+       "outline": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         26,
+         26,
+         26,
+         255
+        ],
+        "width": 2.5
+       }
+      }
+     },
+     "labelingInfo": [
+      {
+       "labelExpressionInfo": {
+        "expression": "'from ' + $feature.FromName"
+       },
+       "labelPlacement": "esriServerPolygonPlacementAlwaysHorizontal",
+       "symbol": {
+        "type": "esriTS",
+        "color": [
+         26,
+         26,
+         26,
+         255
+        ],
+        "font": {
+         "family": "Noto Sans",
+         "size": 8,
+         "weight": "normal"
+        },
+        "horizontalAlignment": "center",
+        "verticalAlignment": "baseline",
+        "haloColor": [
+         255,
+         255,
+         255,
+         242
+        ],
+        "haloSize": 1.5
+       },
+       "minScale": 0,
+       "maxScale": 0,
+       "repeatLabel": false
+      }
+     ]
+    },
+    "timeInfo": {
+     "startTimeField": "ShowFrom",
+     "timeExtent": [
+      -1767225600000,
+      -694396800000
+     ],
+     "endTimeField": "ShowTo"
+    }
+   },
+   "popupInfo": {
+    "title": "{FromName} to {ToName}",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p>This land went from {expression/from} to {expression/to} on <b>{expression/date}</b>.</p><p>It covers about {AreaKm2} square kilometres.</p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": [
+     {
+      "fieldName": "AreaKm2",
+      "label": "AreaKm2",
+      "visible": false,
+      "format": {
+       "places": 0,
+       "digitSeparator": true
+      }
+     }
+    ],
+    "expressionInfos": [
+     {
+      "name": "date",
+      "title": "Date",
+      "returnType": "string",
+      "expression": "var d = $feature.ChangeDate;\nif (IsEmpty(d)) { return ''; }\nvar p = Split(d, '-');\nvar m = ['January','February','March','April','May','June','July','August','September','October','November','December'];\nreturn m[Number(p[1]) - 1] + ' ' + Text(Number(p[2])) + ', ' + p[0];"
+     },
+     {
+      "name": "from",
+      "title": "From",
+      "returnType": "string",
+      "expression": "var n = $feature.FromName;\nif (n == 'Soviet Union' || n == 'Russian Empire' || n == 'Ottoman Empire' || n == 'United Kingdom' || n == 'Irish Free State' || n == 'Free City of Danzig' || n == 'Kingdom of Serbs, Croats and Slovenes') { return 'the ' + n; }\nreturn n;"
+     },
+     {
+      "name": "to",
+      "title": "To",
+      "returnType": "string",
+      "expression": "var n = $feature.ToName;\nif (n == 'Soviet Union' || n == 'Russian Empire' || n == 'Ottoman Empire' || n == 'United Kingdom' || n == 'Irish Free State' || n == 'Free City of Danzig' || n == 'Kingdom of Serbs, Croats and Slovenes') { return 'the ' + n; }\nreturn n;"
+     }
+    ]
+   }
   }
  ],
  "baseMap": {

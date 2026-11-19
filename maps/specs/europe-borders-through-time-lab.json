@@ -1,12 +1,12 @@
 {
  "format": "Map spec 1.0",
  "id": "europe-borders-through-time-lab",
- "version": "0.1.0",
+ "version": "0.2.0",
  "why": "LAB map. Tests the ArcGIS Online time slider (November 2026) on one layer that holds every border change the source records from 1914 to 1947. Not a lesson map and not for MapMaker until ETH Zurich confirms permission.",
  "item": {
-  "title": "LAB: Europe's borders through time, 1914 to 1947 v0.1",
+  "title": "LAB: Europe's borders through time, 1914 to 1947 v0.2",
   "snippet": "Test map: move the time slider to see Europe's country borders on any date from 1914 to 1947. Draft.",
-  "description": "<p><b>Test map.</b> One layer holds every border in Europe that the source records between 1914 and 1947. The time slider shows the borders in force on one date. It steps a year at a time.</p><p><b>Colour:</b> each country keeps one colour for the whole period, so a change of shape or a new country stands out. The colours only tell neighbours apart; they have no other meaning. Every country is also named on the map.</p><p><b>Notes:</b> the source records recognised borders, not wartime occupation, so Poland, Czechoslovakia and Austria stay on the map from 1939 to 1945. Yearly steps skip borders that lasted less than a year. The smallest states are left out, the Soviet Union is one area, coastlines are simplified and the layer stops at 60 degrees east.</p><p><b>Source:</b> CShapes 2.0, ETH Zurich: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), Mapping the International System, 1886-2019, Journal of Conflict Resolution 66(1).</p><p><i>Map version 0.1 (19 November 2026), lab draft.</i></p>",
+  "description": "<p><b>Test map.</b> One layer holds every border in Europe that the source records between 1914 and 1947. The time slider shows the borders in force on one date. It steps a year at a time.</p><p><b>Colour:</b> each country keeps one colour for the whole period, so a change of shape or a new country stands out. The colours only tell neighbours apart; they have no other meaning. Every country is also named on the map.</p><p><b>Changes:</b> land that went from one country to another is hatched with a heavy outline for one year after the change. Click it to see who held it before, who holds it now, the date and its rough size.</p><p><b>Notes:</b> dates are the source's: eastern Poland's move to the Soviet Union is dated 8 May 1945, and Danzig is shown inside Germany from 30 September 1938 (it was annexed on 1 September 1939). the source records recognised borders, not wartime occupation, so Poland, Czechoslovakia and Austria stay on the map from 1939 to 1945. Yearly steps skip borders that lasted less than a year. The smallest states are left out, the Soviet Union is one area, coastlines are simplified and the layer stops at 60 degrees east.</p><p><b>Source:</b> CShapes 2.0, ETH Zurich: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), Mapping the International System, 1886-2019, Journal of Conflict Resolution 66(1).</p><p><i>Map version 0.2 (19 November 2026), lab draft.</i></p>",
   "tags": [
    "World History",
    "Europe",
@@ -89,6 +89,83 @@
   "loop": true
  },
  "layers": [
+  {
+   "title": "Land that changed hands in the last year",
+   "source": {
+    "itemId": "d41979c819334fe99199fe4530657fcf",
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/europe_borders_changes_v0_1_0/FeatureServer/0"
+   },
+   "visible": true,
+   "time": {
+    "start": "ShowFrom",
+    "end": "ShowTo"
+   },
+   "symbol": {
+    "type": "raw",
+    "renderer": {
+     "type": "simple",
+     "label": "Land that went from one country to another",
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSBackwardDiagonal",
+      "color": [
+       26,
+       26,
+       26,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSSolid",
+       "color": [
+        26,
+        26,
+        26,
+        255
+       ],
+       "width": 2.5
+      }
+     }
+    }
+   },
+   "labels": {
+    "expression": "'from ' + $feature.FromName",
+    "placement": "polygon",
+    "color": "#1A1A1A",
+    "font": {
+     "size": 8,
+     "weight": "normal"
+    },
+    "halo": {
+     "color": "#FFFFFFF2",
+     "size": 1.5
+    }
+   },
+   "popup": {
+    "title": "{FromName} to {ToName}",
+    "html": "<p>This land went from {expression/from} to {expression/to} on <b>{expression/date}</b>.</p><p>It covers about {AreaKm2} square kilometres.</p>",
+    "fields": {
+     "AreaKm2": {
+      "places": 0,
+      "digitSeparator": true
+     }
+    },
+    "expressions": {
+     "date": {
+      "title": "Date",
+      "arcade": "var d = $feature.ChangeDate;\nif (IsEmpty(d)) { return ''; }\nvar p = Split(d, '-');\nvar m = ['January','February','March','April','May','June','July','August','September','October','November','December'];\nreturn m[Number(p[1]) - 1] + ' ' + Text(Number(p[2])) + ', ' + p[0];"
+     },
+     "from": {
+      "title": "From",
+      "arcade": "var n = $feature.FromName;\nif (n == 'Soviet Union' || n == 'Russian Empire' || n == 'Ottoman Empire' || n == 'United Kingdom' || n == 'Irish Free State' || n == 'Free City of Danzig' || n == 'Kingdom of Serbs, Croats and Slovenes') { return 'the ' + n; }\nreturn n;"
+     },
+     "to": {
+      "title": "To",
+      "arcade": "var n = $feature.ToName;\nif (n == 'Soviet Union' || n == 'Russian Empire' || n == 'Ottoman Empire' || n == 'United Kingdom' || n == 'Irish Free State' || n == 'Free City of Danzig' || n == 'Kingdom of Serbs, Croats and Slovenes') { return 'the ' + n; }\nreturn n;"
+     }
+    }
+   }
+  },
   {
    "title": "Countries and territories, 1914 to 1947",
    "source": {
@@ -1285,6 +1362,94 @@
     },
     "count": {
      "Countries and territories, 1914 to 1947": 30
+    }
+   }
+  },
+  {
+   "name": "changes-jan-1922",
+   "question": "1 January 1922: land that changed hands in the last year",
+   "do": {
+    "bookmark": "Central and Eastern Europe",
+    "time": "1922-01-01",
+    "legend": true
+   },
+   "expect": {
+    "nameField": {
+     "Land that changed hands in the last year": "ToName"
+    },
+    "namesHave": {
+     "Land that changed hands in the last year": [
+      "Poland",
+      "Irish Free State"
+     ]
+    },
+    "count": {
+     "Land that changed hands in the last year": 2
+    },
+    "legendHas": [
+     "Land that went from one country to another"
+    ]
+   }
+  },
+  {
+   "name": "riga-popup",
+   "question": "Click the land Poland gained in 1921",
+   "do": {
+    "time": "1922-01-01",
+    "click": {
+     "layer": "Land that changed hands in the last year",
+     "inside": [
+      26.1,
+      52.1
+     ]
+    }
+   },
+   "expect": {
+    "popupHas": [
+     "Soviet Union to Poland",
+     "from the Soviet Union to Poland",
+     "March 18, 1921",
+     "103,800 square kilometres"
+    ]
+   }
+  },
+  {
+   "name": "changes-jan-1930",
+   "question": "1 January 1930: nothing changed in the last year",
+   "do": {
+    "time": "1930-01-01"
+   },
+   "expect": {
+    "nameField": {
+     "Land that changed hands in the last year": "ToName"
+    },
+    "count": {
+     "Land that changed hands in the last year": 0
+    }
+   }
+  },
+  {
+   "name": "changes-jan-1946",
+   "question": "1 January 1946: the 1945 changes",
+   "do": {
+    "bookmark": "Central and Eastern Europe",
+    "time": "1946-01-01"
+   },
+   "expect": {
+    "nameField": {
+     "Land that changed hands in the last year": "ToName"
+    },
+    "namesHave": {
+     "Land that changed hands in the last year": [
+      "Poland",
+      "Soviet Union",
+      "Germany: Soviet occupation zone",
+      "Germany: western occupation zones",
+      "Czechoslovakia"
+     ]
+    },
+    "count": {
+     "Land that changed hands in the last year": 7
     }
    }
   }

@@ -88,7 +88,7 @@ for (const c of loadError ? [] : spec.checks || []) {
     for (const t of e.drawnAtScale || []) { const s = await page.evaluate((t) => H.drawn(t), t); if (!(s.on && s.inRange)) failures.push(`"${t}" doesn't draw at 1:${s.scale.toLocaleString("en-US")}`); }
     for (const t of e.hiddenAtScale || []) { const s = await page.evaluate((t) => H.drawn(t), t); if (s.on && s.inRange) failures.push(`"${t}" draws at 1:${s.scale.toLocaleString("en-US")}`); }
     for (const t of new Set([...Object.keys(e.namesHave || {}), ...Object.keys(e.namesLack || {}), ...Object.keys(e.count || {})])) {
-      const got = await page.evaluate((t) => H.names(t), t);
+      const got = await page.evaluate(([t, f]) => H.names(t, f), [t, (e.nameField || {})[t] || null]);
       if (!got.timeInfo) failures.push(`"${t}" has no time fields`);
       for (const n of (e.namesHave || {})[t] || []) if (!got.names.includes(n)) failures.push(`"${n}" is not shown on ${d.time}`);
       for (const n of (e.namesLack || {})[t] || []) if (got.names.includes(n)) failures.push(`"${n}" is shown on ${d.time}`);
