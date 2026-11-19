@@ -1,0 +1,48 @@
+{
+ "tool": "Map test 1.1",
+ "timeZone": "America/Chicago",
+ "sdk": "ArcGIS Maps SDK for JavaScript 5.2",
+ "webmapFingerprint": "80f415725cd600d53695f4500b550207db10a37f",
+ "results": [
+  {
+   "name": "jan-1938",
+   "question": "1 January 1938: before Munich",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "changes-jan-1939",
+   "question": "1 January 1939: land taken from Czechoslovakia after Munich",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "jan-1941",
+   "question": "1 January 1941: the Baltic states are gone",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "changes-jan-1946",
+   "question": "1 January 1946: the 1945 changes",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "end-1947",
+   "question": "31 December 1947",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  }
+ ]
+}

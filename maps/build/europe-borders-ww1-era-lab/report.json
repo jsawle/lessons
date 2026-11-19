@@ -1,0 +1,66 @@
+{
+ "tool": "Map builder 1.5",
+ "spec": "maps/specs/europe-borders-ww1-era-lab.json",
+ "specId": "europe-borders-ww1-era-lab",
+ "specVersion": "0.1.0",
+ "built": "2026-11-19T14:39:01Z",
+ "webmapFingerprint": "9164b5ec136a11bbfe81dd7cb72dffa937469579",
+ "itemFingerprint": "73226d790208f086b969babad75493be7ff5bdc8",
+ "checked": [
+  "basemap is public and not CARTO",
+  "every source layer is readable and every field the spec uses exists",
+  "time fields are date fields; the slider covers 1914-01-01 to 1924-12-31"
+ ],
+ "warnings": [],
+ "tested": {
+  "tool": "Map test 1.1",
+  "sdk": "5.2",
+  "when": "2026-11-19T14:45:11Z",
+  "timeZone": "America/Chicago",
+  "webmapFingerprint": "9164b5ec136a11bbfe81dd7cb72dffa937469579",
+  "pass": true,
+  "checks": [
+   {
+    "name": "jan-1914",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "last-day-austria-hungary",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "first-day-austria",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "end-1924",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "poland-popup-1924",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "changes-jan-1922",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "riga-popup",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "brest-litovsk",
+    "pass": true,
+    "failures": []
+   }
+  ],
+  "checker": null
+ }
+}

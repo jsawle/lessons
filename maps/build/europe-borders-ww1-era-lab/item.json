@@ -1,0 +1,11 @@
+{
+ "type": "Web Map",
+ "title": "LAB: Europe's borders in the First World War era, 1914 to 1924 v0.1",
+ "snippet": "Test map: move the time slider to see Europe's country borders from 1914 to 1924, through the First World War and the peace treaties. Draft.",
+ "description": "<p><b>Test map.</b> Europe's country borders from 1 January 1914 to the end of 1924: the empires before the war, the war, and the borders set by the peace treaties (Brest-Litovsk, Versailles, St-Germain, Neuilly, Trianon, Riga, Lausanne). The time slider shows the borders on one date and steps three months at a time. Every border period in the source shows at some step except three that lasted less than a month (Hungary in November 1918; two Soviet borders in February and March 1918).</p><p><b>Colour:</b> each country keeps one colour for the whole period, so a change of shape or a new country stands out. The colours only tell neighbours apart; they have no other meaning. Every country is also named on the map.</p><p><b>Changes:</b> land that went from one country to another is hatched with a heavy outline for one year after the change. Click it to see who held it before, who holds it now, the date and its rough size.</p><p><b>Notes:</b> dates are the source's. The source records recognised borders, not where armies stood. The smallest states are left out, the Soviet Union (and before it the Russian Empire) is one area, coastlines are simplified and the layer stops at 60 degrees east.</p><p><b>Source:</b> CShapes 2.0, ETH Zurich: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), Mapping the International System, 1886-2019, Journal of Conflict Resolution 66(1).</p><p><i>Map version 0.1 (19 November 2026), lab draft.</i></p>",
+ "tags": "World History,Europe,borders,time,First World War,lab,draft,licence pending,1914,Treaty of Versailles",
+ "accessInformation": "CShapes 2.0: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), ETH Zurich; Esri.",
+ "licenseInfo": "Boundaries from CShapes 2.0 (ETH Zurich), licence CC BY-NC-SA 4.0. Written permission to use it in MapMaker has not been confirmed: keep this map private until it is. Text written for this map is original.",
+ "typeKeywords": "ArcGIS Online,Explorer Web Map,Map,Online Map,Web Map,spec:europe-borders-ww1-era-lab,specVersion:0.1.0",
+ "extent": "-25.0,34.0,50.0,71.5"
+}

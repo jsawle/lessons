@@ -1,0 +1,72 @@
+{
+ "tool": "Map test 1.1",
+ "timeZone": "America/Chicago",
+ "sdk": "ArcGIS Maps SDK for JavaScript 5.2",
+ "webmapFingerprint": "9164b5ec136a11bbfe81dd7cb72dffa937469579",
+ "results": [
+  {
+   "name": "jan-1914",
+   "question": "1 January 1914: the empires",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "last-day-austria-hungary",
+   "question": "2 November 1918 is Austria-Hungary's last day",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "first-day-austria",
+   "question": "3 November 1918: Austria and Hungary",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "end-1924",
+   "question": "31 December 1924: the new states",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "poland-popup-1924",
+   "question": "Click Poland at the end of 1924",
+   "pass": true,
+   "failures": [],
+   "popup": "Poland\n\nAn independent country\n\nThis border was in force from March 18, 1921 to May 7, 1945.",
+   "legend": null
+  },
+  {
+   "name": "changes-jan-1922",
+   "question": "1 January 1922: land that changed hands in the last year",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": "Land that changed hands in the last year\n\tLand that went from one country to another"
+  },
+  {
+   "name": "riga-popup",
+   "question": "Click the land Poland gained in 1921",
+   "pass": true,
+   "failures": [],
+   "popup": "Soviet Union to Poland\n\nThis land went from the Soviet Union to Poland on March 18, 1921.\n\nIt covers about 103,800 square kilometres.",
+   "legend": null
+  },
+  {
+   "name": "brest-litovsk",
+   "question": "1 April 1918: a month after the Treaty of Brest-Litovsk",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  }
+ ]
+}
