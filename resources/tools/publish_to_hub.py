@@ -42,6 +42,8 @@ SITE_ID    = "9c39add73ebf47068e1dac37f6353b8d"   # the demo Lessons site (hubDe
 BUNDLE_URL = "https://jsawle.github.io/lessons/resources/dist/hub-bundle.json"
 DRY_RUN    = True          # set to False when the plan looks right, then run again
 SHARE_WITH = "everyone"    # "everyone" (public) or "org"
+COURSES    = None          # None = every course. Or a list, e.g. ["World History"]: only that course's pages and Word files are
+                           # planned and written, and every other page (and How these lessons work) is left exactly as it is.
 SET_COLOURS = True         # set the site's header, menu bar, button and link colours (Esri blue)
 
 import os
@@ -166,6 +168,13 @@ def fetch(url, what):
 
 
 bundle = fetch(BUNDLE_URL, "hub-bundle.json").json()
+if COURSES:
+    _all_pages, _all_sheets = len(bundle["pages"]), len(bundle["sheets"])
+    bundle["pages"] = [p for p in bundle["pages"] if set(p.get("courses") or []) & set(COURSES)]
+    bundle["sheets"] = [x for x in bundle["sheets"] if x.get("course") in COURSES]
+    print(f"[ok] COURSES = {COURSES}: {len(bundle['pages'])} of {_all_pages} pages and {len(bundle['sheets'])} of {_all_sheets} Word files are in this run; the rest are left alone")
+    if not bundle["pages"]:
+        raise SystemExit(f"No page in the bundle belongs to {COURSES}. Check the spelling against the course names in the lessons.")
 assert bundle.get("format") == "mml-hub-bundle/1", f"[ERR] Unexpected bundle format: {bundle.get('format')}"
 print(f"[ok] Bundle built {bundle['builtOn']}, {bundle['app']['name']} {bundle['app']['version']}")
 for name, ver in bundle["app"]["parts"].items():
