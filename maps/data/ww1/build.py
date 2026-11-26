@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
-"""WWI data builder 1.0: writes the WWI pilot layers that Data publish puts into ArcGIS Online.
+"""WWI data builder 1.1: writes the WWI pilot layers that Data publish puts into ArcGIS Online.
 
   - ww1-battles: one point per battle or other fighting (Western Front and Africa), from battles.json
   - ww1-western-front-lines: dated Western Front lines, from western-front-lines.json (traced by trace_armistice.py)
+
+Time slider (1.1): the map's slider shows one date and steps a month at a time, so each battle also gets display
+dates rounded out to whole months: ShowFrom (first day of the month it started) and ShowTo (last day of the month it
+ended), and ShowToSoFar (31 December 1918) for a layer of earlier fighting that stays on the map. StartDate and
+EndDate keep the real dates. Kind groups the event types for the legend.
 
 Nothing is downloaded: the facts files hold everything. Checks each record (dates in order, coordinates inside the
 theatre, sources named) and refuses to build if any fails.
@@ -13,12 +18,25 @@ Writes maps/data/build/ww1/<id>-v<version>.geojson and a .built.json record next
 import datetime, hashlib, json, re, sys
 from pathlib import Path
 
-VERSION = "1.0"
+VERSION = "1.1"
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 DAY = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 # rough boxes (west, south, east, north) to catch a coordinate typed into the wrong theatre
+KIND = {"battle": "Battle, siege or raid", "siege": "Battle, siege or raid", "offensive": "Battle, siege or raid", "raid": "Battle, siege or raid",
+        "capture": "Capture or surrender", "surrender": "Capture or surrender", "uprising": "Rising against colonial rule"}
+WAR_SHOWN_TO = "1918-12-31"
 BOXES = {"Western Front": (1.0, 47.0, 7.5, 51.5), "Africa": (-20.0, -35.0, 52.0, 38.0)}
+
+
+def month_start(d):
+    return d[:8] + "01"
+
+
+def month_end(d):
+    y, m = int(d[:4]), int(d[5:7])
+    nxt = datetime.date(y + (m == 12), m % 12 + 1, 1)
+    return (nxt - datetime.timedelta(days=1)).isoformat()
 
 
 def spec(name):
@@ -46,13 +64,15 @@ def battles(problems):
         if not ("1914-07-28" <= b["start"] <= "1918-12-31"): problems.append(f"{bid}: start outside the war")
         box = BOXES["Western Front" if b["theatre"] == "Western Front" else "Africa"]
         if not (box[0] <= b["lon"] <= box[2] and box[1] <= b["lat"] <= box[3]): problems.append(f"{bid}: point outside its theatre")
+        if b["type"] not in KIND: problems.append(f"{bid}: unknown type {b['type']!r}")
         missing = [k for k in b["sources"] if k not in src]
         if missing or not b["sources"]: problems.append(f"{bid}: source not listed: {missing}")
         s1 = src.get(b["sources"][0], {}) if b["sources"] else {}
         s2 = src.get(b["sources"][1], {}) if len(b["sources"]) > 1 else {}
         props = {"BattleId": bid, "Name": b["name"], "Theatre": b["theatre"],
                  "Region": "Western Front" if b["theatre"] == "Western Front" else "Africa",
-                 "Campaign": b["campaign"], "EventType": b["type"], "StartDate": b["start"], "EndDate": b["end"],
+                 "Campaign": b["campaign"], "EventType": b["type"], "Kind": KIND.get(b["type"], ""), "StartDate": b["start"], "EndDate": b["end"],
+                 "ShowFrom": month_start(b["start"]), "ShowTo": month_end(b["end"]), "ShowToSoFar": WAR_SHOWN_TO,
                  "DatePrecision": b["precision"], "SideA": b["sideA"], "SideB": b["sideB"], "Summary": b["summary"],
                  "Place": b["place"], "LocationBasis": b["locBasis"], "LocationPrecision": b["locPrecision"],
                  "DateCheck": b["dateCheck"], "Source1": s1.get("title", ""), "Source1Url": s1.get("url", ""),

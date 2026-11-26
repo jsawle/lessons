@@ -1498,7 +1498,7 @@
    "name": "Siege of Agadez (Kaocen revolt)",
    "theatre": "Africa — West Africa",
    "campaign": "Uprisings against colonial rule",
-   "type": "siege",
+   "type": "uprising",
    "start": "1916-12-13",
    "end": "1917-03-03",
    "precision": "day",
