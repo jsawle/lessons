@@ -143,8 +143,8 @@
   {
    "title": "Fighting this month",
    "source": {
-    "itemId": "PENDING-ww1-battles-0.2.0",
-    "url": "PENDING"
+    "itemId": "e8555557277a43d7aacb09f0dfcfe668",
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/ww1_battles_v0_2_0/FeatureServer/0"
    },
    "visible": true,
    "time": {
@@ -257,8 +257,8 @@
   {
    "title": "Fighting in earlier months",
    "source": {
-    "itemId": "PENDING-ww1-battles-0.2.0",
-    "url": "PENDING"
+    "itemId": "e8555557277a43d7aacb09f0dfcfe668",
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/ww1_battles_v0_2_0/FeatureServer/0"
    },
    "visible": true,
    "time": {
