@@ -4,7 +4,7 @@
    "id": "lyr816aeb63937",
    "title": "Countries and territories, 1914 to 1924",
    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/europe_borders_timeline_v0_2_0/FeatureServer/0",
-   "itemId": "f4f81ee402b842c793eba54768f6106f",
+   "itemId": "26232160a4f54a6497314a8c31e06717",
    "layerType": "ArcGISFeatureLayer",
    "visibility": true,
    "opacity": 1,
@@ -1072,7 +1072,7 @@
    "id": "lyrfb8aab5e74a",
    "title": "Land that changed hands in the last year",
    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/europe_borders_changes_v0_2_0/FeatureServer/0",
-   "itemId": "dbeffe7848234bbc908e4cdab514f323",
+   "itemId": "5d02da08f2334971b215e54c06db9e9a",
    "layerType": "ArcGISFeatureLayer",
    "visibility": true,
    "opacity": 1,
@@ -1222,7 +1222,7 @@
   "latestWkid": 3857
  },
  "authoringApp": "Map builder",
- "authoringAppVersion": "1.5",
+ "authoringAppVersion": "1.7",
  "version": "2.38",
  "initialState": {
   "viewpoint": {
