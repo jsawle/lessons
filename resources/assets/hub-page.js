@@ -11,7 +11,7 @@
   else root.MMRHub = factory(root.MMR);
 })(typeof self !== "undefined" ? self : this, function (MMR) {
   "use strict";
-  var VERSION = "3.10";
+  var VERSION = "3.11";
   var esc = MMR.esc;
   var NEW_TAB = '<span class="mml-sr"> (opens in a new tab)</span>';
   var VERA_HEIGHT = 640;   // room for the lesson note, the conversation, the message box and the privacy note
@@ -460,7 +460,7 @@
   }
 
   /* Course colours (site.json courseColours): the page CSS with the site's blue tokens swapped for a course's own. */
-  var BLUE = { brand: "#007AC2", hover: "#00619B", press: "#004874", tint: "#E8F2F9", tintBorder: "#9CC9E8", footRule: "#3D6F92" };
+  var BLUE = { brand: "#007AC2", hover: "#00619B", press: "#004874", tint: "#E8F2F9", tintBorder: "#9CC9E8", footRule: "#3D6F92", footHead: "#003A5D" };
   function courseColours(site, course) { var c = (site.courseColours || {})[course]; return c && typeof c === "object" ? c : null; }
   function cssFor(site, course) {
     var c = courseColours(site, course), out = CSS;
