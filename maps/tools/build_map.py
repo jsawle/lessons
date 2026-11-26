@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Map builder 1.7: turns a map spec (maps/specs/<id>.json, Map spec 1.0) into the web map ArcGIS Online stores.
+"""Map builder 1.8: turns a map spec (maps/specs/<id>.json, Map spec 1.0) into the web map ArcGIS Online stores.
 
 Reads only public ArcGIS Online content; signs in to nothing. For each spec it:
   - checks the spec against its lesson (layer names, which layers start off, bookmarks),
@@ -17,13 +17,16 @@ rel='nofollow ugc noopener noreferrer'), so Map publish's read-back would differ
 not written that way: <a href='{Url}' target='_blank' rel='nofollow ugc noopener noreferrer'>.
 Stripped tags (1.7): the sanitizer also removes some tags (seen so far: <small>); the builder warns about them.
 
+Item and address (1.8): a layer's "url" must belong to its "itemId" (the item's own service address), so a spec
+can't point at one version's item and another version's service.
+
 Usage, from the repo root:  python3 maps/tools/build_map.py maps/specs/<id>.json [more specs...]
 Exit code 1 if any spec has errors (nothing is written for that spec).
 """
 import copy, datetime, hashlib, json, math, re, sys, urllib.parse, urllib.request
 from pathlib import Path
 
-VERSION = "1.7"
+VERSION = "1.8"
 SPEC_FORMAT = "Map spec 1.0"
 PORTAL = "https://www.arcgis.com/sharing/rest"
 ROOT = Path(__file__).resolve().parents[2]
@@ -209,6 +212,9 @@ def build(spec_path):
         try:
             it = get(f"{PORTAL}/content/items/{src['itemId']}")
             if it.get("access") != "public": warnings.append(f"{lyr['title']!r}: source item is {it.get('access')}, so students outside the organization can't open it")
+            base = (it.get("url") or "").rstrip("/").lower()
+            if base and not src["url"].lower().startswith(base):
+                errors.append(f"{lyr['title']!r}: its url ({src['url']}) is not item {src['itemId']}'s service ({it.get('url')})"); continue
             svc = get(src["url"])
         except Exception as e:
             errors.append(f"{lyr['title']!r}: can't read its source ({e})"); continue
