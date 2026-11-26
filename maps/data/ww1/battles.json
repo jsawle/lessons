@@ -1,0 +1,1542 @@
+{
+ "about": "WWI battles and other fighting, Western Front and Africa. Facts (dates, sides, places) from the sources listed; summaries are our own words. Coordinates from GeoNames (CC BY 4.0). No Wikipedia, Wikidata or Britannica.",
+ "sources": {
+  "NAM": {
+   "title": "National Army Museum, First World War timeline data (ww1.nam.ac.uk)",
+   "url": "https://ww1.nam.ac.uk/markers-json/"
+  },
+  "NAM_SWA": {
+   "title": "National Army Museum — South-West African campaign",
+   "url": "https://nam.ac.uk/explore/south-west-african-campaign"
+  },
+  "NAM_EA": {
+   "title": "National Army Museum — East Africa campaign",
+   "url": "https://www.nam.ac.uk/explore/east-africa-campaign"
+  },
+  "NAM_EA_TN": {
+   "title": "National Army Museum — East African campaign teachers' notes",
+   "url": "https://www.nam.ac.uk/sites/default/files/learning-resource-files/2018-01/east-africa-teachers-notes.pdf"
+  },
+  "NAM_SEN": {
+   "title": "National Army Museum — Senussi revolt",
+   "url": "https://www.nam.ac.uk/node/737"
+  },
+  "NAM_LV": {
+   "title": "National Army Museum — Lettow-Vorbeck surrender",
+   "url": "https://www.nam.ac.uk/node/751"
+  },
+  "ABMC_SM": {
+   "title": "ABMC, American Armies and Battlefields in Europe (1938), ch. III St. Mihiel",
+   "url": "https://www2.abmc.gov/sites/default/files/publications/Section3.pdf"
+  },
+  "ABMC_MONTSEC": {
+   "title": "ABMC — Montsec American Monument",
+   "url": "https://abmc.gov/Montsec"
+  },
+  "ABMC_S1": {
+   "title": "ABMC, American Armies and Battlefields in Europe (1938), ch. I",
+   "url": "https://www2.abmc.gov/sites/default/files/publications/Section1.pdf"
+  },
+  "TNA_TOGO": {
+   "title": "The National Archives (UK) blog — Togoland and the First World War",
+   "url": "https://blog.nationalarchives.gov.uk/togoland-first-world-war"
+  },
+  "TNA_NIG": {
+   "title": "The National Archives (UK) — Nigeria in the First World War",
+   "url": "https://www.nationalarchives.gov.uk/first-world-war__trashed/a-global-view__trashed/africa/nigeria/"
+  },
+  "PP_TDN_1914": {
+   "title": "Taranaki Daily News, 29 Oct 1914 (Papers Past) — Cameroons report",
+   "url": "https://dynamic-rsnz.natlib.govt.nz/newspapers/TDN19141029.2.35"
+  },
+  "PP_DOM_1916": {
+   "title": "Dominion, 5 Jan 1916 (Papers Past) — Jaunde occupied",
+   "url": "https://dynamic-rsnz.natlib.govt.nz/newspapers/DOM19160105.2.20.6"
+  },
+  "PP_DOM_1915": {
+   "title": "Dominion, 30 Nov 1915 (Papers Past) — Our war in East Africa",
+   "url": "https://dynamic-rsnz.natlib.govt.nz/newspapers/DOM19151130.2.12"
+  },
+  "NAVAL_DUALA": {
+   "title": "naval-history.net — Cameroons campaign 1914 (with Dobell despatch)",
+   "url": "https://naval-history.net/WW1Battle1409Cameroons.htm"
+  },
+  "AFTWF_KAM": {
+   "title": "Away from the Western Front — Kamerun",
+   "url": "https://awayfromthewesternfront.org/campaigns/africa/kamerun/"
+  },
+  "SPECT_GARUA": {
+   "title": "The Spectator, 21 Aug 1915 — surrender of Garua",
+   "url": "https://archive.spectator.co.uk/article/21st-august-1915/3/the-surrender-of-garua-and-its-german-garrison-in-"
+  },
+  "SAMHS_TREK": {
+   "title": "SA Military History Society Journal 18(6) — The Battle of Trekkopjes, 26 April 1915",
+   "url": "https://www.samilitaryhistory.org/jnl2/vol186sl.html"
+  },
+  "HISTORIA_NAULILA": {
+   "title": "Historia (Univ. of Pretoria) — Naulila (Afrikaans)",
+   "url": "https://upjournals.up.ac.za/index.php/historia/article/download/3054/2888/11979"
+  },
+  "EO_EA": {
+   "title": "1914-1918-online — East and Central Africa",
+   "url": "https://encyclopedia.1914-1918-online.net/article/east-and-central-africa/"
+  },
+  "EO_ABERCORN": {
+   "title": "1914-1918-online — Belgian forces / Abercorn and Karonga 1914",
+   "url": "https://encyclopedia.1914-1918-online.net/?p=1089394"
+  },
+  "EO_TANGA": {
+   "title": "1914-1918-online — Tanga, Battle of",
+   "url": "https://encyclopedia.1914-1918-online.net/article/tanga-battle-of/"
+  },
+  "EO_SA_GEA": {
+   "title": "1914-1918-online — South Africa and the German East Africa campaign",
+   "url": "https://encyclopedia.1914-1918-online.net/article/south-africa-and-the-german-east-africa-campaign-union-of-south-africa/"
+  },
+  "WFA_LATEMA": {
+   "title": "Western Front Association — Latema-Reata Nek, 11-12 March 1916 (H. Fecitt)",
+   "url": "https://www.westernfrontassociation.com/world-war-i-articles/the-battle-for-latema-reata-nek-british-east-africa-11-12-march-1916/"
+  },
+  "WFA_NOV1918": {
+   "title": "Western Front Association — November 1918 in East Africa (H. Fecitt)",
+   "url": "https://www.westernfrontassociation.com/world-war-i-articles/november-1918-in-east-africa/"
+  },
+  "WFA_AGAGIA": {
+   "title": "Western Front Association — Charge of the Dorset Yeomanry at Agagia",
+   "url": "https://www.westernfrontassociation.com/world-war-i-articles/one-of-the-last-true-cavalry-charges-the-charge-of-the-dorset-yeomanry-at-agagia-western-desert-26-february-1916/"
+  },
+  "GAZ_KONDOA": {
+   "title": "London Gazette 29906 — Smuts despatch (Kondoa Irangi)",
+   "url": "https://thegazette.co.uk/London/issue/29906/supplement/690/data.pdf"
+  },
+  "GAZ_NGOMANO": {
+   "title": "London Gazette 30611 — despatch (Ngomano)",
+   "url": "https://thegazette.co.uk/London/issue/30611/supplement/4106/data.pdf"
+  },
+  "GAZ_DARFUR": {
+   "title": "London Gazette 29800 — Darfur despatch (Beringia)",
+   "url": "https://thegazette.co.uk/London/issue/29800/supplement/10370/data.pdf"
+  },
+  "GLA_KIBATA": {
+   "title": "Anderson, PhD thesis, Univ. of Glasgow (2001) — maps: Operations around Kibata Nov 1916-Jan 1917",
+   "url": "https://theses.gla.ac.uk/5195/1/2001AndersonPhD.pdf"
+  },
+  "HISTCOM_AFR": {
+   "title": "History.com — Key battles of WWI in Africa",
+   "url": "https://www.history.com/articles/world-war-i-africa-battles"
+  },
+  "GUT_BUKOBA": {
+   "title": "Project Gutenberg eBook 68854 (mentions capture of Bukoba)",
+   "url": "https://gutenberg.org/ebooks/68854"
+  },
+  "CAMB_CHIL": {
+   "title": "McCracken, A History of Malawi, ch. 5 The Chilembwe Rising (Cambridge)",
+   "url": "https://www.cambridge.org/core/books/abs/history-of-malawi/chilembwe-rising/A03646A52AADB620B9B37CF25EAEBCD4"
+  },
+  "UCA_NYASA": {
+   "title": "Univ. of Central Arkansas DADM project — British Nyasaland",
+   "url": "https://uca.edu/politicalscience/dadm-project/sub-saharan-africa-region/british-nyasaland-1907-1964"
+  },
+  "AH_VOLTA": {
+   "title": "Vennes, Africa's War (ActiveHistory.ca)",
+   "url": "https://activehistory.ca/tag/africa"
+  },
+  "CORE_AGADEZ": {
+   "title": "Article citing Salifou (1973) on Kawsan/Kaocen and Agadez (core.ac.uk)",
+   "url": "https://core.ac.uk/download/224080033.pdf"
+  },
+  "PQ_AGADEZ": {
+   "title": "Journal article on Kaocen's siege of Agadez (ProQuest abstract)",
+   "url": "https://www.proquest.com/docview/2529142235"
+  },
+  "TIMEG_HERRI": {
+   "title": "time.graphics event — Battle of El Herri",
+   "url": "https://time.graphics/event/835402"
+  }
+ },
+ "battles": [
+  {
+   "id": "WF01",
+   "name": "Siege of Liège",
+   "theatre": "Western Front",
+   "campaign": "Invasion of Belgium",
+   "type": "siege",
+   "start": "1914-08-05",
+   "end": "1914-08-16",
+   "precision": "day",
+   "sideA": "Germany",
+   "sideB": "Belgium",
+   "summary": "German army forces the Belgian forts around Liège, opening the route into Belgium.",
+   "place": "Liège",
+   "lat": 50.63373,
+   "lon": 5.56749,
+   "locBasis": "GeoNames 2792413 (town)",
+   "locPrecision": "town",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF02",
+   "name": "Battle of Mons",
+   "theatre": "Western Front",
+   "campaign": "Battle of the Frontiers",
+   "type": "battle",
+   "start": "1914-08-23",
+   "end": "1914-08-23",
+   "precision": "day",
+   "sideA": "Britain",
+   "sideB": "Germany",
+   "summary": "British Expeditionary Force meets the German advance at Mons, then retreats.",
+   "place": "Mons",
+   "lat": 50.45413,
+   "lon": 3.95229,
+   "locBasis": "GeoNames 2790869 (town)",
+   "locPrecision": "town",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF03",
+   "name": "First Battle of the Marne",
+   "theatre": "Western Front",
+   "campaign": "Marne 1914",
+   "type": "battle",
+   "start": "1914-09-05",
+   "end": "1914-09-12",
+   "precision": "day",
+   "sideA": "France, Britain",
+   "sideB": "Germany",
+   "summary": "French and British counter-attack halts the German advance on Paris.",
+   "place": "Château-Thierry",
+   "lat": 49.04636,
+   "lon": 3.40304,
+   "locBasis": "GeoNames 3026194 (representative point on the Marne)",
+   "locPrecision": "representative — battle spanned ~200 km",
+   "sources": [
+    "NAM",
+    "ABMC_S1"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF04",
+   "name": "First Battle of the Aisne",
+   "theatre": "Western Front",
+   "campaign": "Aisne 1914",
+   "type": "battle",
+   "start": "1914-09-13",
+   "end": "1914-09-28",
+   "precision": "day",
+   "sideA": "France, Britain",
+   "sideB": "Germany",
+   "summary": "German armies hold the heights north of the Aisne; trench lines begin to form.",
+   "place": "Craonne",
+   "lat": 49.4392,
+   "lon": 3.7869,
+   "locBasis": "GeoNames (village, Aisne)",
+   "locPrecision": "representative",
+   "sources": [
+    "NAM",
+    "ABMC_S1"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF05",
+   "name": "First Battle of Ypres",
+   "theatre": "Western Front",
+   "campaign": "Flanders 1914",
+   "type": "battle",
+   "start": "1914-10-19",
+   "end": "1914-11-22",
+   "precision": "day",
+   "sideA": "Britain, France, Belgium",
+   "sideB": "Germany",
+   "summary": "Allied forces hold Ypres; the front stabilises from the sea to Switzerland.",
+   "place": "Ieper (Ypres)",
+   "lat": 50.85114,
+   "lon": 2.88569,
+   "locBasis": "GeoNames 2795100 (town)",
+   "locPrecision": "town",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF06",
+   "name": "Battle of Neuve Chapelle",
+   "theatre": "Western Front",
+   "campaign": "Artois 1915",
+   "type": "battle",
+   "start": "1915-03-10",
+   "end": "1915-03-13",
+   "precision": "day",
+   "sideA": "Britain, India",
+   "sideB": "Germany",
+   "summary": "British and Indian attack takes the village but cannot break through.",
+   "place": "Neuve-Chapelle",
+   "lat": 50.58582,
+   "lon": 2.78196,
+   "locBasis": "GeoNames 2990589 (village)",
+   "locPrecision": "site",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF07",
+   "name": "Second Battle of Ypres",
+   "theatre": "Western Front",
+   "campaign": "Flanders 1915",
+   "type": "battle",
+   "start": "1915-04-22",
+   "end": "1915-05-25",
+   "precision": "day",
+   "sideA": "Germany",
+   "sideB": "Britain, Canada, France",
+   "summary": "German attack on the Allied positions around Ypres.",
+   "place": "Ieper (Ypres)",
+   "lat": 50.85114,
+   "lon": 2.88569,
+   "locBasis": "GeoNames 2795100 (town; fighting to the north-east)",
+   "locPrecision": "town",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF08",
+   "name": "Battle of Loos",
+   "theatre": "Western Front",
+   "campaign": "Artois 1915",
+   "type": "battle",
+   "start": "1915-09-25",
+   "end": "1915-10-14",
+   "precision": "day",
+   "sideA": "Britain",
+   "sideB": "Germany",
+   "summary": "British attack near Loos in the Artois coalfield.",
+   "place": "Loos-en-Gohelle",
+   "lat": 50.45786,
+   "lon": 2.79215,
+   "locBasis": "GeoNames 2997619 (town)",
+   "locPrecision": "site",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF09",
+   "name": "Battle of Verdun",
+   "theatre": "Western Front",
+   "campaign": "Verdun 1916",
+   "type": "battle",
+   "start": "1916-02-21",
+   "end": "1916-12-18",
+   "precision": "day",
+   "sideA": "Germany",
+   "sideB": "France",
+   "summary": "German offensive and French defence around the fortress city of Verdun.",
+   "place": "Verdun",
+   "lat": 49.15964,
+   "lon": 5.3829,
+   "locBasis": "GeoNames 2969958 (town)",
+   "locPrecision": "town",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF10",
+   "name": "Battle of the Somme",
+   "theatre": "Western Front",
+   "campaign": "Somme 1916",
+   "type": "battle",
+   "start": "1916-07-01",
+   "end": "1916-11-18",
+   "precision": "day",
+   "sideA": "Britain, Empire forces, France",
+   "sideB": "Germany",
+   "summary": "British and French offensive north and south of the river Somme.",
+   "place": "Albert",
+   "lat": 50.00091,
+   "lon": 2.65096,
+   "locBasis": "GeoNames 3038271 (town behind British line; fighting to the east)",
+   "locPrecision": "representative",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF11",
+   "name": "Battle of Vimy Ridge",
+   "theatre": "Western Front",
+   "campaign": "Arras 1917",
+   "type": "battle",
+   "start": "1917-04-09",
+   "end": "1917-04-12",
+   "precision": "day",
+   "sideA": "Canada, Britain",
+   "sideB": "Germany",
+   "summary": "Canadian Corps captures Vimy Ridge.",
+   "place": "Vimy",
+   "lat": 50.37243,
+   "lon": 2.81034,
+   "locBasis": "GeoNames 2968070 (town)",
+   "locPrecision": "site",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF12",
+   "name": "Battle of Arras",
+   "theatre": "Western Front",
+   "campaign": "Arras 1917",
+   "type": "battle",
+   "start": "1917-04-09",
+   "end": "1917-05-16",
+   "precision": "day",
+   "sideA": "Britain, Empire forces",
+   "sideB": "Germany",
+   "summary": "British offensive east of Arras, launched in support of the French attack on the Aisne.",
+   "place": "Arras",
+   "lat": 50.29301,
+   "lon": 2.78186,
+   "locBasis": "GeoNames 3036784 (town)",
+   "locPrecision": "town",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF13",
+   "name": "Second Battle of the Aisne (Chemin des Dames)",
+   "theatre": "Western Front",
+   "campaign": "Nivelle Offensive 1917",
+   "type": "battle",
+   "start": "1917-04-16",
+   "end": "1917-05-09",
+   "precision": "day",
+   "sideA": "France",
+   "sideB": "Germany",
+   "summary": "French offensive against the Chemin des Dames ridge.",
+   "place": "Craonne",
+   "lat": 49.4392,
+   "lon": 3.7869,
+   "locBasis": "GeoNames (village on the Chemin des Dames)",
+   "locPrecision": "representative",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF14",
+   "name": "Battle of Messines",
+   "theatre": "Western Front",
+   "campaign": "Flanders 1917",
+   "type": "battle",
+   "start": "1917-06-07",
+   "end": "1917-06-14",
+   "precision": "day",
+   "sideA": "Britain, Empire forces",
+   "sideB": "Germany",
+   "summary": "British attack captures Messines Ridge south of Ypres.",
+   "place": "Mesen (Messines)",
+   "lat": 50.76581,
+   "lon": 2.89764,
+   "locBasis": "GeoNames 2791284 (village)",
+   "locPrecision": "site",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF15",
+   "name": "Third Battle of Ypres (Passchendaele)",
+   "theatre": "Western Front",
+   "campaign": "Flanders 1917",
+   "type": "battle",
+   "start": "1917-07-31",
+   "end": "1917-11-10",
+   "precision": "day",
+   "sideA": "Britain, Empire forces, France",
+   "sideB": "Germany",
+   "summary": "Long British-led offensive east of Ypres, ending at Passchendaele.",
+   "place": "Passendale",
+   "lat": 50.89979,
+   "lon": 3.02133,
+   "locBasis": "GeoNames 2789270 (village)",
+   "locPrecision": "site",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF16",
+   "name": "Battle of Cambrai",
+   "theatre": "Western Front",
+   "campaign": "Cambrai 1917",
+   "type": "battle",
+   "start": "1917-11-20",
+   "end": "1917-12-07",
+   "precision": "day",
+   "sideA": "Britain",
+   "sideB": "Germany",
+   "summary": "British attack towards Cambrai, followed by a German counter-attack.",
+   "place": "Cambrai",
+   "lat": 50.17596,
+   "lon": 3.23472,
+   "locBasis": "GeoNames 3029030 (town; fighting to the south-west)",
+   "locPrecision": "representative",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF17",
+   "name": "German Spring Offensive (Operation Michael)",
+   "theatre": "Western Front",
+   "campaign": "German offensives 1918",
+   "type": "offensive",
+   "start": "1918-03-21",
+   "end": "1918-04-05",
+   "precision": "day",
+   "sideA": "Germany",
+   "sideB": "Britain, France",
+   "summary": "German attack between the Oise and the Scarpe advances up to about 37 miles before being stopped short of Amiens.",
+   "place": "Saint-Quentin",
+   "lat": 49.8489,
+   "lon": 3.2875,
+   "locBasis": "GeoNames (town at centre of the attack front)",
+   "locPrecision": "representative",
+   "sources": [
+    "NAM",
+    "ABMC_S1"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF18",
+   "name": "Battle of Cantigny",
+   "theatre": "Western Front",
+   "campaign": "US operations 1918",
+   "type": "battle",
+   "start": "1918-05-28",
+   "end": "1918-05-28",
+   "precision": "day",
+   "sideA": "United States",
+   "sideB": "Germany",
+   "summary": "First American offensive of the war captures the village of Cantigny.",
+   "place": "Cantigny",
+   "lat": 49.6636,
+   "lon": 2.4914,
+   "locBasis": "GeoNames (village)",
+   "locPrecision": "site",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF19",
+   "name": "Battle of Belleau Wood",
+   "theatre": "Western Front",
+   "campaign": "US operations 1918",
+   "type": "battle",
+   "start": "1918-06-01",
+   "end": "1918-06-26",
+   "precision": "day",
+   "sideA": "United States",
+   "sideB": "Germany",
+   "summary": "US Army and Marine Corps units fight for Belleau Wood near Château-Thierry.",
+   "place": "Bois de Belleau",
+   "lat": 49.0714,
+   "lon": 3.2942,
+   "locBasis": "GeoNames (forest)",
+   "locPrecision": "site",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF20",
+   "name": "Second Battle of the Marne",
+   "theatre": "Western Front",
+   "campaign": "German offensives 1918",
+   "type": "battle",
+   "start": "1918-07-15",
+   "end": "1918-08-06",
+   "precision": "day",
+   "sideA": "France, US, Britain, Italy",
+   "sideB": "Germany",
+   "summary": "Last German offensive of the war, followed by an Allied counter-attack on 18 July.",
+   "place": "Dormans",
+   "lat": 49.07392,
+   "lon": 3.63819,
+   "locBasis": "GeoNames 3021034 (representative point on the Marne)",
+   "locPrecision": "representative",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF21",
+   "name": "Battle of Amiens",
+   "theatre": "Western Front",
+   "campaign": "Hundred Days 1918",
+   "type": "battle",
+   "start": "1918-08-08",
+   "end": "1918-08-12",
+   "precision": "day",
+   "sideA": "Britain, Australia, Canada, France",
+   "sideB": "Germany",
+   "summary": "Allied offensive east of Amiens opens the Hundred Days advance.",
+   "place": "Villers-Bretonneux",
+   "lat": 49.86844,
+   "lon": 2.51688,
+   "locBasis": "GeoNames 2968415 (town near the start line)",
+   "locPrecision": "representative",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF22",
+   "name": "St. Mihiel Offensive",
+   "theatre": "Western Front",
+   "campaign": "US operations 1918",
+   "type": "offensive",
+   "start": "1918-09-12",
+   "end": "1918-09-16",
+   "precision": "day",
+   "sideA": "United States, France",
+   "sideB": "Germany",
+   "summary": "First operation by a complete American army; the St. Mihiel salient is eliminated.",
+   "place": "Saint-Mihiel",
+   "lat": 48.88746,
+   "lon": 5.55099,
+   "locBasis": "GeoNames 2977948 (town at the tip of the salient)",
+   "locPrecision": "representative",
+   "sources": [
+    "ABMC_SM",
+    "ABMC_MONTSEC"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "WF23",
+   "name": "Meuse-Argonne Offensive",
+   "theatre": "Western Front",
+   "campaign": "US operations 1918",
+   "type": "offensive",
+   "start": "1918-09-26",
+   "end": "1918-11-11",
+   "precision": "day",
+   "sideA": "United States, France",
+   "sideB": "Germany",
+   "summary": "Largest American operation of the war, fought until the Armistice.",
+   "place": "Montfaucon-d'Argonne",
+   "lat": 49.2717,
+   "lon": 5.1322,
+   "locBasis": "GeoNames (village)",
+   "locPrecision": "representative",
+   "sources": [
+    "NAM",
+    "ABMC_MONTSEC"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF01",
+   "name": "Action at Chra (Khra)",
+   "theatre": "Africa — Togoland",
+   "campaign": "Togoland 1914",
+   "type": "battle",
+   "start": "1914-08-22",
+   "end": "1914-08-22",
+   "precision": "day",
+   "sideA": "Britain (Gold Coast Regiment), France",
+   "sideB": "Germany (Togo police force)",
+   "summary": "Heavy fighting at the Chra river; the German force then withdraws to Kamina.",
+   "place": "Kra (Chra)",
+   "lat": 7.1833,
+   "lon": 1.1667,
+   "locBasis": "GeoNames populated place 'Kra', alt. name 'Chra'",
+   "locPrecision": "site",
+   "sources": [
+    "TNA_TOGO"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF02",
+   "name": "Surrender of Kamina wireless station",
+   "theatre": "Africa — Togoland",
+   "campaign": "Togoland 1914",
+   "type": "surrender",
+   "start": "1914-08-25",
+   "end": "1914-08-27",
+   "precision": "day",
+   "sideA": "Britain, France",
+   "sideB": "Germany",
+   "summary": "Germans destroy the Kamina wireless station and offer terms; Allied troops enter on 27 August, ending the war in Togoland.",
+   "place": "Kamina (near Atakpamé)",
+   "lat": 7.5167,
+   "lon": 1.1667,
+   "locBasis": "GeoNames populated place 'Kamina' near Atakpamé",
+   "locPrecision": "site",
+   "sources": [
+    "TNA_TOGO",
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF03",
+   "name": "First attack on Garua",
+   "theatre": "Africa — Kamerun",
+   "campaign": "Kamerun 1914-16",
+   "type": "battle",
+   "start": "1914-08-29",
+   "end": "1914-08-31",
+   "precision": "day",
+   "sideA": "Britain (Nigeria Regiment)",
+   "sideB": "Germany",
+   "summary": "British column from Nigeria attacks the German forts at Garua and is driven back.",
+   "place": "Garoua",
+   "lat": 9.30143,
+   "lon": 13.39771,
+   "locBasis": "GeoNames 2231320 (town)",
+   "locPrecision": "town",
+   "sources": [
+    "PP_TDN_1914",
+    "TNA_NIG"
+   ],
+   "dateCheck": "partly verified (start date from 1914 report; end date from secondary literature)"
+  },
+  {
+   "id": "AF04",
+   "name": "Action at Nsanakang",
+   "theatre": "Africa — Kamerun",
+   "campaign": "Kamerun 1914-16",
+   "type": "battle",
+   "start": "1914-09-06",
+   "end": "1914-09-06",
+   "precision": "day",
+   "sideA": "Germany",
+   "sideB": "Britain",
+   "summary": "German force attacks the British garrison at Nsanakang near the Nigerian border; the garrison suffers heavy losses.",
+   "place": "Nsanakang",
+   "lat": 5.8814,
+   "lon": 8.9803,
+   "locBasis": "GeoNames populated place",
+   "locPrecision": "site",
+   "sources": [
+    "PP_TDN_1914"
+   ],
+   "dateCheck": "verified (contemporary report)"
+  },
+  {
+   "id": "AF05",
+   "name": "Capture of Duala",
+   "theatre": "Africa — Kamerun",
+   "campaign": "Kamerun 1914-16",
+   "type": "capture",
+   "start": "1914-09-27",
+   "end": "1914-09-27",
+   "precision": "day",
+   "sideA": "Britain, France",
+   "sideB": "Germany",
+   "summary": "Allied naval and land forces take the main port of the colony.",
+   "place": "Douala",
+   "lat": 4.04827,
+   "lon": 9.70428,
+   "locBasis": "GeoNames 2232593 (city)",
+   "locPrecision": "town",
+   "sources": [
+    "NAVAL_DUALA",
+    "AFTWF_KAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF06",
+   "name": "Surrender of Garua",
+   "theatre": "Africa — Kamerun",
+   "campaign": "Kamerun 1914-16",
+   "type": "siege",
+   "start": "1915-06-10",
+   "end": "1915-06-10",
+   "precision": "day",
+   "sideA": "Britain, France",
+   "sideB": "Germany",
+   "summary": "After a siege and bombardment the German forts at Garua surrender.",
+   "place": "Garoua",
+   "lat": 9.30143,
+   "lon": 13.39771,
+   "locBasis": "GeoNames 2231320 (town)",
+   "locPrecision": "town",
+   "sources": [
+    "SPECT_GARUA"
+   ],
+   "dateCheck": "partly verified (surrender reported 1915; day from secondary literature)"
+  },
+  {
+   "id": "AF07",
+   "name": "Occupation of Jaunde",
+   "theatre": "Africa — Kamerun",
+   "campaign": "Kamerun 1914-16",
+   "type": "capture",
+   "start": "1916-01-01",
+   "end": "1916-01-01",
+   "precision": "day",
+   "sideA": "Britain, France",
+   "sideB": "Germany",
+   "summary": "British force occupies the German inland capital; German forces withdraw towards Spanish Guinea.",
+   "place": "Yaoundé (Jaunde)",
+   "lat": 3.86667,
+   "lon": 11.51667,
+   "locBasis": "GeoNames 2220957 (city)",
+   "locPrecision": "town",
+   "sources": [
+    "PP_DOM_1916"
+   ],
+   "dateCheck": "verified (contemporary report)"
+  },
+  {
+   "id": "AF08",
+   "name": "Surrender of Mora",
+   "theatre": "Africa — Kamerun",
+   "campaign": "Kamerun 1914-16",
+   "type": "siege",
+   "start": "1916-02-18",
+   "end": "1916-02-18",
+   "precision": "day",
+   "sideA": "Britain, France",
+   "sideB": "Germany",
+   "summary": "German garrison on the Mora mountain, besieged since 1914, surrenders — the end of fighting in Kamerun.",
+   "place": "Mora",
+   "lat": 11.04611,
+   "lon": 14.14011,
+   "locBasis": "GeoNames 2225991 (town)",
+   "locPrecision": "town",
+   "sources": [
+    "NAM",
+    "TNA_NIG"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF09",
+   "name": "Battle of Sandfontein",
+   "theatre": "Africa — German South West Africa",
+   "campaign": "South West Africa 1914-15",
+   "type": "battle",
+   "start": "1914-09-26",
+   "end": "1914-09-26",
+   "precision": "day",
+   "sideA": "Germany",
+   "sideB": "Union of South Africa",
+   "summary": "German forces defeat the first South African invasion column near the Orange River border.",
+   "place": "Sandfontein",
+   "lat": -28.7072,
+   "lon": 18.5528,
+   "locBasis": "GeoNames populated place (Karas)",
+   "locPrecision": "site",
+   "sources": [
+    "NAM_SWA"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF10",
+   "name": "Battle of Naulila",
+   "theatre": "Africa — Portuguese Angola",
+   "campaign": "South West Africa 1914-15",
+   "type": "battle",
+   "start": "1914-12-18",
+   "end": "1914-12-18",
+   "precision": "day",
+   "sideA": "Germany",
+   "sideB": "Portugal",
+   "summary": "German force from South West Africa attacks the Portuguese fort at Naulila on the Cunene river.",
+   "place": "Naulila",
+   "lat": -17.20189,
+   "lon": 14.68076,
+   "locBasis": "GeoNames 3346998 (town)",
+   "locPrecision": "site",
+   "sources": [
+    "HISTORIA_NAULILA"
+   ],
+   "dateCheck": "NOT YET VERIFIED — date only found in Wikipedia; check before publishing"
+  },
+  {
+   "id": "AF11",
+   "name": "Battle of Trekkopjes",
+   "theatre": "Africa — German South West Africa",
+   "campaign": "South West Africa 1914-15",
+   "type": "battle",
+   "start": "1915-04-26",
+   "end": "1915-04-26",
+   "precision": "day",
+   "sideA": "Germany",
+   "sideB": "Union of South Africa",
+   "summary": "German attack on the South African-held railway station is beaten off.",
+   "place": "Trekkopje",
+   "lat": -22.3,
+   "lon": 15.1167,
+   "locBasis": "GeoNames railroad siding",
+   "locPrecision": "site",
+   "sources": [
+    "SAMHS_TREK"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF12",
+   "name": "Battle of Gibeon",
+   "theatre": "Africa — German South West Africa",
+   "campaign": "South West Africa 1914-15",
+   "type": "battle",
+   "start": "1915-04-27",
+   "end": "1915-04-27",
+   "precision": "day",
+   "sideA": "Union of South Africa",
+   "sideB": "Germany",
+   "summary": "Described by the National Army Museum as the decisive battle of the campaign.",
+   "place": "Gibeon",
+   "lat": -25.12213,
+   "lon": 17.76935,
+   "locBasis": "GeoNames 3357293 (town)",
+   "locPrecision": "town",
+   "sources": [
+    "NAM_SWA"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF13",
+   "name": "Capture of Windhoek",
+   "theatre": "Africa — German South West Africa",
+   "campaign": "South West Africa 1914-15",
+   "type": "capture",
+   "start": "1915-05-12",
+   "end": "1915-05-12",
+   "precision": "day",
+   "sideA": "Union of South Africa",
+   "sideB": "Germany",
+   "summary": "South African troops occupy the colonial capital.",
+   "place": "Windhoek",
+   "lat": -22.55941,
+   "lon": 17.08323,
+   "locBasis": "GeoNames 3352136 (city)",
+   "locPrecision": "town",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF14",
+   "name": "Battle of Otavifontein",
+   "theatre": "Africa — German South West Africa",
+   "campaign": "South West Africa 1914-15",
+   "type": "battle",
+   "start": "1915-07-01",
+   "end": "1915-07-01",
+   "precision": "day",
+   "sideA": "Union of South Africa",
+   "sideB": "Germany",
+   "summary": "Last battle of the campaign; German forces fall back to Khorab.",
+   "place": "Otavi",
+   "lat": -19.63805,
+   "lon": 17.33986,
+   "locBasis": "GeoNames 3353934 (town)",
+   "locPrecision": "town",
+   "sources": [
+    "NAM_SWA"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF15",
+   "name": "German surrender at Khorab",
+   "theatre": "Africa — German South West Africa",
+   "campaign": "South West Africa 1914-15",
+   "type": "surrender",
+   "start": "1915-07-09",
+   "end": "1915-07-09",
+   "precision": "day",
+   "sideA": "Union of South Africa",
+   "sideB": "Germany",
+   "summary": "German forces in South West Africa surrender.",
+   "place": "Khorab (near Otavi)",
+   "lat": -19.63805,
+   "lon": 17.33986,
+   "locBasis": "Khorab not in GeoNames — plotted at Otavi (nearest gazetteer town)",
+   "locPrecision": "approximate (within ~10 km)",
+   "sources": [
+    "NAM_SWA"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF16",
+   "name": "German attack on Abercorn",
+   "theatre": "Africa — East and Central Africa",
+   "campaign": "East Africa 1914-18",
+   "type": "battle",
+   "start": "1914-09-05",
+   "end": "1914-09-05",
+   "precision": "day",
+   "sideA": "Germany",
+   "sideB": "Britain (Northern Rhodesia), Belgium",
+   "summary": "German attack on the British border post is repulsed.",
+   "place": "Mbala (Abercorn)",
+   "lat": -8.84024,
+   "lon": 31.36587,
+   "locBasis": "GeoNames 176146 (town)",
+   "locPrecision": "town",
+   "sources": [
+    "EO_ABERCORN"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF17",
+   "name": "German attack on Karonga",
+   "theatre": "Africa — East and Central Africa",
+   "campaign": "East Africa 1914-18",
+   "type": "battle",
+   "start": "1914-09-09",
+   "end": "1914-09-09",
+   "precision": "day",
+   "sideA": "Germany",
+   "sideB": "Britain (Nyasaland)",
+   "summary": "German attack on the lakeside town in Nyasaland is repulsed.",
+   "place": "Karonga",
+   "lat": -9.93333,
+   "lon": 33.93333,
+   "locBasis": "GeoNames 235715 (town)",
+   "locPrecision": "town",
+   "sources": [
+    "EO_ABERCORN"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF18",
+   "name": "Battle of Tanga",
+   "theatre": "Africa — East and Central Africa",
+   "campaign": "East Africa 1914-18",
+   "type": "battle",
+   "start": "1914-11-03",
+   "end": "1914-11-05",
+   "precision": "day",
+   "sideA": "Britain, India",
+   "sideB": "Germany",
+   "summary": "British-Indian amphibious landing at the port of Tanga is defeated by a much smaller German force.",
+   "place": "Tanga",
+   "lat": -5.06893,
+   "lon": 39.09875,
+   "locBasis": "GeoNames 149606 (city)",
+   "locPrecision": "town",
+   "sources": [
+    "NAM",
+    "EO_TANGA"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF19",
+   "name": "Battle of Longido",
+   "theatre": "Africa — East and Central Africa",
+   "campaign": "East Africa 1914-18",
+   "type": "battle",
+   "start": "1914-11-03",
+   "end": "1914-11-03",
+   "precision": "day",
+   "sideA": "Britain",
+   "sideB": "Germany",
+   "summary": "British advance near Kilimanjaro, timed with the Tanga landing, is repulsed.",
+   "place": "Longido",
+   "lat": -2.73319,
+   "lon": 36.69773,
+   "locBasis": "GeoNames 155848 (town)",
+   "locPrecision": "town",
+   "sources": [
+    "NAM",
+    "EO_TANGA"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF20",
+   "name": "Battle of Jassin",
+   "theatre": "Africa — East and Central Africa",
+   "campaign": "East Africa 1914-18",
+   "type": "battle",
+   "start": "1915-01-18",
+   "end": "1915-01-19",
+   "precision": "day",
+   "sideA": "Germany",
+   "sideB": "Britain, India",
+   "summary": "German force retakes the border post of Jassin from British-Indian troops.",
+   "place": "Yasini (Jassin)",
+   "lat": -4.66944,
+   "lon": 39.19333,
+   "locBasis": "GeoNames populated place 'Yasini' (alt. Jasini)",
+   "locPrecision": "site",
+   "sources": [
+    "EO_SA_GEA",
+    "PP_DOM_1915"
+   ],
+   "dateCheck": "partly verified (January 1915 confirmed; days from secondary literature)"
+  },
+  {
+   "id": "AF21",
+   "name": "Chilembwe Rising",
+   "theatre": "Africa — East and Central Africa",
+   "campaign": "Uprisings against colonial rule",
+   "type": "uprising",
+   "start": "1915-01-23",
+   "end": "1915-02-03",
+   "precision": "day",
+   "sideA": "Followers of John Chilembwe",
+   "sideB": "Britain (Nyasaland government)",
+   "summary": "Rising against British colonial rule in Nyasaland begins with an attack on the Magomero estate; Chilembwe is killed on 3 February.",
+   "place": "Magomero",
+   "lat": -15.6028,
+   "lon": 35.2603,
+   "locBasis": "GeoNames populated place",
+   "locPrecision": "site",
+   "sources": [
+    "CAMB_CHIL",
+    "UCA_NYASA"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF22",
+   "name": "Raid on Bukoba",
+   "theatre": "Africa — East and Central Africa",
+   "campaign": "East Africa 1914-18",
+   "type": "raid",
+   "start": "1915-06-21",
+   "end": "1915-06-23",
+   "precision": "day",
+   "sideA": "Britain",
+   "sideB": "Germany",
+   "summary": "British amphibious raid across Lake Victoria on the German wireless station at Bukoba.",
+   "place": "Bukoba",
+   "lat": -1.33167,
+   "lon": 31.81222,
+   "locBasis": "GeoNames 160961 (town)",
+   "locPrecision": "town",
+   "sources": [
+    "GUT_BUKOBA"
+   ],
+   "dateCheck": "partly verified (event confirmed; days from secondary literature)"
+  },
+  {
+   "id": "AF23",
+   "name": "Battle of Salaita Hill",
+   "theatre": "Africa — East and Central Africa",
+   "campaign": "East Africa 1914-18",
+   "type": "battle",
+   "start": "1916-02-12",
+   "end": "1916-02-12",
+   "precision": "day",
+   "sideA": "Britain, South Africa",
+   "sideB": "Germany",
+   "summary": "South African troops' first battle in East Africa; the attack is repulsed.",
+   "place": "Salaita (hill)",
+   "lat": -3.3881,
+   "lon": 37.7878,
+   "locBasis": "GeoNames mountain 'Salaita'",
+   "locPrecision": "site",
+   "sources": [
+    "EO_SA_GEA"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF24",
+   "name": "Battle of Latema Nek",
+   "theatre": "Africa — East and Central Africa",
+   "campaign": "East Africa 1914-18",
+   "type": "battle",
+   "start": "1916-03-11",
+   "end": "1916-03-12",
+   "precision": "day",
+   "sideA": "Britain, South Africa",
+   "sideB": "Germany",
+   "summary": "British force takes the gap between the Latema and Reata hills.",
+   "place": "Latema (hill)",
+   "lat": -3.4036,
+   "lon": 37.6181,
+   "locBasis": "GeoNames mountain 'Latema'",
+   "locPrecision": "site",
+   "sources": [
+    "WFA_LATEMA"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF25",
+   "name": "German attack at Kondoa Irangi",
+   "theatre": "Africa — East and Central Africa",
+   "campaign": "East Africa 1914-18",
+   "type": "battle",
+   "start": "1916-05-07",
+   "end": "1916-06-30",
+   "precision": "approximate",
+   "sideA": "Germany",
+   "sideB": "South Africa",
+   "summary": "German forces counter-attack the South African division holding Kondoa Irangi; fighting continues into June.",
+   "place": "Kondoa (Kondoa Irangi)",
+   "lat": -4.9,
+   "lon": 35.78333,
+   "locBasis": "GeoNames 156510 (town)",
+   "locPrecision": "town",
+   "sources": [
+    "GAZ_KONDOA"
+   ],
+   "dateCheck": "partly verified (despatch gives early May to June; no single battle date)"
+  },
+  {
+   "id": "AF26",
+   "name": "Belgian capture of Tabora",
+   "theatre": "Africa — East and Central Africa",
+   "campaign": "East Africa 1914-18",
+   "type": "capture",
+   "start": "1916-09-19",
+   "end": "1916-09-19",
+   "precision": "day",
+   "sideA": "Belgium (Force Publique)",
+   "sideB": "Germany",
+   "summary": "Belgian-Congolese troops take Tabora, the largest town in the interior of German East Africa.",
+   "place": "Tabora",
+   "lat": -5.01622,
+   "lon": 32.82663,
+   "locBasis": "GeoNames 149658 (city)",
+   "locPrecision": "town",
+   "sources": [
+    "EO_EA"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF27",
+   "name": "Fighting around Kibata",
+   "theatre": "Africa — East and Central Africa",
+   "campaign": "East Africa 1914-18",
+   "type": "battle",
+   "start": "1916-11-01",
+   "end": "1917-01-31",
+   "precision": "month",
+   "sideA": "Britain",
+   "sideB": "Germany",
+   "summary": "Prolonged fighting around Kibata, inland from Kilwa.",
+   "place": "Kibata",
+   "lat": -8.4667,
+   "lon": 38.9833,
+   "locBasis": "GeoNames populated place",
+   "locPrecision": "site",
+   "sources": [
+    "GLA_KIBATA"
+   ],
+   "dateCheck": "partly verified (month-level only)"
+  },
+  {
+   "id": "AF28",
+   "name": "Battle of Mahiwa",
+   "theatre": "Africa — East and Central Africa",
+   "campaign": "East Africa 1914-18",
+   "type": "battle",
+   "start": "1917-10-15",
+   "end": "1917-10-18",
+   "precision": "day",
+   "sideA": "Germany",
+   "sideB": "Britain, Nigeria, King's African Rifles",
+   "summary": "German victory at high cost; afterwards the German force retreats into Portuguese East Africa.",
+   "place": "Mahiwa",
+   "lat": -10.35,
+   "lon": 39.2667,
+   "locBasis": "GeoNames populated place",
+   "locPrecision": "site",
+   "sources": [
+    "NAM",
+    "NAM_EA_TN"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF29",
+   "name": "Action at Ngomano",
+   "theatre": "Africa — Portuguese East Africa",
+   "campaign": "East Africa 1914-18",
+   "type": "battle",
+   "start": "1917-11-25",
+   "end": "1917-11-25",
+   "precision": "day",
+   "sideA": "Germany",
+   "sideB": "Portugal",
+   "summary": "Portuguese garrison fails to stop the German crossing of the Rovuma into Portuguese East Africa.",
+   "place": "Negomano (Ngomano)",
+   "lat": -11.4283,
+   "lon": 38.4936,
+   "locBasis": "GeoNames populated place 'Negomano'",
+   "locPrecision": "site",
+   "sources": [
+    "GAZ_NGOMANO"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF30",
+   "name": "Battle of Namacurra",
+   "theatre": "Africa — Portuguese East Africa",
+   "campaign": "East Africa 1914-18",
+   "type": "battle",
+   "start": "1918-07-01",
+   "end": "1918-07-03",
+   "precision": "day",
+   "sideA": "Germany",
+   "sideB": "Portugal, Britain",
+   "summary": "German column overruns a Portuguese-British garrison in Mozambique.",
+   "place": "Namacurra",
+   "lat": -17.49194,
+   "lon": 37.02889,
+   "locBasis": "GeoNames 1034311 (town)",
+   "locPrecision": "town",
+   "sources": [
+    "HISTCOM_AFR"
+   ],
+   "dateCheck": "partly verified (July 1918 confirmed; days from secondary literature)"
+  },
+  {
+   "id": "AF31",
+   "name": "German occupation of Kasama",
+   "theatre": "Africa — East and Central Africa",
+   "campaign": "East Africa 1914-18",
+   "type": "capture",
+   "start": "1918-11-09",
+   "end": "1918-11-13",
+   "precision": "day",
+   "sideA": "Germany",
+   "sideB": "Britain (Northern Rhodesia)",
+   "summary": "German column enters Northern Rhodesia and takes Kasama; fighting continues after the European armistice.",
+   "place": "Kasama",
+   "lat": -10.21289,
+   "lon": 31.18084,
+   "locBasis": "GeoNames 912764 (town)",
+   "locPrecision": "town",
+   "sources": [
+    "WFA_NOV1918",
+    "NAM_EA_TN"
+   ],
+   "dateCheck": "sources differ: WFA gives 9 Nov, NAM teachers' notes 13 Nov 1918"
+  },
+  {
+   "id": "AF32",
+   "name": "German surrender at Abercorn",
+   "theatre": "Africa — East and Central Africa",
+   "campaign": "East Africa 1914-18",
+   "type": "surrender",
+   "start": "1918-11-25",
+   "end": "1918-11-25",
+   "precision": "day",
+   "sideA": "Britain",
+   "sideB": "Germany",
+   "summary": "Lettow-Vorbeck's force formally surrenders, two weeks after the Armistice in Europe.",
+   "place": "Mbala (Abercorn)",
+   "lat": -8.84024,
+   "lon": 31.36587,
+   "locBasis": "GeoNames 176146 (town)",
+   "locPrecision": "town",
+   "sources": [
+    "EO_EA",
+    "NAM_LV"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF33",
+   "name": "Ottoman attack on the Suez Canal",
+   "theatre": "Africa — North Africa",
+   "campaign": "Egypt and Sinai",
+   "type": "battle",
+   "start": "1915-01-28",
+   "end": "1915-02-03",
+   "precision": "day",
+   "sideA": "Ottoman Empire",
+   "sideB": "Britain, India, Egypt",
+   "summary": "Ottoman force crosses Sinai and tries to cross the canal; the attack fails.",
+   "place": "Ismailia",
+   "lat": 30.60427,
+   "lon": 32.27225,
+   "locBasis": "GeoNames 361055 (city on the central canal)",
+   "locPrecision": "representative",
+   "sources": [
+    "NAM"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF34",
+   "name": "Action of Agagia",
+   "theatre": "Africa — North Africa",
+   "campaign": "Senussi campaign 1915-17",
+   "type": "battle",
+   "start": "1916-02-26",
+   "end": "1916-02-26",
+   "precision": "day",
+   "sideA": "Britain, South Africa",
+   "sideB": "Senussi, Ottoman officers",
+   "summary": "Main Senussi force on the Egyptian coast is defeated near Sidi Barrani.",
+   "place": "Agagia (near Sidi Barrani)",
+   "lat": 31.61166,
+   "lon": 25.92539,
+   "locBasis": "Agagia not in GeoNames — plotted at Sidi Barrani",
+   "locPrecision": "approximate (within ~20 km)",
+   "sources": [
+    "NAM_SEN",
+    "WFA_AGAGIA"
+   ],
+   "dateCheck": "verified"
+  },
+  {
+   "id": "AF35",
+   "name": "Battle of Beringia (Darfur)",
+   "theatre": "Africa — North Africa",
+   "campaign": "Darfur 1916",
+   "type": "battle",
+   "start": "1916-05-22",
+   "end": "1916-05-22",
+   "precision": "day",
+   "sideA": "Britain, Egypt",
+   "sideB": "Sultanate of Darfur",
+   "summary": "Anglo-Egyptian force defeats Sultan Ali Dinar's army; El Fasher is occupied soon after.",
+   "place": "Beringia (near El Fasher)",
+   "lat": 13.62793,
+   "lon": 25.34936,
+   "locBasis": "Beringia not in GeoNames — plotted at El Fasher",
+   "locPrecision": "approximate (within ~20 km)",
+   "sources": [
+    "GAZ_DARFUR",
+    "NAM"
+   ],
+   "dateCheck": "partly verified (despatch confirms the battle before 23 May)"
+  },
+  {
+   "id": "AF36",
+   "name": "Battle of El Herri",
+   "theatre": "Africa — North Africa",
+   "campaign": "Zaian War (Morocco)",
+   "type": "battle",
+   "start": "1914-11-13",
+   "end": "1914-11-13",
+   "precision": "day",
+   "sideA": "Zaian Confederation",
+   "sideB": "France",
+   "summary": "French column attacking a Zaian camp near Khénifra suffers heavy losses.",
+   "place": "El Heri (El Herri)",
+   "lat": 32.8581,
+   "lon": -5.6239,
+   "locBasis": "GeoNames populated place",
+   "locPrecision": "site",
+   "sources": [
+    "TIMEG_HERRI"
+   ],
+   "dateCheck": "NOT YET VERIFIED from a strong source — check before publishing"
+  },
+  {
+   "id": "AF37",
+   "name": "Volta-Bani War",
+   "theatre": "Africa — West Africa",
+   "campaign": "Uprisings against colonial rule",
+   "type": "uprising",
+   "start": "1915-11-01",
+   "end": "1916-12-31",
+   "precision": "month",
+   "sideA": "Coalition of villages (Marka, Bwa and others)",
+   "sideB": "France",
+   "summary": "Large uprising against French rule and wartime conscription in the region that became Upper Volta; repressed by the end of 1916 with very heavy loss of life.",
+   "place": "Dédougou region",
+   "lat": 12.4636,
+   "lon": -3.46075,
+   "locBasis": "GeoNames 2361477 (Dédougou, a cercle named in studies of the revolt) — region-level point",
+   "locPrecision": "region",
+   "sources": [
+    "AH_VOLTA"
+   ],
+   "dateCheck": "partly verified (end-1916 confirmed; Nov 1915 start from secondary literature)"
+  },
+  {
+   "id": "AF38",
+   "name": "Siege of Agadez (Kaocen revolt)",
+   "theatre": "Africa — West Africa",
+   "campaign": "Uprisings against colonial rule",
+   "type": "siege",
+   "start": "1916-12-13",
+   "end": "1917-03-03",
+   "precision": "day",
+   "sideA": "Tuareg forces led by Kaocen",
+   "sideB": "France",
+   "summary": "Tuareg forces besiege the French garrison at Agadez until a relief column arrives.",
+   "place": "Agadez",
+   "lat": 16.97333,
+   "lon": 7.99111,
+   "locBasis": "GeoNames 2448085 (city)",
+   "locPrecision": "town",
+   "sources": [
+    "CORE_AGADEZ",
+    "PQ_AGADEZ"
+   ],
+   "dateCheck": "partly verified (start 13 Dec per Salifou; some sources give 17 Dec)"
+  },
+  {
+   "id": "AF39",
+   "name": "Egba (Adubi) uprising",
+   "theatre": "Africa — West Africa",
+   "campaign": "Uprisings against colonial rule",
+   "type": "uprising",
+   "start": "1918-06-01",
+   "end": "1918-07-31",
+   "precision": "month",
+   "sideA": "Egba rebels",
+   "sideB": "Britain (Nigeria government)",
+   "summary": "Rebels attack Abeokuta, cutting railways and telegraph lines; defeated in July by troops returned from East Africa.",
+   "place": "Abeokuta",
+   "lat": 7.15571,
+   "lon": 3.34509,
+   "locBasis": "GeoNames 2352947 (city)",
+   "locPrecision": "town",
+   "sources": [
+    "TNA_NIG"
+   ],
+   "dateCheck": "partly verified (month-level)"
+  }
+ ]
+}

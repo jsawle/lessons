@@ -1,0 +1,84 @@
+{
+ "format": "Data publish 1.0",
+ "id": "ww1-battles",
+ "version": "0.1.0",
+ "file": "maps/data/build/ww1/ww1-battles-v0_1_0.geojson",
+ "expectFeatures": 62,
+ "note": "LAB layer (pilot). Built by maps/data/ww1/build.py (1.0) from battles.json. Two records (AF10 Naulila, AF36 El Herri) have dates not yet confirmed outside Wikipedia: see SOURCES.md. Not for MapMaker until those are settled.",
+ "checks": [
+  {
+   "name": "Tanga, 3 to 5 November 1914",
+   "where": {
+    "BattleId": "AF18"
+   },
+   "expect": {
+    "StartDate": "1914-11-03",
+    "EndDate": "1914-11-05",
+    "Region": "Africa"
+   }
+  },
+  {
+   "name": "Kamina wireless station, 25 to 27 August 1914",
+   "where": {
+    "BattleId": "AF02"
+   },
+   "expect": {
+    "StartDate": "1914-08-25",
+    "EndDate": "1914-08-27"
+   }
+  },
+  {
+   "name": "German surrender at Abercorn after the Armistice",
+   "where": {
+    "BattleId": "AF32"
+   },
+   "expect": {
+    "StartDate": "1918-11-25"
+   }
+  },
+  {
+   "name": "Meuse-Argonne runs to the Armistice",
+   "where": {
+    "BattleId": "WF23"
+   },
+   "expect": {
+    "StartDate": "1918-09-26",
+    "EndDate": "1918-11-11",
+    "Region": "Western Front"
+   }
+  },
+  {
+   "name": "Somme, 1 July to 18 November 1916",
+   "where": {
+    "BattleId": "WF10"
+   },
+   "expect": {
+    "StartDate": "1916-07-01",
+    "EndDate": "1916-11-18"
+   }
+  }
+ ],
+ "item": {
+  "title": "LAB: First World War battles, Western Front and Africa (data for lessons) v0.1",
+  "snippet": "Test layer: 62 battles and other fighting of the First World War on the Western Front and across Africa, with dates for the time slider and a source for every record. Draft.",
+  "description": "<p><b>Test layer.</b> One point for each of 62 battles, sieges, raids, surrenders and risings: 23 on the Western Front and 39 in Africa (Togoland, Kamerun, German South West Africa, East and Central Africa, Portuguese Angola and Mozambique, North Africa, and risings against colonial rule in Nyasaland, French West Africa, Niger and Nigeria).</p><p><b>For the time slider:</b> use StartDate as the start field and EndDate as the end field.</p><p><b>Where the points are:</b> a battle fought over a wide area is shown at one representative place; LocationBasis and LocationPrecision say which. DateCheck says how far each record's dates were confirmed.</p><p><b>Sources:</b> each record names its sources (Source1, Source2): the National Army Museum, the American Battle Monuments Commission, The National Archives (UK), 1914-1918-online, London Gazette despatches, newspapers of the time and published research. Summaries are written for this layer. Coordinates: GeoNames.</p><p><i>Data version 0.1 (26 November 2026), lab draft.</i></p>",
+  "tags": [
+   "World History",
+   "First World War",
+   "WWI",
+   "battles",
+   "Africa",
+   "Western Front",
+   "time",
+   "lab",
+   "draft"
+  ],
+  "credits": "Dates and facts: National Army Museum; American Battle Monuments Commission; The National Archives (UK); 1914-1918-online; London Gazette; Papers Past; other sources named in each record. Coordinates: GeoNames (geonames.org), CC BY 4.0.",
+  "license": "Facts from the sources named in each record; summaries written for this layer are original. Place coordinates from GeoNames, CC BY 4.0 (attribution required)."
+ },
+ "publish": {
+  "org": "HNLEA4GfnbCFQZGa",
+  "orgLabel": "GIS for Schools",
+  "folder": "Map data"
+ }
+}
