@@ -1,11 +1,11 @@
 {
- "tool": "Map builder 1.7",
+ "tool": "Map builder 1.8",
  "spec": "maps/specs/europe-borders-ww1-era-lab.json",
  "specId": "europe-borders-ww1-era-lab",
- "specVersion": "0.3.0",
- "built": "2026-11-26T16:40:43Z",
- "webmapFingerprint": "bcbcc334643bcc662080722460f2c9c2e8062074",
- "itemFingerprint": "8e02609ef616edb708bb703ad9baf127da56c714",
+ "specVersion": "0.3.1",
+ "built": "2026-11-26T16:56:04Z",
+ "webmapFingerprint": "1ec85ccbef594e5b0aa627f8737febd75ba5e5d7",
+ "itemFingerprint": "dfd34f9effc153b56f35b0b6ad43a33383a36979",
  "checked": [
   "basemap is public and not CARTO",
   "every source layer is readable and every field the spec uses exists",
@@ -15,9 +15,9 @@
  "tested": {
   "tool": "Map test 1.1",
   "sdk": "5.2",
-  "when": "2026-11-26T16:43:54Z",
+  "when": "2026-11-26T16:59:23Z",
   "timeZone": "America/Chicago",
-  "webmapFingerprint": "bcbcc334643bcc662080722460f2c9c2e8062074",
+  "webmapFingerprint": "1ec85ccbef594e5b0aa627f8737febd75ba5e5d7",
   "pass": true,
   "checks": [
    {
