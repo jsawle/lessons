@@ -1,10 +1,10 @@
 {
  "format": "Data publish 1.0",
  "id": "ww1-battles",
- "version": "0.1.0",
- "file": "maps/data/build/ww1/ww1-battles-v0_1_0.geojson",
+ "version": "0.2.0",
+ "file": "maps/data/build/ww1/ww1-battles-v0_2_0.geojson",
  "expectFeatures": 62,
- "note": "LAB layer (pilot). Built by maps/data/ww1/build.py (1.0) from battles.json. Two records (AF10 Naulila, AF36 El Herri) have dates not yet confirmed outside Wikipedia: see SOURCES.md. Not for MapMaker until those are settled.",
+ "note": "LAB layer (pilot). Built by maps/data/ww1/build.py (1.1) from battles.json. 0.2.0 adds the month-rounded display dates the time slider needs (ShowFrom, ShowTo, ShowToSoFar) and Kind. Two records (AF10 Naulila, AF36 El Herri) have dates not yet confirmed outside Wikipedia: see SOURCES.md. Not for MapMaker until those are settled.",
  "checks": [
   {
    "name": "Tanga, 3 to 5 November 1914",
@@ -56,12 +56,34 @@
     "StartDate": "1916-07-01",
     "EndDate": "1916-11-18"
    }
+  },
+  {
+   "name": "Tanga shows for all of November 1914",
+   "where": {
+    "BattleId": "AF18"
+   },
+   "expect": {
+    "ShowFrom": "1914-11-01",
+    "ShowTo": "1914-11-30",
+    "Kind": "Battle, siege or raid"
+   }
+  },
+  {
+   "name": "Chilembwe rising runs January to February 1915",
+   "where": {
+    "BattleId": "AF21"
+   },
+   "expect": {
+    "ShowFrom": "1915-01-01",
+    "ShowTo": "1915-02-28",
+    "Kind": "Rising against colonial rule"
+   }
   }
  ],
  "item": {
-  "title": "LAB: First World War battles, Western Front and Africa (data for lessons) v0.1",
+  "title": "LAB: First World War battles, Western Front and Africa (data for lessons) v0.2",
   "snippet": "Test layer: 62 battles and other fighting of the First World War on the Western Front and across Africa, with dates for the time slider and a source for every record. Draft.",
-  "description": "<p><b>Test layer.</b> One point for each of 62 battles, sieges, raids, surrenders and risings: 23 on the Western Front and 39 in Africa (Togoland, Kamerun, German South West Africa, East and Central Africa, Portuguese Angola and Mozambique, North Africa, and risings against colonial rule in Nyasaland, French West Africa, Niger and Nigeria).</p><p><b>For the time slider:</b> use StartDate as the start field and EndDate as the end field.</p><p><b>Where the points are:</b> a battle fought over a wide area is shown at one representative place; LocationBasis and LocationPrecision say which. DateCheck says how far each record's dates were confirmed.</p><p><b>Sources:</b> each record names its sources (Source1, Source2): the National Army Museum, the American Battle Monuments Commission, The National Archives (UK), 1914-1918-online, London Gazette despatches, newspapers of the time and published research. Summaries are written for this layer. Coordinates: GeoNames.</p><p><i>Data version 0.1 (26 November 2026), lab draft.</i></p>",
+  "description": "<p><b>Test layer.</b> One point for each of 62 battles, sieges, raids, surrenders and risings: 23 on the Western Front and 39 in Africa (Togoland, Kamerun, German South West Africa, East and Central Africa, Portuguese Angola and Mozambique, North Africa, and risings against colonial rule in Nyasaland, French West Africa, Niger and Nigeria).</p><p><b>For the time slider:</b> StartDate and EndDate are the real dates. A slider that steps a month at a time needs dates rounded out to whole months: use ShowFrom and ShowTo to show the fighting in the months it happened, or ShowFrom and ShowToSoFar to keep earlier fighting on the map to the end of 1918.</p><p><b>Where the points are:</b> a battle fought over a wide area is shown at one representative place; LocationBasis and LocationPrecision say which. DateCheck says how far each record's dates were confirmed.</p><p><b>Sources:</b> each record names its sources (Source1, Source2): the National Army Museum, the American Battle Monuments Commission, The National Archives (UK), 1914-1918-online, London Gazette despatches, newspapers of the time and published research. Summaries are written for this layer. Coordinates: GeoNames.</p><p><i>Data version 0.2 (26 November 2026): month display dates for the time slider; lab draft.</i></p>",
   "tags": [
    "World History",
    "First World War",

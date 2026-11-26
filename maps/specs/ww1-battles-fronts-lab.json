@@ -1,0 +1,443 @@
+{
+ "format": "Map spec 1.0",
+ "id": "ww1-battles-fronts-lab",
+ "version": "0.1.0",
+ "why": "LAB map. Tests the time slider on First World War fighting: the Western Front and Africa together, a month at a time, with the Western Front at the Armistice on the last step. Not a lesson map and not for MapMaker until the open checks in maps/data/ww1/SOURCES.md are settled.",
+ "item": {
+  "title": "LAB: First World War fighting, Western Front and Africa, 1914 to 1918 v0.1",
+  "snippet": "Test map: move the time slider a month at a time to see where First World War fighting happened on the Western Front and across Africa, and the Western Front at the Armistice. Draft.",
+  "description": "<p><b>Test map.</b> Where fighting happened in the First World War, month by month from August 1914 to November 1918, on the Western Front and across Africa: Togoland, Kamerun, German South West Africa, East and Central Africa, North Africa, and risings against colonial rule.</p><p><b>Time slider:</b> it steps one month at a time, landing on the 11th of each month, and ends on 11 November 1918. Large coloured symbols show fighting during that month. Small grey dots show fighting in earlier months. A battle shows for every month it was fought in, so a battle at the end of a month appears from that month's first step.</p><p><b>Symbols:</b> circles are battles, sieges and raids; squares are captures and surrenders; diamonds are risings against colonial rule. The legend names each, so colour is not the only clue.</p><p><b>Western Front at the Armistice:</b> the front line at 11 a.m. on 11 November 1918, traced from a US Army map of that day. It is usually within about 4 km of the map's line.</p><p><b>Where the points are:</b> a battle fought over a wide area is shown at one place; the pop-up says where. Each pop-up names its source.</p><p><b>Sources:</b> battle dates and facts from the National Army Museum, the American Battle Monuments Commission, The National Archives (UK), 1914-1918-online, London Gazette despatches and others named in each record. Front line: Order of Battle on Western Front, 11 A.M., Nov. 11, 1918, G-3, GHQ, American Expeditionary Forces (Library of Congress). Place positions: GeoNames.</p><p><i>Map version 0.1 (26 November 2026), lab draft.</i></p>",
+  "tags": [
+   "World History",
+   "First World War",
+   "WWI",
+   "battles",
+   "Africa",
+   "Western Front",
+   "Armistice",
+   "time",
+   "lab",
+   "draft"
+  ],
+  "credits": "Battles: National Army Museum; American Battle Monuments Commission; The National Archives (UK); 1914-1918-online; London Gazette; others named in each record. Front line: G-3, GHQ, American Expeditionary Forces (Library of Congress). Positions: GeoNames (CC BY 4.0); Esri.",
+  "license": "Facts from the sources named; front line traced from a US government map (public domain in the US); positions from GeoNames, CC BY 4.0. Text written for this map is original."
+ },
+ "basemap": {
+  "title": "Modern Antique",
+  "layers": [
+   {
+    "type": "tile",
+    "title": "World Hillshade",
+    "itemId": "1b243539f4514b6ba35e7d995890db1d",
+    "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer"
+   },
+   {
+    "type": "vectorTile",
+    "title": "Modern Antique (no Labels)",
+    "itemId": "545f2e839f624600bbb092c3ad998bb8",
+    "blendMode": "multiply",
+    "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json"
+   }
+  ],
+  "why": "The same basemap as the other GIS for Schools maps. No reference label layer: countries are named from the data, so today's country names don't sit on the borders of 1914 to 1947."
+ },
+ "view": {
+  "extent": [
+   -22.0,
+   -36.0,
+   56.0,
+   56.0
+  ]
+ },
+ "bookmarks": [
+  {
+   "name": "Europe and Africa",
+   "extent": [
+    -22.0,
+    -36.0,
+    56.0,
+    56.0
+   ]
+  },
+  {
+   "name": "The Western Front",
+   "extent": [
+    0.5,
+    47.0,
+    8.5,
+    51.8
+   ]
+  },
+  {
+   "name": "Togoland and Kamerun",
+   "extent": [
+    -2.0,
+    1.0,
+    17.0,
+    13.0
+   ]
+  },
+  {
+   "name": "German South West Africa",
+   "extent": [
+    10.0,
+    -30.0,
+    22.0,
+    -16.0
+   ]
+  },
+  {
+   "name": "East and Central Africa",
+   "extent": [
+    26.0,
+    -20.0,
+    43.0,
+    1.0
+   ]
+  },
+  {
+   "name": "North and West Africa",
+   "extent": [
+    -12.0,
+    5.0,
+    36.0,
+    36.0
+   ]
+  }
+ ],
+ "time": {
+  "from": "1914-08-11",
+  "to": "1918-11-11",
+  "at": "1914-08-11",
+  "step": {
+   "interval": 1,
+   "units": "months"
+  },
+  "secondsPerStep": 1.5,
+  "loop": false
+ },
+ "layers": [
+  {
+   "title": "Western Front at the Armistice, 11 November 1918",
+   "source": {
+    "itemId": "5669cf738dd24d6d9f4184e84c3516ad",
+    "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/ww1_western_front_lines_v0_1_0/FeatureServer/0"
+   },
+   "visible": true,
+   "time": {
+    "start": "ShowFrom",
+    "end": "ShowTo"
+   },
+   "symbol": {
+    "type": "line",
+    "color": "#7F0000",
+    "width": 3.5,
+    "legendLabel": "Front line at 11 a.m., 11 November 1918",
+    "why": "Dark red and thick, so it reads on the antique basemap and against the coloured symbols."
+   },
+   "popup": {
+    "title": "{Name}",
+    "html": "<p>{Description}</p><p><i>{AccuracyNote}</i></p><p>Source: <a href=\"{SourceUrl}\" target=\"_blank\">{Source}</a></p>"
+   }
+  },
+  {
+   "title": "Fighting this month",
+   "source": {
+    "itemId": "PENDING-ww1-battles-0.2.0",
+    "url": "PENDING"
+   },
+   "visible": true,
+   "time": {
+    "start": "ShowFrom",
+    "end": "ShowTo"
+   },
+   "symbol": {
+    "type": "raw",
+    "renderer": {
+     "type": "uniqueValue",
+     "field1": "Kind",
+     "uniqueValueInfos": [
+      {
+       "value": "Battle, siege or raid",
+       "label": "Battle, siege or raid",
+       "symbol": {
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "color": [
+         178,
+         24,
+         43,
+         255
+        ],
+        "size": 12,
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSSolid",
+         "color": [
+          255,
+          255,
+          255,
+          255
+         ],
+         "width": 1.25
+        }
+       }
+      },
+      {
+       "value": "Capture or surrender",
+       "label": "Capture or surrender",
+       "symbol": {
+        "type": "esriSMS",
+        "style": "esriSMSSquare",
+        "color": [
+         33,
+         102,
+         172,
+         255
+        ],
+        "size": 11,
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSSolid",
+         "color": [
+          255,
+          255,
+          255,
+          255
+         ],
+         "width": 1.25
+        }
+       }
+      },
+      {
+       "value": "Rising against colonial rule",
+       "label": "Rising against colonial rule",
+       "symbol": {
+        "type": "esriSMS",
+        "style": "esriSMSDiamond",
+        "color": [
+         118,
+         42,
+         131,
+         255
+        ],
+        "size": 14,
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSSolid",
+         "color": [
+          255,
+          255,
+          255,
+          255
+         ],
+         "width": 1.25
+        }
+       }
+      }
+     ]
+    },
+    "why": "Shape as well as colour tells the three kinds apart (red-green safe colours), for students who can't rely on colour."
+   },
+   "popup": {
+    "title": "{Name}",
+    "html": "<p><b>{expression/when}</b></p><p>{Summary}</p><p>Fought between {SideA} and {SideB}.</p><p><i>{Theatre}. Shown at: {Place}.</i></p><p>Source: <a href=\"{Source1Url}\" target=\"_blank\">{Source1}</a>{expression/src2}</p><p><small>Lab note: {DateCheck}</small></p>",
+    "expressions": {
+     "when": {
+      "title": "When",
+      "arcade": "function fmt(d) {\n  if (IsEmpty(d)) { return ''; }\n  var t = TypeOf(d);\n  if (t == 'Date') { return Text(ToUTC(d), 'MMMM D, Y'); }\n  if (t == 'DateOnly') { return Text(d, 'MMMM D, Y'); }\n  var p = Split(d, '-');\n  var m = ['January','February','March','April','May','June','July','August','September','October','November','December'];\n  return m[Number(p[1]) - 1] + ' ' + Text(Number(p[2])) + ', ' + p[0];\n}\nfunction monthOf(d) {\n  var s = fmt(d); var parts = Split(s, ' ');\n  return parts[0] + ' ' + parts[2];\n}\nvar a = $feature.StartDate; var b = $feature.EndDate;\nif ($feature.DatePrecision == 'month') { var ma = monthOf(a); var mb = monthOf(b); return IIf(ma == mb, ma, ma + ' to ' + mb); }\nif ($feature.DatePrecision == 'approximate') { return 'About ' + fmt(a) + ' to ' + fmt(b); }\nvar fa = fmt(a); var fb = fmt(b);\nreturn IIf(fa == fb, fa, fa + ' to ' + fb);"
+     },
+     "src2": {
+      "title": "Second source",
+      "arcade": "return IIf(IsEmpty($feature.Source2), '', '; ' + $feature.Source2);"
+     }
+    }
+   }
+  },
+  {
+   "title": "Fighting in earlier months",
+   "source": {
+    "itemId": "PENDING-ww1-battles-0.2.0",
+    "url": "PENDING"
+   },
+   "visible": true,
+   "time": {
+    "start": "ShowFrom",
+    "end": "ShowToSoFar"
+   },
+   "symbol": {
+    "type": "marker",
+    "shape": "circle",
+    "color": "#5A5A5AB3",
+    "size": 6,
+    "outline": {
+     "color": "#FFFFFF",
+     "width": 0.75
+    },
+    "legendLabel": "Fighting in an earlier month",
+    "why": "Small and grey so the war's spread stays visible without competing with this month's fighting."
+   },
+   "popup": {
+    "title": "{Name}",
+    "html": "<p><b>{expression/when}</b></p><p>{Summary}</p><p>Fought between {SideA} and {SideB}.</p><p><i>{Theatre}. Shown at: {Place}.</i></p><p>Source: <a href=\"{Source1Url}\" target=\"_blank\">{Source1}</a>{expression/src2}</p><p><small>Lab note: {DateCheck}</small></p>",
+    "expressions": {
+     "when": {
+      "title": "When",
+      "arcade": "function fmt(d) {\n  if (IsEmpty(d)) { return ''; }\n  var t = TypeOf(d);\n  if (t == 'Date') { return Text(ToUTC(d), 'MMMM D, Y'); }\n  if (t == 'DateOnly') { return Text(d, 'MMMM D, Y'); }\n  var p = Split(d, '-');\n  var m = ['January','February','March','April','May','June','July','August','September','October','November','December'];\n  return m[Number(p[1]) - 1] + ' ' + Text(Number(p[2])) + ', ' + p[0];\n}\nfunction monthOf(d) {\n  var s = fmt(d); var parts = Split(s, ' ');\n  return parts[0] + ' ' + parts[2];\n}\nvar a = $feature.StartDate; var b = $feature.EndDate;\nif ($feature.DatePrecision == 'month') { var ma = monthOf(a); var mb = monthOf(b); return IIf(ma == mb, ma, ma + ' to ' + mb); }\nif ($feature.DatePrecision == 'approximate') { return 'About ' + fmt(a) + ' to ' + fmt(b); }\nvar fa = fmt(a); var fb = fmt(b);\nreturn IIf(fa == fb, fa, fa + ' to ' + fb);"
+     },
+     "src2": {
+      "title": "Second source",
+      "arcade": "return IIf(IsEmpty($feature.Source2), '', '; ' + $feature.Source2);"
+     }
+    }
+   }
+  }
+ ],
+ "checks": [
+  {
+   "name": "aug-1914",
+   "question": "August 1914: the war begins in Belgium and in Togoland and Kamerun",
+   "do": {
+    "bookmark": "Europe and Africa",
+    "time": "1914-08-11"
+   },
+   "expect": {
+    "namesHave": {
+     "Fighting this month": [
+      "Siege of Liège",
+      "Battle of Mons",
+      "Action at Chra (Khra)",
+      "First attack on Garua"
+     ]
+    },
+    "count": {
+     "Fighting this month": 5,
+     "Fighting in earlier months": 5
+    },
+    "namesLack": {
+     "Western Front at the Armistice, 11 November 1918": [
+      "Western Front at the Armistice"
+     ]
+    }
+   }
+  },
+  {
+   "name": "nov-1914",
+   "question": "November 1914: Ypres in Europe, Tanga and Longido in East Africa",
+   "do": {
+    "time": "1914-11-11"
+   },
+   "expect": {
+    "namesHave": {
+     "Fighting this month": [
+      "First Battle of Ypres",
+      "Battle of Tanga",
+      "Battle of Longido"
+     ]
+    },
+    "count": {
+     "Fighting this month": 4,
+     "Fighting in earlier months": 16
+    }
+   }
+  },
+  {
+   "name": "jan-1915",
+   "question": "January 1915: the Chilembwe rising in Nyasaland",
+   "do": {
+    "time": "1915-01-11"
+   },
+   "expect": {
+    "namesHave": {
+     "Fighting this month": [
+      "Chilembwe Rising",
+      "Battle of Jassin",
+      "Ottoman attack on the Suez Canal"
+     ]
+    },
+    "count": {
+     "Fighting this month": 3
+    }
+   }
+  },
+  {
+   "name": "jul-1916",
+   "question": "July 1916: the Somme and Verdun, and the Volta-Bani War in West Africa",
+   "do": {
+    "time": "1916-07-11"
+   },
+   "expect": {
+    "namesHave": {
+     "Fighting this month": [
+      "Battle of the Somme",
+      "Battle of Verdun",
+      "Volta-Bani War"
+     ]
+    },
+    "count": {
+     "Fighting this month": 3,
+     "Fighting in earlier months": 40
+    }
+   }
+  },
+  {
+   "name": "armistice",
+   "question": "11 November 1918: the Armistice, while fighting goes on in Africa",
+   "do": {
+    "bookmark": "Europe and Africa",
+    "time": "1918-11-11",
+    "legend": true
+   },
+   "expect": {
+    "namesHave": {
+     "Western Front at the Armistice, 11 November 1918": [
+      "Western Front at the Armistice"
+     ],
+     "Fighting this month": [
+      "Meuse-Argonne Offensive",
+      "German occupation of Kasama",
+      "German surrender at Abercorn"
+     ]
+    },
+    "count": {
+     "Fighting in earlier months": 62
+    },
+    "legendHas": [
+     "Front line at 11 a.m., 11 November 1918",
+     "Battle, siege or raid",
+     "Capture or surrender",
+     "Rising against colonial rule",
+     "Fighting in an earlier month"
+    ]
+   }
+  },
+  {
+   "name": "tanga-popup",
+   "question": "Open the Battle of Tanga",
+   "do": {
+    "bookmark": "East and Central Africa",
+    "time": "1914-11-11",
+    "open": {
+     "layer": "Fighting this month",
+     "where": "BattleId='AF18'"
+    }
+   },
+   "expect": {
+    "popupHas": [
+     "Battle of Tanga",
+     "November 3, 1914 to November 5, 1914",
+     "Source: National Army Museum"
+    ]
+   }
+  }
+ ],
+ "publish": {
+  "org": "HNLEA4GfnbCFQZGa",
+  "orgLabel": "GIS for Schools",
+  "folder": "Map builds"
+ },
+ "test": {
+  "sdk": "5.2",
+  "why": "Time fields set in the map are read by SDK 5.2, which the Atlas app uses; 4.34 ignores them."
+ }
+}
