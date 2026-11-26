@@ -1,11 +1,11 @@
 {
- "tool": "Map builder 1.6",
+ "tool": "Map builder 1.7",
  "spec": "maps/specs/ww1-battles-fronts-lab.json",
  "specId": "ww1-battles-fronts-lab",
- "specVersion": "0.1.1",
- "built": "2026-11-26T15:01:25Z",
- "webmapFingerprint": "a10a98e21f5d8e2c0eef970ef4d1c21787417a17",
- "itemFingerprint": "f6375a89d48b5b93bf9f2cf6f3adf9386c8ccf16",
+ "specVersion": "0.1.2",
+ "built": "2026-11-26T15:08:51Z",
+ "webmapFingerprint": "1ec6c633fdfddc634442bda6523591ef214556a6",
+ "itemFingerprint": "30dc4aeb83cb4ff15879ef04b69e137550f95944",
  "checked": [
   "basemap is public and not CARTO",
   "every source layer is readable and every field the spec uses exists",
@@ -15,9 +15,9 @@
  "tested": {
   "tool": "Map test 1.1",
   "sdk": "5.2",
-  "when": "2026-11-26T15:03:04Z",
+  "when": "2026-11-26T15:10:27Z",
   "timeZone": "America/Chicago",
-  "webmapFingerprint": "a10a98e21f5d8e2c0eef970ef4d1c21787417a17",
+  "webmapFingerprint": "1ec6c633fdfddc634442bda6523591ef214556a6",
   "pass": true,
   "checks": [
    {
