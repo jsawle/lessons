@@ -55,7 +55,7 @@
     "popupElements": [
      {
       "type": "text",
-      "text": "<p><b>{expression/when}</b></p><p>{Summary}</p><p>Fought between {SideA} and {SideB}.</p><p><i>{Theatre}. Shown at: {Place}.</i></p><p>Source: <a href=\"{Source1Url}\" target=\"_blank\">{Source1}</a>{expression/src2}</p><p><small>Lab note: {DateCheck}</small></p>"
+      "text": "<p><b>{expression/when}</b></p><p>{Summary}</p><p>Fought between {SideA} and {SideB}.</p><p><i>{Theatre}. Shown at: {Place}.</i></p><p>Source: <a href='{Source1Url}' target='_blank' rel='nofollow ugc noopener noreferrer'>{Source1}</a>{expression/src2}</p><p><small>Lab note: {DateCheck}</small></p>"
      }
     ],
     "showAttachments": false,
@@ -186,7 +186,7 @@
     "popupElements": [
      {
       "type": "text",
-      "text": "<p><b>{expression/when}</b></p><p>{Summary}</p><p>Fought between {SideA} and {SideB}.</p><p><i>{Theatre}. Shown at: {Place}.</i></p><p>Source: <a href=\"{Source1Url}\" target=\"_blank\">{Source1}</a>{expression/src2}</p><p><small>Lab note: {DateCheck}</small></p>"
+      "text": "<p><b>{expression/when}</b></p><p>{Summary}</p><p>Fought between {SideA} and {SideB}.</p><p><i>{Theatre}. Shown at: {Place}.</i></p><p>Source: <a href='{Source1Url}' target='_blank' rel='nofollow ugc noopener noreferrer'>{Source1}</a>{expression/src2}</p><p><small>Lab note: {DateCheck}</small></p>"
      }
     ],
     "showAttachments": false,
@@ -248,7 +248,7 @@
     "popupElements": [
      {
       "type": "text",
-      "text": "<p>{Description}</p><p><i>{AccuracyNote}</i></p><p>Source: <a href=\"{SourceUrl}\" target=\"_blank\">{Source}</a></p>"
+      "text": "<p>{Description}</p><p><i>{AccuracyNote}</i></p><p>Source: <a href='{SourceUrl}' target='_blank' rel='nofollow ugc noopener noreferrer'>{Source}</a></p>"
      }
     ],
     "showAttachments": false,
@@ -285,7 +285,7 @@
   "latestWkid": 3857
  },
  "authoringApp": "Map builder",
- "authoringAppVersion": "1.5",
+ "authoringAppVersion": "1.6",
  "version": "2.38",
  "initialState": {
   "viewpoint": {
