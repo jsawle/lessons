@@ -21,6 +21,9 @@ border change, to flash on the map for a year after the change.
 1.3 thins the outlines of the timeline and changes files (snapshots.json "timeline" "simplifyDegrees") so they draw
 faster. Each shared border is one line in the source and is thinned once, so neighbours still meet. Islands too small
 to keep a shape at that tolerance are dropped. The four snapshot files are not thinned and do not change.
+1.4 keeps the countries in snapshots.json "keepWhole" whole in the timeline and changes files instead of clipping them to
+Europe, so the Russian Empire and the Soviet Union show to the Pacific. The snapshot files are still clipped. Stretches of
+line outside the Europe extent are thinned more ("simplifyOutsideDegrees"), so whole Russia doesn't make the layers slow to load.
 """
 import datetime, hashlib, json, lzma, sys, urllib.request
 import pyproj, shapely
@@ -28,7 +31,7 @@ from pathlib import Path
 from shapely.geometry import LineString, Polygon, MultiPolygon, box, mapping
 from shapely.validation import make_valid
 
-VERSION = "1.3"
+VERSION = "1.4"
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 CFG = json.loads((HERE / "snapshots.json").read_text(encoding="utf-8"))
@@ -48,7 +51,24 @@ def polygons(g):
     return MultiPolygon(flat) if flat else None
 
 
-def read_source(raw, tol=None):
+def thin_line(pts, tol, tol_out=None, extent=None):
+    """Simplify one line; the stretches wholly outside the extent get the coarser tolerance. Each stretch keeps its end
+    points, so the line still starts and ends where it did and neighbours sharing it still meet."""
+    if not (tol_out and extent): return list(LineString(pts).simplify(tol, preserve_topology=False).coords)
+    inside = [extent[0] <= x <= extent[2] and extent[1] <= y <= extent[3] for x, y in pts]
+    runs, start = [], 0
+    for i in range(1, len(pts)):
+        if inside[i] != inside[i - 1]: runs.append((start, i, inside[i - 1])); start = i
+    runs.append((start, len(pts), inside[-1]))
+    out = []
+    for a, b, ins in runs:
+        seg = pts[max(a - 1, 0):b]  # overlap one point so stretches join
+        seg = list(LineString(seg).simplify(tol if ins else tol_out, preserve_topology=False).coords) if len(seg) > 2 else seg
+        out.extend(seg if not out else seg[1:])
+    return out
+
+
+def read_source(raw, tol=None, tol_out=None, extent=None):
     t = json.loads(lzma.decompress(raw).decode("utf-8")); tr = t.get("transform"); arcs = []
     for a in t["arcs"]:
         pts, x, y = [], 0, 0
@@ -56,7 +76,7 @@ def read_source(raw, tol=None):
             if tr: x += dx; y += dy; pts.append((x * tr["scale"][0] + tr["translate"][0], y * tr["scale"][1] + tr["translate"][1]))
             else: pts.append((dx, dy))
         if tol and len(pts) > 2:
-            closed = pts[0] == pts[-1]; pts = list(LineString(pts).simplify(tol, preserve_topology=False).coords)
+            closed = pts[0] == pts[-1]; pts = thin_line(pts, tol, tol_out, extent)
             if closed and len(pts) < 4: pts = None  # an island too small to keep a shape
         arcs.append(pts)
 
@@ -81,6 +101,11 @@ def read_source(raw, tol=None):
         ps = [q for q in ps if q is not None]
         if ps: feats.append((o["properties"], make_valid(ps[0] if o["type"] == "Polygon" else MultiPolygon(ps))))
     return feats
+
+
+def cut(p, g, bb):
+    """Clip to Europe, except a country listed in keepWhole (timeline and changes only)."""
+    return g if p["country_name"] in CFG.get("keepWhole", []) else g.intersection(bb)
 
 
 def display_name(n, year, status):
@@ -127,7 +152,7 @@ def main():
                "cshapes": {"url": SRC_URL, "sha1": sha, "licence": "CC BY-NC-SA 4.0"}}
         out.with_suffix(".built.json").write_text(json.dumps(rec, indent=1) + "\n", encoding="utf-8")
         print(f"Built {out.name}: {len(feats)} features, {len(body)/1e3:.0f} kB")
-    thin = read_source(raw, CFG["timeline"].get("simplifyDegrees"))
+    thin = read_source(raw, CFG["timeline"].get("simplifyDegrees"), CFG["timeline"].get("simplifyOutsideDegrees"), CFG["extent"])
     timeline(thin, owners, bb, drop, outdir, sha)
     changes(thin, bb, drop, outdir, sha)
 
@@ -141,7 +166,7 @@ def timeline(src, owners, bb, drop, outdir, sha):
     T = CFG["timeline"]; lo, hi, feats = T["from"], T["to"], []
     for p, g in src:
         if p["end"] < lo or p["start"] > hi or p["country_name"] in drop or not g.intersects(bb): continue
-        g = polygons(g.intersection(bb).buffer(0))
+        g = polygons(cut(p, g, bb).buffer(0))
         if g is None: continue
         m = mapping(g); geom = {"type": m["type"], "coordinates": rnd(m["coordinates"])}
         own, code = int(p["owner"]), int(p["gwcode"])
@@ -182,7 +207,7 @@ def changes(src, bb, drop, outdir, sha):
     T, C = CFG["timeline"], CFG["changes"]; lo, hi = T["from"], T["to"]
     ea = pyproj.Transformer.from_crs(4326, 3035, always_xy=True)  # equal-area, for square kilometres
     km2 = lambda g: shapely.transform(g, lambda xy: __import__("numpy").column_stack(ea.transform(xy[:, 0], xy[:, 1]))).area / 1e6
-    S = [(p, g.intersection(bb).buffer(0)) for p, g in src if g.intersects(bb)]
+    S = [(p, cut(p, g, bb).buffer(0)) for p, g in src if g.intersects(bb)]
     add = lambda d, n: (datetime.date.fromisoformat(d) + datetime.timedelta(days=n)).isoformat()
     feats = []
     for pn, gn in S:
