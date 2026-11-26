@@ -24,6 +24,10 @@
     "sameAsSnapshots": true},
   "changes": {"id": "europe-borders-changes", "version": "0.3.0", "expectFeatures": 47, "minKm2": 200, "lookBackDays": 60, "showDays": 365,
     "note": "Land that went from one country to another, cut from the timeline: for each new border, the part another country held the day before (or, where the source leaves a gap of days between holders, the last holder within lookBackDays). Shown for showDays after the change. Changes of name or status inside one country are not changes of hands."},
+  "annexed": {"id": "europe-borders-soviet-annexed", "version": "0.1.0", "from": "1938-01-01", "to": "1947-12-31", "expectFeatures": 8,
+    "sourceName": "Russia (Soviet Union)", "toName": "Soviet Union",
+    "note": "Land the Soviet Union took from its neighbours, 1938 to 1947: the changes layer's pieces that went to the Soviet Union, each shown from the date of the change to the end of 1947.",
+    "notes": {"Poland": "The Soviet Union occupied this land in 1939. The source dates the change to 8 May 1945.", "Estonia": "The Soviet Union occupied the Baltic states in 1940 and annexed them; the United States never recognised the annexation. The source dates the change to 2 June 1940.", "Latvia": "The Soviet Union occupied the Baltic states in 1940 and annexed them; the United States never recognised the annexation. The source dates the change to 2 June 1940.", "Lithuania": "The Soviet Union occupied the Baltic states in 1940 and annexed them; the United States never recognised the annexation. The source dates the change to 2 June 1940."}},
   "snapshots": [
     {"date": "1914-07-01", "label": "July 1914, before the First World War", "expectFeatures": 24,
      "mustHave": ["Austria-Hungary", "Germany", "Russian Empire", "Ottoman Empire", "Serbia", "Montenegro"], "mustNotHave": ["Poland", "Czechoslovakia"]},
