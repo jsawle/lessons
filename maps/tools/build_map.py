@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Map builder 1.6: turns a map spec (maps/specs/<id>.json, Map spec 1.0) into the web map ArcGIS Online stores.
+"""Map builder 1.7: turns a map spec (maps/specs/<id>.json, Map spec 1.0) into the web map ArcGIS Online stores.
 
 Reads only public ArcGIS Online content; signs in to nothing. For each spec it:
   - checks the spec against its lesson (layer names, which layers start off, bookmarks),
@@ -15,6 +15,7 @@ handle: the map shows one date). Dates are YYYY-MM-DD. Stored the way Map Viewer
 Links (1.6): ArcGIS Online's HTML sanitizer rewrites pop-up links when it saves a map (single quotes, plus
 rel='nofollow ugc noopener noreferrer'), so Map publish's read-back would differ. The builder warns about any <a> tag
 not written that way: <a href='{Url}' target='_blank' rel='nofollow ugc noopener noreferrer'>.
+Stripped tags (1.7): the sanitizer also removes some tags (seen so far: <small>); the builder warns about them.
 
 Usage, from the repo root:  python3 maps/tools/build_map.py maps/specs/<id>.json [more specs...]
 Exit code 1 if any spec has errors (nothing is written for that spec).
@@ -22,7 +23,7 @@ Exit code 1 if any spec has errors (nothing is written for that spec).
 import copy, datetime, hashlib, json, math, re, sys, urllib.parse, urllib.request
 from pathlib import Path
 
-VERSION = "1.6"
+VERSION = "1.7"
 SPEC_FORMAT = "Map spec 1.0"
 PORTAL = "https://www.arcgis.com/sharing/rest"
 ROOT = Path(__file__).resolve().parents[2]
@@ -32,6 +33,7 @@ SHAPES = {"circle": "esriSMSCircle", "square": "esriSMSSquare", "diamond": "esri
 PLACEMENT = {"above": "esriServerPointLabelPlacementAboveCenter", "below": "esriServerPointLabelPlacementBelowCenter",
              "center": "esriServerPointLabelPlacementCenterCenter", "right": "esriServerPointLabelPlacementCenterRight",
              "polygon": "esriServerPolygonPlacementAlwaysHorizontal", "line": "esriServerLinePlacementAboveAlong"}
+STRIPPED_TAGS = ["small"]  # removed by ArcGIS Online's HTML sanitizer (seen 26 Nov 2026)
 SQL_WORDS = {"AND", "OR", "NOT", "IN", "IS", "NULL", "LIKE", "BETWEEN", "TRUE", "FALSE", "DATE", "TIMESTAMP", "UPPER", "LOWER", "CAST", "AS", "INT", "FLOAT", "CHAR", "VARCHAR"}
 
 
@@ -220,6 +222,9 @@ def build(spec_path):
         for a in re.findall(r"<a\b[^>]*>", (lyr.get("popup") or {}).get("html", "")):
             if '"' in a or "rel='nofollow ugc noopener noreferrer'" not in a:
                 warnings.append(f"{lyr['title']!r}: pop-up link {a} isn't written the way ArcGIS Online stores it, so the published read-back will differ; use <a href='...' target='_blank' rel='nofollow ugc noopener noreferrer'>")
+        for tag in STRIPPED_TAGS:
+            if re.search(rf"<{tag}\b", (lyr.get("popup") or {}).get("html", ""), re.I):
+                warnings.append(f"{lyr['title']!r}: the pop-up uses <{tag}>, which ArcGIS Online removes when it saves the map, so the published read-back will differ")
         if not (lyr.get("popup") or {}).get("title") and not lyr.get("popupOff"):
             warnings.append(f"{lyr['title']!r}: the pop-up has no title")
         layer = {"id": "lyr" + hashlib.sha1((spec["id"] + lyr["title"]).encode()).hexdigest()[:11], "title": lyr["title"], "url": src["url"],
