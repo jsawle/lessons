@@ -1,5 +1,5 @@
 # =====================================================================
-# PUBLISH MAPMAKER LESSONS TO THE HUB (demo)          publisher v1.3
+# PUBLISH MAPMAKER LESSONS TO THE HUB (demo)          publisher v1.6
 # Reads whatever bundle GitHub serves (any resource pages version).
 #
 # Run in an ArcGIS Notebook, signed in as the account that owns the
@@ -176,7 +176,7 @@ if COURSES:
     if not bundle["pages"]:
         raise SystemExit(f"No page in the bundle belongs to {COURSES}. Check the spelling against the course names in the lessons.")
 assert bundle.get("format") == "mml-hub-bundle/1", f"[ERR] Unexpected bundle format: {bundle.get('format')}"
-print(f"[ok] Bundle built {bundle['builtOn']}, {bundle['app']['name']} {bundle['app']['version']}")
+print(f"[ok] Bundle: {bundle['app']['name']} {bundle['app']['version']}, lessons last updated {bundle['builtOn']}")
 for name, ver in bundle["app"]["parts"].items():
     print(f"       {name}: {ver}")
 print(f"[ok] {len(bundle['pages'])} pages, {len(bundle['sheets'])} Word sheets")
@@ -328,12 +328,12 @@ def share(item):
 
 
 def add_file_item(props, path):
-    """Add an item with a file. Uses the older call first, then the newer folder call."""
+    """Add an item with a file. Uses the folder call first (ArcGIS API 2.3 and later), then the older call."""
     try:
-        return gis.content.add(item_properties=props, data=path)
+        return gis.content.folders.get().add(item_properties=props, file=path).result()
     except Exception as first:
         try:
-            return gis.content.folders.get().add(item_properties=props, file=path).result()
+            return gis.content.add(item_properties=props, data=path)
         except Exception as second:
             raise RuntimeError(f"Couldn't add {props.get('title')}: {first} / {second}")
 
@@ -495,7 +495,13 @@ if not DRY_RUN:
     print("  1. Republish the site: open it in your Hub workspace, choose Edit layout, then Save/Publish.")
     print("     Republishing is what made /pages/ addresses work on the Support Hub in July. The header")
     print("     should already be blue in the editor; if it isn't, don't publish, and send the output above.")
-    print("  2. Add a 'Lessons' link to the site's header menu, pointing to /pages/lessons.")
+    _menu = [p for p in bundle["pages"] if p.get("kind") == "catalogue"]
+    if _menu:
+        print("  2. Check the site's header menu has a link to each Lessons page in this run:")
+        for p in _menu:
+            print(f"       '{p['title']}' -> /pages/{p['slug']}")
+    else:
+        print("  2. No Lessons page in this run, so the header menu needs no change.")
     print("  3. In a private browser window, open:")
     for p in bundle["pages"]:
         print(f"       {SITE_URL}/pages/{p['slug']}")

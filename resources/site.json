@@ -1,7 +1,7 @@
 {
  "app": {
   "name": "{pages} (lab)",
-  "version": "0.25.0",
+  "version": "0.25.1",
   "parts": {
    "Page renderer": "3.8",
    "Word sheet builder": "1.10",
@@ -9,7 +9,7 @@
    "Checker": "1.10",
    "Assistant knowledge builder": "1.6",
    "AI prompt builder": "1.2",
-   "Hub page builder": "3.10",
+   "Hub page builder": "3.11",
    "Map pictures": "1.0"
   }
  },
@@ -245,7 +245,8 @@
    "press": "#0E3D34",
    "tint": "#E6F2EF",
    "tintBorder": "#9CCFC4",
-   "footRule": "#4E8A7E"
+   "footRule": "#4E8A7E",
+   "footHead": "#082A23"
   }
  }
 }
