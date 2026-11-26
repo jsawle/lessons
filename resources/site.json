@@ -1,7 +1,7 @@
 {
  "app": {
   "name": "{pages} (lab)",
-  "version": "0.25.1",
+  "version": "0.25.2",
   "parts": {
    "Page renderer": "3.8",
    "Word sheet builder": "1.10",
@@ -240,13 +240,13 @@
  "courseColours": {
   "about": "A course can have its own accent colour on its lesson pages, its answer pages and its part of the Lessons page. A course not listed here uses the site's blue. Each colour is checked for contrast by the checker: brand, hover and press against white (4.5:1), and press against the tint.",
   "World History": {
-   "brand": "#1A6B5C",
-   "hover": "#145447",
-   "press": "#0E3D34",
-   "tint": "#E6F2EF",
-   "tintBorder": "#9CCFC4",
-   "footRule": "#4E8A7E",
-   "footHead": "#082A23"
+   "brand": "#B5501F",
+   "hover": "#96411A",
+   "press": "#733214",
+   "tint": "#FBEDE6",
+   "tintBorder": "#EDB79C",
+   "footRule": "#A86A4C",
+   "footHead": "#55250F"
   }
  }
 }
