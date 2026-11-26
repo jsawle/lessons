@@ -1,12 +1,12 @@
 {
  "format": "Map spec 1.0",
  "id": "europe-borders-ww2-era-lab",
- "version": "0.2.0",
+ "version": "0.3.0",
  "why": "LAB map. The time slider on the borders of one era, 1938 to 1947, so students stay on the era they are studying; split from europe-borders-through-time-lab 0.2.0, whose 1925 to 1937 stretch has almost no changes. Same data layers, filtered to the era. Not a lesson map and not for MapMaker until ETH Zurich confirms permission.",
  "item": {
-  "title": "LAB: Europe's borders in the Second World War era, 1938 to 1947 v0.2",
+  "title": "LAB: Europe's borders in the Second World War era, 1938 to 1947 v0.3",
   "snippet": "Test map: move the time slider to see Europe's country borders from 1938 to 1947, from Munich to the peace treaties of 1947. Draft.",
-  "description": "<p><b>Test map.</b> Europe's country borders from 1 January 1938 to the end of 1947: the Munich Agreement, the Soviet annexations of 1939 to 1940, the borders of 1945 and the Paris peace treaties of February 1947. The time slider shows the borders on one date and steps three months at a time. Every border period in the source shows at some step except one that lasted 26 days (a Soviet border in June 1940).</p><p><b>Colour:</b> each country keeps one colour for the whole period, so a change of shape or a new country stands out. The colours only tell neighbours apart; they have no other meaning. Every country is also named on the map.</p><p><b>Changes:</b> land that went from one country to another is hatched with a heavy outline for one year after the change. Click it to see who held it before, who holds it now, the date and its rough size.</p><p><b>Notes:</b> dates are the source's: eastern Poland's move to the Soviet Union is dated 8 May 1945, and Danzig is shown inside Germany from 30 September 1938 (it was annexed on 1 September 1939). The source records recognised borders, not wartime occupation, so Poland, Czechoslovakia and Austria stay on the map from 1939 to 1945: use it alongside a map of who controlled what. The smallest states are left out, the Soviet Union is one area, coastlines are simplified and the layer stops at 60 degrees east.</p><p><b>Source:</b> CShapes 2.0, ETH Zurich: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), Mapping the International System, 1886-2019, Journal of Conflict Resolution 66(1).</p><p><i>Map version 0.2 (19 November 2026), lab draft.</i></p>",
+  "description": "<p><b>Test map.</b> Europe's country borders from 1 January 1938 to the end of 1947: the Munich Agreement, the Soviet annexations of 1939 to 1940, the borders of 1945 and the Paris peace treaties of February 1947. The time slider shows the borders on one date and steps three months at a time. Every border period in the source shows at some step except one that lasted 26 days (a Soviet border in June 1940).</p><p><b>Colour:</b> each country keeps one colour for the whole period, so a change of shape or a new country stands out. The colours only tell neighbours apart; they have no other meaning. Every country is also named on the map.</p><p><b>Changes:</b> land that went from one country to another is hatched with a heavy outline for one year after the change. Click it to see who held it before, who holds it now, the date and its rough size.</p><p><b>Notes:</b> dates are the source's: eastern Poland's move to the Soviet Union is dated 8 May 1945, and Danzig is shown inside Germany from 30 September 1938 (it was annexed on 1 September 1939). The source records recognised borders, not wartime occupation, so Poland, Czechoslovakia and Austria stay on the map from 1939 to 1945: use it alongside a map of who controlled what. The smallest states are left out, the Soviet Union is one area, coastlines are simplified and the layer stops at 60 degrees east except for Russia, shown whole.</p><p><b>Source:</b> CShapes 2.0, ETH Zurich: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), Mapping the International System, 1886-2019, Journal of Conflict Resolution 66(1).</p><p><i>Map version 0.3 (26 November 2026): data 0.3, Russia shown whole, lab draft.</i></p>",
   "tags": [
    "World History",
    "Europe",
@@ -93,7 +93,7 @@
   {
    "title": "Land that changed hands in the last year",
    "source": {
-    "itemId": "dbeffe7848234bbc908e4cdab514f323",
+    "itemId": "5d02da08f2334971b215e54c06db9e9a",
     "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/europe_borders_changes_v0_2_0/FeatureServer/0"
    },
    "visible": true,
@@ -171,7 +171,7 @@
   {
    "title": "Countries and territories, 1938 to 1947",
    "source": {
-    "itemId": "f4f81ee402b842c793eba54768f6106f",
+    "itemId": "26232160a4f54a6497314a8c31e06717",
     "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/europe_borders_timeline_v0_2_0/FeatureServer/0"
    },
    "visible": true,
