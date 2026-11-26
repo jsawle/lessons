@@ -1,0 +1,404 @@
+{
+ "operationalLayers": [
+  {
+   "id": "lyr19630839f8b",
+   "title": "Fighting in earlier months",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/ww1_battles_v0_2_0/FeatureServer/0",
+   "itemId": "e8555557277a43d7aacb09f0dfcfe668",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": true,
+   "opacity": 1,
+   "timeAnimation": true,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "symbol": {
+       "type": "esriSMS",
+       "style": "esriSMSCircle",
+       "color": [
+        90,
+        90,
+        90,
+        179
+       ],
+       "size": 6,
+       "angle": 0,
+       "xoffset": 0,
+       "yoffset": 0,
+       "outline": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         255,
+         255,
+         255,
+         255
+        ],
+        "width": 0.75
+       }
+      },
+      "label": "Fighting in an earlier month"
+     }
+    },
+    "timeInfo": {
+     "startTimeField": "ShowFrom",
+     "timeExtent": [
+      -1748044800000,
+      -1613865600000
+     ],
+     "endTimeField": "ShowToSoFar"
+    }
+   },
+   "popupInfo": {
+    "title": "{Name}",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p><b>{expression/when}</b></p><p>{Summary}</p><p>Fought between {SideA} and {SideB}.</p><p><i>{Theatre}. Shown at: {Place}.</i></p><p>Source: <a href=\"{Source1Url}\" target=\"_blank\">{Source1}</a>{expression/src2}</p><p><small>Lab note: {DateCheck}</small></p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": [],
+    "expressionInfos": [
+     {
+      "name": "when",
+      "title": "When",
+      "returnType": "string",
+      "expression": "function fmt(d) {\n  if (IsEmpty(d)) { return ''; }\n  var t = TypeOf(d);\n  if (t == 'Date') { return Text(ToUTC(d), 'MMMM D, Y'); }\n  if (t == 'DateOnly') { return Text(d, 'MMMM D, Y'); }\n  var p = Split(d, '-');\n  var m = ['January','February','March','April','May','June','July','August','September','October','November','December'];\n  return m[Number(p[1]) - 1] + ' ' + Text(Number(p[2])) + ', ' + p[0];\n}\nfunction monthOf(d) {\n  var s = fmt(d); var parts = Split(s, ' ');\n  return parts[0] + ' ' + parts[2];\n}\nvar a = $feature.StartDate; var b = $feature.EndDate;\nif ($feature.DatePrecision == 'month') { var ma = monthOf(a); var mb = monthOf(b); return IIf(ma == mb, ma, ma + ' to ' + mb); }\nif ($feature.DatePrecision == 'approximate') { return 'About ' + fmt(a) + ' to ' + fmt(b); }\nvar fa = fmt(a); var fb = fmt(b);\nreturn IIf(fa == fb, fa, fa + ' to ' + fb);"
+     },
+     {
+      "name": "src2",
+      "title": "Second source",
+      "returnType": "string",
+      "expression": "return IIf(IsEmpty($feature.Source2), '', '; ' + $feature.Source2);"
+     }
+    ]
+   }
+  },
+  {
+   "id": "lyr58ad8cfc663",
+   "title": "Fighting this month",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/ww1_battles_v0_2_0/FeatureServer/0",
+   "itemId": "e8555557277a43d7aacb09f0dfcfe668",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": true,
+   "opacity": 1,
+   "timeAnimation": true,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "uniqueValue",
+      "field1": "Kind",
+      "uniqueValueInfos": [
+       {
+        "value": "Battle, siege or raid",
+        "label": "Battle, siege or raid",
+        "symbol": {
+         "type": "esriSMS",
+         "style": "esriSMSCircle",
+         "color": [
+          178,
+          24,
+          43,
+          255
+         ],
+         "size": 12,
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           255,
+           255,
+           255,
+           255
+          ],
+          "width": 1.25
+         }
+        }
+       },
+       {
+        "value": "Capture or surrender",
+        "label": "Capture or surrender",
+        "symbol": {
+         "type": "esriSMS",
+         "style": "esriSMSSquare",
+         "color": [
+          33,
+          102,
+          172,
+          255
+         ],
+         "size": 11,
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           255,
+           255,
+           255,
+           255
+          ],
+          "width": 1.25
+         }
+        }
+       },
+       {
+        "value": "Rising against colonial rule",
+        "label": "Rising against colonial rule",
+        "symbol": {
+         "type": "esriSMS",
+         "style": "esriSMSDiamond",
+         "color": [
+          118,
+          42,
+          131,
+          255
+         ],
+         "size": 14,
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           255,
+           255,
+           255,
+           255
+          ],
+          "width": 1.25
+         }
+        }
+       }
+      ]
+     }
+    },
+    "timeInfo": {
+     "startTimeField": "ShowFrom",
+     "timeExtent": [
+      -1748044800000,
+      -1613865600000
+     ],
+     "endTimeField": "ShowTo"
+    }
+   },
+   "popupInfo": {
+    "title": "{Name}",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p><b>{expression/when}</b></p><p>{Summary}</p><p>Fought between {SideA} and {SideB}.</p><p><i>{Theatre}. Shown at: {Place}.</i></p><p>Source: <a href=\"{Source1Url}\" target=\"_blank\">{Source1}</a>{expression/src2}</p><p><small>Lab note: {DateCheck}</small></p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": [],
+    "expressionInfos": [
+     {
+      "name": "when",
+      "title": "When",
+      "returnType": "string",
+      "expression": "function fmt(d) {\n  if (IsEmpty(d)) { return ''; }\n  var t = TypeOf(d);\n  if (t == 'Date') { return Text(ToUTC(d), 'MMMM D, Y'); }\n  if (t == 'DateOnly') { return Text(d, 'MMMM D, Y'); }\n  var p = Split(d, '-');\n  var m = ['January','February','March','April','May','June','July','August','September','October','November','December'];\n  return m[Number(p[1]) - 1] + ' ' + Text(Number(p[2])) + ', ' + p[0];\n}\nfunction monthOf(d) {\n  var s = fmt(d); var parts = Split(s, ' ');\n  return parts[0] + ' ' + parts[2];\n}\nvar a = $feature.StartDate; var b = $feature.EndDate;\nif ($feature.DatePrecision == 'month') { var ma = monthOf(a); var mb = monthOf(b); return IIf(ma == mb, ma, ma + ' to ' + mb); }\nif ($feature.DatePrecision == 'approximate') { return 'About ' + fmt(a) + ' to ' + fmt(b); }\nvar fa = fmt(a); var fb = fmt(b);\nreturn IIf(fa == fb, fa, fa + ' to ' + fb);"
+     },
+     {
+      "name": "src2",
+      "title": "Second source",
+      "returnType": "string",
+      "expression": "return IIf(IsEmpty($feature.Source2), '', '; ' + $feature.Source2);"
+     }
+    ]
+   }
+  },
+  {
+   "id": "lyr76c1518e4fd",
+   "title": "Western Front at the Armistice, 11 November 1918",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/ww1_western_front_lines_v0_1_0/FeatureServer/0",
+   "itemId": "5669cf738dd24d6d9f4184e84c3516ad",
+   "layerType": "ArcGISFeatureLayer",
+   "visibility": true,
+   "opacity": 1,
+   "timeAnimation": true,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "symbol": {
+       "type": "esriSLS",
+       "style": "esriSLSSolid",
+       "color": [
+        127,
+        0,
+        0,
+        255
+       ],
+       "width": 3.5
+      },
+      "label": "Front line at 11 a.m., 11 November 1918"
+     }
+    },
+    "timeInfo": {
+     "startTimeField": "ShowFrom",
+     "timeExtent": [
+      -1748044800000,
+      -1613865600000
+     ],
+     "endTimeField": "ShowTo"
+    }
+   },
+   "popupInfo": {
+    "title": "{Name}",
+    "popupElements": [
+     {
+      "type": "text",
+      "text": "<p>{Description}</p><p><i>{AccuracyNote}</i></p><p>Source: <a href=\"{SourceUrl}\" target=\"_blank\">{Source}</a></p>"
+     }
+    ],
+    "showAttachments": false,
+    "fieldInfos": []
+   }
+  }
+ ],
+ "baseMap": {
+  "title": "Modern Antique",
+  "baseMapLayers": [
+   {
+    "id": "basec527aa8b",
+    "title": "World Hillshade",
+    "opacity": 1,
+    "visibility": true,
+    "layerType": "ArcGISTiledMapServiceLayer",
+    "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+    "itemId": "1b243539f4514b6ba35e7d995890db1d"
+   },
+   {
+    "id": "base6e149572",
+    "title": "Modern Antique (no Labels)",
+    "opacity": 1,
+    "visibility": true,
+    "layerType": "VectorTileLayer",
+    "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/545f2e839f624600bbb092c3ad998bb8/resources/styles/root.json",
+    "itemId": "545f2e839f624600bbb092c3ad998bb8",
+    "blendMode": "multiply"
+   }
+  ]
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857
+ },
+ "authoringApp": "Map builder",
+ "authoringAppVersion": "1.5",
+ "version": "2.38",
+ "initialState": {
+  "viewpoint": {
+   "targetGeometry": {
+    "xmin": -2449028.8,
+    "ymin": -4300621.4,
+    "xmax": 6233891.5,
+    "ymax": 7558415.7,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  }
+ },
+ "bookmarks": [
+  {
+   "name": "Europe and Africa",
+   "extent": {
+    "xmin": -2449028.8,
+    "ymin": -4300621.4,
+    "xmax": 6233891.5,
+    "ymax": 7558415.7,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  },
+  {
+   "name": "The Western Front",
+   "extent": {
+    "xmin": 55659.7,
+    "ymin": 5942074.1,
+    "xmax": 946215.7,
+    "ymax": 6764043.4,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  },
+  {
+   "name": "Togoland and Kamerun",
+   "extent": {
+    "xmin": -222639.0,
+    "ymin": 111325.1,
+    "xmax": 1892431.3,
+    "ymax": 1459732.3,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  },
+  {
+   "name": "German South West Africa",
+   "extent": {
+    "xmin": 1113194.9,
+    "ymin": -3503549.8,
+    "xmax": 2449028.8,
+    "ymax": -1804722.8,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  },
+  {
+   "name": "East and Central Africa",
+   "extent": {
+    "xmin": 2894306.8,
+    "ymin": -2273030.9,
+    "xmax": 4786738.1,
+    "ymax": 111325.1,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  },
+  {
+   "name": "North and West Africa",
+   "extent": {
+    "xmin": -1335833.9,
+    "ymin": 557305.3,
+    "xmax": 4007501.7,
+    "ymax": 4300621.4,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   }
+  }
+ ],
+ "widgets": {
+  "timeSlider": {
+   "properties": {
+    "startTime": -1748044800000,
+    "endTime": -1613865600000,
+    "currentTimeExtent": [
+     -1748044800000,
+     -1748044800000
+    ],
+    "thumbCount": 1,
+    "thumbMovingRate": 1500,
+    "loop": false,
+    "timeStopInterval": {
+     "interval": 1,
+     "units": "esriTimeUnitsMonths"
+    }
+   }
+  }
+ },
+ "timeZone": "UTC"
+}

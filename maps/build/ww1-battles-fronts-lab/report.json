@@ -1,0 +1,56 @@
+{
+ "tool": "Map builder 1.5",
+ "spec": "maps/specs/ww1-battles-fronts-lab.json",
+ "specId": "ww1-battles-fronts-lab",
+ "specVersion": "0.1.0",
+ "built": "2026-11-26T14:30:35Z",
+ "webmapFingerprint": "ad7c50efc42bb26081b93af932b4c131e04fc5a3",
+ "itemFingerprint": "3737e84d03acb9765e5c47a8a552f89b01f1102e",
+ "checked": [
+  "basemap is public and not CARTO",
+  "every source layer is readable and every field the spec uses exists",
+  "time fields are date fields; the slider covers 1914-08-11 to 1918-11-11"
+ ],
+ "warnings": [],
+ "tested": {
+  "tool": "Map test 1.1",
+  "sdk": "5.2",
+  "when": "2026-11-26T14:32:51Z",
+  "timeZone": "America/Chicago",
+  "webmapFingerprint": "ad7c50efc42bb26081b93af932b4c131e04fc5a3",
+  "pass": true,
+  "checks": [
+   {
+    "name": "aug-1914",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "nov-1914",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "jan-1915",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "jul-1916",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "armistice",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "tanga-popup",
+    "pass": true,
+    "failures": []
+   }
+  ],
+  "checker": null
+ }
+}

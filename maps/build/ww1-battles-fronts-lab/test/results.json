@@ -1,0 +1,56 @@
+{
+ "tool": "Map test 1.1",
+ "timeZone": "America/Chicago",
+ "sdk": "ArcGIS Maps SDK for JavaScript 5.2",
+ "webmapFingerprint": "ad7c50efc42bb26081b93af932b4c131e04fc5a3",
+ "results": [
+  {
+   "name": "aug-1914",
+   "question": "August 1914: the war begins in Belgium and in Togoland and Kamerun",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "nov-1914",
+   "question": "November 1914: Ypres in Europe, Tanga and Longido in East Africa",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "jan-1915",
+   "question": "January 1915: the Chilembwe rising in Nyasaland",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "jul-1916",
+   "question": "July 1916: the Somme and Verdun, and the Volta-Bani War in West Africa",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "armistice",
+   "question": "11 November 1918: the Armistice, while fighting goes on in Africa",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": "Western Front at the Armistice, 11 November 1918\n\tFront line at 11 a.m., 11 November 1918\nFighting this month\n\tBattle, siege or raid\n\n\tCapture or surrender\n\n\tRising against colonial rule\nFighting in earlier months\n\tFighting in an earlier month"
+  },
+  {
+   "name": "tanga-popup",
+   "question": "Open the Battle of Tanga",
+   "pass": true,
+   "failures": [],
+   "popup": "Battle of Tanga\n\nNovember 3, 1914 to November 5, 1914\n\nBritish-Indian amphibious landing at the port of Tanga is defeated by a much smaller German force.\n\nFought between Britain, India and Germany.\n\nAfrica — East and Central Africa. Shown at: Tanga.\n\nSource: National Army Museum, First World War timeline data (ww1.nam.ac.uk); 1914-1918-online — Tanga, Battle of\n\nLab note: verified",
+   "legend": null
+  }
+ ]
+}
