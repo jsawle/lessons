@@ -1,4 +1,4 @@
-// Map test 1.1: draws a built web map (maps/build/<id>/webmap.json) with the ArcGIS Maps SDK for JavaScript (4.34, or
+// Map test 1.2: draws a built web map (maps/build/<id>/webmap.json) with the ArcGIS Maps SDK for JavaScript (4.34, or
 // the version in the spec's "test": {"sdk"} or --sdk; time fields set in the map need 5.2) in
 // headless Chromium, set to US Central time, follows the spec's checks (bookmarks, layers on and off, zoom, clicks)
 // and tests what a student would see: pop-up text, legend text, which layers draw. Optionally runs the MapMaker Web
@@ -14,7 +14,7 @@ import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
 import { chromium } from "playwright";
 
-const VERSION = "1.1";
+const VERSION = "1.2";
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, "..", "..");
 const args = process.argv.slice(2);
@@ -27,6 +27,8 @@ const report = JSON.parse(readFileSync(join(buildDir, "report.json"), "utf8"));
 const webmap = JSON.parse(readFileSync(join(buildDir, "webmap.json"), "utf8"));
 const item = JSON.parse(readFileSync(join(buildDir, "item.json"), "utf8"));
 const spec = JSON.parse(readFileSync(join(root, report.spec), "utf8"));
+// Layers the spec gives time fields (1.2): only these must come back time-aware; a layer without time (today's countries, say) is checked by name only.
+const timed = new Set((spec.layers || []).filter((l) => l.time).map((l) => l.title));
 const fp = createHash("sha1").update(readFileSync(join(buildDir, "webmap.json"))).digest("hex");
 if (fp !== report.webmapFingerprint) { console.error("webmap.json has changed since it was built; build it again first"); process.exit(1); }
 const outDir = join(buildDir, "test");
@@ -89,7 +91,7 @@ for (const c of loadError ? [] : spec.checks || []) {
     for (const t of e.hiddenAtScale || []) { const s = await page.evaluate((t) => H.drawn(t), t); if (s.on && s.inRange) failures.push(`"${t}" draws at 1:${s.scale.toLocaleString("en-US")}`); }
     for (const t of new Set([...Object.keys(e.namesHave || {}), ...Object.keys(e.namesLack || {}), ...Object.keys(e.count || {})])) {
       const got = await page.evaluate(([t, f]) => H.names(t, f), [t, (e.nameField || {})[t] || null]);
-      if (!got.timeInfo) failures.push(`"${t}" has no time fields`);
+      if (!got.timeInfo && timed.has(t)) failures.push(`"${t}" has no time fields`);
       for (const n of (e.namesHave || {})[t] || []) if (!got.names.includes(n)) failures.push(`"${n}" is not shown on ${d.time}`);
       for (const n of (e.namesLack || {})[t] || []) if (got.names.includes(n)) failures.push(`"${n}" is shown on ${d.time}`);
       if ((e.count || {})[t] != null && got.names.length !== e.count[t]) failures.push(`${got.names.length} features shown on ${d.time}, expected ${e.count[t]}`);

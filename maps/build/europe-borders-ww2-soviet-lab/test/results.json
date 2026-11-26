@@ -1,0 +1,72 @@
+{
+ "tool": "Map test 1.2",
+ "timeZone": "America/Chicago",
+ "sdk": "ArcGIS Maps SDK for JavaScript 5.2",
+ "webmapFingerprint": "a72bec40cf6b9532b6dc773b3eb6b9a5d902a323",
+ "results": [
+  {
+   "name": "jan-1938",
+   "question": "1 January 1938: before Munich",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "changes-jan-1939",
+   "question": "1 January 1939: land taken from Czechoslovakia after Munich",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "jan-1941",
+   "question": "1 January 1941: the Baltic states are gone",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "changes-jan-1946",
+   "question": "1 January 1946: the 1945 changes",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "end-1947",
+   "question": "31 December 1947",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "annexed-jan-1941",
+   "question": "1 January 1941: annexed from Finland, the Baltic states and Romania",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "annexed-end-1947",
+   "question": "31 December 1947: all eight, still shown",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "today-on",
+   "question": "Countries today turned on: Ukraine, Belarus and the Baltic states",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  }
+ ]
+}
