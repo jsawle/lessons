@@ -3,6 +3,7 @@
   "source": {"commit": "54840534d9a82cfd01caf1021f85933e701e8318", "sha1": "358161dccfdd038ac3eee9d7aa3ed5243c55d5bf",
              "note": "cshapes_2_gw.topojson.xz from the CRAN package cshapes 2.0 (GitHub mirror cran/cshapes), the same data ETH Zurich publishes at icr.ethz.ch/data/cshapes"},
   "extent": [-25, 33, 60, 71.6],
+  "keepWhole": ["Russia (Soviet Union)"],
   "notEurope": ["Algeria", "Morocco", "Spanish Morocco", "Libya", "Tunisia", "Egypt", "Syria", "Iraq", "Iran (Persia)", "Jordan", "Lebanon", "Palestine", "Israel", "Kuwait", "Saudi Arabia", "Khiva", "Bukhara"],
   "controllers": {"0": "League of Nations", "2": "United States, United Kingdom and France", "365": "Soviet Union", "200": "United Kingdom", "390": "Denmark"},
   "names": {
@@ -17,11 +18,11 @@
     "German Federal Republic": [{"status": "occupied", "name": "Germany: western occupation zones"}, {"name": "West Germany"}],
     "German Democratic Republic": [{"status": "occupied", "name": "Germany: Soviet occupation zone"}, {"name": "East Germany"}]
   },
-  "timeline": {"id": "europe-borders-timeline", "version": "0.2.0", "simplifyDegrees": 0.03, "from": "1914-01-01", "to": "1947-12-31", "expectFeatures": 108,
+  "timeline": {"id": "europe-borders-timeline", "version": "0.3.0", "simplifyDegrees": 0.03, "simplifyOutsideDegrees": 0.25, "from": "1914-01-01", "to": "1947-12-31", "expectFeatures": 108,
     "note": "One feature per border period in the source that overlaps the window. ShowFrom and ShowTo are the period cut to the window (for the time slider); BorderFrom and BorderTo are the source's own dates. renamed: a period is cut in two on the day a country's name changed.",
     "renamed": {"Ireland": ["1937-12-29"], "Yugoslavia": ["1929-10-03"]},
     "sameAsSnapshots": true},
-  "changes": {"id": "europe-borders-changes", "version": "0.2.0", "expectFeatures": 47, "minKm2": 200, "lookBackDays": 60, "showDays": 365,
+  "changes": {"id": "europe-borders-changes", "version": "0.3.0", "expectFeatures": 47, "minKm2": 200, "lookBackDays": 60, "showDays": 365,
     "note": "Land that went from one country to another, cut from the timeline: for each new border, the part another country held the day before (or, where the source leaves a gap of days between holders, the last holder within lookBackDays). Shown for showDays after the change. Changes of name or status inside one country are not changes of hands."},
   "snapshots": [
     {"date": "1914-07-01", "label": "July 1914, before the First World War", "expectFeatures": 24,

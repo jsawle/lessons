@@ -95,3 +95,18 @@ Jason's call: one slider from 1914 to 1947 spends most of its run on 1925 to 193
 - Checks: the old map's checks split by era (1925 ones moved to 31 December 1924), plus Brest-Litovsk (1 April 1918), before Munich (1 January 1938) and the Munich changes (1 January 1939).
 - Not yet tested: whether MapMaker (the Atlas app) keeps the slider to the era's range set in the map, or falls back to the layer's own 1914 to 1947 range.
 - Era maps 0.2.0 (19 November 2026): both moved to the lighter layers, timeline 0.2.0 (item `f4f81ee402b842c793eba54768f6106f`) and changes 0.2.0 (item `dbeffe7848234bbc908e4cdab514f323`), public in the sandbox. Map test on SDK 5.2: WWI era 8 of 8, WWII era 5 of 5. Not yet published; loading speed in the Atlas app not yet compared.
+
+## Whole Russia (26 November 2026, builder 1.4, timeline and changes 0.3.0)
+
+The Russian Empire and the Soviet Union were cut at 60 degrees east, so half the country was missing. `keepWhole` in
+`snapshots.json` keeps them whole in the timeline and changes layers (the snapshot layers are still clipped). The
+stretches of line outside the Europe extent are thinned at 0.25 degrees instead of 0.03, so the timeline layer is 1,045 kB
+instead of 852 kB rather than about 1,965 kB. Feature counts are unchanged (108 and 47). The changes layer's areas are the
+same; four Soviet ones (the Baltic states 1940, East Prussia 1945) have slightly different outlines from the new thinning.
+Changes in Asia (none of the Soviet Union's Asian neighbours are in the layers) are not included.
+
+Outside Europe, CShapes 2.0 also records in these years: the Ottoman Empire's Arab lands becoming British and French
+mandates (1920 to 1923), Germany's colonies becoming mandates (1919 to 1922), Egypt (1922), Afghanistan (1919) and Mongolia
+(1921); and in 1938 to 1947 Korea's division (1945), Indonesia (1945), the Philippines, Syria, Lebanon and Jordan (1946),
+and India and Pakistan (1947). It does not record: wartime occupation or puppet states (Manchukuo, Italian Ethiopia
+1936 to 1941, Japan's conquests); Ukraine, Belarus, Georgia, Armenia and Azerbaijan's independence 1917 to 1921; Tuva.
