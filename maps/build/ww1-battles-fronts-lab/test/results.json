@@ -2,7 +2,7 @@
  "tool": "Map test 1.2",
  "timeZone": "America/Chicago",
  "sdk": "ArcGIS Maps SDK for JavaScript 5.2",
- "webmapFingerprint": "6dfe2a6073f0773d522c0a9147190e694645b15c",
+ "webmapFingerprint": "e064283453e21bb5486a0730f977d814472e72c1",
  "results": [
   {
    "name": "aug-1914",
@@ -85,8 +85,8 @@
    "legend": null
   },
   {
-   "name": "oct-1918-gap",
-   "question": "October 1918: no front line yet for 20 September to 29 October",
+   "name": "oct-1918",
+   "question": "October 1918: the front on 10 October, as the Allies advanced from Cambrai to the Argonne",
    "pass": true,
    "failures": [],
    "popup": null,
