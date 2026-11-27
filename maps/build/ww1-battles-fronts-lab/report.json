@@ -1,11 +1,11 @@
 {
- "tool": "Map builder 1.7",
+ "tool": "Map builder 1.8",
  "spec": "maps/specs/ww1-battles-fronts-lab.json",
  "specId": "ww1-battles-fronts-lab",
- "specVersion": "0.1.2",
- "built": "2026-11-26T15:08:51Z",
- "webmapFingerprint": "1ec6c633fdfddc634442bda6523591ef214556a6",
- "itemFingerprint": "30dc4aeb83cb4ff15879ef04b69e137550f95944",
+ "specVersion": "0.2.0",
+ "built": "2026-11-27T14:56:44Z",
+ "webmapFingerprint": "d760f54645aab3468c15ab0a7bba758c39daca21",
+ "itemFingerprint": "8e8cb42c4430152a0cb349c661513ce2a9173a6c",
  "checked": [
   "basemap is public and not CARTO",
   "every source layer is readable and every field the spec uses exists",
@@ -13,15 +13,20 @@
  ],
  "warnings": [],
  "tested": {
-  "tool": "Map test 1.1",
+  "tool": "Map test 1.2",
   "sdk": "5.2",
-  "when": "2026-11-26T15:10:27Z",
+  "when": "2026-11-27T14:59:18Z",
   "timeZone": "America/Chicago",
-  "webmapFingerprint": "1ec6c633fdfddc634442bda6523591ef214556a6",
+  "webmapFingerprint": "d760f54645aab3468c15ab0a7bba758c39daca21",
   "pass": true,
   "checks": [
    {
     "name": "aug-1914",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "sep-1914",
     "pass": true,
     "failures": []
    },
@@ -41,12 +46,32 @@
     "failures": []
    },
    {
+    "name": "jul-1916-front",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "jul-1917",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "jun-1918-gap",
+    "pass": true,
+    "failures": []
+   },
+   {
     "name": "armistice",
     "pass": true,
     "failures": []
    },
    {
     "name": "tanga-popup",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "front-popup",
     "pass": true,
     "failures": []
    }
