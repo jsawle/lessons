@@ -1,0 +1,66 @@
+{
+ "tool": "Map builder 1.8",
+ "spec": "maps/specs/europe-borders-ww2-soviet-lab.json",
+ "specId": "europe-borders-ww2-soviet-lab",
+ "specVersion": "0.4.0",
+ "built": "2026-11-26T17:20:34Z",
+ "webmapFingerprint": "a72bec40cf6b9532b6dc773b3eb6b9a5d902a323",
+ "itemFingerprint": "2f101f1e61de263ffdac2dfc885ed569d9e044f2",
+ "checked": [
+  "basemap is public and not CARTO",
+  "every source layer is readable and every field the spec uses exists",
+  "time fields are date fields; the slider covers 1938-01-01 to 1947-12-31"
+ ],
+ "warnings": [],
+ "tested": {
+  "tool": "Map test 1.2",
+  "sdk": "5.2",
+  "when": "2026-11-26T17:38:20Z",
+  "timeZone": "America/Chicago",
+  "webmapFingerprint": "a72bec40cf6b9532b6dc773b3eb6b9a5d902a323",
+  "pass": true,
+  "checks": [
+   {
+    "name": "jan-1938",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "changes-jan-1939",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "jan-1941",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "changes-jan-1946",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "end-1947",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "annexed-jan-1941",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "annexed-end-1947",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "today-on",
+    "pass": true,
+    "failures": []
+   }
+  ],
+  "checker": null
+ }
+}

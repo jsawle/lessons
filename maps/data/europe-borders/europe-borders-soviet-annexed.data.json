@@ -1,0 +1,64 @@
+{
+  "format": "Data publish 1.0",
+  "id": "europe-borders-soviet-annexed",
+  "version": "0.1.0",
+  "file": "maps/data/build/europe-borders/europe-borders-soviet-annexed-v0_1_0.geojson",
+  "expectFeatures": 8,
+  "note": "LAB layer for the Second World War era map. Built by maps/data/europe-borders/build.py (1.5) from CShapes 2.0. The file is not kept in the repository. Not for MapMaker until ETH Zurich confirms permission (LICENCE.md).",
+  "checks": [
+    {
+      "name": "Baltic states: dated 2 June 1940 in the source, shown to the end of 1947",
+      "where": {
+        "FromName": "Latvia"
+      },
+      "expect": {
+        "ChangeDate": "1940-06-02",
+        "ShowTo": "1947-12-31"
+      }
+    },
+    {
+      "name": "Eastern Poland is dated 8 May 1945 in the source",
+      "where": {
+        "FromName": "Poland"
+      },
+      "expect": {
+        "ChangeDate": "1945-05-08",
+        "AreaKm2": 179300
+      }
+    },
+    {
+      "name": "Bessarabia and northern Bukovina from Romania, 28 June 1940",
+      "where": {
+        "FromName": "Romania"
+      },
+      "expect": {
+        "ChangeDate": "1940-06-28"
+      }
+    }
+  ],
+  "item": {
+    "title": "LAB: Land annexed by the Soviet Union, 1938 to 1947 (data for lessons) v0.1",
+    "snippet": "Test layer for the time slider: the land the Soviet Union took from its neighbours between 1938 and 1947, shown from the date of each change to the end of 1947. Draft.",
+    "description": "<p><b>Test layer.</b> 8 areas of land the Soviet Union took from its neighbours between 1938 and 1947: from Finland, Estonia, Latvia, Lithuania, Romania, Poland, Germany and Czechoslovakia. Each has the country it was taken from, the date, its rough size in square kilometres and, for some, a short note.</p><p><b>For the time slider:</b> use ShowFrom as the start field and ShowTo as the end field. Each area shows from the date of the change to 31 December 1947.</p><p><b>Limits:</b> dates are the source's. It records recognised borders, not wartime occupation: eastern Poland is dated 8 May 1945, though the Soviet Union occupied it in 1939, and the Baltic states 2 June 1940. The United States never recognised the annexation of the Baltic states. Land the Soviet Union took outside Europe is not included. Areas under 200 square kilometres are left out.</p><p><b>Outlines:</b> the same as the companion land-that-changed-hands layer: thinned so the map draws faster; a line can sit up to about 3 kilometres from the source's.</p><p><b>Source:</b> worked out from CShapes 2.0: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), Mapping the International System, 1886-2019, Journal of Conflict Resolution 66(1); ETH Zurich.</p><p><i>Data version 0.1 (26 November 2026), lab draft.</i></p>",
+    "tags": [
+      "World History",
+      "Europe",
+      "borders",
+      "boundaries",
+      "time",
+      "Second World War",
+      "lab",
+      "draft",
+      "licence pending",
+      "Soviet Union",
+      "annexation"
+    ],
+    "credits": "CShapes 2.0: Schvitz, Girardin, Ruegger, Weidmann, Cederman and Gleditsch (2022), Mapping the International System, 1886-2019, Journal of Conflict Resolution 66(1); ETH Zurich.",
+    "license": "Boundaries from CShapes 2.0 (ETH Zurich), licence CC BY-NC-SA 4.0: credit the source, non-commercial use only, and share anything made from it under the same licence. Written permission to use it in MapMaker has not been confirmed: keep this layer private until it is. See maps/data/europe-borders/LICENCE.md."
+  },
+  "publish": {
+    "org": "HNLEA4GfnbCFQZGa",
+    "orgLabel": "GIS for Schools",
+    "folder": "Map data"
+  }
+}

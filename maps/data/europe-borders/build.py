@@ -24,6 +24,9 @@ to keep a shape at that tolerance are dropped. The four snapshot files are not t
 1.4 keeps the countries in snapshots.json "keepWhole" whole in the timeline and changes files instead of clipping them to
 Europe, so the Russian Empire and the Soviet Union show to the Pacific. The snapshot files are still clipped. Stretches of
 line outside the Europe extent are thinned more ("simplifyOutsideDegrees"), so whole Russia doesn't make the layers slow to load.
+1.5 also writes the annexed file (snapshots.json "annexed"): the land the Soviet Union took from its neighbours in the
+window, each piece shown from the day of the change to the end of the window (not just for a year), with a check that
+every piece is still inside the Soviet Union at the end.
 """
 import datetime, hashlib, json, lzma, sys, urllib.request
 import pyproj, shapely
@@ -31,7 +34,7 @@ from pathlib import Path
 from shapely.geometry import LineString, Polygon, MultiPolygon, box, mapping
 from shapely.validation import make_valid
 
-VERSION = "1.4"
+VERSION = "1.5"
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 CFG = json.loads((HERE / "snapshots.json").read_text(encoding="utf-8"))
@@ -154,7 +157,8 @@ def main():
         print(f"Built {out.name}: {len(feats)} features, {len(body)/1e3:.0f} kB")
     thin = read_source(raw, CFG["timeline"].get("simplifyDegrees"), CFG["timeline"].get("simplifyOutsideDegrees"), CFG["extent"])
     timeline(thin, owners, bb, drop, outdir, sha)
-    changes(thin, bb, drop, outdir, sha)
+    ch = changes(thin, bb, drop, outdir, sha)
+    annexed(ch, thin, bb, outdir, sha)
 
 
 def day_before(d): return (datetime.date.fromisoformat(d) - datetime.timedelta(days=1)).isoformat()
@@ -240,6 +244,39 @@ def changes(src, bb, drop, outdir, sha):
            "cshapes": {"url": SRC_URL, "sha1": sha, "licence": "CC BY-NC-SA 4.0"}}
     out.with_suffix(".built.json").write_text(json.dumps(rec, indent=1) + "\n", encoding="utf-8")
     print(f"Built {out.name}: {len(feats)} features, {len(body)/1e3:.0f} kB")
+    return feats
+
+
+def write(spec_id, version, feats, extra, outdir, sha):
+    out = outdir / f"{spec_id}-v{version.replace('.', '_')}.geojson"
+    body = json.dumps({"type": "FeatureCollection", "features": feats}, ensure_ascii=False, separators=(",", ":")).encode("utf-8"); out.write_bytes(body)
+    rec = {"tool": f"Europe borders data builder {VERSION}", "when": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+           "sha1": hashlib.sha1(body).hexdigest(), "features": len(feats), **extra, "cshapes": {"url": SRC_URL, "sha1": sha, "licence": "CC BY-NC-SA 4.0"}}
+    out.with_suffix(".built.json").write_text(json.dumps(rec, indent=1) + "\n", encoding="utf-8")
+    print(f"Built {out.name}: {len(feats)} features, {len(body)/1e3:.0f} kB")
+
+
+def annexed(changed, src, bb, outdir, sha):
+    """The changes layer's pieces that went to the Soviet Union inside the window, each shown to the window's end.
+    Refuses to build if a piece is not (almost) all inside the Soviet Union on the window's last day."""
+    A, T = CFG["annexed"], CFG["timeline"]; hi = A["to"]
+    from shapely.geometry import shape
+    su = [cut(p, g, bb).buffer(0) for p, g in src if p["country_name"] == A["sourceName"] and p["start"] <= hi <= p["end"]]
+    if len(su) != 1: sys.exit(f"Not built (annexed): {len(su)} Soviet Union borders on {hi}, expected 1")
+    feats, problems = [], []
+    for f in changed:
+        p = f["properties"]
+        if p["ToName"] != A["toName"] or not (A["from"] <= p["ChangeDate"] <= hi): continue
+        g = shape(f["geometry"]).buffer(0)
+        share = g.intersection(su[0]).area / g.area if g.area else 0
+        if share < 0.99: problems.append(f"{p['FromName']} {p['ChangeDate']}: only {share:.0%} is inside the Soviet Union on {hi}")
+        feats.append({"type": "Feature", "geometry": f["geometry"], "properties": {
+            "FromName": p["FromName"], "ChangeDate": p["ChangeDate"], "AreaKm2": p["AreaKm2"],
+            "Note": A["notes"].get(p["FromName"], ""), "ShowFrom": p["ChangeDate"], "ShowTo": hi}})
+    if len(feats) != A["expectFeatures"]: problems.append(f"{len(feats)} features, expected {A['expectFeatures']}: " + ", ".join(f["properties"]["FromName"] for f in feats))
+    if problems: sys.exit("Not built (annexed):\n  " + "\n  ".join(problems))
+    feats.sort(key=lambda f: (f["properties"]["ChangeDate"], f["properties"]["FromName"]))
+    write(A["id"], A["version"], feats, {"window": [A["from"], hi]}, outdir, sha)
 
 
 if __name__ == "__main__":
