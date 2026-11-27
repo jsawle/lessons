@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Map builder 1.8: turns a map spec (maps/specs/<id>.json, Map spec 1.0) into the web map ArcGIS Online stores.
+"""Map builder 1.9: turns a map spec (maps/specs/<id>.json, Map spec 1.0) into the web map ArcGIS Online stores.
 
 Reads only public ArcGIS Online content; signs in to nothing. For each spec it:
   - checks the spec against its lesson (layer names, which layers start off, bookmarks),
@@ -20,13 +20,15 @@ Stripped tags (1.7): the sanitizer also removes some tags (seen so far: <small>)
 Item and address (1.8): a layer's "url" must belong to its "itemId" (the item's own service address), so a spec
 can't point at one version's item and another version's service.
 
+Left labels (1.9): a point label may have placement "left" (left of the point, centred on it vertically).
+
 Usage, from the repo root:  python3 maps/tools/build_map.py maps/specs/<id>.json [more specs...]
 Exit code 1 if any spec has errors (nothing is written for that spec).
 """
 import copy, datetime, hashlib, json, math, re, sys, urllib.parse, urllib.request
 from pathlib import Path
 
-VERSION = "1.8"
+VERSION = "1.9"
 SPEC_FORMAT = "Map spec 1.0"
 PORTAL = "https://www.arcgis.com/sharing/rest"
 ROOT = Path(__file__).resolve().parents[2]
@@ -35,6 +37,7 @@ TYPE_KEYWORDS = ["ArcGIS Online", "Explorer Web Map", "Map", "Online Map", "Web 
 SHAPES = {"circle": "esriSMSCircle", "square": "esriSMSSquare", "diamond": "esriSMSDiamond", "cross": "esriSMSCross", "x": "esriSMSX", "triangle": "esriSMSTriangle"}
 PLACEMENT = {"above": "esriServerPointLabelPlacementAboveCenter", "below": "esriServerPointLabelPlacementBelowCenter",
              "center": "esriServerPointLabelPlacementCenterCenter", "right": "esriServerPointLabelPlacementCenterRight",
+             "left": "esriServerPointLabelPlacementCenterLeft",
              "polygon": "esriServerPolygonPlacementAlwaysHorizontal", "line": "esriServerLinePlacementAboveAlong"}
 STRIPPED_TAGS = ["small"]  # removed by ArcGIS Online's HTML sanitizer (seen 26 Nov 2026)
 SQL_WORDS = {"AND", "OR", "NOT", "IN", "IS", "NULL", "LIKE", "BETWEEN", "TRUE", "FALSE", "DATE", "TIMESTAMP", "UPPER", "LOWER", "CAST", "AS", "INT", "FLOAT", "CHAR", "VARCHAR"}
