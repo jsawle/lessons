@@ -1,10 +1,10 @@
 {
  "format": "Data publish 1.0",
  "id": "ww1-western-front-lines",
- "version": "0.1.0",
- "file": "maps/data/build/ww1/ww1-western-front-lines-v0_1_0.geojson",
- "expectFeatures": 1,
- "note": "LAB layer (pilot). Built by maps/data/ww1/build.py (1.0) from western-front-lines.json, traced by trace_armistice.py (1.0). One line so far: the Armistice. More dated lines to come (maps/plan/ww1-battles-fronts.md).",
+ "version": "0.2.0",
+ "file": "maps/data/build/ww1/ww1-western-front-lines-v0_2_0.geojson",
+ "expectFeatures": 4,
+ "note": "LAB layer (pilot). Built by maps/data/ww1/build.py (1.2) from western-front-lines.json. 0.2.0 adds three lines traced from Truman Library M1236 (trace_m1236.py 1.0): furthest German advance (September 1914), the front from late 1914 to March 1917, and the front from March 1917 to March 1918; plus a Kind field. Still missing: the 1918 spring offensives and the Hundred Days (maps/plan/ww1-battles-fronts.md).",
  "checks": [
   {
    "name": "Armistice line dated 11 November 1918",
@@ -16,25 +16,58 @@
     "ShowFrom": "1918-11-11",
     "ShowTo": "1918-11-11"
    }
+  },
+  {
+   "name": "Marne limit shows 5 to 13 September 1914",
+   "where": {
+    "LineId": "WFL_1914_09"
+   },
+   "expect": {
+    "Kind": "Furthest advance",
+    "ShowFrom": "1914-09-05",
+    "ShowTo": "1914-09-13"
+   }
+  },
+  {
+   "name": "1914 to 1917 front ends the day before the Hindenburg withdrawal",
+   "where": {
+    "LineId": "WFL_1914_1917"
+   },
+   "expect": {
+    "Kind": "Front line",
+    "ShowTo": "1917-03-15"
+   }
+  },
+  {
+   "name": "1917 to 1918 front ends the day before the spring offensive",
+   "where": {
+    "LineId": "WFL_1917_1918"
+   },
+   "expect": {
+    "ShowFrom": "1917-03-16",
+    "ShowTo": "1918-03-20"
+   }
   }
  ],
  "item": {
-  "title": "LAB: Western Front lines, First World War (data for lessons) v0.1",
-  "snippet": "Test layer: dated front lines on the Western Front, traced from public-domain maps. Version 0.1 has the front at the Armistice, 11 a.m. on 11 November 1918. Draft.",
-  "description": "<p><b>Test layer.</b> Front lines on the Western Front, each with the date it shows. Version 0.1 has one line: the front at 11 a.m. on 11 November 1918, when the Armistice came into force.</p><p><b>For the time slider:</b> use ShowFrom as the start field and ShowTo as the end field.</p><p><b>How it was made:</b> traced from the red front line on a US Army map of 1918 and placed on the ground using 16 towns. It is usually within about 4 km of the map's line (AccuracyKm), so it suits maps of Europe or a region, not close-up maps of villages.</p><p><b>Source:</b> Order of Battle on Western Front, 11 A.M., Nov. 11, 1918, Map Room, G-3, General Headquarters, American Expeditionary Forces. Library of Congress, Geography and Map Division.</p><p><i>Data version 0.1 (26 November 2026), lab draft.</i></p>",
+  "title": "LAB: Western Front lines, First World War (data for lessons) v0.2",
+  "snippet": "Test layer: dated Western Front lines traced from public-domain maps, for the time slider: the furthest German advance in September 1914, the front from late 1914 to March 1917, the front from March 1917 to March 1918, and the front at the Armistice. Draft.",
+  "description": "<p><b>Test layer.</b> Western Front lines, each with the dates it shows: the furthest German advance in September 1914 (before the Battle of the Marne), the front from late 1914 to March 1917, the front from March 1917 (after the German withdrawal to the Hindenburg Line) to March 1918, and the front at 11 a.m. on 11 November 1918. The German offensives of spring 1918 and the Allied advance of summer and autumn 1918 are not in this version.</p><p><b>For the time slider:</b> use ShowFrom as the start field and ShowTo as the end field. Kind tells front lines from the furthest-advance line. Each line's Description says what it shows and what it leaves out.</p><p><b>How they were made:</b> traced from the coloured lines on two maps and placed on the ground using towns. Usually within about 2 to 4 km of the source maps' lines (AccuracyKm), so they suit maps of Europe or a region, not close-up maps of villages. A US Army map of the front on 21 March 1918 agrees with the March 1917 to March 1918 line to within about 3 km.</p><p><b>Sources:</b> The Western Theatre of the European War, 1918 edition, by B. Barrecchia, Société Editrice Géographique, Paris (Harry S. Truman Library &amp; Museum, M1236). Order of Battle on Western Front, 11 A.M., Nov. 11, 1918, G-3, GHQ, American Expeditionary Forces (Library of Congress). Checked against front lines as of March 21, 1918, Map Room, G-3, GHQ, AEF (Truman Library, M549).</p><p><i>Data version 0.2 (26 November 2026), lab draft.</i></p>",
   "tags": [
-   "World History",
+   "Armistice",
    "First World War",
+   "Hindenburg Line",
+   "Marne",
    "WWI",
    "Western Front",
+   "World History",
+   "draft",
    "front line",
-   "Armistice",
-   "time",
    "lab",
-   "draft"
+   "time"
   ],
-  "credits": "Order of Battle on Western Front, 11 A.M., Nov. 11, 1918, G-3, GHQ, American Expeditionary Forces (Library of Congress, Geography and Map Division). Town positions used to place it: GeoNames (geonames.org), CC BY 4.0.",
-  "license": "Traced from a US government map (public domain in the US). Control-point coordinates from GeoNames, CC BY 4.0. Text written for this layer is original."
+  "credits": "The Western Theatre of the European War (1918), B. Barrecchia, Société Editrice Géographique (Harry S. Truman Library & Museum, M1236); Order of Battle on Western Front, 11 A.M., Nov. 11, 1918, G-3, GHQ, AEF (Library of Congress); checked against Truman Library M549 (G-3, GHQ, AEF). Town positions used to place them: GeoNames (geonames.org), CC BY 4.0.",
+  "license": "Traced from public-domain maps (a 1918 French publication and US government maps). Control-point coordinates from GeoNames, CC BY 4.0. Text written for this layer is original."
  },
  "publish": {
   "org": "HNLEA4GfnbCFQZGa",

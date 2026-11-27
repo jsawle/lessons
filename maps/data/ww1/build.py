@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""WWI data builder 1.1: writes the WWI pilot layers that Data publish puts into ArcGIS Online.
+"""WWI data builder 1.2: writes the WWI pilot layers that Data publish puts into ArcGIS Online.
 
   - ww1-battles: one point per battle or other fighting (Western Front and Africa), from battles.json
   - ww1-western-front-lines: dated Western Front lines, from western-front-lines.json (traced by trace_armistice.py)
@@ -8,6 +8,8 @@ Time slider (1.1): the map's slider shows one date and steps a month at a time, 
 dates rounded out to whole months: ShowFrom (first day of the month it started) and ShowTo (last day of the month it
 ended), and ShowToSoFar (31 December 1918) for a layer of earlier fighting that stays on the map. StartDate and
 EndDate keep the real dates. Kind groups the event types for the legend.
+
+Lines (1.2): each line has a Kind (Front line, Furthest advance) for the legend, and lines that share a date window are refused.
 
 Nothing is downloaded: the facts files hold everything. Checks each record (dates in order, coordinates inside the
 theatre, sources named) and refuses to build if any fails.
@@ -18,7 +20,7 @@ Writes maps/data/build/ww1/<id>-v<version>.geojson and a .built.json record next
 import datetime, hashlib, json, re, sys
 from pathlib import Path
 
-VERSION = "1.1"
+VERSION = "1.2"
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 DAY = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -90,11 +92,15 @@ def lines(problems):
         if len(c) < 10: problems.append(f"{ln['id']}: too few points")
         if not all(1.0 <= x <= 8.5 and 47.0 <= y <= 51.6 for x, y in c): problems.append(f"{ln['id']}: point outside the Western Front")
         if ln["showFrom"] > ln["showTo"]: problems.append(f"{ln['id']}: dates out of order")
-        props = {"LineId": ln["id"], "Name": ln["name"], "LineDate": ln["lineDate"], "ShowFrom": ln["showFrom"], "ShowTo": ln["showTo"],
+        if ln.get("kind") not in ("Front line", "Furthest advance"): problems.append(f"{ln['id']}: kind must be 'Front line' or 'Furthest advance'")
+        props = {"LineId": ln["id"], "Name": ln["name"], "Kind": ln.get("kind", ""), "LineDate": ln["lineDate"], "ShowFrom": ln["showFrom"], "ShowTo": ln["showTo"],
                  "Description": ln["description"], "Source": ln["source"]["title"] + ". " + ln["source"]["holder"],
                  "SourceUrl": ln["source"]["url"], "SourceRights": ln["source"]["rights"],
                  "AccuracyKm": ln["accuracy"]["rmsKm"], "AccuracyNote": ln["accuracy"]["note"], "DataVersion": s["version"]}
         feats.append({"type": "Feature", "properties": props, "geometry": {"type": "LineString", "coordinates": c}})
+    fronts = sorted((f["properties"]["ShowFrom"], f["properties"]["ShowTo"], f["properties"]["LineId"]) for f in feats if f["properties"]["Kind"] == "Front line")
+    for (a0, a1, ai), (b0, b1, bi) in zip(fronts, fronts[1:]):
+        if b0 <= a1: problems.append(f"front lines {ai} and {bi} overlap in time")
     return s, feats
 
 

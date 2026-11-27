@@ -1,6 +1,1789 @@
 {
- "about": "Western Front lines traced from public-domain source maps. Each line keeps its source, method and control points so it can be checked or re-traced.",
+ "about": "Western Front lines traced from public-domain source maps, each with the dates it shows for the time slider (showFrom, showTo), its source, method, control points and accuracy, so it can be checked or re-traced.",
  "lines": [
+  {
+   "id": "WFL_1914_09",
+   "name": "Furthest German advance, September 1914",
+   "kind": "Furthest advance",
+   "lineDate": "1914-09-05",
+   "showFrom": "1914-09-05",
+   "showTo": "1914-09-13",
+   "description": "How far the German armies reached before the First Battle of the Marne (5 to 12 September 1914), from north-east of Paris to the Swiss border. The source map's line runs off its western edge north-east of Paris, so the part from there to the sea is not shown. Around Verdun the source's line also takes in the German advance of 1916.",
+   "source": {
+    "title": "The Western Theatre of the European War, 1918 edition, by Prof. B. Barrecchia, published by the Société Editrice Géographique, Paris (scale 1:500,000)",
+    "holder": "Harry S. Truman Library & Museum, M1236",
+    "url": "https://www.trumanlibrary.gov/maps/m1236-map-front-line-movement-and-areas-allied-occupation",
+    "image": "https://www.trumanlibrary.gov/sites/default/files/maps/M1236.jpg",
+    "rights": "Public domain (Truman Library: unrestricted); published 1918, out of copyright in the US"
+   },
+   "sourceLine": "solid red: Extreme limit of the German invasion in 1914",
+   "method": "trace_m1236.py 1.0: the line's ink colour masked on the 3036 x 3401 px image of M1236, followed by a least-cost path through waypoints set on the ink, georeferenced with a 2nd-order polynomial from 23 town control points, simplified to 500 m (ETRS89-LAEA).",
+   "controlPoints": {
+    "pixels": {
+     "Brussels": [
+      1072,
+      883
+     ],
+     "Namur": [
+      1309,
+      1156
+     ],
+     "Verdun": [
+      1594,
+      2073
+     ],
+     "Reims": [
+      950,
+      2025
+     ],
+     "Metz": [
+      1970,
+      2080
+     ],
+     "Nancy": [
+      1985,
+      2410
+     ],
+     "Antwerpen": [
+      1100,
+      600
+     ],
+     "Gent": [
+      765,
+      742
+     ],
+     "Paris": [
+      175,
+      2320
+     ],
+     "Arras": [
+      300,
+      1305
+     ],
+     "Saint-Quentin": [
+      585,
+      1615
+     ],
+     "Soissons": [
+      588,
+      1966
+     ],
+     "Chalons-en-Champagne": [
+      1140,
+      2242
+     ],
+     "Luxembourg": [
+      1955,
+      1715
+     ],
+     "Maastricht": [
+      1688,
+      876
+     ],
+     "Troyes": [
+      1020,
+      2710
+     ],
+     "Epinal": [
+      2125,
+      2750
+     ],
+     "Strasbourg": [
+      2730,
+      2435
+     ],
+     "Oostende": [
+      390,
+      628
+     ],
+     "Ieper": [
+      402,
+      903
+     ],
+     "Albert": [
+      280,
+      1500
+     ],
+     "Noyon": [
+      462,
+      1812
+     ],
+     "Saint-Mihiel": [
+      1688,
+      2256
+     ]
+    },
+    "lonLat": {
+     "Brussels": [
+      4.34878,
+      50.85045
+     ],
+     "Namur": [
+      4.86746,
+      50.4669
+     ],
+     "Verdun": [
+      5.3829,
+      49.15964
+     ],
+     "Reims": [
+      4.02853,
+      49.26526
+     ],
+     "Metz": [
+      6.17269,
+      49.11911
+     ],
+     "Nancy": [
+      6.18496,
+      48.68439
+     ],
+     "Antwerpen": [
+      4.40026,
+      51.22047
+     ],
+     "Gent": [
+      3.71667,
+      51.05
+     ],
+     "Paris": [
+      2.3488,
+      48.85341
+     ],
+     "Arras": [
+      2.78186,
+      50.29301
+     ],
+     "Saint-Quentin": [
+      3.28757,
+      49.84889
+     ],
+     "Soissons": [
+      3.32361,
+      49.38167
+     ],
+     "Chalons-en-Champagne": [
+      4.36724,
+      48.95393
+     ],
+     "Luxembourg": [
+      6.13268,
+      49.60982
+     ],
+     "Maastricht": [
+      5.68889,
+      50.84833
+     ],
+     "Troyes": [
+      4.08524,
+      48.30073
+     ],
+     "Epinal": [
+      6.45304,
+      48.18324
+     ],
+     "Strasbourg": [
+      7.74553,
+      48.58392
+     ],
+     "Oostende": [
+      2.927,
+      51.21551
+     ],
+     "Ieper": [
+      2.88569,
+      50.85114
+     ],
+     "Albert": [
+      2.65096,
+      50.00091
+     ],
+     "Noyon": [
+      3.0,
+      49.58333
+     ],
+     "Saint-Mihiel": [
+      5.55099,
+      48.88746
+     ]
+    },
+    "lonLatSource": "GeoNames (CC BY 4.0)",
+    "imageSize": [
+     3036,
+     3401
+    ]
+   },
+   "accuracy": {
+    "rmsKm": 2.5,
+    "worstLeaveOneOutKm": 7.1,
+    "note": "Good at Europe or region scale; not for village-level zoom."
+   },
+   "coordinates": [
+    [
+     2.18742,
+     49.09483
+    ],
+    [
+     2.23478,
+     49.08334
+    ],
+    [
+     2.25864,
+     49.06636
+    ],
+    [
+     2.37544,
+     49.05719
+    ],
+    [
+     2.40393,
+     49.04577
+    ],
+    [
+     2.43121,
+     49.04558
+    ],
+    [
+     2.44512,
+     49.03566
+    ],
+    [
+     2.5199,
+     49.02527
+    ],
+    [
+     2.66104,
+     48.92585
+    ],
+    [
+     2.72404,
+     48.92529
+    ],
+    [
+     2.74176,
+     48.93636
+    ],
+    [
+     2.82691,
+     48.94959
+    ],
+    [
+     2.86805,
+     48.91268
+    ],
+    [
+     2.98353,
+     48.85952
+    ],
+    [
+     3.1428,
+     48.82681
+    ],
+    [
+     3.22831,
+     48.81734
+    ],
+    [
+     3.25212,
+     48.80018
+    ],
+    [
+     3.35063,
+     48.79469
+    ],
+    [
+     3.37853,
+     48.77606
+    ],
+    [
+     3.41009,
+     48.77563
+    ],
+    [
+     3.46968,
+     48.75794
+    ],
+    [
+     3.50772,
+     48.73492
+    ],
+    [
+     3.54698,
+     48.72592
+    ],
+    [
+     3.57672,
+     48.70441
+    ],
+    [
+     3.7514,
+     48.70032
+    ],
+    [
+     3.77754,
+     48.70973
+    ],
+    [
+     3.85388,
+     48.7141
+    ],
+    [
+     4.05871,
+     48.71476
+    ],
+    [
+     4.07633,
+     48.69899
+    ],
+    [
+     4.15671,
+     48.70032
+    ],
+    [
+     4.22111,
+     48.68786
+    ],
+    [
+     4.35825,
+     48.68517
+    ],
+    [
+     4.37798,
+     48.6932
+    ],
+    [
+     4.5851,
+     48.69169
+    ],
+    [
+     4.62197,
+     48.70213
+    ],
+    [
+     4.73663,
+     48.70661
+    ],
+    [
+     4.80853,
+     48.73024
+    ],
+    [
+     4.87044,
+     48.76109
+    ],
+    [
+     4.96779,
+     48.78544
+    ],
+    [
+     4.99656,
+     48.80019
+    ],
+    [
+     5.07237,
+     48.84603
+    ],
+    [
+     5.0734,
+     48.85863
+    ],
+    [
+     5.11361,
+     48.88427
+    ],
+    [
+     5.13756,
+     48.91873
+    ],
+    [
+     5.19318,
+     48.95236
+    ],
+    [
+     5.47232,
+     48.94352
+    ],
+    [
+     5.48235,
+     48.93623
+    ],
+    [
+     5.48448,
+     48.88289
+    ],
+    [
+     5.51866,
+     48.85951
+    ],
+    [
+     5.57491,
+     48.84671
+    ],
+    [
+     5.66808,
+     48.84405
+    ],
+    [
+     5.68147,
+     48.85208
+    ],
+    [
+     5.7304,
+     48.85346
+    ],
+    [
+     5.74602,
+     48.86282
+    ],
+    [
+     5.82786,
+     48.87721
+    ],
+    [
+     5.93615,
+     48.87674
+    ],
+    [
+     5.97183,
+     48.8448
+    ],
+    [
+     5.96898,
+     48.80982
+    ],
+    [
+     6.0053,
+     48.78626
+    ],
+    [
+     6.19859,
+     48.78434
+    ],
+    [
+     6.25203,
+     48.73631
+    ],
+    [
+     6.25286,
+     48.72085
+    ],
+    [
+     6.29878,
+     48.6604
+    ],
+    [
+     6.34079,
+     48.62953
+    ],
+    [
+     6.45747,
+     48.57647
+    ],
+    [
+     6.47022,
+     48.55216
+    ],
+    [
+     6.47124,
+     48.46923
+    ],
+    [
+     6.5964,
+     48.34965
+    ],
+    [
+     6.78783,
+     48.21344
+    ],
+    [
+     6.81904,
+     48.18417
+    ],
+    [
+     6.81777,
+     48.17154
+    ],
+    [
+     6.86142,
+     48.13898
+    ],
+    [
+     6.89399,
+     48.10259
+    ],
+    [
+     6.89269,
+     48.08996
+    ],
+    [
+     6.93174,
+     48.05471
+    ],
+    [
+     6.97604,
+     47.96852
+    ],
+    [
+     6.97669,
+     47.93466
+    ],
+    [
+     6.99416,
+     47.9185
+    ],
+    [
+     7.00614,
+     47.87152
+    ],
+    [
+     7.10239,
+     47.77618
+    ],
+    [
+     7.08137,
+     47.61177
+    ],
+    [
+     7.06531,
+     47.60248
+    ],
+    [
+     7.05051,
+     47.56771
+    ],
+    [
+     6.99311,
+     47.53452
+    ],
+    [
+     6.9921,
+     47.52607
+    ]
+   ]
+  },
+  {
+   "id": "WFL_1914_1917",
+   "name": "Western Front, late 1914 to March 1917",
+   "kind": "Front line",
+   "lineDate": "1914-09-14",
+   "showFrom": "1914-09-14",
+   "showTo": "1917-03-15",
+   "description": "The front after the First Battle of the Marne, which changed little until the German withdrawal to the Hindenburg Line began on 16 March 1917. Its northern part formed during the race to the sea (September to November 1914). Battles at Ypres, Verdun and the Somme moved parts of it by a few kilometres. Near Ypres the source map shows only the later line, so this line runs further east of Ypres there than the front of 1915 and 1916.",
+   "source": {
+    "title": "The Western Theatre of the European War, 1918 edition, by Prof. B. Barrecchia, published by the Société Editrice Géographique, Paris (scale 1:500,000)",
+    "holder": "Harry S. Truman Library & Museum, M1236",
+    "url": "https://www.trumanlibrary.gov/maps/m1236-map-front-line-movement-and-areas-allied-occupation",
+    "image": "https://www.trumanlibrary.gov/sites/default/files/maps/M1236.jpg",
+    "rights": "Public domain (Truman Library: unrestricted); published 1918, out of copyright in the US"
+   },
+   "sourceLine": "dashed blue (First line of retreat after the battle of the Marne) from Lens to the Aisne, solid blue elsewhere",
+   "method": "trace_m1236.py 1.0: the line's ink colour masked on the 3036 x 3401 px image of M1236, followed by a least-cost path through waypoints set on the ink, georeferenced with a 2nd-order polynomial from 23 town control points, simplified to 500 m (ETRS89-LAEA).",
+   "controlPoints": {
+    "pixels": {
+     "Brussels": [
+      1072,
+      883
+     ],
+     "Namur": [
+      1309,
+      1156
+     ],
+     "Verdun": [
+      1594,
+      2073
+     ],
+     "Reims": [
+      950,
+      2025
+     ],
+     "Metz": [
+      1970,
+      2080
+     ],
+     "Nancy": [
+      1985,
+      2410
+     ],
+     "Antwerpen": [
+      1100,
+      600
+     ],
+     "Gent": [
+      765,
+      742
+     ],
+     "Paris": [
+      175,
+      2320
+     ],
+     "Arras": [
+      300,
+      1305
+     ],
+     "Saint-Quentin": [
+      585,
+      1615
+     ],
+     "Soissons": [
+      588,
+      1966
+     ],
+     "Chalons-en-Champagne": [
+      1140,
+      2242
+     ],
+     "Luxembourg": [
+      1955,
+      1715
+     ],
+     "Maastricht": [
+      1688,
+      876
+     ],
+     "Troyes": [
+      1020,
+      2710
+     ],
+     "Epinal": [
+      2125,
+      2750
+     ],
+     "Strasbourg": [
+      2730,
+      2435
+     ],
+     "Oostende": [
+      390,
+      628
+     ],
+     "Ieper": [
+      402,
+      903
+     ],
+     "Albert": [
+      280,
+      1500
+     ],
+     "Noyon": [
+      462,
+      1812
+     ],
+     "Saint-Mihiel": [
+      1688,
+      2256
+     ]
+    },
+    "lonLat": {
+     "Brussels": [
+      4.34878,
+      50.85045
+     ],
+     "Namur": [
+      4.86746,
+      50.4669
+     ],
+     "Verdun": [
+      5.3829,
+      49.15964
+     ],
+     "Reims": [
+      4.02853,
+      49.26526
+     ],
+     "Metz": [
+      6.17269,
+      49.11911
+     ],
+     "Nancy": [
+      6.18496,
+      48.68439
+     ],
+     "Antwerpen": [
+      4.40026,
+      51.22047
+     ],
+     "Gent": [
+      3.71667,
+      51.05
+     ],
+     "Paris": [
+      2.3488,
+      48.85341
+     ],
+     "Arras": [
+      2.78186,
+      50.29301
+     ],
+     "Saint-Quentin": [
+      3.28757,
+      49.84889
+     ],
+     "Soissons": [
+      3.32361,
+      49.38167
+     ],
+     "Chalons-en-Champagne": [
+      4.36724,
+      48.95393
+     ],
+     "Luxembourg": [
+      6.13268,
+      49.60982
+     ],
+     "Maastricht": [
+      5.68889,
+      50.84833
+     ],
+     "Troyes": [
+      4.08524,
+      48.30073
+     ],
+     "Epinal": [
+      6.45304,
+      48.18324
+     ],
+     "Strasbourg": [
+      7.74553,
+      48.58392
+     ],
+     "Oostende": [
+      2.927,
+      51.21551
+     ],
+     "Ieper": [
+      2.88569,
+      50.85114
+     ],
+     "Albert": [
+      2.65096,
+      50.00091
+     ],
+     "Noyon": [
+      3.0,
+      49.58333
+     ],
+     "Saint-Mihiel": [
+      5.55099,
+      48.88746
+     ]
+    },
+    "lonLatSource": "GeoNames (CC BY 4.0)",
+    "imageSize": [
+     3036,
+     3401
+    ]
+   },
+   "accuracy": {
+    "rmsKm": 2.5,
+    "worstLeaveOneOutKm": 7.1,
+    "note": "Good at Europe or region scale; not for village-level zoom."
+   },
+   "coordinates": [
+    [
+     2.79778,
+     51.12554
+    ],
+    [
+     2.85436,
+     51.12075
+    ],
+    [
+     2.90633,
+     51.08135
+    ],
+    [
+     2.93042,
+     51.00345
+    ],
+    [
+     2.92957,
+     50.95077
+    ],
+    [
+     2.97735,
+     50.92246
+    ],
+    [
+     3.02559,
+     50.92048
+    ],
+    [
+     3.06696,
+     50.88668
+    ],
+    [
+     3.06592,
+     50.83397
+    ],
+    [
+     3.00181,
+     50.78202
+    ],
+    [
+     2.98559,
+     50.71696
+    ],
+    [
+     2.97066,
+     50.70741
+    ],
+    [
+     2.96963,
+     50.66715
+    ],
+    [
+     2.85426,
+     50.59342
+    ],
+    [
+     2.83255,
+     50.56864
+    ],
+    [
+     2.81783,
+     50.49927
+    ],
+    [
+     2.83801,
+     50.47402
+    ],
+    [
+     2.83377,
+     50.41007
+    ],
+    [
+     2.81076,
+     50.35325
+    ],
+    [
+     2.81618,
+     50.32952
+    ],
+    [
+     2.8443,
+     50.29581
+    ],
+    [
+     2.84339,
+     50.27215
+    ],
+    [
+     2.71015,
+     50.19549
+    ],
+    [
+     2.68872,
+     50.08836
+    ],
+    [
+     2.70093,
+     50.07988
+    ],
+    [
+     2.7001,
+     50.06176
+    ],
+    [
+     2.73048,
+     50.03776
+    ],
+    [
+     2.72943,
+     50.01545
+    ],
+    [
+     2.73946,
+     50.00559
+    ],
+    [
+     2.83824,
+     49.96413
+    ],
+    [
+     2.85415,
+     49.94582
+    ],
+    [
+     2.84363,
+     49.82309
+    ],
+    [
+     2.80164,
+     49.78441
+    ],
+    [
+     2.7959,
+     49.75653
+    ],
+    [
+     2.74986,
+     49.72205
+    ],
+    [
+     2.74802,
+     49.68993
+    ],
+    [
+     2.78338,
+     49.68399
+    ],
+    [
+     2.82172,
+     49.65705
+    ],
+    [
+     2.83653,
+     49.62335
+    ],
+    [
+     2.88842,
+     49.57807
+    ],
+    [
+     2.88906,
+     49.55428
+    ],
+    [
+     2.94595,
+     49.5229
+    ],
+    [
+     2.95495,
+     49.49902
+    ],
+    [
+     3.09133,
+     49.49467
+    ],
+    [
+     3.09866,
+     49.47779
+    ],
+    [
+     3.18759,
+     49.42213
+    ],
+    [
+     3.27561,
+     49.41681
+    ],
+    [
+     3.30174,
+     49.39827
+    ],
+    [
+     3.3438,
+     49.39771
+    ],
+    [
+     3.42414,
+     49.37141
+    ],
+    [
+     3.48515,
+     49.37054
+    ],
+    [
+     3.61803,
+     49.40494
+    ],
+    [
+     3.82242,
+     49.40445
+    ],
+    [
+     3.86527,
+     49.41492
+    ],
+    [
+     3.96409,
+     49.41041
+    ],
+    [
+     4.00256,
+     49.41811
+    ],
+    [
+     4.10015,
+     49.33098
+    ],
+    [
+     4.09862,
+     49.30861
+    ],
+    [
+     4.18729,
+     49.24814
+    ],
+    [
+     4.51477,
+     49.18971
+    ],
+    [
+     4.92249,
+     49.18326
+    ],
+    [
+     5.06978,
+     49.20065
+    ],
+    [
+     5.24319,
+     49.25778
+    ],
+    [
+     5.31191,
+     49.27135
+    ],
+    [
+     5.43257,
+     49.26948
+    ],
+    [
+     5.47509,
+     49.24033
+    ],
+    [
+     5.52005,
+     49.1859
+    ],
+    [
+     5.57048,
+     49.14949
+    ],
+    [
+     5.56887,
+     49.12714
+    ],
+    [
+     5.58902,
+     49.11256
+    ],
+    [
+     5.62342,
+     49.06117
+    ],
+    [
+     5.62174,
+     48.98276
+    ],
+    [
+     5.51992,
+     48.90154
+    ],
+    [
+     5.54621,
+     48.88538
+    ],
+    [
+     5.69821,
+     48.87543
+    ],
+    [
+     5.87312,
+     48.9123
+    ],
+    [
+     5.96756,
+     48.92483
+    ],
+    [
+     6.20277,
+     48.91599
+    ],
+    [
+     6.22555,
+     48.90824
+    ],
+    [
+     6.28386,
+     48.86568
+    ],
+    [
+     6.29401,
+     48.83311
+    ],
+    [
+     6.35035,
+     48.79338
+    ],
+    [
+     6.48507,
+     48.74956
+    ],
+    [
+     6.5193,
+     48.72594
+    ],
+    [
+     6.54867,
+     48.72071
+    ],
+    [
+     6.65447,
+     48.66229
+    ],
+    [
+     6.72112,
+     48.64449
+    ],
+    [
+     6.75299,
+     48.64335
+    ],
+    [
+     6.82711,
+     48.58873
+    ],
+    [
+     6.85789,
+     48.57497
+    ],
+    [
+     6.90039,
+     48.57341
+    ],
+    [
+     6.94806,
+     48.53374
+    ],
+    [
+     6.97804,
+     48.41743
+    ],
+    [
+     7.02237,
+     48.36657
+    ],
+    [
+     7.04389,
+     48.30108
+    ],
+    [
+     7.0897,
+     48.267
+    ],
+    [
+     7.1286,
+     48.20642
+    ],
+    [
+     7.12012,
+     48.08004
+    ],
+    [
+     7.06242,
+     47.9977
+    ],
+    [
+     7.05825,
+     47.95839
+    ],
+    [
+     7.142,
+     47.86356
+    ],
+    [
+     7.11883,
+     47.69509
+    ],
+    [
+     7.1526,
+     47.65426
+    ],
+    [
+     7.1675,
+     47.61696
+    ],
+    [
+     7.16595,
+     47.51386
+    ]
+   ]
+  },
+  {
+   "id": "WFL_1917_1918",
+   "name": "Western Front, March 1917 to March 1918",
+   "kind": "Front line",
+   "lineDate": "1918-02-01",
+   "showFrom": "1917-03-16",
+   "showTo": "1918-03-20",
+   "description": "The front after the German withdrawal to the Hindenburg Line (16 March to early April 1917), as the source map shows it in February 1918, before the German spring offensive of 21 March 1918. The 1917 battles of Arras, Messines, Passchendaele and Cambrai moved parts of it by up to about 10 km, so for spring to December 1917 it is approximate. A US Army map of the front on 21 March 1918 (Truman Library M549) agrees with it to within about 3 km.",
+   "source": {
+    "title": "The Western Theatre of the European War, 1918 edition, by Prof. B. Barrecchia, published by the Société Editrice Géographique, Paris (scale 1:500,000)",
+    "holder": "Harry S. Truman Library & Museum, M1236",
+    "url": "https://www.trumanlibrary.gov/maps/m1236-map-front-line-movement-and-areas-allied-occupation",
+    "image": "https://www.trumanlibrary.gov/sites/default/files/maps/M1236.jpg",
+    "rights": "Public domain (Truman Library: unrestricted); published 1918, out of copyright in the US"
+   },
+   "sourceLine": "solid blue: Second line after the campaigns in Flanders, Artois, Picardy, etc. Front line, February 1918",
+   "method": "trace_m1236.py 1.0: the line's ink colour masked on the 3036 x 3401 px image of M1236, followed by a least-cost path through waypoints set on the ink, georeferenced with a 2nd-order polynomial from 23 town control points, simplified to 500 m (ETRS89-LAEA).",
+   "controlPoints": {
+    "pixels": {
+     "Brussels": [
+      1072,
+      883
+     ],
+     "Namur": [
+      1309,
+      1156
+     ],
+     "Verdun": [
+      1594,
+      2073
+     ],
+     "Reims": [
+      950,
+      2025
+     ],
+     "Metz": [
+      1970,
+      2080
+     ],
+     "Nancy": [
+      1985,
+      2410
+     ],
+     "Antwerpen": [
+      1100,
+      600
+     ],
+     "Gent": [
+      765,
+      742
+     ],
+     "Paris": [
+      175,
+      2320
+     ],
+     "Arras": [
+      300,
+      1305
+     ],
+     "Saint-Quentin": [
+      585,
+      1615
+     ],
+     "Soissons": [
+      588,
+      1966
+     ],
+     "Chalons-en-Champagne": [
+      1140,
+      2242
+     ],
+     "Luxembourg": [
+      1955,
+      1715
+     ],
+     "Maastricht": [
+      1688,
+      876
+     ],
+     "Troyes": [
+      1020,
+      2710
+     ],
+     "Epinal": [
+      2125,
+      2750
+     ],
+     "Strasbourg": [
+      2730,
+      2435
+     ],
+     "Oostende": [
+      390,
+      628
+     ],
+     "Ieper": [
+      402,
+      903
+     ],
+     "Albert": [
+      280,
+      1500
+     ],
+     "Noyon": [
+      462,
+      1812
+     ],
+     "Saint-Mihiel": [
+      1688,
+      2256
+     ]
+    },
+    "lonLat": {
+     "Brussels": [
+      4.34878,
+      50.85045
+     ],
+     "Namur": [
+      4.86746,
+      50.4669
+     ],
+     "Verdun": [
+      5.3829,
+      49.15964
+     ],
+     "Reims": [
+      4.02853,
+      49.26526
+     ],
+     "Metz": [
+      6.17269,
+      49.11911
+     ],
+     "Nancy": [
+      6.18496,
+      48.68439
+     ],
+     "Antwerpen": [
+      4.40026,
+      51.22047
+     ],
+     "Gent": [
+      3.71667,
+      51.05
+     ],
+     "Paris": [
+      2.3488,
+      48.85341
+     ],
+     "Arras": [
+      2.78186,
+      50.29301
+     ],
+     "Saint-Quentin": [
+      3.28757,
+      49.84889
+     ],
+     "Soissons": [
+      3.32361,
+      49.38167
+     ],
+     "Chalons-en-Champagne": [
+      4.36724,
+      48.95393
+     ],
+     "Luxembourg": [
+      6.13268,
+      49.60982
+     ],
+     "Maastricht": [
+      5.68889,
+      50.84833
+     ],
+     "Troyes": [
+      4.08524,
+      48.30073
+     ],
+     "Epinal": [
+      6.45304,
+      48.18324
+     ],
+     "Strasbourg": [
+      7.74553,
+      48.58392
+     ],
+     "Oostende": [
+      2.927,
+      51.21551
+     ],
+     "Ieper": [
+      2.88569,
+      50.85114
+     ],
+     "Albert": [
+      2.65096,
+      50.00091
+     ],
+     "Noyon": [
+      3.0,
+      49.58333
+     ],
+     "Saint-Mihiel": [
+      5.55099,
+      48.88746
+     ]
+    },
+    "lonLatSource": "GeoNames (CC BY 4.0)",
+    "imageSize": [
+     3036,
+     3401
+    ]
+   },
+   "accuracy": {
+    "rmsKm": 2.5,
+    "worstLeaveOneOutKm": 7.1,
+    "note": "Good at Europe or region scale; not for village-level zoom."
+   },
+   "check": {
+    "against": "Truman Library M549: front lines as of 21 March 1918, annotated by Map Room, G-3, GHQ, AEF (1:600,000)",
+    "medianKm": 3.2,
+    "p90Km": 5.4,
+    "maxKm": 7.6,
+    "where": "Laon to the Vosges, inside the area of M549's 11 control points"
+   },
+   "coordinates": [
+    [
+     2.79778,
+     51.12554
+    ],
+    [
+     2.85436,
+     51.12075
+    ],
+    [
+     2.90633,
+     51.08135
+    ],
+    [
+     2.93042,
+     51.00345
+    ],
+    [
+     2.92957,
+     50.95077
+    ],
+    [
+     2.97735,
+     50.92246
+    ],
+    [
+     3.02559,
+     50.92048
+    ],
+    [
+     3.06696,
+     50.88668
+    ],
+    [
+     3.06592,
+     50.83397
+    ],
+    [
+     3.00181,
+     50.78202
+    ],
+    [
+     2.98031,
+     50.67396
+    ],
+    [
+     2.85426,
+     50.59342
+    ],
+    [
+     2.84212,
+     50.53795
+    ],
+    [
+     2.81857,
+     50.52291
+    ],
+    [
+     2.8181,
+     50.50761
+    ],
+    [
+     2.85315,
+     50.48776
+    ],
+    [
+     2.86815,
+     50.43335
+    ],
+    [
+     2.91752,
+     50.40358
+    ],
+    [
+     2.92108,
+     50.38545
+    ],
+    [
+     2.94333,
+     50.36154
+    ],
+    [
+     2.94611,
+     50.2153
+    ],
+    [
+     2.98287,
+     50.1898
+    ],
+    [
+     3.01804,
+     50.17685
+    ],
+    [
+     3.10566,
+     50.16186
+    ],
+    [
+     3.13844,
+     50.14195
+    ],
+    [
+     3.19306,
+     50.14125
+    ],
+    [
+     3.22361,
+     50.11856
+    ],
+    [
+     3.22461,
+     49.9582
+    ],
+    [
+     3.2673,
+     49.88648
+    ],
+    [
+     3.2937,
+     49.86799
+    ],
+    [
+     3.30036,
+     49.8344
+    ],
+    [
+     3.36728,
+     49.78741
+    ],
+    [
+     3.39504,
+     49.7563
+    ],
+    [
+     3.39067,
+     49.57192
+    ],
+    [
+     3.49563,
+     49.49911
+    ],
+    [
+     3.58836,
+     49.46695
+    ],
+    [
+     3.69928,
+     49.45543
+    ],
+    [
+     3.95811,
+     49.44828
+    ],
+    [
+     4.04277,
+     49.38801
+    ],
+    [
+     4.10829,
+     49.32663
+    ],
+    [
+     4.10667,
+     49.30286
+    ],
+    [
+     4.17504,
+     49.25398
+    ],
+    [
+     4.48543,
+     49.19313
+    ],
+    [
+     4.92249,
+     49.18326
+    ],
+    [
+     5.06978,
+     49.20065
+    ],
+    [
+     5.24319,
+     49.25778
+    ],
+    [
+     5.31191,
+     49.27135
+    ],
+    [
+     5.43257,
+     49.26948
+    ],
+    [
+     5.47509,
+     49.24033
+    ],
+    [
+     5.52005,
+     49.1859
+    ],
+    [
+     5.57048,
+     49.14949
+    ],
+    [
+     5.56887,
+     49.12714
+    ],
+    [
+     5.58902,
+     49.11256
+    ],
+    [
+     5.62342,
+     49.06117
+    ],
+    [
+     5.62174,
+     48.98276
+    ],
+    [
+     5.51992,
+     48.90154
+    ],
+    [
+     5.54621,
+     48.88538
+    ],
+    [
+     5.69821,
+     48.87543
+    ],
+    [
+     5.87312,
+     48.9123
+    ],
+    [
+     5.96756,
+     48.92483
+    ],
+    [
+     6.20277,
+     48.91599
+    ],
+    [
+     6.22555,
+     48.90824
+    ],
+    [
+     6.28386,
+     48.86568
+    ],
+    [
+     6.29401,
+     48.83311
+    ],
+    [
+     6.36263,
+     48.78736
+    ],
+    [
+     6.48507,
+     48.74956
+    ],
+    [
+     6.5193,
+     48.72594
+    ],
+    [
+     6.54867,
+     48.72071
+    ],
+    [
+     6.65447,
+     48.66229
+    ],
+    [
+     6.72112,
+     48.64449
+    ],
+    [
+     6.75299,
+     48.64335
+    ],
+    [
+     6.82711,
+     48.58873
+    ],
+    [
+     6.85789,
+     48.57497
+    ],
+    [
+     6.90039,
+     48.57341
+    ],
+    [
+     6.94231,
+     48.54097
+    ],
+    [
+     6.95932,
+     48.51647
+    ],
+    [
+     6.97804,
+     48.41743
+    ],
+    [
+     7.02237,
+     48.36657
+    ],
+    [
+     7.04389,
+     48.30108
+    ],
+    [
+     7.0897,
+     48.267
+    ],
+    [
+     7.1286,
+     48.20642
+    ],
+    [
+     7.12012,
+     48.08004
+    ],
+    [
+     7.06242,
+     47.9977
+    ],
+    [
+     7.05825,
+     47.95839
+    ],
+    [
+     7.142,
+     47.86356
+    ],
+    [
+     7.11883,
+     47.69509
+    ],
+    [
+     7.1526,
+     47.65426
+    ],
+    [
+     7.1675,
+     47.61696
+    ],
+    [
+     7.16595,
+     47.51386
+    ]
+   ]
+  },
   {
    "id": "WFL_1918_11_11",
    "name": "Western Front at the Armistice",
@@ -601,7 +2384,8 @@
      7.20124,
      47.5327
     ]
-   ]
+   ],
+   "kind": "Front line"
   }
  ]
 }
