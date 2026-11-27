@@ -20,7 +20,7 @@
 
 Left out: the attack on Namema (June 1916), because its location couldn't be confirmed.
 
-## Western Front lines (`western-front-lines.json`, data 0.3.0)
+## Western Front lines (`western-front-lines.json`, data 0.4.0)
 
 | Line | Shows (time slider) | Source | Rights | Accuracy |
 |---|---|---|---|---|
@@ -34,6 +34,10 @@ Left out: the attack on Namema (June 1916), because its location couldn't be con
 | WFL_1918_07_30 | 30 Jul to 19 Aug 1918 | M562, July 30, 1918 (the control-point map) | as above | as above |
 | WFL_1918_08_20 | 20 Aug to 9 Sep 1918 | M564, August 20, 1918 | as above | as above |
 | WFL_1918_09_10 | 10 to 19 Sep 1918 | M566, September 10, 1918 | as above | as above |
+| WFL_1918_09_20 | 20 to 29 Sep 1918 | M567, September 20, 1918 | as above | as above |
+| WFL_1918_09_30 | 30 Sep to 9 Oct 1918 | M568, September 30, 1918 | as above | as above |
+| WFL_1918_10_10 | 10 to 19 Oct 1918 | M569, October 10, 1918 | as above | as above |
+| WFL_1918_10_20 | 20 to 29 Oct 1918 | M570, October 20, 1918 | as above | as above |
 | WFL_1918_10_30 | 30 Oct to 10 Nov 1918 | M571, October 30, 1918 | as above | as above |
 | WFL_1918_11_11, the Armistice | 11 Nov 1918 | Order of Battle on Western Front, 11 A.M., Nov. 11, 1918, G-3, GHQ, AEF. LOC g5701s.ct004277 | US government work: public domain in the US | Control-point RMS 3.6 km; worst leave-one-out about 11 km |
 
@@ -45,10 +49,10 @@ Known limits:
 - WFL_1914_09: the source's line runs off its western edge north-east of Paris, so the part to the sea isn't shown. Around Verdun the source line also takes in the 1916 advance.
 - WFL_1914_1917: near Ypres the source shows only the later line, so this line runs about 10 km east of Ypres (the 1917 Passchendaele gains), where the 1915–16 front was 3 to 4 km away. Ypres 1915, Verdun 1916 and Somme 1916 changes are not shown.
 - WFL_1917_1918: for spring to December 1917 it is approximate; Arras, Messines, Passchendaele and Cambrai moved parts of it.
-- 1918 series (M557 to M571): each map's date is handwritten on it and matches the Truman catalogue. Each line shows from its map's date to the day before the next map used; WFL_1918_09_10 shows for ten days (the series' spacing) because the maps of 20 September to 20 October (probably M567 to M570) aren't traced yet.
-- 1918 series coverage: M557 and M559 stop near Albert and M560 just west of Château-Thierry (the front north of there is missing); M566 stops west of Cambrai; M561 and M564 stop in the Vosges short of the Swiss border; M571 stops east of the Moselle. M561, M562 and M564 start near Diksmuide, so only the last stretch to the sea is missing. Each line's Description says so.
-- 1918 series check: where the front did not move between February and September 1918 (Champagne, Lorraine, Vosges), each line is within a median 1.4 to 2.0 km of WFL_1917_1918 (90% within 2.7 to 4.7 km; max 6.4 km). M571 is within a median 2.0 km of the Armistice line in the Woëvre, where the front did not move after 16 September.
+- 1918 series (M557 to M571): each map's date is handwritten on it (M557 to M566 and M571 also match the Truman catalogue; M567 to M570 are dated 20 Sep, 30 Sep, 10 Oct and 20 Oct on the maps). Each line shows from its map's date to the day before the next map used. M556, M558, M563 and M565 are not used yet (dates not checked).
+- 1918 series coverage: M557 and M559 stop near Albert and M560 just west of Château-Thierry (the front north of there is missing); M566 and M567 stop west of Cambrai, M568 at Cambrai, M569 just north of Cambrai and M570 south-west of Valenciennes; M561, M564 and M568 stop in the Vosges short of the Swiss border; M571 stops east of the Moselle. M561, M562 and M564 start near Diksmuide, so only the last stretch to the sea is missing. Each line's Description says so.
+- 1918 series check: where the front did not move between February and September 1918 (Champagne, Lorraine, Vosges), each line is within a median 1.4 to 2.0 km of WFL_1917_1918 (90% within 2.7 to 4.7 km; max 6.4 km). M567 to M571 are within a median 0.9 to 2.4 km of the Armistice line in the Woëvre, where the front did not move after 16 September.
 - 1918 series: the front line is the black ink; the coloured bands show which army held each sector (not used).
-- Not yet traced: the German offensives of 21 March to 9 June 1918 (M608 and M1236 have the furthest advances; M556 may be a date in that period), and 20 September to 29 October 1918 (M567 to M570).
+- Not yet traced: the German offensives of 21 March to 9 June 1918 (M608 and M1236 have the furthest advances; M556 may be a date in that period),.
 
-`trace_armistice.py` (1.0), `trace_m1236.py` (1.0) and `trace_truman_1918.py` (1.0) re-trace the lines from the source images and reproduce the stored coordinates. The 1918 series images: https://www.trumanlibrary.gov/sites/default/files/maps/M557.jpg (and M559, M560, M561, M562, M564, M566, M571); their record pages are not on the Truman site.
+`trace_armistice.py` (1.0), `trace_m1236.py` (1.0) and `trace_truman_1918.py` (1.1) re-trace the lines from the source images and reproduce the stored coordinates. The 1918 series images: https://www.trumanlibrary.gov/sites/default/files/maps/M557.jpg (and M559 to M562, M564, M566 to M571); their record pages are not on the Truman site.
