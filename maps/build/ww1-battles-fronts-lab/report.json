@@ -2,10 +2,10 @@
  "tool": "Map builder 1.9",
  "spec": "maps/specs/ww1-battles-fronts-lab.json",
  "specId": "ww1-battles-fronts-lab",
- "specVersion": "0.4.0",
- "built": "2026-11-27T15:30:31Z",
- "webmapFingerprint": "68168c668fb1595c2c39660c0b668e19ad75bd2d",
- "itemFingerprint": "efc3b9caa578331b8725f4f71324b0d923b88cb9",
+ "specVersion": "0.5.0",
+ "built": "2026-11-27T15:58:27Z",
+ "webmapFingerprint": "6dfe2a6073f0773d522c0a9147190e694645b15c",
+ "itemFingerprint": "f40af25247f08851ef6d1e3ebf2e4df8d4315016",
  "checked": [
   "basemap is public and not CARTO",
   "every source layer is readable and every field the spec uses exists",
@@ -15,9 +15,9 @@
  "tested": {
   "tool": "Map test 1.2",
   "sdk": "5.2",
-  "when": "2026-11-27T15:33:05Z",
+  "when": "2026-11-27T16:01:14Z",
   "timeZone": "America/Chicago",
-  "webmapFingerprint": "68168c668fb1595c2c39660c0b668e19ad75bd2d",
+  "webmapFingerprint": "6dfe2a6073f0773d522c0a9147190e694645b15c",
   "pass": true,
   "checks": [
    {
@@ -56,7 +56,22 @@
     "failures": []
    },
    {
-    "name": "jun-1918-gap",
+    "name": "apr-1918-gap",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "jun-1918",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "aug-1918",
+    "pass": true,
+    "failures": []
+   },
+   {
+    "name": "oct-1918-gap",
     "pass": true,
     "failures": []
    },
