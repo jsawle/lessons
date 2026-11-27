@@ -250,6 +250,7 @@
    "layerType": "ArcGISFeatureLayer",
    "visibility": true,
    "opacity": 1,
+   "showLabels": true,
    "timeAnimation": true,
    "layerDefinition": {
     "drawingInfo": {
@@ -288,7 +289,41 @@
         }
        }
       ]
-     }
+     },
+     "labelingInfo": [
+      {
+       "labelExpressionInfo": {
+        "expression": "$feature.Name"
+       },
+       "labelPlacement": "esriServerLinePlacementAboveAlong",
+       "symbol": {
+        "type": "esriTS",
+        "color": [
+         127,
+         0,
+         0,
+         255
+        ],
+        "font": {
+         "family": "Noto Sans",
+         "size": 9,
+         "weight": "bold"
+        },
+        "horizontalAlignment": "center",
+        "verticalAlignment": "baseline",
+        "haloColor": [
+         255,
+         255,
+         255,
+         230
+        ],
+        "haloSize": 1.5
+       },
+       "minScale": 0,
+       "maxScale": 0,
+       "repeatLabel": false
+      }
+     ]
     },
     "timeInfo": {
      "startTimeField": "ShowFrom",
