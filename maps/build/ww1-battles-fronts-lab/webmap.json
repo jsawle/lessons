@@ -208,10 +208,10 @@
    }
   },
   {
-   "id": "lyr76c1518e4fd",
-   "title": "Western Front at the Armistice, 11 November 1918",
-   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/ww1_western_front_lines_v0_1_0/FeatureServer/0",
-   "itemId": "5669cf738dd24d6d9f4184e84c3516ad",
+   "id": "lyredef4485348",
+   "title": "Western Front",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/ww1_western_front_lines_v0_2_0/FeatureServer/0",
+   "itemId": "7d675f82ed0b40418cf023ba021cdb2b",
    "layerType": "ArcGISFeatureLayer",
    "visibility": true,
    "opacity": 1,
@@ -219,19 +219,40 @@
    "layerDefinition": {
     "drawingInfo": {
      "renderer": {
-      "type": "simple",
-      "symbol": {
-       "type": "esriSLS",
-       "style": "esriSLSSolid",
-       "color": [
-        127,
-        0,
-        0,
-        255
-       ],
-       "width": 3.5
-      },
-      "label": "Front line at 11 a.m., 11 November 1918"
+      "type": "uniqueValue",
+      "field1": "Kind",
+      "uniqueValueInfos": [
+       {
+        "value": "Front line",
+        "label": "Front line",
+        "symbol": {
+         "type": "esriSLS",
+         "style": "esriSLSSolid",
+         "color": [
+          127,
+          0,
+          0,
+          255
+         ],
+         "width": 3.5
+        }
+       },
+       {
+        "value": "Furthest advance",
+        "label": "Furthest German advance, September 1914",
+        "symbol": {
+         "type": "esriSLS",
+         "style": "esriSLSDash",
+         "color": [
+          127,
+          0,
+          0,
+          255
+         ],
+         "width": 3
+        }
+       }
+      ]
      }
     },
     "timeInfo": {
@@ -248,11 +269,19 @@
     "popupElements": [
      {
       "type": "text",
-      "text": "<p>{Description}</p><p><i>{AccuracyNote}</i></p><p>Source: <a href='{SourceUrl}' target='_blank' rel='nofollow ugc noopener noreferrer'>{Source}</a></p>"
+      "text": "<p><b>Shown on the map: {expression/when}</b></p><p>{Description}</p><p><i>{AccuracyNote}</i></p><p>Source: <a href='{SourceUrl}' target='_blank' rel='nofollow ugc noopener noreferrer'>{Source}</a></p>"
      }
     ],
     "showAttachments": false,
-    "fieldInfos": []
+    "fieldInfos": [],
+    "expressionInfos": [
+     {
+      "name": "when",
+      "title": "When shown",
+      "returnType": "string",
+      "expression": "function fmt(d) {\n  if (IsEmpty(d)) { return ''; }\n  var t = TypeOf(d);\n  if (t == 'Date') { return Text(ToUTC(d), 'MMMM D, Y'); }\n  if (t == 'DateOnly') { return Text(d, 'MMMM D, Y'); }\n  var p = Split(d, '-');\n  var m = ['January','February','March','April','May','June','July','August','September','October','November','December'];\n  return m[Number(p[1]) - 1] + ' ' + Text(Number(p[2])) + ', ' + p[0];\n}\nvar fa = fmt($feature.ShowFrom); var fb = fmt($feature.ShowTo);\nreturn IIf(fa == fb, fa, fa + ' to ' + fb);"
+     }
+    ]
    }
   }
  ],
@@ -285,7 +314,7 @@
   "latestWkid": 3857
  },
  "authoringApp": "Map builder",
- "authoringAppVersion": "1.7",
+ "authoringAppVersion": "1.8",
  "version": "2.38",
  "initialState": {
   "viewpoint": {

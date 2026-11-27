@@ -1,12 +1,20 @@
 {
- "tool": "Map test 1.1",
+ "tool": "Map test 1.2",
  "timeZone": "America/Chicago",
  "sdk": "ArcGIS Maps SDK for JavaScript 5.2",
- "webmapFingerprint": "1ec6c633fdfddc634442bda6523591ef214556a6",
+ "webmapFingerprint": "d760f54645aab3468c15ab0a7bba758c39daca21",
  "results": [
   {
    "name": "aug-1914",
    "question": "August 1914: the war begins in Belgium and in Togoland and Kamerun",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "sep-1914",
+   "question": "September 1914: the furthest German advance before the Marne",
    "pass": true,
    "failures": [],
    "popup": null,
@@ -37,12 +45,36 @@
    "legend": null
   },
   {
+   "name": "jul-1916-front",
+   "question": "July 1916: the front from late 1914 is in place during the Somme",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "jul-1917",
+   "question": "July 1917: the front after the withdrawal to the Hindenburg Line",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "jun-1918-gap",
+   "question": "June 1918: no front line yet for the 1918 offensives",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
    "name": "armistice",
    "question": "11 November 1918: the Armistice, while fighting goes on in Africa",
    "pass": true,
    "failures": [],
    "popup": null,
-   "legend": "Western Front at the Armistice, 11 November 1918\n\tFront line at 11 a.m., 11 November 1918\nFighting this month\n\tBattle, siege or raid\n\n\tCapture or surrender\n\n\tRising against colonial rule\nFighting in earlier months\n\tFighting in an earlier month"
+   "legend": "Western Front\n\tFront line\n\n\tFurthest German advance, September 1914\nFighting this month\n\tBattle, siege or raid\n\n\tCapture or surrender\n\n\tRising against colonial rule\nFighting in earlier months\n\tFighting in an earlier month"
   },
   {
    "name": "tanga-popup",
@@ -50,6 +82,14 @@
    "pass": true,
    "failures": [],
    "popup": "Battle of Tanga\n\nNovember 3, 1914 to November 5, 1914\n\nBritish-Indian amphibious landing at the port of Tanga is defeated by a much smaller German force.\n\nFought between Britain, India and Germany.\n\nAfrica — East and Central Africa. Shown at: Tanga.\n\nSource: National Army Museum, First World War timeline data (ww1.nam.ac.uk); 1914-1918-online — Tanga, Battle of\n\nLab note: verified",
+   "legend": null
+  },
+  {
+   "name": "front-popup",
+   "question": "Open the 1917 to 1918 front",
+   "pass": true,
+   "failures": [],
+   "popup": "Western Front, March 1917 to March 1918\n\nShown on the map: March 16, 1917 to March 20, 1918\n\nThe front after the German withdrawal to the Hindenburg Line (16 March to early April 1917), as the source map shows it in February 1918, before the German spring offensive of 21 March 1918. The 1917 battles of Arras, Messines, Passchendaele and Cambrai moved parts of it by up to about 10 km, so for spring to December 1917 it is approximate. A US Army map of the front on 21 March 1918 (Truman Library M549) agrees with it to within about 3 km.\n\nGood at Europe or region scale; not for village-level zoom.\n\nSource: The Western Theatre of the European War, 1918 edition, by Prof. B. Barrecchia, published by the Société Editrice Géographique, Paris (scale 1:500,000). Harry S. Truman Library & Museum, M1236",
    "legend": null
   }
  ]
