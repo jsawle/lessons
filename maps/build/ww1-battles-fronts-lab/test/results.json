@@ -2,7 +2,7 @@
  "tool": "Map test 1.2",
  "timeZone": "America/Chicago",
  "sdk": "ArcGIS Maps SDK for JavaScript 5.2",
- "webmapFingerprint": "68168c668fb1595c2c39660c0b668e19ad75bd2d",
+ "webmapFingerprint": "6dfe2a6073f0773d522c0a9147190e694645b15c",
  "results": [
   {
    "name": "aug-1914",
@@ -61,8 +61,32 @@
    "legend": null
   },
   {
-   "name": "jun-1918-gap",
-   "question": "June 1918: no front line yet for the 1918 offensives",
+   "name": "apr-1918-gap",
+   "question": "April 1918: no front line yet for the German spring offensives",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "jun-1918",
+   "question": "June 1918: the front after the German offensives, bulging towards Amiens and the Marne",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "aug-1918",
+   "question": "August 1918: the front on 30 July, after the Germans were pushed back from the Marne",
+   "pass": true,
+   "failures": [],
+   "popup": null,
+   "legend": null
+  },
+  {
+   "name": "oct-1918-gap",
+   "question": "October 1918: no front line yet for 20 September to 29 October",
    "pass": true,
    "failures": [],
    "popup": null,
