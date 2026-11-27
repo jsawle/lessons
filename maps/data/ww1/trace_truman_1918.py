@@ -1,23 +1,25 @@
 #!/usr/bin/env python3
-"""Truman 1918 line trace 1.0: re-traces eight dated Western Front lines of June to October 1918 from the Truman
+"""Truman 1918 line trace 1.1: re-traces twelve dated Western Front lines of June to October 1918 from the Truman
 Library series "Length of front occupied by Belgian, French, British and American forces" (Map Room, G-3, General
 Headquarters, American Expeditionary Forces; 1:600,000; public domain).
 
   WFL_1918_06_10  M557  June 10, 1918        WFL_1918_07_30  M562  July 30, 1918
   WFL_1918_06_28  M559  June 28, 1918        WFL_1918_08_20  M564  August 20, 1918
   WFL_1918_07_10  M560  July 10, 1918        WFL_1918_09_10  M566  September 10, 1918
-  WFL_1918_07_20  M561  July 20, 1918        WFL_1918_10_30  M571  October 30, 1918
+  WFL_1918_07_20  M561  July 20, 1918        WFL_1918_09_20  M567  September 20, 1918 (1.1)
+  WFL_1918_09_30  M568  Sept. 30, 1918 (1.1)  WFL_1918_10_10  M569  October 10, 1918 (1.1)
+  WFL_1918_10_20  M570  Oct. 20, 1918 (1.1)   WFL_1918_10_30  M571  October 30, 1918
 
-How: all eight maps are drawn on the same printed base map. M562 is placed on the ground with an affine fit from 29
+How: all twelve maps are drawn on the same printed base map. M562 is placed on the ground with an affine fit from 29
 town control points (pixels below, positions from GeoNames in western-front-lines.json); each other map is matched to
 M562 by SIFT features on the base map and a 2nd-order polynomial through the matches. On each map the front is a black
 ink line along a coloured band; dark, grey pixels are masked as ink and a least-cost path follows the ink from the
 line's top-left end to its bottom-right end. Simplified to 500 m in ETRS89-LAEA.
 
   python3 maps/data/ww1/trace_truman_1918.py DIR            print the result for each line
-  python3 maps/data/ww1/trace_truman_1918.py DIR --write    also replace the eight lines' coordinates
+  python3 maps/data/ww1/trace_truman_1918.py DIR --write    also replace the twelve lines' coordinates
 
-DIR holds the images as M557.jpg ... M571.jpg (or .png), from
+DIR holds the images as M557.jpg ... M571.jpg (M557, M559, M560, M561, M562, M564, M566 to M571) (or .png), from
 https://www.trumanlibrary.gov/sites/default/files/maps/M557.jpg (and so on). The script refuses an image of another size.
 Needs: numpy, opencv-python (4.4 or later, for SIFT), scikit-image, shapely, pyproj.
 """
@@ -28,12 +30,14 @@ from skimage.graph import route_through_array
 from shapely.geometry import LineString
 from pyproj import Transformer
 
-VERSION = "1.0"
+VERSION = "1.1"
 HERE = Path(__file__).resolve().parent
 REF = "M562"
 MAPS = {"WFL_1918_06_10": ("M557", (2096, 1543)), "WFL_1918_06_28": ("M559", (2109, 1536)), "WFL_1918_07_10": ("M560", (1744, 1528)),
         "WFL_1918_07_20": ("M561", (2039, 1840)), "WFL_1918_07_30": ("M562", (2147, 2097)), "WFL_1918_08_20": ("M564", (1963, 2049)),
-        "WFL_1918_09_10": ("M566", (1727, 1529)), "WFL_1918_10_30": ("M571", (1310, 1433))}
+        "WFL_1918_09_10": ("M566", (1727, 1529)), "WFL_1918_09_20": ("M567", (1726, 1518)),
+        "WFL_1918_09_30": ("M568", (1766, 1349)), "WFL_1918_10_10": ("M569", (1742, 1543)), "WFL_1918_10_20": ("M570", (1572, 1532)),
+        "WFL_1918_10_30": ("M571", (1310, 1433))}
 
 
 def load(d, mid, size):

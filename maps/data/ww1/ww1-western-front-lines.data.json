@@ -1,10 +1,10 @@
 {
  "format": "Data publish 1.0",
  "id": "ww1-western-front-lines",
- "version": "0.3.0",
- "file": "maps/data/build/ww1/ww1-western-front-lines-v0_3_0.geojson",
- "expectFeatures": 12,
- "note": "LAB layer (pilot). Built by maps/data/ww1/build.py (1.2) from western-front-lines.json. 0.3.0 adds eight dated lines of June to October 1918 traced from the Truman Library series 'Length of front occupied by Belgian, French, British and American forces' (M557, M559, M560, M561, M562, M564, M566, M571; trace_truman_1918.py 1.0). Still missing: 21 March to 9 June 1918 (the German spring offensives), and 20 September to 29 October 1918.",
+ "version": "0.4.0",
+ "file": "maps/data/build/ww1/ww1-western-front-lines-v0_4_0.geojson",
+ "expectFeatures": 16,
+ "note": "LAB layer (pilot). Built by maps/data/ww1/build.py (1.2) from western-front-lines.json. 0.3.0 added eight dated lines of June to October 1918 traced from the Truman Library series 'Length of front occupied by Belgian, French, British and American forces' (M557, M559, M560, M561, M562, M564, M566, M571; trace_truman_1918.py 1.0). 0.4.0 adds 20 September, 30 September, 10 October and 20 October 1918 (M567 to M570; trace_truman_1918.py 1.1). Still missing: 21 March to 9 June 1918 (the German spring offensives).",
  "checks": [
   {
    "name": "Armistice line dated 11 November 1918",
@@ -70,7 +70,7 @@
    }
   },
   {
-   "name": "10 September 1918 front shows for ten days",
+   "name": "10 September 1918 front shows until the 20 September map",
    "where": {
     "LineId": "WFL_1918_09_10"
    },
@@ -88,12 +88,23 @@
     "ShowFrom": "1918-10-30",
     "ShowTo": "1918-11-10"
    }
+  },
+  {
+   "name": "10 October 1918 front shows until the 20 October map",
+   "where": {
+    "LineId": "WFL_1918_10_10"
+   },
+   "expect": {
+    "Kind": "Front line",
+    "ShowFrom": "1918-10-10",
+    "ShowTo": "1918-10-19"
+   }
   }
  ],
  "item": {
-  "title": "LAB: Western Front lines, First World War (data for lessons) v0.3",
-  "snippet": "Test layer: dated Western Front lines traced from public-domain maps, for the time slider: September 1914, 1914 to 1917, 1917 to 1918, eight dates from June to October 1918, and the Armistice. Draft.",
-  "description": "<p><b>Test layer.</b> Western Front lines, each with the dates it shows: the furthest German advance in September 1914 (before the Battle of the Marne), the front from late 1914 to March 1917, the front from March 1917 (after the German withdrawal to the Hindenburg Line) to March 1918, the front on eight dates from 10 June to 30 October 1918, and the front at 11 a.m. on 11 November 1918. Not in this version: the German offensives of 21 March to early June 1918, and 20 September to 29 October 1918.</p><p><b>For the time slider:</b> use ShowFrom as the start field and ShowTo as the end field. Kind tells front lines from the furthest-advance line. Each line's Description says what it shows and what it leaves out: several of the 1918 source maps stop before the sea or the Swiss border.</p><p><b>How they were made:</b> traced from the lines on the source maps and placed on the ground using towns. Usually within about 2 to 4 km of the source maps' lines (AccuracyKm), so they suit maps of Europe or a region, not close-up maps of villages. A US Army map of the front on 21 March 1918 agrees with the March 1917 to March 1918 line to within about 3 km, and where the front did not move in 1918 the 1918 lines agree with it to within about 2 km.</p><p><b>Sources:</b> The Western Theatre of the European War, 1918 edition, by B. Barrecchia, Société Editrice Géographique, Paris (Harry S. Truman Library &amp; Museum, M1236). Length of front occupied by Belgian, French, British and American forces, June to October 1918, Map Room, G-3, GHQ, American Expeditionary Forces (Truman Library, M557, M559, M560, M561, M562, M564, M566, M571). Order of Battle on Western Front, 11 A.M., Nov. 11, 1918, G-3, GHQ, AEF (Library of Congress). Checked against front lines as of March 21, 1918, G-3, GHQ, AEF (Truman Library, M549).</p><p><i>Data version 0.3 (27 November 2026), lab draft.</i></p>",
+  "title": "LAB: Western Front lines, First World War (data for lessons) v0.4",
+  "snippet": "Test layer: dated Western Front lines traced from public-domain maps, for the time slider: September 1914, 1914 to 1917, 1917 to 1918, twelve dates from June to October 1918, and the Armistice. Draft.",
+  "description": "<p><b>Test layer.</b> Western Front lines, each with the dates it shows: the furthest German advance in September 1914 (before the Battle of the Marne), the front from late 1914 to March 1917, the front from March 1917 (after the German withdrawal to the Hindenburg Line) to March 1918, the front on twelve dates, about ten days apart, from 10 June to 30 October 1918, and the front at 11 a.m. on 11 November 1918. Not in this version: the German offensives of 21 March to early June 1918.</p><p><b>For the time slider:</b> use ShowFrom as the start field and ShowTo as the end field. Kind tells front lines from the furthest-advance line. Each line's Description says what it shows and what it leaves out: several of the 1918 source maps stop before the sea or the Swiss border.</p><p><b>How they were made:</b> traced from the lines on the source maps and placed on the ground using towns. Usually within about 2 to 4 km of the source maps' lines (AccuracyKm), so they suit maps of Europe or a region, not close-up maps of villages. A US Army map of the front on 21 March 1918 agrees with the March 1917 to March 1918 line to within about 3 km, and where the front did not move in 1918 the 1918 lines agree with it to within about 2 km.</p><p><b>Sources:</b> The Western Theatre of the European War, 1918 edition, by B. Barrecchia, Société Editrice Géographique, Paris (Harry S. Truman Library &amp; Museum, M1236). Length of front occupied by Belgian, French, British and American forces, June to October 1918, Map Room, G-3, GHQ, American Expeditionary Forces (Truman Library, M557, M559 to M562, M564, M566 to M571). Order of Battle on Western Front, 11 A.M., Nov. 11, 1918, G-3, GHQ, AEF (Library of Congress). Checked against front lines as of March 21, 1918, G-3, GHQ, AEF (Truman Library, M549).</p><p><i>Data version 0.4 (27 November 2026), lab draft.</i></p>",
   "tags": [
    "Armistice",
    "First World War",
