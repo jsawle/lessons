@@ -4814,7 +4814,7 @@
    "lineDate": "1918-09-10",
    "showFrom": "1918-09-10",
    "showTo": "1918-09-19",
-   "description": "The front on 10 September 1918, two days before the American attack on the St Mihiel salient (12 September). The source map stops west of Cambrai, so the front from there north to the sea is not shown. Shown for ten days, like the other maps in this series; the next map used is 30 October.",
+   "description": "The front on 10 September 1918, two days before the American attack on the St Mihiel salient (12 September). The source map stops west of Cambrai, so the front from there north to the sea is not shown. Shown until the next map in the series, 20 September.",
    "source": {
     "title": "Length of front occupied by Belgian, French, British and American forces, September 10, 1918 (US Army annotations on a French base map, 1:600,000). Map Room, G-3, General Headquarters, American Expeditionary Forces",
     "holder": "Harry S. Truman Library & Museum, M566",
@@ -5168,6 +5168,346 @@
     [
      7.20135,
      47.51046
+    ]
+   ]
+  },
+  {
+   "id": "WFL_1918_09_20",
+   "name": "Western Front, 20 September 1918",
+   "kind": "Front line",
+   "lineDate": "1918-09-20",
+   "showFrom": "1918-09-20",
+   "showTo": "1918-09-29",
+   "description": "The front on 20 September 1918, after the American attack that removed the St Mihiel salient (12 to 16 September) and six days before the Meuse-Argonne offensive (26 September). The source map stops west of Cambrai, so the front from there north to the sea is not shown. Shown for ten days, like the other maps in this series; the next map used is 30 October.",
+   "source": {
+    "title": "Length of front occupied by Belgian, French, British and American forces, September 20, 1918 (US Army annotations on a French base map, 1:600,000). Map Room, G-3, General Headquarters, American Expeditionary Forces",
+    "holder": "Harry S. Truman Library & Museum, M567",
+    "url": "https://www.trumanlibrary.gov/sites/default/files/maps/M567.jpg",
+    "image": "https://www.trumanlibrary.gov/sites/default/files/maps/M567.jpg",
+    "rights": "Public domain (Truman Library: in the public domain and can be used freely); annotated by the US Army in 1918 on a French map published before 1929"
+   },
+   "sourceLine": "black ink line along the coloured bands (Belgian, French, British, American sectors)",
+   "method": "trace_truman_1918.py 1.1: the black front-line ink masked on the Truman Library image, followed by a least-cost path from end to end; M567 matched to M562 (same base map) by SIFT features and a 2nd-order polynomial (RMS under 0.6 px), then placed on the ground with an affine fit from 29 town control points on M562 (RMS 1.8 km), simplified to 500 m (ETRS89-LAEA).",
+   "accuracy": {
+    "rmsKm": 1.8,
+    "worstLeaveOneOutKm": 5.5,
+    "note": "Good at Europe or region scale; not for village-level zoom."
+   },
+   "check": {
+    "against": "WFL_1917_1918 (Truman M1236, checked against M549) where the front did not move between February and September 1918: Champagne (Reims to the Argonne) and Lorraine to the Vosges",
+    "medianKm": 1.7,
+    "p90Km": 3.5,
+    "maxKm": 6.4,
+    "where": "all seven maps from June 10 to September 10; each map's median 1.4 to 2.0 km"
+   },
+   "coordinates": [
+    [
+     3.09519,
+     50.13615
+    ],
+    [
+     3.10609,
+     50.08078
+    ],
+    [
+     3.15365,
+     50.04148
+    ],
+    [
+     3.15521,
+     50.01028
+    ],
+    [
+     3.2384,
+     49.95059
+    ],
+    [
+     3.25223,
+     49.88485
+    ],
+    [
+     3.24477,
+     49.81713
+    ],
+    [
+     3.31175,
+     49.75201
+    ],
+    [
+     3.31858,
+     49.71915
+    ],
+    [
+     3.34939,
+     49.68482
+    ],
+    [
+     3.35031,
+     49.60508
+    ],
+    [
+     3.38004,
+     49.5326
+    ],
+    [
+     3.4081,
+     49.4965
+    ],
+    [
+     3.44617,
+     49.47263
+    ],
+    [
+     3.48363,
+     49.46261
+    ],
+    [
+     3.55445,
+     49.41129
+    ],
+    [
+     3.63407,
+     49.40159
+    ],
+    [
+     3.71153,
+     49.37796
+    ],
+    [
+     3.75393,
+     49.37308
+    ],
+    [
+     3.78092,
+     49.35595
+    ],
+    [
+     3.79267,
+     49.32138
+    ],
+    [
+     3.87825,
+     49.28384
+    ],
+    [
+     3.92587,
+     49.2772
+    ],
+    [
+     4.07308,
+     49.28489
+    ],
+    [
+     4.1827,
+     49.22124
+    ],
+    [
+     4.3928,
+     49.23044
+    ],
+    [
+     4.45891,
+     49.21148
+    ],
+    [
+     4.54824,
+     49.21154
+    ],
+    [
+     4.65304,
+     49.22883
+    ],
+    [
+     4.68756,
+     49.20628
+    ],
+    [
+     4.75322,
+     49.2062
+    ],
+    [
+     4.78755,
+     49.19228
+    ],
+    [
+     4.86371,
+     49.19038
+    ],
+    [
+     4.91344,
+     49.20409
+    ],
+    [
+     4.94758,
+     49.20398
+    ],
+    [
+     4.98972,
+     49.18997
+    ],
+    [
+     5.03434,
+     49.1898
+    ],
+    [
+     5.14714,
+     49.19966
+    ],
+    [
+     5.24411,
+     49.23721
+    ],
+    [
+     5.36229,
+     49.25029
+    ],
+    [
+     5.45423,
+     49.24613
+    ],
+    [
+     5.52506,
+     49.20225
+    ],
+    [
+     5.54334,
+     49.16572
+    ],
+    [
+     5.57212,
+     49.14642
+    ],
+    [
+     5.68972,
+     49.08642
+    ],
+    [
+     5.78608,
+     49.02481
+    ],
+    [
+     5.85384,
+     49.00327
+    ],
+    [
+     5.91616,
+     48.96791
+    ],
+    [
+     6.02829,
+     48.95956
+    ],
+    [
+     6.14005,
+     48.93034
+    ],
+    [
+     6.20457,
+     48.88959
+    ],
+    [
+     6.26962,
+     48.88514
+    ],
+    [
+     6.30556,
+     48.85689
+    ],
+    [
+     6.30511,
+     48.83267
+    ],
+    [
+     6.37436,
+     48.78309
+    ],
+    [
+     6.70567,
+     48.63699
+    ],
+    [
+     6.82728,
+     48.54458
+    ],
+    [
+     6.88111,
+     48.52962
+    ],
+    [
+     6.94458,
+     48.49366
+    ],
+    [
+     6.98989,
+     48.45807
+    ],
+    [
+     6.98733,
+     48.38027
+    ],
+    [
+     7.00197,
+     48.35573
+    ],
+    [
+     7.10252,
+     48.28599
+    ],
+    [
+     7.14207,
+     48.24182
+    ],
+    [
+     7.14376,
+     48.21756
+    ],
+    [
+     7.12487,
+     48.19206
+    ],
+    [
+     7.12114,
+     48.15928
+    ],
+    [
+     7.14789,
+     48.11888
+    ],
+    [
+     7.15126,
+     48.07037
+    ],
+    [
+     7.10363,
+     48.02652
+    ],
+    [
+     7.09324,
+     47.94895
+    ],
+    [
+     7.10733,
+     47.91404
+    ],
+    [
+     7.17369,
+     47.84504
+    ],
+    [
+     7.15378,
+     47.71758
+    ],
+    [
+     7.15588,
+     47.70543
+    ],
+    [
+     7.21968,
+     47.64513
+    ],
+    [
+     7.21807,
+     47.53455
     ]
    ]
   },
