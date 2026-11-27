@@ -245,8 +245,8 @@
   {
    "id": "lyredef4485348",
    "title": "Western Front",
-   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/ww1_western_front_lines_v0_3_0/FeatureServer/0",
-   "itemId": "6f328de685ac4b40ab6b987c9c568898",
+   "url": "https://services4.arcgis.com/HNLEA4GfnbCFQZGa/arcgis/rest/services/ww1_western_front_lines_v0_4_0/FeatureServer/0",
+   "itemId": "fc8634c59e9145388546296f20ac0271",
    "layerType": "ArcGISFeatureLayer",
    "visibility": true,
    "opacity": 1,
